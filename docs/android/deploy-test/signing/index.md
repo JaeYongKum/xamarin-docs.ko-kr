@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: c6a606bf326d1e59398ab77c51b1de5ed3e497e0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 66d2f66f0118e84778b25fc0e872099439510ce2
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571534"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226848"
 ---
 # <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
 
@@ -62,8 +62,10 @@ ms.locfileid: "84571534"
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-> [!NOTE]
-> 결과 키 저장소 파일 및 암호는 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 Windows를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
+> [!IMPORTANT]
+> AppData 폴더는 기본적으로 숨겨져 있으며 이 폴더에 액세스하려면 숨기기를 취소해야 할 수 있습니다.
+>
+> 또한 결과 키 저장소 파일 및 암호는 솔루션에 포함되지 않으므로 안전한 장소에 백업해야 합니다. 다른 컴퓨터로 이동하거나 Windows를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
 
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 

@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b094ddd7334da777d39d403eb06d72558c96ed2
-ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
+ms.openlocfilehash: e86ebcd55f3a36da1ad5c7c13bb50e7fc9094010
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100193"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226809"
 ---
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
@@ -131,7 +131,7 @@ var accessToken = authResult?.AccessToken;
 
 ![일반적인 웹 인증 흐름](images/web-authenticator.png)
 
-사용자가 어느 지점에서든 흐름을 취소하면 `null` 결과가 반환됩니다.
+사용자가 어느 지점에서든 흐름을 취소하면 `TaskCanceledException`이 throw됩니다.
 
 ## <a name="platform-differences"></a>플랫폼 간 차이점
 
