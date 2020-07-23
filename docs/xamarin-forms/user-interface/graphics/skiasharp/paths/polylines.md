@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8ffa7ab7c9d2cebb9854ed155c3a00fe65e497c9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140220"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936138"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
@@ -25,7 +25,7 @@ _SkiaSharp를 사용 하 여 패라메트릭 방정식으로 정의할 수 있�
 
 이 가이드의 [**SkiaSharp 곡선 및 경로**](../curves/index.md) 섹션에는 [`SKPath`](xref:SkiaSharp.SKPath) 특정 유형의 곡선을 렌더링 하기 위해 정의 하는 다양 한 메서드가 표시 됩니다. 그러나에서 직접 지원 하지 않는 곡선의 형식을 그려야 하는 경우도 있습니다 `SKPath` . 이러한 경우에는 폴리라인 (연결 된 선의 컬렉션)를 사용 하 여 수학적으로 정의할 수 있는 곡선을 그릴 수 있습니다. 줄 수를 충분히 작게 설정 하면 결과는 곡선 처럼 보입니다. 이 나선형은 실제로 3600 작은 줄입니다.
 
-![](polylines-images/spiralexample.png "A spiral")
+![나선형](polylines-images/spiralexample.png)
 
 일반적으로 패라메트릭 방정식 쌍의 측면에서 곡선을 정의 하는 것이 가장 좋습니다. 이는 세 번째 변수에 종속 된 X 및 Y 좌표의 방정식으로, 때때로 `t` 시간에 대해 호출 됩니다. 예를 들어 다음 패라메트릭 방정식은 0에서 1 사이의 지점 (0, 0 *)에 중점* 을 둘 수 있는 원을 정의 합니다.
 
@@ -120,7 +120,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 각 루프 간의 오프셋이 일정 하기 때문에 결과를 *산술 나선형* 이라고 합니다.
 
-[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
+[![Archimedean 나선형 페이지의 세 번째 스크린샷](polylines-images/archimedeanspiral-small.png)](polylines-images/archimedeanspiral-large.png#lightbox "Archimedean 나선형 페이지의 세 번째 스크린샷")
 
 는 `SKPath` 블록에 생성 됩니다 `using` . 이렇게 하면 `SKPath` 이전 프로그램의 개체 보다 더 많은 메모리가 사용 됩니다 .이는 `SKPath` `using` 블록이 관리 되지 않는 리소스를 삭제 하는 데 더 적합 함을 나타냅니다.
 

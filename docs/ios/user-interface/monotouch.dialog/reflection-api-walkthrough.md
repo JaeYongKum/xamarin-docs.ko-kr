@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 1a6391c0e626c60fe35acee61f55f2f202f077b8
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c087bb4a75664c4fae551b9288e7900c4c7fce4b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936996"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -106,7 +106,7 @@ window.RootViewController = nav;
 
 이제 응용 프로그램을 실행 하면 `UINavigationController’s` 아래 스크린샷에 표시 된 대로 제목이 탐색 모음에 표시 됩니다.
 
- [![](reflection-api-walkthrough-images/02-create-task.png "Now when we run the application, the title appears in the UINavigationControllers navigation bar")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
+ [![이제 응용 프로그램을 실행할 때 제목이 UINavigationControllers 탐색 모음에 표시 됩니다.](reflection-api-walkthrough-images/02-create-task.png)](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 이제를 포함 하 여 `UINavigationController` MT의 다른 기능을 활용할 수 있습니다. 해당 탐색이 필요한 D입니다. 예를 들어, 클래스에 열거형을 추가 `Expense` 하 여 경비 및 MT의 범주를 정의할 수 있습니다. D는 자동으로 선택 화면을 만듭니다. 이를 보여 주기 위해 다음과 `Expense` 같이 필드를 포함 하도록 클래스를 수정 합니다 `ExpenseCategory` .
 
@@ -129,11 +129,11 @@ public class Expense
 
 이제 응용 프로그램을 실행 하면 다음과 같이 범주에 대 한 테이블에 새 행이 생성 됩니다.
 
- [![](reflection-api-walkthrough-images/03-set-details.png "Running the application now results in a new row in the table for the category as shown")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
+ [![이제 응용 프로그램을 실행 하면 다음과 같이 범주에 대 한 테이블에 새 행이 생성 됩니다.](reflection-api-walkthrough-images/03-set-details.png)](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 행을 선택 하면 응용 프로그램에서 아래와 같이 열거형에 해당 하는 행이 있는 새 화면으로 이동 합니다.
 
- [![](reflection-api-walkthrough-images/04-set-category.png "Selecting the row results in the application navigating to a new screen with rows corresponding to the enumeration")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
+ [![행을 선택 하면 응용 프로그램에서 열거형에 해당 하는 행이 있는 새 화면으로 이동 합니다.](reflection-api-walkthrough-images/04-set-category.png)](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary"></a>
 

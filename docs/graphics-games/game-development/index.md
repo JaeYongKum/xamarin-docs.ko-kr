@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 5992e8df3080bb35fd123483e5ffb5e64f268b1a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 8f7ec5175895a31746710fad9ea7372052b698ff
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724761"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936489"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin을 사용한 게임 개발 소개
 
@@ -34,7 +34,7 @@ ms.locfileid: "76724761"
 
 다음은 간단한 게임 루프의 다이어그램입니다.
 
-![](images/image1.png "This is a diagram of a simple game loop")
+![간단한 게임 루프의 다이어그램입니다.](images/image1.png)
 
 아래에서 설명 하는 기술은 실제 while 루프를 추상화 하지만이 추상화에도 불구 하 고 모든 프레임 업데이트 개념을 제공 합니다.
 
@@ -61,13 +61,13 @@ ms.locfileid: "76724761"
 
 사용자 지정 파일 형식은 로드 시 사용자 지정 로드 코드를 요구 하는 처리를 필요로 할 수 있습니다.
 
-### <a name="math"></a>수학
+### <a name="math"></a>수식
 
 많은 게임에는 게임이 아닌 응용 프로그램 보다 고급 수학이 필요 합니다. 물론 수학 수준은 게임의 복잡성에 따라 달라 집니다. 일반적으로 3D 게임에서는 2D 보다 많은 계산이 필요 합니다. 다행히 항상 간단한 게임을 시작 하 여 학습할 수 있습니다. 게임 개발은 수학을 학습할 수 있는 좋은 방법입니다!
 
 X 및 Y 좌표를 사용 하 여 개체를 배치 하는 데카르트 평면에 익숙한 경우에는 게임 개발을 시작할 수 있을 만큼 충분히 알고 있습니다. 다음은 양의 Y가 위쪽을 가리키는 데카르트 평면을 보여 줍니다.
 
-![](images/image2.png "This shows a Cartesian plane with positive Y pointing upward")
+![양수 Y가 위쪽을 가리키는 데카르트 평면을 보여 줍니다.](images/image2.png)
 
 > [!IMPORTANT]
 > 일부 엔진/a p i는 좌표계를 사용 하 여 개체의 Y 값을 높이는 방향으로 이동 하 고, 다른 시스템에서는 양의 Y가 up 인 좌표계를 사용 합니다. 시스템 간에 이동 하는 경우이 점을 염두에 두어야 합니다.
@@ -86,8 +86,8 @@ X 및 Y 좌표를 사용 하 여 개체를 배치 하는 데카르트 평면에 
 게임 개발에는 프로세스와 관련 된 개인에 게 새로운 역할 및 타이틀이 도입 되었습니다. 대부분의 게임 개발자는 전체 게임을 릴리스 하는 데 필요한 광범위 한 기술을 충족할 수 없으므로 여러 가지 분야를 사용할 수 있습니다. 이는 개발 영역에 대 한 전체 목록이 아니라 일반적인 것입니다.
 
 - **프로그래머** –이 문서를 읽는 대부분의 사용자는이 범주에 속합니다. 게임 개발에서 프로그래머의 역할은 게임이 아닌 응용 프로그램의 프로그래머 역할과 비슷합니다. 책임은 게임의 흐름을 제어 하 고, 지정 된 프로젝트의 컨텍스트에서 일반적인 작업용 시스템을 개발 하 고, 콘텐츠를 추가 및 표시 하 고, 버그를 수정 하는 논리 작성을 포함 합니다.
-- 2d **음악가** – 2d 아티스트는 2d *자산*만들기를 담당 합니다. 여기에는 게임의 GUI, 파티클, 환경 및 문자에 대 한 이미지 파일이 포함 됩니다. 개발 중인 게임이 3D 인 경우 2D 아티스트는 환경 및 문자를 담당 하지 않을 수 있습니다. [http://opengameart.org/](http://opengameart.org/) 에서 게임에 대 한 무료 아트를 찾을 수 있습니다.
-- 3d **아티스트** – 3d 아티스트는 3d *자산*을 만드는 일을 담당 합니다. 여기에는 환경, 문자 및 props (가구, 공장 및 기타 inanimate 개체)에 대 한 3D 모델이 포함 됩니다. 일부 팀은 팀의 크기에 따라 3D 아티스트와 3D 애니메이터를 구분 합니다. [http://opengameart.org/](http://opengameart.org/) 에서 게임에 대 한 무료 3d 아트를 찾을 수 있습니다.
+- 2d **음악가** – 2d 아티스트는 2d *자산*만들기를 담당 합니다. 여기에는 게임의 GUI, 파티클, 환경 및 문자에 대 한 이미지 파일이 포함 됩니다. 개발 중인 게임이 3D 인 경우 2D 아티스트는 환경 및 문자를 담당 하지 않을 수 있습니다. 에서 게임에 대 한 무료 아트를 찾을 수 있습니다 [http://opengameart.org/](http://opengameart.org/) .
+- 3d **아티스트** – 3d 아티스트는 3d *자산*을 만드는 일을 담당 합니다. 여기에는 환경, 문자 및 props (가구, 공장 및 기타 inanimate 개체)에 대 한 3D 모델이 포함 됩니다. 일부 팀은 팀의 크기에 따라 3D 아티스트와 3D 애니메이터를 구분 합니다. 에서 게임에 대 한 무료 3D 아트를 찾을 수 있습니다 [http://opengameart.org/](http://opengameart.org/) .
 - 게임 **디자이너** -게임 디자이너는 게임을 재생 하는 방법을 정의 해야 합니다. 여기에는 게임 설정, 게임의 전반적인 목표, 플레이어가 게임을 진행 하는 방법 등의 높은 수준의 결정이 포함 될 수 있습니다. 게임 디자이너는 입력을 작업에 매핑하고, 이동 또는 수준-ups의 계수를 정의 하 고, 수준 레이아웃을 디자인 하는 등의 매우 세부적인 결정에도 관여 될 수 있습니다. 용어 *디자이너* 는 컨텍스트에 따라 게임 디자이너나 비주얼 디자이너를 참조할 수 있습니다.
 - **사운드 디자이너** – 사운드 디자이너는 게임의 오디오 자산을 담당 합니다. 일부 팀은 음향 효과 및 작곡가를 만드는 개인을 구분할 수 있는 반면, 작은 팀은 모든 오디오를 담당 하는 단일 개인이 있을 수 있습니다.
 
@@ -121,11 +121,11 @@ MonoGame를 사용 하는 게임의 주목할 만한 예는 다음과 같습니�
 
 FEZ:
 
-![](images/image7.png "FEZ")
+![FEZ](images/image7.png)
 
 배스 천
 
-![](images/image8.jpg "Bastion")
+![Bastion](images/image8.jpg)
 
 MonoGame를 사용 하 여 작업을 시작 하려면 [MonoGame 가이드](~/graphics-games/monogame/index.md)로 이동 하세요.
 
@@ -133,7 +133,7 @@ MonoGame를 사용 하 여 작업을 시작 하려면 [MonoGame 가이드](~/gra
 
 UrhoSharp는 기 하 도형, 재질, 조명 및 카메라를 사용 하 여 응용 프로그램에 대 한 애니메이션 3D 및 2D 장면을 만드는 데 사용할 수 있는 플랫폼 간 상위 수준 3D 및 2D 엔진입니다.
 
-![](images/urhosharp.gif "UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes")
+![UrhoSharp는 애니메이션 3D 및 2D 장면을 만드는 데 사용할 수 있는 플랫폼 간 상위 수준 3D 및 2D 엔진입니다.](images/urhosharp.gif)
 
 시작 하려면 [Urhosharp 가이드](~/graphics-games/urhosharp/index.md) 를 확인 하세요.
 
@@ -141,9 +141,9 @@ UrhoSharp는 기 하 도형, 재질, 조명 및 카메라를 사용 하 여 응�
 
 위에서 강조 표시 된 기술은 사용 가능한 기술의 샘플입니다. 기타 주목할 만한 기술은 다음과 같습니다.
 
-- **Sprite kit** – Xamarin은 Apple의 sprite kit 게임 프레임 워크를 지원 하며,이를 통해 기본 API의 모든 기능에 액세스할 수 있습니다. 스프라이트 키트는 Apple에서 생성 된 기술 이므로 나머지 iOS 에코 시스템과의 긴밀 한 통합을 제공 합니다. 물론, 스프라이트 키트는 플랫폼 간이 아니므로 Android에서 사용할 수 없습니다. Sprite Kit 사용에 대 한 자세한 내용은 다음 게시물을 참조 하세요. [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **장면 키트** – Xamarin은 iOS 앱에 3d 그래픽 구현을 간소화 하는 Apple의 장면 키트 프레임 워크에 대 한 지원도 제공 합니다. 장면 키트는 Apple에서 제공 하는 기술 이기도 하기 때문에 스프라이트 키트에 대해 위에서 언급 한 통합 및 플랫폼별 고려 사항을 모두 제공 합니다. 장면 키트에 대 한 자세한 내용은 다음 게시물을 참조 하세요. [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (개방형 도구 키트를 나타냄)는 iOS, Apple 및 Mac 하드웨어에 대 한 하위 수준 OpenGL 액세스를 제공 합니다. OpenTK에 대 한 자세한 내용은 다음의 기본 페이지를 참조 하십시오. [https://opentk.net/](https://opentk.net/)
+- **Sprite kit** – Xamarin은 Apple의 sprite kit 게임 프레임 워크를 지원 하며,이를 통해 기본 API의 모든 기능에 액세스할 수 있습니다. 스프라이트 키트는 Apple에서 생성 된 기술 이므로 나머지 iOS 에코 시스템과의 긴밀 한 통합을 제공 합니다. 물론, 스프라이트 키트는 플랫폼 간이 아니므로 Android에서 사용할 수 없습니다. Sprite Kit 사용에 대 한 자세한 내용은 다음 게시물을 참조 하세요.[https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **장면 키트** – Xamarin은 iOS 앱에 3d 그래픽 구현을 간소화 하는 Apple의 장면 키트 프레임 워크에 대 한 지원도 제공 합니다. 장면 키트는 Apple에서 제공 하는 기술 이기도 하기 때문에 스프라이트 키트에 대해 위에서 언급 한 통합 및 플랫폼별 고려 사항을 모두 제공 합니다. 장면 키트에 대 한 자세한 내용은 다음 게시물을 참조 하세요.[https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK –** OpenTK (개방형 도구 키트를 나타냄)는 iOS, Apple 및 Mac 하드웨어에 대 한 하위 수준 OpenGL 액세스를 제공 합니다. OpenTK에 대 한 자세한 내용은 다음의 기본 페이지를 참조 하세요.[https://opentk.net/](https://opentk.net/)
 
 ## <a name="related-links"></a>관련 링크
 

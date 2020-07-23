@@ -10,12 +10,12 @@ ms.date: 02/01/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c53b1e58ad97f7d0e17972a2b232c16e05ecc1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573250"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934890"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 앱의 레이아웃
 
@@ -43,7 +43,7 @@ Xamarin.Forms **Info.plist > Devices** 설정을 **유니버설** (iPhone 및 iP
 IOS 9 이전에 모든 앱은 장치에서 전체 화면을 차지 했지만 일부 Ipad는 이제 [화면 멀티태스킹 분할](~/ios/platform/multitasking.md)을 수행할 수 있습니다.
 즉, 앱에서 화면의 측면에 있는 슬림 한 열, 화면 너비의 50% 또는 전체 화면을 모두 사용할 수 있습니다.
 
-[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
+[![iPad 분할 화면 예제](tablet-images/ipad-sml.png)](tablet-images/ipad.png#lightbox "iPad 분할 화면 예제")
 
 화면 분할 기능을 사용 하는 경우 320 픽셀 너비 또는 1366 픽셀 너비 만큼 잘 작동 하도록 앱을 디자인 해야 합니다.
 
@@ -60,7 +60,7 @@ Windows를 실행 하는 태블릿 및 데스크톱 컴퓨터를 지원 하려�
 
 Windows 태블릿 및 데스크톱에서 실행 되는 앱은 전체 화면 실행 외에도 임의의 차원으로 크기를 조정할 수 있습니다.
 
-[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
+[![Windows 분할 화면 예제](tablet-images/splitscreen-sml.png)](tablet-images/splitscreen.png#lightbox "Windows 분할 화면 예제")
 
 ## <a name="optimize-for-tablet-and-desktop"></a>태블릿 및 데스크톱을 위한 최적화
 

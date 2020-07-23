@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 891f1ff8ad8f254ff3a2805d08d0f7e115bb0fff
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 40b918adff523fa446e69c064029311c54d01290
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137373"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935046"
 ---
 # <a name="xamarinforms-carouselview"></a>Xamarin.FormsCarouselView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 ## <a name="introduction"></a>[소개](introduction.md)
 
@@ -29,7 +29,7 @@ ms.locfileid: "84137373"
 
 는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 속성을로 설정 하 여 각 항목의 모양을 정의할 수 있습니다 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 
-## <a name="layout"></a>[레이아웃](layout.md)
+## <a name="layout"></a>[레이아웃](layout.md):
 
 기본적으로에는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 해당 항목이 가로 목록으로 표시 됩니다. 그러나 세로 방향을 포함 하 여 CollectionView와 동일한 레이아웃에도 액세스할 수 있습니다.
 

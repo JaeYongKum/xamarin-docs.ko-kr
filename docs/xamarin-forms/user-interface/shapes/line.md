@@ -10,16 +10,16 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f97e6930f543f47383e2b8da09b36573bd3192d0
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 9d79f232a77972b6abbce23ba65d9c277b090311
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243752"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935449"
 ---
 # <a name="xamarinforms-shapes-line"></a>Xamarin.Forms도형: 선
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -55,7 +55,7 @@ ms.locfileid: "85243752"
 
 이 예제에서는 (40, 0)에서 (0120)까지 빨간색 대각선을 그립니다.
 
-![줄](line-images/line.png "줄")
+![Line](line-images/line.png "줄")
 
 ,, `X1` `Y1` `X2` 및 `Y2` 속성의 기본값은 0 이므로 최소한의 구문을 사용 하 여 줄을 그릴 수 있습니다.
 
