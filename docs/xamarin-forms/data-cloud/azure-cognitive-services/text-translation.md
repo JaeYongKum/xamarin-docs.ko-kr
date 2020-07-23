@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139284"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929950"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Translator API를 사용 하 여 텍스트 번역
 
@@ -143,7 +143,7 @@ API 응답은 XML 형식으로 반환 됩니다. 다음 XML 데이터는 일반�
 
 예제 응용 프로그램에서 XML 응답은 인스턴스로 구문 분석 되 고 `XDocument` , 다음 스크린샷에 표시 된 것 처럼 표시 하기 위해 xml 루트 값이 호출 메서드로 반환 됩니다.
 
-![](text-translation-images/text-translation.png "Text Translation to German")
+![독일어로 텍스트 변환](text-translation-images/text-translation.png)
 
 ## <a name="summary"></a>요약
 

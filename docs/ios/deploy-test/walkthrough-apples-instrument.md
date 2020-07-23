@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 6fa1357adc9cf2f545fbcdf3a30fef70280593bb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73023453"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938023"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 
@@ -27,19 +27,19 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 2. **실행 &gt; 디바이스에 업로드** 메뉴 항목을 선택하여 애플리케이션을 디바이스에 업로드합니다.
 3. **할당** 템플릿(흰색 상자가 있는 주황색 아이콘)을 선택합니다.
 
-    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choose the Allocations template")
+    ![할당 템플릿 선택](walkthrough-apples-instrument-images/00-allocations-tempate.png)
 
 4. 창 위쪽의 **프로비전 템플릿 선택:** 목록에서 **MemoryDemo** 애플리케이션을 선택합니다. iOS 디바이스를 먼저 클릭하여 설치된 애플리케이션을 보여 주는 메뉴를 펼칩니다.
 
-    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Select the Memory Demo application")
+    ![MemoryDemo 애플리케이션 선택](walkthrough-apples-instrument-images/01-mem-demo.png)
 
 5. **선택**(창 오른쪽 아래) 단추를 눌러 **계측**을 시작합니다. 이 템플릿은 위쪽 창에 두 개의 항목(할당 및 VM 추적기)을 표시합니다.
 
 6. 계측의 **레코드** 단추(왼쪽 위의 빨간색 원)를 누릅니다. 그러면 애플리케이션이 시작됩니다.
 
-7. 위쪽 창에서 **VM 추적기** 행을 선택합니다(현재 앱이 실행되고 있으므로 Dirty(더티) 및 Resident(설정) 크기의 두 섹션이 포함됨). **검사기** 창에서 **디스플레이 설정 표시** 옵션(기어 아이콘)을 선택한 다음, 이 스크린샷의 오른쪽 아래에 표시된 **자동 스냅샷** 확인란을 선택합니다.
+7. 위쪽 창에서 **VM 추적기** 행을 선택합니다(현재 앱이 실행되고 있으므로 Dirty(더티) 크기 및 Resident(설정) 크기의 두 섹션이 포함됨). **검사기** 창에서 **디스플레이 설정 표시** 옵션(기어 아이콘)을 선택한 다음, 이 스크린샷의 오른쪽 아래에 표시된 **자동 스냅샷** 확인란을 선택합니다.
 
-    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
+    ![디스플레이 설정 표시 옵션(기어 아이콘)을 선택한 다음, 자동 스냅샷 확인란을 선택함](walkthrough-apples-instrument-images/02-auto-snapshot.png)
 
 8. 위쪽 창에서 **할당** 행을 선택합니다(현재 앱이 실행되고 있으므로 *모든 힙 및 익명 VM*이라고 표시됨).
 9. **검사기** 창에서 **디스플레이 설정 표시** 옵션(기어 아이콘)을 선택한 다음, **표시 생성** 단추를 클릭하여 기준선을 설정합니다. 작은 빨간색 플래그가 창 위쪽의 타임라인에 표시됩니다.
@@ -50,15 +50,15 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 
 14. **&lt;non-object>** 노드에서 과도한 메모리 증가를 보여 줍니다. 이 노드 옆에 있는 화살표를 클릭하면 세부 정보가 표시됩니다. 스택 추적을 마우스 오른쪽 단추로 클릭하여 창에 **원본 위치**를 추가합니다.
 
-    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
+    ![창에 원본 위치 추가](walkthrough-apples-instrument-images/03-mem-growth.png)
 
 15. **크기** 기준으로 정렬하고 **확장된 세부 정보** 보기를 표시합니다.
 
-    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
+    ![크기별 정렬 및 확장된 세부 정보 보기 표시](walkthrough-apples-instrument-images/04-extended-detail.png)
 
 16. 호출 스택에서 원하는 항목을 클릭하면 관련 코드가 표시됩니다.
 
-    ![](walkthrough-apples-instrument-images/05-related-code.png "Viewing the related code")
+    ![관련된 코드 보기](walkthrough-apples-instrument-images/05-related-code.png)
 
 이 경우 새 이미지가 만들어져 각 셀의 컬렉션에 저장되거나 기존 컬렉션 뷰 셀이 다시 사용되지 않습니다.
 
@@ -83,7 +83,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 이제 애플리케이션을 실행하면 메모리 사용량이 크게 줄어듭니다. 생성 간의 **증가**는 이제 코드를 수정하기 전의 MiB(메가바이트) 대신 Kib(킬로바이트) 단위로 측정됩니다.
 
-![](walkthrough-apples-instrument-images/06-reduced-memory.png "Showing the app memory usage")
+![앱 메모리 사용량 표시](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
 향상된 코드는 Mac용 Visual Studio에서 **다음** 솔루션의 [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)에서 사용할 수 있습니다.
 

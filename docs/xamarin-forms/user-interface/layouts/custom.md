@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c1a958bd4cb56096f554acf26756019eeb0693c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572236"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934266"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>에서 사용자 지정 레이아웃 만들기Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin은 5 가지 레이아웃 클래스 (StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 Layout)를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 하는 경우도 있습니다 Xamarin.Forms . 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
+_Xamarin.Forms는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이아웃의 5 가지 레이아웃 클래스를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 하는 경우도 있습니다 Xamarin.Forms . 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
 
 에서 Xamarin.Forms 모든 레이아웃 클래스는 클래스에서 파생 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 되며 제네릭 형식과 [`View`](xref:Xamarin.Forms.View) 해당 파생 형식으로 제한 됩니다. 또한 클래스는 `Layout<T>` [`Layout`](xref:Xamarin.Forms.Layout) 자식 요소를 배치 하 고 크기를 조정 하는 메커니즘을 제공 하는 클래스에서 파생 됩니다.
 
@@ -29,7 +29,7 @@ _Xamarin은 5 가지 레이아웃 클래스 (StackLayout, AbsoluteLayout, Relati
 
 Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무효화 주기를 충분히 이해 해야 합니다. 이러한 주기는 이제 설명 되어 있습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 레이아웃은 페이지를 사용 하 여 시각적 트리 위쪽에서 시작 하 고 시각적 트리의 모든 분기를 진행 하 여 페이지의 모든 시각적 요소를 포함 합니다. 다른 요소에 대 한 부모인 요소는 자신을 기준으로 자식 항목의 크기를 조정 하 고 위치를 지정 해야 합니다.
 
@@ -40,7 +40,7 @@ Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무�
 
 이 주기를 사용 하면 페이지의 모든 시각적 요소가 및 메서드에 대 한 호출을 받을 수 `Measure` `Layout` 있습니다. 프로세스는 다음 다이어그램에 표시 됩니다.
 
-![](custom-images/layout-cycle.png "Xamarin.Forms Layout Cycle")
+![Xamarin.Forms레이아웃 주기](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > 레이아웃에 영향을 주는 변경 사항이 있을 경우 시각적 트리의 하위 집합 에서도 레이아웃 사이클이 발생할 수 있습니다. 여기에는의와 같은 컬렉션에서 추가 또는 제거 되는 항목 [`StackLayout`](xref:Xamarin.Forms.StackLayout) , [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 요소의 속성 변경 또는 요소 크기 변경 내용이 포함 됩니다.
@@ -60,7 +60,7 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
 
 [`Layout`](xref:Xamarin.Forms.Layout)클래스는 [`MeasureInvalidated`](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) 해당 속성 또는 컬렉션에 추가 된 모든 자식에 대 한 이벤트 처리기를 설정 하 `Content` `Children` 고 자식이 제거 될 때 처리기를 분리 합니다. 따라서 자식 트리의 모든 요소는 자식 항목 중 하나가 크기를 변경할 때마다 경고를 표시 합니다. 다음 다이어그램에서는 시각적 트리의 요소 크기를 변경 하면 트리가 변경 될 수 있는 경우를 보여 줍니다.
 
-![](custom-images/invalidation.png "Invalidation in the Visual Tree")
+![시각적 트리의 무효화](custom-images/invalidation.png)
 
 그러나 클래스는 `Layout` 페이지 레이아웃에 변경 내용의 영향을 제한 하려고 시도 합니다. 레이아웃의 크기가 제한 된 경우에는 자식 크기 변경이 시각적 트리의 부모 레이아웃 보다 높은 항목에는 영향을 주지 않습니다. 그러나 일반적으로 레이아웃 크기를 변경 하면 레이아웃이 자식을 정렬 하는 방식에 영향을 줍니다. 따라서 레이아웃 크기를 변경 하면 레이아웃에 대 한 레이아웃 주기가 시작 되 고 레이아웃에서 해당 및 메서드에 대 한 호출을 받게 됩니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) .
 
@@ -400,13 +400,13 @@ async Task<ImageList> GetImageListAsync()
 
 가 포함 된 페이지가 표시 되 면 `WrapLayout` 샘플 응용 프로그램은 사진 목록이 포함 된 원격 JSON 파일에 비동기적으로 액세스 하 여 [`Image`](xref:Xamarin.Forms.Image) 각 사진에 대 한 요소를 만든 다음에 추가 합니다 `WrapLayout` . 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-![](custom-images/portait-screenshots.png "Sample Application Portrait Screenshots")
+![샘플 응용 프로그램 세로 스크린샷](custom-images/portait-screenshots.png)
 
 다음 스크린샷에는 `WrapLayout` 가로 방향으로 회전 한 후이 표시 됩니다.
 
-![](custom-images/landscape-ios.png "Sample iOS Application Landscape Screenshot")
-![](custom-images/landscape-android.png "Sample Android Application Landscape Screenshot")
-![](custom-images/landscape-uwp.png "Sample UWP Application Landscape Screenshot")
+![샘플 iOS 응용 프로그램 가로 스크린 샷 ](custom-images/landscape-ios.png)
+ ![ 샘플 Android 응용 프로그램 가로 스크린 샷 ](custom-images/landscape-android.png)
+ ![ 샘플 UWP 응용 프로그램 가로 스크린 샷](custom-images/landscape-uwp.png)
 
 각 행의 열 수는 사진 크기, 화면 너비 및 장치 독립적 단위 당 픽셀 수에 따라 달라 집니다. [`Image`](xref:Xamarin.Forms.Image)요소는 사진을 비동기적으로 로드 하므로 `WrapLayout` [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 각 `Image` 요소가 로드 된 사진을 기반으로 새 크기를 받을 때 클래스는 해당 메서드에 대 한 자주 호출을 받습니다.
 
@@ -415,6 +415,6 @@ async Task<ImageList> GetImageListAsync()
 - [WrapLayout (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [사용자 지정 레이아웃](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [에서 사용자 지정 레이아웃 만들기 Xamarin.Forms (비디오)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [레이아웃\<T>](xref:Xamarin.Forms.Layout`1)
-- [레이아웃](xref:Xamarin.Forms.Layout)
+- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
+- [레이아웃](xref:Xamarin.Forms.Layout):
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

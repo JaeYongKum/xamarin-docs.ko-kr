@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d3ae71685c7aaebdceacb5f8b7cd5f3dd308407c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 876e5449e17276efc3b368ab7d2c9e57365f948f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137252"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937828"
 ---
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Windows의 MasterDetailPage 탐색 모음
 
@@ -47,7 +47,7 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 그러면 지정 된 [`CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) 가 인스턴스에 적용 되 고 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 너비도 지정 됩니다.
 
-[![](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png "Collapsed Navigation Bar Platform-Specific")](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "Collapsed Navigation Bar Platform-Specific")
+[![축소 된 탐색 모음 플랫폼별](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "축소 된 탐색 모음 플랫폼별")
 
 ## <a name="related-links"></a>관련 링크
 

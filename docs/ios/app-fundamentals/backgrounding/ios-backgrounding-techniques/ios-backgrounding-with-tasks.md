@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 63d59d9f11932343c6ca57e0b3735077eabb6a9a
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a8259cf47f8af6e356c9a860c61ad0eea0c8927a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571820"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932979"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>작업이 있는 iOS Backgrounding
 
@@ -113,11 +113,11 @@ Task.Factory.StartNew( () => {
 
 IOS 7 이전에는 백그라운드에서 실행 되는 작업을 완료 하는 데 600 초가 있었습니다. 이 제한의 한 가지 이유는 백그라운드에서 실행 중인 작업이 작업 기간 동안 장치를 절전 모드에서 해제 하는 것입니다.
 
- [![](ios-backgrounding-with-tasks-images/ios6.png "Graph of the task keeping the app awake pre-iOS 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
+ [![앱의 활성 상태를 유지 하는 작업의 그래프 사전 iOS 7](ios-backgrounding-with-tasks-images/ios6.png)](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
 iOS 7 백그라운드 처리는 배터리 수명이 긴 경우에 최적화 되어 있습니다. IOS 7에서 backgrounding가 켜 집니다. 장치를 절전 모드로 전환 하는 대신 장치가 절전 모드로 전환 될 때 작업을 수행 하 고, 장치에서 전화 통화, 알림, 수신 이메일 및 기타 일반적인 중단을 처리 하기 위해 절전 모드를 해제 하는 경우에는 청크를 처리 합니다. 다음 다이어그램은 태스크가 분할 되는 방법에 대 한 통찰력을 제공 합니다.
 
- [![](ios-backgrounding-with-tasks-images/ios7.png "Graph of the task being broken into chunks post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
+ [![청크로 분할 된 작업의 그래프-iOS 7](ios-backgrounding-with-tasks-images/ios7.png)](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
 작업 실행 시간이 더 이상 연속 되지 않으므로 iOS 7에서 네트워크 전송을 수행 하는 작업을 다르게 처리 해야 합니다. 개발자는 API를 사용 하 여 네트워크 전송을 처리 하는 것이 좋습니다 `NSURlSession` . 다음 섹션은 백그라운드 전송에 대 한 개요입니다.
 

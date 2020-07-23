@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dcbc20139b989ced11f2d1d890ca7dd99a780e96
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ffadcf5153938a812fffbcdee90ec12430ebe531
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137061"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931445"
 ---
 # <a name="navigationpage-bar-text-color-mode-on-ios"></a>IOS의 NavigationPage Bar 텍스트 색 모드
 
@@ -75,7 +75,7 @@ IsPresentedChanged += (sender, e) =>
 
 그러면의 상태 표시줄 텍스트 색을 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 탐색 모음의 광도와 일치 하도록 조정할 수 있습니다. 이 예에서는 사용자가 [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) 의 및 페이지 간에 전환할 때 상태 표시줄 텍스트 색이 변경 됩니다 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) .
 
-![](status-bar-text-color-images/status-bar-text-color-mode.png "Status Bar Text Color Mode Platform-Specific")
+![상태 표시줄 텍스트 색 모드 플랫폼별](status-bar-text-color-images/status-bar-text-color-mode.png)
 
 ## <a name="related-links"></a>관련 링크
 

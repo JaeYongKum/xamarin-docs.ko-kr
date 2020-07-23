@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 044792f37fbba13699a5ab31d815b4f2c5dafe17
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 00e5b2a2238763822172a1b7d7a7c3090634ed17
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565488"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938088"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.ios의 경고
 
@@ -22,7 +22,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 경고는 심각한 문제 (예: 오류) 나 경고 (예: 파일 삭제 준비)가 발생 한 경우 표시 되는 특별 한 유형의 대화 상자입니다. 경고는 대화 상자 이므로 닫아야 하기 전에 사용자 응답이 필요 합니다.
 
-[![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
+[![예제 경고](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 경고로 작업 하는 기본 사항을 설명 합니다. 
 
@@ -60,7 +60,7 @@ alert.RunModal ();
 
 위의 코드는 경고 아이콘, 제목, 경고 메시지 및 단일 **확인** 단추를 사용 하 여 응용 프로그램 아이콘을 표시 하는 경고를 표시 합니다.
 
-[![](alert-images/alert01.png "An alert with a OK button")](alert-images/alert01.png#lightbox)
+[![확인 단추가 있는 경고](alert-images/alert01.png)](alert-images/alert01.png#lightbox)
 
 Apple은 경고를 사용자 지정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다.
 
@@ -93,7 +93,7 @@ alert.RunModal ();
 
 이 코드가 실행 되 면 다음이 표시 됩니다.
 
-[![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
+[![간단한 경고](alert-images/alert02.png)](alert-images/alert02.png#lightbox)
 
 다음 코드는 시트와 동일한 경고를 표시 합니다.
 
@@ -108,7 +108,7 @@ alert.BeginSheet (this);
 
 이 코드가 실행 되 면 다음이 표시 됩니다.
 
-[![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
+[![시트로 표시 되는 경고](alert-images/alert03.png)](alert-images/alert03.png#lightbox)
 
 <a name="Working_with_Alert_Buttons"></a>
 
@@ -136,7 +136,7 @@ var result = alert.RunModal ();
 
 코드를 실행 하는 경우 다음이 표시 됩니다.
 
-[![](alert-images/alert04.png "An alert with three button options")](alert-images/alert04.png#lightbox)
+[![세 가지 단추 옵션이 있는 경고](alert-images/alert04.png)](alert-images/alert04.png#lightbox)
 
 시트와 동일한 경고에 대 한 코드는 다음과 같습니다.
 
@@ -156,7 +156,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 이 코드가 실행 되 면 다음이 표시 됩니다.
 
-[![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)
+[![시트로 표시 되는 세 개의 단추 경고](alert-images/alert05.png)](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > 세 개 이상의 단추를 경고에 추가 하면 안 됩니다.
@@ -185,7 +185,7 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 
 코드가 실행 되 면 다음이 표시 됩니다.
 
-[![](alert-images/alert06.png "An alert with a suppress button")](alert-images/alert06.png#lightbox)
+[![표시 안 함 단추가 있는 경고](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 시트와 동일한 경고에 대 한 코드는 다음과 같습니다.
 
@@ -206,7 +206,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 이 코드가 실행 되 면 다음이 표시 됩니다.
 
-[![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
+[![표시 안 함 단추가 시트로 표시 되는 경고](alert-images/alert07.png)](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView"></a>
 
@@ -236,7 +236,7 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 
 코드를 실행 하는 경우 다음이 표시 됩니다.
 
-[![](alert-images/alert08.png "If we run the code, the following will be displayed")](alert-images/alert08.png#lightbox)
+[![코드를 실행 하는 경우 다음이 표시 됩니다.](alert-images/alert08.png)](alert-images/alert08.png#lightbox)
 
 시트와 동일한 경고는 다음과 같습니다.
 
@@ -261,7 +261,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 이 코드를 실행 하는 경우 다음이 표시 됩니다.
 
-[![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
+[![사용자 지정 보기를 사용 하는 경고](alert-images/alert09.png)](alert-images/alert09.png#lightbox)
 
 <a name="Summary"></a>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: a7534ec706633a856e5e095369e29f5fdef5f6a7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 74647a3c9128496373917e714755f5aaa7f73187
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574225"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931692"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
@@ -87,7 +87,7 @@ TLS 수준은 사용 하는 웹 서비스에 의해 제어 되므로 응용 프�
 
 IOS 앱에서 사용 하는 HTTPClient 구현을 설정 하려면 **솔루션 탐색기** 에서 **프로젝트** 를 두 번 클릭 하 여 **프로젝트 옵션**을 엽니다. **IOS 빌드** 로 이동 하 여 **httpclient 구현** 드롭다운에서 원하는 클라이언트 형식을 선택 합니다.
 
-![](ats-images/client01.png "Setting the iOS Build Options")
+![IOS 빌드 옵션 설정](ats-images/client01.png)
 
 #### <a name="managed-handler"></a>관리 되는 처리기
 
@@ -212,7 +212,7 @@ Xamarin.ios 앱이 보안 되지 않은 도메인에 대 한 요청을 수행 �
 
 Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 `Info.plist` 고 **원본** 뷰로 전환 하 여 **Solution Explorer**위의 키를 추가 합니다.
 
-[![](ats-images/ats01.png "The Source view of the Info.plist file")](ats-images/ats01.png#lightbox)
+[![Info.plist 파일의 소스 뷰입니다.](ats-images/ats01.png)](ats-images/ats01.png#lightbox)
 
 앱이 보안 되지 않은 사이트에서 웹 콘텐츠를 로드 하 고 표시 해야 하는 경우 앱의 **info.plist** 파일에 다음을 추가 하 여 앱의 나머지 부분에 대해 ATS (Apple Transport Security) 보호를 사용 하도록 설정 하는 동안 웹 페이지를 올바르게 로드할 수 있도록 합니다.
 
@@ -236,7 +236,7 @@ Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 
 
 Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 `Info.plist` 고 **원본** 뷰로 전환 하 여 **Solution Explorer**위의 키를 추가 합니다.
 
-[![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
+[![Info.plist 파일의 소스 뷰입니다.](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 **always** 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`매우 긴급 한 상황 에서만 사용 해야 합니다.

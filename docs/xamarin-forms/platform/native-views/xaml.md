@@ -10,12 +10,12 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2c271c3537c6e96497763c67c5b8128148191f16
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564643"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937360"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -106,8 +106,8 @@ Android widget 생성자에는 일반적으로 Android `Context` 개체가 인�
 
 페이지에는 각 플랫폼에 대 한 네이티브 스위치도 포함 되어 있습니다. 각 네이티브 스위치는 바인딩을 사용 하 여 [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 속성 값을 업데이트 `NativeSwitchPageViewModel.IsSwitchOn` 합니다. 따라서 스위치가 꺼져 있으면 `Entry` 가 비활성화 되 고 스위치가 on 이면 `Entry` 가 사용 됩니다. 다음 스크린샷에서는 각 플랫폼에서이 기능을 보여 줍니다.
 
-![](xaml-images/native-switch-disabled.png "Native Switch Disabled")
-![](xaml-images/native-switch-enabled.png "Native Switch Enabled")
+![네이티브 스위치 사용 안 함 ](xaml-images/native-switch-disabled.png)
+ ![ 네이티브 스위치 사용](xaml-images/native-switch-enabled.png)
 
 Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 하거나 지원 하거나 UWP의 인 경우 양방향 바인딩이 자동으로 지원 됩니다 `DependencyProperty` . 그러나 많은 네이티브 뷰에서는 속성 변경 알림을 지원 하지 않습니다. 이러한 보기의 경우 [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) 바인딩 식의 일부로 속성 값을 지정할 수 있습니다. 이 속성은 대상 속성이 변경 될 때 신호를 전달 하는 네이티브 뷰의 이벤트 이름으로 설정 해야 합니다. 그런 다음 네이티브 스위치의 값이 변경 되 면 사용자가 `Binding` 스위치 값을 변경 하 고 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 되었다는 알림이 클래스에 표시 됩니다.
 
@@ -178,7 +178,7 @@ Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 
 
 다음 스크린샷에서는 팩터리 메서드 및 생성자 인수를 지정 하 여 다른 네이티브 뷰에서 글꼴을 설정 하는 결과를 보여 줍니다.
 
-![](xaml-images/passing-arguments.png "Setting Fonts on Native Views")
+![네이티브 뷰에서 글꼴 설정](xaml-images/passing-arguments.png)
 
 XAML로 인수를 전달 하는 방법에 대 한 자세한 내용은 [xaml로 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조 하세요.
 
@@ -265,7 +265,7 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 
 `OnButtonTap`각 네이티브 단추는 `EventHandler` 터치 이벤트에 대 한 응답으로 대리자를 소비 하므로 IOS 및 Android 네이티브 단추는 동일한 이벤트 처리기를 공유 합니다. 그러나 UWP (유니버설 Windows 플랫폼)는 별도를 사용 하며, `RoutedEventHandler` `OnButtonTap` 이는이 예제에서 이벤트 처리기를 사용 합니다. 따라서 네이티브 단추를 클릭 하면 `OnButtonTap` 이벤트 처리기가를 실행 하 여 명명 된에 포함 된 네이티브 컨트롤의 크기를 조정 하 고 회전 합니다 [`ContentView`](xref:Xamarin.Forms.ContentView) `contentViewTextParent` . 다음 스크린샷에서는 각 플랫폼에서 발생 하는이를 보여 줍니다.
 
-![](xaml-images/contentview.png "ContentView Containing a Native Control")
+![네이티브 컨트롤을 포함 하는 ContentView](xaml-images/contentview.png)
 
 ## <a name="subclass-native-views"></a>서브 클래스 네이티브 뷰
 
@@ -306,7 +306,7 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 
 또한이 페이지에는 각 플랫폼에 대 한 기본 선택 뷰가 포함 되어 있습니다. 각 네이티브 뷰는 해당 `ItemSource` 속성을 컬렉션에 바인딩하여 과일의 컬렉션을 표시 합니다 `SubclassedNativeControlsPageViewModel.Fruits` . 이렇게 하면 다음 스크린샷에 표시 된 것 처럼 사용자가 과일을 선택할 수 있습니다.
 
-![](xaml-images/sub-classed.png "Subclassed Native Views")
+![서브클래싱된 네이티브 뷰](xaml-images/sub-classed.png)
 
 IOS 및 Android에서 네이티브 선택기는 메서드를 사용 하 여 컨트롤을 설정 합니다. 따라서 이러한 선택기는 XAML에 친숙 하 게 만드는 속성을 노출 하기 위해 서브클래싱 되어야 합니다. UWP (유니버설 Windows 플랫폼)에서는 `ComboBox` 이미 XAML에 친숙 하므로 서브클래싱이 필요 하지 않습니다.
 

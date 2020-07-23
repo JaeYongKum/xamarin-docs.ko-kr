@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: cdb8505bd8c25b6e591dd86daf6a4d1e174012f6
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 177701b8b50edea965e97da225265912f1f0c198
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569038"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932329"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.ios의 Maps
 
@@ -30,7 +30,7 @@ View = map;
 
 `MKMapView`는 `UIView` 맵을 표시 하는 하위 클래스입니다. 위의 코드를 사용 하 여 지도를 추가 하기만 하면 대화형 지도가 생성 됩니다.
 
-![](images/00-map.png "A sample map")
+![샘플 맵](images/00-map.png)
 
 ## <a name="map-style"></a>지도 스타일
 
@@ -44,7 +44,7 @@ map.MapType = MKMapType.Hybrid;
 
 다음 스크린샷에서는 사용할 수 있는 다양 한 지도 스타일을 보여 줍니다.
 
-![](images/01-mapstyles.png "This screenshot show the different map styles that are available")
+![이 스크린샷에서는 사용 가능한 다양 한 지도 스타일을 보여 줍니다.](images/01-mapstyles.png)
 
 ## <a name="panning-and-zooming"></a>패닝 및 확대/축소
 
@@ -85,13 +85,13 @@ locationManager.RequestWhenInUseAuthorization();
 map.ShowsUserLocation = true;
 ```
 
- ![](images/02-location-alert.png "The allow location access alert")
+ ![위치 액세스 허용 경고](images/02-location-alert.png)
 
 ## <a name="annotations"></a>주석
 
  `MKMapView`는 지도에서 주석 이라고 하는 이미지 표시도 지원 합니다. 사용자 지정 이미지 또는 다양 한 색의 시스템 정의 핀 중 하나일 수 있습니다. 예를 들어 다음 스크린샷은 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.
 
- ![](images/03-annotations.png "This screenshot shows a map with a both a pin and a custom image")
+ ![이 스크린샷에서는 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.](images/03-annotations.png)
 
 ### <a name="adding-an-annotation"></a>주석 추가
 
@@ -149,7 +149,7 @@ MKAnnotationView pinView = (MKPinAnnotationView)mapView.DequeueReusableAnnotatio
 
 앞서 언급 했 듯이 주석은 선택적으로 설명선을 표시할 수 있습니다. 설명선을 표시 하려면에 `CanShowCallout` 대해 간단히 true로 설정 `MKAnnotationView` 합니다. 이렇게 하면 다음과 같이 주석을 누를 때 주석의 제목이 표시 됩니다.
 
- ![](images/04-callout.png "The annotations title being displayed")
+ ![표시 되는 주석 제목입니다.](images/04-callout.png)
 
 ### <a name="customizing-the-callout"></a>설명선 사용자 지정
 
@@ -162,7 +162,7 @@ pinView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile ("monkey.png
 
 이 코드는 다음 설명선을 생성 합니다.
 
- ![](images/05-callout-accessories.png "An example callout")
+ ![예제 설명선](images/05-callout-accessories.png)
 
 오른쪽 액세서리를 누르는 사용자를 처리 하려면에서 메서드를 구현 하기만 하면 됩니다 `CalloutAccessoryControlTapped` `MKMapViewDelegate` .
 
@@ -215,7 +215,7 @@ public override MKOverlayView GetViewForOverlay (MKMapView mapView, NSObject ove
 
 그러면 다음과 같이 맵에 원이 표시 됩니다.
 
- ![](images/06-circle-overlay.png "A circle displayed on the map")
+ ![지도에 표시 되는 원](images/06-circle-overlay.png)
 
 ## <a name="local-search"></a>로컬 검색
 
@@ -273,7 +273,7 @@ NavigationItem.TitleView = searchController.SearchBar;
 
 그러면 아래와 같이 지도 위에 검색 표시줄이 표시 됩니다.
 
- ![](images/07-searchbar.png "A search bar displayed over the map")
+ ![지도 위에 표시 되는 검색 표시줄](images/07-searchbar.png)
 
 ### <a name="displaying-the-search-results"></a>검색 결과 표시
 
@@ -393,7 +393,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 위의 구현은 아래와 같이 결과에서 항목을 선택할 때 맵에 주석을 추가 합니다.
 
- ![](images/08-search-results.png "An annotation added to the map when an item is selected from the results")
+ ![결과에서 항목을 선택할 때 맵에 추가 되는 주석입니다.](images/08-search-results.png)
 
 > [!IMPORTANT]
 > `UISearchController`는 iOS 8에서 구현 되었습니다. 이전 장치를 지원 하려는 경우를 사용 해야 `UISearchDisplayController` 합니다.

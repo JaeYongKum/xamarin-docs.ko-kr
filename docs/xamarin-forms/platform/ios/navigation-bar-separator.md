@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39d203cf0fb7fff026106d98cfb512aad42f83d2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c74f9bd17f8da5cd41a55f8b35a66e21df81a8d2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128247"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931185"
 ---
 # <a name="navigationpage-bar-separator-on-ios"></a>IOS의 NavigationPage 표시줄 구분 기호
 
@@ -50,7 +50,7 @@ public class iOSTitleViewNavigationPageCS : Xamarin.Forms.NavigationPage
 
 따라서의 탐색 모음 구분 기호를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 숨길 수 있습니다.
 
-![](navigation-bar-separator-images/navigationpage-hideseparatorbar.png "NavigationPage navigation bar hidden")
+![NavigationPage 탐색 모음 숨김](navigation-bar-separator-images/navigationpage-hideseparatorbar.png)
 
 ## <a name="related-links"></a>관련 링크
 

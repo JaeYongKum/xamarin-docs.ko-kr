@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: aed11ff8794f79ff7e16fbb8401a95a5697d2d4b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9280917f451d58ae864398088bec7faaf15ad96a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572067"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937347"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Xamarin.ios의 원본 목록
 
@@ -22,7 +22,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 원본 목록은 Finder 또는 iTunes의 사이드 표시줄과 같은 동작의 원본을 표시 하는 데 사용 되는 특별 한 유형의 개요 뷰입니다.
 
-[![](source-list-images/source05.png "An example source list")](source-list-images/source05.png#lightbox)
+[![예제 소스 목록](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대 한 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
@@ -50,7 +50,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 먼저 `SourceListItem` 원본 목록에 대 한 데이터를 보유할 새 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 다음 `SourceListItem` **새로 만들기** 단추를 클릭 합니다. **Name**
 
-[![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png#lightbox)
+[![빈 클래스 추가](source-list-images/source01.png)](source-list-images/source01.png#lightbox)
 
 `SourceListItem.cs`파일이 다음과 같이 표시 되도록 합니다. 
 
@@ -532,19 +532,19 @@ namespace MacOutlines
 
 이제 Interface Builder에서 소스 목록을 디자인 하겠습니다. 파일을 두 번 클릭 `Main.storyboard` 하 여 열고 Interface Builder 편집을 위해 열고, **라이브러리 검사기**에서 분할 보기를 끌어서 뷰 컨트롤러에 추가 하 고, **제약 조건 편집기**에서 뷰를 사용 하 여 크기를 조정 하도록 설정 합니다.
 
-[![](source-list-images/source00.png "Editing constraints")](source-list-images/source00.png#lightbox)
+[![제약 조건 편집](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
 
 그런 다음 **라이브러리 검사자**에서 원본 목록을 끌어 분할 뷰의 왼쪽에 추가 하 고 **제약 조건 편집기**에서 뷰를 사용 하 여 크기를 조정 하도록 설정 합니다.
 
-[![](source-list-images/source02.png "Editing constraints")](source-list-images/source02.png#lightbox)
+[![제약 조건 편집](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
 
 그런 다음 **Id 뷰로**전환 하 고 원본 목록을 선택한 후 **클래스** 를로 변경 합니다 `SourceListView` .
 
-[![](source-list-images/source03.png "Setting the class name")](source-list-images/source03.png#lightbox)
+[![클래스 이름 설정](source-list-images/source03.png)](source-list-images/source03.png#lightbox)
 
 마지막으로, 파일에서 호출 되는 원본 목록의 **콘센트** 를 만듭니다 `SourceList` `ViewController.h` .
 
-[![](source-list-images/source04.png "Configuring an Outlet")](source-list-images/source04.png#lightbox)
+[![콘센트 구성](source-list-images/source04.png)](source-list-images/source04.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 응용 프로그램을 실행 하는 경우 다음이 표시 됩니다.
 
-[![](source-list-images/source05.png "An example app run")](source-list-images/source05.png#lightbox)
+[![예제 앱 실행](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 <a name="Summary"></a>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 61b7926f28253acbcc45bc204c466d76a00c72b0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bef29bfc526a5f378368390c1ec25b1bbf1d8a5a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010829"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932966"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>백그라운드에서 실행할 Xamarin.ios 앱 등록
 
@@ -34,15 +34,15 @@ ms.locfileid: "73010829"
 
 응용 프로그램의 *info.plist*에서 **필요한 백그라운드 모드** 속성을 설정 하 여 응용 프로그램을 등록할 수 있습니다. 응용 프로그램은 필요한 만큼 범주에 등록할 수 있습니다.
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Setting the background modes")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![배경 모드 설정](registering-applications-to-run-in-background-images/bgmodes.png)](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 백그라운드 위치 업데이트를 위해 응용 프로그램을 등록 하는 단계별 가이드는 [백그라운드 위치 연습](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)을 참조 하세요.
 
 ## <a name="application-does-not-run-in-background-property"></a>응용 프로그램이 백그라운드 속성에서 실행 되지 않음
 
-*Info.plist* 에서 설정할 수 있는 다른 속성은 *응용 프로그램이 백그라운드에서 실행 되지*않거나 속성을 `UIApplicationExitsOnSuspend` 합니다.
+Info.plist에서 설정할 수 있는 다른 속성은 *응용 프로그램이 백그라운드에서 실행 되지*않거나 속성으로 실행 되지 않습니다 *.* `UIApplicationExitsOnSuspend`
 
- [![](registering-applications-to-run-in-background-images/plist.png "Disabling Background Running")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![백그라운드 실행 해제](registering-applications-to-run-in-background-images/plist.png)](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 이는 개발자 쪽 에서만 변경 될 수 있고 iOS 4 이상에서 사용할 수 있는 경우를 제외 하 고는 iOS 7 이상에서 백그라운드 앱 새로 고침 설정을 off로 설정 하는 것과 정확히 동일한 효과를 가집니다. 응용 프로그램은 백그라운드에 입력 한 직후에 일시 중단 되며 처리를 수행할 수 없습니다.
 

@@ -10,12 +10,12 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1008eab6e56be7a235498e01ffd3ea1b27d2bbae
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f11100b6e13a3ace2ae3a56bcfc279294089d842
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939037"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>iOS 플랫폼 기능Xamarin.Forms
 
@@ -76,7 +76,7 @@ Xamarin.Forms플랫폼 간 사용자 인터페이스 스타일과 색을 설정�
 
 **Info.plist** 구성 및 API와 같은 IOS 관련 api를 사용 하 여 사용자 인터페이스 서식 지정에 대해 [자세히](formatting.md) 알아보세요 `UIAppearance` .
 
-![](images/status-white-sml.png "iOS Theming")
+![iOS 테마](images/status-white-sml.png)
 
 ## <a name="other-ios-features"></a>기타 iOS 기능
 

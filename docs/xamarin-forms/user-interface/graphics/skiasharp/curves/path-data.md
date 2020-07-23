@@ -10,12 +10,12 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 680c924280f8f3a6080b2fcc1968ecaf308f33a0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2571375e7ad28acbf367870b5c48e19d3a7525e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138062"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931263"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp의 SVG 경로 데이터
 
@@ -25,7 +25,7 @@ _확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 �
 
 [`SKPath`](xref:SkiaSharp.SKPath)클래스는 SVG (스케일러블 벡터 그래픽) 사양에 의해 설정 된 형식으로 텍스트 문자열에서 전체 경로 개체의 정의를 지원 합니다. 이 문서의 뒷부분에서 텍스트 문자열에 있는 경로와 같은 전체 경로를 표시 하는 방법을 확인할 수 있습니다.
 
-![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
+![SVG 경로 데이터로 정의 된 샘플 경로](path-data-images/pathdatasample.png)
 
 SVG는 웹 페이지에 대 한 XML 기반 그래픽 프로그래밍 언어입니다. SVG는 일련의 함수 호출이 아닌 태그에서 경로를 정의할 수 있도록 허용 해야 하므로, SVG 표준에는 전체 그래픽 경로를 텍스트 문자열로 지정 하는 매우 간결한 방법이 포함 되어 있습니다.
 
@@ -222,7 +222,7 @@ public class PathDataHelloPage : ContentPage
 
 이 경로는 가로 모드로 볼 때 더 합리적인 모양의 캔버스를 채웁니다.
 
-[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
+[![경로 데이터 Hello 페이지의 세 번째 스크린샷](path-data-images/pathdatahello-small.png)](path-data-images/pathdatahello-large.png#lightbox "경로 데이터 Hello 페이지의 세 번째 스크린샷")
 
 **데이터 Cat 경로** 페이지도 유사 합니다. 경로 및 그리기 개체는 모두 클래스의 필드로 정의 됩니다 [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) .
 
@@ -293,7 +293,7 @@ public class PathDataCatPage : ContentPage
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
+[![경로 데이터 Cat 페이지의 세 번째 스크린샷](path-data-images/pathdatacat-small.png)](path-data-images/pathdatacat-large.png#lightbox "경로 데이터 Cat 페이지의 세 번째 스크린샷")
 
 일반적으로 `SKPath` 개체가 필드로 정의 된 경우 경로의 컨투어는 생성자 또는 다른 메서드에서 정의 해야 합니다. 그러나 SVG 경로 데이터를 사용 하는 경우 필드 정의에서 경로를 완전히 지정할 수 있습니다.
 
@@ -430,7 +430,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 그러나 특별 한 작업은 두 번째 손으로 수행 됩니다. 클록은 16 밀리초 마다 업데이트 되므로 `Millisecond` 값의 속성을 사용 하 여 `DateTime` 불연속 점프에서 second로 이동 하는 것이 아니라 스윕 초에 애니메이션 효과를 줄 수 있습니다. 그러나이 코드는 이동이 원활 하 게 진행 되는 것을 허용 하지 않습니다. 대신, Xamarin.Forms [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) 및 [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) 애니메이션 감속/가속 함수를 사용 하 여 다른 종류의 움직임을 사용 합니다. 이러한 감속/가속 함수는 두 번째 손을 jerkier 방식으로 이동 하 여 이동 하기 전에 약간의 작업을 수행 하는 방식으로 이동 하 &mdash; 고, 해당 대상을 약간 과도 하 게 전환 하 여 이러한 정적 스크린샷에서 재현할 수 없는 효과를 발생 시킵니다.
 
-[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
+[![매우 아날로그 클록 페이지의 세 번째 스크린샷](path-data-images/prettyanalogclock-small.png)](path-data-images/prettyanalogclock-large.png#lightbox "매우 아날로그 클록 페이지의 세 번째 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 

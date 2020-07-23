@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6d01018f4393ac5562220fa1f9524bc0d9872c67
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c1ae9e05b6671d45d8df485a89cfc0dea86632d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137672"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937308"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
@@ -25,7 +25,7 @@ _SkiaSharp 좌표와 좌표 간의 차이점 탐색 Xamarin.Forms_
 
 이 문서에서는 SkiaSharp 및에서 사용 되는 좌표계의 차이점을 살펴봅니다 Xamarin.Forms . 두 좌표계 간에 변환 하는 정보를 얻을 수 있으며 특정 영역을 채우는 그래픽도 그릴 수 있습니다.
 
-![](pixels-images/screenfillexample.png "An oval that fills the screen")
+![화면을 채우는 타원입니다.](pixels-images/screenfillexample.png)
 
 잠시 동안 프로그래밍 했다면 Xamarin.Forms 좌표와 크기에 대 한 느낌이 있을 수 있습니다 Xamarin.Forms . 위의 두 문서에 그려진 원은 약간 작은 것 처럼 보일 수 있습니다.
 
@@ -104,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![](pixels-images/surfacesize-small.png "Triple screenshot of the Surface Size  page")](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![표면 크기 페이지의 삼중 스크린 샷](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "표면 크기 페이지의 삼중 스크린 샷")
 
 여기에서 볼 수 있듯이의 `CanvasSize` 속성과 `SKCanvasView` `Size` 값의 속성은 `SKImageInfo` 픽셀 차원을 보고 하는 것과 일치 합니다. `Height`의 및 `Width` 속성은 `SKCanvasView` 속성 이며 Xamarin.Forms 플랫폼에서 정의한 장치 독립적 단위에서 뷰의 크기를 보고 합니다.
 
@@ -147,7 +147,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 실행 되 고 있습니다.
 
-[![](pixels-images/ellipsefill-small.png "Triple screenshot of the Surface Size  page")](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![표면 크기 페이지의 삼중 스크린 샷](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "표면 크기 페이지의 삼중 스크린 샷")
 
 다른 [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) 메서드에는 [`SKRect`](xref:SkiaSharp.SKRect) 인수 (왼쪽 위 모퉁이와 오른쪽 아래 모퉁이의 X 및 Y 좌표를 기준으로 정의 된 사각형)가 있습니다. Oval은 사각형을 채워서 다음과 같이 **타원 채우기** 페이지에서 사용할 수 있습니다.
 

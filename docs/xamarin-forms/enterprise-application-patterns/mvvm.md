@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cc0528e7696130a772e93be67526ea9d6b10373f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572054"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936528"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
 
@@ -27,7 +27,7 @@ MVVM (모델-뷰-ViewModel) 패턴은 응용 프로그램의 비즈니스 및 �
 
 MVVM 패턴에는 모델, 뷰 및 뷰 모델의 세 가지 핵심 구성 요소가 있습니다. 각각은 고유한 용도로 사용 됩니다. 그림 2-1에서는 세 가지 구성 요소 간의 관계를 보여 줍니다.
 
-![](mvvm-images/mvvm.png "The MVVM pattern")
+![MVVM 패턴](mvvm-images/mvvm.png)
 
 **그림 2-1**: MVVM 패턴
 
@@ -42,7 +42,7 @@ MVVM 패턴을 사용 하는 이점은 다음과 같습니다.
 
 MVVM를 효과적으로 사용 하는 핵심은 응용 프로그램 코드를 올바른 클래스로 요소를 구분 하는 방법과 클래스가 상호 작용 하는 방식을 이해 하는 것입니다. 다음 섹션에서는 MVVM 패턴의 각 클래스에 대 한 책임을 설명 합니다.
 
-### <a name="view"></a>보기
+### <a name="view"></a>View
 
 보기는 사용자가 화면에서 볼 수 있는 구조, 레이아웃 및 모양을 정의 하는 작업을 담당 합니다. 각 보기는 비즈니스 논리를 포함 하지 않는 제한 된 코드 숨김으로 XAML로 정의 하는 것이 가장 좋습니다. 그러나 경우에 따라 코드 숨김이 XAML에서 표현 하기 어려운 시각적 동작을 구현 하는 UI 논리 (예: 애니메이션)를 포함할 수 있습니다.
 

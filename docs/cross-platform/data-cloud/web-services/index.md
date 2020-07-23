@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 164c059b60c1b5b2aadb2cb348c6b5407da63928
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655095"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934708"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -293,7 +293,7 @@ SOAP는 HTTP, SMTP, TCP 및 UDP를 비롯 한 여러 전송 프로토콜을 통�
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![](images/add-webreference-dialog.png "The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix")](images/add-webreference-dialog.png#lightbox)
+[![웹 서비스 URL은 파일 경로 접두사를 통해 액세스할 수 있는 호스트 된 원격 원본 또는 로컬 파일 시스템 리소스 일 수 있습니다.](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
 
 이렇게 하면 프로젝트의 웹 또는 서비스 참조 폴더에 프록시가 생성 됩니다. 프록시는 생성 된 코드 이므로 수정 하면 안 됩니다.
 

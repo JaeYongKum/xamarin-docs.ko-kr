@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4b82552956ab0e75d0a76a14ce7c919c744e09a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cf7e3a260308a81dc40c4fe81be66e5436ed7c63
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565332"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935800"
 ---
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
@@ -23,7 +23,7 @@ ms.locfileid: "84565332"
 
 MVVM (모델-뷰-ViewModel) 패턴의 컨텍스트에서는 사용자가 수정할 수 있도록 데이터 유효성 검사를 수행 하 고 뷰에 유효성 검사 오류를 알리기 위해 뷰 모델 또는 모델이 종종 필요 합니다. EShopOnContainers 모바일 앱은 뷰 모델 속성에 대 한 동기 클라이언트 쪽 유효성 검사를 수행 하 고, 잘못 된 데이터가 포함 된 컨트롤을 강조 표시 하 고, 데이터가 잘못 된 이유를 사용자에 게 알리는 오류 메시지를 표시 하 여 사용자에 게 유효성 검사 오류를 알립니다. 그림 6-1에서는 eShopOnContainers 모바일 앱에서 유효성 검사를 수행 하는 데 관련 된 클래스를 보여 줍니다.
 
-[![](validation-images/validation.png "Validation classes in the eShopOnContainers mobile app")](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
+[![EShopOnContainers 모바일 앱의 유효성 검사 클래스](validation-images/validation.png)](validation-images/validation-large.png#lightbox "EShopOnContainers 모바일 앱의 유효성 검사 클래스")
 
 **그림 6-1**: eShopOnContainers 모바일 앱의 유효성 검사 클래스
 
@@ -215,7 +215,7 @@ public bool Validate()
 
 EShopOnContainers 모바일 앱은 잘못 된 데이터를 포함 하는 컨트롤을 빨간색 줄로 강조 표시 하 고 잘못 된 데이터를 포함 하는 컨트롤 아래에서 데이터가 잘못 된 이유를 사용자에 게 알리는 오류 메시지를 표시 하 여 사용자에 게 유효성 검사 오류를 알립니다. 잘못 된 데이터를 수정 하면 줄이 검정색으로 바뀌고 오류 메시지가 제거 됩니다. 그림 6-2에서는 유효성 검사 오류가 있을 때 eShopOnContainers 모바일 앱의 LoginView를 보여 줍니다.
 
-![](validation-images/validation-login.png "Displaying validation errors during login")
+![로그인 중 유효성 검사 오류 표시](validation-images/validation-login.png)
 
 **그림 6-2:** 로그인 중 유효성 검사 오류 표시
 
@@ -379,7 +379,7 @@ namespace eShopOnContainers.iOS.Effects
 
 컨트롤에 유효한 데이터가 입력 되 면 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤 아래쪽에 검정 줄이 적용 되어 유효성 검사 오류가 없음을 표시 합니다. 그림 6-3에서는이에 대 한 예를 보여 줍니다.
 
-![](validation-images/validation-blackline.png "Black line indicating no validation error")
+![유효성 검사 오류를 나타내는 검정 선](validation-images/validation-blackline.png)
 
 **그림 6-3**: 유효성 검사 오류를 나타내는 검정 선
 
@@ -402,7 +402,7 @@ namespace eShopOnContainers.iOS.Effects
 
 그러면 [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) 속성이 모니터링 되 `UserName.IsValid` 고, 값이 이면가 실행 되어 연결 된 `false` [`Setter`](xref:Xamarin.Forms.Setter) `LineColor` 동작의 연결 된 속성이 빨강으로 변경 됩니다 `LineColorBehavior` . 그림 6-4에서는이에 대 한 예를 보여 줍니다.
 
-![](validation-images/validation-redline.png "Red line indicating validation error")
+![유효성 검사 오류를 나타내는 빨간색 선](validation-images/validation-redline.png)
 
 **그림 6-4**: 유효성 검사 오류를 나타내는 빨간색 선
 

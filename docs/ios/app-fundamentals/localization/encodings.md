@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: 78c048d793fd792576e2482491ebf11460d5b511
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 88f95f797d1230c818a635376f7b17a2264afadf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571807"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930340"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Xamarin.ios의 국제화 인코딩
 
@@ -22,9 +22,9 @@ ms.locfileid: "84571807"
 
 이 작업을 수행 하려면 Mac용 Visual Studio 또는 Visual Studio의 iOS 빌드/고급 창에서 추가 인코딩을 선택 합니다.
 
- [![](encodings-images/00.png "Selecting the extra encodings")](encodings-images/00.png#lightbox)
+ [![추가 인코딩 선택](encodings-images/00.png)](encodings-images/00.png#lightbox)
 
- [![](encodings-images/00a.png "Selecting the extra encodings")](encodings-images/00a.png#lightbox)
+ [![추가 인코딩 선택](encodings-images/00a.png)](encodings-images/00a.png#lightbox)
 
 다음 중 하나를 선택할 수 있습니다.
 

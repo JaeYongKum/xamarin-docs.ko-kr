@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: de8c66e6a89f035b8370a2139361d3e942aa9c09
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6924379f49a80733714a488851533f506e83b245
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571209"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930834"
 ---
 # <a name="building-cross-platform-applications-overview"></a>플랫폼 간 응용 프로그램 빌드 개요
 
@@ -53,7 +53,7 @@ Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios X
 
 응용 프로그램 아키텍처를 계층화 한 후 플랫폼의 핵심 기능을 재사용 가능한 핵심 라이브러리로 이동 하 여 책임 분리 원칙에 따라, 아래 그림에 나와 있는 것 처럼 플랫폼 간에 코드 공유를 최대화할 수 있습니다.
 
- ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
+ ![응용 프로그램 아키텍처를 계층화 한 후 플랫폼의 핵심 기능을 재사용 가능한 핵심 라이브러리로 이동 하 여 책임 분리 원칙에 따라 플랫폼 간 코드 공유를 최대화할 수 있습니다.](overview-images/layers2.png)
 
  <a name="Case_Studies"></a>
 

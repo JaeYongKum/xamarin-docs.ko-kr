@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 584b398deafd233fdbe6b24189a2047ae712fdcf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 01f95641a0cf65341479c51b2f6314a0ef3ea2de
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573523"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939076"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.ios에서 UI 스레드 사용
 
@@ -36,7 +36,7 @@ InvokeOnMainThread ( () => {
 
 Xamarin.ios 응용 프로그램을 디버깅 하는 동안 코드에서 잘못 된 스레드의 UI 컨트롤에 액세스 하려고 하면 오류가 throw 됩니다. 이렇게 하면 InvokeOnMainThread 메서드를 사용 하 여 이러한 문제를 추적 하 고 해결할 수 있습니다. 이 오류는 디버깅 하는 동안에만 발생 하며 릴리스 빌드에서 오류를 throw 하지 않습니다. 오류 메시지는 다음과 같이 표시 됩니다.
 
- ![](ui-thread-images/image10.png "UI Thread Execution")
+ ![UI 스레드 실행](ui-thread-images/image10.png)
 
  <a name="Background_Thread_Example"></a>
 

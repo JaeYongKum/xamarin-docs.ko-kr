@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d934fd2155a6a088dd543658555bf104b38f302
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 501210f669c7d62eddaf7ebe3b4ebf19614589a7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138543"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936346"
 ---
 # <a name="entry-cursor-color-on-ios"></a>IOS의 항목 커서 색
 
@@ -47,7 +47,7 @@ entry.On<iOS>().SetCursorColor(Color.LimeGreen);
 
 따라서의 커서 색을 [`Entry`](xref:Xamarin.Forms.Entry) 특정으로 설정할 수 있습니다 [`Color`](xref:Xamarin.Forms.Color) .
 
-![](entry-cursor-color-images/entry-cursorcolor.png "Entry Cursor Color")
+![항목 커서 색](entry-cursor-color-images/entry-cursorcolor.png)
 
 ## <a name="related-links"></a>관련 링크
 

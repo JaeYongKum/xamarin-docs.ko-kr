@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574134"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939089"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
 _이 문서에서는 Xamarin.ios 개발자를 위한 iOS 9에서 제공 되는 새로운 Api 및 수정 된 Api 및 기능을 모두 소개 합니다._
 
-![](images/ios9-sml.png "The iOS 9 logo")
+![IOS 9 로고](images/ios9-sml.png)
 
 Apple은 기존 기능에 대 한 여러 향상 된 기능을 비롯 하 여 iOS 9에서 몇 가지 새로운 Api 및 서비스를 추가 했습니다.
 
@@ -145,7 +145,7 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 
 ## <a name="right-to-left-language-support"></a>오른쪽에서 왼쪽으로 쓰기 언어 지원
 
-IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음과 같은 사항이 포함됩니다.
+IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음이 포함됩니다.
 
 - 표준 [Uikit](xref:UIKit) 컨트롤은 iOS 장치 로캘 및 언어 설정에 따라 오른쪽에서 왼쪽으로 자동 전환 됩니다.
 - [Uiview](xref:UIKit.UIView) 클래스는 오른쪽에서 왼쪽으로 대칭 이동 하는 경우 지정 된 뷰가 표시 되는 방법을 정의할 수 있는 특성을 제공 합니다.

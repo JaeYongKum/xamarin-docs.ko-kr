@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 65a89afb3f301fd88ac4819bb8c3658a2be5e29d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 76f5a10720505796e30079d6be3506bc66636f7e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573198"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938127"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
 
@@ -300,26 +300,26 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 1. **솔루션 탐색기**에서 Xamarin.iOS 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고, **추가** > **새 파일...** 을 차례로 선택합니다.
 2. [새 파일] 대화 상자에서 **iOS** > **속성 목록**을 차례로 선택합니다.
 
-    ![](itunesmetadata-images/image01.png "Select iOS Property List")
+    ![iOS 속성 목록 선택](itunesmetadata-images/image01.png)
 3. **이름**에 대해 `iTunesMetadata`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. 편집하기 위해 **솔루션 탐색기**에서 `iTunesMetadata.plist` 파일을 두 번 클릭하여 엽니다.
 
-    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
+    ![iTunesMetadata.plist 편집기](itunesmetadata-images/image02.png)
 5. 녹색 **+** 를 클릭하여 새 항목을 만들고, 키 이름으로 `UIRequiredDeviceCapabilities`를 입력합니다.
 
-    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
+    ![새 항목을 만들고 UIRequiredDeviceCapabilities를 키 이름으로 입력](itunesmetadata-images/image03.png)
 6. **문자열** 값 형식을 클릭하고, 팝업 목록에서 **사전**을 선택합니다.
 
-    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
+    ![팝업 목록에서 사전 선택](itunesmetadata-images/image04.png)
 7. 속성 이름의 왼쪽에서 접혀 있는 부분을 클릭하여 사전 항목을 표시합니다.
 
-    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
+    ![사전 항목 표시](itunesmetadata-images/image05.png)
 8. **새 항목 추가** 텍스트를 클릭한 다음, 녹색 **+** 를 클릭하여 사전에 항목을 추가합니다.
 
-    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
+    ![사전에 항목 추가](itunesmetadata-images/image06.png)
 9. 키 이름으로 `armv7`을 입력하고, **부울** 형식을 선택하고, 값으로 **예**를 입력합니다.
 
-    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
+    ![키 이름으로 armv7을 입력하고, 부울 형식을 선택하고, 값으로 예를 입력](itunesmetadata-images/image07.png)
 10. 필요한 모든 키/값 쌍으로 `iTunesMetadata.plist` 파일을 채울 때까지 위의 단계를 반복합니다(자세한 내용은 위의 [iTunesMetadata.plist 내용](#iTunesMetadata_contents) 섹션 참조).
 
 11. 변경 내용을 plist 파일에 저장합니다.

@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0db20620870340386ccd0cedf7f98cb2975527ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 88761472c4beae3f40f2ca6852eea4db8276c4c9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128048"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930683"
 ---
 # <a name="large-page-titles-on-ios"></a>IOS의 큰 페이지 제목
 
@@ -100,7 +100,7 @@ switch (On<iOS>().LargeTitleDisplay())
 
 그 결과, 지정 된 `LargeTitleDisplayMode` 가에 적용 되어 [`Page`](xref:Xamarin.Forms.Page) 커다란 제목 동작을 제어 합니다.
 
-![](page-large-title-images/large-title.png "Blur Effect Platform-Specific")
+![흐림 효과 플랫폼별](page-large-title-images/large-title.png)
 
 ## <a name="related-links"></a>관련 링크
 

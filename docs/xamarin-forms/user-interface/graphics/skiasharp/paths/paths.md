@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a7a4e8c4467438d1f732508a15bee7045310109b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140246"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931224"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
@@ -25,7 +25,7 @@ _연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 �
 
 그래픽 경로의 가장 중요 한 기능 중 하나는 여러 줄이 연결 되어야 하는 시기와 연결 되지 않아야 하는 경우를 정의 하는 기능입니다. 이러한 두 삼각형의 위쪽에서 보여 주는 것 처럼 차이점은 중요할 수 있습니다.
 
-![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
+![연결 된 선과 연결 되지 않은 선 간의 차이를 보여 주는 두 개의 삼각형](paths-images/connectedlinesexample.png)
 
 그래픽 경로는 개체에 의해 캡슐화 됩니다 [`SKPath`](xref:SkiaSharp.SKPath) . 경로는 하나 이상의 *컨투어에*대 한 컬렉션입니다. 각 컨투어는 *연결* 된 직선 및 곡선의 컬렉션입니다. 외형선은 서로 연결 되지 않지만 시각적으로 겹칠 수 있습니다. 경우에 따라 단일 컨투어가 겹칠 수 있습니다.
 
@@ -104,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 첫 번째 컨투어는 [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) 값이 아닌 X 및 Y 좌표를 사용 하는 호출로 구성 된 `SKPoint` 다음 세 개의 호출을 통해 [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) 삼각형의 세 면을 그립니다. 두 번째 외형선에는에 대 한 두 개의 호출만 `LineTo` 있지만 컨투어를 닫는를 호출 하 여 컨투어를 마무리 합니다 [`Close`](xref:SkiaSharp.SKPath.Close) . 차이점은 중요 합니다.
 
-[![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
+[![두 개의 삼각형 컨투어 페이지의 세 번째 스크린샷](paths-images/twotrianglecontours-small.png)](paths-images/twotrianglecontours-large.png#lightbox "두 개의 삼각형 컨투어 페이지의 세 번째 스크린샷")
 
 여기서 볼 수 있듯이 첫 번째 컨투어는 세 개의 연결 된 선 이지만 끝에 연결 되지 않습니다. 두 줄이 위쪽에 겹칩니다. 두 번째 컨투어는 명확 하 게 종결 되며, `LineTo` `Close` 메서드가 컨투어를 닫기 위해 최종 줄을 자동으로 추가 하기 때문에 한 번의 호출로 수행 되었습니다.
 
@@ -194,7 +194,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
+[![스트로크 조인 페이지의 삼중 스크린샷](paths-images/strokejoins-small.png)](paths-images/strokejoins-large.png#lightbox "스트로크 조인 페이지의 삼중 스크린샷")
 
 사접 조인은 선이 연결 되는 뾰족한 점으로 구성 됩니다. 두 줄이 작은 각도로 조인 되 면 사접 조인이 매우 길어질 수 있습니다. 너무 긴 마이터 조인을 방지 하기 위해 사접 조인의 길이는의 속성 값에 의해 제한 됩니다 [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) `SKPaint` . 이 길이를 초과 하는 마이터 조인은 빗면 조인이 될 잘라내야 off입니다.
 

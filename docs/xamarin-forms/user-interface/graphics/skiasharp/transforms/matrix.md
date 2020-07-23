@@ -10,12 +10,12 @@ ms.date: 04/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 020319761ba1274495b7595a0d18435f98a5f990
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133304"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937178"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 매트릭스 변환
 
@@ -27,7 +27,7 @@ _다양 한 변환 매트릭스를 사용 하 여 SkiaSharp 변환에 대해 자
 
 앞서 살펴본 바와 같이 transform 행렬에 대해 몰라도 SkiaSharp에서 변환을 사용할 수 있지만 변형 매트릭스가 이론적 관점에서 중요 합니다. 변환을 사용 하 여 경로를 수정 하거나 복잡 한 터치 입력을 처리할 경우에는이 문서에 나와 있습니다.
 
-![](matrix-images/matrixtransformexample.png "A bitmap subjected to an affine transform")
+![상관 변환에 적용 되는 비트맵](matrix-images/matrixtransformexample.png)
 
 에 적용 되는 현재 변환 매트릭스는 `SKCanvas` 읽기 전용 속성에 액세스 하 여 언제 든 지 사용할 수 있습니다 [`TotalMatrix`](xref:SkiaSharp.SKCanvas.TotalMatrix) . 메서드를 사용 하 여 새 변환 매트릭스를 설정 하 [`SetMatrix`](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) 고를 호출 하 여 해당 변환 행렬을 기본값으로 복원할 수 있습니다 [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix) .
 
@@ -407,7 +407,7 @@ public class PathTransformPage : ContentPage
 
 캔버스의 왼쪽 위 모퉁이에 표시 됩니다.
 
-[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
+[![경로 변환 페이지의 삼중 스크린샷](matrix-images/pathtransform-small.png)](matrix-images/pathtransform-large.png#lightbox "경로 변환 페이지의 삼중 스크린샷")
 
 이 프로그램의 생성자는 다음 호출을 사용 하 여 경로에 행렬을 적용 합니다.
 
@@ -444,7 +444,7 @@ SKRect transformedRect = matrix.MapRect(rect);
 
 상관 변환에 대 한 느낌을 얻는 한 가지 방법은 화면 주위에서 비트맵의 세 모퉁이를 대화형으로 이동 하 고 변환 결과를 확인 하는 것입니다. 이는 **관계 행렬 표시** 페이지의 개념입니다. 이 페이지에는 다른 데모 에서도 사용 되는 두 개의 다른 클래스가 필요 합니다.
 
-[`TouchPoint`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchPoint.cs)클래스는 화면 주위에서 끌 수 있는 반투명 원을 표시 합니다. `TouchPoint`에는 `SKCanvasView` 또는의 부모인 요소에 연결 된가 있어야 합니다 `SKCanvasView` [`TouchEffect`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchEffect.cs) . `Capture` 속성을 `true`으로 설정합니다. `TouchAction`이벤트 처리기에서 프로그램은 `ProcessTouchEvent` `TouchPoint` 각 인스턴스에 대해의 메서드를 호출 해야 합니다 `TouchPoint` . `true`터치 이벤트로 인해 터치 지점이 이동 하는 경우 메서드는를 반환 합니다. 또한 처리기는 `PaintSurface` 각 인스턴스에서 메서드를 호출 하 여 개체에 전달 해야 합니다 `Paint` `TouchPoint` `SKCanvas` .
+[`TouchPoint`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchPoint.cs)클래스는 화면 주위에서 끌 수 있는 반투명 원을 표시 합니다. `TouchPoint`에는 `SKCanvasView` 또는의 부모인 요소에 연결 된가 있어야 합니다 `SKCanvasView` [`TouchEffect`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchEffect.cs) . `Capture` 속성을 `true`로 설정합니다. `TouchAction`이벤트 처리기에서 프로그램은 `ProcessTouchEvent` `TouchPoint` 각 인스턴스에 대해의 메서드를 호출 해야 합니다 `TouchPoint` . `true`터치 이벤트로 인해 터치 지점이 이동 하는 경우 메서드는를 반환 합니다. 또한 처리기는 `PaintSurface` 각 인스턴스에서 메서드를 호출 하 여 개체에 전달 해야 합니다 `Paint` `TouchPoint` `SKCanvas` .
 
 `TouchPoint`SkiaSharp 시각적 개체를 별도의 클래스에 캡슐화 하는 일반적인 방법을 보여 줍니다. 클래스는 시각적 개체의 특성을 지정 하는 속성을 정의할 수 있으며, `Paint` 인수를 사용 하 여 명명 된 메서드는 `SKCanvas` 이를 렌더링할 수 있습니다.
 
@@ -593,7 +593,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 아래 iOS 화면에서는 페이지가 처음 로드 될 때 비트맵을 보여 주지만 다른 두 개의 화면에는 일부 조작 후에 표시 됩니다.
 
-[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
+[![상관 행렬 표시 페이지의 삼중 스크린샷](matrix-images/showaffinematrix-small.png)](matrix-images/showaffinematrix-large.png#lightbox "상관 행렬 표시 페이지의 삼중 스크린샷")
 
 터치 점이 비트맵의 모퉁이를 끄는 것 처럼 보이지만이는 효과를 주는 것입니다. 터치 점에서 계산 된 행렬은 모퉁이가 터치 점과 일치 하도록 비트맵을 변환 합니다.
 

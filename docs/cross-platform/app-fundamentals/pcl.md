@@ -6,12 +6,12 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: 1684bddaf5b418f63abc7ee528f646f7795396d8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 63ef7045051f21259e01c36fc5f702585b04a57b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016739"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934380"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
@@ -24,7 +24,7 @@ ms.locfileid: "73016739"
 이러한 문제를 해결 하는 코드 공유에는 **.NET Standard 프로젝트**, **공유 자산 프로젝트**및 **PCL (이식 가능한 클래스 라이브러리) 프로젝트**의 세 가지 주요 방법이 있습니다.
 
 - **.NET Standard 프로젝트** 는 .net 코드를 공유 하는 데 선호 되는 방법입니다. [.NET Standard 프로젝트 및 Xamarin](~/cross-platform/app-fundamentals/net-standard.md)에 대해 자세히 알아보세요.
-- **공유 자산 프로젝트** 는 단일 파일 집합을 사용 하 고 솔루션 내에서 코드를 공유 하는 빠르고 간단한 방법을 제공 하며, 일반적으로 조건부 컴파일 지시문을 사용 하 여이를 사용 하는 다양 한 플랫폼에 대 한 코드 경로를 지정 합니다. 정보 [공유 프로젝트 문서](~/cross-platform/app-fundamentals/shared-projects.md)를 참조 하세요.
+- **공유 자산 프로젝트** 는 단일 파일 집합을 사용 하 고 솔루션 내에서 코드를 공유 하 고 일반적으로 조건부 컴파일 지시문을 사용 하 여이를 사용 하는 다양 한 플랫폼에 대 한 코드 경로를 지정 하는 빠르고 간단한 방법을 제공 합니다. 자세한 내용은 [공유 프로젝트 문서](~/cross-platform/app-fundamentals/shared-projects.md)를 참조 하세요.
 - **PCL** 프로젝트는 알려진 BCL 클래스/기능 집합을 지 원하는 특정 프로필을 대상으로 합니다. 그러나 PCL에서 아래쪽은 프로필 특정 코드를 자체 라이브러리로 분리 하기 위해 추가적인 아키텍처 노력이 필요한 경우가 많습니다.
 
 이 페이지에서는 특정 프로필을 대상으로 하는 **PCL** 프로젝트를 만드는 방법을 설명 합니다 .이 프로젝트는 여러 플랫폼별 프로젝트에서 참조할 수 있습니다.
@@ -39,11 +39,11 @@ ms.locfileid: "73016739"
 
 |기능|.NET Framework|UWP 앱|Silverlight|Windows Phone|Xamarin|
 |---|---|---|---|---|---|
-|핵심|지원|지원|지원|지원|지원|
-|LINQ|지원|지원|지원|지원|지원|
-|IQueryable|지원|지원|지원|7.5 이상|지원|
-|Serialization|지원|지원|지원|지원|지원|
-|데이터 주석|4.0.3 +|지원|지원||지원|
+|핵심|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 이상|Y|
+|Serialization|Y|Y|Y|Y|Y|
+|데이터 주석|4.0.3 +|Y|Y||Y|
 
 Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 모든 프로필을 지원 한다는 사실을 반영 하 고 사용자가 만드는 모든 라이브러리의 기능 가용성은 지원 하도록 선택한 다른 플랫폼에 의해서만 제한 됩니다.
 
@@ -56,7 +56,7 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 
 [Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 에서 다양 한 프로필 기능에 대 한 자세한 내용을 읽고 지원 되는 프레임 워크 정보 및 기타 메모를 포함 하는 다른 커뮤니티 구성원의 [PCL 프로필 요약](https://portablelibraryprofiles.stephencleary.com/) 을 확인할 수 있습니다.
 
-**혜택**
+**이점**
 
 1. 중앙 집중식 코드 공유 – 다른 라이브러리나 응용 프로그램에서 사용할 수 있는 단일 프로젝트에서 코드를 작성 하 고 테스트 합니다.
 2. 리팩터링 작업은 솔루션에 로드 된 모든 코드 (이식 가능한 클래스 라이브러리 및 플랫폼별 프로젝트)에 영향을 줍니다.
@@ -74,9 +74,9 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 
 이 다이어그램에서는 이식 가능한 클래스 라이브러리를 사용 하 여 코드를 공유 하 고 종속성 주입을 사용 하 여 플랫폼 종속 기능을 전달 하는 플랫폼 간 응용 프로그램의 아키텍처를 보여 줍니다.
 
-[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
+[![이 다이어그램에서는 이식 가능한 클래스 라이브러리를 사용 하 여 코드를 공유 하 고 종속성 주입을 사용 하 여 플랫폼 종속 기능을 전달 하는 플랫폼 간 응용 프로그램의 아키텍처를 보여 줍니다.](pcl-images/image1.png)](pcl-images/image1.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Mac용 Visual Studio 연습
 
@@ -100,7 +100,7 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 
 이 프로젝트에 대 한 PCL 설정을 확인 하 고 변경 하려면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션 > >** 선택 하 여 다음과 같은 화면을 표시 합니다.
 
-[프로필을 설정 하는 PCL 프로젝트 옵션![](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
+[![프로필을 설정 하는 PCL 프로젝트 옵션](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
 
 **변경 ...** 을 클릭 하 여이 이식 가능한 클래스 라이브러리의 대상 프로필을 변경 합니다.
 
@@ -108,13 +108,13 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 
 ## <a name="working-with-a-pcl"></a>PCL 사용
 
-PCL 라이브러리에서 코드를 작성 하면 Mac용 Visual Studio 편집기에서 선택한 프로필의 제한 사항을 인식 하 여 자동 완성 옵션을 적절 하 게 조정 합니다. 예를 들어이 스크린샷은 Mac용 Visual Studio에 사용 된 기본 프로필 (Profile136)을 사용 하 여 System.IO에 대 한 자동 완성 옵션을 보여 줍니다. 사용 가능한 클래스의 절반을 나타내는 스크롤 막대가 표시 됩니다 (실제로는 14 개만 있음). 사용 가능한 클래스).
+PCL 라이브러리에서 코드를 작성 하면 Mac용 Visual Studio 편집기에서 선택한 프로필의 제한 사항을 인식 하 여 자동 완성 옵션을 적절 하 게 조정 합니다. 예를 들어이 스크린샷에서는 Mac용 Visual Studio에 사용 된 기본 프로필 (Profile136)을 사용 하 여 System.IO에 대 한 자동 완성 옵션을 보여 줍니다. 사용 가능한 클래스의 절반을 나타내는 스크롤 막대가 표시 됩니다 (실제로는 14 개의 클래스만 사용할 수 있음).
 
-[PCL의 System.IO 클래스에 있는 14 개 클래스의![Intellisense 목록](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
+[![PCL의 System.IO 클래스에 있는 14 개 클래스의 Intellisense 목록](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
-System.IO 또는 Xamarin.ios 프로젝트에서 자동 완성을 사용 하는 것과 비교 – PCL 프로필에 없는 `File` 및 `Directory`와 같은 일반적으로 사용 되는 클래스를 포함 하 여 40 클래스를 사용할 수 있습니다.
+Xamarin.ios 또는 Xamarin.ios 프로젝트에서 System.IO 자동 완성과 비교 – `File` `Directory` PCL 프로필에 없는와 같은 일반적으로 사용 되는 클래스를 포함 하 여 사용할 수 있는 40 클래스가 있습니다.
 
-[.NET Framework System.IO 네임 스페이스의 40 클래스![Intellisense 목록](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
+[![.NET Framework System.IO 네임 스페이스에서 40 클래스의 Intellisense 목록](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
 이는 PCL 사용의 기본 절충을 반영 합니다. 많은 플랫폼에서 코드를 원활 하 게 공유 하는 기능을 사용 하면 가능한 모든 플랫폼에서 비슷한 구현이 없으므로 특정 Api를 사용할 수 없습니다.
 
@@ -122,15 +122,15 @@ System.IO 또는 Xamarin.ios 프로젝트에서 자동 완성을 사용 하는 �
 
 PCL 프로젝트를 만든 후에는 일반적으로 참조를 추가 하는 것과 같은 방식으로 호환 되는 응용 프로그램 또는 라이브러리 프로젝트에서 해당 프로젝트에 대 한 참조를 추가할 수 있습니다. Mac용 Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집** ...을 선택 하 고 다음과 같이 **프로젝트** 탭으로 전환 합니다.
 
-[참조 편집 옵션을 통해 PCL에 참조를 추가![](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
+[![참조 편집 옵션을 통해 PCL에 대 한 참조 추가](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
 다음 스크린샷에는 TaskyPortable 샘플 앱에 대 한 Solution pad가 나와 있습니다. 여기에는 PCL 프로젝트의 pcl 라이브러리와 해당 PCL 라이브러리에 대 한 참조가 표시 됩니다.
 
-[PCL 프로젝트를 보여 주는 TaskyPortable 샘플 솔루션![](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
+[![PCL 프로젝트를 보여 주는 TaskyPortable 샘플 솔루션](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
 PCL의 출력 (즉, 결과 어셈블리 DLL)을 대부분의 프로젝트에 대 한 참조로 추가할 수도 있습니다. 따라서 PCL은 플랫폼 간 구성 요소 및 라이브러리를 제공 하는 이상적인 방법입니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-walkthrough"></a>Visual Studio 연습
 
@@ -149,7 +149,7 @@ Visual Studio에서 솔루션에 PCL을 추가 하는 것은 일반 프로젝트
 
     [![라이브러리에 대 한 대상 플랫폼을 선택 합니다.](pcl-images/image11-sml.png "지원 해야 하는 플랫폼을 확인 하 고 확인을 누릅니다.")](pcl-images/image11.png#lightbox)
 
-3. Pcl 프로젝트는 &ndash; 솔루션 탐색기 표시 된 것 처럼 표시 됩니다. 텍스트 **(이식 가능)** 는 pcl 임을 나타내기 위해 프로젝트 이름 옆에 표시 됩니다.
+3. PCL 프로젝트는 프로젝트 이름 옆에 표시 되는 &ndash; 텍스트 **(이식 가능)** 가 pcl 임을 나타내는 솔루션 탐색기 표시 된 대로 표시 됩니다.
 
     ![PCL 프로필에서 정의 된 NET Framework](pcl-images/image12.png "PCL 프로필에서 정의 된 NET Framework")
 
@@ -159,7 +159,7 @@ Visual Studio에서 솔루션에 PCL을 추가 하는 것은 일반 프로젝트
 
 다음 스크린샷에 표시 된 것 처럼 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성 > 라이브러리** 를 선택 하 여 PCL 설정을 보고 변경할 수 있습니다.
 
-[플랫폼 대상을 편집![](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
+[![플랫폼 대상 편집](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
 
 코드가 PCL에 이미 추가 된 후 프로필이 변경 되 면 코드에서 새로 선택한 프로필에 포함 되지 않은 기능을 참조 하는 경우 라이브러리가 더 이상 컴파일되지 않을 수 있습니다.
 
@@ -170,11 +170,11 @@ Visual Studio에서 솔루션에 PCL을 추가 하는 것은 일반 프로젝트
 
 PCL 라이브러리에서 코드를 작성할 때 Visual Studio는 선택한 프로필의 제한 사항을 인식 하 고 Intellisense 옵션을 적절 하 게 조정 합니다. 예를 들어이 스크린샷에서는 기본 프로필 (Profile136)을 사용 하 여 System.IO에 대 한 자동 완성 옵션을 보여 줍니다. 사용 가능한 클래스의 절반을 나타내는 스크롤 막대가 표시 됩니다 (실제로는 14 개의 클래스만 사용할 수 있음).
 
-[PCL에서 사용할 수 있는 IO 클래스 수가 감소![](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
+[![PCL에서 사용할 수 있는 IO 클래스의 수 감소](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
 
-일반 프로젝트에서 System.IO 자동 완성을 사용 하 여 비교 합니다. `File` 및 `Directory`와 같이 일반적으로 사용 되는 클래스를 비롯 한 40 클래스는 PCL 프로필에 있지 않습니다.
+일반 프로젝트에서 System.IO 자동 완성을 사용 하 여 비교 합니다. 예를 들어 `File` , `Directory` PCL 프로필에 없는 일반적으로 사용 되는 클래스를 포함 하 여 40 클래스를 사용할 수 있습니다.
 
-[.NET Framework에서 사용할 수 있는 더 많은 IO 클래스![](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
+[![.NET Framework에서 사용할 수 있는 많은 IO 클래스](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
 
 이는 PCL 사용의 기본 절충을 반영 합니다. 많은 플랫폼에서 코드를 원활 하 게 공유 하는 기능을 사용 하면 가능한 모든 플랫폼에서 비슷한 구현이 없으므로 특정 Api를 사용할 수 없습니다.
 
@@ -183,13 +183,13 @@ PCL 라이브러리에서 코드를 작성할 때 Visual Studio는 선택한 프
 
 ### <a name="using-pcl"></a>PCL 사용
 
-PCL 프로젝트를 만든 후에는 일반적으로 참조를 추가 하는 것과 같은 방식으로 호환 되는 응용 프로그램 또는 라이브러리 프로젝트에서 해당 프로젝트에 대 한 참조를 추가할 수 있습니다. Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 `Add Reference...` 선택한 다음 그림과 같이 **솔루션 > 프로젝트** 탭으로 전환 합니다.
+PCL 프로젝트를 만든 후에는 일반적으로 참조를 추가 하는 것과 같은 방식으로 호환 되는 응용 프로그램 또는 라이브러리 프로젝트에서 해당 프로젝트에 대 한 참조를 추가할 수 있습니다. Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 `Add Reference...` 다음과 같이 **솔루션 > 프로젝트** 탭으로 전환 합니다.
 
 [![참조 프로젝트 추가 탭을 통해 PCL에 참조를 추가 합니다.](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
 다음 스크린샷에는 TaskyPortable 샘플 앱에 대 한 솔루션 창이 나와 있습니다. 여기에는 PCL 프로젝트의 pcl 라이브러리와 해당 PCL 라이브러리에 대 한 참조가 표시 됩니다.
 
-[PCL 라이브러리를 보여 주는![TaskyPortable 샘플 솔루션](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
+[![PCL 라이브러리를 보여 주는 TaskyPortable 샘플 솔루션](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 
 PCL의 출력 (즉, 결과 어셈블리 DLL)을 대부분의 프로젝트에 대 한 참조로 추가할 수도 있습니다.
 따라서 PCL은 플랫폼 간 구성 요소 및 라이브러리를 제공 하는 이상적인 방법입니다.
@@ -201,19 +201,19 @@ PCL의 출력 (즉, 결과 어셈블리 DLL)을 대부분의 프로젝트에 대
 [Taskyportable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) 샘플 응용 프로그램은 Xamarin에서 이식 가능한 클래스 라이브러리를 사용할 수 있는 방법을 보여 줍니다.
 IOS 및 Android에서 실행 되는 응용 프로그램의 몇 가지 스크린샷:
 
-[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
+[![IOS, Android 및 Windows Phone에서 실행 되는 응용 프로그램의 몇 가지 스크린샷은 다음과 같습니다.](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
 
 이 클래스는 단순히 이식 가능한 코드 인 많은 데이터 및 논리 클래스를 공유 하며, SQLite 데이터베이스 구현에 대 한 종속성 주입을 사용 하 여 플랫폼별 요구 사항을 통합 하는 방법도 보여 줍니다.
 
 솔루션 구조는 아래에 표시 됩니다 (각각 Mac용 Visual Studio 및 Visual Studio).
 
-[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
+[![솔루션 구조는 Mac용 Visual Studio 및 Visual Studio 각각에 나와 있습니다.](pcl-images/image19.png)](pcl-images/image19.png#lightbox)
 
-SQLite-NET 코드에는 각 운영 체제에서 각각 다른 운영 체제의 SQLite 구현에 사용할 수 있는 플랫폼별 부분이 있으므로, 이식 가능한 클래스 라이브러리로 컴파일될 수 있는 추상 클래스로 리팩터링 되었습니다. iOS 및 Android 프로젝트에서 서브 클래스로 구현 되는 실제 코드입니다.
+SQLite (각 운영 체제에서 SQLite 구현에 사용할 수 있음)에 대 한 정보를 제공 하기 위해 SQLite-NET 코드에는 이식 가능한 클래스 라이브러리로 컴파일될 수 있는 추상 클래스와 iOS 및 Android 프로젝트의 서브 클래스로 구현 된 실제 코드로 리팩터링 되었습니다.
 
 ### <a name="taskyportablelibrary"></a>TaskyPortableLibrary
 
-이식 가능한 클래스 라이브러리는 지원할 수 있는 .NET 기능에서 제한 됩니다. 이는 여러 플랫폼에서 실행 되도록 컴파일되므로 SQLite-NET에서 사용 되는 `[DllImport]` 기능을 사용할 수 없습니다. 대신 SQLite-NET은 추상 클래스로 구현 된 다음 나머지 공유 코드를 통해 참조 됩니다. 추상 API의 추출은 다음과 같습니다.
+이식 가능한 클래스 라이브러리는 지원할 수 있는 .NET 기능에서 제한 됩니다. 이는 여러 플랫폼에서 실행 되도록 컴파일되므로 `[DllImport]` SQLite-NET에서 사용 되는 기능을 사용할 수 없습니다. 대신 SQLite-NET은 추상 클래스로 구현 된 다음 나머지 공유 코드를 통해 참조 됩니다. 추상 API의 추출은 다음과 같습니다.
 
 ```csharp
 public abstract class SQLiteConnection : IDisposable {
@@ -254,7 +254,7 @@ public abstract class SQLiteConnection : IDisposable {
 
 IOS 및 Android 응용 프로그램 프로젝트에는 PCL의 공유 코드를 연결 하는 데 사용 되는 사용자 인터페이스 및 기타 플랫폼별 코드가 포함 되어 있습니다.
 
-이러한 프로젝트에는 해당 플랫폼에서 작동 하는 추상 데이터베이스 API의 구현도 포함 되어 있습니다. IOS 및 Android에서 Sqlite 데이터베이스 엔진은 운영 체제에 기본 제공 되므로 구현에서는 데이터베이스 연결의 구체적인 구현을 제공 하는 것 처럼 `[DllImport]`를 사용할 수 있습니다. 플랫폼별 구현 코드의 발췌는 다음과 같습니다.
+이러한 프로젝트에는 해당 플랫폼에서 작동 하는 추상 데이터베이스 API의 구현도 포함 되어 있습니다. IOS 및 Android에서 Sqlite 데이터베이스 엔진은 운영 체제에 기본 제공 되므로 구현을 사용 `[DllImport]` 하 여 데이터베이스 연결의 구체적인 구현을 제공할 수 있습니다. 플랫폼별 구현 코드의 발췌는 다음과 같습니다.
 
 ```csharp
 [DllImport("sqlite3", EntryPoint = "sqlite3_open")]

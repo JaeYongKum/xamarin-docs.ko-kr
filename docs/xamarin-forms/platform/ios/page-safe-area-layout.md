@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ca30481fbc0e5631ff75000c688dd805793e670
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5bab1166ade7a5eeebbb720fa48f6116b4ec95d0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128065"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933720"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>IOS의 안전 영역 레이아웃 가이드
 
@@ -48,7 +48,7 @@ On<iOS>().SetUseSafeArea(true);
 
 그 결과, 페이지 콘텐츠를 모든 Iphone에 안전 하 게 화면 영역에 배치할 수 있습니다.
 
-[![](page-safe-area-images/safe-area-layout.png "Safe Area Layout Guide")](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
+[![안전 영역 레이아웃 안내선](page-safe-area-images/safe-area-layout.png)](page-safe-area-images/safe-area-layout-large.png#lightbox "안전 영역 레이아웃 안내선")
 
 > [!NOTE]
 > Apple에서 정의한 안전 영역은에서 Xamarin.Forms 속성을 설정 하는 데 사용 되며 [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) 설정 된이 속성의 이전 값을 재정의 합니다.

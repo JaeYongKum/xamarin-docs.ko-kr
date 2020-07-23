@@ -10,12 +10,12 @@ ms.date: 09/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cdede547e3ef7cf9f7b6d89751c7476a2ce66d3d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05a001d3b49f38b2cb5306d8a19a08b4f8392425
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129014"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935566"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
@@ -37,7 +37,7 @@ Xamarin.Forms에는 여러 응용 프로그램에 사용 되는 기본 제공 �
 
 [`TextCell`](xref:Xamarin.Forms.TextCell)텍스트를 표시 하는 셀입니다. 필요에 따라 두 번째 줄을 정보 텍스트로 표시 합니다. 다음 스크린샷에서는 `TextCell` iOS 및 Android에 대 한 항목을 보여 줍니다.
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+![기본 TextCell 예제](customizing-cell-appearance-images/text-cell-default.png)
 
 TextCells은 런타임에 네이티브 컨트롤로 렌더링 되므로 사용자 지정에 비해 성능이 매우 좋습니다 `ViewCell` . TextCells은 사용자 지정이 가능 하므로 다음 속성을 설정할 수 있습니다.
 
@@ -48,7 +48,7 @@ TextCells은 런타임에 네이티브 컨트롤로 렌더링 되므로 사용�
 
 다음 스크린샷은 `TextCell` 사용자 지정 된 색 속성의 항목을 보여 줍니다.
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Custom TextCell Example")
+![사용자 지정 TextCell 예제](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### <a name="imagecell"></a>ImageCell
 

@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a59f65655772768860ce29128f14a48641abc26
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 71e64f7b8286f22040a802336e9be756d932c0cd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134279"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936541"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본 애니메이션
 
@@ -25,7 +25,7 @@ _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법을 알아봅니�
 
 메서드를 주기적으로 호출 하 여 SkiaSharp 그래픽에 애니메이션 효과를 적용할 수 있습니다 Xamarin.Forms `PaintSurface` . 각 시간 마다 그래픽을 약간 다르게 그릴 수 있습니다. 다음은 가운데에서 확장 되는 동심 원이 있는이 문서의 뒷부분에 표시 되는 애니메이션입니다.
 
-![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
+![여러 동심 원이 가운데에서 확장 되는 것으로 보입니다.](animation-images/animationexample.png)
 
 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Pulsating ellipse** 페이지는 타원의 두 축에 애니메이션 효과를 주기 위해 타원의 두 축에 애니메이션 효과를 주기 때문에이 pulsation의 요율도 제어할 수 있습니다. [**PulsatingEllipsePage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은 Xamarin.Forms `Slider` `Label` 슬라이더의 현재 값을 표시 하는 및를 인스턴스화합니다. 이는를 다른 뷰와 통합 하는 일반적인 방법입니다 `SKCanvasView` Xamarin.Forms .
 
@@ -144,7 +144,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 메서드는 표시 영역의 크기와 최대 반지름을 기준으로 하는 최소 반경을 기반으로 최대 반지름을 계산 합니다. `scale`값은 0에서 1 사이에 애니메이션을 적용 하 여 0으로 다시 계산 하므로 메서드는이를 사용 하 여와 `xRadius` 사이의 범위를 계산 합니다 `yRadius` `minRadius` `maxRadius` . 이러한 값은 타원을 그리거나 채우는 데 사용 됩니다.
 
-[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
+[![Pulsating 타원 페이지의 세 번째 스크린샷](animation-images/pulsatingellipse-small.png)](animation-images/pulsatingellipse-large.png#lightbox "Pulsating 타원 페이지의 세 번째 스크린샷")
 
 `SKPaint`개체는 블록에 생성 됩니다 `using` . 많은 SkiaSharp 클래스와 마찬가지로 인터페이스를 구현 하는에서 `SKPaint` `SKObject` 파생 되는에서 파생 `SKNativeObject` [`IDisposable`](xref:System.IDisposable) 됩니다. `SKPaint`메서드를 재정의 `Dispose` 하 여 관리 되지 않는 리소스를 해제 합니다.
 
@@ -247,7 +247,7 @@ public class ExpandingCirclesPage : ContentPage
 
 그 결과,가 1과 같은 경우에는 이미지가 동일 하 게 표시 되 `t` `t` 고 원은 계속 해 서 계속 확장 되는 것 처럼 보입니다.
 
-[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
+[![확장 된 원 페이지의 삼중 스크린샷](animation-images/expandingcircles-small.png)](animation-images/expandingcircles-large.png#lightbox "확장 된 원 페이지의 삼중 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 

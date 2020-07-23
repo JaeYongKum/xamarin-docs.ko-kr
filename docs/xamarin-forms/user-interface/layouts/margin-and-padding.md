@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b8ba915f3bc701b6a100d206dc791f9572fa594b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137993"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936619"
 ---
 # <a name="margin-and-padding"></a>여백 및 안쪽 여백
 
@@ -30,7 +30,7 @@ _여백 및 안쪽 여백 속성은 요소가 사용자 인터페이스에서 �
 
 다음 다이어그램에서는 두 가지 개념을 보여 줍니다.
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts")
+[![여백 및 안쪽 여백 개념](margin-and-padding-images/margins-and-padding-sml.png)](margin-and-padding-images/margins-and-padding.png#lightbox "여백 및 안쪽 여백 개념")
 
 [`Margin`](xref:Xamarin.Forms.View.Margin)값은 덧셈입니다. 따라서 인접 한 두 개의 요소가 20 픽셀의 여백을 지정 하는 경우 요소 간의 거리가 40 픽셀입니다. 또한 여백과 안쪽 여백이 모두 적용 되는 경우에는 요소와 모든 내용 간의 거리가 여백 뒤에 추가 됩니다.
 
@@ -75,5 +75,5 @@ var stackLayout = new StackLayout {
 ## <a name="related-links"></a>관련 링크
 
 - [Margin](xref:Xamarin.Forms.View.Margin)
-- [여백](xref:Xamarin.Forms.Layout.Padding)
+- [안쪽 여백](xref:Xamarin.Forms.Layout.Padding)
 - [Thickness](xref:Xamarin.Forms.Thickness)

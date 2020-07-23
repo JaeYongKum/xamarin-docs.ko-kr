@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0a43ce2d27c8152137101d616302f6e56a57bd39
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140051"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931978"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
 
@@ -29,7 +29,7 @@ Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스�
 
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 멀티캐스트 게시-구독 기능을 제공합니다. 즉, 단일 메시지를 게시 하는 여러 게시자가 있을 수 있으며 동일한 메시지를 수신 대기 하는 여러 구독자가 있을 수 있습니다. 그림 4-1에서는이 관계를 보여 줍니다.
 
-![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
+![멀티캐스트 게시 - 구독 기능](communicating-between-loosely-coupled-components-images/messagingcenter.png)
 
 **그림 4-1:** 멀티 캐스트 게시-구독 기능
 

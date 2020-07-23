@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6def31ebfe2a619f1d5db1e0fba071494afbcd3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571482"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931965"
 ---
 # <a name="configuration-management"></a>구성 관리
 
@@ -124,7 +124,7 @@ public class GlobalSetting
 
 EShopOnContainers 모바일 앱에서은 `SettingsView` 두 가지 사용자 설정을 노출 합니다. 이러한 설정을 사용 하면 앱이 Docker 컨테이너로 배포 된 마이크로 서비스에서 데이터를 검색 해야 하는지 여부 또는 앱이 인터넷에 연결 되지 않아도 되는 모의 서비스에서 데이터를 검색 해야 하는지 여부를 구성할 수 있습니다. 컨테이너 화 된 마이크로 서비스에서 데이터를 검색 하도록 선택 하는 경우 마이크로 서비스에 대 한 기본 끝점 URL을 지정 해야 합니다. 그림 7-1에서는 `SettingsView` 사용자가 컨테이너 화 된 마이크로 서비스에서 데이터를 검색 하도록 선택한 경우를 보여 줍니다.
 
-![](configuration-management-images/settings-endpoint.png "User settings exposed by the eShopOnContainers mobile app")
+![EShopOnContainers 모바일 앱에서 노출 하는 사용자 설정](configuration-management-images/settings-endpoint.png)
 
 **그림 7-1**: eShopOnContainers 모바일 앱에서 노출 하는 사용자 설정
 

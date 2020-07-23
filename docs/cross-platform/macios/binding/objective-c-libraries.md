@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 67e66d5d8f1023c0e7561791ff29ed2952ac040b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6508f7ec48d10196b47e0b51fc30e54e3c3668a6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571014"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930561"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -39,14 +39,14 @@ C 라이브러리를 정적으로 연결 하는 방법에 대 한 자세한 내�
 바인딩을 만드는 가장 쉬운 방법은 Xamarin.ios 바인딩 프로젝트를 만드는 것입니다.
 프로젝트 형식, **iOS > 라이브러리 > 바인딩 라이브러리**를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행할 수 있습니다.
 
-[![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
+[![프로젝트 형식, iOS 라이브러리 바인딩 라이브러리를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행 합니다.](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 바인딩을 만드는 가장 쉬운 방법은 Xamarin.ios 바인딩 프로젝트를 만드는 것입니다.
 프로젝트 형식, **visual c # > ios > 바인딩 라이브러리 (ios)** 를 선택 하 여 Windows의 visual Studio에서이 작업을 수행할 수 있습니다.
 
-[![](objective-c-libraries-images/00vs-sml.png "iOS Bindings Library iOS")](objective-c-libraries-images/00vs.png#lightbox)
+[![iOS 바인딩 라이브러리 iOS](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
 > 참고: **xamarin.ios** 에 대 한 바인딩 프로젝트는 Mac용 Visual Studio 에서만 지원 됩니다.
@@ -104,7 +104,7 @@ API 파일의 형식 및 사용할 수 있는 특성에 대 한 자세한 내용
 
 이 차트에서는 파일 간의 관계를 보여 줍니다.
 
- [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png "This chart shows the relationship between the files")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
+ [![이 차트는 파일 간의 관계를 보여 줍니다.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.33.07-pm.png#lightbox)
 
 API 정의 파일에는 네임 스페이스 및 인터페이스 정의 (인터페이스에 포함 될 수 있는 모든 멤버 포함)만 포함 되며 클래스, 열거형, 대리자 또는 구조체는 포함 되지 않아야 합니다. API 정의 파일은 API를 생성 하는 데 사용 되는 계약 일 뿐입니다.
 
@@ -135,7 +135,7 @@ public partial class Camera {
 이 바인딩을 완료 하려면 네이티브 라이브러리를 프로젝트에 추가 해야 합니다.  네이티브 라이브러리를 프로젝트에 추가 하 여 프로젝트에 프로젝트를 추가 하거나 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트 추가를 선택 하 여 네이티브 라이브러리를 선택 하는 방식으로 프로젝트에 네이티브 라이브러리 **Add**를 추가 하 여이 작업을 수행할 수 있습니다  >  **Add Files** .
 규칙에 따라 네이티브 라이브러리는 "lib" 라는 단어로 시작 하 고 ".a" 확장명으로 끝납니다. 이 작업을 수행 하는 경우에는 기본 라이브러리에 포함 된 내용에 대 한 정보를 포함 하는 파일 및 자동으로 채워진 c # 파일의 두 파일을 추가 Mac용 Visual Studio 합니다.
 
- [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
+ [![규칙에 따라 네이티브 라이브러리는 lib 라는 단어로 시작 하 고 확장명으로 끝납니다.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
 파일의 내용에는 `libMagicChord.linkwith.cs` 이 라이브러리를 사용 하는 방법에 대 한 정보가 포함 되어 있으며이 바이너리를 결과 DLL 파일에 패키지할 IDE에 지시 합니다.
 
@@ -1197,7 +1197,7 @@ void SomeString (ref NSObject byref);
 
 위의 예에서는 "Retain" 의미 체계가 있는 값에 플래그를 지정 합니다. 사용 가능한 의미 체계는 다음과 같습니다.
 
-- 할당
+- 대입
 - 복사
 - 보유
 

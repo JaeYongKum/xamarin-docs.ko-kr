@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0f3c91e175e5ccdefeaf3d6c9c83e9eb3e012e14
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572379"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935397"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Xamarin에서 tvOS 탐색 모음 사용
 
 탐색 모음은 보기의 맨 위에 추가 하 여 제목 및 선택적 탐색 모음 단추를 표시할 수 있습니다. 일반적으로 사용자가 기본 페이지 (예: 테이블 뷰, 컬렉션 또는 메뉴)에서 선택한 항목의 세부 정보를 표시 하는 하위 뷰로 이동할 때 사용 됩니다.
 
-[![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
+[![샘플 탐색 모음](navigation-bars-images/navbar01.png)](navigation-bars-images/navbar01.png#lightbox)
 
 가운데에 표시 되는 제목 외에도 탐색 모음에는 `UIBarButtonItem` 막대의 왼쪽과 오른쪽에 하나 이상의 탐색 모음 단추 ()가 포함 될 수 있습니다.
 
@@ -36,16 +36,16 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
-    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
+    [![탐색 모음](navigation-bars-images/navbar02.png)](navigation-bars-images/navbar02.png#lightbox)
 1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **Properties Pad**의 **위젯** 탭에서 **제목을**설정할 수 있습니다.
 
-    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
+    [![제목 설정](navigation-bars-images/navbar03.png)](navigation-bars-images/navbar03.png#lightbox)
 1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다.
 
-    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
+    [![막대 단추 항목](navigation-bars-images/navbar04.png)](navigation-bars-images/navbar04.png#lightbox)
 1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다.
 
-    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
+    [![막대 단추 항목 동작](navigation-bars-images/navbar05.png)](navigation-bars-images/navbar05.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -53,16 +53,16 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
-    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
+    [![탐색 모음](navigation-bars-images/navbar02-vs.png)](navigation-bars-images/navbar02-vs.png#lightbox)
 1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **속성 탐색기**의 **위젯** 탭에서 **제목을**설정할 수 있습니다.
 
-    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
+    [![제목 설정](navigation-bars-images/navbar03-vs.png)](navigation-bars-images/navbar03-vs.png#lightbox)
 1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다.
 
-    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
+    [![막대 단추 항목](navigation-bars-images/navbar04-vs.png)](navigation-bars-images/navbar04-vs.png#lightbox)
 1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다.
 
-    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
+    [![막대 단추 항목 동작](navigation-bars-images/navbar05-vs.png)](navigation-bars-images/navbar05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 -----

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 9f4e88cdc04431660376b885faef0a855e14efc2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b36ae9f9fe04ea060ef0238d5af25fb771cafe85
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572119"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932342"
 ---
 # <a name="text-input-in-xamarinios"></a>Xamarin.ios의 텍스트 입력
 
@@ -20,9 +20,9 @@ ms.locfileid: "84572119"
 
 아래 스크린샷에는 Mac용 Visual Studio의 도구 상자 패드에 있는 이러한 컨트롤의 아이콘이 표시 됩니다.
 
- [![](text-input-images/image11a.png "UITextField")](text-input-images/image11a.png#lightbox)
+ [![UITextField](text-input-images/image11a.png)](text-input-images/image11a.png#lightbox)
 
- [![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png#lightbox)
+ [![UITextView](text-input-images/image13a.png)](text-input-images/image13a.png#lightbox)
 
 콘센트의 이름을 지정 하 고 스토리 보드 파일을 저장 한 후에는 Mac용 Visual Studio `.designer.cs` partial 클래스를 업데이트 하 고 클래스 파일에 컨트롤을 참조 하는 c # 코드를 추가할 수 있습니다. 각 컨트롤에는 c # 코드에서 액세스할 수 있는 고유한 속성 및 이벤트가 있습니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "84572119"
 
 `UITextField`컨트롤은 사용자 이름 또는 암호와 같은 한 줄의 텍스트 입력을 허용 하는 데 주로 사용 됩니다. 컨트롤을 사용자 지정 하는 데 사용할 수 있는 몇 가지 옵션이 여기에 표시 됩니다.
 
- [![](text-input-images/image15a.png "UITextField Properties")](text-input-images/image15a.png#lightbox)
+ [![UITextField 속성](text-input-images/image15a.png)](text-input-images/image15a.png#lightbox)
 
 이러한 컨트롤은 다음에 설명 되어 있습니다.
 
@@ -74,7 +74,7 @@ View.Add(textfield1);
 
 `UITextView`컨트롤은 읽기 전용 텍스트를 표시 하거나 여러 줄 텍스트 입력을 허용 하는 데 사용할 수 있습니다. 에는 (대문자 표시, 수정 등)와 같은 많은 옵션이 있습니다 `UITextField` .
 
- [![](text-input-images/image16a.png "UITextView Properties")](text-input-images/image16a.png#lightbox)
+ [![UITextView 속성](text-input-images/image16a.png)](text-input-images/image16a.png#lightbox)
 
 특정 속성은 다음과 같습니다.
 

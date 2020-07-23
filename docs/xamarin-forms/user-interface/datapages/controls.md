@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 86b526fff305b195221aca3fb6a86ad0823cb145
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e206c89de278c8b85848294e76e4431825eaee85
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569402"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938959"
 ---
 # <a name="datapages-controls-reference"></a>DataPages 컨트롤 참조
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages Xamarin.Forms 를 렌더링 하려면 테마 참조가 필요 합니다. 여기에는를 설치 하는 작업이 포함 됩니다 [ Xamarin.Forms . 테마. 기본](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet 패키지를 프로젝트에 삽입 하 고 다음을 수행 [ Xamarin.Forms 합니다. 테마. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) 또는 [ Xamarin.Forms . 테마. 짙은](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet 패키지.
@@ -62,11 +62,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Android의 HeroImage 컨트롤") ![](controls-images/heroimage-dark-android.png "Android의 HeroImage 컨트롤")
+![Android의 HeroImage 컨트롤](controls-images/heroimage-light-android.png) ![Android의 HeroImage 컨트롤](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "IOS의 HeroImage 컨트롤") ![](controls-images/heroimage-dark-ios.png "IOS의 HeroImage 컨트롤")
+![IOS의 HeroImage 컨트롤](controls-images/heroimage-light-ios.png) ![IOS의 HeroImage 컨트롤](controls-images/heroimage-dark-ios.png)
 
 ### <a name="listitem"></a>ListItem
 
@@ -94,11 +94,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Android의 ListItem 컨트롤") ![](controls-images/listitem-dark-android.png "Android의 ListItem 컨트롤")
+![Android의 ListItem 컨트롤](controls-images/listitem-light-android.png) ![Android의 ListItem 컨트롤](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "IOS의 ListItem 컨트롤") ![](controls-images/listitem-dark-ios.png "IOS의 ListItem 컨트롤")
+![IOS의 ListItem 컨트롤](controls-images/listitem-light-ios.png) ![IOS의 ListItem 컨트롤](controls-images/listitem-dark-ios.png)
 
 ## <a name="custom-control-example"></a>사용자 지정 컨트롤 예제
 
@@ -124,11 +124,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 **Android**
 
-![](controls-images/cardview-light-android.png "Android의 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-android.png "Android의 CardView 사용자 지정 컨트롤")
+![Android의 CardView 사용자 지정 컨트롤](controls-images/cardview-light-android.png) ![Android의 CardView 사용자 지정 컨트롤](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "IOS의 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-ios.png "IOS의 CardView 사용자 지정 컨트롤")
+![IOS의 CardView 사용자 지정 컨트롤](controls-images/cardview-light-ios.png) ![IOS의 CardView 사용자 지정 컨트롤](controls-images/cardview-dark-ios.png)
 
 ### <a name="building-the-custom-cardview"></a>사용자 지정 CardView 빌드
 

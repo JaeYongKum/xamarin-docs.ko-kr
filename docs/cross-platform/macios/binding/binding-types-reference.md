@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: da6bf97bfc5769647c63b55c289293e63f50e5cb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8549e993bf46ffd3b24ad8ec495791eb25b25023
+ms.sourcegitcommit: bd49f28105218f04e978e58143bba8cdec9fd4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571001"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925986"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식 참조 가이드
 
@@ -30,7 +30,7 @@ interface MyType : [Protocol1, Protocol2] {
 }
 ```
 
-[`[BaseType]`](#BaseTypeAttribute)생성 된 개체에 대 한 기본 형식을 선언 하는 특성이 있는 계약 정의의 모든 인터페이스입니다. 위의 선언에서 `MyType` 라는 목표-c 형식에 바인딩되는 클래스 c # 형식이 생성 됩니다 `MyType` .
+특성을 가진 계약 정의의 모든 인터페이스는 [`[BaseType]`](#BaseTypeAttribute) 생성 된 개체에 대 한 기본 형식을 선언 합니다. 위의 선언에서 `MyType` 라는 목표-c 형식에 바인딩되는 클래스 c # 형식이 생성 됩니다 `MyType` .
 
 위의 샘플에서 인터페이스 상속 구문을 사용 하 여 typename 뒤에 형식을 지정 하는 경우 `Protocol1` `Protocol2` 해당 인터페이스의 콘텐츠는에 대 한 계약의 일부인 것 처럼 인라인 됩니다 `MyType` .
 Xamarin.ios가 프로토콜을 채택 하는 방식은 프로토콜에 선언 된 모든 메서드와 속성을 형식 자체로 인라이닝 하는 것입니다.
@@ -356,7 +356,7 @@ public partial class CBAdvertisement  {
 런타임에서는 실제로 덮어쓴 메서드를 목표로 등록 하기만 한다는 점에서 차이가 있습니다.
 그렇지 않으면 메서드가 등록 되지 않습니다.
 
-일반적으로로 플래그가 지정 된 클래스의 서브 클래스를 사용 하는 경우 `ModelAttribute` 기본 메서드를 호출 하면 안 됩니다.   해당 메서드를 호출 하면 예외가 throw 됩니다. 재정의 하는 모든 메서드에 대해 하위 클래스에 대 한 전체 동작을 구현 해야 합니다.
+일반적으로로 플래그가 지정 된 클래스의 서브 클래스를 사용 하는 경우 `ModelAttribute` 기본 메서드를 호출 하면 안 됩니다.   해당 메서드를 호출 하면 다음과 같은 예외가 throw 됩니다. You_Should_Not_Call_base_In_This_Method. 재정의 하는 메서드에 대해 하위 클래스에 대 한 전체 동작을 구현 해야 합니다.
 
 <a name="AbstractAttribute"></a>
 

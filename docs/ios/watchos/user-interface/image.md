@@ -7,30 +7,30 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 9ab18e643038d4a61b3b201295d4298f2b5e1adc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 3fd119828a953c002c7d66f248bf26b413018ae4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574186"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939700"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Xamarin의 watchOS 이미지 컨트롤
 
 watchOS는 [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) 이미지와 단순 애니메이션을 표시 하는 컨트롤을 제공 합니다. 일부 컨트롤에는 배경 이미지 (예: 단추, 그룹 및 인터페이스 컨트롤러)가 있을 수도 있습니다.
 
-![](image-images/image-walkway.png "그림을 보여 주는 Apple Watch") ![](image-images/image-animation.png "단순 애니메이션으로 Apple Watch")
+![](image-images/image-walkway.png) ![ 간단한 애니메이션으로 그림 Apple Watch를 보여 주는 Apple Watch](image-images/image-animation.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Asset catalog 이미지를 사용 하 여 시청 키트 앱에 이미지를 추가 합니다.
 **@2x**모든 시청 장치에 레 티 나가 표시 되기 때문에 버전만 필요 합니다.
 
-![](image-images/asset-universal-sml.png "Only 2x versions are required, since all watch devices have Retina displays")
+![모든 시청 장치에 레 티 나 표시 되므로 2x 버전만 필요 합니다.](image-images/asset-universal-sml.png)
 
 이미지 자체를 조사식 표시의 올바른 크기로 유지 하는 것이 좋습니다. 잘못 된 크기의 이미지 (특히 큰 이미지) 및 크기 조정을 사용 하 여 조사식에 표시 *하지 않도록* 합니다.
 
 자산 카탈로그 이미지에서 감시 키트 크기 (38mm 및 42mm)를 사용 하 여 각 표시 크기에 대해 서로 다른 이미지를 지정할 수 있습니다.
 
-![](image-images/asset-watch-sml.png "You can use the Watch Kit sizes 38mm and 42mm in an asset catalog image to specify different images for each display size")
+![자산 카탈로그 이미지에서 감시 키트 크기 38mm 및 42mm를 사용 하 여 각 표시 크기에 대해 서로 다른 이미지를 지정할 수 있습니다.](image-images/asset-watch-sml.png)
 
 ## <a name="images-on-the-watch"></a>조사식 이미지
 
@@ -38,7 +38,7 @@ Asset catalog 이미지를 사용 하 여 시청 키트 앱에 이미지를 추�
 
 예를 들어, [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.
 
-![](image-images/asset-whale-sml.png "The WatchKitCatalog sample has a number of images added to an asset catalog in the watch app project")
+![WatchKitCatalog 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.](image-images/asset-whale-sml.png)
 
 `SetImage`문자열 이름 매개 변수와 함께를 사용 하 여 보기에 효율적으로 로드 하 고 표시할 수 있습니다.
 
@@ -59,7 +59,7 @@ Watch 앱 자체에 저장 된 이미지를 로드 하는 것 외에도 확장 �
 
 예를 들어 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 조사식 확장 프로젝트에 **Bumblebee** 라는 이미지가 있습니다.
 
-![](image-images/asset-bumblebee-sml.png "The WatchKitCatalog sample has an image named Bumblebee in the watch extension project")
+![WatchKitCatalog 샘플에는 조사식 확장 프로젝트에 Bumblebee 라는 이미지가 있습니다.](image-images/asset-bumblebee-sml.png)
 
 다음 코드에서는이 발생 합니다.
 
@@ -78,7 +78,7 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 **버스** 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.
 
-![](image-images/asset-bus-animation-sml.png "The WatchKitCatalog sample has a series of numbered images in the watch app project with the Bus prefix")
+![WatchKitCatalog 샘플에는 버스 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.](image-images/asset-bus-animation-sml.png)
 
 이러한 이미지를 애니메이션으로 표시 하려면 먼저 접두사 이름으로를 사용 하 여 이미지를 로드 한 `SetImage` 다음를 호출 합니다 `StartAnimating` .
 

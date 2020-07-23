@@ -6,12 +6,12 @@ ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 9b531bd095781c80c5f3418725d57f8f6bbb06fd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1cfc2a955ffbe3f1416c291b7d644392d51e0b8f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015035"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930483"
 ---
 # <a name="updating-existing-ios-apps"></a>기존 iOS 앱 업데이트
 
@@ -31,13 +31,13 @@ Xamarin은 Mac용 Visual Studio 및 Visual Studio 모두에서 Classic API Unifi
 
 ## <a name="automated-updating"></a>자동 업데이트
 
-경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 iOS 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들면,
+경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 iOS 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들어:
 
-![](updating-ios-apps-images/beta-tool1.png "Choose Migrate to Xamarin.iOS Unified API from the Project menu")
+![프로젝트 메뉴에서 Xamarin.ios Unified API로 마이그레이션을 선택 합니다.](updating-ios-apps-images/beta-tool1.png)
 
 자동화 된 마이그레이션을 실행 하기 전에이 경고에 동의 해야 합니다 .이 경우에는 형성 전에 백업/원본 제어를 유지 해야 합니다.
 
-![](updating-ios-apps-images/beta-tool2.png "Agree to this warning before the automated migration will run")
+![자동화 된 마이그레이션을 실행 하기 전에이 경고에 동의 합니다.](updating-ios-apps-images/beta-tool2.png)
 
 이 도구는 기본적으로 아래에 표시 된 **업데이트 수동으로** 섹션에 설명 된 모든 단계를 자동화 하며 기존 xamarin.ios 프로젝트를 Unified API으로 변환 하는 데 권장 되는 방법입니다.
 
@@ -47,43 +47,43 @@ Xamarin은 Mac용 Visual Studio 및 Visual Studio 모두에서 Classic API Unifi
 
 ### <a name="1-update-project-type--build-target"></a>1. 프로젝트 형식 업데이트 & 빌드 대상
 
-**.Csproj** 파일의 프로젝트 버전을 `6BC8ED88-2882-458C-8E55-DFD12B67127B`에서 `FEACFBD2-3405-455C-9665-78FE426C6842`로 변경 합니다. 텍스트 편집기에서 **.csproj** 파일을 편집 하 여 `<ProjectTypeGuids>` 요소의 첫 번째 항목을 다음과 같이 바꿉니다.
+**.Csproj** 파일의 프로젝트 버전을에서으로 변경 `6BC8ED88-2882-458C-8E55-DFD12B67127B` `FEACFBD2-3405-455C-9665-78FE426C6842` 합니다. 텍스트 편집기에서 **.csproj** 파일을 편집 하 여 요소의 첫 번째 항목을 다음과 같이 바꿉니다 `<ProjectTypeGuids>` .
 
-![](updating-ios-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
+![텍스트 편집기에서 .csproj 파일을 편집 하 여 ProjectTypeGuids 요소의 첫 번째 항목을 다음과 같이 바꿉니다.](updating-ios-apps-images/csproj.png)
 
-`Xamarin.MonoTouch.CSharp.targets`를 포함 하는 **Import** 요소를 `Xamarin.iOS.CSharp.targets`에 다음과 같이 변경 합니다.
+표시 된 것 처럼를 포함 하는 **Import** 요소를 `Xamarin.MonoTouch.CSharp.targets` `Xamarin.iOS.CSharp.targets` 다음과 같이 변경 합니다.
 
-![](updating-ios-apps-images/csproj2.png "Change the Import element that contains Xamarin.MonoTouch.CSharp.targets to Xamarin.iOS.CSharp.targets as shown")
+![표시 된 것 처럼 Monotouch.dialog를 포함 하는 Import 요소를 Xamarin.ios로 변경 합니다.](updating-ios-apps-images/csproj2.png)
 
 ### <a name="2-update-project-references"></a>2. 프로젝트 참조 업데이트
 
 IOS 응용 프로그램 프로젝트의 **참조** 노드를 확장 합니다. 처음에는 프로젝트 형식을 변경 했기 때문에이 스크린샷 처럼 * **monotouch.dialog** 참조를 표시 합니다.
 
-![](updating-ios-apps-images/references.png "It will initially show a broken- monotouch reference similar to this screenshot because the project type changed")
+![프로젝트 형식이 변경 되었으므로 처음에는이 스크린샷에서 유사한 monotouch.dialog 참조를 표시 합니다.](updating-ios-apps-images/references.png)
 
 IOS 응용 프로그램 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 **참조를 편집한**다음 **monotouch.dialog** 참조를 클릭 하 고 빨간색 "X" 단추를 사용 하 여 삭제 합니다.
 
-![](updating-ios-apps-images/references-delete-monotouch-sml.png "Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button")
+![IOS 응용 프로그램 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 참조를 편집한 다음 monotouch.dialog 참조를 클릭 하 고 빨간색 X 단추를 사용 하 여 삭제 합니다.](updating-ios-apps-images/references-delete-monotouch-sml.png)
 
 이제 참조 목록의 끝으로 스크롤하고 **xamarin.ios** 어셈블리를 tick.
 
-![](updating-ios-apps-images/references-add-xamarinios-sml.png "Now scroll to the end of the references list and tick the Xamarin.iOS assembly")
+![이제 참조 목록의 끝으로 스크롤하고 Xamarin.ios 어셈블리를 tick.](updating-ios-apps-images/references-add-xamarinios-sml.png)
 
 **확인** 을 눌러 프로젝트 참조 변경 내용을 저장 합니다.
 
 ### <a name="3-remove-monotouch-from-namespaces"></a>3. 네임 스페이스에서 Monotouch.dialog 제거
 
-`using` 문에서 네임 스페이스의 **monotouch.dialog** 접두사를 제거 하거나 classname이 정규화 된 모든 위치 (예: `MonoTouch.UIKit`만 `UIKit`).
+문에서 네임 스페이스의 **monotouch.dialog** 접두사를 제거 `using` 하거나 클래스 이름이 정규화 된 위치 (예: `MonoTouch.UIKit`만이 됨 `UIKit` ).
 
 ### <a name="4-remap-types"></a>4. 형식 다시 매핑
 
-이전에 사용 된 일부 형식 (예: `CoreGraphics.CGRect` `System.Drawing.RectangleF`의 인스턴스)을 대체 하는 [네이티브 형식이](~/cross-platform/macios/nativetypes.md) 도입 되었습니다. 형식에 대 한 전체 목록은 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 페이지에서 찾을 수 있습니다.
+이전에 사용 된 일부 형식 (예:를 사용 하는 인스턴스)을 대체 하는 [네이티브 형식이](~/cross-platform/macios/nativetypes.md) 도입 되었습니다 `System.Drawing.RectangleF` `CoreGraphics.CGRect` . 형식에 대 한 전체 목록은 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 페이지에서 찾을 수 있습니다.
 
 ### <a name="5-fix-method-overrides"></a>5. 메서드 재정의 수정
 
-일부 `UIKit` 메서드의 서명이 새 [네이티브 형식](~/cross-platform/macios/nativetypes.md) (예: `nint`)을 사용 하도록 변경 되었습니다. 사용자 지정 하위 클래스가 이러한 메서드를 재정의 하면 서명이 더 이상 일치 하지 않아 오류가 발생 합니다. 네이티브 형식을 사용 하 여 새 시그니처와 일치 하도록 하위 클래스를 변경 하 여 이러한 메서드 재정의를 수정 합니다.
+일부 `UIKit` 메서드는의 시그니처가 새 [네이티브 형식](~/cross-platform/macios/nativetypes.md) (예:)을 사용 하도록 변경 되었습니다 `nint` . 사용자 지정 하위 클래스가 이러한 메서드를 재정의 하면 서명이 더 이상 일치 하지 않아 오류가 발생 합니다. 네이티브 형식을 사용 하 여 새 시그니처와 일치 하도록 하위 클래스를 변경 하 여 이러한 메서드 재정의를 수정 합니다.
 
-예를 들어 `public override int NumberOfSections (UITableView tableView)`를 변경 하 여 `nint`을 반환 하 고 `public override int RowsInSection (UITableView tableView, int section)`의 반환 형식과 매개 변수 형식을 모두 `nint`로 변경 합니다.
+예제에는 `public override int NumberOfSections (UITableView tableView)` `nint` 의 반환 형식과 매개 변수 형식을 모두로 반환 하 고 변경 하도록 변경 하는 작업이 포함 됩니다 `public override int RowsInSection (UITableView tableView, int section)` `nint` .
 
 ## <a name="considerations"></a>고려 사항
 
@@ -100,7 +100,7 @@ Unified API 지원 작업을 수행 하기 위해 NuGet에 변경 내용을 적�
 이 시점까지 구성 요소와 마찬가지로 프로젝트에 포함 된 NuGet 패키지를 통합 Api를 지 원하는 버전으로 전환 하 고 나중에 정리 빌드를 수행 해야 합니다.
 
 > [!IMPORTANT]
-> _"오류 3"에 ' monotouch.dialog ' 및 ' monotouch.dialog '가 모두 포함 될 수 없습니다. ' xamarin.ios '는 명시적으로 참조 되는 반면 ' '는 ' xxx, Version = 0.0.000, Culture =에 의해 참조 됩니다. 중립, PublicKeyToken = null ' "_ 응용 프로그램을 통합 된 api로 변환한 후에는 일반적으로 Unified API로 업데이트 되지 않은 구성 요소 또는 NuGet 패키지가 프로젝트에 포함 되어 있기 때문입니다. 기존 component/NuGet을 제거 하 고, 통합 Api를 지 원하는 버전으로 업데이트 하 고, 클린 빌드를 수행 해야 합니다.
+> 오류가 있는 경우 _"오류 3에는 ' monotouch.dll '과 ' Xamarin.iOS.dll '를 모두 같은 Xamarin에 포함할 수 없습니다. iOS 프로젝트-' Xamarin.iOS.dll '은 (는) 명시적으로 참조 되지만 ' monotouch.dll '은 (는_ ) 응용 프로그램을 통합 된 api로 변환한 후에는 일반적으로 Unified API으로 업데이트 되지 않은 프로젝트에 구성 요소 또는 NuGet 패키지를 포함 하 고 있기 때문입니다. 기존 component/NuGet을 제거 하 고, 통합 Api를 지 원하는 버전으로 업데이트 하 고, 클린 빌드를 수행 해야 합니다.
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Xamarin.ios 앱의 64 비트 빌드 사용
 

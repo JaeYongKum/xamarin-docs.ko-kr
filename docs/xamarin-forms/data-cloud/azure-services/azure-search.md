@@ -10,12 +10,12 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33675fbb644c5967726fee29b3e235247aec633a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 29e73f4051eda9117663992af9e710483e4b772b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934097"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
 
@@ -44,7 +44,7 @@ Azure Search는 검색 입력을 기준으로 제안 검색도 지원 합니다.
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설치
 
 Azure Search를 응용 프로그램에 통합 하는 프로세스는 Xamarin.Forms 다음과 같습니다.
 
@@ -222,7 +222,7 @@ var searchResults = await indexClient.Documents.SearchAsync<Monkey>(text, parame
 
 `SearchAsync`메서드는 `DocumentSearchResult` 쿼리 결과를 포함 하는 개체를 반환 합니다. 이 개체는 열거 되며, 각 `Document` 개체는 `Monkey` 개체로 만들어지고 표시를 위해에 추가 됩니다 `Monkeys` `ObservableCollection` . 다음 스크린샷에는 Azure Search에서 반환 된 검색 쿼리 결과가 나와 있습니다.
 
-![](azure-search-images/search.png "Search Results")
+![검색 결과](azure-search-images/search.png)
 
 검색 및 필터링에 대 한 자세한 내용은 [.NET SDK를 사용 하 여 Azure Search 인덱스 쿼리](/azure/search/search-query-dotnet/)를 참조 하세요.
 
@@ -272,7 +272,7 @@ async Task AzureSuggestions(string text)
 
 `SuggestAsync`메서드는 `DocumentSuggestResult` 쿼리 결과를 포함 하는 개체를 반환 합니다. 이 개체는 열거 되며, 각 `Document` 개체는 `Monkey` 개체로 만들어지고 표시를 위해에 추가 됩니다 `Monkeys` `ObservableCollection` . 다음 스크린샷에는 Azure Search에서 반환 된 제안 결과가 나와 있습니다.
 
-![](azure-search-images/suggest.png "Suggestion Results")
+![제안 결과](azure-search-images/suggest.png)
 
 예제 응용 프로그램에서 `SuggestAsync` 메서드는 사용자가 검색 단어 입력을 완료 한 경우에만 호출 됩니다. 그러나 각 keypress에서를 실행 하 여 자동 완성 검색 쿼리를 지 원하는 데 사용 될 수도 있습니다.
 

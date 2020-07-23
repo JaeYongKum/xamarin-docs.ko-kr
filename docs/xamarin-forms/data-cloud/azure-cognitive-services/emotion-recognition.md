@@ -10,12 +10,12 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ac7b90fb3e70fd07fcafe78a68136338469862e0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136060"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936372"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
@@ -178,7 +178,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 다음 스크린샷은 샘플 응용 프로그램에서 emotion 인식 프로세스의 결과를 보여줍니다.
 
-![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
+![감정 인식](emotion-recognition-images/emotion-recognition.png)
 
 ## <a name="related-links"></a>관련 링크
 

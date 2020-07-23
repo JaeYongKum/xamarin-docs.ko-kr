@@ -10,16 +10,16 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 725f892a667b4e89d55266abcf69e5394b09b6a5
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: b4369fdb7c5a35d6b9a192d9222fd82670b7e3f3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933590"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.Forms도형: 타원
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -58,7 +58,7 @@ ms.locfileid: "85243835"
 
 이 예제에서는 크기가 150x150 (장치 독립적 단위) 인 빨간색 원이 그려집니다.
 
-![원으로](ellipse-images/circle.png "Circle")
+![Circle](ellipse-images/circle.png "Circle")
 
 파선 타원을 그리는 방법에 대 한 자세한 내용은 [파선 도형 그리기](index.md#draw-dashed-shapes)를 참조 하세요.
 

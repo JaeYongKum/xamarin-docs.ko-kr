@@ -10,12 +10,12 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0964ad7d2bf517a6a4c7cf7965c346629716166
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131900"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936021"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>SkiaSharp의 경로 및 텍스트
 
@@ -29,7 +29,7 @@ _패스와 텍스트의 교집합 살펴보기_
 
 문자 윤곽선을 스트로크 하는 데 경로 효과를 사용 하는 것 외에도 문자열에서 파생 된 경로를 기반으로 하는 경로 효과를 만들 수 있으며, 두 가지 효과를 결합할 수도 있습니다.
 
-![](text-paths-images/pathsandtextsample.png "Text Path Effect")
+![텍스트 경로 효과](text-paths-images/pathsandtextsample.png)
 
 [**경로 효과**](effects.md)에 대 한 이전 문서에서는 [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) 의 메서드가 `SKPaint` 스트로크 된 패스의 개요를 가져오는 방법을 살펴보았습니다. 문자 윤곽선에서 파생 된 경로를 사용 하 여이 메서드를 사용할 수도 있습니다.
 
@@ -49,7 +49,7 @@ public SKPath GetTextPath (String text, Single x, Single y)
 
 이러한 작업 중 하나를 클리핑 합니다. **텍스트 클리핑** 페이지는 "코드" 라는 단어의 문자 윤곽선을 기반으로 하는 클리핑 경로를 만듭니다. 이 경로는 **클리핑 텍스트** 소스 코드의 이미지를 포함 하는 비트맵을 자르는 페이지 크기에 맞게 늘어납니다.
 
-[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png#lightbox "Triple screenshot of the Clipping Text page")
+[![클리핑 텍스트 페이지의 세 번째 스크린샷](text-paths-images/clippingtext-small.png)](text-paths-images/clippingtext-large.png#lightbox "클리핑 텍스트 페이지의 세 번째 스크린샷")
 
 [`ClippingTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs)클래스 생성자는 솔루션의 **미디어** 폴더에 포함 리소스로 저장 된 비트맵을 로드 합니다.
 
@@ -129,7 +129,7 @@ public class ClippingTextPage : ContentPage
 
 **텍스트 경로 효과** 페이지는 단일 앰퍼샌드 문자를 패스로 변환 하 여 1d 경로 효과를 만듭니다. 그런 다음이 경로 효과가 있는 그리기 개체를 사용 하 여 같은 문자를 포함 하는 더 큰 버전의 윤곽선을 그립니다.
 
-[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png#lightbox "Triple screenshot of the Text Path Effect page")
+[![텍스트 경로 효과 페이지의 세 번째 스크린샷](text-paths-images/textpatheffect-small.png)](text-paths-images/textpatheffect-large.png#lightbox "텍스트 경로 효과 페이지의 세 번째 스크린샷")
 
 클래스에서 대부분의 작업은 [`TextPathEffectPath`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 필드 및 생성자에서 발생 합니다. `SKPaint`필드로 정의 된 두 개체는 두 가지 용도로 사용 됩니다. 첫 번째 (명명 `textPathPaint` 됨)는 앰퍼샌드를 50의로 변환 하는 데 사용 됩니다 `TextSize` . 두 번째 ( `textPaint` )는 해당 경로 효과를 사용 하 여 더 큰 버전의 앰퍼샌드를 표시 하는 데 사용 됩니다. 이러한 이유 때문에 `Style` 이 두 번째 paint 개체의는로 설정 `Stroke` 되지만 속성은 `StrokeWidth` 1d 경로 효과를 사용 하는 경우에는 필요 하지 않기 때문에 설정 되지 않습니다.
 
@@ -274,7 +274,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `PaintSurface`그런 다음 처리기는 이라는 새 경로를 만듭니다 `outlinePath` . 이는에 대 한 호출에서 대상 경로가 됩니다 `GetFillPath` . `StrokeWidth`25의 속성은에서 `outlinePath` 텍스트 문자를 스트로크 하는 25 픽셀의 경로에 대 한 개요를 설명 합니다. 그런 다음이 경로는 빨간색으로 표시 되 고 스트로크 너비는 5로 표시 됩니다.
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple screenshot of the Character Outline Outlines page")
+[![문자 윤곽선 윤곽선 페이지의 삼중 스크린 샷](text-paths-images/characteroutlineoutlines-small.png)](text-paths-images/characteroutlineoutlines-large.png#lightbox "문자 윤곽선 윤곽선 페이지의 삼중 스크린 샷")
 
 자세히 살펴보면 경로 개요에서 뾰족한 모퉁이를 만드는 겹치는 부분을 볼 수 있습니다. 이러한 작업은이 프로세스의 일반적인 아티팩트입니다.
 
@@ -327,7 +327,7 @@ public class CircularTextPage : ContentPage
 
 `TextSize` `textPaint` 그런 다음 텍스트 너비가 원의 원주와 일치 하도록의 속성을 조정 합니다.
 
-[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
+[![원형 텍스트 페이지의 삼중 스크린 샷](text-paths-images/circulartext-small.png)](text-paths-images/circulartext-large.png#lightbox "원형 텍스트 페이지의 삼중 스크린 샷")
 
 텍스트 자체는 약간 원형으로도 선택 되었습니다. "circle" 이라는 단어는 모두 문장의 제목과 prepositional 구의 개체입니다.
 

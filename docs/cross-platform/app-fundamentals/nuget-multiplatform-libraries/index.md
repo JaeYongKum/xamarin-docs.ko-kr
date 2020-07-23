@@ -6,12 +6,12 @@ ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 5744bb9947b196ee319535729338bcf64a5cd09e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ac8e4b2eef0905ba50cb24b9eb035d50a05dd84a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016755"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932247"
 ---
 # <a name="nuget-multiplatform-library-projects-nugetizer-3000"></a>NuGet 다중 플랫폼 라이브러리 프로젝트 (Nugetizer 3000)
 
@@ -19,13 +19,13 @@ _' Nugetizer 3000 '를 사용 하 여 플랫폼 간에 코드를 공유 하는 N
 
 _Nugetizer 3000_를 사용 하 여 플랫폼 간에 코드를 공유 하는 NuGet 패키지를 자동으로 만들 수 있습니다. 이렇게 하면 기존 라이브러리 프로젝트에서 또는 새 **다중 플랫폼 라이브러리 프로젝트**를 만들어 NuGet 패키지를 만들 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-Nugetizer 3000는 Mac용 Visual Studio &ndash; 포함 되어 있으며, **파일 > 새** 창에서 **라이브러리 > Mulitplatform 라이브러리** 프로젝트 형식을 찾을 수 있습니다.
+Nugetizer 3000는 &ndash; **파일 > 새** 창에서 **라이브러리 >** 라이브러리 프로젝트 형식에 대 한 Mac용 Visual Studio 찾을 수 있습니다.
 
-[![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png#lightbox)
+[![새 다중 플랫폼 라이브러리 창 만들기](images/mulitplatform-library-sml.png)](images/mulitplatform-library.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 Nugetizer 3000을 사용 하려면 [VSIX 설치 관리자를 다운로드 하 여 실행](https://bit.ly/nugetizer-2017)하세요.
 

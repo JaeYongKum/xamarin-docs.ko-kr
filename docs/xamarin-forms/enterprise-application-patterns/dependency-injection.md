@@ -10,12 +10,12 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572353"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933603"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 
@@ -62,7 +62,7 @@ TinyIoC를 사용 하 여 앱에서 뷰 모델 및 서비스 클래스의 인스
 
 TinyIoC에서 `TinyIoCContainer` 형식은 종속성 주입 컨테이너를 제공 합니다. 그림 3-1에서는 개체를 인스턴스화하고 `IOrderService` 클래스에 삽입 하는이 컨테이너를 사용할 때의 종속성을 보여 줍니다 `ProfileViewModel` .
 
-![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
+![종속성 주입을 사용 하는 경우의 종속성 예제](dependency-injection-images/dependencyinjection.png)
 
 **그림 3-1:** 종속성 주입을 사용 하는 경우의 종속성
 

@@ -10,18 +10,18 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1d993afa7163beb0b24e496b0c876d903f2396e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139401"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934292"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
 
 _조정 가능 하 고, 유지 관리 가능 하며, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침_
 
-![](images/cover-sml.png "Enterprise Application Patterns using Xamarin.Forms eBook")
+![Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴](images/cover-sml.png)
 
 이 전자책는 느슨한 결합을 유지 하면서 MVVM (모델 뷰-ViewModel) 패턴, 종속성 주입, 탐색, 유효성 검사 및 구성 관리를 구현 하는 방법에 대 한 지침을 제공 합니다. 또한 IdentityServer를 사용 하 여 인증 및 권한 부여를 수행 하 고, 컨테이너 화 된 마이크로 서비스에서 데이터에 액세스 하 고, 단위 테스트를 수행 하는 방법도 제공 됩니다.
 
@@ -79,7 +79,7 @@ Xamarin.FormsASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 
 
 MVVM 응용 프로그램에서 모델을 테스트 하 고 모델을 확인 하는 것은 다른 클래스를 테스트 하는 것과 동일 하며, 동일한 도구와 기법을 사용할 수 있습니다. 그러나 모델 클래스를 모델링 하 고 보는 데 일반적으로 사용할 수 있는 몇 가지 패턴이 있습니다. 이러한 패턴은 특정 유닛 테스트 기법을 활용 합니다.
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback"></a>피드백
 
 이 프로젝트에는 질문을 게시 하 고 피드백을 제공할 수 있는 커뮤니티 사이트가 있습니다. 커뮤니티 사이트는 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers)에 있습니다. 또는 전자책에 대 한 피드백을에 전자 메일로 보낼 수 있습니다 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com) .
 

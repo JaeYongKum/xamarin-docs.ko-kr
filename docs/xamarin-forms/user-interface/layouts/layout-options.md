@@ -10,12 +10,12 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6fa03cf5c18e21ce5ca9e7ea907f50c8de6f3e6c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573263"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930691"
 ---
 # <a name="layout-options-in-xamarinforms"></a>의 레이아웃 옵션Xamarin.Forms
 
@@ -94,7 +94,7 @@ Content = new StackLayout
 
 이 코드는 다음 스크린샷에 표시 된 레이아웃을 생성 합니다.
 
-[![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
+[![맞춤 레이아웃 옵션](layout-options-images/alignment.png)](layout-options-images/alignment-large.png#lightbox "맞춤 레이아웃 옵션")
 
 ## <a name="expansion"></a>확장
 
@@ -147,7 +147,7 @@ Content = new StackLayout
 
 이 코드는 다음 스크린샷에 표시 된 레이아웃을 생성 합니다.
 
-[![](layout-options-images/expansion.png "Expansion Layout Options")](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
+[![확장 레이아웃 옵션](layout-options-images/expansion.png)](layout-options-images/expansion-large.png#lightbox "확장 레이아웃 옵션")
 
 각 [`Label`](xref:Xamarin.Forms.Label) 은 내에서 동일한 공간을 차지 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) . 그러나 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)로 설정하는 최종 `Label`만 크기가 다릅니다. 또한 각는 `Label` 작은 빨강으로 구분 되며,이를 통해 [`BoxView`](xref:Xamarin.Forms.BoxView) 사용 되는 공간을 `Label` 쉽게 볼 수 있습니다.
 

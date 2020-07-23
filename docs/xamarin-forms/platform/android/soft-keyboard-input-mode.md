@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c62d09c7d7848d9f62c018caa1698bb53a2a39a8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c7a379fa0128f73af471509974a043dbf2475d3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128715"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933317"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Android의 소프트 키보드 입력 모드
 
@@ -45,7 +45,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 그 결과 입력 컨트롤에 포커스가 있을 때 소프트 키보드 입력 영역 운영 모드를 설정할 수 있습니다.
 
-[![](soft-keyboard-input-mode-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Platform-Specific")
+[![소프트 키보드 운영 모드 플랫폼 특정](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "소프트 키보드 운영 모드 플랫폼 특정")
 
 ## <a name="related-links"></a>관련 링크
 

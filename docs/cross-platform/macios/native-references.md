@@ -6,12 +6,12 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: a06bc0cb91ff3d3894bb7be5bbb275aca35da07d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e2f874446b48726afc2218e5cdcac9b8736e1681
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570962"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930444"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>IOS, Mac 및 바인딩 프로젝트의 네이티브 참조
 
@@ -73,13 +73,13 @@ Xamarin.ios 또는 Xamarin.ios 앱에서 포함 된 프레임 워크를 사용 �
 1. 새를 만들거나 기존 Xamarin.ios, Xamarin.ios 또는 바인딩 프로젝트를 엽니다.
 2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 추가 **Add**  >  **네이티브 참조**추가를 선택 합니다. 
 
-    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
+    [![솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 네이티브 참조 추가를 선택 합니다.](native-references-images/ref01.png)](native-references-images/ref01.png#lightbox)
 3. **열기** 대화 상자에서 포함 하려는 네이티브 프레임 워크의 이름을 선택 하 고 **열기** 단추를 클릭 합니다. 
 
-    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
+    [![포함할 네이티브 프레임 워크의 이름을 선택 하 고 열기 단추를 클릭 합니다.](native-references-images/ref02.png)](native-references-images/ref02.png#lightbox)
 4. 프레임 워크는 프로젝트의 트리에 추가 됩니다. 
 
-    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
+    [![프레임 워크는 프로젝트 트리에 추가 됩니다.](native-references-images/ref03.png)](native-references-images/ref03.png#lightbox)
 
 프로젝트가 컴파일될 때 네이티브 프레임 워크는 앱의 번들에 포함 됩니다.
 

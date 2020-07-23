@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b8f743b2c3d7f4b38feb4cfc5015b1113620562
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1161600ad9b587c30ef28be1828fdb9e3b94f665
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137100"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938556"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>IOS에서 ScrollView 콘텐츠 터치
 
@@ -60,7 +60,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 결과적으로 [`ScrollView`](xref:Xamarin.Forms.ScrollView) ,이 시나리오에서가 [`Slider`](xref:Xamarin.Forms.Slider) 의 페이지 보다는 제스처를 수신 하기 때문에에서 콘텐츠가 수신 되는 지연을 사용 하지 않도록 설정할 수 있습니다 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) .
 
-[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
+[![ScrollView 지연 콘텐츠가 플랫폼에 맞게 적용 됩니다.](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView 지연 콘텐츠가 플랫폼에 맞게 적용 됩니다.")
 
 ## <a name="related-links"></a>관련 링크
 

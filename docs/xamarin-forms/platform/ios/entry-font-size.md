@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 57498811d8789d8ef9ef775f8f39f141b77659c8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a0c30d32d53397392a4be2ca984ac5f60975ca78
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138530"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936320"
 ---
 # <a name="entry-font-size-on-ios"></a>IOS의 항목 글꼴 크기
 
@@ -54,7 +54,7 @@ entry.On<iOS>().SetAdjustsFontSizeToFitWidth(!entry.On<iOS>().AdjustsFontSizeToF
 
 그 결과,의 글꼴 크기를 [`Entry`](xref:Xamarin.Forms.Entry) 조정 하 여 입력 텍스트가 컨트롤에 맞게 조정 됩니다.
 
-![](entry-font-size-images/entry-font-size.png "Adjust Entry Font Size Platform-Specific")
+![항목 글꼴 크기 조정 플랫폼별](entry-font-size-images/entry-font-size.png)
 
 ## <a name="related-links"></a>관련 링크
 

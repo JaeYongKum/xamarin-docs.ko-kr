@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 20bf6d3d8c802c1d4919cd16885d3939cb0102aa
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128013"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930626"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>IOS의 모달 페이지 표시 스타일
 
@@ -60,7 +60,7 @@ public class iOSModalFormSheetPageCS : ContentPage
 
 따라서에 대 한 모달 프레젠테이션 스타일을 [`Page`](xref:Xamarin.Forms.Page) 설정할 수 있습니다.
 
-[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
+[![모달 프레젠테이션 스타일](page-presentation-style-images/modal-presentation-style-small.png)](page-presentation-style-images/modal-presentation-style-large.png#lightbox "모달 프레젠테이션 스타일")
 
 > [!NOTE]
 > 이 플랫폼별를 사용 하 여 모달 프레젠테이션 스타일을 설정 하는 페이지는 모달 탐색을 사용 해야 합니다. 자세한 내용은 [ Xamarin.Forms 모달 페이지](~/xamarin-forms/app-fundamentals/navigation/modal.md)를 참조 하세요.

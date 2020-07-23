@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 81ad57119ff7271094966cf9b0c372876646f81b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d8dcf64f9a905557bea69402bcaf7fcfb51fb10b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573432"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928577"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Xamarin.ios의 프로그래밍 레이아웃 제약 조건
 
@@ -51,7 +51,7 @@ _이 가이드에서는 ios 디자이너에서 iOS 자동 레이아웃 제약 �
 - **ConstraintGreaterThanOrEqualTo** - `first attribute >= second attribute + [constant]` 선택적으로 제공 되는 오프셋 값을 사용 하는 관계를 정의 `constant` 합니다.
 - **ConstraintLessThanOrEqualTo** - `first attribute <= second attribute + [constant]` 선택적으로 제공 되는 오프셋 값을 사용 하는 관계를 정의 `constant` 합니다.
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```csharp
 // Get the parent view's layout
@@ -69,7 +69,7 @@ OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 
 일반적인 레이아웃 제약 조건은 단지 선형 식으로 표현 될 수 있습니다. 다음 예제를 참조하세요.
 
-[![](programmatic-layout-constraints-images/graph01.png "A Layout Constraint expressed as a linear expression")](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![선형 식으로 표현 되는 레이아웃 제약 조건](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 이는 레이아웃 앵커를 사용 하 여 다음 c # 코드 줄로 변환 됩니다.
 
@@ -95,7 +95,7 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 ### <a name="layout-constraints"></a>레이아웃 제약 조건
 
-C # 코드에서를 직접 구성 하 여 자동 레이아웃 제약 조건을 수동으로 추가할 수 있습니다 `NSLayoutConstraint` . 레이아웃 앵커를 사용 하는 것과 달리 정의 되는 제약 조건에 영향을 주지 않는 경우에도 모든 매개 변수에 대 한 값을 지정 해야 합니다. 결과적으로 상당한 양의 코드를 읽을 수 있는 상용구 코드를 생성 하 게 됩니다. 예를 들면 다음과 같습니다.
+C # 코드에서를 직접 구성 하 여 자동 레이아웃 제약 조건을 수동으로 추가할 수 있습니다 `NSLayoutConstraint` . 레이아웃 앵커를 사용 하는 것과 달리 정의 되는 제약 조건에 영향을 주지 않는 경우에도 모든 매개 변수에 대 한 값을 지정 해야 합니다. 결과적으로 상당한 양의 코드를 읽을 수 있는 상용구 코드를 생성 하 게 됩니다. 예를 들어:
 
 ```csharp
 //// Pin the leading edge of the view to the margin

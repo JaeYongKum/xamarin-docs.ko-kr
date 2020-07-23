@@ -10,12 +10,12 @@ ms.date: 11/25/2015
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e9c6bc604368f36646260d6a3766cc5417a1ff52
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127194"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937789"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
@@ -23,13 +23,13 @@ ms.locfileid: "84127194"
 
 `RelativeLayout`는 레이아웃 또는 형제 뷰의 속성을 기준으로 보기를 배치 하 고 크기를 조정 하는 데 사용 됩니다. 와 달리 `AbsoluteLayout` 에는 `RelativeLayout` 이동 앵커의 개념이 없고 레이아웃의 아래쪽 또는 오른쪽 가장자리를 기준으로 요소의 위치를 지정 하는 기능이 없습니다. `RelativeLayout`는 자체 범위를 벗어나는 요소 위치 지정을 지원 합니다.
 
-[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms모양의](relative-layout-images/layouts-sml.png)](relative-layout-images/layouts.png#lightbox "[! OP. 비 LOC (Xamarin.ios)] 레이아웃")
 
 ## <a name="purpose"></a>목적
 
 `RelativeLayout`전체 레이아웃 또는 다른 보기를 기준으로 화면에 보기를 배치 하는 데 사용할 수 있습니다.
 
-![](relative-layout-images/flag.png "RelativeLayout Exploration")
+![RelativeLayout 탐색](relative-layout-images/flag.png)
 
 ## <a name="usage"></a>사용
 
@@ -133,7 +133,7 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
 
 그러면 빨간색 상자의 위치를 _기준_ 으로 파란색 상자의 위치가 결정 된 다음 출력이 생성 됩니다.
 
-![](relative-layout-images/red-blue-box.png "RelativeLayout with Red and Blue BoxViews")
+![Red 및 Blue BoxViews를 사용 하는 RelativeLayout](relative-layout-images/red-blue-box.png)
 
 ### <a name="sizing"></a>크기 조정
 
@@ -226,7 +226,7 @@ Title="RelativeLayout">
 
 위의 코드는 다음과 같은 레이아웃을 생성 합니다.
 
-![](relative-layout-images/relative.png "Complex RelativeLayout")
+![복합 RelativeLayout](relative-layout-images/relative.png)
 
 `RelativeLayouts`일부 경우에는 동일한 레이아웃 내에 모든 요소를 표시 하는 것 보다 더 쉽게 중첩 된 레이아웃을 사용할 수 있기 때문에가 중첩 되어 있습니다. 또한 일부 요소는 `RelativeToView` 뷰 간의 관계를 지정 하는 경우 더 쉽고 직관적인 레이아웃을 가능 하 게 하는입니다.
 

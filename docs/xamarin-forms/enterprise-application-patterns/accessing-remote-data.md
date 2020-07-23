@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cef3c2369bb4aee81a52ddd27d6ad732d7544dfa
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: df79a9b6a7b0ab44d4fcf03f12a7b4d8aabd0a82
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573848"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939271"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
 
@@ -54,7 +54,7 @@ EShopOnContainers 모바일 앱은 클래스를 사용 하 여 `HttpClient` HTTP
 
 그림 10-1에서는에서 표시 하기 위해 카탈로그 마이크로 서비스에서 카탈로그 데이터를 읽는 클래스의 상호 작용을 보여 줍니다 `CatalogView` .
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
+[![카탈로그 마이크로 서비스에서 데이터 검색](accessing-remote-data-images/catalogdata.png)](accessing-remote-data-images/catalogdata-large.png#lightbox "카탈로그 마이크로 서비스에서 데이터 검색")
 
 **그림 10-1**: 카탈로그 마이크로 서비스에서 데이터 검색
 
@@ -159,7 +159,7 @@ public async Task<IActionResult> Items(
 
 그림 10-2에서는 바구니 마이크로 서비스에 게 표시 되는 바구니 데이터를 보내는 클래스의 상호 작용을 보여 줍니다 `BasketView` .
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
+[![바구니 마이크로 서비스 데이터 보내기](accessing-remote-data-images/basketdata.png)](accessing-remote-data-images/basketdata-large.png#lightbox "바구니 마이크로 서비스 데이터 보내기")
 
 **그림 10-2**: 바구니에 데이터 보내기 마이크로 서비스
 
@@ -232,7 +232,7 @@ public async Task<IActionResult> Post([FromBody]CustomerBasket value)
 
 그림 10-3에서는 바구니 마이크로 서비스 바구니 데이터를 삭제 하는 클래스의 상호 작용을 보여 줍니다 `CheckoutView` .
 
-![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
+![바구니의 데이터 삭제 마이크로 서비스](accessing-remote-data-images/checkoutdata.png)
 
 **그림 10-3**: 바구니 마이크로 서비스에서 데이터 삭제
 
@@ -372,7 +372,7 @@ FFImageLoading의 `CachedImage` 컨트롤은 컨트롤을 대체 하 여 Xamarin
 > [!NOTE]
 > 시도 간 지연 시간을 최소화 하 고 재시도 횟수를 최소화 하는 적극적인 재시도 전략은 거의 또는 대량으로 실행 되는 원격 서비스의 성능을 저하 시킬 수 있습니다. 또한 이러한 다시 시도 전략은 계속 해 서 실패 한 작업을 수행 하려고 하는 경우 앱의 응답성에 영향을 줄 수 있습니다.
 
-한 번의 재시도 후에도 요청이 계속 실패 하는 경우 앱에서 더 많은 요청을 동일한 리소스로 이동 하 여 오류를 보고 하는 것이 더 좋습니다. 그런 다음 설정 된 기간이 지나면 응용 프로그램은 리소스에 대해 하나 이상의 요청을 만들어 성공 했는지 확인할 수 있습니다. 자세한 내용은 [회로 차단기 패턴](#circuit-breaker-pattern)을 참조하세요.
+한 번의 재시도 후에도 요청이 계속 실패 하는 경우 앱에서 더 많은 요청을 동일한 리소스로 이동 하 여 오류를 보고 하는 것이 더 좋습니다. 그런 다음 설정 된 기간이 지나면 응용 프로그램은 리소스에 대해 하나 이상의 요청을 만들어 성공 했는지 확인할 수 있습니다. 자세한 내용은 [회로 차단기 패턴](#circuit-breaker-pattern)을 참조 하세요.
 
 > [!TIP]
 > 무한 재시도 메커니즘을 구현하지 않습니다. 유한 횟수의 재시도를 사용 하거나 [회로 차단기](/azure/architecture/patterns/circuit-breaker/) 패턴을 구현 하 여 서비스를 복구할 수 있도록 합니다.

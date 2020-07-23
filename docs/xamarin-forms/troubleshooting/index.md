@@ -11,12 +11,12 @@ ms.date: 04/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5a84b7a5ca336b5823f1e0d2201e17cb4f152c27
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135917"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930847"
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -39,7 +39,7 @@ Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.And
 
 Mac용 Visual Studio (또는 Visual Studio)는 Xamarin.Forms NuGet *패키지 및 모든 해당 종속성*에 대 한 업데이트를 사용할 수 있음을 나타낼 수 있습니다. Xamarin Studio에서 솔루션의 **패키지** 노드는 다음과 같을 수 있습니다 (버전 번호는 다를 수 있음).
 
-![](images/updates-available.png "Android Project Packages Folder")
+![Android 프로젝트 패키지 폴더](images/updates-available.png)
 
 _모든_ 패키지를 업데이트 하려고 하면이 오류가 발생할 수 있습니다.
 

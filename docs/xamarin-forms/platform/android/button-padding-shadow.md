@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5554341493b52d20c946a4bcfe2d1230e4a02759
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3efcd5cd7c2d00e9d646c937863fd7e55d17f240
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135566"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929885"
 ---
 # <a name="button-padding-and-shadows-on-android"></a>Android의 단추 패딩 및 그림자
 
@@ -49,7 +49,7 @@ button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
 
 그러면 Xamarin.Forms 단추는 Android 단추의 기본 패딩 및 그림자 값을 사용할 수 있습니다.
 
-![](button-padding-shadow-images/button-padding-and-shadow.png "Default Padding and Shadow Values on Android Buttons")
+![Android 단추의 기본 패딩 및 그림자 값](button-padding-shadow-images/button-padding-and-shadow.png)
 
 위의 스크린샷에서는 [`Button`](xref:Xamarin.Forms.Button) 동일한 정의가 있습니다. 단, 오른쪽에는 `Button` Android 단추의 기본 패딩 및 그림자 값이 사용 됩니다.
 

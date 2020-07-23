@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 75cc3070f552ef05c3e8702d27caf7c353ac0a8f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136320"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931874"
 ---
 # <a name="display-pop-ups"></a>팝업 표시
 
@@ -31,7 +31,7 @@ ms.locfileid: "84136320"
 await DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![](pop-ups-images/alert.png "Alert Dialog with One Button")
+![단추 하나가 포함된 경고 대화 상자](pop-ups-images/alert.png)
 
 이 예제에서는 사용자로부터 정보를 수집하지 않습니다. 경고는 모달 형식으로 표시되고 해제되면 사용자는 애플리케이션과 상호 작용을 계속합니다.
 
@@ -61,7 +61,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "ActionSheet Dialog")
+![ActionSheet 대화 상자](pop-ups-images/action.png)
 
 `destroy` 단추가 다른 항목과 다르게 렌더링되고, `null`로 남겨두거나 세 번째 문자열 매개 변수로 지정할 수 있습니다. 다음 예제에서는 `destroy` 단추를 사용합니다.
 

@@ -11,12 +11,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 805bdef812b33d3f4329346a437e1202a16fe3ae
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127532"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937321"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5부. 데이터 바인딩에서 MVVM까지
 
@@ -65,7 +65,7 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 
 문제는 페이지를 처음 빌드할 때 날짜와 시간을 한 번 설정 하 고 변경 하지 않는다는 것입니다.
 
-[![](data-bindings-to-mvvm-images/oneshotdatetime.png "View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
+[![날짜 및 시간 표시 보기](data-bindings-to-mvvm-images/oneshotdatetime.png)](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "날짜 및 시간 표시 보기")
 
 XAML 파일에는 항상 현재 시간을 표시 하는 클록이 표시 될 수 있지만 도움이 되는 코드가 필요 합니다. MVVM 측면에서 생각할 때 모델 및 ViewModel은 완전히 코드로 작성 된 클래스입니다. 뷰는 대개 데이터 바인딩을 통해 ViewModel에 정의 된 속성을 참조 하는 XAML 파일입니다.
 
@@ -148,7 +148,7 @@ ViewModels은 일반적으로 `INotifyPropertyChanged` 인터페이스를 구현
 
 `Binding`의 속성에 대 한 태그 확장은 `Text` `Label` 속성의 형식을 지정 합니다 `DateTime` . 표시 되는는 다음과 같습니다.
 
-[![](data-bindings-to-mvvm-images/clock.png "View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
+[![ViewModel을 통해 날짜 및 시간 표시 보기](data-bindings-to-mvvm-images/clock.png)](data-bindings-to-mvvm-images/clock-large.png#lightbox "ViewModel을 통해 날짜 및 시간 표시 보기")
 
 `DateTime`속성을 마침표로 구분 하 여 ViewModel의 속성에 대 한 개별 속성에 액세스할 수도 있습니다.
 
@@ -298,7 +298,7 @@ namespace XamlSamples
 
 각각에 대 한 바인딩이 `Label` 기본값입니다 `OneWay` . 값을 표시 하기만 하면 됩니다. 그러나 각에 대 한 `Slider` 바인딩은 `TwoWay` 입니다. 이를 통해를 `Slider` ViewModel에서 초기화할 수 있습니다. `Color`ViewModel이 인스턴스화될 때 속성이로 설정 되어 있는지 확인 `Aqua` 합니다. 그러나의 변경 내용으로는 `Slider` ViewModel의 속성에 새 값을 설정 해야 합니다. 그런 다음 새 색을 계산 합니다.
 
-[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
+[![양방향 데이터 바인딩을 사용 하는 MVVM](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용 하는 MVVM")
 
 ## <a name="commanding-with-viewmodels"></a>ViewModels 사용 하 여 명령
 
@@ -559,7 +559,7 @@ namespace XamlSamples
 
 `Command`이 태그에 표시 되는 첫 번째의 속성은에 `Button` 바인딩되고 `DeleteCharCommand` 나머지는 `AddCharCommand` 면에 표시 되는 문자와 동일한를 사용 하 여에 바인딩됩니다 `CommandParameter` `Button` . 작동 중인 프로그램은 다음과 같습니다.
 
-[![](data-bindings-to-mvvm-images/keypad.png "Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
+[![MVVM 및 명령을 사용 하는 계산기](data-bindings-to-mvvm-images/keypad.png)](data-bindings-to-mvvm-images/keypad-large.png#lightbox "MVVM 및 명령을 사용 하는 계산기")
 
 ### <a name="invoking-asynchronous-methods"></a>비동기 메서드 호출
 
@@ -684,7 +684,7 @@ public class PageDataViewModel
 
 페이지는 스크롤 가능한 목록으로 표시 됩니다.
 
-[![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
+[![스크롤 가능한 페이지 목록](data-bindings-to-mvvm-images/mainpage.png)](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "스크롤 가능한 페이지 목록")
 
 사용자가 항목을 선택 하면 코드 숨김이 파일의 처리기가 트리거됩니다. 처리기는 `SelectedItem` 의 속성을로 설정 하 `ListBox` `null` 고 선택 된 페이지를 인스턴스화한 다음 해당 페이지를 탐색 합니다.
 
@@ -702,7 +702,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 }
 ```
 
-## <a name="video"></a>비디오
+## <a name="video"></a>동영상
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 

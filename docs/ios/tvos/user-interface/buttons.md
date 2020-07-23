@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 63aa344ec94730ebe448aba090e2d91af9da64b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0de41379800d3f8fcb26e2bc58497010b8e3bf95
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574043"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931380"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin에서 tvOS 단추 사용
 
 클래스의 인스턴스를 사용 `UIButton` 하 여 tvOS 창에 포커스를 선택할 수 있는 단추를 만듭니다. 사용자가 단추를 선택 하면 대상 개체에 작업 메시지를 보내 tvOS 앱이 사용자의 입력에 응답할 수 있도록 합니다.
 
-[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
+[![예제 단추](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 온라인으로 작업 하 고 Siri 원격으로 이동 하는 방법에 대 한 자세한 내용은 [탐색 및 포커스](~/ios/tvos/app-fundamentals/navigation-focus.md) 및 [Siri 원격 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 사용 설명서를 참조 하세요.
 
@@ -28,7 +28,7 @@ ms.locfileid: "84574043"
 
 TvOS에서 단추는 앱 별 작업에 사용 되며 제목, 아이콘 또는 둘 다를 포함할 수 있습니다. 사용자가 [Siri 원격](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)을 사용 하 여 앱의 사용자 인터페이스를 탐색할 때 지정 된 단추로 포커스를 이동 하 여 텍스트 및 배경색을 변경 합니다. 그림자는 3D 효과를 추가 하는 단추에도 적용 되므로 사용자 인터페이스의 나머지 부분 위에 표시 됩니다.
 
-[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
+[![예제 단추](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 Apple에는 단추 작업에 대 한 다음과 같은 제안이 있습니다.
 
@@ -66,19 +66,19 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **라이브러리** 에서 **단추** 를 끌어서 뷰에 놓습니다. 
 
-    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
+    [![단추](buttons-images/storyboard01.png)](buttons-images/storyboard01.png#lightbox)
 1. **속성 탐색기**에서 **제목** 및 **텍스트 색**과 같은 단추의 여러 속성을 조정할 수 있습니다. 
 
-    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+    [![단추 속성](buttons-images/storyboard02.png)](buttons-images/storyboard02.png#lightbox)
 1. 그런 다음 **이벤트 탭** 으로 전환 하 고 **단추** 에서 **이벤트** 를 연결 하 고 호출 합니다 `ButtonPressed` . 
 
-    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+    [![이벤트 탭](buttons-images/storyboard03.png)](buttons-images/storyboard03.png#lightbox)
 1. `ViewController.cs` **위쪽** 및 **아래쪽** 화살표 키를 사용 하 여 코드에 새 작업을 저장할 수 있는 뷰로 자동 전환 됩니다. 
 
-    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
+    [![코드에 새 동작 배치](buttons-images/storyboard04.png)](buttons-images/storyboard04.png#lightbox)
 1. **Enter** 키를 눌러 위치를 선택 합니다. 
 
-    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
+    [![코드 편집기](buttons-images/storyboard05.png)](buttons-images/storyboard05.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -86,13 +86,13 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **라이브러리** 에서 **단추** 를 끌어서 뷰에 놓습니다. 
 
-    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
+    [![단추](buttons-images/storyboard01vs.png)](buttons-images/storyboard01vs.png#lightbox)
 1. **속성 탐색기**에서 **제목** 및 **텍스트 색**과 같은 단추의 여러 속성을 조정할 수 있습니다. 
 
-    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+    [![속성 탐색기](buttons-images/storyboard02vs.png)](buttons-images/storyboard02vs.png#lightbox)
 1. 그런 다음 **이벤트 탭** 으로 전환 하 고 **단추** 에서 **이벤트** 를 연결 하 고 호출 합니다 `ButtonPressed` . 
 
-    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
+    [![이벤트 탭](buttons-images/storyboard03vs.png)](buttons-images/storyboard03vs.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
 보기 컨트롤러 (예제 `ViewController.cs` ) 파일을 편집 하 고 다음 코드를 추가 하 여 선택한 단추를 처리 합니다.

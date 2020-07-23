@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137210"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932368"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -25,7 +25,7 @@ _SkiaSharp를 사용 하 여 다른 스트로크 캡이 있는 선을 그리는 
 
 SkiaSharp에서 한 줄을 렌더링 하는 것은 일련의 연결 된 직선을 렌더링 하는 것과 매우 다릅니다. 그러나 단일 줄을 그리는 경우에도 줄에 특정 스트로크 너비를 지정 해야 하는 경우가 종종 있습니다. 이러한 줄이 더 넓게 표시 되 면 줄의 끝 모양이 중요할 수도 있습니다. 선의 끝 모양을 *스트로크 단면*이라고 합니다.
 
-![](lines-images/strokecapsexample.png "The three stroke caps options")
+![세 개의 스트로크 대문자 옵션](lines-images/strokecapsexample.png)
 
 단일 줄을 그리기 위해은 `SKCanvas` [`DrawLine`](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 개체가 있는 줄의 시작 및 끝 좌표를 나타내는 인수가 포함 된 간단한 메서드를 정의 합니다 `SKPaint` .
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 열거형의 각 멤버에 대해 `SKStrokeCap` 처리기는 스트로크 두께가 50 픽셀이 고 다른 줄이 2 픽셀의 스트로크 두께로 배치 된 두 줄을 그립니다. 이 두 번째 선은 선 두께와 스트로크 캡에 관계 없이 선의 기하학적 시작과 끝을 보여 주기 위한 것입니다.
 
-[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
+[![스트로크 단면 페이지의 삼중 스크린샷](lines-images/strokecaps-small.png)](lines-images/strokecaps-large.png#lightbox "스트로크 단면 페이지의 삼중 스크린샷")
 
 여기에서 볼 수 있듯이 및 stroke 캡은 줄의 시작 부분에 `Square` `Round` 있는 스트로크 너비의 절반을 기준으로 줄의 길이를 효과적으로 확장 하 고 끝에 다시 선 길이를 확장 합니다. 이 확장은 렌더링 된 그래픽 개체의 크기를 확인 해야 하는 경우에 중요 합니다.
 
@@ -231,7 +231,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 스크린샷에는 다양 한 `Picker` 선택 항목이 표시 됩니다.
 
-[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
+[![여러 줄 페이지의 세 번째 스크린샷](lines-images/multiplelines-small.png)](lines-images/multiplelines-large.png#lightbox "여러 줄 페이지의 세 번째 스크린샷")
 
 왼쪽에 있는 iPhone은 `SKPointMode.Points` `DrawPoints` `SKPoint` 줄 끝이 또는 인 경우 열거형 멤버가 배열의 각 요소를 사각형으로 렌더링 하는 방법을 보여 줍니다 `Butt` `Square` . 줄 끝이 이면 원이 렌더링 됩니다 `Round` .
 

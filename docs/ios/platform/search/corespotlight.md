@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 102c0e7dbd2f4c903793e83d7551a84a52cac4fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 285243c832d080d93e557deada5bb824e03f8d89
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031568"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939427"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.ios에서 핵심 스포트라이트를 사용 하 여 검색
 
@@ -47,11 +47,11 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 이 정보는 검색 결과에서 다음과 같이 표시 됩니다.
 
-[![](corespotlight-images/corespotlight01.png "Core Spotlight search result overview")](corespotlight-images/corespotlight01.png#lightbox)
+[![핵심 스포트라이트 검색 결과 개요](corespotlight-images/corespotlight01.png)](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>항목 복원
 
-사용자가 앱에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목을 탭 하면 `ContinueUserActivity` `AppDelegate` 메서드가 호출 됩니다 .이 메서드는 `NSUserActivity`에도 사용 됩니다. 예를 들면,
+사용자가 앱에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목을 탭 하면 `AppDelegate` 메서드가 `ContinueUserActivity` 호출 됩니다 (이 메서드는에도 사용 됨 `NSUserActivity` ). 예를 들면 다음과 같습니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -74,14 +74,14 @@ public override bool ContinueUserActivity (UIApplication application,
 }
 ```
 
-이번에는 `CSSearchableItem.ActionType``ActivityType` 있는 활동을 확인 합니다.
+이번에는가 인 활동을 확인 `ActivityType` `CSSearchableItem.ActionType` 합니다.
 
 ## <a name="updating-an-item"></a>항목 업데이트
 
 핵심 스포트라이트를 사용 하 여 만든 인덱스 항목을 수정 해야 하는 경우가 있을 수 있습니다. 예를 들어 제목 또는 미리 보기 이미지를 변경 해야 합니다. 이렇게 변경 하려면 인덱스를 처음 만들 때 사용한 것과 동일한 방법을 사용 합니다.
-항목을 만들고 수정 된 특성을 포함 하는 새 `CSSearchableItemAttributeSet`을 연결 하는 데 사용 된 것과 동일한 ID를 사용 하 여 새 `CSSearchableItem`을 만듭니다.
+`CSSearchableItem`항목을 만들고 수정 된 특성을 포함 하는 새을 연결 하는 데 사용 된 것과 동일한 ID를 사용 하 여 새를 만듭니다 `CSSearchableItemAttributeSet` .
 
-[![](corespotlight-images/corespotlight02.png "Updating an Item overview")](corespotlight-images/corespotlight02.png#lightbox)
+[![항목 업데이트 개요](corespotlight-images/corespotlight02.png)](corespotlight-images/corespotlight02.png#lightbox)
 
 이 항목이 검색 가능한 인덱스에 기록 되 면 기존 항목이 새 정보로 업데이트 됩니다.
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예를 들면,
+다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Delete by Domain Name
@@ -129,8 +129,8 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 
 핵심 스포트라이트는 인덱스를 정확 하 고 최신 상태로 유지 하는 데 도움이 되는 다음과 같은 기능을 제공 합니다.
 
-- **Batch 업데이트 지원** – 앱에서 동시에 많은 인덱스 그룹을 만들거나 수정 해야 하는 경우 한 번의 호출로 전체 일괄 처리를 `CSSearchableIndex` 클래스의 `Index` 메서드로 보낼 수 있습니다.
-- **인덱스 변경 내용에 응답** – 앱이 검색 가능한 인덱스에서 변경 내용 및 알림에 응답할 수 `CSSearchableIndexDelegate`를 사용 합니다.
+- **Batch 업데이트 지원** – 앱에서 동시에 많은 인덱스 그룹을 만들거나 수정 해야 하는 경우 `Index` `CSSearchableIndex` 한 번의 호출로 전체 일괄 처리를 클래스의 메서드로 보낼 수 있습니다.
+- **인덱스 변경 내용에 응답** – 앱을 사용 하면 `CSSearchableIndexDelegate` 검색 가능한 인덱스에서 변경 내용 및 알림에 응답할 수 있습니다.
 - **데이터 보호 적용** – 데이터 보호 클래스를 사용 하 여 핵심 스포트라이트를 사용 하 여 검색 가능한 인덱스에 추가 하는 항목에 대 한 보안을 구현할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크

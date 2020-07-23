@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms DataTemplateSelector 만들기” description: “이 문서에서는 데이터 바인딩된 속성 값을 기반으로, 런타임 시 DataTemplate을 선택하는 데 사용할 수 있는 DataTemplateSelector를 만들고 사용하는 방법을 보여 줍니다.”'
-description: 'ms.prod: xamarin ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/08/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms DataTemplateSelector 만들기
+description: 이 문서에서는 데이터 바인딩된 속성 값을 기반으로, 런타임 시 DataTemplate을 선택하는 데 사용할 수 있는 DataTemplateSelector를 만들고 사용하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 7cbeeb9a0eed37ec109b2e71c46e3f04cd08822d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84135956"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936450"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
 
@@ -94,7 +94,7 @@ XAML에서 `PersonDataTemplateSelector`는 다음 코드 예제와 같이 리소
 
 다음 스크린샷은 기본 컬렉션의 각 개체에 `PersonDataTemplateSelector`를 적용한 [`ListView`](xref:Xamarin.Forms.ListView)의 결과를 보여 줍니다.
 
-![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
+![데이터 템플릿 선택기를 사용하는 ListView](selector-images/data-template-selector.png)
 
 `DateOfBirth` 속성 값이 1980보다 크거나 같은 `Person` 개체는 녹색으로 표시되고 나머지 개체는 빨간색으로 표시됩니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5e71ff86869c42d478fbf1ee3f6de5bff59431fc
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 858d2a2399e1d294767b8afad36502b809955224
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728215"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933283"
 ---
 # <a name="editing-nuget-metadata"></a>NuGet 메타 데이터 편집
 
@@ -25,7 +25,7 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리의 NuGet
 
 **일반** 탭에는 NuGet 패키지를 생성 하기 위해 입력 해야 하는 4 개의 필드가 있습니다.
 
-[![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
+[![NuGet 패키지 필수 메타 데이터 창](metadata-images/metadata-general-sml.png)](metadata-images/metadata-general.png#lightbox)
 
 - **ID** – NuGet.org 내에서 고유 해야 하는 패키지 식별자입니다 (또는 패키지가 배포 될 때마다). 이 [지침](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) 을 따르고 URL에 유효한 문자만 사용 합니다 (공백 없음 및 대부분의 특수 문자 사용 안 함).
 - **버전** – [NuGet의 버전 관리 규칙과](https://docs.microsoft.com/nuget/create-packages/dependency-versions)일치 하는 버전 번호를 선택 합니다.
@@ -44,7 +44,7 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리의 NuGet
 
 **세부 정보** 탭에는 NuGet 패키지 매니페스트 파일에 포함할 선택적 필드가 있습니다.
 
-[![](metadata-images/metadata-detail-sml.png "NuGet package optional metadata window")](metadata-images/metadata-detail.png#lightbox)
+[![NuGet 패키지 선택적 메타 데이터 창](metadata-images/metadata-detail-sml.png)](metadata-images/metadata-detail.png#lightbox)
 
 필수 및 선택적 필드에 대 한 자세한 내용은 [선택적 요소 참조](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) 를 참조 하세요.
 
@@ -53,4 +53,4 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리의 NuGet
 
 ## <a name="related-links"></a>관련 링크
 
-- [.nuspec 참조](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)
+- [. nuspec 참조](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

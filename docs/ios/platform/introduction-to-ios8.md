@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 1fae83f60f819da9767e14612a7f778dc49ddf52
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6f2a188617b00a008dafa20012c0997bc399045d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564632"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930964"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 
@@ -48,7 +48,7 @@ HomeKit를 사용 하 여 타사 앱 및 Siri는 액세서리를 검색 하 고 
 
 아래 다이어그램은 HomeKit 액세서리 구성의 기본 계층을 보여 줍니다.
 
-![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
+![이 다이어그램은 HomeKit 액세서리 구성의 기본 계층 구조를 보여줍니다.](introduction-to-ios8-images/image1.png)
 
 HomeKit을 시작 하려면 개발자가 프로 비전 프로필에 HomeKit 서비스를 선택 했는지 확인 해야 합니다. 또한 Apple은 개발자에 게 Xcode에 대 한 HomeKit 시뮬레이터 추가 기능을 제공 했습니다. 이는 [Apple 개발자 센터](https://developer.apple.com/downloads/index.action)의에서 찾을 수 있습니다 `Hardware IO Tools for Xcode` . 
 
@@ -70,7 +70,7 @@ IOS8를 사용 하 여 개발자는 앱을 사용할 수 있는 사용자에 대
 
 **새 프로젝트** 대화 상자에서 **C#**  >  **iOS**  >  **Unified API**  >  아래 스크린샷에 표시 된 것 처럼 c # iOS Unified API**확장**으로 이동 합니다.
 
-![](introduction-to-ios8-images/image2.png "Creating a new extension")
+![새 확장 만들기](introduction-to-ios8-images/image2.png)
 
 새 프로젝트 대화 상자는 앱 확장을 만들기 위한 7 가지 새 프로젝트 템플릿을 제공 하며 아래에서 설명 합니다. 많은 확장 프로그램이 iOS의 다른 새 Api (예: 문서 선택기)와 관련이 있습니다.
 
@@ -101,7 +101,7 @@ Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통�
 
 문서 선택기에 대해 자세히 알아보고 문서 선택기를 Xamarin.ios 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 [문서 선택기 소개](~/ios/platform/document-picker.md) 가이드를 참조 하세요.
 
-### <a name="handoff"></a>Handoff
+### <a name="handoff"></a>전달
 
 더 큰 연속성 기능에 포함 된 핸드 오프는 OS X와 iOS의 통합에 대 한 단계를 추가로 수행 합니다. 여기에는 플랫폼 간 이동, iPhone 호출 기능, iPad 및 Mac에서의 SMS, iPhone에서 테더 링의 향상 기능 등이 포함 됩니다.
 
@@ -121,7 +121,7 @@ IOS8 이전에는 개발자가 가로 `UIInterfaceOrientation` 및 세로 모드
 
 두 가지 개념을 함께 사용 하는 경우 결과는 다음 다이어그램에 표시 된 것 처럼 서로 다른 방향으로 사용할 수 있는 다양 한 크기를 정의 하는 2 x 2 그리드입니다.
 
-![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
+![서로 다른 방향으로 사용할 수 있는 여러 가지 가능한 크기를 정의 하는 2 x 2 표를 나타내는 다이어그램입니다.](introduction-to-ios8-images/image3.png)
 
 크기 클래스에 대 한 자세한 내용은 [통합 Storyboard 소개](~/ios/user-interface/storyboards/unified-storyboards.md)를 참조 하세요.
 

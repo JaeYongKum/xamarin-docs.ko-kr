@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 2a71f48fb9911267188e7aa4b4124cd9b7488d31
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853133"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936476"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -257,7 +257,7 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
 다음 스크린샷에서는 위의 두 가지 다중 트리거 예제 사이의 차이점을 보여 줍니다. 화면의 위쪽에서는 `Entry`의 텍스트 입력만으로 **저장** 단추를 사용할 수 있습니다.
 화면의 아래쪽에서는 두 필드 모두에 데이터가 포함될 때까지 **로그인** 단추가 비활성 상태로 유지됩니다.
 
-![](triggers-images/multi-requireall.png "MultiTrigger Examples")
+![MultiTrigger 예제](triggers-images/multi-requireall.png)
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions 및 ExitActions
 

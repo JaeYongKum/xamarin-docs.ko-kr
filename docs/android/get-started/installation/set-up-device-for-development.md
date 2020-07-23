@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 72e0a2adc79796b3df7b6fb4eca62448f1a1a7a4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0b0bfc650ffa271a7616d7c6e6a436fafa2664c8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79510733"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932602"
 ---
 # <a name="set-up-device-for-development"></a>개발용 디바이스 설정
 
@@ -77,7 +77,7 @@ USB 디버깅 등 개발자 옵션을 사용하도록 설정하고 절전 모드
 
 디버깅에 사용한 적이 없는 경우 디바이스에서 컴퓨터를 신뢰하라는 메시지가 표시됩니다. 디바이스를 연결할 때마다 이 메시지가 표시되지 않도록 **이 컴퓨터에서 항상 허용**을 선택할 수도 있습니다.
 
-![](set-up-device-for-development-images/trust-computer-for-usb-debugging.png "Google USB")
+![Google USB](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
 
 ## <a name="alternate-connection-via-wifi"></a>Wifi를 통한 대체 연결
 
@@ -149,7 +149,7 @@ Google Nexus 디바이스(Galaxy Nexus 제외)에는 Google USB 드라이버가 
 
 다음 스크린샷에서 볼 수 있듯이 Android SDK Manager를 시작하고 **Extras** 폴더를 확장하여 **Google USB 드라이버** 패키지를 설치합니다.
 
-![](set-up-device-for-development-images/google-usb-driver.png "Google USB driver selected")
+![Google USB 드라이버 선택됨](set-up-device-for-development-images/google-usb-driver.png)
 
 **Google USB 드라이버** 상자를 확인하고 **변경 내용 적용** 단추를 클릭합니다.
 드라이버 파일은 다음 위치에 다운로드됩니다.

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.ios의 iOS 확장
+title: Xamarin.iOS의 iOS 확장
 description: 이 문서에서는 알림 센터 내에서와 같은 표준 컨텍스트에서 iOS에 표시 되는 위젯의 확장에 대해 설명 합니다. 확장을 만들고 부모 앱에서 통신 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 05/12/2020
-ms.openlocfilehash: 6f2f1a908a43d81b2aabf5cb2db2f7a230356fa4
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: d5a51b70237c4e8a6f6a5e48ae684031697a0897
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149924"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939843"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.ios의 iOS 확장
 
@@ -27,11 +27,11 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 ## <a name="extension-points"></a>확장 위치
 
-|Type|설명|확장 지점|호스트 앱|
+|형식|설명|확장 지점|호스트 앱|
 |--- |--- |--- |--- |
 |작업|특정 미디어 유형에 대 한 특수 편집기나 뷰어|`com.apple.ui-services`|모두|
 |문서 공급자|앱에서 원격 문서 저장소를 사용할 수 있습니다.|`com.apple.fileprovider-ui`|[Uidocumentpickerviewcontroller](xref:UIKit.UIDocumentPickerViewController) 를 사용 하는 앱|
-|Keyboard|대체 키보드|`com.apple.keyboard-service`|모두|
+|키보드|대체 키보드|`com.apple.keyboard-service`|모두|
 |사진 편집|사진 조작 및 편집|`com.apple.photo-editing`|사진. 앱 편집기|
 |공유|는 소셜 네트워크, 메시징 서비스 등을 사용 하 여 데이터를 공유 합니다.|`com.apple.share-services`|모두|
 |오늘|오늘 화면 또는 알림 센터에 표시 되는 "위젯"|`com.apple.widget-extensions`|오늘 및 알림 센터|
@@ -118,7 +118,7 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 다음 연습에서는 연도에 남은 일 수와 일 수를 계산 하는 예제 **오늘** 위젯을 만듭니다.
 
-[![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png#lightbox)
+[![연도에서 남은 일 수 및 일 수를 계산 하는 오늘 위젯의 예](extensions-images/carpediemscreenshot-sm.png)](extensions-images/carpediemscreenshot.png#lightbox)
 
 ### <a name="creating-the-solution"></a>솔루션 만들기
 
@@ -126,26 +126,26 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 1. 먼저 새 iOS, **단일 뷰 응용 프로그램** 프로젝트를 만들고 **다음** 단추를 클릭 합니다. 
 
-    [![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
+    [![먼저 새 iOS, 단일 뷰 응용 프로그램 프로젝트를 만들고 다음 단추를 클릭 합니다.](extensions-images/today01.png)](extensions-images/today01.png#lightbox)
 2. 프로젝트를 호출 `TodayContainer` 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
+    [![TodayContainer 프로젝트를 호출 하 고 다음 단추를 클릭 합니다.](extensions-images/today02.png)](extensions-images/today02.png#lightbox)
 3. **프로젝트 이름** 및 **SolutionName** 를 확인 하 고 **만들기** 단추를 클릭 하 여 솔루션을 만듭니다. 
 
-    [![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
+    [![프로젝트 이름 및 SolutionName를 확인 하 고 만들기 단추를 클릭 하 여 솔루션을 만듭니다.](extensions-images/today03.png)](extensions-images/today03.png#lightbox)
 4. 그런 다음 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **오늘 확장** 템플릿에서 새 **iOS 확장** 프로젝트를 추가 합니다. 
 
-    [![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
+    [![그런 다음 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭 하 고 오늘 확장 템플릿에서 새 iOS 확장 프로젝트를 추가 합니다.](extensions-images/today04.png)](extensions-images/today04.png#lightbox)
 5. 프로젝트를 호출 `DaysRemaining` 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
+    [![DaysRemaining 프로젝트를 호출 하 고 다음 단추를 클릭 합니다.](extensions-images/today05.png)](extensions-images/today05.png#lightbox)
 6. 프로젝트를 검토 하 고 **만들기** 단추를 클릭 하 여 해당 프로젝트를 만듭니다. 
 
-    [![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
+    [![프로젝트를 검토 하 고 만들기 단추를 클릭 하 여 해당 프로젝트를 만듭니다.](extensions-images/today06.png)](extensions-images/today06.png#lightbox)
 
 이제 결과 솔루션에는 다음과 같이 두 개의 프로젝트가 있습니다.
 
-[![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png#lightbox)
+[![이제 결과 솔루션에는 다음과 같이 두 개의 프로젝트가 있습니다.](extensions-images/today07.png)](extensions-images/today07.png#lightbox)
 
 ### <a name="creating-the-extension-user-interface"></a>확장 사용자 인터페이스 만들기
 
@@ -157,10 +157,10 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 1. **솔루션 탐색기**에서 확장 프로젝트의 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다. 
 
-    [![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
+    [![확장 프로젝트 주 storyboard 파일을 두 번 클릭 하 여 편집용으로 엽니다.](extensions-images/today08.png)](extensions-images/today08.png#lightbox)
 2. 템플릿에 의해 UI에 자동으로 추가 된 레이블을 선택 하 고 **Name** `TodayMessage` **속성 탐색기**의 **위젯** 탭에서 이름을 지정 합니다. 
 
-    [![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
+    [![템플릿에 의해 UI에 자동으로 추가 된 레이블을 선택 하 고 속성 탐색기의 위젯 탭에서 이름을 TodayMessage로 지정 합니다.](extensions-images/today09.png)](extensions-images/today09.png#lightbox)
 3. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 #### <a name="using-code"></a>코드 사용
@@ -169,16 +169,16 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 1. **솔루션 탐색기**에서 **DaysRemaining** 프로젝트를 선택 하 고 새 클래스를 추가 하 고 호출 합니다 `CodeBasedViewController` . 
 
-    [![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
+    [![DaysRemaining 프로젝트를 선택 하 고 새 클래스를 추가 하 고 CodeBasedViewController를 호출 합니다.](extensions-images/code01.png)](extensions-images/code01.png#lightbox)
 2. 다시 **솔루션 탐색기**에서 확장 파일을 두 번 클릭 `Info.plist` 하 여 편집용으로 엽니다. 
 
-    [![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
+    [![확장명 info.plist 파일을 두 번 클릭 하 여 편집용으로 엽니다.](extensions-images/code02.png)](extensions-images/code02.png#lightbox)
 3. 화면 맨 아래에서 **원본 뷰** 를 선택 하 고 노드를 엽니다 `NSExtension` . 
 
-    [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
+    [![화면 아래쪽에서 원본 뷰를 선택 하 고 N이상 압력 노드를 엽니다.](extensions-images/code03.png)](extensions-images/code03.png#lightbox)
 4. 키를 제거 `NSExtensionMainStoryboard` 하 고 값이 인을 추가 합니다 `NSExtensionPrincipalClass` `CodeBasedViewController` . 
 
-    [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
+    [![NSExtensionMainStoryboard 키를 제거 하 고 값이 CodeBasedViewController 인 NSExtensionPrincipalClass를 추가 합니다.](extensions-images/code04.png)](extensions-images/code04.png#lightbox)
 5. 변경 내용을 저장합니다.
 
 그런 다음 파일을 편집 `CodeBasedViewController.cs` 하 여 다음과 같이 만듭니다.
@@ -250,7 +250,7 @@ public override void ViewDidLoad ()
 
 이 연습에서 컨테이너 앱은 단순히 확장을 제공 하 고 설치 하는 방법으로 사용 되며 자체의 기능을 제공 하지 않습니다. TodayContainer 파일을 편집 `Main.storyboard` 하 고 확장 프로그램의 기능을 정의 하는 일부 텍스트를 추가 하 고이를 설치 하는 방법을 추가 합니다.
 
-[![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png#lightbox)
+[![TodayContainers 주 storyboard 파일을 편집 하 고 Extensions 함수를 정의 하는 텍스트와이를 설치 하는 방법을 추가 합니다.](extensions-images/today10.png)](extensions-images/today10.png#lightbox)
 
 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
@@ -258,19 +258,19 @@ public override void ViewDidLoad ()
 
 IOS 시뮬레이터에서 확장을 테스트 하려면 **TodayContainer** 앱을 실행 합니다. 컨테이너의 주 뷰가 표시 됩니다.
 
-[![](extensions-images/run01.png "The containers main view will be displayed")](extensions-images/run01.png#lightbox)
+[![컨테이너 주 뷰가 표시 됩니다.](extensions-images/run01.png)](extensions-images/run01.png#lightbox)
 
 그런 다음 시뮬레이터의 **홈** 단추를 누르고 화면 맨 위에서 아래로 살짝 밀어 **알림 센터**를 열고 **오늘** 탭을 선택 하 고 **편집** 단추를 클릭 합니다.
 
-[![](extensions-images/run02.png "Hit the Home button in the Simulator, swipe down from the top of the screen to open the Notification Center, select the Today tab and click the Edit button")](extensions-images/run02.png#lightbox)
+[![시뮬레이터의 홈 단추를 누르고 화면 맨 위에서 아래로 살짝 밀어 알림 센터를 열고 오늘 탭을 선택 하 고 편집 단추를 클릭 합니다.](extensions-images/run02.png)](extensions-images/run02.png#lightbox)
 
 **오늘** 보기에 **DaysRemaining** 확장을 추가 하 고 **완료** 단추를 클릭 합니다.
 
-[![](extensions-images/run03.png "Add the DaysRemaining Extension to the Today view and click the Done button")](extensions-images/run03.png#lightbox)
+[![오늘 보기에 DaysRemaining 확장을 추가 하 고 완료 단추를 클릭 합니다.](extensions-images/run03.png)](extensions-images/run03.png#lightbox)
 
 새 위젯이 **오늘** 보기에 추가 되 고 결과가 표시 됩니다.
 
-[![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png#lightbox)
+[![새 위젯이 오늘 보기에 추가 되 고 결과가 표시 됩니다.](extensions-images/run04.png)](extensions-images/run04.png#lightbox)
 
 ## <a name="communicating-with-the-host-app"></a>호스트 앱과 통신
 

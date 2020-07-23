@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/03/2017
-ms.openlocfilehash: 139b58fd1953924d5a848fc79c3a1706afb760b0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e3ef2a667996f3fc38008521c2804cc644cfb328
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565649"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928607"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Xamarin에서 watchOS의 복잡 한 문제
 
@@ -24,7 +24,7 @@ _watchOS를 사용 하면 개발자가 시청 얼굴에 대 한 사용자 지정
 
 먼저 [Apple의 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) 를 읽고 앱이 복잡 한 경우에 적합 한지 확인 합니다. `CLKComplicationFamily`선택할 수 있는 표시 유형에는 다음 5 가지가 있습니다.
 
-[![](complications-images/all-complications-sml.png "The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large")](complications-images/all-complications.png#lightbox)
+[![사용 가능한 5 가지 CLKComplicationFamily 형식: small, 모듈식 Small, 모듈식 Large, 실속형 Small, 실속형 Large](complications-images/all-complications-sml.png)](complications-images/all-complications.png#lightbox)
 
 앱은 표시 되는 데이터에 따라 스타일을 하나 또는 5 개만 구현할 수 있습니다.
 사용자가 Digital Crown를 전환할 때 과거 및/또는 미래의 시간에 대 한 값을 제공 하 여 시간 이동을 지원할 수도 있습니다.
@@ -41,7 +41,7 @@ _watchOS를 사용 하면 개발자가 시청 얼굴에 대 한 사용자 지정
 
 **새 프로젝트 추가 ...** 마법사에는 복잡 한 컨트롤러 클래스를 자동으로 만들고 **info.plist** 파일을 구성 하는 확인란이 포함 됩니다.
 
-![](complications-images/file-new-project-sml.png "The Include Complication checkbox")
+![복잡 한 내용 포함 확인란](complications-images/file-new-project-sml.png)
 
 ### <a name="existing-projects"></a>기존 프로젝트
 
@@ -83,7 +83,7 @@ public class ComplicationController : CLKComplicationDataSource
 
 Watch 확장의 **info.plist** 파일은 `CLKComplicationDataSource` 지원 하려는 및 복잡 한 제품군의 이름을 지정 해야 합니다.
 
-[![](complications-images/complications-config-sml.png "The complication family types")](complications-images/complications-config.png#lightbox)
+[![복잡 한 패밀리 형식](complications-images/complications-config-sml.png)](complications-images/complications-config.png#lightbox)
 
 **데이터 소스 클래스** 항목 목록에는 `CLKComplicationDataSource` 복잡 한 논리를 포함 하는 하위 클래스의 클래스 이름이 표시 됩니다.
 

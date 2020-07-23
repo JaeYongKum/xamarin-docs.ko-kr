@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 440a078857a940f57f5700a18f91fc8b25bdfae8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137738"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937204"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
@@ -25,7 +25,7 @@ _다양 한 소스에서 비트맵을 로드 하 고 표시 합니다._
 
 SkiaSharp에서 비트맵을 지 원하는 것은 매우 광범위 합니다. 이 문서에서는 비트맵을 로드 하 고 표시 하는 방법에 대 한 기본 사항만 다룹니다 &mdash; .
 
-![](bitmaps-images/basicbitmaps-small.png "The display of two bitmaps")
+![두 비트맵 표시](bitmaps-images/basicbitmaps-small.png)
 
 비트맵에 대 한 훨씬 더 심층적 탐색은 [SkiaSharp 비트맵](../bitmaps/index.md)섹션에서 찾을 수 있습니다.
 
@@ -208,7 +208,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 비트맵이 사각형의 크기에 맞게 확장 되므로 이러한 스크린샷에는 원숭이가 가로로 확장 됩니다.
 
-[![](bitmaps-images/basicbitmaps-small.png "A triple screenshot of the Basic Bitmaps page")](bitmaps-images/basicbitmaps-large.png#lightbox "A triple screenshot of the Basic Bitmaps page")
+[![기본 비트맵 페이지의 세 번째 스크린샷](bitmaps-images/basicbitmaps-small.png)](bitmaps-images/basicbitmaps-large.png#lightbox "기본 비트맵 페이지의 세 번째 스크린샷")
 
 &mdash;프로그램을 실행 하 고 자체 그림 라이브러리에서 사진을 로드 하는 경우에만 표시 되는 세 번째 이미지는 &mdash; 사각형 내에도 표시 되지만 사각형의 위치와 크기는 비트맵의 가로 세로 비율을 유지 하기 위해 조정 됩니다. 이 계산은 비트맵 및 대상 사각형의 크기를 기반으로 하 고 해당 영역에서 사각형을 가운데에 정렬 하 여 배율 인수를 계산 해야 하기 때문에 좀 더 복잡 합니다.
 

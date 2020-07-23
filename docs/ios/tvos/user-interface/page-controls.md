@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 9a45e87165101a8e8afcfc51d15d085982b6499e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d4a1cab23b8d295d899c47edc5ffe77f6d20a467
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569935"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939765"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Xamarin에서 tvOS 페이지 컨트롤 사용
 
 TvOS 앱에 일련의 페이지 또는 이미지를 표시 해야 하는 경우가 있습니다. 페이지 컨트롤은 사용자가 최대 페이지 수를 벗어난 페이지를 명확 하 게 표시 하도록 디자인 되었습니다. 페이지 컨트롤은 진한 타원 모양의 배경에 대해 일련의 점을 표시 합니다. 현재 페이지에는 채워진 점이 표시 되 고 다른 모든 페이지는 빈 점으로 표시 됩니다. 페이지 컨트롤이 너무 많아 배경 영역에 맞출 수 없는 경우 가장 바깥쪽 점이 잘립니다.
 
-[![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
+[![샘플 페이지 컨트롤](page-controls-images/page01.png)](page-controls-images/page01.png#lightbox)
 
 사용자에 게 피드백을 제공 하도록 디자인 된 비 대화형 요소의 페이지 컨트롤입니다. 현재 페이지 번호 (예: 제스처 또는 단추)를 변경 하는 다른 컨트롤을 추가 해야 합니다.
 
@@ -38,14 +38,14 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
-    [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
+    [![페이지 컨트롤](page-controls-images/page02.png)](page-controls-images/page02.png#lightbox)
 1. **Properties Pad**의 **위젯 탭** 에서 **현재 페이지** **및 페이지 수**와 같은 페이지 컨트롤의 몇 가지 속성을 조정할 수 있습니다.
 
-    [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
+    [![위젯 탭](page-controls-images/page03.png)](page-controls-images/page03.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
 1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들면 다음과 같습니다.
 
-    [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
+    [![컨트롤 이름](page-controls-images/page04.png)](page-controls-images/page04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -53,14 +53,14 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
-    [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
+    [![페이지 컨트롤](page-controls-images/page02-vs.png)](page-controls-images/page02-vs.png#lightbox)
 1. **속성 탐색기**의 **위젯 탭** 에서 **현재 페이지** **및 페이지 수**와 같은 페이지 컨트롤의 여러 속성을 조정할 수 있습니다.
 
-    [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
+    [![위젯 탭](page-controls-images/page03-vs.png)](page-controls-images/page03-vs.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
 1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들면 다음과 같습니다.
 
-    [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
+    [![컨트롤 이름](page-controls-images/page04-vs.png)](page-controls-images/page04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 -----

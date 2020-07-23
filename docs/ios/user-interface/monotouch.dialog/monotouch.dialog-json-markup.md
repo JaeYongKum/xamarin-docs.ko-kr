@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: fc6066155a4171b106e772c1fe6fe7ee3e5c67cf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 023a85451ca83df6c15e8b3bbc3169f2884a0a46
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573510"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936567"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -77,7 +77,7 @@ ms.locfileid: "84573510"
 
 위의 태그는 다음 UI를 생성 합니다.
 
- [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "The UI created by the given markup")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
+ [![지정 된 태그에 의해 생성 된 UI입니다.](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 트리의 모든 요소에는 속성이 포함 될 수 있습니다 `"id"` . 런타임에 JsonElement 인덱서를 사용 하 여 개별 섹션 또는 요소를 참조할 수 있습니다. 다음과 같이:
 
@@ -126,7 +126,7 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="type"></a>
 
-### <a name="type"></a>type
+### <a name="type"></a>형식
 
 `"root"`섹션에 표시 될 때 (컨트롤러를 중첩 하는 데 사용 됨)로 설정 해야 합니다.
 
@@ -330,7 +330,7 @@ class Foo {
 
 ## <a name="boolean-elements"></a>부울 요소
 
-부울 요소는 형식을로 설정 해야 하 `"bool"` 고,를 표시 하기 위해를 포함할 수 있으며, `"caption"` `"value"` 가 true 또는 false로 설정 됩니다. `"on"`및 `"off"` 속성을 설정 하는 경우 이미지로 간주 됩니다. 이미지는 응용 프로그램의 현재 작업 디렉터리를 기준으로 확인 됩니다. 번들 관련 파일을 참조 하려는 경우를 바로 가기로 사용 하 여 `"~"` 응용 프로그램 번들 디렉터리를 나타낼 수 있습니다. 예를 들어 `"~/favorite.png"` , 번들 파일에 포함 된 즐겨찾기나 .png를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+부울 요소는 형식을로 설정 해야 하 `"bool"` 고,를 표시 하기 위해를 포함할 수 있으며, `"caption"` `"value"` 가 true 또는 false로 설정 됩니다. `"on"`및 `"off"` 속성을 설정 하는 경우 이미지로 간주 됩니다. 이미지는 응용 프로그램의 현재 작업 디렉터리를 기준으로 확인 됩니다. 번들 관련 파일을 참조 하려는 경우를 바로 가기로 사용 하 여 `"~"` 응용 프로그램 번들 디렉터리를 나타낼 수 있습니다. 예를 들어는 `"~/favorite.png"` 번들 파일에 포함 된 favorite.png입니다. 예를 들면 다음과 같습니다.
 
 ```json
 { 
@@ -350,7 +350,7 @@ class Foo {
 
  <a name="type"></a>
 
-### <a name="type"></a>type
+### <a name="type"></a>형식
 
 형식은 또는로 설정할 수 있습니다 `"boolean"` `"checkbox"` . 부울로 설정 하는 경우 UISlider 또는 이미지를 사용 `"on"` 합니다 (및 `"off"` 가 모두 설정 된 경우). Checkbox로 설정 되 면 확인란을 사용 합니다. `"group"`속성을 사용 하 여 부울 요소에 특정 그룹에 속하는 것으로 태그를 지정할 수 있습니다. 이 방법은 포함 하는 루트에도 `"group"` 동일한 그룹에 속하는 모든 부울 (또는 확인란) 수를 사용 하 여 결과를 요약 하는 루트가 포함 된 속성을 포함 하는 경우에 유용 합니다.
 
@@ -358,7 +358,7 @@ class Foo {
 
 ## <a name="entry-elements"></a>Entry 요소
 
-입력 요소를 사용 하 여 사용자가 데이터를 입력할 수 있습니다. Entry 요소의 형식은 `"entry"` 또는 `"password"` 입니다. `"caption"`속성은 오른쪽에 표시할 텍스트로 설정 되 고는 `"value"` 항목을 설정 하기 위한 초기 값으로 설정 됩니다. 는 `"placeholder"` 사용자에 게 빈 항목 (회색으로 표시 됨)에 대 한 힌트를 표시 하는 데 사용 됩니다. 몇 가지 예제는 다음과 같습니다.
+입력 요소를 사용 하 여 사용자가 데이터를 입력할 수 있습니다. Entry 요소의 형식은 `"entry"` 또는 `"password"` 입니다. `"caption"`속성은 오른쪽에 표시할 텍스트로 설정 되 고는 `"value"` 항목을 설정 하기 위한 초기 값으로 설정 됩니다. 는 `"placeholder"` 사용자에 게 빈 항목 (회색으로 표시 됨)에 대 한 힌트를 표시 하는 데 사용 됩니다. 다음은 몇 가지 예입니다.
 
 ```json
 {

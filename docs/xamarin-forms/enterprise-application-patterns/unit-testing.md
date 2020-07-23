@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4f30b8be762e23f84a90595a56912587cc3aa838
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134656"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934253"
 ---
 # <a name="unit-testing-enterprise-apps"></a>엔터프라이즈 앱 유닛 테스트
 
@@ -55,7 +55,7 @@ public class OrderDetailViewModel : ViewModelBase
 
 `OrderDetailViewModel`클래스는 `IOrderService` 개체를 인스턴스화할 때 컨테이너가 확인 하는 형식에 대 한 종속성을 갖습니다 `OrderDetailViewModel` . 그러나 `OrderService` 클래스를 단위 테스트 하는 개체를 만드는 대신 `OrderDetailViewModel` `OrderService` 테스트 목적을 위한 모의 개체로 개체를 대체 합니다. 그림 10-1에서는이 관계를 보여 줍니다.
 
-![](unit-testing-images/unittesting.png "Classes that implement the IOrderService interface")
+![IOrderService 인터페이스를 구현 하는 클래스](unit-testing-images/unittesting.png)
 
 **그림 10-1:** IOrderService 인터페이스를 구현 하는 클래스
 
