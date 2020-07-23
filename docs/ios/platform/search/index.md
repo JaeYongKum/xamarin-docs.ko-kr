@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: ec63407189b635a9586b02e848647518aaf0170f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d95261a3b884507d3fc4a68018d57c5d3e3a2c84
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031558"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939414"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.ios에서 Api 검색
 
@@ -22,7 +22,7 @@ _이 문서에서는 iOS 9에서 제공 하는 앱 검색 Api를 사용 하 여 
 
 또한 새 검색 Api를 사용 하면 사전 검색 구현 환경을 사용 하지 않고도 앱에서 검색을 보다 쉽게 통합할 수 있습니다. 따라서 Apple은 일반적으로 앱 검색을 사용 하 여 iOS 9 앱 콘텐츠를 검색 하는 데 몇 시간 정도 걸립니다.
 
-[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
+[![앱 검색을 사용 하 여 범용으로 검색 가능한 iOS 9 앱 콘텐츠의 예](images/intro01.png)](images/intro01.png#lightbox)
 
 앱 검색은 세 가지 별도의 Api로 구성 됩니다.
 
@@ -36,7 +36,7 @@ _이 문서에서는 iOS 9에서 제공 하는 앱 검색 Api를 사용 하 여 
 
 구현할 이러한 메서드를 결정 하는 것은 앱에서 제공 하는 상호 작용의 형식 및 제공 하는 콘텐츠 형식에 따라 달라 집니다.
 
-다음 지침을 따르십시오.
+다음 지침을 사용하세요.
 
 - [**NSUserActivity**](nsuseractivity.md) –이 프레임 워크를 사용 하 여 공용 및 개인 콘텐츠에 대 한 높이려는을 제공 하 고 앱 내의 탐색 지점도 높이려는 합니다.
 
@@ -64,7 +64,7 @@ Apple은 앱에서 검색 인덱스를 제공 하는 콘텐츠와 작업에 대�
 IOS 10의 핵심 스포트라이트는 다음과 같은 앱 검색에 대 한 몇 가지 향상 된 기능을 제공 합니다.
 
 - **라우드 소싱 딥 링크 인기도 (차등 개인 정보 포함)** -검색 결과에서 딥 링크 된 앱 콘텐츠를 승격 하는 방법을 제공 합니다.
-- **앱 내 검색** -새 `CSSearchQuery` 클래스를 사용 하 여 메일, 메시지 및 메모 앱이 작동 하는 방식과 유사한 앱 내 스포트라이트 검색 기능을 제공 합니다.
+- **앱 내 검색** -새 클래스를 사용 `CSSearchQuery` 하 여 메일, 메시지 및 메모 앱이 작동 하는 방식과 유사한 앱 내 스포트라이트 검색 기능을 제공 합니다.
 - **연속 검색** -사용자가 스포트라이트 또는 Safari에서 검색을 시작한 다음 앱을 열고 검색을 계속할 수 있습니다.
 - **유효성 검사 결과 시각화** -Apple의 [앱 검색 API 유효성 검사 도구](https://search.developer.apple.com/appsearch-validation-tool) 는 이제 테스트를 미리 구성할 때 웹 사이트의 태그 및 딥 링크를 시각적으로 표시 합니다.
 - **메시지 앱 이미지 공유** -메시지에서 공유할 수 있도록 제공 되는 인기 있는 앱 이미지 (메시지 앱 확장을 통해)는 스포트라이트 검색에 표시 됩니다.
@@ -78,7 +78,7 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 - 앱 전환기
 - 잠금 화면
 - CarPlay
-- 맵
+- Maps
 - Siri 상호 작용
 - QuickType 제안 
 

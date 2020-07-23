@@ -10,12 +10,12 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0c6e305287c97abac3500cba4771479b60381ac
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139505"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939804"
 ---
 # <a name="platform-specifics"></a>플랫폼 사양
 
@@ -58,7 +58,7 @@ XAML을 통해 또는 흐름 코드 API를 통해 플랫폼별를 사용 하는 
 
 [샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 컨트롤에 의해 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별를 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
 
-![](images/screenshots.png "Shadow Platform-Specific")
+![섀도 플랫폼 관련](images/screenshots.png)
 
 이 [샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 이해를 용이 하 게 하기 위해 플랫폼 별로 각 플랫폼을 구현 합니다. 그러나 각 플랫폼별 효과 구현 외에는 각 플랫폼에 대해 섀도 클래스 구현이 거의 동일 합니다. 따라서이 가이드는 섀도 클래스의 구현에 대 한 집중적으로 살펴봅니다 단일 플랫폼에 미치는 영향을 설명 합니다.
 

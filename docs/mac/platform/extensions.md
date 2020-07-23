@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d1e40de646362e9b573ad7040ab08ba6d01d6e8
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ac4c8d7bbd28946b6089e7f22a36727d2d73ec18
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571612"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939206"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
@@ -42,7 +42,7 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
 - Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. `try/catch`다시 throw 하기 전의 (예외) 블록에 문제가 있는 코드를 래핑하는 것이 `NSLog` 유용할 수 있습니다.
 - **시스템 로그** 는 **응용 프로그램**유틸리티 아래의 **콘솔** 앱에서 액세스할 수 있습니다  >  **Utilities**.
 
-    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
+    [![시스템 로그](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - 위에서 설명한 것 처럼 확장 호스트 응용 프로그램을 실행 하면 시스템에 등록 됩니다. 응용 프로그램 번들을 삭제 하 고 등록을 취소 합니다. 
 - 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다.`plugin kit -mv`
 

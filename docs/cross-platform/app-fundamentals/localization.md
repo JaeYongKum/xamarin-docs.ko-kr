@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571075"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934864"
 ---
 # <a name="localization"></a>지역화
 
@@ -59,7 +59,7 @@ Xamarin 앱 지역화에 대 한 기술 세부 정보를 바로 건너뛰려면 
 
 IOS 홈 화면의 몇 개 항목에 대 한 문자열 길이를 영어, 독일어 및 일본어로 비교 합니다.
 
-[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
+[![독일어 vs 일본어 문자열 길이](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
 
 영어 (8 자)의 **설정은** 독일어 번역에는 13 자 이지만 일본어에서는 2 자만 필요 합니다.
 

@@ -10,18 +10,18 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0cdbd39f0217b0e4d175eb2443250eb3df8dd046
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137776"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936177"
 ---
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
 Xamarin.FormsWindows 플랫폼용 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [지원 되는 플랫폼 페이지](~/get-started/supported-platforms.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.
 
-![](images/allhanselman.png "Xamarin.Forms Applications Running on Windows")
+![Xamarin.FormsWindows에서 실행 중인 응용 프로그램](images/allhanselman.png)
 
 ## <a name="platform-specifics"></a>플랫폼 사양
 
