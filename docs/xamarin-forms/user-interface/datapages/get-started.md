@@ -10,25 +10,25 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb08d359048d53639a700cc5ff526f26d6b077b6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 325aa7be9e8a1eb6da816ef4ec6403c2882c6ed4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571469"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928915"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages Xamarin.Forms 를 렌더링 하려면 테마 참조가 필요 합니다. 여기에는를 설치 하는 작업이 포함 됩니다 [ Xamarin.Forms . 테마. 기본](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet 패키지를 프로젝트에 삽입 하 고 다음을 수행 [ Xamarin.Forms 합니다. 테마. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) 또는 [ Xamarin.Forms . 테마. 짙은](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet 패키지.
 
 DataPages 미리 보기를 사용 하 여 간단한 데이터 기반 페이지 빌드를 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 코드에서 특정 JSON 형식만 사용 하는 미리 보기 빌드에서 하드 코딩 된 스타일 ("이벤트")을 사용 합니다.
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages 샘플 응용 프로그램](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 
 ## <a name="1-add-nuget-packages"></a>1. NuGet 패키지 추가
 
@@ -140,7 +140,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 위의 단계를 수행 하면 작업 데이터 페이지가 생성 됩니다.
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages 샘플 응용 프로그램](get-started-images/demo-sml.png)](get-started-images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 
 이는 미리 작성 된 스타일 **"이벤트"** 가 밝은 테마 NuGet 패키지에 있고 데이터 원본과 일치 하는 스타일이 정의 되어 있기 때문에 작동 합니다 (예: "title", "image", "presenter").
 
@@ -169,7 +169,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 이 코드를 제공 하 여를 `DataTemplate` 재정의 하 `StyleClass` 고 대신의 기본 레이아웃을 사용 `ListItemControl` 합니다.
 
-[![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
+[![DataPages 샘플 응용 프로그램](get-started-images/custom-sml.png)](get-started-images/custom.png#lightbox "DataPages 샘플 응용 프로그램")
 
 C #에 대 한 c #을 선호 하는 개발자는 데이터 소스 바인딩만 만들 수 있습니다 (문은 포함 해야 합니다 `using Xamarin.Forms.Pages;` ).
 

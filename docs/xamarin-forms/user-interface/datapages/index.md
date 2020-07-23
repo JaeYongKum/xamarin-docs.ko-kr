@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5e1ea94e42e98609b3f77f0198e125b94e2b437d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134318"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928837"
 ---
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsDataPages
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages Xamarin.Forms 를 렌더링 하려면 테마 참조가 필요 합니다. 여기에는를 설치 하는 작업이 포함 됩니다 [ Xamarin.Forms . 테마. 기본](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet 패키지를 프로젝트에 삽입 하 고 다음을 수행 [ Xamarin.Forms 합니다. 테마. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) 또는 [ Xamarin.Forms . 테마. 짙은](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet 패키지.
@@ -30,7 +30,7 @@ DataPages는 미리 작성 된 뷰에 데이터 원본을 빠르고 쉽게 바�
 
 진화 키 노트 데모의 작동 방식을 확인 하려면 [시작 가이드](get-started.md)를 확인 하세요.
 
-[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages 샘플 응용 프로그램](images/demo-sml.png)](images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 
 ## <a name="introduction"></a>소개
 
@@ -38,7 +38,7 @@ DataPages는 미리 작성 된 뷰에 데이터 원본을 빠르고 쉽게 바�
 
 DataPages는 Xamarin.Forms 를 포함 하 여 응용 프로그램에 추가 됩니다 ** Xamarin.Forms . 페이지** NuGet 패키지.
 
-### <a name="data-sources"></a>Data Sources
+### <a name="data-sources"></a>솔루션 탐색기
 
 미리 보기에는 몇 가지 미리 작성 된 데이터 원본을 사용할 수 있습니다.
 
