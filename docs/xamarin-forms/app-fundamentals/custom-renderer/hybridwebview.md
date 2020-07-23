@@ -1,6 +1,6 @@
 ---
-title: 'title: “WebView 사용자 지정” description: “Xamarin.Forms WebView는 앱에서 웹 및 HTML 콘텐츠를 표시하는 뷰입니다.'
-description: '이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 WebView를 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/31/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: WebView 사용자 지정
+description: Xamarin.Forms WebView는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 WebView를 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: e0653e46d2c349e05df8716e5114de8f631cab1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138972"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939544"
 ---
 # <a name="customizing-a-webview"></a>WebView 사용자 지정
 
@@ -27,7 +27,7 @@ Xamarin.Forms`WebView`는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보�
 
 다음 다이어그램은 [`View`](xref:Xamarin.Forms.View) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](hybridwebview-images/webview-classes.png "Relationship Between the WebView Class and its Implementing Native Classes")
+![WebView 클래스와 네이티브 클래스 구현 간의 관계](hybridwebview-images/webview-classes.png)
 
 렌더링 프로세스는 각 플랫폼에서 [`WebView`](xref:Xamarin.Forms.WebView)의 사용자 지정 렌더러를 만들어 플랫폼 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -155,13 +155,13 @@ public partial class HybridWebViewPage : ContentPage
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](hybridwebview-images/solution-structure.png "HybridWebView Custom Renderer Project Responsibilities")
+![HybridWebView 사용자 지정 렌더러 프로젝트 책임](hybridwebview-images/solution-structure.png)
 
 `HybridWebView` 사용자 지정 컨트롤은 iOS의 `WkWebViewRenderer` 클래스와 Android 및 UWP의 `WebViewRenderer` 클래스에서 파생되는 플랫폼 렌더러 클래스에서 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `HybridWebView` 사용자 지정 컨트롤이 네이티브 웹 컨트롤로 렌더링됩니다.
 
-![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
+![각 플랫폼의 HybridWebView](hybridwebview-images/screenshots.png)
 
-`WkWebViewRenderer` 및 `WebViewRenderer` 클래스는 해당 네이티브 웹 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `VisualElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다.  샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `HybridWebView` 인스턴스에 대한 참조를 포함합니다.
+`WkWebViewRenderer` 및 `WebViewRenderer` 클래스는 해당 네이티브 웹 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `VisualElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `HybridWebView` 인스턴스에 대한 참조를 포함합니다.
 
 각 플랫폼 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 

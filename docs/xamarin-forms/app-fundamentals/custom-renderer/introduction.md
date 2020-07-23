@@ -10,12 +10,12 @@ ms.date: 01/19/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0eb768f5d6cabbb41b07a5aad33269fc0f493237
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135323"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939531"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -59,7 +59,7 @@ public class MyEntry : Entry
 
 다음 스크린샷에 표시된 것처럼 `MyEntry` 사용자 지정 컨트롤은 회색 배경의 각 플랫폼에서 렌더링됩니다.
 
-![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
+![각 플랫폼의 MyEntry 사용자 지정 컨트롤](introduction-images/screenshots.png)
 
 각 플랫폼에서 컨트롤의 배경 색상은 컨트롤 서브클래싱을 통해서만 변경할 수 있습니다. 그러나 플랫폼별 향상 및 사용자 지정을 활용할 수 없으므로 이 기술은 완수할 수 있는 작업에 제약이 있습니다. 필요한 경우 사용자 지정 렌더러를 구현해야 합니다.
 

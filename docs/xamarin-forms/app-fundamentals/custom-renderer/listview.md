@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dc28cdaf78c72c219706a30c30af7f90ae7c4eec
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8892a49f2d7d93f8310293bc70d5e1acdfabe3f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569623"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937087"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
 
@@ -27,7 +27,7 @@ _Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시�
 
 다음 다이어그램은 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](listview-images/listview-classes.png "Relationship Between the ListView Control and the Implementing Native Controls")
+![ListView 컨트롤과 네이티브 컨트롤 구현 간의 관계](listview-images/listview-classes.png)
 
 렌더링 프로세스는 각 플랫폼에서 [`ListView`](xref:Xamarin.Forms.ListView)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -152,11 +152,11 @@ public class MainPageCS : ContentPage
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](listview-images/solution-structure.png "NativeListView Custom Renderer Project Responsibilities")
+![NativeListView 사용자 지정 렌더러 프로젝트 책임](listview-images/solution-structure.png)
 
 `NativeListView` 사용자 지정 컨트롤은 각 플랫폼의 `ListViewRenderer` 클래스에서 모두 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `NativeListView` 사용자 지정 컨트롤이 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃으로 렌더링됩니다.
 
-![](listview-images/screenshots.png "NativeListView on each Platform")
+![각 플랫폼의 NativeListView](listview-images/screenshots.png)
 
 `ListViewRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결된 Xamarin.Forms 요소와 렌더러가 연결되는 Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `NativeListView` 인스턴스에 대한 참조를 포함합니다.
 

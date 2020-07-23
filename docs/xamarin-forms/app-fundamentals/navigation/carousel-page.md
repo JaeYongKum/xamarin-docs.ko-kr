@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 회전식 페이지” description: “Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다.'
-description: '이 문서에서는 페이지의 컬렉션을 탐색하기 위해 CarouselPage를 사용하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 회전식 페이지
+description: Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 896f652d69bca0f186e53185926ee5c46d87fa7c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c234af1a5d47446149c92a71e9ce592dc0366b8f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570676"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937464"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
@@ -28,15 +28,15 @@ Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리�
 
 다음 스크린샷은 각 플랫폼에서 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)를 보여줍니다.
 
-![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
+![CarouselPage 세 번째 항목](carousel-page-images/thirdpage.png)
 
 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)의 레이아웃은 각 플랫폼에서 동일합니다. 컬렉션을 통해 앞으로 이동하려면 오른쪽에서 왼쪽으로 살짝 밀고 컬렉션을 통해 뒤로 이동하려면 왼쪽에서 오른쪽을 살짝 밀어 페이지를 탐색할 수 있습니다. 다음 스크린샷에서는 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) 인스턴스의 첫 번째 페이지를 보여줍니다.
 
-![](carousel-page-images/firstpage.png "CarouselPage First Item")
+![CarouselPage 첫 번째 항목](carousel-page-images/firstpage.png)
 
 다음 스크린샷에 표시된 것처럼 오른쪽에서 왼쪽으로 살짝 밀어 두 번째 페이지로 이동합니다.
 
-![](carousel-page-images/secondpage.png "CarouselPage Second Item")
+![CarouselPage 두 번째 항목](carousel-page-images/secondpage.png)
 
 다시 오른쪽에서 왼쪽으로 살짝 밀면 세 번째 페이지로 이동하는 반면 왼쪽에서 오른쪽으로 살짝 밀면 이전 페이지로 되돌아갑니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 'title: “항목 사용자 지정” description: “Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다.'
-description: '이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.” ms.prod: xamarin ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/26/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 항목 사용자 지정
+description: Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d28a9079d27310dde0e5ea5bf80c83895bbcf1d4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d5a5dc7de2835038079a1bdf8af5be44a173f86e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571573"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939830"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
@@ -27,7 +27,7 @@ Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 �
 
 다음 다이어그램은 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
+![항목 컨트롤과 네이티브 컨트롤 구현 간의 관계](entry-images/entry-classes.png)
 
 렌더링 프로세스는 각 플랫폼에서 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -66,7 +66,7 @@ public class MyEntry : Entry
 </ContentPage>
 ```
 
-`local` 네임스페이스 접두사는 원하는 것으로 이름을 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 사용됩니다.
+`local` 네임스페이스 접두사는 원하는 이름으로 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 사용됩니다.
 
 다음 코드 예제에서는 C# 페이지에서 `MyEntry` 컨트롤을 사용하는 방법을 보여줍니다.
 
@@ -108,13 +108,13 @@ public class MainPage : ContentPage
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
+![MyEntry 사용자 지정 렌더러 프로젝트 책임](entry-images/solution-structure.png)
 
 `MyEntry` 컨트롤은 각 플랫폼의 `EntryRenderer` 클래스에서 모두 파생되는 플랫폼별 `MyEntryRenderer` 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `MyEntry` 컨트롤이 플랫폼별 배경색으로 렌더링됩니다.
 
-![](entry-images/screenshots.png "MyEntry Control on each Platform")
+![각 플랫폼의 MyEntry 컨트롤](entry-images/screenshots.png)
 
-`EntryRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다.  샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `MyEntry` 컨트롤에 대한 참조를 포함합니다.
+`EntryRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `MyEntry` 컨트롤에 대한 참조를 포함합니다.
 
 `MyEntryRenderer` 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 샘플 애플리케이션에서는 사용되지 않지만 `Element` 속성을 통해 얻을 수 있습니다.
 

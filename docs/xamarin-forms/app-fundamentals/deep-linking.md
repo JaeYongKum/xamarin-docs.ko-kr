@@ -11,12 +11,12 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570637"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936502"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -32,7 +32,7 @@ Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 설정은 사용자가
 
 이 샘플 애플리케이션은 다음 스크린샷과 같이 데이터가 로컬 SQLite 데이터베이스에 저장되는 Todo 목록 애플리케이션을 보여줍니다.
 
-![](deep-linking-images/screenshots.png "TodoList Application")
+![TodoList 애플리케이션](deep-linking-images/screenshots.png)
 
 사용자가 만든 각 `TodoItem` 인스턴스는 인덱싱됩니다. 그런 다음, 플랫폼별 검색을 사용하여 애플리케이션에서 인덱싱된 데이터를 찾을 수 있습니다. 사용자 애플리케이션에 대한 검색 결과 항목을 누르면 애플리케이션이 시작되고 `TodoItemPage`가 탐색되고, 딥 링크에서 참조되는 `TodoItem`이 표시됩니다.
 
@@ -141,7 +141,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 
 [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) 인스턴스가 인덱싱을 위해 등록되면 검색 결과에 나타날 수 있습니다. 다음 스크린샷은 iOS 플랫폼의 검색 결과에 나타나는 인덱싱된 콘텐츠를 보여줍니다.
 
-![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
+![iOS의 검색 결과에서 인덱싱된 콘텐츠](deep-linking-images/ios-search.png)
 
 ## <a name="de-registering-indexed-content"></a>인덱싱된 콘텐츠 등록 취소
 

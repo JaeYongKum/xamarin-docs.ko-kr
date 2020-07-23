@@ -1,6 +1,6 @@
 ---
-title: 'title: “계층적 탐색” description: “이 문서에서는 NavigationPage 클래스를 사용하여 후입선출(LIFO) 페이지 스택 탐색을 수행하는 방법을 보여 줍니다.”'
-description: 'ms.prod: xamarin ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/10/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 계층적 탐색
+description: 이 문서에서는 NavigationPage 클래스를 사용하여 후입선출(LIFO) 페이지 스택 탐색을 수행하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0d6a18ec55b49da2b668ccc183646d5e4dde5849
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571495"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937230"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -25,11 +25,11 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 한 페이지에서 다른 페이지로 이동하려면 다음 다이어그램에 표시된 것처럼 애플리케이션은 새 페이지를 탐색 스택으로 푸시하여 활성 페이지가 되게 합니다.
 
-![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
+![탐색 스택으로 페이지 푸시](hierarchical-images/pushing.png)
 
 이전 페이지로 돌아가기 위해 애플리케이션은 다음 다이어그램에 표시된 것처럼 탐색 스택에서 현재 페이지를 꺼내고 맨 위에 있는 새 페이지가 활성 페이지가 됩니다.
 
-![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
+![탐색 스택에서 페이지 꺼내기](hierarchical-images/popping.png)
 
 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
 
@@ -37,7 +37,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 계층적 탐색에서는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
+![NavigationPage 구성 요소](hierarchical-images/navigationpage-components.png)
 
 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 레이아웃은 플랫폼에 따라 달라집니다.
 
@@ -63,7 +63,7 @@ public App ()
 
 `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스가 탐색 스택으로 푸시되어 애플리케이션의 활성 및 루트 페이지가 됩니다. 이 과정은 다음 스크린샷에 나와 있습니다.
 
-![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
+![탐색 스택의 루트 페이지](hierarchical-images/mainpage.png)
 
 > [!NOTE]
 > [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스의 [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) 속성은 탐색 스택의 첫 번째 페이지에 대한 액세스를 제공합니다.
@@ -81,7 +81,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 `Page2Xaml` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다. 이 과정은 다음 스크린샷에 나와 있습니다.
 
-![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
+![탐색 스택에 푸시된 페이지](hierarchical-images/secondpage.png)
 
 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드가 호출되는 경우 다음 이벤트가 발생합니다.
 
@@ -181,7 +181,7 @@ public MainPage (string date)
 
 그런 다음, 다음 스크린샷에 표시된 것처럼 [`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성을 설정하여 데이터를 페이지에 표시합니다.
 
-![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
+![페이지 생성자를 통해 전달된 데이터](hierarchical-images/passing-data-constructor.png)
 
 ### <a name="passing-data-through-a-bindingcontext"></a>BindingContext를 통해 데이터 전달
 
@@ -267,7 +267,7 @@ public class SecondPageCS : ContentPage
 
 그런 다음, 다음 스크린샷에 표시된 것처럼 일련의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤로 데이터를 페이지에 표시합니다.
 
-![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
+![BindingContext를 통해 전달된 데이터](hierarchical-images/passing-data-bindingcontext.png)
 
 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
@@ -277,11 +277,11 @@ public class SecondPageCS : ContentPage
 
 [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) 메서드는 다음 다이어그램에 표시된 것처럼 탐색 스택에서 기존 지정된 페이지 앞에 지정된 페이지를 삽입합니다.
 
-![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
+![탐색 스택에 페이지 삽입](hierarchical-images/insert-page-before.png)
 
 [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) 메서드는 다음 다이어그램에 표시된 것처럼 탐색 스택에서 지정된 페이지를 제거합니다.
 
-![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
+![탐색 스택에서 페이지 제거](hierarchical-images/remove-page.png)
 
 이러한 메소드를 사용하면 로그인 성공 후 로그인 페이지를 새 페이지로 바꾸는 것과 같은 사용자 지정 탐색 환경이 가능합니다. 다음 코드 예제에서는 이 시나리오를 보여 줍니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 'title: “공용 언어 런타임 속성으로 효과 매개 변수 전달” description: “CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.'
-description: '이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/05/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 공용 언어 런타임 속성으로 효과 매개 변수 전달
+description: CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 37d870509e034f4c23afba60fa055965ed9df4de
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 24468e88d39283d2b8282fe0cb9b59f33fcef2f0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138868"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936697"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 
@@ -33,11 +33,11 @@ _CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답
 
 샘플 애플리케이션은 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에서 표시되는 텍스트에 그림자를 추가하는 `ShadowEffect`를 설명합니다. 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](clr-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
+![그림자 효과 프로젝트 책임](clr-properties-images/shadow-effect.png)
 
 `HomePage`의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤은 각 플랫폼별 프로젝트에서 `LabelShadowEffect`로 사용자 지정됩니다. 매개 변수는 `ShadowEffect` 클래스의 속성을 통해 각 `LabelShadowEffect`에 전달됩니다. 각 `LabelShadowEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷과 같이 `Label` 컨트롤에 표시되는 텍스트에 그림자가 추가됩니다.
 
-![](clr-properties-images/screenshots.png "Shadow Effect on each Platform")
+![각 플랫폼의 그림자 효과](clr-properties-images/screenshots.png)
 
 ## <a name="creating-effect-parameters"></a>효과 매개 변수 만들기
 

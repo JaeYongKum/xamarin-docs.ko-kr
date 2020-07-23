@@ -1,6 +1,6 @@
 ---
-title: 'title: “맵 핀 사용자 지정” description: “이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 뷰가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 지도 핀 사용자 지정
+description: 이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 보기가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573900"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935722"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -27,7 +27,7 @@ _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 �
 
 다음 다이어그램은 [`Map`](xref:Xamarin.Forms.Maps.Map) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](map-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
+![맵 컨트롤과 네이티브 컨트롤 구현 간의 관계](map-pin-images/map-classes.png)
 
 렌더링 프로세스는 각 플랫폼에서 [`Map`](xref:Xamarin.Forms.Maps.Map)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -135,11 +135,11 @@ public MapPage()
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](map-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
+![CustomMap 사용자 지정 렌더러 프로젝트 책임](map-pin-images/solution-structure.png)
 
 `CustomMap` 컨트롤은 각 플랫폼의 `MapRenderer` 클래스에서 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CustomMap` 컨트롤이 플랫폼별 컨트롤로 렌더링됩니다.
 
-![](map-pin-images/screenshots.png "CustomMap on each Platform")
+![각 플랫폼의 CustomMap](map-pin-images/screenshots.png)
 
 `MapRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 맵이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결된 Xamarin.Forms 요소와 렌더러가 연결되는 Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CustomMap` 인스턴스에 대한 참조를 포함합니다.
 
@@ -174,7 +174,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](map-pin-images/map-layout-ios.png "Map Control Before and After Customization")
+![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-ios.png)
 
 iOS에서 핀을 *주석*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 핀일 수 있습니다. 주석은 사용자가 주석을 선택하는 것에 응답하여 표시되는 *설명선*을 선택적으로 표시할 수 있습니다. 설명선에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되며 선택적으로 왼쪽 및 오른쪽 액세서리 보기가 표시됩니다. 위의 스크린샷에서 왼쪽 액세서리 보기는 monkey의 이미지이며 오른쪽 액세서리 보기는 *정보* 단추입니다.
 
@@ -347,7 +347,7 @@ void OnDidDeselectAnnotationView(object sender, MKAnnotationViewEventArgs e)
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](map-pin-images/map-layout-android.png "Map Control Before and After Customization")
+![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-android.png)
 
 Android에서 핀을 *표식*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 표식일 수 있습니다. 표식은 사용자가 표식을 탭핑하는 것에 응답하여 나타내는 *정보 창*을 표시할 수 있습니다. 정보 창에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되고 다른 콘텐츠를 포함하도록 지정할 수 있습니다. 그러나 한 번에 하나의 정보 창만 표시할 수 있습니다.
 
@@ -510,7 +510,7 @@ void OnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](map-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
+![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-uwp.png)
 
 UWP에서 핀은 *맵 아이콘*이라고 하며, 사용자 지정 이미지 또는 시스템 정의 기본 이미지일 수 있습니다. 맵 아이콘은 사용자가 맵 아이콘을 탭핑하는 것에 응답하여 나타내는 `UserControl`을 표시할 수 있습니다. `UserControl`은 `Pin` 인스턴스의 `Label` 및 `Address` 속성을 포함한 모든 내용을 표시할 수 있습니다.
 
