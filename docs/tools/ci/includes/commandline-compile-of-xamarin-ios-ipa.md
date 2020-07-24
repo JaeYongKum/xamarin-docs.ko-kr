@@ -7,7 +7,7 @@ ms.lasthandoff: 10/21/2019
 ms.locfileid: "69529132"
 ---
 
-IPhone 용 **SOLUTION_FILE** 솔루션의 릴리스 빌드를 지정 하려면 다음 명령줄을 지정 합니다. 명령줄에서 `IpaPackageDir` 속성을 지정 하 여 IPA의 위치를 설정할 수 있습니다.
+IPhone의 릴리스 빌드를 지정 하는 다음 명령줄은 iPhone의 **SOLUTION_FILE .sln** 입니다. 명령줄에서 속성을 지정 하 여 IPA의 위치를 설정할 수 있습니다 `IpaPackageDir` .
 
 - Mac에서 **xbuild**를 사용 합니다.
 
@@ -30,6 +30,6 @@ IPhone 용 **SOLUTION_FILE** 솔루션의 릴리스 빌드를 지정 하려면 �
           /t:Build MyProject.sln
   ```
 
-**msbuild** 는 명령줄에서 전달 된 `$( )` 식을 자동으로 확장 하지 않습니다. 따라서 명령줄에서 `IpaPackageDir`을 설정할 때 전체 경로를 사용 하는 것이 좋습니다.
+**msbuild** 는 `$( )` 명령줄에서 전달 된 식을 자동으로 확장 하지 않습니다. 따라서 명령줄에서을 설정할 때 전체 경로를 사용 하는 것이 좋습니다 `IpaPackageDir` .
 
-@No__t_1 속성에 대 한 자세한 내용은 [iOS 9.8에 대 한 릴리스 정보](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) 를 참조 하세요.
+속성에 대 한 자세한 내용은 [iOS 9.8에 대 한 릴리스 정보](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) 를 참조 하세요 `IpaPackageDir` .
