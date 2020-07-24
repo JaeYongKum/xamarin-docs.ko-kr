@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50f605f4ad9839521fd4169531ad46d197f20dbf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5e3153e796f26ef150dccc79d8ea6f90127c6a26
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139666"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938686"
 ---
 # <a name="xamarinforms-picker"></a>Xamarin.Forms선택
 
@@ -38,15 +38,15 @@ _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트�
 
 는 [`Picker`](xref:Xamarin.Forms.Picker) 처음 표시 될 때 데이터를 표시 하지 않습니다. 대신, 해당 속성의 값은 [`Title`](xref:Xamarin.Forms.Picker.Title) iOS 및 Android 플랫폼에서 자리 표시자로 표시 됩니다.
 
-[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
+[![초기 선택 표시](images/picker-initial.png)](images/picker-initial-large.png#lightbox "초기 선택 표시")
 
 에서 [`Picker`](xref:Xamarin.Forms.Picker) 포커스를 얻는 경우 해당 데이터가 표시 되 고 사용자가 항목을 선택할 수 있습니다.
 
-[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
+[![선택 항목 선택](images/picker-selection.png)](images/picker-selection-large.png#lightbox "선택 항목 선택")
 
 는 [`Picker`](xref:Xamarin.Forms.Picker) [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 사용자가 항목을 선택할 때 이벤트를 발생 시킵니다. 선택 후 선택한 항목은에 표시 됩니다 `Picker` .
 
-![](images/picker-after-selection.png "Picker after Selection")
+![선택 후 선택기](images/picker-after-selection.png)
 
 에 데이터를 채우는 방법에는 두 가지가 있습니다 [`Picker`](xref:Xamarin.Forms.Picker) .
 

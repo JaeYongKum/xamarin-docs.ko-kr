@@ -10,12 +10,12 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a222c3ee2234904cce94b52a14654728a1aa6d1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ae3759c1e111906b82596af80d4bdcffd5d23305
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140129"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938530"
 ---
 # <a name="global-styles-in-xamarinforms"></a>전역 스타일Xamarin.Forms
 
@@ -65,7 +65,7 @@ _스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역�
 
 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[![](application-images/application-styles-1.png "Global Styles Example")](application-images/application-styles-1-large.png#lightbox "Global Styles Example")
+[![전역 스타일 예제](application-images/application-styles-1.png)](application-images/application-styles-1-large.png#lightbox "전역 스타일 예제")
 
 페이지의 스타일을 만드는 방법에 대 한 자세한 내용은 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md) 및 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)을 참조 하세요.
 
@@ -103,7 +103,7 @@ _스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역�
 
 `buttonStyle`응용 프로그램 수준에서 정의 된 원래는 `buttonStyle` 페이지 수준에서 정의 된 인스턴스에 의해 재정의 됩니다. 또한 페이지 수준 스타일이 컨트롤 수준에 의해 재정의 됩니다 `buttonStyle` . 따라서 [`Button`](xref:Xamarin.Forms.Button) 다음 스크린샷에 표시 된 것 처럼 인스턴스는 파란색 텍스트로 표시 됩니다.
 
-[![](application-images/application-styles-2.png "Overriding Styles Example")](application-images/application-styles-2-large.png#lightbox "Overriding Styles Example")
+[![스타일 재정의 예제](application-images/application-styles-2.png)](application-images/application-styles-2-large.png#lightbox "스타일 재정의 예제")
 
 ## <a name="create-a-global-style-in-c35"></a>C&#35;에서 전역 스타일 만들기
 

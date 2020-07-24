@@ -24,7 +24,7 @@ TextKit의 기능을 표준 컨트롤에서 사용할 수 있도록 하기 위�
 - UITextField
 - UILabel
 
-## <a name="architecture"></a>아키텍처
+## <a name="architecture"></a>Architecture
 
 TextKit는 다음 클래스를 비롯 하 여 레이아웃과 표시에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
 

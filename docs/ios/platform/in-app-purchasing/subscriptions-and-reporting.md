@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 534ecb6a2f779875a6934306c7f9956450d880ed
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725370"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938504"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Xamarin.ios의 구독 및 보고
 
@@ -44,23 +44,23 @@ ms.locfileid: "76725370"
 
 자동 갱신 가능한 구독은 서버에서 제공 하는 제품 워크플로를 사용 하 여 구현 해야 합니다 ( *수신 확인 및 서버에서 제공* 하는 제품 섹션 참조).
 
-#### <a name="shared-secret"></a>공유 암호
+#### <a name="shared-secret"></a>공유 비밀
 
 서버에서 자동 갱신 가능한 구독을 확인할 때 JSON 요청에서 앱 내 구매 공유 암호를 사용 해야 합니다. ITunes Connect를 통해 공유 암호가 생성/액세스 됩니다.
 
 ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.   
 
- [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![내 앱 선택](subscriptions-and-reporting-images/image2.png)](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 응용 프로그램을 선택 하 고 **앱에서 바로 구매** 탭을 클릭 합니다.
 
-[![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![앱에서 바로 구매 탭을 클릭 합니다.](subscriptions-and-reporting-images/image6.png)](subscriptions-and-reporting-images/image6.png#lightbox)
 
 페이지 맨 아래에서 **공유 암호 보기 또는 생성**을 선택 합니다.
 
- [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![공유 암호 보기 또는 생성을 선택 합니다.](subscriptions-and-reporting-images/image40.png)](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![공유 암호 생성](subscriptions-and-reporting-images/image41.png)](subscriptions-and-reporting-images/image41.png#lightbox)   
 
 공유 암호를 사용 하려면 다음과 같이 자동 갱신 가능한 구독에 대 한 앱 내 구매 수령의 유효성을 검사할 때 Apple 서버에 전송 되는 JSON 페이로드에 해당 암호를 포함 합니다.
 
@@ -108,8 +108,8 @@ iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com))는 
 
 판매 및 추세 보고서의 예는 다음과 같습니다.   
 
- [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![예: 판매 및 추세 보고서](subscriptions-and-reporting-images/image42.png)](subscriptions-and-reporting-images/image42.png#lightbox)   
 
  또한 **ITC Connect Mobile** iOS 앱이 있습니다. 사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷는 다음과 같습니다.   
 
- [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷](subscriptions-and-reporting-images/image43.png)](subscriptions-and-reporting-images/image43.png#lightbox)

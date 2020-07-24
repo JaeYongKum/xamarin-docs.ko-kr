@@ -10,12 +10,12 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ae6e5e764dc066940971dd9b5a8fdc36c7a1970
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: 3ad0981c0249bc81a97d5c48489167d81a1523de
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225496"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938471"
 ---
 # <a name="images-in-xamarinforms"></a>이미지Xamarin.Forms
 
@@ -136,7 +136,7 @@ IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **�
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
+![빌드 작업 설정: EmbeddedResource](images-images/xs-buildaction.png)
 
 파일에 대 한 **속성** 패드에서 **빌드 작업** 을 보고 변경할 수도 있습니다.
 이 패드는 코드에서 리소스를 참조 하는 데 사용 되는 **리소스 ID** 를 표시 합니다. 아래 스크린샷에서 **리소스 ID** 가 **WorkingWithImages.beach.jpg**됩니다.

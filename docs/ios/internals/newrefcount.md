@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9d8b8fa1826c1a7dafb3d6c3e3ab45d05c1aaa8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022296"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938712"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Xamarin.ios의 새 참조 계산 시스템
 
@@ -22,13 +22,13 @@ Xamarin.ios 9.2.1는 기본적으로 모든 응용 프로그램에 향상 된 �
 
 Xamarin 9.2.1을 기준으로 새 ref 가산 시스템은 기본적으로 **모든** 응용 프로그램에 대해 사용 하도록 설정 됩니다.
 
-기존 응용 프로그램을 개발 하는 경우 .csproj 파일을 확인 하 여 다음과 같이 모든 `MtouchUseRefCounting`이 `true`로 설정 되었는지 확인할 수 있습니다.
+기존 응용 프로그램을 개발 하는 경우 .csproj 파일을 확인 하 여 `MtouchUseRefCounting` 다음과 같이 모든 항목이로 설정 되었는지 확인할 수 있습니다 `true` .
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-`false`로 설정 된 경우 응용 프로그램은 새 도구를 사용 하지 않습니다.
+로 설정 된 경우 `false` 응용 프로그램은 새 도구를 사용 하지 않습니다.
 
 ### <a name="using-older-versions-of-xamarin"></a>이전 버전의 Xamarin 사용
 
@@ -38,7 +38,7 @@ Xamarin.ios 7.2.1 이상에서는 새 참조 횟수 시스템의 향상 된 미�
 
 이 새 참조 계산 시스템을 사용 하도록 설정 하려면 아래와 같이 프로젝트의 **IOS 빌드 옵션**의 **고급** 탭에 있는 **참조 계산 확장 사용** 확인란을 선택 합니다. 
 
-[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
+[![새 참조 계산 시스템 사용](newrefcount-images/image1.png)](newrefcount-images/image1.png#lightbox)
 
 이러한 옵션은 최신 버전의 Mac용 Visual Studio에서 제거 되었습니다.
 
@@ -49,7 +49,7 @@ Xamarin.ios 7.2.1 이상에서는 새 참조 횟수 시스템의 향상 된 미�
 > [!IMPORTANT]
 > 이 기능의 이전 버전은 Monotouch.dialog 5.2부터 발생 했지만 **sgen** 에는 실험적 미리 보기로만 제공 되었습니다. 이제이 새로운 향상 된 버전을 **Boehm** 가비지 수집기 에서도 사용할 수 있습니다.
 
-지금까지 Xamarin.ios에서 관리 하는 두 가지 종류의 개체가 있습니다. 즉, 네이티브 개체 (피어 개체)에 대 한 래퍼입니다 .이는 단순히 추가 메모리 내 상태를 유지 하 여 새 기능 (파생 개체)을 확장 하거나 통합 하는 개체입니다. 이전에는 C# 이벤트 처리기를 추가 하는 등의 상태를 사용 하 여 피어 개체를 확대할 수도 있지만 개체를 참조 하지 않고 수집 하는 것을 허용 했습니다. 이렇게 하면 나중에 충돌이 발생할 수 있습니다 (예: 목표-C 런타임이 관리 되는 개체로 다시 호출 된 경우).
+지금까지 Xamarin.ios에서 관리 하는 두 가지 종류의 개체가 있습니다. 즉, 네이티브 개체 (피어 개체)에 대 한 래퍼입니다 .이는 단순히 추가 메모리 내 상태를 유지 하 여 새 기능 (파생 개체)을 확장 하거나 통합 하는 개체입니다. 이전에는 c # 이벤트 처리기를 추가 하는 등의 방법으로 피어 개체를 상태 (예: c # 이벤트 처리기 추가)로 확대할 수 있었지만 개체를 참조 하지 않고 수집할 수 있습니다. 이렇게 하면 나중에 충돌이 발생할 수 있습니다 (예: 목표-C 런타임이 관리 되는 개체로 다시 호출 된 경우).
 
 새 시스템은 피어 개체를 추가 정보를 저장할 때 런타임에 의해 관리 되는 개체로 자동으로 업그레이드 합니다.
 
@@ -71,7 +71,7 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-참조 횟수 확장을 사용 하지 않으면 `cell` 수집 가능한 상태가 되므로이 코드는 중단 되 고, 해당 `TouchDown` 대리자가 현 수 포인터로 변환 됩니다.
+참조 횟수 확장을 사용 하지 않으면이 코드는 수집 될 수 있으므로이 코드는 중단 될 수 `cell` 있으므로 `TouchDown` 현 수 포인터로 변환 됩니다.
 
 참조 횟수 확장은 네이티브 개체가 네이티브 코드에 의해 유지 되는 경우 관리 되는 개체가 활성 상태로 유지 되 고 해당 컬렉션을 방지 합니다.
 

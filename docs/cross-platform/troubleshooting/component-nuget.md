@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: f81df8ac253e53b16c3ab09bf80d66a7b6324854
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b9b771efe338fbcc250aa6e7a83b73f35269d3bf
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571521"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996814"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -27,7 +27,7 @@ NuGet 패키지로 사용할 수 없는 구성 요소에 대 한 대안을 찾�
 
 ## <a name="manually-removing-component-references"></a>수동으로 구성 요소 참조 제거
 
-Mac용 Visual Studio의 Visual Studio 및 7.4 릴리스 15.6 릴리스는 더 이상 프로젝트의 구성 요소를 지원 하지 않습니다. 
+Mac용 Visual Studio의 Visual Studio 및 7.4 릴리스 15.6 릴리스는 더 이상 프로젝트의 구성 요소를 지원 하지 않습니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -37,7 +37,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 프로젝트에서 구성 요소를 제거 하려면 다음을 수행 합니다.
 
-1. **.csproj** 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 
+1. **.csproj** 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다.
 
 2. 언로드된 프로젝트를 마우스 오른쪽 단추로 다시 클릭 하 고 **{프로젝트 이름} .Csproj 편집**을 선택 합니다.
 
@@ -151,7 +151,7 @@ NuGet 패키지는 **패키지** 노드에 나열 된 상태를 유지 하 고 �
 
 **패키지** 탭은 비어 있을 수 있습니다.
 
-![](component-nuget-images/packages-tab-empty-sml.png)
+![패키지 탭](component-nuget-images/packages-tab-empty-sml.png)
 
 _NuGet 종속성을 포함할 수 있지만 무시할 수 있습니다._
 
@@ -174,12 +174,12 @@ NuGet에서 구성 요소를 사용할 수 있는지 확인 한 후에는 다음
 
 그러면 구성 요소와 참조가 삭제 됩니다. 이렇게 하면 해당 하는 NuGet 패키지를 추가 하 여 대체할 때까지 빌드가 중단 됩니다.
 
-#### <a name="add-the-nuget-package"></a>Nuget 패키지 추가
+#### <a name="add-the-nuget-package"></a>NuGet 패키지 추가
 
 1. **패키지** 노드를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다.
 2. 이름 또는 작성자에 의해 NuGet 대체를 검색 합니다.
 
-    ![](component-nuget-images/nuget-search-sml.png)
+    ![NuGet 검색](component-nuget-images/nuget-search-sml.png)
 
 3. **패키지 추가**를 누릅니다.
 

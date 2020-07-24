@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c3e486d3202a71cc82dfef8910908e5cb472cd2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d768be516b67ed23bdb851d87286a856a7269de4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574199"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935553"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.ios의 테이블 뷰
 
@@ -22,7 +22,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 테이블 뷰는 여러 행의 정보 열을 하나 이상 포함 하는 테이블 형식으로 데이터를 표시 합니다. 생성 되는 테이블 뷰의 유형에 따라 사용자는 열 기준으로 정렬, 열 다시 구성, 열 추가, 열 제거 또는 테이블 내에 포함 된 데이터 편집을 수행할 수 있습니다.
 
-[![](table-view-images/intro01.png "An example table")](table-view-images/intro01.png#lightbox)
+[![예제 테이블](table-view-images/intro01.png)](table-view-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램의 테이블 뷰 작업에 대 한 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
@@ -51,23 +51,23 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 `.storyboard` 프로젝트에 자동으로 포함 되는 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 파일을 두 번 클릭 합니다 `Main.storyboard` .
 
-[![](table-view-images/edit01.png "Selecting the main storyboard")](table-view-images/edit01.png#lightbox)
+[![주 스토리 보드 선택](table-view-images/edit01.png)](table-view-images/edit01.png#lightbox)
 
 이렇게 하면 Xcode의 Interface Builder에서 창 디자인이 열립니다.
 
-[![](table-view-images/edit02.png "Editing the UI in Xcode")](table-view-images/edit02.png#lightbox)
+[![Xcode에서 UI 편집](table-view-images/edit02.png)](table-view-images/edit02.png#lightbox)
 
 `table` **라이브러리 검사기의** 검색 상자에를 입력 하 여 테이블 뷰 컨트롤을 보다 쉽게 찾을 수 있습니다.
 
-[![](table-view-images/edit03.png "Selecting a Table View from the Library")](table-view-images/edit03.png#lightbox)
+[![라이브러리에서 테이블 뷰 선택](table-view-images/edit03.png)](table-view-images/edit03.png#lightbox)
 
 **인터페이스 편집기**에서 뷰 컨트롤러로 테이블 뷰를 끌고, 뷰 컨트롤러의 콘텐츠 영역에 맞게 설정 하 고, **제약 조건 편집기**에서 창으로 축소 하 고 증가 하는 위치로 설정 합니다.
 
-[![](table-view-images/edit04.png "Editing constraints")](table-view-images/edit04.png#lightbox)
+[![제약 조건 편집](table-view-images/edit04.png)](table-view-images/edit04.png#lightbox)
 
 **인터페이스 계층 구조** 에서 테이블 뷰를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
-[![](table-view-images/edit05.png "The Attribute Inspector")](table-view-images/edit05.png#lightbox)
+[![특성 검사자](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
 
 - **내용 모드** -뷰 ( `NSView` ) 또는 셀 () 중 하나를 사용 하 여 `NSCell` 행과 열에 데이터를 표시할 수 있습니다. MacOS 10.7부터 보기를 사용 해야 합니다.
 - **Float 그룹 행** -인 경우 `true` 테이블 뷰에서 그룹화 된 셀이 부동 된 것 처럼 그려집니다.
@@ -97,7 +97,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 **인터페이스 계층 구조** 에서 테이블 열을 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
-[![](table-view-images/edit06.png "The Attribute Inspector")](table-view-images/edit06.png#lightbox)
+[![특성 검사자](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
 
 - **제목** -열의 제목을 설정 합니다.
 - **맞춤** -셀 내의 텍스트 맞춤을 설정 합니다.
@@ -115,19 +115,19 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 `NSTableViewCell` **인터페이스 계층 구조** 에서 테이블 셀 뷰 ()를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
-[![](table-view-images/edit07.png "The Attribute Inspector")](table-view-images/edit07.png#lightbox)
+[![특성 검사자](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
 
 이러한 속성은 모두 표준 보기의 속성입니다. 이 열에 대 한 행의 크기를 조정 하는 옵션도 있습니다.
 
 인터페이스 계층 구조에서 테이블 뷰 셀 (기본적으로는)을 선택 하면 `NSTextField` **특성 검사자**에서 다음 속성을 사용할 수 있습니다. **Interface Hierarchy**
 
-[![](table-view-images/edit08.png "The Attribute Inspector")](table-view-images/edit08.png#lightbox)
+[![특성 검사자](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
 
 여기에서 설정할 표준 텍스트 필드의 모든 속성을 갖게 됩니다. 기본적으로 표준 텍스트 필드는 열에 있는 셀에 대 한 데이터를 표시 하는 데 사용 됩니다.
 
 `NSTableFieldCell` **인터페이스 계층 구조** 에서 테이블 셀 뷰 ()를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
-[![](table-view-images/edit09.png "The Attribute Inspector")](table-view-images/edit09.png#lightbox)
+[![특성 검사자](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
 
 가장 중요 한 설정은 다음과 같습니다.
 
@@ -141,7 +141,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 `NSTableFieldCell` **인터페이스 계층 구조**에서 테이블 열의 맨 아래에 있는 테이블 셀 뷰 ()를 선택 합니다.
 
-[![](table-view-images/edit10.png "Selecting the Table Cell View")](table-view-images/edit10.png#lightbox)
+[![테이블 셀 보기 선택](table-view-images/edit10.png)](table-view-images/edit10.png#lightbox)
 
 이렇게 하면 지정 된 열에 대해 생성 된 모든 셀의 기본 _패턴_ 으로 사용 되는 테이블 셀 뷰를 편집할 수 있습니다.
 
@@ -155,14 +155,14 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 
 1. **길잡이 편집기** 로 전환 하 여 파일이 선택 되었는지 확인 합니다 `ViewController.h` . 
 
-    [![](table-view-images/edit11.png "The Assistant Editor")](table-view-images/edit11.png#lightbox)
+    [![길잡이 편집기](table-view-images/edit11.png)](table-view-images/edit11.png#lightbox)
 2. **인터페이스 계층 구조**에서 테이블 뷰를 선택 하 고 컨트롤을 클릭 한 다음 파일을 끕니다 `ViewController.h` .
 3. 이라는 테이블 뷰에 대 한 **콘센트** 를 만듭니다 `ProductTable` . 
 
-    [![](table-view-images/edit13.png "Configuring an Outlet")](table-view-images/edit13.png#lightbox)
+    [![콘센트 구성](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
 4. 및 라는 테이블 열에 대 한 **콘센트** 를 `ProductColumn` 만듭니다 `DetailsColumn` . 
 
-    [![](table-view-images/edit14.png "Configuring an Outlet")](table-view-images/edit14.png#lightbox)
+    [![콘센트 구성](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
 5. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
 다음으로, 응용 프로그램을 실행할 때 테이블에 대 한 일부 데이터를 표시 하는 코드를 작성 합니다.
@@ -175,7 +175,7 @@ Interface Builder에서 디자인 되었으며 **콘센트**를 통해 노출 �
 
 먼저 `Product` 개별 행에 대 한 정보를 보유할 새 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 다음 `Product` **새로 만들기** 단추를 클릭 합니다. **Name**
 
-[![](table-view-images/populate01.png "Creating an empty class")](table-view-images/populate01.png#lightbox)
+[![빈 클래스 만들기](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
 
 `Product.cs`파일이 다음과 같이 표시 되도록 합니다.
 
@@ -333,7 +333,7 @@ public override void AwakeFromNib ()
 
 응용 프로그램을 실행 하는 경우 다음이 표시 됩니다.
 
-[![](table-view-images/populate02.png "A sample app run")](table-view-images/populate02.png#lightbox)
+[![샘플 앱 실행](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column"></a>
 
@@ -341,11 +341,11 @@ public override void AwakeFromNib ()
 
 사용자가 열 머리글을 클릭 하 여 테이블의 데이터를 정렬할 수 있습니다. 먼저 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 열을 선택 하 `Product` `Title` 고, **정렬 키**로를 입력 하 고, 선택기에 대해를 입력 `compare:` 하 고, 순서를 선택 합니다 **Selector** `Ascending` . **Order**
 
-[![](table-view-images/sort01.png "Setting the sort key")](table-view-images/sort01.png#lightbox)
+[![정렬 키 설정](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
 
 열을 선택 하 `Details` `Description` 고, **정렬 키**로를 입력 하 고, 선택기에 대해를 입력 `compare:` 하 고, 순서를 선택 합니다 **Selector** `Ascending` . **Order**
 
-[![](table-view-images/sort02.png "Setting the sort key")](table-view-images/sort02.png#lightbox)
+[![정렬 키 설정](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -395,7 +395,7 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 응용 프로그램을 실행 하 고 열 머리글을 클릭 하면 해당 열을 기준으로 행이 정렬 됩니다.
 
-[![](table-view-images/sort03.png "An example app run")](table-view-images/sort03.png#lightbox)
+[![예제 앱 실행](table-view-images/sort03.png)](table-view-images/sort03.png#lightbox)
 
 <a name="Row_Selection"></a>
 
@@ -403,7 +403,7 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 사용자가 단일 행을 선택할 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 테이블 뷰를 선택 하 고 **특성 검사자**에서 **여러** 확인란의 선택을 취소 합니다.
 
-[![](table-view-images/select01.png "The Attribute Inspector")](table-view-images/select01.png#lightbox)
+[![특성 검사자](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -431,7 +431,7 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 사용자가 여러 행을 선택할 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 테이블 뷰를 선택 하 고 **특성 검사자**에서 **여러** 확인란을 선택 합니다.
 
-[![](table-view-images/select02.png "The Attribute Inspector")](table-view-images/select02.png#lightbox)
+[![특성 검사자](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -464,7 +464,7 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 사용자가 선택한 테이블 뷰로 문자를 입력 하 고 해당 문자가 포함 된 첫 번째 행을 선택할 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 테이블 뷰를 선택 하 고 **특성 검사자**에서 **유형 선택** 확인란을 선택 합니다.
 
-[![](table-view-images/type01.png "Setting the selection type")](table-view-images/type01.png#lightbox)
+[![선택 유형 설정](table-view-images/type01.png)](table-view-images/type01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -490,7 +490,7 @@ public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRo
 
 응용 프로그램을 실행 하 고 문자를 입력 하면 행이 선택 됩니다.
 
-[![](table-view-images/type02.png "A sample app run")](table-view-images/type02.png#lightbox)
+[![샘플 앱 실행](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns"></a>
 
@@ -498,7 +498,7 @@ public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRo
 
 사용자가 테이블 뷰의 열 순서를 끌 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 테이블 뷰를 선택 하 고 **특성 검사자**에서 다시 **정렬** 확인란을 선택 합니다.
 
-[![](table-view-images/reorder01.png "The Attribute Inspector")](table-view-images/reorder01.png#lightbox)
+[![특성 검사자](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
 
 **자동** 저장 속성의 값을 지정 하 고 **열 정보** 필드를 확인 하는 경우 테이블의 레이아웃에 대 한 모든 변경 내용은 자동으로 저장 되 고 다음에 응용 프로그램이 실행 될 때 복원 됩니다.
 
@@ -517,7 +517,7 @@ public override bool ShouldReorder (NSTableView tableView, nint columnIndex, nin
 
 응용 프로그램을 실행 하는 경우 열 머리글을 끌어 열의 순서를 바꿀 수 있습니다.
 
-[![](table-view-images/reorder02.png "An example of the reordered columns")](table-view-images/reorder02.png#lightbox)
+[![정렬 된 열의 예](table-view-images/reorder02.png)](table-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells"></a>
 
@@ -573,13 +573,13 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 이제 응용 프로그램을 실행 하는 경우 사용자는 테이블 뷰의 셀을 편집할 수 있습니다.
 
-[![](table-view-images/editing01.png "An example of editing a cell")](table-view-images/editing01.png#lightbox)
+[![셀을 편집 하는 예](table-view-images/editing01.png)](table-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Table_Views"></a>
 
 ## <a name="using-images-in-table-views"></a>테이블 뷰에서 이미지 사용
 
-에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들면 다음과 같습니다.
+에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들어:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -648,7 +648,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 먼저 `Main.storyboard` Xcode의 Interface Builder에서를 편집 하 고 테이블 뷰를 선택 하 여 열 수를 3 개로 늘립니다. 다음으로 새 열의 **제목을** 로 변경 합니다 `Action` .
 
-[![](table-view-images/delete01.png "Editing the column name")](table-view-images/delete01.png#lightbox)
+[![열 이름 편집](table-view-images/delete01.png)](table-view-images/delete01.png#lightbox)
 
 스토리 보드에 대 한 변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아가서 변경 내용을 동기화 합니다.
 
@@ -895,15 +895,15 @@ case "Action":
 
 이러한 변경 내용을 적용 하면 앱이 실행 될 때 각 행에 **삭제** 단추가 포함 됩니다.
 
-[![](table-view-images/delete02.png "The table view with deletion buttons")](table-view-images/delete02.png#lightbox)
+[![삭제 단추가 있는 테이블 뷰](table-view-images/delete02.png)](table-view-images/delete02.png#lightbox)
 
 사용자가 **삭제** 단추를 클릭 하면 지정 된 행을 삭제 하 라는 경고가 표시 됩니다.
 
-[![](table-view-images/delete03.png "A delete row alert")](table-view-images/delete03.png#lightbox)
+[![행 삭제 경고](table-view-images/delete03.png)](table-view-images/delete03.png#lightbox)
 
 사용자가 삭제를 선택 하면 해당 행이 제거 되 고 테이블이 다시 그려집니다.
 
-[![](table-view-images/delete04.png "The table after the row is deleted")](table-view-images/delete04.png#lightbox)
+[![행이 삭제 된 후의 테이블](table-view-images/delete04.png)](table-view-images/delete04.png#lightbox)
 
 <a name="Data_Binding_Table_Views"></a>
 

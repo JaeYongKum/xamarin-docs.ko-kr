@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee97ee2aae11e4e54a0d25e80ffd7bce301fa2f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137685"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935982"
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
@@ -25,7 +25,7 @@ _SkiaSharp 그래픽과 텍스트를 통합 하기 위해 렌더링 된 텍스�
 
 이 문서에서는 텍스트를 측정 하 고 텍스트를 특정 크기로 확장 하 고 텍스트를 다른 그래픽과 통합 하는 방법을 보여 줍니다.
 
-![](text-images/textandgraphicsexample.png "Text surrounded by rectangles")
+![사각형으로 둘러싸인 텍스트](text-images/textandgraphicsexample.png)
 
 이 이미지에는 모퉁이가 둥근 사각형도 포함 됩니다. SkiaSharp 클래스에는 사각형과 모퉁이가 둥근 사각형을 그리기 위한 메서드를 `Canvas` 그리는 메서드가 포함 되어 있습니다 [`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect*) [`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect*) . 이러한 메서드를 사용 하 여 사각형을 값으로 정의 `SKRect` 하거나 다른 방식으로 정의할 수 있습니다.
 
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 그 다음에는 메서드의 나머지가 바로 앞에 있습니다. `SKPaint`테두리 및 호출에 대 한 다른 개체를 `DrawRoundRect` 두 번 만듭니다. 두 번째 호출에서는 팽창 사각형을 사용 합니다. 첫 번째 호출에서는 20 픽셀의 모퉁이 반경을 지정 합니다. 두 번째는 모퉁이 반지름이 30 픽셀인 데, 다음과 같이 평행 하 게 보입니다.
 
- [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
+ [![프레임 텍스트 페이지의 세 번째 스크린샷](text-images/framedtext-small.png)](text-images/framedtext-large.png#lightbox "프레임 텍스트 페이지의 세 번째 스크린샷")
 
 휴대폰 또는 시뮬레이터를 옆으로 설정 하 여 텍스트와 프레임 크기가 증가 하는 것을 볼 수 있습니다.
 
@@ -134,7 +134,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 텍스트는 다른 그래픽 개체와 비슷하게 처리 될 수 있습니다. 한 가지 간단한 옵션은 텍스트 문자의 개요를 표시 하는 것입니다.
 
-[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
+[![윤곽선이 있는 텍스트 페이지의 세 번째 스크린샷](text-images/outlinedtext-small.png)](text-images/outlinedtext-large.png#lightbox "윤곽선이 있는 텍스트 페이지의 세 번째 스크린샷")
 
 이는 단순히 `Style` 개체의 normal 속성을 `SKPaint` 의 기본 설정인에서로 변경 하 `SKPaintStyle.Fill` `SKPaintStyle.Stroke` 고 스트로크 너비를 지정 하 여 수행 합니다. `PaintSurface` **윤곽선이 있는 텍스트** 페이지의 처리기는 다음과 같은 작업을 수행 하는 방법을 보여 줍니다.
 

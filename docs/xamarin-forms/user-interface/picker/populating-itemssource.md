@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a15ca2e11dabb73054f5f0a1dc3f79342d8ce7f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136294"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938608"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
@@ -178,7 +178,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem)속성 데이터는 `SelectedMonkey` 형식의 연결 된 뷰 모델의 속성에 바인딩됩니다 `Monkey` . 따라서 사용자가에서 항목을 선택 하면 [`Picker`](xref:Xamarin.Forms.Picker) `SelectedMonkey` 속성이 선택한 개체로 설정 됩니다 `Monkey` . `SelectedMonkey`개체 데이터는 및 뷰에 의해 사용자 인터페이스에 표시 [`Label`](xref:Xamarin.Forms.Label) 됩니다 [`Image`](xref:Xamarin.Forms.Image) .
 
-![](populating-itemssource-images/monkeys.png "Picker Item Selection")
+![선택 항목 선택](populating-itemssource-images/monkeys.png)
 
 > [!NOTE]
 > [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem)및 [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 모두 기본적으로 양방향 바인딩을 지원 합니다.

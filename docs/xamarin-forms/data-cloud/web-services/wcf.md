@@ -10,12 +10,12 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cee301178880a62695f4208161965b01bb6f522e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139154"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938595"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
@@ -41,7 +41,7 @@ ASMX (ASP.NET Web Services)와 WCF 간에는 차이점이 있지만 WCF는 HTTP�
 
 샘플 응용 프로그램 솔루션에는 로컬로 실행할 수 있는 WCF 서비스가 포함 되어 있으며, 다음 스크린샷에 나와 있습니다.
 
-![](wcf-images/portal.png "Sample Application")
+![예제 응용 프로그램](wcf-images/portal.png)
 
 > [!NOTE]
 > IOS 9 이상에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 하 여 중요 한 정보가 실수로 공개 되는 것을 방지 합니다. ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 모든 연결에 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않으면 예외와 함께 실패 합니다.

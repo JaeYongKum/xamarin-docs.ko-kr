@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ed20da1005447334a99ea40c177c8f88d59d71ce
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138257"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938478"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
@@ -27,7 +27,7 @@ SkiaSharp에서 가장 *간단한 변환 형식은 변환 또는 변환* 입니�
 
 변환은 애니메이션 및 간단한 텍스트 효과에도 유용 합니다.
 
-![](translate-images/translateexample.png "Text shadow, engraving, and embossing with translation")
+![번역을 사용한 텍스트 그림자, engraving 및 엠보스](translate-images/translateexample.png)
 
 [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single))의 메서드에는 `SKCanvas` 다음과 같은 두 개의 매개 변수가 있습니다 .이 매개 변수를 통해 다음에 그려진 그래픽 개체를 가로 및 세로로 이동 합니다.
 
@@ -74,7 +74,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 연속 되는 사각형은 페이지 아래로 trickle.
 
-[![](translate-images/accumulatedtranslate-small.png "Triple screenshot of the Accumulated Translate page")](translate-images/accumulatedtranslate-large.png#lightbox "Triple screenshot of the Accumulated Translate page")
+[![누적 번역 페이지의 세 번째 스크린샷](translate-images/accumulatedtranslate-small.png)](translate-images/accumulatedtranslate-large.png#lightbox "누적 번역 페이지의 세 번째 스크린샷")
 
 누적 변환 요소가 `dx` 및이 `dy` 고 그리기 함수에서 지정 하는 점이 ( `x` ,) 인 경우 `y` 그래픽 개체는 (,) 지점에서 렌더링 됩니다 `x'` `y'` .
 
@@ -131,7 +131,7 @@ using (SKPaint textPaint = new SKPaint())
 
 세 가지 예제에서는 각각 `Translate` 및 변수가 제공 하는 위치에서 오프셋할 텍스트를 표시 하기 위해가 호출 됩니다 `x` `y` . 그러면 텍스트는 변환 효과 없이 다른 색으로 다시 표시 됩니다.
 
-[![](translate-images/translatetexteffects-small.png "Triple screenshot of the Translate Text Effects page")](translate-images/translatetexteffects-large.png#lightbox "Triple screenshot of the Translate Text Effects page")
+[![텍스트 변환 효과 페이지의 삼중 스크린샷](translate-images/translatetexteffects-small.png)](translate-images/translatetexteffects-large.png#lightbox "텍스트 변환 효과 페이지의 삼중 스크린샷")
 
 세 가지 예제는 각각 호출을 부정 하는 다른 방법을 보여 줍니다 `Translate` .
 
@@ -215,9 +215,9 @@ public class HendecagramArrayPage : ContentPage
 
 ```
 
-결과는 다음과 같습니다.
+결과:
 
-[![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png#lightbox "Triple screenshot of the Hendecagram Array page")
+[![Hendecagram 배열 페이지의 삼중 스크린샷](translate-images/hendecagramarray-small.png)](translate-images/hendecagramarray-large.png#lightbox "Hendecagram 배열 페이지의 삼중 스크린샷")
 
 애니메이션은 종종 변환과 관련 됩니다. **Hendecagram 애니메이션** 페이지는 원에서 11 포인트가 가리키는 별을 이동 합니다. [`HendecagramAnimationPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs)클래스는 `OnAppearing` `OnDisappearing` 타이머를 시작 하 고 중지 하기 위해 및 메서드의 몇 가지 필드 및 재정의로 시작 합니다 Xamarin.Forms .
 
@@ -302,7 +302,7 @@ public class HendecagramAnimationPage : ContentPage
 
 `PaintSurface`처리기는 메서드를 `Translate` 두 번 호출 하 고, 먼저 캔버스의 중심으로 이동한 다음 (0, 0) 중심 원의 원주로 변환 합니다. 페이지의 범위 내에서 별표를 계속 유지 하면서 원의 반지름은 최대한 크게 설정 됩니다.
 
-[![](translate-images/hendecagramanimation-small.png "Triple screenshot of the Hendecagram Animation page")](translate-images/hendecagramanimation-large.png#lightbox "Triple screenshot of the Hendecagram Animation page")
+[![Hendecagram 애니메이션 페이지의 삼중 스크린샷](translate-images/hendecagramanimation-small.png)](translate-images/hendecagramanimation-large.png#lightbox "Hendecagram 애니메이션 페이지의 삼중 스크린샷")
 
 별모양은 페이지의 중심을 중심으로 하는 것과 동일한 방향으로 유지 됩니다. 회전 하지 않습니다. 회전 변환에 대 한 작업입니다.
 

@@ -10,12 +10,12 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 931b8d0946f1af5e697e581a04c0feefb31ba2d3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4fee695a20cae26537beb30513423492114e5c77
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131926"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936242"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -29,7 +29,7 @@ _경로에 대 한 정보를 가져오고 콘텐츠를 열거 합니다._
 
 또한 경로를 구성 하는 모든 그리기 작업 및 요소를 가져오는 것이 유용한 경우도 있습니다. 처음에는이 기능이 불필요 하 게 보일 수 있습니다. 프로그램에서 경로를 만든 경우 프로그램은 이미 콘텐츠를 알고 있습니다. 그러나 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 와 [텍스트 문자열을 패스로](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)변환 하 여 경로를 만들 수도 있습니다. 이러한 경로를 구성 하는 모든 그리기 작업 및 지점도 가져올 수도 있습니다. 반구 주위에 텍스트를 래핑하는 등의 모든 점에 알고리즘 변환을 적용 하는 것이 한 가지 방법입니다.
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![반구에 래핑된 텍스트](information-images/pathenumerationsample.png)
 
 ## <a name="getting-the-path-length"></a>경로 길이 가져오기
 
@@ -115,7 +115,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `Length`새로 만든 개체의 속성은 `SKPathMeasure` 경로의 길이를 가져옵니다. 경로 길이는 `baseTextWidth` 값 (텍스트 크기 10을 기준으로 하는 텍스트의 너비)으로 나눈 다음 기본 텍스트 크기인 10을 곱합니다. 결과는 해당 경로를 따라 텍스트를 표시 하는 새 텍스트 크기입니다.
 
-[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
+[![경로 길이 페이지의 세 번째 스크린샷](information-images/pathlength-small.png)](information-images/pathlength-large.png#lightbox "경로 길이 페이지의 세 번째 스크린샷")
 
 베 지 어 곡선이 더 길거나 짧아 지 면 텍스트 크기가 변경 되는 것을 볼 수 있습니다.
 
@@ -141,7 +141,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 **Unicycle 반쪽 파이프** 페이지는 입방 형 3 차원 곡선을 따라 앞뒤로 이동 하는 Unicycle에 대 한 스틱 그림에 애니메이션을 적용 합니다.
 
-[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
+[![Unicycle 반 파이프 페이지의 세 번째 스크린샷](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Unicycle 반 파이프 페이지의 세 번째 스크린샷")
 
 `SKPaint`절반 파이프와 unicycle을 스트로크 하는 데 사용 되는 개체는 클래스의 필드로 정의 됩니다 `UnicycleHalfPipePage` . 또한 `SKPath` unicycle에 대 한 개체를 정의 합니다.
 
@@ -252,7 +252,7 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 특정 한 방식으로 malform 경로에 알고리즘 변환을 적용 하는 것이 바람직한 경우도 있습니다.
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![반구에 래핑된 텍스트](information-images/pathenumerationsample.png)
 
 이러한 문자의 대부분은 직선으로 구성 되어 있지만 이러한 직선은 곡선으로 꼬아진 되었습니다. 가능한 방법은 무엇 인가요?
 
@@ -441,7 +441,7 @@ static class PathExtensions
 
 **GlobularText** 샘플에서는이 확장 메서드를 사용 하 여 3d 효과의 반구 주위에 텍스트를 래핑합니다.
 
-[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
+[![Globular 텍스트 페이지의 세 번째 스크린샷](information-images/globulartext-small.png)](information-images/globulartext-large.png#lightbox "Globular 텍스트 페이지의 세 번째 스크린샷")
 
 [`GlobularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs)클래스 생성자는이 변환을 수행 합니다. `SKPaint`텍스트에 대 한 개체를 만든 다음 메서드에서 개체를 가져옵니다 `SKPath` `GetTextPath` . `CloneWithTransform`다음은 변환 함수와 함께 확장 메서드에 전달 되는 경로입니다.
 

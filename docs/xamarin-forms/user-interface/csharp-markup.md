@@ -10,16 +10,16 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 279df31eeda506d6780533bac8ae190f799424a3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137750"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936034"
 ---
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsC # 태그
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
@@ -231,11 +231,11 @@ new Label { Text = "Tap Me" }
 
 제스처 인식기는 이기 때문에 `BindableObject` `Bind` 초기화할 때 및 확장 메서드를 사용할 수 있습니다 `BindCommand` . 또한 확장 메서드를 사용 하 여 사용자 지정 제스처 인식기 형식을 초기화할 수 있습니다 `Gesture<TGestureElement, TGestureRecognizer>` .
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원하는 일련의 레이아웃 확장 메서드가 포함 되어 있습니다.
 
-| Type | 확장 메서드 |
+| 형식 | 확장 메서드 |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원�
 
 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 흐름 방향을 모두 지원 하도록 설계 된 c # 태그의 경우 위의 네임 스페이스 중 하나가 아니라 다음 표에 있는 확장 메서드를 사용 하는 것이 좋습니다.
 
-| Type | 확장 메서드 |
+| 형식 | 확장 메서드 |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -357,7 +357,7 @@ new Grid
 }
 ```
 
-## <a name="fonts"></a>Fonts
+## <a name="fonts"></a>글꼴
 
 다음 목록의 컨트롤은 `FontSize` ,, `Bold` `Italic` 및 확장 메서드를 호출 하 여 `Font` 컨트롤에 의해 표시 되는 텍스트의 모양을 설정할 수 있습니다.
 

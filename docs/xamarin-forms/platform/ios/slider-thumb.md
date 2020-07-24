@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 93b4dba3e8543bd2cc2a4f2187f617aae5daff77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d8ca0dfb533dc5fb0b7442b85de41dcf7c18fec8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137074"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938543"
 ---
 # <a name="slider-thumb-tap-on-ios"></a>IOS의 슬라이더 엄지 단추 탭
 
@@ -48,7 +48,7 @@ slider.On<iOS>().SetUpdateOnTap(true);
 
 그러면 막대를 탭 하 여 [`Slider`](xref:Xamarin.Forms.Slider) 엄지 단추를 이동 하 `Slider` 고 속성을 설정할 수 있습니다 [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) .
 
-![](slider-thumb-images/slider-updateontap.png "Slider Update on Tap enabled")
+![탭 하 여 슬라이더 업데이트 사용](slider-thumb-images/slider-updateontap.png)
 
 ## <a name="related-links"></a>관련 링크
 

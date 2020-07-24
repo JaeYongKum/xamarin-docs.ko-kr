@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7410386e10f605fdeed452fe37755c1e48e6b9b9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b4772299421ad26f0fbe0fced8c80a7f633341c6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136996"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938452"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>IOS의 VisualElement 드롭 그림자
 
@@ -74,7 +74,7 @@ boxView.On<iOS>()
 
 그 결과,에서 그림자를 사용 하도록 설정할 수 있습니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 
-![](drop-shadow-images/drop-shadow.png "Drop shadow enabled")
+![Drop shadow 사용](drop-shadow-images/drop-shadow.png)
 
 ## <a name="related-links"></a>관련 링크
 

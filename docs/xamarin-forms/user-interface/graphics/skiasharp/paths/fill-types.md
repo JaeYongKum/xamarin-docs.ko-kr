@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e82572d88e380997fb2435179dba824c1b3f0c2f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139050"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936190"
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
@@ -25,7 +25,7 @@ _SkiaSharp 경로 채우기 유형에 서 가능한 다른 효과를 검색 합�
 
 패스의 두 컨투어는 겹칠 수 있으며, 단일 컨투어를 구성 하는 선은 겹칠 수 있습니다. 모든 포함 된 영역을 채울 수 있지만 포함 된 영역을 모두 채우지는 않을 수 있습니다. 예를 들면 다음과 같습니다.
 
-![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
+![5 방향 별 부분 필터](fill-types-images/filltypeexample.png)
 
 이에 대 한 제어가 거의 없습니다. 채우기 알고리즘은 [`SKFillType`](xref:SkiaSharp.SKPath.FillType) `SKPath` 열거형의 멤버로 설정 하는의 속성에 의해 제어 됩니다 [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) .
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 일반적으로 경로 채우기 형식은 채우기에만 영향을 미치며 스트로크에는 영향을 주지 않지만 두 `Inverse` 모드는 채우기와 스트로크 모두에 영향을 줍니다. 채우기의 경우 두 가지 `Inverse` 형식이 oppositely 영역을 채워서 별모양 외부 영역이 채워집니다. 스트로크의 경우 두 `Inverse` 형식 모두 스트로크를 제외한 모든 색을 색으로 합니다. 이러한 역 채우기 유형을 사용 하면 iOS 스크린샷에서 보여 주는 것 처럼 일부 이상한 효과가 발생할 수 있습니다.
 
-[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
+[![5 방향 별 페이지의 삼중 스크린샷](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "5 방향 별 페이지의 삼중 스크린샷")
 
 Android 스크린 샷에서는 일반적인 짝수-홀수 및 권선 효과를 보여 주지만 스트로크 및 채우기의 순서는 결과에도 영향을 줍니다.
 
@@ -226,7 +226,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 최소한의 코드로 만든 흥미로운 이미지입니다.
 
-[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
+[![겹치는 원 페이지의 세 번째 스크린샷](fill-types-images/overlappingcircles-small.png)](fill-types-images/overlappingcircles-large.png#lightbox "겹치는 원 페이지의 세 번째 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 
