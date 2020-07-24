@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 6cd5acb529d617c72d8c9e1bd642a831f90b2e8c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 976d0882c5875c1d3e1c8f0ea1732de08df8e07f
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013739"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996177"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>설치 후 Visual Studio 확장 누락
 
@@ -33,7 +33,7 @@ Visual Studio 2017 (Community, Professional 또는 Enterprise) 이상이 설치 
 
 4. **Xamarin for Visual Studio 2013** 옵션이 설치로 설정 되어 있는지 확인 합니다.
 
-    ![](missing-vs-extensions-images/installer.png "Enable Xamarin for Visual Studio 2013 installation option")
+    ![Visual Studio 2013 용 Xamarin 사용 설치 옵션](missing-vs-extensions-images/installer.png)
 
 5. 설치 관리자 마법사의 나머지 단계를 진행 합니다.
 
@@ -43,9 +43,9 @@ Visual Studio 2017 (Community, Professional 또는 Enterprise) 이상이 설치 
 
     `C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Xamarin\Xamarin\3.1.228.0`
 
-    3\.1.228 버전에 대 한 확장이 올바르게 설치 된 경우 폴더에는 60 개의 항목이 있습니다.
+    3.1.228 버전에 대 한 확장이 올바르게 설치 된 경우 폴더에는 60 개의 항목이 있습니다.
 
-    ![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
+    ![탐색기의 Xamarin\3.1.228.0 폴더 내용 목록](missing-vs-extensions-images/folder.png)
 
 2. 이 폴더가 올바른지 확인 한 후에는 Visual Studio에 확장을 다시 설정 하도록 지시 합니다.
 
@@ -77,11 +77,11 @@ Visual Studio 2017 (Community, Professional 또는 Enterprise) 이상이 설치 
 
 5. 이 키를 찾습니다.
 
-    _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
+    _HKEY \_ LOCAL \_ MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
 6. 이 패턴과 일치하는 항목을 찾아 삭제합니다.
 
-    _C:\Program Files\*Visual Studio 1\*\Microsoft. 0 \ Common7\IDE\Extensions\Xamarin_
+    _C:\Program Files \* \Microsoft Visual Studio 1 \* . 0 \ Common7\IDE\Extensions\Xamarin_
 
 7. 이 키를 찾습니다.
 

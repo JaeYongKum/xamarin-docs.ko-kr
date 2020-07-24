@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: b8be06b9da4561ffc0d628b53f8daf639b5e3179
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1a71b84d1068fef1730196bafb0f0d7e2a948c5c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571101"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936918"
 ---
 # <a name="shared-projects-code-sharing"></a>공유 프로젝트 코드 공유
 
@@ -27,7 +27,7 @@ _공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝�
 
 대부분의 다른 프로젝트 형식과 달리, 공유 프로젝트는 DLL 형식으로 출력을 포함 하지 않고 코드를 참조 하는 각 프로젝트로 컴파일됩니다. 이는 아래 다이어그램에 나와 있습니다. 개념적으로 공유 프로젝트의 전체 콘텐츠는 참조 하는 각 프로젝트에 "복사" 되 고 그 일부인 것 처럼 컴파일됩니다.
 
-![](shared-projects-images/sharedassetproject.png "Shared Project architecture")
+![공유 프로젝트 아키텍처](shared-projects-images/sharedassetproject.png)
 
 공유 프로젝트의 코드는 코드를 사용 하는 응용 프로그램 프로젝트에 따라 코드 섹션을 활성화 하거나 비활성화 하는 컴파일러 지시문을 포함할 수 있습니다. 코드는 다이어그램의 색이 지정 된 플랫폼 상자에서 제안 합니다.
 
@@ -57,7 +57,7 @@ Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 �
 
 공유 프로젝트에 대 한 참조 추가는 일반 라이브러리 프로젝트를 참조 하는 것과 동일한 방식으로 수행 됩니다. 이 스크린샷에서는 공유 프로젝트를 참조 하는 Xamarin.ios 프로젝트를 보여 줍니다.
 
-![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
+![공유 프로젝트에 대 한 프로젝트 참조](shared-projects-images/xs-reference.png)
 
 다른 라이브러리나 응용 프로그램에서 공유 프로젝트를 참조 하면 솔루션을 빌드하고 코드에서 오류를 볼 수 있습니다. 공유 프로젝트를 _둘_ 이상의 다른 프로젝트에서 참조 하는 경우 소스 코드 편집기의 왼쪽 위에이 파일을 참조 하는 프로젝트를 선택 하는 메뉴가 표시 됩니다.
 
@@ -67,7 +67,7 @@ Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 �
 
 **옵션** 화면은 아래와 같이 표시 됩니다. 프로젝트 **이름과** **기본 네임 스페이스** 는 일반적으로 변경 하는 두 가지 설정 뿐입니다.
 
-![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
+![공유 프로젝트 옵션](shared-projects-images/xs-sharedprojectoptions.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -87,13 +87,13 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 솔루션 파일을 마우스 오른쪽 단추로 클릭 하 고 **새 프로젝트 > 추가**를 선택 하 여 기존 솔루션에 새 공유 프로젝트를 추가할 수도 있습니다. 새 공유 프로젝트는 클래스 파일이 추가 된 후 아래와 같이 표시 됩니다. 참조 또는 구성 요소 노드가 없다는 점에 유의 하십시오. 공유 프로젝트에 대해서는 지원 되지 않습니다.
 
-![](shared-projects-images/vs-empty.png "Empty Shared Project")
+![빈 공유 프로젝트](shared-projects-images/vs-empty.png)
 
 공유 프로젝트를 유용 하 게 만들려면 하나 이상의 빌드 가능 프로젝트 (예: iOS 또는 Android 응용 프로그램, 라이브러리 또는 PCL 프로젝트)에서 참조 해야 합니다. 공유 프로젝트는 참조 하는 항목이 없는 경우에는 컴파일되지 않으므로 구문 (또는 기타) 오류는 다른 항목에서 참조 될 때까지 강조 표시 되지 않습니다.
 
 공유 프로젝트에 대 한 참조 추가는 일반 라이브러리 프로젝트를 참조 하는 것과 동일한 방식으로 수행 됩니다. 이 스크린샷에서는 공유 프로젝트를 참조 하는 Xamarin.ios 프로젝트를 보여 줍니다.
 
-![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
+![공유 프로젝트에 대 한 프로젝트 참조](shared-projects-images/vs-reference.png)
 
 다른 라이브러리나 응용 프로그램에서 공유 프로젝트를 참조 하면 솔루션을 빌드하고 코드에서 오류를 볼 수 있습니다. 공유 프로젝트를 _둘_ 이상의 다른 프로젝트에서 참조 하는 경우 소스 코드 편집기의 왼쪽 위에 메뉴가 표시 되어 현재 코드 파일을 참조 하는 프로젝트가 표시 됩니다.
 
@@ -103,7 +103,7 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 **속성** 패널은 아래와 같습니다. **루트 네임 스페이스** 는 변경할 수 있는 유일한 설정입니다.
 
-![](shared-projects-images/vs-sharedprojectproperties.png "Shared Project Properties")
+![공유 프로젝트 속성](shared-projects-images/vs-sharedprojectproperties.png)
 
 -----
 
@@ -117,11 +117,11 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
+![Mac용 Visual Studio 솔루션](shared-projects-images/xs-examplesolution.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
+![Visual Studio 솔루션](shared-projects-images/vs-examplesolution.png)
 
 -----
 
@@ -129,7 +129,7 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 실행 중인 응용 프로그램은 다음과 같습니다.
 
-![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
+![iOS, Android Windows Phone 예제](shared-projects-images/example.png)
 
 ## <a name="summary"></a>요약
 

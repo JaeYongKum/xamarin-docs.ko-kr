@@ -10,12 +10,12 @@ ms.date: 03/11/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fbf717092da7f77e265803fae87efb5bf0e9876f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fd1893a91d9d8e5d2c2581a9f3f9b5ef8ee59f1f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574368"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937673"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>UrhoSharp 사용Xamarin.Forms
 
@@ -28,8 +28,8 @@ ms.locfileid: "84574368"
 UrhoSharp는 응용 프로그램에서 그래픽을 렌더링 하는 데 사용할 수 있습니다 Xamarin.Forms .
 이 [샘플](https://github.com/xamarin/urho-samples/tree/master/FormsSample) 에서는 UrhoSharp를 사용 하 여 대화형 3d 차트를 생성 하는 방법을 보여 줍니다.
 
-![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
-![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
+![Android의 UrhoSharp 3D 대화형 차트 iOS ](urhosharp-images/ios-animation.gif)
+ ![ urhosharp 3D 대화형 차트](urhosharp-images/android-animation.gif)
 
 ## <a name="adding-the-urhosharp-nuget-packages"></a>UrhoSharp NuGet 패키지 추가
 
@@ -38,11 +38,11 @@ UrhoSharp를 사용 하기 전에 개발자는 솔루션에 UrhoSharp NuGet 패�
 UrhoSharp. Forms NuGet 패키지에는 UrhoSharp 개체를 만드는 데 필요한 모든 개체가 포함 되어 있습니다. UrhoSharp. Forms NuGet 패키지에는 `UrhoSurface` UrhoSharp를 호스트 하는 데 사용 되는 클래스가 포함 되어 있습니다 Xamarin.Forms .
 시작 하려면 .NET Standard library 프로젝트에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다. 검색 **단어를 입력 하 고**, ** Xamarin.Forms urhosharp **를 선택 하 고, **패키지 추가**를 클릭 합니다.
 
-[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
+[![패키지 추가 대화 상자](urhosharp-images/add-package-sml.png)](urhosharp-images/add-package.png#lightbox "패키지 추가 대화 상자")
 
 UrhoSharp. Forms NuGet 패키지는 프로젝트에 추가 됩니다.
 
-![](urhosharp-images/packages.png "Packages Folder")
+![패키지 폴더](urhosharp-images/packages.png)
 
 플랫폼별 프로젝트 (예: iOS 및 Android)에 대해 위의 단계를 반복 합니다.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c3355b2696b5c40ee11a289e700239900698dcf1
-ms.sourcegitcommit: 55167ad9db910c5c0eb5a84c0923cb07acd2530e
+ms.openlocfilehash: 65ebefef0f03e2b4abd8c36fc1e0a68812e48218
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606712"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939518"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.ios의 Windows
 
 _이 문서에서는 Xamarin.ios 응용 프로그램에서 창과 패널을 사용 하는 방법을 설명 합니다. Xcode 및 Interface Builder에서 창과 패널을 만들고 storyboard와 xib 파일에서 로드 하 여 프로그래밍 방식으로 작업 하는 방법을 설명 합니다._
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 동일한 창과 패널에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 Windows 및 패널을 만들고 유지 관리 하거나 선택적으로 코드에서 C# 직접 만들 수 있습니다.
+Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 동일한 창과 패널에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 Windows 및 패널을 만들고 유지 관리 하거나 선택적으로 c # 코드에서 직접 만들 수 있습니다.
 
 용도에 따라 Xamarin.ios 응용 프로그램은 표시 되 고 작동 하는 정보를 관리 하 고 조정할 수 있는 하나 이상의 창을 화면에 표시할 수 있습니다. 창의 주요 기능은 다음과 같습니다.
 
@@ -27,13 +27,13 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 Windows는 모덜리스 상태 (예: 한 번에 여러 문서를 열 수 있는 텍스트 편집기) 또는 모달 (예: 응용 프로그램을 계속 하기 전에 해제 해야 하는 내보내기 대화 상자)에서 사용할 수 있습니다.
 
-패널은 일반적으로 응용 프로그램에서 보조 기능을 제공 하는 특수 한 종류의 창 (기본 `NSWindow` 클래스의 서브 클래스)으로, 일반적으로 응용 프로그램에서 보조 기능을 제공 합니다 (예: 텍스트 형식 검사기, 시스템 색 선택 등).
+패널은 `NSWindow` 일반적으로 응용 프로그램에서 보조 기능을 제공 하는 특수 한 종류의 창 (기본 클래스의 하위 클래스)으로, 텍스트 형식 검사기 및 시스템 색 선택기와 같은 유틸리티 창과 같은 응용 프로그램의 보조 기능을 제공 합니다.
 
 [![Xcode에서 창 편집](window-images/intro01.png)](window-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 Windows 및 패널로 작업 하는 기본 사항을 설명 합니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적-c 섹션에 클래스/ C# 메서드 노출](~/mac/internals/how-it-works.md) 섹션을 살펴보면 C# 클래스를 목표-c 개체 및 UI 요소에 연결 하는 데 사용 되는 `Register` 및 `Export` 명령을 설명 합니다.
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서에서 c [# 클래스/메서드를 목표로](~/mac/internals/how-it-works.md) 표시 하는 방법에 대해 살펴볼 수 있습니다 `Register` . c `Export` # 클래스를 객관적인 개체 및 UI 요소에 연결 하는 데 사용 되는 및 명령에 대해서도 설명 합니다.
 
 ## <a name="introduction-to-windows"></a>Windows 소개
 
@@ -64,7 +64,7 @@ Xamarin.ios 응용 프로그램의 Windows는 현재 사용자가 상호 작용 
 Apple에서 다음 지침을 제안 합니다.
 
 - 응용 프로그램 이름을 사용 하 여 문서를 사용 하지 않는 주 창의 제목을 사용 합니다. 
-- 새 문서 창 이름을 `untitled`합니다. 첫 번째 새 문서의 경우 제목에 숫자를 추가 하지 않습니다 (예: `untitled 1`). 사용자가 첫 번째 문서를 저장 하 고 제목 하기 전에 다른 새 문서를 만든 경우 해당 창을 `untitled 2`, `untitled 3`등으로 호출 합니다.
+- 새 문서 창에 이름을로 `untitled` 합니다. 첫 번째 새 문서의 경우 제목에 숫자를 추가 하지 않습니다 (예: `untitled 1` ). 사용자가 첫 번째 문서를 저장 하 고 제목 하기 전에 다른 새 문서를 만드는 경우 해당 창, 등을 호출 `untitled 2` `untitled 3` 합니다.
 
 자세한 내용은 Apple의 [Macos 디자인 테마](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)의 [Windows 이름 지정](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowNaming.html#//apple_ref/doc/uid/20000957-CH35-SW1) 섹션을 참조 하세요.
 
@@ -108,9 +108,9 @@ Apple에서는 다음 지침을 제안 합니다.
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Xcode에서 windows 만들기 및 유지 관리
 
-새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 프로젝트에 자동으로 포함 되는 `.storyboard` 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 합니다.
+새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 `.storyboard` 프로젝트에 자동으로 포함 되는 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 파일을 두 번 클릭 합니다 `Main.storyboard` .
 
-[![주 스토리 보드를 선택](window-images/edit01.png)](window-images/edit01.png#lightbox)
+[![주 스토리 보드 선택](window-images/edit01.png)](window-images/edit01.png#lightbox)
 
 이렇게 하면 Xcode의 Interface Builder에서 창 디자인이 열립니다.
 
@@ -130,7 +130,7 @@ Apple에서는 다음 지침을 제안 합니다.
 - **크기 조정** -창에 크기 조정 컨트롤이 있습니다.
 - **도구 모음 단추** -창에는 숨기기/표시 도구 모음 단추가 있습니다.
 - **복원 가능한** -창의 위치 및 설정이 자동으로 저장 되 고 복원 됩니다.
-- **시작 시 표시** -`.xib` 파일이 로드 될 때 자동으로 표시 되는 창입니다.
+- **시작 시 표시** -파일이 로드 될 때 자동으로 표시 되는 창입니다 `.xib` .
 - **비활성화 시 숨기기** -응용 프로그램이 백그라운드에 들어가면 창이 숨겨집니다.
 - **닫힘 시 릴리스** -메모리를 닫을 때 메모리에서 제거 되는 창입니다.
 - **항상 표시 도구** 설명-도구 설명이 계속 표시 됩니다.
@@ -152,23 +152,23 @@ Apple에서는 다음 지침을 제안 합니다.
 
 ### <a name="setting-a-custom-main-window-controller"></a>사용자 지정 주 창 컨트롤러 설정
 
-UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으려면 xamarin.ios 앱은 사용자 지정 창 컨트롤러를 사용 해야 합니다.
+UI 요소를 c # 코드에 노출 하는 출 선 및 작업을 만들 수 있으려면 Xamarin.ios 앱에서 사용자 지정 창 컨트롤러를 사용 해야 합니다.
 
 다음을 수행합니다.
 
 1. Xcode의 Interface Builder에서 앱의 스토리 보드를 엽니다.
-2. Design Surface에서 `NSWindowController`를 선택 합니다.
-3. **Identity Inspector** 뷰로 전환 하 고 **클래스 이름**으로 `WindowController`을 입력 합니다. 
+2. `NSWindowController`Design Surface에서을 선택 합니다.
+3. **Identity Inspector** 뷰로 전환 하 고 `WindowController` **클래스 이름**으로을 입력 합니다. 
 
     [![클래스 이름 설정](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
 4. 변경 내용을 저장 하 고 동기화 할 Mac용 Visual Studio로 돌아갑니다.
-5. `WindowController.cs` 파일은 Mac용 Visual Studio의 **솔루션 탐색기** 에서 프로젝트에 추가 됩니다. 
+5. `WindowController.cs`Mac용 Visual Studio의 **솔루션 탐색기** 에서 프로젝트에 파일이 추가 됩니다. 
 
-    [![windows 컨트롤러를 선택](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
+    [![Windows 컨트롤러 선택](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
 6. Xcode의 Interface Builder에서 Storyboard를 다시 엽니다.
-7. `WindowController.h` 파일을 사용할 수 있습니다. 
+7. `WindowController.h`이 파일은 다음과 같이 사용할 수 있습니다. 
 
-    [![WindowController .h 파일을 편집](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
+    [![WindowController .h 파일 편집](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
 
 ### <a name="adding-ui-elements"></a>UI 요소 추가
 
@@ -176,11 +176,11 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 
 예를 들어 **라이브러리 검사기** 의 도구 모음을 **인터페이스 편집기**의 창으로 끌어 보겠습니다.
 
-[![라이브러리에서 도구 모음을 선택](window-images/edit03.png)](window-images/edit03.png#lightbox)
+[![라이브러리에서 도구 모음 선택](window-images/edit03.png)](window-images/edit03.png#lightbox)
 
 다음으로 **텍스트 뷰** 를 끌고 크기를 조정 하 여 도구 모음 아래의 영역을 채웁니다.
 
-[![텍스트 뷰를 추가](window-images/edit04.png)](window-images/edit04.png#lightbox)
+[![텍스트 뷰 추가](window-images/edit04.png)](window-images/edit04.png#lightbox)
 
 창 크기가 변경 되 면 **텍스트 보기가** 축소 되 고 증가 하도록 하기 때문에 **제약 조건 편집기** 로 전환 하 여 다음 제약 조건을 추가 하겠습니다.
 
@@ -188,7 +188,7 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 
 편집기 위쪽에서 4 개의 **Red I-빔** 를 클릭 하 고 **4 개의 제약 조건 추가**를 클릭 하 여 텍스트 보기에 지정 된 X, Y 좌표를 그대로 유지 하 고 창의 크기를 조정할 때 가로 및 세로로 가로 및 세로로 확대 하거나 축소 하도록 지시 합니다.
 
-마지막으로 **콘센트** 를 사용 하 여 코드에 **텍스트 뷰** 를 노출 합니다 (`ViewController.h` 파일을 선택 해야 합니다).
+마지막으로 **콘센트** 를 사용 하 여 코드에 **텍스트 뷰** 를 노출 합니다 (파일을 선택 해야 합니다 `ViewController.h` ).
 
 [![콘센트 구성](window-images/edit06.png)](window-images/edit06.png#lightbox)
 
@@ -201,33 +201,33 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 Xamarin.ios 응용 프로그램에서 만들고 사용 하는 모든 창에 대 한 프로세스는 기본적으로 위에서 수행한 것과 동일 합니다.
 
 1. 프로젝트에 자동으로 추가 되는 기본값이 아닌 새 창에는 새 창 정의를 프로젝트에 추가 합니다. 이에 대해서는 아래에서 자세히 설명 합니다.
-1. `Main.storyboard` 파일을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 창 디자인을 엽니다.
+1. 파일을 두 번 클릭 `Main.storyboard` 하 여 Xcode의 Interface Builder에서 편집할 창 디자인을 엽니다.
 1. 새 창을 사용자 인터페이스의 디자인으로 끌고 _segue_ 를 사용 하 여 창을 주 창에 연결 합니다 (자세한 내용은 [storyboard](~/mac/platform/storyboards/indepth.md) 사용 설명서의 [segue](~/mac/platform/storyboards/indepth.md#Segues) 섹션 참조).
 1. **특성 검사자** 및 **크기 검사자**에서 필요한 창 속성을 설정 합니다.
 1. 인터페이스를 빌드하고 **특성 검사자**에서 구성 하는 데 필요한 컨트롤을 끌어 옵니다.
 1. **크기 검사기** 를 사용 하 여 UI 요소의 크기 조정을 처리 합니다.
-1. **콘센트** 및 **작업**을 통해 코드에 C# 창의 UI 요소를 노출 합니다.
+1. **콘센트** 및 **작업**을 통해 c # 코드에 창의 UI 요소를 노출 합니다.
 1. 변경 내용을 저장 하 고 다시 Mac용 Visual Studio로 전환 하 여 Xcode와 동기화 합니다.
 
 이제 기본 창이 만들어졌으므로 windows에서 작업할 때 Xamarin.ios 응용 프로그램에서 수행 하는 일반적인 프로세스를 살펴보겠습니다. 
 
 ## <a name="displaying-the-default-window"></a>기본 창 표시
 
-기본적으로 새 Xamarin.ios 응용 프로그램은 시작 될 때 `MainWindow.xib` 파일에 정의 된 창을 자동으로 표시 합니다.
+기본적으로 새 Xamarin.ios 응용 프로그램이 `MainWindow.xib` 시작 될 때 파일에 정의 된 창이 자동으로 표시 됩니다.
 
 [![실행 중인 예제 창](window-images/display01.png)](window-images/display01.png#lightbox)
 
-위에서 해당 창의 디자인을 수정 했으므로 이제 기본 도구 모음과 **텍스트 뷰** 컨트롤을 포함 합니다. `Info.plist` 파일의 다음 섹션은이 창을 표시 하는 작업을 담당 합니다.
+위에서 해당 창의 디자인을 수정 했으므로 이제 기본 도구 모음과 **텍스트 뷰** 컨트롤을 포함 합니다. 파일의 다음 섹션은 `Info.plist` 이 창을 표시 하는 작업을 담당 합니다.
 
-[![info.plist 편집](window-images/display00.png)](window-images/display00.png#lightbox)
+[![Info.plist 편집](window-images/display00.png)](window-images/display00.png#lightbox)
 
-주 **인터페이스** 드롭다운은 기본 앱 UI (이 경우 `Main.storyboard`)로 사용 될 Storyboard를 선택 하는 데 사용 됩니다.
+주 **인터페이스** 드롭다운은 기본 앱 UI (이 경우)로 사용 될 Storyboard를 선택 하는 데 사용 됩니다 `Main.storyboard` .
 
-표시 되는 주 창 (기본 보기와 함께)을 제어 하기 위해 뷰 컨트롤러가 프로젝트에 자동으로 추가 됩니다. 이 파일은 `ViewController.cs` 파일에 정의 되어 있으며, **Identity Inspector**Interface Builder의 **파일 소유자** 에 게 연결 됩니다.
+표시 되는 주 창 (기본 보기와 함께)을 제어 하기 위해 뷰 컨트롤러가 프로젝트에 자동으로 추가 됩니다. 이 파일은 파일에 정의 되 `ViewController.cs` 고 **id 검사자**에서 Interface Builder의 **파일 소유자** 에 연결 됩니다.
 
-[![파일 소유자를 설정 하는](window-images/display02.png)](window-images/display02.png#lightbox)
+[![파일의 소유자 설정](window-images/display02.png)](window-images/display02.png#lightbox)
 
-이 창의 경우에는 먼저를 열 때 `untitled` 제목을 사용 하 여 다음과 같이 `ViewController.cs`의 `ViewWillAppear` 메서드를 재정의 합니다.
+이 창의 경우에는를 처음 열 때의 제목을 사용 하 여 다음과 같이의 `untitled` 메서드를 재정의 합니다 `ViewWillAppear` `ViewController.cs` .
 
 ```csharp
 public override void ViewWillAppear ()
@@ -240,54 +240,54 @@ public override void ViewWillAppear ()
 ```    
 
 > [!NOTE]
-> 뷰가 메모리로 로드 될 수 있지만 아직 완전히 인스턴스화되지 않았기 때문에 창의 `Title` 속성은 `ViewDidLoad` 메서드 대신 `ViewWillAppear` 메서드에서 설정 됩니다. `ViewDidLoad` 메서드에서 `Title` 속성에 액세스 하면 창이 생성 되지 않았고 속성에 아직 연결 되지 않았기 때문에 `null` 예외가 발생 합니다.
+> `Title` `ViewWillAppear` `ViewDidLoad` 뷰가 메모리로 로드 될 수 있지만 아직 완전히 인스턴스화되지 않았기 때문에 창 속성이 메서드 대신 메서드에서 설정 됩니다. `Title`메서드에서 속성에 액세스 하면 `ViewDidLoad` `null` 창이 생성 되지 않았고 속성에 아직 연결 되지 않았기 때문에 예외가 발생 합니다.
 
 ## <a name="programmatically-closing-a-window"></a>프로그래밍 방식으로 창 닫기
 
-사용자가 창의 **닫기** 단추를 클릭 하거나 메뉴 항목을 사용 하는 것 외에도 사용자가 xamarin.ios 응용 프로그램에서 창을 프로그래밍 방식으로 닫아야 하는 경우가 있을 수 있습니다. macOS는 `PerformClose` 및 `Close``NSWindow`를 프로그래밍 방식으로 닫는 두 가지 방법을 제공 합니다.
+사용자가 창의 **닫기** 단추를 클릭 하거나 메뉴 항목을 사용 하는 것 외에도 사용자가 xamarin.ios 응용 프로그램에서 창을 프로그래밍 방식으로 닫아야 하는 경우가 있을 수 있습니다. macOS는 프로그래밍 방식으로를 닫는 두 가지 방법 및를 제공 `NSWindow` `PerformClose` `Close` 합니다.
 
 ### <a name="performclose"></a>PerformClose
 
-`NSWindow`의 `PerformClose` 메서드를 호출 하면 단추를 잠시 강조 표시 한 다음 창을 닫아 창의 **닫기** 단추를 클릭 하 여 사용자를 시뮬레이션 합니다.
+`PerformClose`의 메서드를 호출 하면 `NSWindow` 단추를 잠시 강조 표시 한 다음 창을 닫아 사용자가 창의 **닫기** 단추를 시뮬레이션 합니다.
 
-응용 프로그램이 `NSWindow`의 `WillClose` 이벤트를 구현 하는 경우 창이 닫힐 때까지 발생 합니다. 이벤트가 `false`반환 하는 경우 창이 닫히지 않습니다. 창에 **닫기** 단추가 없거나 어떤 이유로 든 닫을 수 없는 경우 OS가 경고 소리를 내보냅니다.
+응용 프로그램에서의 이벤트를 구현 하는 경우 `NSWindow` `WillClose` 창이 닫힐 때까지 발생 합니다. 이벤트가 반환 되 면 `false` 창이 닫히지 않습니다. 창에 **닫기** 단추가 없거나 어떤 이유로 든 닫을 수 없는 경우 OS가 경고 소리를 내보냅니다.
 
-예를 들면 다음과 같습니다.:
+예를 들어:
 
 ```csharp
 MyWindow.PerformClose(this);
 ```
 
-`MyWindow` `NSWindow` 인스턴스를 닫으려고 시도 합니다. 성공적으로 완료 되 면 창이 닫히고 경고 소리가 내보내지고가 열린 상태로 유지 됩니다.
+에서 인스턴스를 닫으려고 시도 `MyWindow` `NSWindow` 합니다. 성공적으로 완료 되 면 창이 닫히고 경고 소리가 내보내지고가 열린 상태로 유지 됩니다.
 
-### <a name="close"></a>Close
+### <a name="close"></a>닫기
 
-`NSWindow`의 `Close` 메서드를 호출 하면 단추를 일시적으로 강조 표시 하 여 창의 **닫기** 단추를 클릭 하면 창이 시뮬레이션 됩니다.
+`Close`의 메서드를 호출 하면 `NSWindow` 단추를 일시적으로 강조 표시 하 여 창의 **닫기** 단추를 클릭할 때 시뮬레이션 하지 않습니다. 창이 닫힙니다.
 
-창을 닫을 때까지 표시 하지 않아도 되며, 창이 닫히는 동안 기본 알림 센터에 `NSWindowWillCloseNotification` 알림이 게시 됩니다.
+창을 닫을 수 없으며 `NSWindowWillCloseNotification` 알림이 닫히는 창에 대 한 기본 알림 센터에 게시 됩니다.
 
-`Close` 메서드는 `PerformClose` 메서드와 중요 한 두 가지 방법으로 다릅니다.
+메서드는 `Close` 메서드에서 두 가지 중요 한 방법으로 다릅니다 `PerformClose` .
 
-1. `WillClose` 이벤트를 발생 시 키 지 않습니다.
+1. 이벤트를 발생 시 키 지 않습니다 `WillClose` .
 2. 사용자가 단추를 일시적으로 강조 표시 하 여 **닫기** 단추를 클릭 하는 것을 시뮬레이션 하지 않습니다.
 
-예를 들면 다음과 같습니다.:
+예를 들어:
 
 ```csharp
 MyWindow.Close();
 ```
 
-`MyWindow` `NSWindow` 인스턴스를 닫습니다.
+인스턴스를 닫습니다 `MyWindow` `NSWindow` .
 
 ## <a name="modified-windows-content"></a>수정 된 windows 콘텐츠
 
-MacOS에서 Apple은 사용자가 창 내용 (`NSWindow`)을 수정 하 고 저장 해야 함을 사용자에 게 알리는 방법을 제공 합니다. 창에 수정 된 내용이 포함 되어 있는 경우 **닫는** 위젯에 작은 검정색 점이 표시 됩니다.
+MacOS에서 Apple은 사용자가 창 내용 ( `NSWindow` )을 수정 하 고 저장 해야 함을 사용자에 게 알리는 방법을 제공 합니다. 창에 수정 된 내용이 포함 되어 있는 경우 **닫는** 위젯에 작은 검정색 점이 표시 됩니다.
 
-[![수정 된 표식을 사용 하 여 창](window-images/close01.png)](window-images/close01.png#lightbox)
+[![수정 된 표식을 포함 하는 창입니다.](window-images/close01.png)](window-images/close01.png#lightbox)
 
 창의 내용에 저장 하지 않은 변경 내용이 있는 상태에서 사용자가 창을 닫거나 Mac 앱을 종료 하려는 경우에는 [대화 상자](~/mac/user-interface/dialog.md) 또는 [모달 시트](~/mac/user-interface/dialog.md) 를 표시 하 고 사용자가 변경 내용을 먼저 저장할 수 있도록 해야 합니다.
 
-[![창이 닫힐 때 표시 되는 저장 시트를 합니다.](window-images/close02.png)](window-images/close02.png#lightbox)
+[![창이 닫힐 때 표시 되는 저장 시트](window-images/close02.png)](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>창을 수정 된 것으로 표시
 
@@ -307,7 +307,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>창을 닫기 전에 변경 내용 저장
 
-사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면 `NSWindowDelegate`의 서브 클래스를 만들고 `WindowShouldClose` 메서드를 재정의 해야 합니다. 예를 들면 다음과 같습니다.:
+사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면의 서브 클래스를 만들고 해당 메서드를 재정의 해야 합니다 `NSWindowDelegate` `WindowShouldClose` . 예를 들어:
 
 ```csharp
 using System;
@@ -402,7 +402,7 @@ Window.Delegate = new EditorWindowDelegate(Window);
 
 ### <a name="saving-changes-before-closing-the-app"></a>앱을 닫기 전에 변경 내용 저장
 
-마지막으로, Xamarin.ios 앱은 해당 창에 수정 된 내용이 포함 되어 있는지 확인 하 고 사용자가 변경 내용을 저장 하도록 허용 하 여 종료 합니다. 이렇게 하려면 `AppDelegate.cs` 파일을 편집 하 고 `ApplicationShouldTerminate` 메서드를 재정의 하 여 다음과 같이 만듭니다.
+마지막으로, Xamarin.ios 앱은 해당 창에 수정 된 내용이 포함 되어 있는지 확인 하 고 사용자가 변경 내용을 저장 하도록 허용 하 여 종료 합니다. 이렇게 하려면 파일을 편집 하 `AppDelegate.cs` 고 메서드를 재정의 하 여 `ApplicationShouldTerminate` 다음과 같이 만듭니다.
 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
@@ -422,11 +422,11 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 ## <a name="working-with-multiple-windows"></a>여러 창에서 작업
 
-대부분의 문서 기반 Mac 응용 프로그램은 여러 문서를 동시에 편집할 수 있습니다. 예를 들어 텍스트 편집기에서 동시에 편집을 위해 여러 텍스트 파일을 열어 둘 수 있습니다. 기본적으로 새 Xamarin.ios 응용 프로그램에는 **새** 항목이 자동으로 `newDocument:` **작업**에 연결 된 **파일** 메뉴가 있습니다.
+대부분의 문서 기반 Mac 응용 프로그램은 여러 문서를 동시에 편집할 수 있습니다. 예를 들어 텍스트 편집기에서 동시에 편집을 위해 여러 텍스트 파일을 열어 둘 수 있습니다. 기본적으로 새 Xamarin.ios 응용 프로그램에는 **File** **New** `newDocument:` **작업**에 자동으로 연결 되는 새 항목을 포함 하는 파일 메뉴가 있습니다.
 
 아래 코드에서는이 새 항목을 활성화 하 고 사용자가 주 창의 여러 복사본을 열어 여러 문서를 한 번에 편집할 수 있도록 합니다.
 
-`AppDelegate.cs` 파일을 편집 하 고 다음 계산 된 속성을 추가 합니다.
+파일을 편집 `AppDelegate.cs` 하 고 다음 계산 된 속성을 추가 합니다.
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -453,11 +453,11 @@ void NewDocument (NSObject sender) {
 
 이 코드는 창 컨트롤러의 새 버전을 만들고, 새 창을 로드 하 고, 기본 및 키 창으로 설정 하 고, 제목으로 설정 합니다. 이제 응용 프로그램을 실행 하 고 **파일** 메뉴에서 **새로 만들기** 를 선택 하면 새 편집기 창이 열리고 표시 됩니다.
 
-[![새 제목 없는 창이 추가](window-images/display04.png)](window-images/display04.png#lightbox)
+[![제목 없음 창이 새로 추가 되었습니다.](window-images/display04.png)](window-images/display04.png#lightbox)
 
 **Windows** 메뉴를 열면 응용 프로그램에서 열려 있는 창을 자동으로 추적 하 고 처리 하는 것을 볼 수 있습니다.
 
-[![windows 메뉴](window-images/display05.png)](window-images/display05.png#lightbox)
+[![Windows 메뉴](window-images/display05.png)](window-images/display05.png#lightbox)
 
 Xamarin.ios 응용 프로그램에서 메뉴를 사용 하는 방법에 대 한 자세한 내용은 [메뉴 작업](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
@@ -469,13 +469,13 @@ Xamarin.ios 응용 프로그램에서 메뉴를 사용 하는 방법에 대 한 
 var window = NSApplication.SharedApplication.KeyWindow;
 ```
 
-현재 키 창에 액세스 해야 하는 모든 클래스 또는 메서드에서 호출 될 수 있습니다. 현재 열려 있는 창이 없으면 `null`반환 됩니다.
+현재 키 창에 액세스 해야 하는 모든 클래스 또는 메서드에서 호출 될 수 있습니다. 현재 열려 있는 창이 없으면을 반환 `null` 합니다.
 
 ### <a name="accessing-all-app-windows"></a>모든 앱 창에 액세스
 
 Xamarin.ios 앱이 현재 열려 있는 모든 창에 액세스 해야 하는 경우가 있을 수 있습니다. 예를 들어 사용자가 열려는 파일이 종료 창에 이미 열려 있는지 여부를 확인 합니다.
 
-`NSApplication.SharedApplication`는 앱에서 열려 있는 모든 창의 배열을 포함 하는 `Windows` 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 예를 들면 다음과 같습니다.:
+는 `NSApplication.SharedApplication` `Windows` 앱에서 열려 있는 모든 창의 배열을 포함 하는 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 예를 들어:
 
 ```csharp
 // Is the file already open?
@@ -489,11 +489,11 @@ for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
 }
 ```
 
-예제 코드에서는 반환 된 각 창을 앱의 사용자 지정 `ViewController` 클래스로 캐스팅 하 고 사용자가 열려는 파일의 경로에 대해 사용자 지정 `Path` 속성의 값을 테스트 합니다. 파일이 이미 열려 있는 경우 해당 창을 맨 앞으로 가져오는 것입니다.
+예제 코드에서는 반환 된 각 창을 앱의 사용자 지정 클래스로 캐스팅 하 `ViewController` 고 `Path` 사용자가 열려는 파일의 경로에 대해 사용자 지정 속성의 값을 테스트 합니다. 파일이 이미 열려 있는 경우 해당 창을 맨 앞으로 가져오는 것입니다.
 
 ## <a name="adjusting-the-window-size-in-code"></a>코드에서 창 크기 조정
 
-응용 프로그램에서 코드의 창 크기를 조정 해야 하는 경우가 있습니다. 창의 크기를 조정 하 고 위치를 변경 하려면 `Frame` 속성을 조정 합니다. 창 크기를 조정할 때는 일반적으로 macOS 좌표계로 인해 창을 동일한 위치에 유지 하기 위해 원본도 조정 해야 합니다.
+응용 프로그램에서 코드의 창 크기를 조정 해야 하는 경우가 있습니다. 창의 크기를 조정 하 고 위치를 변경 하려면 속성의 크기를 조정 `Frame` 합니다. 창 크기를 조정할 때는 일반적으로 macOS 좌표계로 인해 창을 동일한 위치에 유지 하기 위해 원본도 조정 해야 합니다.
 
 왼쪽 위 모퉁이가 (0, 0)를 나타내는 iOS와 달리 macOS는 화면의 왼쪽 아래 모퉁이가 (0, 0)를 나타내는 수학 좌표계를 사용 합니다. IOS에서 좌표는 오른쪽 아래로 이동할 때 증가 합니다. MacOS에서 좌표는 오른쪽의 값을 늘립니다. 
 
@@ -517,11 +517,11 @@ SetFrame (frame, true);
 
 Xamarin.ios 앱 내에서 창의 크기 변경을 모니터링 해야 하는 경우가 있을 수 있습니다. 예를 들어 새 크기에 맞게 콘텐츠를 다시 그리도록 합니다.
 
-크기 변경을 모니터링 하려면 먼저 Xcode의 Interface Builder 창 컨트롤러에 대 한 사용자 지정 클래스를 할당 했는지 확인 합니다. 예를 들어 다음 `MasterWindowController` 합니다.
+크기 변경을 모니터링 하려면 먼저 Xcode의 Interface Builder 창 컨트롤러에 대 한 사용자 지정 클래스를 할당 했는지 확인 합니다. 예를 들면 `MasterWindowController` 다음과 같습니다.
 
-[![](window-images/resize01.png "The Identity Inspector")](window-images/resize01.png#lightbox)
+[![Identity Inspector](window-images/resize01.png)](window-images/resize01.png#lightbox)
 
-그런 다음 사용자 지정 창 컨트롤러 클래스를 편집 하 고 컨트롤러의 창에서 `DidResize` 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 예를 들면 다음과 같습니다.:
+다음으로, 사용자 지정 창 컨트롤러 클래스를 편집 하 고 `DidResize` 컨트롤러 창의 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 예를 들어:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -534,7 +534,7 @@ public override void WindowDidLoad ()
 }
 ```
 
-필요에 따라 사용자가 창의 크기 변경을 완료 한 후에만 `DidEndLiveResize` 이벤트를 사용 하 여 알릴 수 있습니다. 예를 들어
+필요에 따라 이벤트를 사용 `DidEndLiveResize` 하 여 사용자가 창의 크기 변경을 완료 한 후에만 알릴 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public override void WindowDidLoad ()
@@ -550,9 +550,9 @@ public override void WindowDidLoad ()
 
 ## <a name="setting-a-windows-title-and-represented-file"></a>창의 제목 및 표시 된 파일 설정
 
-문서를 나타내는 창에서 작업 하는 경우 `NSWindow`에는 `DocumentEdited` 속성이 있습니다 .이 속성을 `true`로 설정 하면 닫기 단추에 작은 점이 표시 되어 사용자에 게 파일이 수정 되었음을 표시 하 고 닫기 전에 저장 해야 합니다.
+문서를 나타내는 창에서 작업 하는 경우에는 속성을 사용 합니다 .이 속성에는 `NSWindow` `DocumentEdited` `true` 닫기 단추에 작은 점이 표시 됩니다.
 
-`ViewController.cs` 파일을 편집 하 고 다음과 같이 변경 하겠습니다.
+`ViewController.cs`파일을 편집 하 고 다음과 같이 변경 하겠습니다.
 
 ```csharp
 public bool DocumentEdited {
@@ -599,19 +599,19 @@ public override void AwakeFromNib ()
 }
 ```
 
-또한 창에서 `WillClose` 이벤트를 모니터링 하 고 `DocumentEdited` 속성의 상태를 확인 합니다. `true` 경우에는 파일에 대 한 변경 내용을 저장 하는 기능을 사용자에 게 제공 해야 합니다. 앱을 실행 하 고 일부 텍스트를 입력 하면 점이 표시 됩니다.
+또한 `WillClose` 창에서 이벤트를 모니터링 하 고 속성의 상태를 확인 `DocumentEdited` 합니다. 사용자에 게 `true` 파일에 대 한 변경 내용을 저장 하는 기능을 제공 해야 하는 경우 앱을 실행 하 고 일부 텍스트를 입력 하면 점이 표시 됩니다.
 
-[![](window-images/file01.png "A changed window")](window-images/file01.png#lightbox)
+[![변경 된 창](window-images/file01.png)](window-images/file01.png#lightbox)
 
 창을 닫으려고 하면 다음과 같은 경고 메시지가 표시 됩니다.
 
-[![](window-images/file02.png "Displaying a save dialog")](window-images/file02.png#lightbox)
+[![저장 대화 상자 표시](window-images/file02.png)](window-images/file02.png#lightbox)
 
-파일에서 문서를 로드 하는 경우 `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` 메서드를 사용 하 여 창의 제목을 파일 이름으로 설정 합니다 (`path`가 열려 있는 파일을 나타내는 문자열). 또한 `window.RepresentedUrl = url;` 메서드를 사용 하 여 파일의 URL을 설정할 수 있습니다.
+파일에서 문서를 로드 하는 경우 메서드를 사용 하 여 창의 제목을 파일 이름으로 설정 `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` `path` 합니다 .이 문자열은 열려 있는 파일을 나타내는 문자열입니다. 또한 메서드를 사용 하 여 파일의 URL을 설정할 수 있습니다 `window.RepresentedUrl = url;` .
 
 URL이 OS에서 알려진 파일 형식을 가리키는 경우 해당 아이콘이 제목 표시줄에 표시 됩니다. 사용자가 아이콘을 마우스 오른쪽 단추로 클릭 하면 파일 경로가 표시 됩니다.
 
-`AppDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
+파일을 편집 `AppDelegate.cs` 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
 [Export ("openDocument:")]
@@ -660,19 +660,19 @@ void OpenDialog (NSObject sender)
 
 새 창을 추가 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
+1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
 2. **라이브러리** 에서 새 **창 컨트롤러** 를 끌어 **Design Surface**에 놓습니다.
 
-    [![라이브러리에서 새 창 컨트롤러를 선택](window-images/new01.png)](window-images/new01.png#lightbox)
-3. **Identity Inspector**에서 **Storyboard id**에 대 한 `PreferencesWindow`를 입력 합니다. 
+    [![라이브러리에서 새 창 컨트롤러 선택](window-images/new01.png)](window-images/new01.png#lightbox)
+3. **Id 검사자**에서 `PreferencesWindow` **스토리 보드 ID**로을 입력 합니다. 
 
     [![스토리 보드 ID 설정](window-images/new02.png)](window-images/new02.png#lightbox)
 4. 인터페이스 디자인: 
 
     [![UI 디자인](window-images/new03.png)](window-images/new03.png#lightbox)
-5. 앱 메뉴 (`MacWindows`)를 열고, **기본 설정 ...** 을 선택 하 고, 컨트롤을 클릭 한 다음 새 창으로 끕니다. 
+5. 앱 메뉴 ( `MacWindows` )를 열고, **기본 설정 ...** 을 선택 하 고, 컨트롤을 클릭 한 다음 새 창으로 끕니다. 
 
-    [![segue를 만드는](window-images/new05.png)](window-images/new05.png#lightbox)
+    [![Segue 만들기](window-images/new05.png)](window-images/new05.png#lightbox)
 6. 팝업 메뉴에서 **표시** 를 선택 합니다.
 7. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
@@ -687,11 +687,11 @@ void OpenDialog (NSObject sender)
 Xamarin.ios 응용 프로그램에서 만들고 사용 하는 다른 유형의 창과 마찬가지로 프로세스는 기본적으로 동일 합니다.
 
 1. 새 창 정의를 프로젝트에 추가 합니다.
-2. `.xib` 파일을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 창 디자인을 엽니다.
+2. 파일을 두 번 클릭 `.xib` 하 여 Xcode의 Interface Builder에서 편집할 창 디자인을 엽니다.
 3. **특성 검사자** 및 **크기 검사자**에서 필요한 창 속성을 설정 합니다.
 4. 인터페이스를 빌드하고 **특성 검사자**에서 구성 하는 데 필요한 컨트롤을 끌어 옵니다.
 5. **크기 검사기** 를 사용 하 여 UI 요소의 크기 조정을 처리 합니다.
-6. **콘센트** 및 **작업**을 통해 코드에 C# 창의 UI 요소를 노출 합니다.
+6. **콘센트** 및 **작업**을 통해 c # 코드에 창의 UI 요소를 노출 합니다.
 7. 변경 내용을 저장 하 고 다시 Mac용 Visual Studio로 전환 하 여 Xcode와 동기화 합니다.
 
 **특성 검사자**의 패널에는 다음과 같은 옵션이 있습니다.
@@ -704,36 +704,36 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 다른 유형의 �
 
 새 패널을 추가 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일**...을 선택 합니다.
-2. 새 파일 대화 상자에서 컨트롤러를 사용 하 여 **xamarin.ios** > **cocoa 창**을 선택 합니다.
+1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 파일**...을 선택 합니다.
+2. 새 파일 대화 상자에서 컨트롤러를 사용 하는 **xamarin.ios**  >  **cocoa 창**을 선택 합니다.
 
-    [![새 창 컨트롤러를 추가](window-images/panels00.png)](window-images/panels00.png#lightbox)
+    [![새 창 컨트롤러 추가](window-images/panels00.png)](window-images/panels00.png#lightbox)
 
 3. **이름**에 대해 `DocumentPanel`를 입력하고 **새로 만들기** 단추를 클릭합니다.
-4. `DocumentPanel.xib` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 
+4. 파일을 두 번 클릭 `DocumentPanel.xib` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 
 
     [![패널 편집](window-images/new02.png)](window-images/new02.png#lightbox)
 
 5. 기존 창을 삭제 하 고 **인터페이스 편집기**에서 **라이브러리 검사기** 의 패널을 끕니다. 
 
-    [![기존 창을 삭제](window-images/panels01.png)](window-images/panels01.png#lightbox)
+    [![기존 창 삭제](window-images/panels01.png)](window-images/panels01.png#lightbox)
 
-6. 패널을 **파일의 소유자** - **창** 에 연결 - **콘센트**에 연결 합니다. 
+6. 패널을 **파일의 소유자**  -  **창**  -  **콘센트**에 연결 합니다. 
 
-    [![마우스로 끌어 패널을 연결](window-images/panels02.png)](window-images/panels02.png#lightbox)
+    [![끌어서 패널 연결](window-images/panels02.png)](window-images/panels02.png#lightbox)
 
-7. **Id 검사자** 로 전환 하 고 패널의 클래스를 `DocumentPanel`설정 합니다. 
+7. **Id 검사자** 로 전환 하 고 패널의 클래스를로 설정 합니다 `DocumentPanel` . 
 
-    [![패널의 클래스를 설정](window-images/panels03.png)](window-images/panels03.png#lightbox)
+    [![패널의 클래스 설정](window-images/panels03.png)](window-images/panels03.png#lightbox)
 
 8. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
-9. `DocumentPanel.cs` 파일을 편집 하 고 클래스 정의를 다음과 같이 변경 합니다. 
+9. 파일을 편집 `DocumentPanel.cs` 하 고 클래스 정의를 다음과 같이 변경 합니다. 
 
     `public partial class DocumentPanel : NSPanel`
 
-10. 파일의 변경 내용을 저장합니다.
+10. 변경 내용을 파일에 저장합니다.
 
-`AppDelegate.cs` 파일을 편집 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
+파일을 편집 `AppDelegate.cs` 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -747,14 +747,14 @@ public override void DidFinishLaunching (NSNotification notification)
 
 응용 프로그램을 실행 하는 경우 패널이 표시 됩니다.
 
-[![실행 중인 앱에서 패널](window-images/panels04.png)](window-images/panels04.png#lightbox)
+[![실행 중인 앱의 패널](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > 패널 창은 Apple에서 더 이상 사용 되지 않으므로 **검사기 인터페이스로**바꾸어야 합니다. Xamarin.ios 앱에서 **검사기** 를 만드는 전체 예제는 [macinspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) 샘플 앱을 참조 하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램에서 창과 패널을 사용 하는 방법에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 창과 패널을 만들고 유지 관리 하는 방법 및 코드에서 C# 창과 패널을 사용 하는 방법에 대 한 다양 한 형식 및 사용 방법을 살펴보았습니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 창과 패널을 사용 하는 방법에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 창과 패널을 만들고 유지 관리 하는 방법 및 c # 코드에서 창과 패널을 사용 하는 방법에 대 한 다양 한 형식 및 사용 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

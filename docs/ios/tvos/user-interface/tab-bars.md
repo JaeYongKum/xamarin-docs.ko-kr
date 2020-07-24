@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 0e6edaccb9e0c163ee46c59ed11769476037aa90
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a462e3adf4109cc9a7a2e17e775609e2c3c81906
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573549"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938881"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Xamarin에서 tvOS 탭 모음 컨트롤러 작업
 
 여러 유형의 tvOS apps의 경우 기본 탐색이 화면 위쪽에서 실행 되는 탭 막대로 표시 됩니다. 사용자는 사용 가능한 범주 목록에서 왼쪽과 오른쪽으로 swipes 사용자의 선택 항목을 반영 하도록 변경 내용 아래의 콘텐츠 영역을 표시 합니다.
 
-[![](tab-bars-images/tab01.png "Sample Tab Bar")](tab-bars-images/tab01.png#lightbox)
+[![샘플 탭 모음](tab-bars-images/tab01.png)](tab-bars-images/tab01.png#lightbox)
 
 탭 모음은 기본적으로 반투명 이며 항상 화면 맨 위에 표시 됩니다. 포커스가 있는 경우 탭 모음은 화면의 상위 140 픽셀을 포함 하지만 아래 콘텐츠 영역으로 포커스가 이동 하면 신속 하 게 밉니다.
 
@@ -62,22 +62,22 @@ TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer�
 
 1. 새 tvOS 앱을 시작 하 고 **tvOS**  >  **app**  >  **탭 앱**을 선택 합니다. 
 
-    [![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
+    [![탭 앱 선택](tab-bars-images/tab02.png)](tab-bars-images/tab02.png#lightbox)
 1. 모든 프롬프트를 따라 새 tvOS 솔루션을 만듭니다.
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 지정 된 범주의 **아이콘이** 나 **제목을** 변경 하려면 **문서 개요**에서 **보기 컨트롤러** 에 대 한 **탭 모음 항목** 을 선택 합니다.
 
-    [![](tab-bars-images/tab03a.png "The Tab Bar Item for the View Controller in the Document Outline")](tab-bars-images/tab03a.png#lightbox)
+    [![문서 개요의 뷰 컨트롤러에 대 한 탭 모음 항목](tab-bars-images/tab03a.png)](tab-bars-images/tab03a.png#lightbox)
 1. 그런 다음 **속성 탐색기**의 **위젯 탭** 에서 필요한 속성을 설정 합니다. 
 
-    [![](tab-bars-images/tab03.png "The Widget Tab")](tab-bars-images/tab03.png#lightbox)
+    [![위젯 탭](tab-bars-images/tab03.png)](tab-bars-images/tab03.png#lightbox)
 1. 새 범주 (탭)를 추가 하려면 **뷰 컨트롤러** 를 디자인 화면에 놓습니다. 
 
-    [![](tab-bars-images/tab04.png "A View Controller")](tab-bars-images/tab04.png#lightbox)
+    [![뷰 컨트롤러](tab-bars-images/tab04.png)](tab-bars-images/tab04.png#lightbox)
 1. Ctrl 키를 누른 다음 **탭 뷰 컨트롤러** 에서 새 **뷰 컨트롤러로**끕니다.
 1. 팝업에서 **컨트롤러 보기** 를 선택 하 여 새 보기를 탭 (범주)으로 추가 합니다. 
 
-    [![](tab-bars-images/tab05.png "Select Tab")](tab-bars-images/tab05.png#lightbox)
+    [![탭 선택](tab-bars-images/tab05.png)](tab-bars-images/tab05.png#lightbox)
 1. IOS 디자이너에서 UI 요소를 추가 하 여 각 Caterogies 콘텐츠 영역에 대 한 UI 레이아웃을 일반적인 방식으로 디자인 합니다.
 1. C # 코드에서 UI 컨트롤을 사용 하는 데 필요한 모든 이벤트를 노출 합니다.
 1. C # 코드에 노출 하려는 모든 UI 컨트롤의 이름을 표시 합니다.
@@ -87,22 +87,22 @@ TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer�
 
 1. 새 tvOS 앱을 시작 하 고 **tvOS**  >  **app**  >  **탭 앱**을 선택 합니다. 
 
-    [![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
+    [![탭 앱 선택](tab-bars-images/tab02vs.png)](tab-bars-images/tab02vs.png#lightbox)
 1. 모든 프롬프트를 따라 새 tvOS 솔루션을 만듭니다.
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 지정 된 범주의 **아이콘이** 나 **제목을** 변경 하려면 **문서 개요**에서 **보기 컨트롤러** 에 대 한 **탭 모음 항목** 을 선택 합니다.
 
-    [![](tab-bars-images/tab03avs.png "The View Controller in the Document Outline")](tab-bars-images/tab03avs.png#lightbox)
+    [![문서 개요의 뷰 컨트롤러](tab-bars-images/tab03avs.png)](tab-bars-images/tab03avs.png#lightbox)
 1. 그런 다음 **속성 탐색기**의 **위젯 탭** 에서 필요한 속성을 설정 합니다. 
 
-    [![](tab-bars-images/tab03vs.png "The Widget Tab")](tab-bars-images/tab03vs.png#lightbox)
+    [![위젯 탭](tab-bars-images/tab03vs.png)](tab-bars-images/tab03vs.png#lightbox)
 1. 새 범주 (탭)를 추가 하려면 **도구 상자** 에서 **보기 컨트롤러** 를 끌어서 디자인 화면에 놓습니다. 
 
-    [![](tab-bars-images/tab04vs.png "A View Controller")](tab-bars-images/tab04vs.png#lightbox)
+    [![뷰 컨트롤러](tab-bars-images/tab04vs.png)](tab-bars-images/tab04vs.png#lightbox)
 1. Ctrl 키를 누른 다음 **탭 뷰 컨트롤러** 에서 새 **뷰 컨트롤러로**끕니다.
 1. 팝업에서 **컨트롤러 보기** 를 선택 하 여 새 보기를 탭 (범주)으로 추가 합니다. 
 
-    [![](tab-bars-images/tab05vs.png "Select Tab")](tab-bars-images/tab05vs.png#lightbox)
+    [![탭 선택](tab-bars-images/tab05vs.png)](tab-bars-images/tab05vs.png#lightbox)
 1. IOS 디자이너에서 UI 요소를 추가 하 여 각 Caterogies 콘텐츠 영역에 대 한 UI 레이아웃을 일반적인 방식으로 디자인 합니다.
 1. C # 코드에서 UI 컨트롤을 사용 하는 데 필요한 모든 이벤트를 노출 합니다.
 1. C # 코드에 노출 하려는 모든 UI 컨트롤의 이름을 표시 합니다.
@@ -134,7 +134,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 실행 시 다음과 같은 결과가 생성 됩니다.
 
-[![](tab-bars-images/tab06.png "A Tab Bar Item with badge")](tab-bars-images/tab06.png#lightbox)
+[![배지를 포함 하는 탭 모음 항목](tab-bars-images/tab06.png)](tab-bars-images/tab06.png#lightbox)
 
 `Title`의 속성을 사용 `UITabBarItem` 하 여 제목을 변경 하 고 `Image` 속성을 변경 하 여 아이콘을 변경 합니다.
 

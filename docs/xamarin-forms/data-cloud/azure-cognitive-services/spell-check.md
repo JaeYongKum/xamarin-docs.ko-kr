@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4c07f2667230695c6b884eb4902e68f7f4120f6b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139297"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939505"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API 사용 하 여 맞춤법 검사
 
@@ -157,9 +157,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 이 코드는 컬렉션을 반복 `FlaggedTokens` 하 고 소스 텍스트에서 철자가 잘못 되거나 문법적으로 잘못 된 단어를 첫 번째 제안으로 바꿉니다. 다음 스크린샷는 맞춤법 검사 전후에 표시 됩니다.
 
-![](spell-check-images/before-spell-check.png "Before Spell Check")
+![Spell Check 하기 전](spell-check-images/before-spell-check.png)
 
-![](spell-check-images/after-spell-check.png "After Spell Check")
+![Spell Check 후](spell-check-images/after-spell-check.png)
 
 > [!NOTE]
 > 위의 예제에서는 `Replace` 편의상를 사용 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 있습니다. API는 업데이트를 `offset` 수행 하기 위해 원본 텍스트에서 올바른 위치를 식별 하기 위해 프로덕션 앱에서 사용 해야 하는 값을 제공 합니다.

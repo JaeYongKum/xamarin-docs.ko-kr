@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 69886a0da53d419a0c40bdf34f91d301c9efe504
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d9e8d91b03a5a82373012da215bd29a747e67d3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573718"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939453"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스 사용
 
@@ -20,7 +20,7 @@ _이 문서에서는 tvOS 앱 내부에서의 탐색을 제공 하 고 처리 �
 
 이 문서에서는 tvOS 앱의 사용자 인터페이스에서 [탐색](#Navigation) 을 처리 하는 데 [중점](#Focus-and-Selection) 의 개념과이를 사용 하는 방법을 설명 합니다. 기본 제공 tvOS 탐색 컨트롤이 포커스, 강조 표시 및 선택 항목을 사용 하 여 tvOS 앱의 사용자 인터페이스 탐색을 제공 하는 방법을 살펴보겠습니다.
 
-[![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
+[![tvOS apps 사용자 인터페이스 탐색](navigation-focus-images/intro01.png)](navigation-focus-images/intro01.png#lightbox)
 
 다음으로, [시차](#Focus-and-Parallax) 및 *계층화 된 이미지* 에서 포커스를 사용 하 여 최종 사용자에 게 현재 탐색 상태를 시각적으로 파악할 수 있는 방법을 살펴보겠습니다.
 
@@ -34,7 +34,7 @@ TvOS 앱의 사용자는 iOS를 사용 하 여 장치 화면에서 이미지를 
 
 성공적인 tvOS 앱은 탐색 자체를 호출 하지 않고 응용 프로그램에서 제공 하는 데이터의 구조와 앱의 용도를 원활 하 게 지 원하는 방식으로 탐색을 구현 합니다. 사용자 인터페이스를 dominating 하거나 콘텐츠와 앱 사용자 환경에서 포커스를 그리지 않고도 자연스럽 고 친숙 하도록 탐색을 디자인 합니다.
 
-[![](navigation-focus-images/nav01.png "The tvOS settings app")](navigation-focus-images/nav01.png#lightbox)
+[![TvOS settings 앱](navigation-focus-images/nav01.png)](navigation-focus-images/nav01.png#lightbox)
 
 Apple TV를 사용 하는 동안 사용자는 일반적으로 지정 된 콘텐츠 집합을 제시 하는 누적 된 화면 집합을 탐색 합니다. 그리고 모든 새 화면에는 [단추](~/ios/tvos/user-interface/buttons.md), [탭 모음](~/ios/tvos/user-interface/tab-bars.md), 테이블, [컬렉션 뷰](~/ios/tvos/user-interface/collection-views.md) 또는 [분할 뷰와](~/ios/tvos/user-interface/split-views.md)같은 표준 UI 컨트롤을 사용 하 여 하나 이상의 콘텐츠 하위 화면이 나타날 수 있습니다.
 
@@ -57,7 +57,7 @@ Apple은 tvOS 앱에 대 한 탐색을 설계할 때 다음 사항을 염두에 
 
 Apple TV에서 이미지, 단추 또는 기타 UI 요소는 현재 탐색의 대상인 경우 _포커스에 있는_ 것으로 간주 됩니다.
 
-[![](navigation-focus-images/focus01.png "Focus and Selection example")](navigation-focus-images/focus01.png#lightbox)
+[![포커스 및 선택 예제](navigation-focus-images/focus01.png)](navigation-focus-images/focus01.png#lightbox)
 
 사용자가 장치 터치 스크린의 요소와 직접 상호 작용 하는 iOS 장치와 달리 사용자는 Siri 원격을 사용 하 여 실내에서 tvOS 요소와 상호 작용 합니다. 이 사용자 상호 작용을 제공 하 고 처리 하기 위해 Apple TV는 _포커스_ 기반 모델을 사용 합니다.
 
@@ -80,7 +80,7 @@ Apple에는 포커스 및 선택 작업에 대 한 다음과 같은 제안이 �
 
 ### <a name="working-with-focus"></a>포커스 작업
 
-포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 재정의 `CanBecomeFocused` 하 고 `true` 를 반환 합니다. 그렇지 않으면을 반환 `false` 합니다. 예를 들면 다음과 같습니다.
+포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 재정의 `CanBecomeFocused` 하 고 `true` 를 반환 합니다. 그렇지 않으면을 반환 `false` 합니다. 예를 들어:
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-언제 든 지 `Focused` 컨트롤의 속성을 사용 하 여 `UIKit` 현재 항목 인지 확인할 수 있습니다. `true`현재 UI 항목에 포커스가 있는 경우에는 그렇지 않습니다. 예를 들면 다음과 같습니다.
+언제 든 지 `Focused` 컨트롤의 속성을 사용 하 여 `UIKit` 현재 항목 인지 확인할 수 있습니다. `true`현재 UI 항목에 포커스가 있는 경우에는 그렇지 않습니다. 예를 들어:
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만 해당 속성을로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다 `PreferredFocusedView` `true` . 예를 들면 다음과 같습니다.
+코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만 해당 속성을로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다 `PreferredFocusedView` `true` . 예를 들어:
 
 ```csharp
 // Make the play button the starting focus item
@@ -134,7 +134,7 @@ TvOS에 기본 제공 되는 포커스 엔진은 가로 및 세로 모눈에 속
 
 예를 들어 다음 UI 레이아웃을 사용 합니다.
 
- [![](navigation-focus-images/guide01.png "Working with Focus Guides example")](navigation-focus-images/guide01.png#lightbox)
+ [![포커스 가이드 작업 예제](navigation-focus-images/guide01.png)](navigation-focus-images/guide01.png#lightbox)
 
 **추가 정보** 단추는 **구매** 단추를 사용 하 여 가로 및 세로 모눈에 속하지 않으므로 사용자는 액세스할 수 없습니다. 그러나 포커스 엔진에 이동 힌트를 제공 하기 위해 _포커스 가이드_ 를 사용 하 여 쉽게 수정할 수 있습니다. 
 
@@ -164,9 +164,9 @@ public override void ViewDidLoad ()
 
 먼저 `UIFocusGuide` 메서드를 사용 하 여 새를 만들고 뷰의 레이아웃 안내선 컬렉션에 추가 합니다 `AddLayoutGuide` .
 
-그런 다음, 포커스 가이드의 위쪽, 왼쪽, 너비 및 높이 앵커는 **추가 정보** 및 **구입** 단추를 기준으로 조정 되어 서로 배치 됩니다. 참조
+그런 다음, 포커스 가이드의 위쪽, 왼쪽, 너비 및 높이 앵커는 **추가 정보** 및 **구입** 단추를 기준으로 조정 되어 서로 배치 됩니다. 다음을 참조하세요.
 
-[![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
+[![예제 포커스 가이드](navigation-focus-images/guide02.png)](navigation-focus-images/guide02.png#lightbox)
 
 또한 속성을로 설정 하 여 새 제약 조건이 생성 될 때 활성화 되 고 있다는 점에 유의 해야 합니다 `Active` `true` .
 
@@ -204,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 첫째,이 코드는 `NextFocusedView` `UIFocusUpdateContext` ()에 전달 된의을 가져옵니다 `context` . 이 뷰가 이면 `null` 처리가 필요 하지 않으며 메서드가 종료 됩니다.
 
-그런 다음 `nextFocusableItem` 이 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 속성을 사용 하 여 반대 단추에 포커스를 보냅니다 `PreferredFocusedView` . 예를 들면 다음과 같습니다.
+그런 다음 `nextFocusableItem` 이 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 속성을 사용 하 여 반대 단추에 포커스를 보냅니다 `PreferredFocusedView` . 예를 들어:
 
 ```csharp
 // Move from the More Info to Buy button
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>컬렉션에서 포커스 사용
 
-개별 항목을 또는에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionView` `UITableView` 또는의 메서드를 `UICollectionViewDelegate` 각각 재정의 `UITableViewDelegate` 합니다. 예를 들면 다음과 같습니다.
+개별 항목을 또는에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionView` `UITableView` 또는의 메서드를 `UICollectionViewDelegate` 각각 재정의 `UITableViewDelegate` 합니다. 예를 들어:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout

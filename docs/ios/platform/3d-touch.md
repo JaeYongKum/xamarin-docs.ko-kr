@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: b69328b00778b0c3c03cd4d954b2e0bef33e4784
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d50f104b8b6e3e82fb7e9d6dbea45757742a5739
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574602"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937035"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.ios의 3D 터치 소개
 
 _이 문서에서는 앱에서 새로운 iPhone 6s 및 iPhone 6s와 3D 터치 제스처를 사용 하는 방법을 설명 합니다._
 
-[![](3d-touch-images/info01.png "Examples of 3D Touch enabled apps")](3d-touch-images/info01.png#lightbox)
+[![3D Touch 사용 앱의 예](3d-touch-images/info01.png)](3d-touch-images/info01.png#lightbox)
 
 이 문서에서는 새로운 3D 터치 Api를 사용 하 여 새로운 iPhone 6s 및 iPhone 6s Plus 장치에서 실행 되는 Xamarin.ios 앱에 압력 민감한 제스처를 추가 하는 방법을 소개 합니다.
 
@@ -39,7 +39,7 @@ _이 문서에서는 앱에서 새로운 iPhone 6s 및 iPhone 6s와 3D 터치 �
 
 위에서 설명한 것 처럼 [UITouch](xref:UIKit.UITouch) 클래스의 새 속성을 사용 하 여 사용자가 iOS 장치의 화면에 적용 하는 압력의 양을 측정 하 고 사용자 인터페이스에서이 정보를 사용할 수 있습니다. 예를 들어 압력 정도를 기준으로 브러시 스트로크를 투명 하거나 불투명 하 게 만듭니다.
 
-[![](3d-touch-images/pressure01.png "A brush stroke rendered as more translucent or opaque based on the amount of pressure")](3d-touch-images/pressure01.png#lightbox)
+[![압력 양에 따라 투명 하거나 불투명 하 게 렌더링 된 브러시 스트로크](3d-touch-images/pressure01.png)](3d-touch-images/pressure01.png#lightbox)
 
 3D 터치의 결과로 앱이 iOS 9 이상에서 실행 중이 고 iOS 장치에서 3D 터치를 지원할 수 있는 경우 압력의 변경으로 인해 `TouchesMoved` 이벤트가 발생 합니다.
 
@@ -77,7 +77,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 예를 들어 앱이 메시지 테이블을 표시 하는 경우 사용자는 항목의 하드을 눌러 오버레이 보기에서 콘텐츠를 미리 볼 수 있습니다 (Apple에서 *Peek*로 참조).
 
-[![](3d-touch-images/peekandpop01.png "An example of Peeking at content")](3d-touch-images/peekandpop01.png#lightbox)
+[![콘텐츠 보기의 예](3d-touch-images/peekandpop01.png)](3d-touch-images/peekandpop01.png#lightbox)
 
 사용자가 더 이상 사용 되지 않는 경우 일반 메시지 보기 (뷰로 *팝업*이라고 함)가 시작 됩니다.
 
@@ -205,7 +205,7 @@ public override void ViewDidLoad ()
 
 위에서 설명한 것 처럼 사용자가 데스크톱 앱에서 항목을 마우스 오른쪽 단추로 클릭할 때 팝업 될 수 있는 상황에 맞는 메뉴와 같은 빠른 작업을 생각해 볼 수 있습니다. 빠른 작업을 사용 하 여 앱의 가장 일반적인 기능 또는 기능에 대 한 바로 가기를 제공 해야 합니다.
 
-[![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png#lightbox)
+[![빠른 작업 메뉴의 예](3d-touch-images/quickactions01.png)](3d-touch-images/quickactions01.png#lightbox)
 
 ### <a name="defining-static-quick-actions"></a>정적 빠른 작업 정의
 
@@ -270,7 +270,7 @@ public override void ViewDidLoad ()
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-  ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![UIApplicationShortcutIconType 이미지](3d-touch-images/uiapplicationshortcuticontype.png)
 
 - `UIApplicationShortcutItemSubtitle`-항목에 대 한 부제목을 정의 합니다.
 - `UIApplicationShortcutItemTitle`-항목의 제목을 정의 합니다.
@@ -430,7 +430,7 @@ Xcode 및 트랙 패드를 사용 하 Force Touch 여 호환 가능한 Mac에서
 
 이 기능을 사용 하도록 설정 하려면 3D 터치를 지 원하는 시뮬레이션 된 iPhone 하드웨어 (iPhone 6s 이상)에서 앱을 실행 합니다. 그런 다음 iOS 시뮬레이터에서 **하드웨어** 메뉴를 선택 하 고 **3D Touch에 트랙 패드 Force 사용** 메뉴 항목을 사용 하도록 설정 합니다.
 
-[![](3d-touch-images/simulator01.png "Select the Hardware menu in the iOS Simulator and enable the Use Trackpad Force for 3D touch menu item")](3d-touch-images/simulator01.png#lightbox)
+[![IOS 시뮬레이터에서 하드웨어 메뉴를 선택 하 고 3D touch에 트랙 패드 Force 사용 메뉴 항목을 사용 하도록 설정 합니다.](3d-touch-images/simulator01.png)](3d-touch-images/simulator01.png#lightbox)
 
 이 기능을 활성화 하 고 나면 Mac의 트랙 패드를 사용 하 여 실제 iPhone 하드웨어 에서처럼 3D 터치를 사용 하도록 설정할 수 있습니다.
 

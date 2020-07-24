@@ -7,25 +7,25 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0358e1570a5e38e008894a7eb9b6ca1985a0fed0
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572267"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997256"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Xamarin의 watchOS Table 컨트롤
 
 WatchOS `WKInterfaceTable` 컨트롤은 해당 iOS에 해당 하는 것 보다 훨씬 더 간단 하지만 유사한 역할을 수행 합니다. 사용자 지정 레이아웃을 가질 수 있고 터치 이벤트에 응답 하는 행의 스크롤 목록을 만듭니다.
 
-![](table-images/table-list-sml.png "조사식 테이블 목록") ![](table-images/table-detail-sml.png)
+![조사식 테이블 목록 ](table-images/table-list-sml.png) ![ 조사식 테이블 세부 정보](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="adding-a-table"></a>열 추가
 
 **테이블** 컨트롤을 장면으로 끌어 옵니다. 기본적으로 다음과 같이 표시 됩니다 (지정 되지 않은 단일 행 레이아웃 표시).
 
-[![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png#lightbox)
+[![테이블 추가](table-images/add-table-sml.png)](table-images/add-table.png#lightbox)
 
 코드에서 참조할 수 있도록 **속성** 패드의 **이름** 상자에 테이블 이름을 지정 합니다.
 
@@ -35,7 +35,7 @@ WatchOS `WKInterfaceTable` 컨트롤은 해당 iOS에 해당 하는 것 보다 �
 
 행 컨트롤러에 대 한 **클래스** 를 설정 하려면 **문서 개요** 에서 행을 선택 하 고 **속성** 패드에 클래스 이름을 입력 합니다.
 
-[![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
+[![속성 패드에 클래스 이름 입력](table-images/add-row-controller-sml.png)](table-images/add-row-controller.png#lightbox)
 
 행의 컨트롤러에 대 한 클래스를 설정 하면 IDE에서 프로젝트에 해당 c # 파일을 만듭니다. 컨트롤 (예: 레이블)을 행에 끌어다 놓고 코드에서 참조할 수 있도록 이름을 지정 합니다.
 
@@ -107,11 +107,11 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 
 기본적으로 테이블 컨트롤은 디자인할 수 있는 단일 행 형식입니다. ' 템플릿 ' 행을 더 추가 하려면 **속성** 패드에서 **행** 상자를 사용 하 여 더 많은 행 컨트롤러를 만듭니다.
 
-![](table-images/prototype-rows1.png "Setting the number of Prototype rows")
+![프로토타입 행 수 설정](table-images/prototype-rows1.png)
 
 **Rows** 속성을 **3** 으로 설정 하면 컨트롤을 끌어 놓을 수 있는 추가 행 자리 표시 자가 만들어집니다. 각 행에 대해 **속성** 패드에서 **클래스** 이름을 설정 하 여 행 컨트롤러 클래스가 생성 되도록 합니다.
 
-![](table-images/prototype-rows2.png "The prototype rows in the designer")
+![디자이너의 프로토타입 행](table-images/prototype-rows2.png)
 
 다른 행 형식으로 테이블을 채우려면 메서드를 사용 하 여 `SetRowTypes` 테이블의 각 행에 사용할 행 컨트롤러 유형을 지정 합니다. 행의 식별자를 사용 하 여 각 행에 사용할 행 컨트롤러를 지정 합니다.
 
@@ -142,14 +142,14 @@ for (var i = 0; i < rows.Count; i++) {
 
 watchOS 3에는 테이블에 대 한 새로운 기능이 도입 되었습니다. 테이블로 돌아가서 다른 행을 선택 하지 않고도 각 행과 관련 된 세부 정보 페이지를 스크롤할 수 있습니다. 위쪽 및 아래쪽으로 살짝 밀거나 Digital Crown를 사용 하 여 세부 정보 화면을 스크롤할 수 있습니다.
 
-![](table-images/table-scroll-sml.png "세로 세부 정보 페이징 예제") ![](table-images/table-detail-sml.png)
+![세로 세부 정보 페이징 예제](table-images/table-scroll-sml.png) ![세로 페이징 세부 정보](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > 이 기능은 현재 Xcode Interface Builder에서 storyboard를 편집 해야만 사용할 수 있습니다.
 
 이 기능을 사용 하려면 `WKInterfaceTable` 디자인 화면에서을 선택 하 고 **세로 세부 정보 페이징** 옵션을 선택 합니다.
 
-![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
+![세로 세부 정보 페이징 옵션 선택](table-images/vertical-detail-paging-sml.png)
 
 [Apple에서 설명한](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) 대로 테이블 탐색은 segue를 사용 하 여 페이징 기능이 작동 해야 합니다. 를 사용 하 여 segue를 대신 사용 하는 기존 코드를 다시 작성 `PushController` 합니다.
 

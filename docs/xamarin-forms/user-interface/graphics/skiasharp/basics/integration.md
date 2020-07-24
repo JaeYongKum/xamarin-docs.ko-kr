@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60f53fb00786b183f36f7cfefa6af9062bb682db
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137698"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938166"
 ---
 # <a name="integrating-with-xamarinforms"></a>통합Xamarin.Forms
 
@@ -25,7 +25,7 @@ _터치 및 요소에 응답 하는 SkiaSharp 그래픽 만들기 Xamarin.Forms_
 
 SkiaSharp 그래픽은 여러 가지 방법으로의 나머지와 통합할 수 있습니다 Xamarin.Forms . 동일한 페이지에서 SkiaSharp canvas와 요소를 결합 Xamarin.Forms 하 고 Xamarin.Forms SkiaSharp 캔버스 위에 요소를 배치할 수도 있습니다.
 
-![](integration-images/integrationexample.png "Selecting a color with sliders")
+![슬라이더를 사용 하 여 색 선택](integration-images/integrationexample.png)
 
 에서 대화형 SkiaSharp 그래픽을 만드는 또 다른 방법은 Xamarin.Forms 터치를 통하는 것입니다.
 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 두 번째 페이지에는 **채우기 토글 탭**이 있습니다. 채우기가 없고 &mdash; 탭으로 채우기가 전환 된 간단한 원을 그립니다 &mdash; . [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)클래스는 사용자 입력에 응답 하 여 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
@@ -240,7 +240,7 @@ HSV 모델에서 순수 색은 채도와 값이 모두 100 인 경우에 발생 
 
 그러나 두 모델에 대 한 느낌을 얻는 가장 좋은 방법은 직접 시험해 보는 것입니다.
 
-[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
+[![색 탐색 페이지의 세 번째 스크린샷](integration-images/colorexplore-large.png)](integration-images/colorexplore-small.png#lightbox "색 탐색 페이지의 세 번째 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 

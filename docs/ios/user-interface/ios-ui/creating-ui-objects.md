@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ef54cebebb3881f5bb08aa6edfdc344169f179b4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574095"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937256"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 
@@ -42,17 +42,17 @@ IOS 디자이너에서 사용자 인터페이스 만들기를 시작 하려면 �
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
- [![](creating-ui-objects-images/image2b.png "Toolbox Pad")](creating-ui-objects-images/image2b.png#lightbox)
+ [![도구 상자 패드](creating-ui-objects-images/image2b.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- [![](creating-ui-objects-images/image2b-vs.png "Toolbox Pad - Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
+ [![도구 상자 패드-Visual Studio](creating-ui-objects-images/image2b-vs.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 -----
 
 디자인 화면에서 컨트롤을 선택 하면 **Properties Pad** 해당 컨트롤에 대 한 특성이 표시 됩니다. 아래 스크린샷에서 채워지는 **위젯 > id > 이름** 필드가 *콘센트* 이름으로 사용 됩니다. C #에서 컨트롤을 참조 하는 방법은 다음과 같습니다.
 
- [![](creating-ui-objects-images/image3b.png "Properties Widget Pad")](creating-ui-objects-images/image3b.png#lightbox)
+ [![속성 위젯 패드](creating-ui-objects-images/image3b.png)](creating-ui-objects-images/image3b.png#lightbox)
 
 IOS designer를 사용 하는 방법에 대 한 자세한 내용은 [Ios 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드를 참조 하세요.
 
@@ -64,27 +64,27 @@ Xcode에서 Storyboard를 열려면 마우스 오른쪽 단추를 클릭 하 여
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
- [![](creating-ui-objects-images/imagexcode.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
+ [![스토리 보드 상황에 맞는 메뉴-Xcode](creating-ui-objects-images/imagexcode.png)](creating-ui-objects-images/imagexcode.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](creating-ui-objects-images/imagexcode-vs.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
+[![스토리 보드 상황에 맞는 메뉴-Xcode](creating-ui-objects-images/imagexcode-vs.png)](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 컨트롤은 아래에 설명 된 **개체 라이브러리** 의 Design Surface 끌어 올 수 있습니다.
 
- [![](creating-ui-objects-images/image5a.png "Xcode Object Library")](creating-ui-objects-images/image5a.png#lightbox)
+ [![Xcode 개체 라이브러리](creating-ui-objects-images/image5a.png)](creating-ui-objects-images/image5a.png#lightbox)
 
 Interface Builder를 사용 하 여 UI를 디자인 하는 경우 c #에서 참조 하려는 각 컨트롤에 대 한 **콘센트** 를 만들어야 합니다. Xcode 도구 모음 단추의 가운데 **편집기** 단추를 사용 하 여 **길잡이 편집기** 를 켜면이 작업을 수행할 수 있습니다.
 
- [![](creating-ui-objects-images/image6a.png "Assistant Editor button")](creating-ui-objects-images/image6a.png#lightbox)
+ [![길잡이 편집기 단추](creating-ui-objects-images/image6a.png)](creating-ui-objects-images/image6a.png#lightbox)
 
 사용자 인터페이스 개체를 클릭 합니다. 그런 다음 컨트롤을 .h 파일로 **끌어 놓습니다** . **끌기를 제어**하려면 컨트롤 키를 누른 채에 대 한 콘센트가 나 동작을 만들 사용자 인터페이스 개체를 클릭 합니다. 컨트롤 키를 계속 누르고 있으면 헤더 파일로 끌어 놓습니다. 정의 아래로 끌기를 마칩니다 `@interface` . 아래 스크린샷에 표시 된 것 처럼 캡션이 삽입 유출 또는 유출 컬렉션으로 표시 됩니다.
 
 클릭 하면 코드에서 참조할 수 있는 c # 속성을 만드는 데 사용할 수 있는 콘센트의 이름을 입력 하 라는 메시지가 표시 됩니다.
 
- [![](creating-ui-objects-images/image8a.png "Creating an outlet")](creating-ui-objects-images/image8a.png#lightbox)
+ [![콘센트 만들기](creating-ui-objects-images/image8a.png)](creating-ui-objects-images/image8a.png#lightbox)
 
 Xcode의 Interface Builder Mac용 Visual Studio 통합 하는 방법에 대 한 자세한 내용은 [Xib 코드 생성](~/ios/internals/xib-code-generation.md#generated) 문서를 참조 하세요.
 
@@ -118,7 +118,7 @@ public override void ViewDidLoad () {
 
 뷰 컨트롤러가 Design Surface에 추가 되 면 프로젝트에 두 개의 해당 c # 파일이 만들어집니다. 이 예제에서는 `ControlsViewController.cs` 및 `ControlsViewController.designer.cs` 가 자동으로 생성 되었습니다.
 
- [![](creating-ui-objects-images/image9b.png "ViewController partial class")](creating-ui-objects-images/image9b.png#lightbox)
+ [![ViewController partial 클래스](creating-ui-objects-images/image9b.png)](creating-ui-objects-images/image9b.png#lightbox)
 
 `ControlsViewController.cs`이 파일은 *코드*를 위한 것입니다. 여기서는 및와 `View` 같은 수명 주기 메서드 `ViewDidLoad` 를 `ViewWillAppear` 구현 하 고 고유한 속성, 필드 및 메서드를 추가할 수 있습니다.
 

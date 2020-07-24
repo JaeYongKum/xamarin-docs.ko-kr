@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: d390ff40a964101297e205060b892b4108fe2281
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: eccd0415fdc1db357f904b843a015df60a35a488
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569909"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939609"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -36,7 +36,7 @@ iOS `UICollectionViewFlowLayout` 는 추가 작업 없이 그리드와 같은 �
 
 셀은 컬렉션 뷰에 표시 되는 데이터 집합의 단일 항목을 나타내는 개체입니다. 각 셀은 `UICollectionViewCell` 아래 그림에 표시 된 것 처럼 세 가지 뷰로 구성 된 클래스의 인스턴스입니다.
 
- [![](uicollectionview-images/01-uicollectionviewcell.png "Each cell is composed of three different views, as shown here")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
+ [![각 셀은 다음과 같이 세 가지 뷰로 구성 됩니다.](uicollectionview-images/01-uicollectionviewcell.png)](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
 클래스에는 `UICollectionViewCell` 이러한 각 뷰에 대해 다음과 같은 속성이 있습니다.
 
@@ -46,7 +46,7 @@ iOS `UICollectionViewFlowLayout` 는 추가 작업 없이 그리드와 같은 �
 
 `ContentView`이러한 값을 및 보다 작게 설정 하면를 사용 하 여 콘텐츠를 `BackgroundView` 시각적으로 `SelectedBackgroundView` `BackgroundView` 프레임으로 지정할 수 있습니다. 반면에는 `SelectedBackgroundView` 아래와 같이 셀이 선택 될 때 표시 됩니다.
 
- [![](uicollectionview-images/02-cells.png "The different cell elements")](uicollectionview-images/02-cells.png#lightbox)
+ [![다른 셀 요소](uicollectionview-images/02-cells.png)](uicollectionview-images/02-cells.png#lightbox)
 
 위의 스크린샷에 있는 셀은 `UICollectionViewCell` `ContentView` `SelectedBackgroundView` `BackgroundView` 다음 코드에 표시 된 것과 같이, 및 속성을 각각 상속 하 고 설정 하 여 만듭니다.
 
@@ -90,7 +90,7 @@ public class AnimalCell : UICollectionViewCell
 
 예를 들어 아래 그림에 표시 된 것 처럼 보조 뷰를 사용 하 여 특정 섹션에 대 한 머리글을 표시할 수 있습니다.
 
- [![](uicollectionview-images/02a-supplementary-view.png "A Supplementary View used to present a header for a particular section, as shown here")](uicollectionview-images/02a-supplementary-view.png#lightbox)
+ [![다음과 같이 특정 섹션에 대 한 헤더를 표시 하는 데 사용 되는 보조 뷰입니다.](uicollectionview-images/02a-supplementary-view.png)](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
 보조 뷰를 사용 하려면 먼저 메서드에 등록 해야 합니다 `ViewDidLoad` .
 
@@ -119,7 +119,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 장식 보기는에 표시 될 수 있는 전적으로 시각적 뷰입니다 `UICollectionView` . 셀 및 보충 뷰와 달리 데이터를 기반으로 하지 않습니다. 이러한 항목은 항상 레이아웃의 하위 클래스 내에 생성 되며, 이후에 콘텐츠의 레이아웃으로 변경 될 수 있습니다. 예를 들어 다음과 같이 데코레이션 뷰를 사용 하 여의 콘텐츠로 스크롤되는 배경 뷰를 표시할 수 있습니다 `UICollectionView` .
 
- [![](uicollectionview-images/02c-decoration-view.png "Decoration View with a red background")](uicollectionview-images/02c-decoration-view.png#lightbox)
+ [![빨간색 배경을 사용 하는 장식 뷰](uicollectionview-images/02c-decoration-view.png)](uicollectionview-images/02c-decoration-view.png#lightbox)
 
  아래 코드 조각은 samples 클래스에서 배경을 빨강으로 변경 합니다 `CircleLayout` .
 
@@ -149,7 +149,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 와 마찬가지로 `UITableView` 클래스는 `UICollectionView` 해당 데이터 소스를 호출 하 여 화면에 있는 항목에 대 한 셀을 가져옵니다.
 화면에서 스크롤 하는 셀은 다음 이미지에 나와 있는 것 처럼 다시 사용 하기 위해 큐에 배치 됩니다.
 
- [![](uicollectionview-images/03-cell-reuse.png "Cells that scroll off the screen are placed in to a queue for reuse as shown here")](uicollectionview-images/03-cell-reuse.png#lightbox)
+ [![화면에서 스크롤 하는 셀은 다음과 같이 다시 사용 하기 위해 큐에 배치 됩니다.](uicollectionview-images/03-cell-reuse.png)](uicollectionview-images/03-cell-reuse.png#lightbox)
 
 및를 사용 하 여 셀 재사용을 간소화 했습니다 `UICollectionView` `UITableView` . 셀이 시스템에 등록 되 면 다시 사용 큐에서 사용할 수 없는 경우 더 이상 데이터 원본에서 직접 셀을 만들 필요가 없습니다. 다시 사용 큐에서 셀의 큐에서 제거를 호출할 때 셀을 사용할 수 없는 경우 iOS는 등록 된 유형 또는 nib을 기반으로 자동으로 만듭니다.
 이와 동일한 기법은 보충 보기 에서도 사용할 수 있습니다.
@@ -200,7 +200,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
 셀을 누르면 셀이 강조 표시 된 상태로 전환 되 고 사용자가 셀에서 손가락을 뗄 때까지 선택 되지 않습니다. 이렇게 하면 실제로 선택 되기 전에 셀의 모양을 일시적으로 변경할 수 있습니다. 선택 시 셀의 `SelectedBackgroundView` 이 표시 됩니다. 아래 그림에서는 선택이 발생 하기 직전에 강조 표시 된 상태를 보여 줍니다.
 
- [![](uicollectionview-images/04-cell-highlight.png "This figure shows the highlighted state just before the selection occurs")](uicollectionview-images/04-cell-highlight.png#lightbox)
+ [![이 그림은 선택이 발생 하기 직전에 강조 표시 된 상태를 보여 줍니다.](uicollectionview-images/04-cell-highlight.png)](uicollectionview-images/04-cell-highlight.png#lightbox)
 
 강조 표시를 구현 하기 `ItemHighlighted` 위해 `ItemUnhighlighted` 의 및 메서드를 `UICollectionViewDelegate` 사용할 수 있습니다. 예를 들어, 다음 코드는 `ContentView` 위의 이미지에 표시 된 것 처럼 셀이 강조 표시 될 때의 노란색 배경과 강조 표시 취소 시 흰색 배경을 적용 합니다.
 
@@ -247,7 +247,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 다음 스크린샷은 셀을 길게 누르면 표시 되는 메뉴를 보여 줍니다.
 
- [![](uicollectionview-images/04a-menu.png "This screenshot show the menu when a cell is long pressed")](uicollectionview-images/04a-menu.png#lightbox)
+ [![이 스크린샷은 셀을 길게 누르면 표시 되는 메뉴를 보여 줍니다.](uicollectionview-images/04a-menu.png)](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout"></a>
 
@@ -287,7 +287,7 @@ simpleCollectionViewController = new SimpleCollectionViewController (layout);
 
 이는 표 형태로 콘텐츠를 레이아웃 하는 데 필요 합니다. 또한 방향이 변경 되 면 `UICollectionViewFlowLayout` 아래와 같이 콘텐츠가 적절 하 게 다시 정렬 됩니다.
 
- [![](uicollectionview-images/05-layout-orientation.png "Example of the orientation changes")](uicollectionview-images/05-layout-orientation.png#lightbox)
+ [![방향 변경의 예](uicollectionview-images/05-layout-orientation.png)](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset"></a>
 
@@ -302,7 +302,7 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 이렇게 하면 아래와 같이 섹션 주위에 간격이 발생 합니다.
 
- [![](uicollectionview-images/06-sectioninset.png "Spacing around the section as shown here")](uicollectionview-images/06-sectioninset.png#lightbox)
+ [![여기에 표시 된 것 처럼 섹션 주위의 간격](uicollectionview-images/06-sectioninset.png)](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout"></a>
 
@@ -310,7 +310,7 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 Edition에서 직접를 사용 하는 `UICollectionViewFlowLayout` 경우에는 줄을 따라 콘텐츠의 레이아웃을 추가로 사용자 지정 하기 위해 서브클래싱 할 수도 있습니다. 예를 들어이를 사용 하 여 셀을 그리드로 줄 바꿈하지 않는 레이아웃을 만들 수 있습니다. 대신 아래와 같이 가로 스크롤 효과가 있는 단일 행을 만듭니다.
 
- [![](uicollectionview-images/07-line-layout.png "A single row with a horizontal scrolling effect")](uicollectionview-images/07-line-layout.png#lightbox)
+ [![가로 스크롤 효과가 있는 단일 행](uicollectionview-images/07-line-layout.png)](uicollectionview-images/07-line-layout.png#lightbox)
 
 서브 클래스에서이를 구현 하려면 `UICollectionViewFlowLayout` 다음이 필요 합니다.
 
@@ -402,7 +402,7 @@ namespace SimpleCollectionView
 
 예를 들어 아래와 같이 동일한 콘텐츠가 원형 레이아웃으로 표시 될 수 있습니다.
 
- [![](uicollectionview-images/08-circle-layout.png "A circular custom layout as shown here")](uicollectionview-images/08-circle-layout.png#lightbox)
+ [![다음과 같이 원형 사용자 지정 레이아웃](uicollectionview-images/08-circle-layout.png)](uicollectionview-images/08-circle-layout.png#lightbox)
 
 레이아웃에 대 한 강력한 점은 표 형식 레이아웃에서 가로 스크롤 레이아웃으로 변경 하 고 이후에이 원형 레이아웃으로 변경 해야 하는 경우에 제공 되는 레이아웃 클래스만 변경 하는 것입니다 `UICollectionView` . 의 `UICollectionView` 대리자 또는 데이터 소스 코드는 전혀 변경 되지 않습니다.
 
@@ -412,7 +412,7 @@ IOS 9에서 컬렉션 뷰 ()는 `UICollectionView` 이제 새 기본 제스처 �
 
 이러한 새 메서드를 사용 하 여 컬렉션 뷰에서 순서를 변경 하는 작업을 쉽게 구현할 수 있으며 다시 정렬 프로세스의 모든 단계에서 항목 모양을 사용자 지정 하는 옵션을 사용할 수 있습니다.
 
-[![](uicollectionview-images/intro01.png "An example of the reordering process")](uicollectionview-images/intro01.png#lightbox)
+[![다시 정렬 프로세스의 예](uicollectionview-images/intro01.png)](uicollectionview-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 다시 정렬을 구현 하는 방법 및 컬렉션 뷰 컨트롤에서 iOS 9가 만든 다른 변경 내용 중 일부를 살펴보겠습니다.
 
@@ -430,7 +430,7 @@ IOS 9에서 컬렉션 뷰 ()는 `UICollectionView` 이제 새 기본 제스처 �
 
 IOS 9에서 컬렉션 뷰에 다시 정렬을 추가 하는 가장 빠른 방법은를 사용 하는 것입니다 `UICollectionViewController` .
 이제 컬렉션 뷰 컨트롤러에는 `InstallsStandardGestureForInteractiveMovement` 컬렉션의 항목을 다시 정렬 하기 위해 끌기를 지 원하는 표준 *제스처 인식기* 를 추가 하는 속성이 있습니다.
-기본값은 이므로, 다시 `true` `MoveItem` `UICollectionViewDataSource` 정렬을 지원 하도록 클래스의 메서드를 구현 하기만 하면 됩니다. 예를 들면 다음과 같습니다.
+기본값은 이므로, 다시 `true` `MoveItem` `UICollectionViewDataSource` 정렬을 지원 하도록 클래스의 메서드를 구현 하기만 하면 됩니다. 예를 들어:
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -446,7 +446,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 새 Xamarin.ios 프로젝트를 시작 하 고 **기본 storyboard** 파일을 편집 하는 간단한 예제입니다. 을 디자인 화면으로 끌어 옵니다 `UICollectionViewController` .
 
-[![](uicollectionview-images/quick01.png "Adding a UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
+[![UICollectionViewController 추가](uicollectionview-images/quick01.png)](uicollectionview-images/quick01.png#lightbox)
 
 컬렉션 뷰를 선택 합니다 (문서 개요에서이 작업을 수행 하는 것이 가장 쉽습니다.). Properties Pad의 레이아웃 탭에서 아래 스크린샷에 나와 있는 것 처럼 다음 크기를 설정 합니다.
 
@@ -456,7 +456,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 - **최소 간격**:-8 셀의 경우 줄-8
 - **섹션 인세트**: 위쪽 – 16 | 아래쪽 – 16 | Left – 16 | 오른쪽 – 16
 
-[![](uicollectionview-images/quick04.png "Set the Collection View sizes")](uicollectionview-images/quick04.png#lightbox)
+[![컬렉션 뷰 크기 설정](uicollectionview-images/quick04.png)](uicollectionview-images/quick04.png#lightbox)
 
 다음으로 기본 셀을 편집 합니다.
 
@@ -464,21 +464,21 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 - 셀 제목으로 사용할 레이블 추가
 - 다시 사용 식별자를 **셀** 로 설정
 
-[![](uicollectionview-images/quick02.png "Edit the default Cell")](uicollectionview-images/quick02.png#lightbox)
+[![기본 셀 편집](uicollectionview-images/quick02.png)](uicollectionview-images/quick02.png#lightbox)
 
 크기가 변경 될 때 셀 내부에 레이블을 유지 하는 제약 조건을 추가 합니다.
 
 _Collectionviewcell_ 의 **속성 패드** 에서 **클래스** 를로 설정 합니다 `TextCollectionViewCell` .
 
-[![](uicollectionview-images/quick05.png "Set the Class to TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
+[![클래스를 TextCollectionViewCell로 설정 합니다.](uicollectionview-images/quick05.png)](uicollectionview-images/quick05.png#lightbox)
 
 **다시 사용할** 수 있는 뷰를 `Cell` 다음으로 설정:
 
-[![](uicollectionview-images/quick06.png "Set the Collection Reusable View to Cell")](uicollectionview-images/quick06.png#lightbox)
+[![다시 사용할 수 있는 뷰를 셀로 설정](uicollectionview-images/quick06.png)](uicollectionview-images/quick06.png#lightbox)
 
 마지막으로 레이블을 선택 하 고 이름을 `TextLabel` 다음과 같이 선택 합니다.
 
-[![](uicollectionview-images/quick07.png "name label TextLabel")](uicollectionview-images/quick07.png#lightbox)
+[![이름 레이블 TextLabel](uicollectionview-images/quick07.png)](uicollectionview-images/quick07.png#lightbox)
 
 클래스를 편집 `TextCollectionViewCell` 하 고 다음 속성을 추가 합니다.
 
@@ -672,15 +672,15 @@ namespace CollectionView
 
 UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 사용자가 목록에서 항목을 선택 하 여 새 위치로 끌면 항목을 이동할 때 다른 항목이 자동으로 애니메이션 효과를 적용 합니다.
-사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예를 들면 다음과 같습니다.
+사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예를 들어:
 
-[![](uicollectionview-images/intro01.png "An example of dragging an item to a new location")](uicollectionview-images/intro01.png#lightbox)
+[![항목을 새 위치로 끌어 오는 예](uicollectionview-images/intro01.png)](uicollectionview-images/intro01.png#lightbox)
 
 <a name="Using-a-Custom-Gesture-Recognizer"></a>
 
 ### <a name="using-a-custom-gesture-recognizer"></a>사용자 지정 제스처 인식기 사용
 
-을 사용할 수 없고 정기적으로 사용 해야 하는 경우 `UICollectionViewController` `UIViewController` 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들면 다음과 같습니다.
+을 사용할 수 없고 정기적으로 사용 해야 하는 경우 `UICollectionViewController` `UIViewController` 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들어:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -1183,7 +1183,7 @@ public override void AwakeFromNib ()
 
 Xamarin.ios 앱을 다시 실행 하는 경우 컬렉션 뷰는 다음과 같습니다.
 
-[![](uicollectionview-images/custom01.png "The collection view will now look like this")](uicollectionview-images/custom01.png#lightbox)
+[![이제 컬렉션 뷰는 다음과 같습니다.](uicollectionview-images/custom01.png)](uicollectionview-images/custom01.png#lightbox)
 
 이전 처럼 항목을 다시 정렬할 수 있지만 이제 항목을 놓을 때 새 위치에 맞게 크기가 변경 됩니다.
 

@@ -10,12 +10,12 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931861"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -25,7 +25,7 @@ _Matrix 변환을 사용 하 여 터치 끌기, 집기 및 회전 구현_
 
 모바일 장치의 경우와 같은 다중 터치 환경에서는 사용자가 화면에서 개체를 조작 하는 데 종종 손가락을 사용 합니다. 한 손가락 끌기를 비롯 한 두 손가락으로 이루어진 일반적인 제스처는 개체를 이동 하거나 크기를 조정 하거나 회전할 수도 있습니다. 이러한 제스처는 일반적으로 transform 매트릭스를 사용 하 여 구현 되며이 문서에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
-![](touch-images/touchmanipulationsexample.png "A bitmap subjected to translation, scaling, and rotation")
+![변환, 크기 조정 및 회전을 위한 비트맵](touch-images/touchmanipulationsexample.png)
 
 여기에 표시 된 모든 샘플에서는 Xamarin.Forms [**효과에서 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)하는 문서에 제공 된 터치 추적 효과를 사용 합니다.
 
@@ -920,7 +920,7 @@ public partial class TouchManipulationPage : ContentPage
 
 `PaintSurface`처리기는 `MatrixDisplay` 누적 된 터치 매트릭스를 표시 하는 개체를 표시 하 여 종료 됩니다.
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
+[![터치 조작 페이지의 삼중 스크린샷](touch-images/touchmanipulation-small.png)](touch-images/touchmanipulation-large.png#lightbox "터치 조작 페이지의 삼중 스크린샷")
 
 ## <a name="manipulating-multiple-bitmaps"></a>여러 비트맵 조작
 
@@ -1058,7 +1058,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 이 코드는 컬렉션을 반복 하 고 컬렉션의 시작부터 끝 까지의 비트맵 더미를 표시 합니다.
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
+[![비트맵 산 보기 페이지의 삼중 스크린 샷](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "비트맵 산 보기 페이지의 삼중 스크린 샷")
 
 ## <a name="single-finger-scaling"></a>단일 손가락 크기 조정
 

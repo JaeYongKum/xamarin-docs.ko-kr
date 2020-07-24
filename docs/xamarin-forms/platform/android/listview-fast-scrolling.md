@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 30e6a39b1a7649fbb9e09dfeeb85ee889da68fc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e52ee0a9b61a654ae048fd0fb4a14c402c932524
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128806"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929834"
 ---
 # <a name="listview-fast-scrolling-on-android"></a>Android에서 ListView 빠르게 스크롤
 
@@ -59,7 +59,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 그 결과 스크롤 막대의 크기를 변경 하는의 데이터를 통한 빠른 스크롤을 [`ListView`](xref:Xamarin.Forms.ListView) 사용 하도록 설정할 수 있습니다.
 
-[![](listview-fast-scrolling-images/fastscroll.png "ListView FastScroll Platform-Specific")](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll Platform-Specific")
+[![ListView FastScroll 플랫폼 관련](listview-fast-scrolling-images/fastscroll.png)](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll 플랫폼 관련")
 
 ## <a name="related-links"></a>관련 링크
 

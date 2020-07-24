@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: cc83fa65fd040b30d71a30fb703da866c5d0824c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 40640f903ad82c5f154dbb74307c0003d7271561
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570819"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936606"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -33,7 +33,7 @@ iOS에서는 테이블에 대 한 작업을 수행 하는 두 가지 방법인 �
 
 1. `GetLeadingSwipeActionsConfiguration`및/또는 메서드를 재정의 `GetTrailingSwipeActionsConfiguration` 합니다. 이러한 메서드는을 반환 `UISwipeActionsConfiguration` 합니다.
 2. `UISwipeActionsConfiguration`반환 될를 인스턴스화합니다. 이 클래스는 배열을 사용 `UIContextualAction` 합니다.
-3. `UIContextualAction`를 만듭니다.
+3. `UIContextualAction`을 만듭니다.
 
 이러한 내용은 다음 섹션에서 더 자세히 설명 합니다.
 
@@ -117,7 +117,7 @@ public UIContextualAction ContextualFlagAction(int row)
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableView` 클래스의 인스턴스를 만들고 메서드를 재정의 해야 합니다 `UITableViewDelegate` `EditActionsForRow` . 예를 들면 다음과 같습니다.
+에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableView` 클래스의 인스턴스를 만들고 메서드를 재정의 해야 합니다 `UITableViewDelegate` `EditActionsForRow` . 예를 들어:
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 메서드는 `UITableViewRowAction` 사용자가 테이블의 행에 가로 방향으로 swipes **Hi** 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 새 인스턴스가 `TableDelegate` 만들어져에 연결 됩니다 `UITableView` . 예를 들면 다음과 같습니다.
+정적 `UITableViewRowAction.Create` 메서드는 `UITableViewRowAction` 사용자가 테이블의 행에 가로 방향으로 swipes **Hi** 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 새 인스턴스가 `TableDelegate` 만들어져에 연결 됩니다 `UITableView` . 예를 들어:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -175,7 +175,7 @@ table.Delegate = tableDelegate;
 
 위의 코드를 실행 하 고 사용자가 테이블 행에 swipes는 경우 기본적으로 표시 되는 **삭제** 단추 대신 **안녕하세요** 단추가 표시 됩니다.
 
-[![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
+[![[삭제] 단추 대신 표시 되는 안녕하세요.](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
 
 사용자 **가 단추를** 탭 하면 `Hello World!` 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
 

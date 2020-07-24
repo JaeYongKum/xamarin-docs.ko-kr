@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 5c73f046f349598c9f0b0e8d7c7d6438c150c05c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: eb95970066f85bb62eb207f23cfc135dc1625a11
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566346"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937100"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -22,7 +22,7 @@ TvOS에서는 테이블 뷰가 선택적으로 그룹 또는 섹션으로 구성
 
 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고, 선택한 항목의 세부 정보는 반대쪽에 표시 됩니다.
 
-[![](table-views-images/intro01.png "Sample table view")](table-views-images/intro01.png#lightbox)
+[![예제 테이블 뷰](table-views-images/intro01.png)](table-views-images/intro01.png#lightbox)
 
 <a name="About-Table-Views"></a>
 
@@ -30,7 +30,7 @@ TvOS에서는 테이블 뷰가 선택적으로 그룹 또는 섹션으로 구성
 
 은 `UITableView` 스크롤할 수 있는 행의 단일 열을 선택적으로 그룹 또는 섹션으로 구성할 수 있는 정보 계층 목록으로 표시 합니다. 
 
-[![](table-views-images/table01.png "A selected item")](table-views-images/table01.png#lightbox)
+[![선택한 항목](table-views-images/table01.png)](table-views-images/table01.png#lightbox)
 
 Apple에는 테이블 작업에 대 한 다음과 같은 제안이 있습니다.
 
@@ -72,86 +72,86 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
 1. Mac용 Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS**  >  **app**  >  **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](table-views-images/table02.png "Select Single View App")](table-views-images/table02.png#lightbox)
+    [![단일 뷰 앱 선택](table-views-images/table02.png)](table-views-images/table02.png#lightbox)
 1. 앱의 **이름을** 입력 하 고 **다음**을 클릭 합니다. 
 
-    [![](table-views-images/table03.png "Enter a Name for the app")](table-views-images/table03.png#lightbox)
+    [![앱의 이름 입력](table-views-images/table03.png)](table-views-images/table03.png#lightbox)
 1. **프로젝트 이름** 및 **솔루션 이름을** 조정 하거나 기본값을 적용 하 고 **만들기** 단추를 클릭 하 여 새 솔루션을 만듭니다. 
 
-    [![](table-views-images/table04.png "The Project Name and Solution Name")](table-views-images/table04.png#lightbox)
+    [![프로젝트 이름 및 솔루션 이름](table-views-images/table04.png)](table-views-images/table04.png#lightbox)
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 iOS 디자이너에서 엽니다. 
 
-    [![](table-views-images/table05.png "The Main.storyboard file")](table-views-images/table05.png#lightbox)
+    [![주 storyboard 파일](table-views-images/table05.png)](table-views-images/table05.png#lightbox)
 1. **기본 뷰 컨트롤러**를 선택 하 고 삭제 합니다. 
 
-    [![](table-views-images/table06.png "Select and delete the Default View Controller")](table-views-images/table06.png#lightbox)
+    [![기본 뷰 컨트롤러를 선택 하 고 삭제 합니다.](table-views-images/table06.png)](table-views-images/table06.png#lightbox)
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다.
 1. 기본적으로 **왼쪽에는** **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
-    [![](table-views-images/table08.png "Add a Split View")](table-views-images/table08.png#lightbox)
+    [![분할 뷰 추가](table-views-images/table08.png)](table-views-images/table08.png#lightbox)
 1. 나중에 c # 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
 
-    [![](table-views-images/table09.png "Assign a class name")](table-views-images/table09.png#lightbox)
+    [![클래스 이름 할당](table-views-images/table09.png)](table-views-images/table09.png#lightbox)
 1. **테이블 뷰 컨트롤러**, **테이블 뷰** 및 **프로토타입 셀**에 대 한 사용자 지정 클래스를 만들어야 합니다. Mac용 Visual Studio는 사용자 지정 클래스를 만들 때 프로젝트 트리에 추가 합니다. 
 
-    [![](table-views-images/table10.png "The custom classes in the Project Tree")](table-views-images/table10.png#lightbox)
+    [![프로젝트 트리의 사용자 지정 클래스](table-views-images/table10.png)](table-views-images/table10.png#lightbox)
 1. 그런 다음 Design Surface에서 테이블 뷰를 선택 하 고 필요에 따라 속성을 조정 합니다. 예: **프로토타입 셀** 수 및 **스타일** (일반 또는 그룹화 됨): 
 
-    [![](table-views-images/table11.png "The widget tab")](table-views-images/table11.png#lightbox)
+    [![위젯 탭](table-views-images/table11.png)](table-views-images/table11.png#lightbox)
 1. 각 **프로토타입 셀**에 대해 해당 셀을 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 고유한 **식별자** 를 할당 합니다. 이 단계는 나중에 테이블을 채울 때이 식별자가 필요 하므로 _매우 중요_ 합니다. 예 `AttrCell`: 
 
-    [![](table-views-images/table12.png "The Widget Tab")](table-views-images/table12.png#lightbox)
+    [![위젯 탭](table-views-images/table12.png)](table-views-images/table12.png#lightbox)
 1. 또한 **스타일** 드롭다운을 통해 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 으로 셀을 표시 하거나 **사용자 지정** 으로 설정 하 고 Design Surface를 사용 하 여 **도구 상자**에서 다른 UI 위젯에서 끌어 셀을 레이아웃 하도록 선택할 수 있습니다. 
 
-    [![](table-views-images/table13.png "The cell layout")](table-views-images/table13.png#lightbox)
+    [![셀 레이아웃](table-views-images/table13.png)](table-views-images/table13.png#lightbox)
 1. **속성 탐색기** 의 **위젯** 탭에서 프로토타입 셀 디자인의 각 UI 요소에 고유한 **이름을** 할당 하 여 나중에 c # 코드에서 액세스할 수 있도록 합니다. 
 
-    [![](table-views-images/table14.png "Assign a name")](table-views-images/table14.png#lightbox)
+    [![이름 할당](table-views-images/table14.png)](table-views-images/table14.png#lightbox)
 1. 테이블 뷰의 모든 프로토타입 셀에 대해 위의 단계를 반복 합니다.
 1. 그런 다음 UI 디자인의 나머지 부분에 사용자 지정 클래스를 할당 하 고 자세히 보기를 레이아웃 한 다음 c #에서 액세스할 수 있도록 세부 정보 보기의 각 UI 요소에 고유한 **이름을** 할당 합니다. 예를 들면 다음과 같습니다. 
 
-    [![](table-views-images/table15.png "The UI layout")](table-views-images/table15.png#lightbox)
+    [![UI 레이아웃](table-views-images/table15.png)](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS**  >  **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 **를 클릭 하 여 새** 솔루션을 만듭니다. 
 
-    [![](table-views-images/table02-vs.png "Select Single View App")](table-views-images/table02-vs.png#lightbox)
+    [![단일 뷰 앱 선택](table-views-images/table02-vs.png)](table-views-images/table02-vs.png#lightbox)
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 iOS 디자이너에서 엽니다. 
 
-    [![](table-views-images/table05-vs.png "The Main.storyboard file")](table-views-images/table05-vs.png#lightbox)
+    [![주 storyboard 파일](table-views-images/table05-vs.png)](table-views-images/table05-vs.png#lightbox)
 1. **기본 뷰 컨트롤러**를 선택 하 고 삭제 합니다. 
 
-    [![](table-views-images/table06-vs.png "Select and delete the Default View Controller")](table-views-images/table06-vs.png#lightbox)
+    [![기본 뷰 컨트롤러를 선택 하 고 삭제 합니다.](table-views-images/table06-vs.png)](table-views-images/table06-vs.png#lightbox)
 1. **도구 상자** 에서 **분할 보기 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다. 
 
-    [![](table-views-images/table07-vs.png "A Split View Controller")](table-views-images/table07-vs.png#lightbox)
+    [![분할 뷰 컨트롤러](table-views-images/table07-vs.png)](table-views-images/table07-vs.png#lightbox)
 1. 기본적으로 **왼쪽에는** **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
-    [![](table-views-images/table08-vs.png "Layout the UI")](table-views-images/table08-vs.png#lightbox)
+    [![UI 레이아웃](table-views-images/table08-vs.png)](table-views-images/table08-vs.png#lightbox)
 1. 나중에 c # 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
 
-    [![](table-views-images/table09-vs.png "The Widget Tab")](table-views-images/table09-vs.png#lightbox)
+    [![위젯 탭](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
 1. **테이블 뷰 컨트롤러**, **테이블 뷰** 및 **프로토타입 셀**에 대 한 사용자 지정 클래스를 만들어야 합니다. Mac용 Visual Studio는 사용자 지정 클래스를 만들 때 프로젝트 트리에 추가 합니다. 
 
-    [![](table-views-images/table10-vs.png "The custom classes in the Project Tree")](table-views-images/table10-vs.png#lightbox)
+    [![프로젝트 트리의 사용자 지정 클래스](table-views-images/table10-vs.png)](table-views-images/table10-vs.png#lightbox)
 1. 그런 다음 Design Surface에서 테이블 뷰를 선택 하 고 필요에 따라 속성을 조정 합니다. 예: **프로토타입 셀** 수 및 **스타일** (일반 또는 그룹화 됨): 
 
-    [![](table-views-images/table11-vs.png "The Widget Tab")](table-views-images/table11-vs.png#lightbox)
+    [![위젯 탭](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
 1. 각 **프로토타입 셀**에 대해 해당 셀을 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 고유한 **식별자** 를 할당 합니다. 이 단계는 나중에 테이블을 채울 때이 식별자가 필요 하므로 _매우 중요_ 합니다. 예 `AttrCell`: 
 
-    [![](table-views-images/table12-vs.png "Assign an Identifier")](table-views-images/table12-vs.png#lightbox)
+    [![식별자 할당](table-views-images/table12-vs.png)](table-views-images/table12-vs.png#lightbox)
 1. 또한 **스타일** 드롭다운을 통해 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 으로 셀을 표시 하거나 **사용자 지정** 으로 설정 하 고 Design Surface를 사용 하 여 **도구 상자**에서 다른 UI 위젯에서 끌어 셀을 레이아웃 하도록 선택할 수 있습니다. 
 
-    [![](table-views-images/table13-vs.png "The Style dropdown")](table-views-images/table13-vs.png#lightbox)
+    [![스타일 드롭다운](table-views-images/table13-vs.png)](table-views-images/table13-vs.png#lightbox)
 1. **속성 탐색기** 의 **위젯** 탭에서 프로토타입 셀 디자인의 각 UI 요소에 고유한 **이름을** 할당 하 여 나중에 c # 코드에서 액세스할 수 있도록 합니다. 
 
-    [![](table-views-images/table14-vs.png "The Widget Tab")](table-views-images/table14-vs.png#lightbox)
+    [![위젯 탭](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
 1. 테이블 뷰의 모든 프로토타입 셀에 대해 위의 단계를 반복 합니다.
 1. 그런 다음 UI 디자인의 나머지 부분에 사용자 지정 클래스를 할당 하 고 자세히 보기를 레이아웃 한 다음 c #에서 액세스할 수 있도록 세부 정보 보기의 각 UI 요소에 고유한 **이름을** 할당 합니다. 예를 들면 다음과 같습니다. 
 
-    [![](table-views-images/table15.png "The UI Layout")](table-views-images/table15.png#lightbox)
+    [![UI 레이아웃](table-views-images/table15.png)](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
 
 -----
@@ -168,13 +168,13 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
 **인력**에 대 한 데이터 모델을 만들려면 **Solution Pad** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**추가 ...를 선택 합니다. `AttractionInformation` **이름** 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
 
-[![](table-views-images/data01.png "Enter AttractionInformation for the Name")](table-views-images/data01.png#lightbox)
+[![이름에 AttractionInformation를 입력 합니다.](table-views-images/data01.png)](table-views-images/data01.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 **인력**에 대 한 데이터 모델을 만들려면 **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 항목**추가 ...를 선택 합니다. **클래스** 를 선택 하 고 `AttractionInformation` **이름** 으로를 입력 한 다음 **추가** 단추를 클릭 합니다. 
 
-[![](table-views-images/data01-vs.png "Select Class and enter AttractionInformation for the Name")](table-views-images/data01-vs.png#lightbox)
+[![클래스를 선택 하 고 이름으로 AttractionInformation을 입력 합니다.](table-views-images/data01-vs.png)](table-views-images/data01-vs.png#lightbox)
 
 -----
 
@@ -216,13 +216,13 @@ namespace tvTable
 
 그런 다음 **Solution Pad** 에서 프로젝트 이름을 다시 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**추가 ...를 선택 합니다. `CityInformation` **이름** 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
 
-[![](table-views-images/data02.png "Enter CityInformation for the Name")](table-views-images/data02.png#lightbox)
+[![이름에 CityInformation를 입력 합니다.](table-views-images/data02.png)](table-views-images/data02.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 그런 다음 **솔루션 탐색기** 에서 프로젝트 이름을 다시 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 항목**...을 선택 합니다. `CityInformation` **이름** 으로를 입력 하 고 **추가** 단추를 클릭 합니다. 
 
-[![](table-views-images/data02-vs.png "Enter CityInformation for the Name")](table-views-images/data02-vs.png#lightbox)
+[![이름에 CityInformation를 입력 합니다.](table-views-images/data02-vs.png)](table-views-images/data02-vs.png#lightbox)
 
 -----
 
@@ -731,9 +731,9 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>모두 함께 끌어오기
 
-이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들면 다음과 같습니다. 
+이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들어: 
 
-[![](table-views-images/intro01.png "Sample app run")](table-views-images/intro01.png#lightbox)
+[![샘플 앱 실행](table-views-images/intro01.png)](table-views-images/intro01.png#lightbox)
 
 이 패턴은 tvOS의 표준 패턴 이므로 모든 항목을 함께 가져오고 분할 보기의 왼쪽과 오른쪽이 서로 상호 작용 하는 마지막 단계를 살펴보겠습니다.
 

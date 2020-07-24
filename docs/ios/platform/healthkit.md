@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8090cb3c694083be4ef12294799d6aadf26b6038
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0c733789883c9752d63824d0bca7356a88d05659
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569129"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929664"
 ---
 # <a name="healthkit-in-xamarinios"></a>Xamarin.ios의 HealthKit
 
@@ -30,7 +30,7 @@ ms.locfileid: "84569129"
 
 이 문서에서는 사용자의 하트 요금을 기록 하는 샘플 응용 프로그램을 만듭니다.
 
-[![](healthkit-images/image01.png "A sample application to record the users heart rate")](healthkit-images/image01.png#lightbox)
+[![사용자의 하트 요금을 기록 하는 샘플 응용 프로그램](healthkit-images/image01.png)](healthkit-images/image01.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -66,21 +66,21 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 
 
 명시적인 **앱 id**를 만들려면 **+** 오른쪽 위에 있는 단추를 클릭 하 여 **iOS 앱 id 등록** 페이지로 이동 합니다.
 
-[![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
+[![Apple 개발자 포털에서 앱 등록](healthkit-images/image02.png)](healthkit-images/image02.png#lightbox)
 
 위의 그림에 나와 있는 것 처럼 앱 설명을 만든 후 **Explicit 앱 id** 섹션을 사용 하 여 응용 프로그램에 대 한 id를 만듭니다. **App Services** 섹션의 **서비스 사용** 섹션에서 **Health Kit** 를 선택 합니다.
 
 완료 되 면 **계속** 단추를 눌러 계정에 **앱 ID** 를 등록 합니다. **인증서, 식별자 및 프로필** 페이지로 돌아갑니다. 프로 **비전 프로필** 을 클릭 하 여 현재 프로 비전 프로필의 목록으로 이동 하 고 **+** 오른쪽 위 모퉁이에 있는 단추를 클릭 하 여 **IOS 프로 비전 프로필 추가** 페이지로 이동 합니다. **IOS 앱 개발** 옵션을 선택 하 고 **계속** 을 클릭 하 여 **앱 ID 선택** 페이지로 이동 합니다. 여기에서 이전에 지정한 명시적 **앱 ID** 를 선택 합니다.
 
-[![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
+[![명시적 앱 ID 선택](healthkit-images/image03.png)](healthkit-images/image03.png#lightbox)
 
 **계속** 을 클릭 하 고 나머지 화면에서 작업 합니다. 여기에서 **개발자 인증서**, **장치**및이 **프로 비전 프로필**에 대 한 **이름을** 지정 합니다.
 
-[![](healthkit-images/image04.png "Generating the Provisioning Profile")](healthkit-images/image04.png#lightbox)
+[![프로 비전 프로필을 생성 하는 중](healthkit-images/image04.png)](healthkit-images/image04.png#lightbox)
 
 **생성** 을 클릭 하 고 프로필 만들기를 기다립니다. 파일을 다운로드 하 고 두 번 클릭 하 여 Xcode에 설치 합니다. **Xcode > 기본 설정 > 계정 > 세부 정보 보기** ...에서 설치를 확인할 수 있습니다. 방금 설치 된 프로 비전 프로필이 표시 되 고, 해당 **자격** 에 대 한 상태 키트 및 기타 특수 서비스 아이콘이 있어야 합니다.
 
-[![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
+[![Xcode에서 프로필 보기](healthkit-images/image05.png)](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid"></a>
 
@@ -90,11 +90,11 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 
 
 Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대신이 문서에 연결 된 샘플 앱 (미리 작성 된 스토리 보드 및 코드 포함)을 엽니다. 샘플 앱을 상태 키트 사용 **프로 비전 프로필**에 연결 하려면 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 해당 **옵션** 대화 상자를 엽니다. **IOS 응용 프로그램** 패널로 전환 하 고 이전에 앱의 **번들 식별자**로 만든 명시적 **앱 ID** 를 입력 합니다.
 
-[![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
+[![명시적 앱 ID 입력](healthkit-images/image06.png)](healthkit-images/image06.png#lightbox)
 
 이제 **IOS 번들 서명** 패널로 전환 합니다. 명시적 **앱 ID**와 연결 된 최근 설치 된 **프로 비전 프로필**은 이제 **프로 비전 프로필로**사용할 수 있습니다.
 
-[![](healthkit-images/image07.png "Select the Provisioning Profile")](healthkit-images/image07.png#lightbox)
+[![프로 비전 프로필 선택](healthkit-images/image07.png)](healthkit-images/image07.png#lightbox)
 
 **프로 비전 프로필** 을 사용할 수 없는 경우 Ios **응용 프로그램** 패널의 **번들 식별자** 와 **Ios 개발자 센터** 에 지정 된 번들 식별자를 두 번 확인 하 고 **프로 비전 프로필이** 설치 되었는지 확인 합니다 (**Xcode > 기본 설정 > 계정 > 보기**...).
 
@@ -141,11 +141,11 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 상태 키트 데이터 저장소의 저장할 형식은의 모든 서브 클래스입니다 `HKObjectType` . `HKCharacteristicType`개체는 생물학적 성, 혈압 유형 및 생년월일을 저장 합니다. 보다 일반적으로는 `HKSampleType` 특정 시간 또는 일정 기간 동안 샘플링 되는 데이터를 나타내는 개체입니다. 
 
-[![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
+[![HKSampleType 개체 차트](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
 `HKSampleType`는 추상적 이며 4 개의 구체적 하위 클래스를 포함 합니다. 현재 `HKCategoryType` 절전 모드 분석 인 데이터 유형은 하나 뿐입니다. 상태 키트의 대부분의 데이터는 형식이 `HKQuantityType` 며 `HKQuantitySample` , 친숙 한 팩터리 디자인 패턴을 사용 하 여 만든 개체에 데이터를 저장 합니다.
 
-[![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
+[![상태 키트에 있는 대부분의 데이터는 HKQuantityType 형식이 며 데이터를 HKQuantitySample 개체에 저장 합니다.](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
 `HKQuantityType`형식은에서 사이 `HKQuantityTypeIdentifier.ActiveEnergyBurned` `HKQuantityTypeIdentifier.StepCount` 입니다. 
 
@@ -155,11 +155,11 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 최종 사용자는 앱에서 상태 키트 데이터를 읽거나 쓸 수 있도록 긍정적인 단계를 수행 해야 합니다. 이 작업은 iOS 8 장치에 미리 설치 된 상태 앱을 통해 수행 됩니다. 상태 키트 앱을 처음 실행할 때 사용자에 게 시스템 제어 **상태 액세스** 대화 상자가 표시 됩니다.
 
-[![](healthkit-images/image10.png "The user is presented with a system-controlled Health Access dialog")](healthkit-images/image10.png#lightbox)
+[![사용자에 게 시스템 제어 상태 액세스 대화 상자가 표시 됩니다.](healthkit-images/image10.png)](healthkit-images/image10.png#lightbox)
 
 나중에 사용자는 상태 앱의 **소스** 대화 상자를 사용 하 여 사용 권한을 변경할 수 있습니다.
 
-[![](healthkit-images/image11.png "The user can change permissions using Health apps Sources dialog")](healthkit-images/image11.png#lightbox)
+[![사용자는 상태 앱 소스 대화 상자를 사용 하 여 사용 권한을 변경할 수 있습니다.](healthkit-images/image11.png)](healthkit-images/image11.png#lightbox)
 
 상태 정보는 매우 중요 하므로 앱 개발자는 앱을 실행 하는 동안 사용 권한이 거부 및 변경 될 것 이란 가정 하에 defensively 프로그램을 작성 해야 합니다. 가장 일반적인 방법은 메서드에서 권한을 요청 하 고 사용자 인터페이스를 적절 하 게 수정 하는 것입니다 `UIApplicationDelegate.OnActivated` .
 
@@ -353,7 +353,7 @@ hkm.HeartRateSensorLocation = HKHeartRateSensorLocation.Chest;
 
 `heartRateSample`가 만들어지면 코드는 using 블록을 사용 하 여 데이터베이스에 대 한 새 연결을 만듭니다. 이 블록 내에서 `HKHealthStore.SaveObject()` 메서드는 데이터베이스에 대 한 비동기 쓰기를 시도 합니다. 람다 식에 대 한 결과 호출은 또는와 관련 이벤트를 `HeartRateStored` 트리거합니다 `ErrorMessageChanged` .
 
-이제 모델을 프로그래밍 했으므로 컨트롤러에서 모델의 상태를 반영 하는 방법을 확인할 수 있습니다. 파일을 엽니다 `HKWorkViewController.cs` . 생성자는 `HeartRateModel` 단일 항목을 이벤트 처리 메서드에 적용 하기만 하면 됩니다 .이 메서드는 람다 식으로 인라인으로 수행 될 수 있지만 별도의 메서드를 사용 하면 좀 더 명확 하 게 만들 수 있습니다.
+이제 모델을 프로그래밍 했으므로 컨트롤러에서 모델의 상태를 반영 하는 방법을 확인할 수 있습니다. `HKWorkViewController.cs` 파일을 엽니다. 생성자는 `HeartRateModel` 단일 항목을 이벤트 처리 메서드에 적용 하기만 하면 됩니다 .이 메서드는 람다 식으로 인라인으로 수행 될 수 있지만 별도의 메서드를 사용 하면 좀 더 명확 하 게 만들 수 있습니다.
 
 ```csharp
 public HKWorkViewController (IntPtr handle) : base (handle)
@@ -404,11 +404,11 @@ IOS 시뮬레이터는 상태 키트를 지원 하지 않습니다. 디버그는
 
 프로 비전이 올바르게 설정 되었다고 가정 하면 응용 프로그램이 시작 됩니다. 해당 메서드에 도달 하면 `OnActivated` 상태 키트 권한 부여를 요청 합니다. 운영 체제에서이 작업을 처음으로 발생 하면 사용자에 게 다음과 같은 대화 상자가 표시 됩니다.
 
-[![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
+[![사용자에 게이 대화 상자가 표시 됩니다.](healthkit-images/image12.png)](healthkit-images/image12.png#lightbox)
 
 앱에서 하트 요금 데이터를 업데이트할 수 있도록 설정 하면 앱이 다시 나타납니다. `ReactToHealthCarePermissions`콜백은 비동기적으로 활성화 됩니다. 이렇게 하면 이벤트가 발생 하 여 이벤트 처리기가 실행 되 고이로 `HeartRateModel’s` `Enabled` `EnabledChanged` 인해 `HKPermissionsViewController.OnEnabledChanged()` 단추가 활성화 됩니다 `StoreData` . 다음 다이어그램에서는이 시퀀스를 보여 줍니다.
 
-[![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
+[![이 다이어그램에서는 이벤트의 시퀀스를 보여 줍니다.](healthkit-images/image13.png)](healthkit-images/image13.png#lightbox)
 
 **기록** 단추를 누릅니다. 이렇게 하면 처리기가 `StoreData_TouchUpInside()` 실행 되어 텍스트 필드의 값을 구문 분석 하 `heartRate` 고, 앞에서 설명한 함수를 통해로 변환 하 `HKQuantity` 고, `HeartRateModel.HeartRateInBeatsPerMinute()` 해당 수량을에 전달 `HeartRateModel.StoreHeartRate()` 합니다. 앞에서 설명한 것 처럼이는 데이터를 저장 하려고 시도 하 고 또는 이벤트를 발생 시킵니다 `HeartRateStored` `ErrorMessageChanged` .
 

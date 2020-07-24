@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 99565d7e61e8e8c1d28b67a6a6d25979c79fa387
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2a883c85eede7f7600e5716dded71f3c90f49026
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939752"
 ---
 # <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
@@ -35,7 +35,7 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 - 앱 그룹
 - 백그라운드 모드
 - 데이터 보호
-- 게임 센터
+- Game Center
 - 게임 컨트롤러
 - iCloud
 - 앱에서 바로 구매
@@ -49,7 +49,7 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 - HealthKit
 - HomeKit
 - 내부 앱 오디오
-- Maps
+- 지도
 - 개인 VPN
 - 푸시 알림
 - 전자지갑
@@ -80,7 +80,7 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 Siri 원격은 현재 다음 국가에서 사용할 수 있습니다.
 
 - 오스트레일리아
-- Canada
+- 캐나다
 - 프랑스
 - 독일
 - 일본
@@ -90,7 +90,7 @@ Siri 원격은 현재 다음 국가에서 사용할 수 있습니다.
 
 다른 모든 국가에서는 Siri 단추를 검색 단추로 대체 하는 Apple TV 원격을 받게 됩니다 .이 단추를 클릭 하면 검색 단추를 사용 하 여 기본 검색 화면에서
 
-[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
+[![Siri 원격](tvos9-images/remote02.png)](tvos9-images/remote02.png#lightbox)
 
 자세한 내용은 [Siri 원격 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 설명서를 참조 하세요.
 
@@ -154,7 +154,7 @@ IOS 또는 OS X와 달리 Apple TV에는 사용자가 직접 앱 이나 해당 �
 
 Apple TV 홈 화면에는 설치 된 모든 앱이 표시 되며 사용자 기본 설정에 액세스 하는 방법이 제공 됩니다.
 
-[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
+[![홈 화면](tvos9-images/home01.png)](tvos9-images/home01.png#lightbox)
 
 사용자는 포커스를 사용 하는 Siri 원격에서 터치 제스처를 사용 하 여 앱 아이콘 그리드를 탐색 하 여 앱을 선택 하 고 시작 합니다. 앱 아이콘은 잠재적 사용자에 게 훌륭한 인상을 줄 수 있는 첫 번째 기회 이며, 앱의 용도를 한눈에 파악할 수 있습니다.
 
@@ -168,7 +168,7 @@ Apple TV 홈 화면에는 설치 된 모든 앱이 표시 되며 사용자 기�
 
 사용자가 Apple TV 홈 화면의 맨 위 행에 tvOS 앱을 배치 하는 경우 사용자가 앱을 선택 하면 최상위 선반 이미지가 표시 됩니다. 이 이미지는 앱의 기능을 강조 표시 하거나 콘텐츠에 대 한 직접 링크를 제공 해야 합니다.
 
-[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
+[![위쪽 선반](tvos9-images/topshelf01.png)](tvos9-images/topshelf01.png#lightbox)
 
 Top 선반 이미지는 단일 정적 또는 파일로 제공 될 수도 있고 `.png` `.lsr` 런타임에 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수도 있습니다.
 

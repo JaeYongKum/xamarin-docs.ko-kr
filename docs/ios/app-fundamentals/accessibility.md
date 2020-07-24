@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 2259566fc6342a40a8c0a94bacd1c146b6509d52
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e976f5bf0789ca6c703a14b667e75b05a7f47819
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574160"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937854"
 ---
 # <a name="accessibility-on-ios"></a>IOS의 내게 필요한 옵션
 
@@ -29,7 +29,7 @@ iOS는 개발자가 컨트롤에 더 쉽게 액세스할 수 있도록 하는 `A
 
 **Properties Pad** 에는 IOS UI 디자이너에서 컨트롤을 선택할 때 이러한 설정을 편집할 수 있도록 하는 내게 필요한 옵션 섹션이 포함 되어 있습니다.
 
-![](accessibility-images/ios-designer-sml.png "Accessibility Settings")
+![내게 필요한 옵션 설정](accessibility-images/ios-designer-sml.png)
 
 **C#**
 
@@ -115,7 +115,7 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 
 VoiceOver은 **일반 > 내게 필요한 옵션 > voiceover**으로 이동 하 여 **설정** 앱에서 사용 하도록 설정 됩니다.
 
-![](accessibility-images/settings-sml.png "Setting the speaking rate")
+![말하기 요금 설정](accessibility-images/settings-sml.png)
 
 **내게 필요한** 옵션 화면에서는 확대/축소, 텍스트 크기, 색 & 대비 옵션, 음성 설정 및 기타 구성 옵션에 대 한 설정도 제공 합니다.
 
@@ -125,12 +125,12 @@ VoiceOver은 **일반 > 내게 필요한 옵션 > voiceover**으로 이동 하 �
 
 시뮬레이터에서 테스트할 때 접근성 **검사기** 를 사용 하 여 내게 필요한 옵션 속성 및 이벤트가 올바르게 구성 되었는지 확인 하는 데 도움이 됩니다. **일반 > 내게 필요한 옵션 > 접근성 검사기**로 이동 하 여 **설정** 앱에서 검사기를 설정 합니다.
 
-![](accessibility-images/settings-inspector-sml.png "Enable Accessibility Inspector")
+![내게 필요한 옵션 검사자 사용](accessibility-images/settings-inspector-sml.png)
 
 사용 하도록 설정 되 면 검사기 창은 항상 iOS 화면을 가리킵니다.
 테이블 뷰 행을 선택 하는 경우의 출력 예는 다음과 같습니다. **레이블에** 행의 내용을 제공 하는 문장이 포함 되 고 "done" (즉, 눈금이 표시 됨) 됩니다.
 
-![](accessibility-images/tableview-a11y-sml.png "Using Accessibility Inspector")
+![접근성 검사자 사용](accessibility-images/tableview-a11y-sml.png)
 
 검사기가 표시 되는 동안 왼쪽 위에 있는 "X" 아이콘을 사용 하 여 오버레이를 임시로 표시 하 고 숨기고 접근성 설정을 사용/사용 하지 않도록 설정 합니다.
 

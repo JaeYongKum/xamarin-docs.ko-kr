@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ce28a9ef2d5cbf4bdf1c12a85ea64ac9bb8bee8b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 44504ed47ca5ea94ed22c9569f8674ca0e63d89a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137009"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937867"
 ---
 # <a name="visualelement-blur-on-ios"></a>IOS에서 VisualElement 흐림 효과
 
@@ -49,7 +49,7 @@ boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 
 그 결과 지정 된 [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 가 인스턴스에 적용 되어 그 [`BoxView`](xref:Xamarin.Forms.BoxView) 아래 계층화 된를 흐리게 됩니다 [`Image`](xref:Xamarin.Forms.Image) .
 
-![](applying-blur-images/blur-effect.png "Blur Effect Platform-Specific")
+![흐림 효과 플랫폼별](applying-blur-images/blur-effect.png)
 
 > [!NOTE]
 > 에 흐리게 효과를 추가할 때 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 터치 이벤트는에서 계속 수신 됩니다 `VisualElement` .

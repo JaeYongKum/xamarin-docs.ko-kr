@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b9b8d1dbaf7872ab629392e15d906540ae491db4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7319cc50a147da93018bdd1c2036d70cf01e9b80
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572600"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936684"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.ios의 HomeKit
 
 _HomeKit은 홈 automation 장치를 제어 하기 위한 Apple의 프레임 워크입니다. 이 문서에서는 HomeKit를 소개 하 고 HomeKit 액세서리 시뮬레이터에서 테스트 액세서리를 구성 하 고 이러한 액세서리와 상호 작용 하는 간단한 Xamarin.ios 앱을 작성 하는 과정을 소개 합니다._
 
-[![](homekit-images/accessory01.png "An example HomeKit enabled App")](homekit-images/accessory01.png#lightbox)
+[![예제 HomeKit 사용 앱](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
 Apple은 다양 한 공급 업체의 여러 홈 automation 장치를 일관 된 단일 단위로 원활 하 게 통합 하는 방법으로 iOS 8에 HomeKit를 도입 했습니다. HomeKit는 일반 프로토콜을 사용 하 여 홈 자동화 장치를 검색, 구성 및 제어 하기 위해 개별 공급 업체가 작업을 조정 하지 않고도 관련 공급 업체의 장치를 함께 사용할 수 있도록 합니다.
 
@@ -57,21 +57,21 @@ HomeKit에 의해 적용 되는 보안 요구 사항으로 인해 HomeKit 프레
 3. 아직 수행 하지 않은 경우 **식별자** 를 클릭 하 고 앱에 대 한 id (예: `com.company.appname` )를 만든 다음 기존 id를 편집 합니다.
 4. 지정 된 ID에 대해 **HomeKit** 서비스를 확인 했는지 확인 합니다. 
 
-    [![](homekit-images/provision01.png "Enable the HomeKit service for the given ID")](homekit-images/provision01.png#lightbox)
+    [![지정 된 ID에 대해 HomeKit 서비스를 사용 하도록 설정 합니다.](homekit-images/provision01.png)](homekit-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
 6. 프로 **비전 프로필**  >  **개발** 을 클릭 하 고 앱에 대 한 새 개발 프로 비전 프로필을 만듭니다. 
 
-    [![](homekit-images/provision02.png "Create a new development provisioning profile for the app")](homekit-images/provision02.png#lightbox)
+    [![앱에 대 한 새 개발 프로 비전 프로필 만들기](homekit-images/provision02.png)](homekit-images/provision02.png#lightbox)
 7. 새 프로 비전 프로필을 다운로드 하 고 설치 하거나 Xcode를 사용 하 여 프로필을 다운로드 하 고 설치 합니다.
 8. Xamarin.ios 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다. 
 
-    [![](homekit-images/provision03.png "Select provisioning profile just created")](homekit-images/provision03.png#lightbox)
+    [![프로 비전 프로필을 지금 만듦을 선택 합니다.](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
 9. 그런 다음 **info.plist** 파일을 편집 하 고 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인 합니다. 
 
-    [![](homekit-images/provision04.png "Set the App ID ")](homekit-images/provision04.png#lightbox)
+    [![앱 ID 설정](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
 10. 마지막으로 **info.plist** 파일을 편집 하 고 **HomeKit** 자격을 선택 했는지 확인 합니다. 
 
-    [![](homekit-images/provision05.png "Enable the HomeKit entitlement")](homekit-images/provision05.png#lightbox)
+    [![HomeKit 자격 사용](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
 11. 모든 파일의 변경 내용을 저장 합니다.
 
 이러한 설정이 적용 되 면 응용 프로그램은 이제 HomeKit Framework Api에 액세스할 준비가 되었습니다. 프로 비전에 대 한 자세한 내용은 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 및 [앱 가이드 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 을 참조 하세요.
@@ -92,7 +92,7 @@ Apple은 Xcode에서 별도 다운로드로 HomeKit 액세서리 시뮬레이터
 1. 웹 브라우저에서 [Apple 개발자를 위한 다운로드](https://developer.apple.com/download/more/?name=for%20Xcode) 를 방문 하세요.
 2. **Xcode xxx 용 추가 도구** 를 다운로드 합니다 (여기서 xxx는 설치한 Xcode의 버전). 
 
-    [![](homekit-images/simulator01.png "Download the Additional Tools for Xcode")](homekit-images/simulator01.png#lightbox)
+    [![Xcode 용 추가 도구 다운로드](homekit-images/simulator01.png)](homekit-images/simulator01.png#lightbox)
 3. 디스크 이미지를 열고 **응용 프로그램** 디렉터리에 도구를 설치 합니다.
 
 HomeKit 액세서리 시뮬레이터를 설치한 경우 테스트용 가상 액세서리를 만들 수 있습니다.
@@ -103,22 +103,22 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 액세�
 
 1. 응용 프로그램 폴더에서 HomeKit 액세서리 시뮬레이터를 시작 합니다. 
 
-    [![](homekit-images/simulator02.png "The HomeKit Accessory Simulator")](homekit-images/simulator02.png#lightbox)
+    [![HomeKit 액세서리 시뮬레이터](homekit-images/simulator02.png)](homekit-images/simulator02.png#lightbox)
 2. 단추를 클릭 **+** 하 고 **새 액세서리 ...** 를 선택 합니다. 
 
-    [![](homekit-images/simulator03.png "Add a new accessory")](homekit-images/simulator03.png#lightbox)
+    [![새 액세서리 추가](homekit-images/simulator03.png)](homekit-images/simulator03.png#lightbox)
 3. 새 액세서리에 대 한 정보를 입력 하 고 **마침** 단추를 클릭 합니다. 
 
-    [![](homekit-images/simulator04.png "Fill out the information about the new accessory")](homekit-images/simulator04.png#lightbox)
+    [![새 액세서리에 대 한 정보를 입력 합니다.](homekit-images/simulator04.png)](homekit-images/simulator04.png#lightbox)
 4. **서비스 추가** 를 클릭 합니다. 단추를 클릭 하 고 드롭다운에서 서비스 유형을 선택 합니다. 
 
-    [![](homekit-images/simulator05.png "Select a service type from the dropdown")](homekit-images/simulator05.png#lightbox)
+    [![드롭다운에서 서비스 유형 선택](homekit-images/simulator05.png)](homekit-images/simulator05.png#lightbox)
 5. 서비스의 **이름을** 입력 하 고 **마침** 단추를 클릭 합니다. 
 
-    [![](homekit-images/simulator06.png "Enter a Name for the service")](homekit-images/simulator06.png#lightbox)
+    [![서비스 이름 입력](homekit-images/simulator06.png)](homekit-images/simulator06.png#lightbox)
 6. **특성 추가** 단추를 클릭 하 고 필요한 설정을 구성 하 여 서비스에 대 한 선택적 특성을 제공할 수 있습니다. 
 
-    [![](homekit-images/simulator07.png "Configuring the required settings")](homekit-images/simulator07.png#lightbox)
+    [![필요한 설정 구성](homekit-images/simulator07.png)](homekit-images/simulator07.png#lightbox)
 7. 위의 단계를 반복 하 여 HomeKit에서 지 원하는 가상 홈 자동화 장치 유형 중 하나를 만듭니다.
 
 몇 가지 샘플 가상 HomeKit 액세서리를 만들고 구성 하면 이제 Xamarin.ios 앱에서 이러한 장치를 사용 하 고 제어할 수 있습니다.
@@ -127,7 +127,7 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 액세�
 
 IOS 10 이상에 대 한 새로운 기능으로 개발자는 `NSHomeKitUsageDescription` 앱의 파일에 키를 추가 하 `Info.plist` 고 앱이 사용자의 HomeKit 데이터베이스에 액세스 하는 이유를 선언 하는 문자열을 제공 해야 합니다. 이 문자열은 앱을 처음 실행할 때 사용자에 게 표시 됩니다.
 
-[![](homekit-images/info01.png "The HomeKit permission dialog")](homekit-images/info01.png#lightbox)
+[![HomeKit 권한 대화 상자](homekit-images/info01.png)](homekit-images/info01.png#lightbox)
 
 이 키를 설정 하려면 다음을 수행 합니다.
 
@@ -136,11 +136,11 @@ IOS 10 이상에 대 한 새로운 기능으로 개발자는 `NSHomeKitUsageDesc
 3. 목록에 새 **항목** 을 추가 합니다.
 4. 드롭다운 목록에서 **개인 정보-HomeKit 사용 설명**을 선택 합니다. 
 
-    [![](homekit-images/info02.png "Select Privacy - HomeKit Usage Description")](homekit-images/info02.png#lightbox)
+    [![개인 정보-HomeKit 사용 설명 선택](homekit-images/info02.png)](homekit-images/info02.png#lightbox)
 5. 앱이 사용자의 HomeKit 데이터베이스에 액세스 하려는 이유에 대 한 설명을 입력 합니다. 
 
-    [![](homekit-images/info03.png "Enter a description")](homekit-images/info03.png#lightbox)
-6. 파일의 변경 내용을 저장합니다.
+    [![설명 입력](homekit-images/info03.png)](homekit-images/info03.png#lightbox)
+6. 변경 내용을 파일에 저장합니다.
 
 > [!IMPORTANT]
 > `NSHomeKitUsageDescription`파일에 키를 설정 하지 않으면 `Info.plist` iOS 10 이상에서 실행 될 때 오류 없이 앱이 _자동으로 실패_ 하 게 됩니다 (런타임에 시스템에서 닫힘).
@@ -189,7 +189,7 @@ public override void FinishedLaunching (UIApplication application)
 
 응용 프로그램을 처음 실행할 때 사용자에 게 HomeKit 정보에 대 한 액세스를 허용할지 묻는 메시지가 표시 됩니다.
 
-[![](homekit-images/home01.png "The user will be asked if they want to allow it to access their HomeKit information")](homekit-images/home01.png#lightbox)
+[![사용자가 자신의 HomeKit 정보에 액세스 하도록 허용할지 묻는 메시지가 표시 됩니다.](homekit-images/home01.png)](homekit-images/home01.png#lightbox)
 
 사용자가 **정상**으로 대답 하면 응용 프로그램은 해당 HomeKit 액세서리를 사용할 수 있게 됩니다. 그렇지 않으면 HomeKit에 대 한 모든 호출이 오류로 인해 실패 합니다.
 
@@ -280,11 +280,11 @@ Home Manager에서 기본 홈을 정의 하거나 로드 한 후 Xamarin.ios 앱
 
 `DiscoveredAccessories`이 목록에는 `HMAccessory` HomeKit 사용 홈 자동화 장치와 조명 또는 중고품 도어 제어와 같은 사용 가능한 서비스를 정의 하는 개체의 컬렉션이 포함 됩니다.
 
-새 액세서리를 찾았으면 사용자에 게 표시 되 고이를 선택 하 여 홈에 추가할 수 있습니다. 예제:
+새 액세서리를 찾았으면 사용자에 게 표시 되 고이를 선택 하 여 홈에 추가할 수 있습니다. 예:
 
-[![](homekit-images/accessory01.png "Finding a new accessory")](homekit-images/accessory01.png#lightbox)
+[![새 액세서리 찾기](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
-메서드를 호출 `AddAccessory` 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 예를 들면 다음과 같습니다.
+메서드를 호출 `AddAccessory` 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 예를 들어:
 
 ```csharp
 // Add the requested accessory to the home
@@ -299,11 +299,11 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 `err`속성이이 아니면 `null` 오류가 발생 하 여 사용자에 게 표시 되어야 합니다. 그렇지 않으면 사용자에 게 추가할 장치에 대 한 설치 코드를 입력 하 라는 메시지가 표시 됩니다.
 
-[![](homekit-images/accessory02.png "Enter the setup code for the device to add")](homekit-images/accessory02.png#lightbox)
+[![추가할 장치의 설치 코드를 입력 하세요.](homekit-images/accessory02.png)](homekit-images/accessory02.png#lightbox)
 
 HomeKit 액세서리 시뮬레이터에서이 숫자는 **설치 코드** 필드 아래에서 찾을 수 있습니다.
 
-[![](homekit-images/accessory03.png "The Setup Code field in the HomeKit Accessory Simulator")](homekit-images/accessory03.png#lightbox)
+[![HomeKit 액세서리 시뮬레이터의 설정 코드 필드](homekit-images/accessory03.png)](homekit-images/accessory03.png#lightbox)
 
 Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상자 또는 액세서리의 사용자 설명서에 있는 레이블에 인쇄 됩니다.
 
@@ -317,9 +317,9 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 이 예에서는 작업을 간단 하 게 유지 하 고 홈의 액세서리로 직접 작업 하는 것이 좋습니다.
 
-`HMHome`개체는 해당 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다 `Accessories` . 예를 들면 다음과 같습니다.
+`HMHome`개체는 해당 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다 `Accessories` . 예를 들어:
 
-[![](homekit-images/accessory04.png "An example accessory")](homekit-images/accessory04.png#lightbox)
+[![예제 액세서리](homekit-images/accessory04.png)](homekit-images/accessory04.png#lightbox)
 
 여기에서 사용자는 지정 된 액세서리를 선택 하 고 제공 하는 서비스를 사용할 수 있습니다.
 
@@ -367,7 +367,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 을 로드 한 후에는 `HMAccessory` 제공 된 개별 `HNService` 개체를 쿼리하여 해당 정보를 사용자에 게 표시할 수 있습니다.
 
-[![](homekit-images/accessory05.png "Displaying Service Information")](homekit-images/accessory05.png#lightbox)
+[![서비스 정보 표시](homekit-images/accessory05.png)](homekit-images/accessory05.png#lightbox)
 
 `Reachable`에 대 한 `HMAccessory` 작업을 시도 하기 전에 항상의 속성을 확인 해야 합니다. 사용자가 장치 범위 내에 없거나 연결 되지 않은 경우 액세서리에 연결할 수 없습니다.
 
@@ -657,7 +657,7 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 
 실제 iOS 장치 하드웨어에서 실행 되는 **HomeKitIntro** 앱을 사용 하 여 특성 값에 대 한 변경 내용은 HomeKit 액세서리 시뮬레이터에서 거의 즉시 표시 되어야 합니다. 예를 들어 iOS 앱에서 광원의 상태를 변경 합니다.
 
-[![](homekit-images/test01.png "Changing the state of a light in an iOS app")](homekit-images/test01.png#lightbox)
+[![IOS 앱에서 광원의 상태 변경](homekit-images/test01.png)](homekit-images/test01.png#lightbox)
 
 HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합니다. 값이 변경 되지 않으면 새 특성 값을 쓸 때 오류 메시지의 상태를 확인 하 고 해당 액세서리에 계속 연결할 수 있는지 확인 합니다.
 

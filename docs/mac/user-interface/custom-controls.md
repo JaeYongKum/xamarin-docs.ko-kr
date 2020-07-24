@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c4bec7d77e7778d8922640c75d23f4b1464f864f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8ed83ee8f0bded6258b695f7a6383cda1929f542
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573926"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997087"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.ios에서 사용자 지정 컨트롤 만들기
 
@@ -20,7 +20,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우, *
 
 MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만 사용자 지정 컨트롤을 만들어 사용자 지정 컨트롤을 만들어 사용자 지정 UI 테마 (예: 게임 인터페이스)와 사용자 지정 UI 테마를 일치 시 키 지 않도록 해야 할 수 있습니다.
 
-[![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
+[![사용자 지정 UI 컨트롤의 예](custom-controls-images/intro01.png)](custom-controls-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 재사용 가능한 사용자 지정 사용자 인터페이스 컨트롤을 만드는 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
@@ -48,7 +48,7 @@ MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만
 
 Mac용 Visual Studio에서 사용자 지정 사용자 인터페이스 컨트롤을 만들 Xamarin.ios 프로젝트를 엽니다 (또는 새 항목을 만듭니다). 새 클래스를 추가 하 고 호출 합니다 `NSFlipSwitch` .
 
-[![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
+[![새 클래스 추가](custom-controls-images/custom01.png)](custom-controls-images/custom01.png#lightbox)
 
 그런 다음 클래스를 편집 `NSFlipSwitch.cs` 하 고 다음과 같이 만듭니다.
 
@@ -183,7 +183,7 @@ private void Initialize() {
 }
 ```
 
-이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 예를 들면 다음과 같습니다.
+이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 예를 들어:
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)
@@ -334,19 +334,19 @@ if (this.Action !=null)
 
 Interface Builder를 사용 하 여 컨트롤을 추가 하려면 먼저 Xamarin.ios 프로젝트의 클린 빌드를 수행 하 고 파일을 두 번 클릭 `Main.storyboard` 하 여 편집을 위해 Interface Builder에서 엽니다.
 
-[![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
+[![Xcode에서 storyboard 편집](custom-controls-images/custom02.png)](custom-controls-images/custom02.png#lightbox)
 
 그런 다음를 `Custom View` 사용자 인터페이스 디자인으로 끌어 옵니다.
 
-[![](custom-controls-images/custom03.png "Selecting a Custom View from the Library")](custom-controls-images/custom03.png#lightbox)
+[![라이브러리에서 사용자 지정 보기 선택](custom-controls-images/custom03.png)](custom-controls-images/custom03.png#lightbox)
 
 사용자 지정 보기를 선택한 상태에서 **Id 검사기** 로 전환 하 고 뷰의 **클래스** 를로 변경 합니다 `NSFlipSwitch` .
 
-[![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
+[![뷰의 클래스 설정](custom-controls-images/custom04.png)](custom-controls-images/custom04.png#lightbox)
 
 **길잡이 편집기** 로 전환 하 고 사용자 지정 컨트롤에 대 한 **콘센트** 를 만듭니다 (파일이 아닌 파일에 바인딩되어야 `ViewController.h` 함 `.m` ).
 
-[![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
+[![새 콘센트 구성](custom-controls-images/custom05.png)](custom-controls-images/custom05.png#lightbox)
 
 변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아간 다음 변경 내용을 동기화 할 수 있습니다. 파일을 편집 `ViewController.cs` 하 고 `ViewDidLoad` 메서드를 다음과 같이 만듭니다.
 
@@ -367,7 +367,7 @@ public override void ViewDidLoad ()
 
 필요에 따라 Interface Builder로 돌아가서 컨트롤에 대 한 **작업** 을 정의할 수 있습니다.
 
-[![](custom-controls-images/custom06.png "Configuring a new Action")](custom-controls-images/custom06.png#lightbox)
+[![새 작업 구성](custom-controls-images/custom06.png)](custom-controls-images/custom06.png#lightbox)
 
 다시 파일을 편집 `ViewController.cs` 하 고 다음 메서드를 추가 합니다.
 

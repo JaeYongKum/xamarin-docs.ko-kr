@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: bf023543d3159f5d5baf7f7036a576b8a746cf9e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6002e5cc62dfe30c14f21943c690a5a1b15a0c12
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936593"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
@@ -21,12 +21,12 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 - [섹션 헤더](#Section_Header)
 - [셀](#Cells) (또는 원하는 경우 행)
 - [섹션 바닥글](#Section_Footer)
-- [인덱싱할](#Index)
+- [Index](#Index)
 - [편집 모드](#Edit_Features) (' 살짝 밀기 to delete ' 및 끌어서 핸들을 행 순서 변경) 
 
 이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.
 
- [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.](table-parts-and-functionality-images/image1a.png)](table-parts-and-functionality-images/image1a.png#lightbox)
 
 이러한 부분에 대해서는 아래에서 자세히 설명 합니다.
 
@@ -72,7 +72,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 
 테이블 뷰를 표시 하는 데 사용 되는 기본 클래스는 다음과 같습니다.
 
-[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![테이블 뷰를 표시 하는 데 사용 되는 기본 클래스는 다음과 같습니다.](table-parts-and-functionality-images/classdiagram.png)](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 각 클래스의 용도는 아래에 설명 되어 있습니다.
 

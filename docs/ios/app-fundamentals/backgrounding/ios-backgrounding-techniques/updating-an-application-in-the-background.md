@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ae08d7d2d8d9de700570311f2294df737240b73f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2e5b7a65f565f8c4f3265c5c95e6e4a296e4681f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572158"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938101"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>배경에서 Xamarin.ios 앱 업데이트
 
@@ -43,7 +43,7 @@ IOS 6에서 새로운 콘텐츠를 로드 하는 데 필요한 포그라운드�
 
 백그라운드 페치를 구현 하려면 *info.plist* 를 편집 하 고 **백그라운드 모드** 및 **백그라운드 페치** 사용 확인란을 선택 합니다.
 
- [![](updating-an-application-in-the-background-images/fetch.png "Edit the Info.plist and check the Enable Background Modes and Background Fetch check boxes")](updating-an-application-in-the-background-images/fetch.png#lightbox)
+ [![Info.plist를 편집 하 고 백그라운드 모드 및 백그라운드 페치 사용 확인란을 선택 합니다.](updating-an-application-in-the-background-images/fetch.png)](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 그런 다음에서 `AppDelegate` 메서드를 재정의 `FinishedLaunching` 하 여 최소 인출 간격을 설정 합니다. 이 예제에서는 OS가 새 콘텐츠를 가져오는 빈도를 결정 합니다.
 
@@ -101,7 +101,7 @@ IOS 6에서 들어오는 푸시 알림은 응용 프로그램에서 흥미로운
 
 원격 알림을 구현 하려면 *info.plist* 를 편집 하 고 **백그라운드 모드** 및 **원격 알림** 사용 확인란을 선택 합니다.
 
- [![](updating-an-application-in-the-background-images/remote.png "Background Mode set to Enable Background Modes and Remote notifications")](updating-an-application-in-the-background-images/remote.png#lightbox)
+ [![백그라운드 모드 및 원격 알림을 사용 하도록 설정 하는 백그라운드 모드](updating-an-application-in-the-background-images/remote.png)](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 다음으로 `content-available` 푸시 알림 자체의 플래그를 1로 설정 합니다. 이렇게 하면 경고를 표시 하기 전에 응용 프로그램이 새 콘텐츠를 인출 하는 것을 알 수 있습니다.
 
@@ -147,7 +147,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 그러나 APNs는 정상적인 원격 알림 또는 연결 유지 응답과 함께 자동 알림을 "긍정" 할 수 있습니다. 정기 알림은 속도 제한 되지 않으므로 다음 다이어그램과 같이 APNs에서 장치에 저장 된 자동 알림을 푸시하는 데 사용할 수 있습니다.
 
- [![](updating-an-application-in-the-background-images/silent.png "Regular notifications can be used to push stored silent notifications from the APNs to the device, as illustrated by this diagram")](updating-an-application-in-the-background-images/silent.png#lightbox)
+ [![정기 알림을 사용 하 여이 다이어그램에서 설명한 대로 APNs에서 장치로 저장 된 자동 알림을 푸시할 수 있습니다.](updating-an-application-in-the-background-images/silent.png)](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > Apple에서는 개발자가 응용 프로그램에 필요할 때마다 자동 푸시 알림을 보내고 APNs에서 배달을 예약할 수 있습니다.

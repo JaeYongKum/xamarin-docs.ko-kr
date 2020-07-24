@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8bcd17658156694bfb0638d0ddc1a1ca3fe295c2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 401de4883c91c682d4734dd036ea87b6dc694edb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136047"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939050"
 ---
 # <a name="visualelement-legacy-color-mode-on-ios"></a>IOS의 VisualElement 레거시 색 모드
 
@@ -53,7 +53,7 @@ _legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
 
 따라서 레거시 색 모드를 사용 하지 않도록 설정 하 여 보기에 설정 된 색이 보기를 사용 하지 않도록 설정 된 경우에도 유지 되도록 할 수 있습니다.
 
-![](legacy-color-mode-images/legacy-color-mode-disabled.png "Legacy color mode disabled")
+![레거시 색 모드 사용 안 함](legacy-color-mode-images/legacy-color-mode-disabled.png)
 
 > [!NOTE]
 > [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup)보기에 대해를 설정 하는 경우 레거시 색 모드가 완전히 무시 됩니다. 시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.

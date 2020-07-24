@@ -10,16 +10,16 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 94fa094f579ad33947f1cc89e0d36c862c824472
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136255"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938946"
 ---
 # <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
@@ -147,7 +147,7 @@ SwipeView swipeView = new SwipeView
 
 ## <a name="swipe-items"></a>항목 살짝 밀기
 
-`LeftItems`,, `RightItems` `TopItems` 및 컬렉션은 `BottomItems` 모두 형식입니다 `SwipeItems` . `SwipeItems`클래스는 다음 속성을 정의 합니다.
+`LeftItems`,, `RightItems` `TopItems` 및 컬렉션은 `BottomItems` 모두 형식입니다 `SwipeItems` . `SwipeItems` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `Mode`는 살짝의 `SwipeMode` 상호 작용 효과를 나타내는 형식의입니다. 살짝 밀기 모드에 대 한 자세한 내용은 [살짝 밀기 모드](#swipe-mode)를 참조 하세요.
 - `SwipeBehaviorOnInvoked``SwipeBehaviorOnInvoked`는 `SwipeView` 살짝 밀기 항목이 호출 된 후의 동작 방식을 나타내는 형식의입니다. 살짝 밀기 동작에 대 한 자세한 내용은 [살짝 밀기 동작](#swipe-behavior)을 참조 하세요.

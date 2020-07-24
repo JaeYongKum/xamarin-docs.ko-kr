@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ca1acd58ba9b5c598e19424f46cc0bcb838315aa
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b547d21b19d223aebb345f7c4a1dc8dc126fb0d6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571781"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928785"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -34,7 +34,7 @@ ms.locfileid: "84571781"
 
 1. 프로젝트 **Touch_Start**를 엽니다. 먼저 프로젝트를 실행 하 여 모든 것이 정상 인지 확인 하 고 **터치 샘플** 단추를 터치 합니다. 다음과 비슷한 화면이 표시 됩니다 (단추가 작동 하지 않음).
 
-    [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![작업 단추가 아닌 단추를 사용 하 여 샘플 앱 실행](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
 1. **TouchViewController.cs** 파일을 편집 하 고 다음 두 인스턴스 변수를 클래스에 추가 합니다 `TouchViewController` .
 
@@ -163,9 +163,9 @@ ms.locfileid: "84571781"
 
 1. 이제 터치 샘플 화면이 종료 되었습니다. 다음 스크린샷에 표시 된 것 처럼 각 이미지와 상호 작용할 때 화면이 어떻게 달라 지는 지 확인 합니다.
 
-    [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![앱 시작 화면](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
-    [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![사용자가 단추를 끈 후 화면](ios-touch-walkthrough-images/image5.png)](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples"></a>
 
@@ -294,7 +294,7 @@ ms.locfileid: "84571781"
 1. 응용 프로그램을 실행 하 고 두 이미지를 조작 합니다.
 다음 스크린샷은 이러한 상호 작용의 한 가지 예입니다.
 
-    [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![이 스크린샷은 끌기 상호 작용을 보여 줍니다.](ios-touch-walkthrough-images/image7.png)](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"></a>
 
@@ -302,7 +302,7 @@ ms.locfileid: "84571781"
 
 이 섹션에서는 이전 섹션의 개념을 적용 하 여 사용자 지정 제스처 인식기를 작성 합니다. 사용자 지정 제스처 인식기는 하위 클래스 `UIGestureRecognizer` 를 사용 하 여 사용자가 화면에서 "V"를 그린 다음 비트맵을 전환 하는 경우를 인식 합니다. 다음 스크린샷에는이 화면의 예제가 나와 있습니다.
 
- [![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![사용자가 화면에서 ' V '를 그리면 앱이 인식 합니다.](ios-touch-walkthrough-images/image8.png)](ios-touch-walkthrough-images/image8.png#lightbox)
 
 사용자 지정 제스처 인식기를 만들려면 다음 단계를 따르세요.
 
@@ -476,9 +476,9 @@ ms.locfileid: "84571781"
 
 1. 응용 프로그램을 실행 하 고 화면에서 "V" 그리기를 시도 합니다. 다음 스크린샷에 표시 된 것 처럼 표시 되는 이미지가 변경 됩니다.
 
-    [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
+    [![선택 된 단추](ios-touch-walkthrough-images/image9.png)](ios-touch-walkthrough-images/image9.png#lightbox)
 
-    [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![선택 취소 된 단추](ios-touch-walkthrough-images/image10.png)](ios-touch-walkthrough-images/image10.png#lightbox)
 
 위의 세 섹션에서는 터치 이벤트, 기본 제공 제스처 인식기 또는 사용자 지정 제스처 인식기를 사용 하 여 iOS의 터치 이벤트에 응답 하는 다양 한 방법을 보여 주었습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: be78e76e2a52fb6e924fd67e3f0de9e0890ee25b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b81e7b980c37f238fe9c2a299aa360cc01294ebe
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933434"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997191"
 ---
 # <a name="introduction-to-ios-6"></a>iOS 6 소개
 
@@ -25,7 +25,7 @@ Ios 6 및 Xamarin.ios 6을 사용 하면 개발자는 iPhone 5를 대상으로 �
 
 ## <a name="introduction-to-collection-views"></a>[컬렉션 뷰 소개](~/ios/user-interface/controls/uicollectionview.md)
 
-컬렉션 뷰를 사용 하면 임의의 레이아웃을 사용 하 여 콘텐츠를 표시할 수 있습니다. 또한 사용자 지정 레이아웃을 지 원하는 동시에 즉시 표 형태의 레이아웃을 쉽게 만들 수 있습니다. 자세한 내용은 [컬렉션 뷰 소개](~/ios/user-interface/controls/uicollectionview.md) 가이드를 참조 하세요 [](~/ios/user-interface/controls/uicollectionview.md) .
+컬렉션 뷰를 사용 하면 임의의 레이아웃을 사용 하 여 콘텐츠를 표시할 수 있습니다. 또한 사용자 지정 레이아웃을 지 원하는 동시에 즉시 표 형태의 레이아웃을 쉽게 만들 수 있습니다. 자세한 내용은 [컬렉션 뷰 소개](~/ios/user-interface/controls/uicollectionview.md) 가이드를 참조 하세요.
 
 ## <a name="introduction-to-passkit"></a>[PassKit 소개](~/ios/platform/passkit.md)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ed58694073f8d04d16cf19840a07f5210f0afb91
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1274fc409cd20b974c44fecd87b6d1b175591710
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574069"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930171"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
@@ -20,7 +20,7 @@ _이 문서에서는 UIAlertController를 사용 하 여 tvOS의 사용자에 �
 
 TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수행할 수 있는 권한을 요청 해야 하는 경우 다음을 사용 하 여 경고 메시지를 표시할 수 있습니다 `UIAlertViewController` .
 
-[![](alerts-images/alert01.png "An example UIAlertViewController")](alerts-images/alert01.png#lightbox)
+[![예제 UIAlertViewController](alerts-images/alert01.png)](alerts-images/alert01.png#lightbox)
 
 메시지를 표시 하는 것 외에도 사용자가 작업에 응답 하 고 피드백을 제공할 수 있도록 경고에 단추 및 텍스트 필드를 추가할 수 있습니다.
 
@@ -30,7 +30,7 @@ TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수�
 
 위에서 설명한 것 처럼 경고는 사용자의 주의를 받고 앱의 상태를 알리거나 피드백을 요청 하는 데 사용 됩니다. 경고는 제목을 제공 해야 하며 메시지 및 하나 이상의 단추 또는 텍스트 필드를 선택적으로 포함할 수 있습니다.
 
-[![](alerts-images/alert04.png "An example alert")](alerts-images/alert04.png#lightbox)
+[![예제 경고](alerts-images/alert04.png)](alerts-images/alert04.png#lightbox)
 
 Apple에는 경고를 사용 하기 위한 다음과 같은 제안이 있습니다.
 
@@ -117,11 +117,11 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 
 경고에 작업 (단추)을 추가 하는 것 외에도 사용자가 사용자 Id 및 암호와 같은 정보를 입력할 수 있도록 경고에 텍스트 필드를 추가할 수 있습니다.
 
-[![](alerts-images/alert02.png "Text Field in an alert")](alerts-images/alert02.png#lightbox)
+[![경고의 텍스트 필드](alerts-images/alert02.png)](alerts-images/alert02.png#lightbox)
 
 사용자가 텍스트 필드를 선택 하면 필드 값을 입력할 수 있도록 표준 tvOS 키보드가 표시 됩니다.
 
-[![](alerts-images/alert03.png "Entering text")](alerts-images/alert03.png#lightbox)
+[![텍스트 입력](alerts-images/alert03.png)](alerts-images/alert03.png#lightbox)
 
 다음 코드는 값을 입력 하기 위한 단일 텍스트 필드를 포함 하는 확인/취소 경고를 표시 합니다.
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-`AddTextField`메서드는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들면 다음과 같습니다.
+`AddTextField`메서드는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들어:
 
 ```csharp
 // Initialize field
@@ -192,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 하 게 표시 되기 때문에 `UIAlertViewController` 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들면 다음과 같습니다.
+를 사용 하는 일반적인 유형의 경고는 간단 하 게 표시 되기 때문에 `UIAlertViewController` 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

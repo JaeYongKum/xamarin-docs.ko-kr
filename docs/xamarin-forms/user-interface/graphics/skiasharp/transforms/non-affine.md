@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b4c6569acbade7edf64c9aaf54237ebaa342ea54
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131757"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936645"
 ---
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
@@ -27,7 +27,7 @@ _Transform 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 �
 
 그러나 SkiaSharp는 사각형을 볼록 사변형 변환 하는 기능을 포함 하는 비 상관 변환도 가능 합니다.
 
-![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
+![볼록 사변형 변환 된 비트맵](non-affine-images/nonaffinetransformexample.png)
 
 볼록 사변형는 서로 교차 하지 않는 항상 180도 보다 작은 내부 각도를 가진 네 면의 그림입니다.
 
@@ -99,7 +99,7 @@ y ' = y/(0.01 · x + 1)
 
 X가 100 인 경우 z ' 분모는 2 이므로 x 및 y 좌표가 효과적으로 반. 상자의 오른쪽이 왼쪽 보다 짧습니다.
 
-![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
+![비 관계 변환 상자](non-affine-images/nonaffinetransform.png)
 
 `Persp`이러한 셀 이름의 부분은 "큐브 뷰"를 참조 합니다. 그러면 단축법은 상자를 뷰어에서 더 오른쪽으로 기울어져 있음을 나타냅니다.
 
@@ -233,7 +233,7 @@ public partial class TestPerspectivePage : ContentPage
 
 다음은 몇 가지 샘플 이미지입니다.
 
-[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
+[![테스트 큐브 뷰 페이지의 삼중 스크린샷](non-affine-images/testperspective-small.png)](non-affine-images/testperspective-large.png#lightbox "테스트 큐브 뷰 페이지의 삼중 스크린샷")
 
 슬라이더를 사용 하 여 시험해 보면 0.0066 이하의 값이 보다 0.0066 작은 값을 찾으면 이미지가 갑자기 fractured 및 incoherent 됩니다. 변환 중인 비트맵이 300 픽셀 제곱입니다. 이는 중심을 기준으로 변형 되므로 비트맵의 좌표는-150에서 150 까지입니다. Z 값은 다음과 같습니다.
 
@@ -245,7 +245,7 @@ z ' = Persp0 · x + Persp1 · y + 1
 
 이러한 비 상관 변환 중 하나는 *테이퍼 변형*입니다. 이러한 비 상관 변환 형식은 사각형의 전체 크기를 유지 하지만 한쪽은 tapers 합니다.
 
-![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
+![테이퍼 변형으로 들어오는 상자](non-affine-images/tapertransform.png)
 
 [`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs)클래스는 다음 매개 변수를 기반으로 비 상관 변환의 일반화 된 계산을 수행 합니다.
 
@@ -395,15 +395,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-예를 들어 다음과 같은 노래를 선택할 수 있다.
+다음은 몇 가지 예입니다.
 
-[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
+[![테이퍼 변형 페이지의 삼중 스크린샷](non-affine-images/tapertransform-small.png)](non-affine-images/tapertransform-large.png#lightbox "테이퍼 변형 페이지의 삼중 스크린샷")
 
 다른 형식의 일반화 된 비 관계 변환은 3d 회전으로, 다음 문서인 [**3d**](3d-rotation.md)회전입니다.
 
 비 상관 변환은 사각형을 볼록 사변형 변환할 수 있습니다. 이는 **비 상관 행렬 표시** 페이지에서 보여 줍니다. 비트맵의 네 번째 모퉁이를 조작 하는 네 번째 개체를 포함 한다는 점을 제외 하 고는 [**행렬 변환**](matrix.md) 문서의 **관계 행렬 표시** 페이지와 매우 비슷합니다 `TouchPoint` .
 
-[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
+[![비 관계 행렬 표시 페이지의 세 번째 스크린샷](non-affine-images/shownonaffinematrix-small.png)](non-affine-images/shownonaffinematrix-large.png#lightbox "비 관계 행렬 표시 페이지의 세 번째 스크린샷")
 
 비트맵의 모퉁이 중 하나에 대 한 내부 각도를 180도 보다 크게 설정 하거나 두 면을 서로 교차 하도록 설정 하지 않으면 프로그램은 클래스에서이 메서드를 사용 하 여 변환을 성공적으로 계산 합니다 [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) .
 

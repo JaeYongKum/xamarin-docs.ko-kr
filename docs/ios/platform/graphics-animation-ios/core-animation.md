@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 74d6dfb2b6a722e5af4dc97cdf23b84aa4bd95d0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ddd46da0787f853e949d08c45dff5be17b9451fd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565046"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932758"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.ios의 핵심 애니메이션
 
@@ -70,7 +70,7 @@ PresentViewController (vc2, true, null);
 
 다음 스크린샷은 해당 사례에 대 한 전환의 모습을 보여 줍니다 `PartialCurl` .
 
- ![](core-animation-images/06-view-transitions.png "This screenshot shows the PartialCurl transition")
+ ![이 스크린샷은 PartialCurl 전환을 보여줍니다.](core-animation-images/06-view-transitions.png)
 
 ### <a name="view-transitions"></a>전환 보기
 
@@ -92,7 +92,7 @@ UIView.Transition (
 
 아래 스크린샷은를 사용할 때 이미지 보기 간의 애니메이션 전환을 보여줍니다 `TransitionFlipFromTop` .
 
- ![](core-animation-images/07-animated-transition.png "This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used")
+ ![이 스크린샷에서는 TransitionFlipFromTop 사용 시 이미지 뷰 간의 애니메이션 전환을 보여 줍니다.](core-animation-images/07-animated-transition.png)
 
 ### <a name="view-property-animations"></a>속성 애니메이션 보기
 
@@ -100,10 +100,10 @@ UIKit는 다음을 포함 하 여 클래스에서 다양 한 속성에 대 한 �
 
 - 프레임
 - Bounds
-- 중심
+- Center
 - 알파
 - 변환
-- 색
+- 색상
 
 이러한 애니메이션은 정적 메서드에 전달 된 대리자의 속성 변경 내용을 지정 하 여 암시적으로 발생 `NSAction` `UIView.Animate` 합니다. 예를 들어 다음 코드는의 중심점에 애니메이션 효과를 적용 합니다 `UIImageView` .
 
@@ -125,17 +125,17 @@ UIView.Animate (
 
 그러면 다음과 같이 이미지가 화면 위쪽에서 앞뒤로 애니메이션 효과를 줍니다.
 
- ![](core-animation-images/08-animate-center.png "An image animating back and forth across the top of the screen as the output")
+ ![화면 위쪽에서 출력으로 앞뒤로 애니메이션 효과를 주는 이미지](core-animation-images/08-animate-center.png)
 
 `Transition`메서드와 마찬가지로 `Animate` 는 감속/가속 함수와 함께 기간을 설정할 수 있습니다. 또한이 예제에서는 `UIViewAnimationOptions.Autoreverse` 애니메이션이 값에서 초기 값으로 다시 애니메이션 효과를 주는 옵션을 사용 했습니다. 그러나이 코드는 `Center` 완료 처리기에서를 다시 초기 값으로 설정 합니다. 애니메이션은 시간이 지남에 따라 속성 값을 보간 속성의 실제 모델 값은 항상 설정 된 최종 값입니다. 이 예제에서 값은 슈퍼 뷰의 오른쪽 근처에 있는 지점입니다. `Center`설정으로 인해 애니메이션이 완료 되는 초기 지점으로를 설정 하지 않으면 `Autoreverse` 아래와 같이 애니메이션이 완료 된 후 이미지가 오른쪽으로 다시 맞춰집니다.
 
- ![](core-animation-images/09-animation-complete.png "Without setting the Center to the initial point, the image would snap back to the right side after the animation completes")
+ ![중심을 초기 지점으로 설정 하지 않으면 애니메이션이 완료 된 후 이미지가 오른쪽에 다시 맞춰집니다.](core-animation-images/09-animation-complete.png)
 
 ## <a name="using-core-animation"></a>핵심 애니메이션 사용
 
  `UIView`애니메이션은 많은 기능을 허용 하므로 구현 용이성 때문에 가능 하면 사용 해야 합니다. 앞서 언급 했 듯이 UIView 애니메이션은 핵심 애니메이션 프레임 워크를 사용 합니다. 그러나 뷰로 애니메이션을 적용할 수 없는 `UIView` 추가 속성에 애니메이션을 적용 하거나 비선형 경로를 따라 보간 하는 것과 같은 애니메이션으로는 일부 작업을 수행할 수 없습니다. 더 세밀 하 게 제어 해야 하는 경우에도 핵심 애니메이션을 직접 사용할 수 있습니다.
 
-### <a name="layers"></a>레이어
+### <a name="layers"></a>계층
 
 핵심 애니메이션으로 작업할 때 애니메이션은 유형으로 *계층*을 통해 발생 `CALayer` 합니다. 계층은 뷰 계층 구조가 있는 것과 매우 유사 하 게 계층 계층 구조가 있음을 나타내는 뷰와 개념적으로 유사 합니다. 실제로 뷰는 사용자 상호 작용에 대 한 지원을 추가 하는 뷰를 사용 하 여 다시 표시 합니다. 뷰의 속성을 통해 뷰의 계층에 액세스할 수 있습니다 `Layer` . 실제로의 메서드에서 사용 되는 컨텍스트는 `Draw` `UIView` 실제로 계층에서 만들어집니다. 내부적으로를 지 원하는 계층의 `UIView` 대리자는 뷰 자체로 설정 되며,이는를 호출 `Draw` 합니다. 따라서로 그리면 `UIView` 실제로 해당 계층으로 그리기를 합니다.
 
@@ -184,11 +184,11 @@ public override void ViewDidAppear (bool animated)
 
 다음 그림은 위치 및 앵커 지점을 보여 줍니다.
 
- ![](core-animation-images/10-postion-anchorpt.png "This figure shows the position and anchor point")
+ ![이 그림은 위치와 앵커 지점을 보여 줍니다.](core-animation-images/10-postion-anchorpt.png)
 
 예제가 실행 될 때 `Position` `BorderWidth` 및는 `BorderColor` 다음 스크린샷에 표시 된 것 처럼 애니메이션 효과를 줍니다.
 
- ![](core-animation-images/11-implicit-animation.png "When the example is run, the Position, BorderWidth and BorderColor animate as shown")
+ ![예제가 실행 될 때 Position, BorderWidth 및 BorderColor는 표시 된 대로 애니메이션 효과를 줍니다.](core-animation-images/11-implicit-animation.png)
 
 ### <a name="explicit-animations"></a>명시적 애니메이션
 
@@ -229,7 +229,7 @@ public override void ViewDidAppear (bool animated)
 
 다음 스크린샷에서는 지정 된 경로를 통해 애니메이션 효과를 주는 이미지를 포함 하는 계층을 보여 줍니다.
 
- ![](core-animation-images/12-explicit-animation.png "This screenshot shows the layer containing the image animating through the specified path")
+ ![이 스크린샷에서는 지정 된 경로를 통해 애니메이션 효과를 주는 이미지를 포함 하는 계층을 보여 줍니다.](core-animation-images/12-explicit-animation.png)
 
 ## <a name="summary"></a>요약
 

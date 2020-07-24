@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129716"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929339"
 ---
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.FormsAzure Cognitive Services 소개
 
@@ -42,17 +42,17 @@ _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 �
 
 `TodoListPage`응용 프로그램이 시작 되 면이 표시 됩니다. 이 페이지는 로컬 데이터베이스에 저장 된 모든 작업 목록을 표시 하 고 사용자가 새 작업을 만들거나 응용 프로그램의 등급을 지정할 수 있도록 합니다.
 
-![](introduction-images/sample-application-1.png "TodoListPage")
+![TodoListPage](introduction-images/sample-application-1.png)
 
 단추를 클릭 하면로 이동 하 여 새 항목을 만들 수 있습니다 *+* `TodoItemPage` . 작업을 선택 하 여이 페이지를 탐색할 수도 있습니다.
 
-![](introduction-images/sample-application-2.png "TodoItemPage")
+![TodoItemPage](introduction-images/sample-application-2.png)
 
 을 `TodoItemPage` 사용 하 여 작업을 만들고 편집 하 고, 맞춤법을 검사 하 고, 번역 하 고, 저장 하 고, 삭제할 수 있습니다. 음성 인식을 사용 하 여 작업을 만들거나 편집할 수 있습니다. 이렇게 하려면 마이크 단추를 눌러 기록을 시작 하 고, 동일한 단추를 두 번 눌러 기록을 중지할 수 있습니다. 그러면 기록을 중지할 수 있으며,이는 기록을 Bing Speech 인식 API로 보냅니다.
 
 에서 smilsbutton 단추를 클릭 하면 `TodoListPage` `RateAppPage` 얼굴 식 이미지에서 emotion 인식을 수행 하는 데 사용 되는가 탐색 됩니다.
 
-![](introduction-images/sample-application-3.png "RateAppPage")
+![RateAppPage](introduction-images/sample-application-3.png)
 
 `RateAppPage`사용자는를 사용 하 여 반환 된 emotion 표시 되는 Face API에 전송 되는 얼굴 사진을 만들 수 있습니다.
 
@@ -64,9 +64,9 @@ _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 �
 |--- |--- |
 |모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함 합니다. 여기에는 `TodoItem` 응용 프로그램에서 사용 하는 데이터의 단일 항목을 모델링 하는 클래스가 포함 됩니다. 이 폴더에는 여러 Microsoft 인식 서비스 Api에서 반환 된 JSON 응답을 모델링 하는 데 사용 되는 클래스도 포함 되어 있습니다.|
 |리포지토리|`ITodoItemRepository` `TodoItemRepository` 데이터베이스 작업을 수행 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
-|Services|`DependencyService`플랫폼 프로젝트의 인터페이스를 구현 하는 클래스를 찾기 위해 클래스에서 사용 하는 인터페이스와 함께 다양 한 Microsoft 인지 서비스 api에 액세스 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
+|서비스|`DependencyService`플랫폼 프로젝트의 인터페이스를 구현 하는 클래스를 찾기 위해 클래스에서 사용 하는 인터페이스와 함께 다양 한 Microsoft 인지 서비스 api에 액세스 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
 |유틸리티|클래스에서 `Timer` `AuthenticationService` 9 분 마다 JWT 액세스 토큰을 갱신 하는 데 사용 하는 클래스를 포함 합니다.|
-|보기|응용 프로그램에 대 한 페이지를 포함 합니다.|
+|뷰|응용 프로그램에 대 한 페이지를 포함 합니다.|
 
 공유 코드 프로젝트에는 몇 가지 중요 한 파일도 포함 되어 있습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 5aa3baa6aba76483866911d905687be6c3a5ae4e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 44297e32821721d483a265e7d2a69016f4e1a87b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569831"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86940025"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -45,13 +45,13 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 1. 디자인 화면에서 빈 공간을 클릭 합니다. 이렇게 하면 모든 요소를 선택 취소 하 고 스토리 보드 문서에 대 한 속성을 표시 합니다.
 1. 속성 패널에서 **자동 레이아웃 사용** 확인란을 선택 하거나 선택 취소 합니다.
 
-    ![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
+    ![속성 패널의 자동 레이아웃 사용 확인란](designer-auto-layout-images/image01.png)
 
 기본적으로 화면에는 제약 조건이 만들어지거나 표시 되지 않습니다. 대신 컴파일 시간에 프레임 정보에서 자동으로 유추 됩니다. 제약 조건을 추가 하려면 디자인 화면에서 요소를 선택 하 고 여기에 제약 조건을 추가 해야 합니다. **제약 조건 도구 모음**을 사용 하 여이 작업을 수행할 수 있습니다.
 
 ## <a name="constraints-toolbar"></a>제약 조건 도구 모음
 
- [![](designer-auto-layout-images/toolbarnew.png "The Context Menu Commands")](designer-auto-layout-images/toolbarnew.png#lightbox)
+ [![상황에 맞는 메뉴 명령](designer-auto-layout-images/toolbarnew.png)](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 제약 조건 도구 모음이 업데이트 되어 이제 다음 두 가지 주요 부분으로 구성 됩니다.
 
@@ -93,7 +93,7 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 제약 조건을 만들려면 핸들을 선택 하 고 디자인 화면에서 원하는 위치로 끕니다. 끌기를 시작 하면 제한할 수 있는 항목을 나타내는 녹색 선/상자가 화면에 표시 됩니다. 예를 들어 아래 스크린샷에서 가운데 단추의 위쪽을 제약 합니다.
 
- [![](designer-auto-layout-images/image07.png "Constraining the top side of the middle button")](designer-auto-layout-images/image07.png#lightbox)
+ [![가운데 단추의 위쪽 제한](designer-auto-layout-images/image07.png)](designer-auto-layout-images/image07.png#lightbox)
 
 다른 두 단추에 있는 세 개의 파선 녹색 줄을 확인 합니다. 녹색 선은 *드롭 영역*또는 제한할 수 있는 다른 요소의 특성을 표시 합니다. 위의 스크린샷에서 다른 두 단추는 단추를 제한 하기 위한 3 개의 세로 끌어 놓기 영역 ( *bottom*, *system.windows.media.rotatetransform.centery*, *top*)을 제공 합니다. 뷰의 위쪽에 있는 녹색 파선은 뷰 컨트롤러가 보기 위쪽에 제약 조건을 제공 하 고 녹색 녹색 상자는 뷰 컨트롤러에서 위쪽 레이아웃 안내선 아래에 제약 조건을 제공 한다는 것을 의미 합니다.
 
@@ -106,13 +106,13 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 크기 제약 조건- *높이* 및 *너비* 를 사용 하는 경우 두 가지 옵션이 있습니다. 첫 번째 옵션은 위의 예제에서 설명한 것 처럼 핸들을 끌어 인접 요소 크기로 제한 하는 것입니다. 다른 옵션은 핸들을 두 번 클릭 하 여 자체 제약 조건을 만드는 것입니다. 이를 통해 아래 스크린샷에 나와 있는 것 처럼 상수 크기 값을 지정할 수 있습니다.
 
- [![](designer-auto-layout-images/sizec.png "Drag the handle to constrain to a neighbor element size, as illustrated here")](designer-auto-layout-images/sizec.png#lightbox)
+ [![여기에 나와 있는 것 처럼 핸들을 끌어 인접 요소 크기로 제한 합니다.](designer-auto-layout-images/sizec.png)](designer-auto-layout-images/sizec.png#lightbox)
 
 ### <a name="center-constraints"></a>센터 제약 조건
 
 사각형 핸들은 컨텍스트에 따라 *system.windows.media.rotatetransform.centerx* 또는 *system.windows.media.rotatetransform.centery* 제약 조건을 만듭니다. 사각형 핸들을 끌면 아래 스크린샷에 표시 된 대로 세로 및 가로 끌어 놓기 영역을 모두 제공 하는 다른 요소가 표시 됩니다.
 
- [![](designer-auto-layout-images/centerc.png "Center Constraints")](designer-auto-layout-images/centerc.png#lightbox)
+ [![센터 제약 조건](designer-auto-layout-images/centerc.png)](designer-auto-layout-images/centerc.png#lightbox)
 
 세로 끌어 놓기 영역을 선택 하면 *system.windows.media.rotatetransform.centery* 제약 조건이 생성 됩니다. 수평 끌어 놓기 영역을 선택 하는 경우 제약 조건은 *system.windows.media.rotatetransform.centerx*을 기반으로 합니다.
 
@@ -120,17 +120,17 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 두 요소 간에 맞춤 및 크기 같음 제약 조건을 모두 만들려면 아래 스크린샷에 표시 된 것 처럼 맨 위 도구 모음에서 항목을 선택 하 여 순서-가로 맞춤, 세로 맞춤 및 크기 equalities 지정할 수 있습니다.
 
- [![](designer-auto-layout-images/image06.png "Combinational Constraints")](designer-auto-layout-images/image06.png#lightbox)
+ [![Combinational 제약 조건](designer-auto-layout-images/image06.png)](designer-auto-layout-images/image06.png#lightbox)
 
 ### <a name="visualizing-and-editing-constraints"></a>제약 조건 시각화 및 편집
 
 제약 조건을 추가 하면 항목을 선택할 때 디자인 화면에 파란색 선으로 표시 됩니다.
 
- [![](designer-auto-layout-images/image09.png "Visualizing Constraints")](designer-auto-layout-images/image09.png#lightbox)
+ [![제약 조건 시각화](designer-auto-layout-images/image09.png)](designer-auto-layout-images/image09.png#lightbox)
 
 파란색 선을 클릭 하 고 속성 패널에서 직접 제약 조건 값을 편집 하 여 제약 조건을 선택할 수 있습니다. 또는 파란색 선을 두 번 클릭 하면 디자인 화면에서 직접 값을 편집할 수 있는 팝 오버 표시 됩니다.
 
- [![](designer-auto-layout-images/image08.png "Editing Constraints")](designer-auto-layout-images/image08.png#lightbox)
+ [![제약 조건 편집](designer-auto-layout-images/image08.png)](designer-auto-layout-images/image08.png#lightbox)
 
 ## <a name="constraint-issues"></a>제약 조건 문제
 
@@ -146,27 +146,27 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 충돌 하는 제약 조건은 빨간색으로 표시 되 고 경고 기호가 있습니다. 경고 기호를 마우스로 가리키면 충돌에 대 한 정보가 포함 된 팝 오버이 표시 됩니다.
 
- [![](designer-auto-layout-images/image11.png "Conflicting Constraints warning")](designer-auto-layout-images/image11.png#lightbox)
+ [![충돌 제약 조건 경고](designer-auto-layout-images/image11.png)](designer-auto-layout-images/image11.png#lightbox)
 
 ### <a name="underconstrained-items"></a>제약 된 항목 미달
 
 제약 조건이 있는 항목이 주황색으로 표시 되 고 뷰 컨트롤러 개체 모음에서 주황색 표식 아이콘이 표시 됩니다.
 
- [![](designer-auto-layout-images/image02.png "Underconstrained items appear in orange")](designer-auto-layout-images/image02.png#lightbox)
+ [![제약 조건 미달 항목이 주황색으로 표시 됩니다.](designer-auto-layout-images/image02.png)](designer-auto-layout-images/image02.png#lightbox)
 
 해당 표식 아이콘을 클릭 하면 아래 스크린샷에 표시 된 것 처럼, 장면에서 미달 제약 된 항목에 대 한 정보를 확인 하 고 완전히 제한 하거나 해당 제약 조건을 제거 하 여 문제를 해결할 수 있습니다.
 
- [![](designer-auto-layout-images/image10.png "Fixing Underconstrained Items")](designer-auto-layout-images/image10.png#lightbox)
+ [![미달 제약 된 항목 수정](designer-auto-layout-images/image10.png)](designer-auto-layout-images/image10.png#lightbox)
 
 ### <a name="frame-misplacement"></a>프레임 잘못 배치
 
 프레임 잘못 배치는 제약 조건이 있는 항목과 동일한 색 코드를 사용 합니다. 항목은 항상 해당 네이티브 프레임을 사용 하 여 화면에 렌더링 됩니다. 하지만 프레임이 잘못 배치 된 경우에는 아래 스크린샷에 표시 된 것 처럼 응용 프로그램이 실행 될 때 항목이 종료 되는 위치에 빨간색 사각형이 표시 됩니다.
 
- [![](designer-auto-layout-images/image05.png "Sample Frame Misplacement view")](designer-auto-layout-images/image05.png#lightbox)
+ [![샘플 프레임 잘못 배치 뷰](designer-auto-layout-images/image05.png)](designer-auto-layout-images/image05.png#lightbox)
 
 프레임 잘못 배치 오류를 해결 하려면 제약 조건 도구 모음 (맨 오른쪽 단추)에서 **제약 조건에 따라 프레임 업데이트** 단추를 선택 합니다.
 
- [![](designer-auto-layout-images/image03.png "Update Frames based on Constraints toolbar button")](designer-auto-layout-images/image03.png#lightbox)
+ [![제약 조건에 따라 프레임 업데이트 도구 모음 단추](designer-auto-layout-images/image03.png)](designer-auto-layout-images/image03.png#lightbox)
 
 그러면 컨트롤에 정의 된 위치와 일치 하도록 요소 프레임이 자동으로 조정 됩니다.
 
@@ -181,10 +181,10 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 1. 위에 나열 된 방법 중 하나를 사용 하 여 제약 조건을 정상적으로 만듭니다.
 2. **문서 개요 탐색기**에서 원하는 제약 조건을 찾고 선택 합니다.
 
-    [![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
+    [![문서 개요 탐색기](designer-auto-layout-images/modify01.png)](designer-auto-layout-images/modify01.png#lightbox)
 3. 그런 다음 **속성 탐색기**의 **위젯** 탭에서 제약 조건에 **이름을** 할당 합니다.
 
-    [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
+    [![위젯 탭](designer-auto-layout-images/modify02.png)](designer-auto-layout-images/modify02.png#lightbox)
 4. 변경 내용을 저장합니다.
 
 위의 변경 내용을 적용 하면 코드에서 제약 조건에 액세스 하 고 해당 속성을 수정할 수 있습니다. 예를 들어 다음을 사용 하 여 연결 된 보기의 높이를 0으로 설정할 수 있습니다.
@@ -195,7 +195,7 @@ ViewInfoHeight.Constant = 0;
 
 IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공 됩니다.
 
-[![](designer-auto-layout-images/modify03.png "Editing a Constraint in the Property Explorer")](designer-auto-layout-images/modify03.png#lightbox)
+[![속성 탐색기에서 제약 조건 편집](designer-auto-layout-images/modify03.png)](designer-auto-layout-images/modify03.png#lightbox)
 
 ### <a name="the-deferred-layout-pass"></a>지연 된 레이아웃 패스
 
@@ -210,7 +210,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들면 다음과 같습니다.
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들어:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

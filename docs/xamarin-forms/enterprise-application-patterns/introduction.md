@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 665971607d8c67f77ad5172778cddcd97bf79841
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198110"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932628"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
 
@@ -37,7 +37,7 @@ ms.locfileid: "84198110"
 - 응용 프로그램의 가로 기능 (예: 인증 및 데이터 액세스), 앱 특정 비즈니스 기능 등의 세로 기능 간의 문제를 완전히 분리 하 고 재사용을 촉진 합니다. 이렇게 하면 응용 프로그램 구성 요소 간의 종속성 및 상호 작용을 보다 쉽게 관리할 수 있습니다.
 - 다른 개인 이나 팀이 자신의 전문 지식에 따라 특정 작업 또는 기능에 초점을 맞출 수 있도록 하 여 역할의 분리를 유지 하는 데 도움이 됩니다. 특히 사용자 인터페이스와 앱의 비즈니스 논리를 명확 하 게 구분 합니다.
 
-그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 여기에는 다음이 포함됩니다.
+그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 특수 Azure 지역은 다음과 같습니다.
 
 - 사용자 인터페이스 컨트롤과 해당 논리 간의 문제를 명확 하 게 분리 하는 방법을 결정 합니다. 엔터프라이즈 앱을 만들 때 가장 중요 한 결정 사항 중 하나 Xamarin.Forms 는 코드 숨김으로 비즈니스 논리를 배치할지, 사용자 인터페이스 컨트롤과 논리 간의 문제를 명확 하 게 분리 하 여 앱을 유지 관리 하 고 테스트 가능 하 게 만드는 지 여부입니다. 자세한 내용은 [모델-뷰-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)을 참조 하세요.
 - 종속성 주입 컨테이너를 사용할지 여부를 결정 합니다. 종속성 주입 컨테이너는 종속성이 주입 된 클래스의 인스턴스를 생성 하 고 컨테이너의 구성에 따라 수명 주기를 관리 하는 기능을 제공 하 여 개체 간의 종속성 결합을 줄입니다. 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)을 참조 하세요.
@@ -46,7 +46,7 @@ ms.locfileid: "84198110"
 - 사용자 입력의 유효성을 검사 하 여 정확성을 확인 하는 방법을 결정 합니다. 의사 결정은 사용자 입력의 유효성을 검사 하는 방법과 사용자에 게 유효성 검사 오류에 대해 알리는 방법을 포함 해야 합니다. 자세한 내용은 [유효성 검사](~/xamarin-forms/enterprise-application-patterns/validation.md)를 참조 하세요.
 - 인증을 수행 하는 방법 및 권한 부여를 사용 하 여 리소스를 보호 하는 방법을 결정 합니다. 자세한 내용은 [인증 및 권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md)를 참조 하세요.
 - 데이터를 안정적으로 검색 하는 방법 및 데이터를 캐시 하는 방법을 비롯 하 여 웹 서비스에서 원격 데이터에 액세스 하는 방법을 결정 합니다. 자세한 내용은 [원격 데이터 액세스](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)를 참조 하세요.
-- 앱을 테스트 하는 방법을 결정 합니다. 자세한 내용은 [단위 테스트](~/xamarin-forms/enterprise-application-patterns/unit-testing.md)를 참조 하십시오.
+- 앱을 테스트 하는 방법을 결정 합니다. 자세한 내용은 [단위 테스트](~/xamarin-forms/enterprise-application-patterns/unit-testing.md)를 참조하세요.
 
 이 가이드에서는 이러한 문제에 대 한 지침을 제공 하 고를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하기 위한 핵심 패턴 및 아키텍처에 초점을 맞춘 것 Xamarin.Forms 입니다. 이 지침에서는 일반적인 Xamarin.Forms 엔터프라이즈 앱 개발 시나리오를 해결 하 고, MVVM (모델-뷰-ViewModel) 패턴 지원을 통해 프레젠테이션, 프레젠테이션 논리 및 엔터티의 문제를 구분 하 여 조정 가능 하 고, 유지 관리 가능 하 고, 테스트 가능한 코드를 생성 하는 데 도움이 됩니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "84198110"
 
 그림 1-1은 샘플 응용 프로그램의 아키텍처에 대 한 개략적인 개요를 제공 합니다.
 
-![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
+![eShopOnContainers 개략적인 아키텍처](introduction-images/architecture.png)
 
 **그림 1-1**: eShopOnContainers 상위 수준 아키텍처
 
@@ -92,7 +92,7 @@ ms.locfileid: "84198110"
 
 이 가이드에서는를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하는 데 중점을 Xamarin.Forms eShopOnContainers 모바일 앱을 예로 사용 합니다. 그림 1-2에서는 앞에서 설명한 기능을 제공 하는 eShopOnContainers 모바일 앱의 페이지를 보여 줍니다.
 
-[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
+[![EShopOnContainers 모바일 앱](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "EShopOnContainers 모바일 앱")
 
 **그림 1-2**: eShopOnContainers 모바일 앱
 
@@ -122,7 +122,7 @@ EShopOnContainers 모바일 앱은 다음 기능을 Xamarin.Forms 수행 합니�
 
 EShopOnContainers 모바일 앱 솔루션은 소스 코드 및 기타 리소스를 프로젝트로 구성 합니다. 모든 프로젝트는 폴더를 사용 하 여 소스 코드 및 기타 리소스를 범주로 구성 합니다. 다음 표에서는 eShopOnContainers 모바일 앱을 구성 하는 프로젝트를 간략히 설명 합니다.
 
-|Project|Description|
+|프로젝트|설명|
 |--- |--- |
 |eShopOnContainers|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
 |eShopOnContainers|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
@@ -147,15 +147,15 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |컨버터|바인딩에 사용자 지정 논리를 적용 하는 값 변환기를 포함 합니다.|
 |효과|`EntryLineColorEffect`특정 컨트롤의 테두리 색을 변경 하는 데 사용 되는 클래스를 포함 `Entry` 합니다.|
 |예외|사용자 지정를 포함 `ServiceAuthenticationException` 합니다.|
-|Extensions|및 클래스에 대 한 확장 메서드를 포함 `VisualElement` `IEnumerable` 합니다.|
+|확장|및 클래스에 대 한 확장 메서드를 포함 `VisualElement` `IEnumerable` 합니다.|
 |도우미|앱에 대 한 도우미 클래스를 포함 합니다.|
 |모델|앱에 대 한 모델 클래스를 포함 합니다.|
 |속성|`AssemblyInfo.cs`.Net 어셈블리 메타 데이터 파일을 포함 합니다.|
-|Services|응용 프로그램에 제공 되는 서비스를 구현 하는 인터페이스와 클래스를 포함 합니다.|
+|서비스|응용 프로그램에 제공 되는 서비스를 구현 하는 인터페이스와 클래스를 포함 합니다.|
 |트리거|`BeginAnimation`XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를 포함 합니다.|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
-|보기|앱에 대 한 페이지를 포함 합니다.|
+|뷰|앱에 대 한 페이지를 포함 합니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

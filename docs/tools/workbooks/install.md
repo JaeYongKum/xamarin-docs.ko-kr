@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: a044169f86b46abff4158011e99320c528180ffc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 99ecf661679f02bda6cfffa6093bd4a904676bce
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573887"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939349"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 문서 설치 및 요구 사항
 
@@ -37,14 +37,14 @@ ms.locfileid: "84573887"
 
 ## <a name="requirements"></a>요구 사항
 
-#### <a name="supported-operating-systems"></a>Supported Operating Systems
+#### <a name="supported-operating-systems"></a>지원되는 운영 체제
 
 - **Mac** -OS X 10.11 이상
 - **Windows** -windows 7 이상 (Internet Explorer 11 이상 및 .net 4.6.1 이상)
 
 #### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
-|앱 플랫폼|OS 지원|메모|
+|앱 플랫폼|OS 지원|참고|
 |--- |--- |--- |
 |Mac|Mac 에서만 지원 됨|
 |iOS|Mac 및 Windows에서 지원 됨|Xamarin.ios 11.0 및 Xcode 9.0 이상이 Mac에 설치 되어 있어야 합니다. Windows에서 iOS 통합 문서를 실행 하려면 위의 모든를 실행 하는 Mac 빌드 호스트와 Windows에 [원격 Ios 시뮬레이터](~/tools/ios-simulator/index.md) 가 설치 되어 있어야 합니다.|
@@ -128,7 +128,7 @@ Visual Studio 2017가 있는 경우 **Visual Studio 설치 관리자**를 열고
 
 > **시스템 > 앱 & 기능 > > 설정 시작**
 
-![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
+![&quot;앱 기능에 나열 된 &amp; Xamarin Workbooks&quot;](install-images/windows-remove.png)
 
 **Visual Studio 설치 관리자에 대 한 절차를 계속 수행 하 여 사용자 모르게 통합 문서를 다시 설치 하지 않도록 해야 합니다.**
 

@@ -10,12 +10,12 @@ ms.date: 11/25/2015
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 923f7643bd1e137192bfb80dbbc7c5d2c25b5471
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570533"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938426"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
@@ -23,7 +23,7 @@ ms.locfileid: "84570533"
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)위치 및 크기 자식 요소는 자체 크기와 위치 또는 절대 값에 비례 합니다. 비례 값 이나 정적 값을 사용 하 여 자식 뷰 위치를 지정 하 고 크기를 조정할 수 있으며, 비례 및 정적 값은 혼합할 수 있습니다.
 
-[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms모양의](absolute-layout-images/layouts-sml.png)](absolute-layout-images/layouts.png#lightbox "[! OP. 비 LOC (Xamarin.ios)] 레이아웃")
 
 이 문서에서는 다음을 설명합니다.
 
@@ -53,9 +53,9 @@ ms.locfileid: "84570533"
 
 참고 다음 스크린샷에는 상자의 앵커가 흰색 점이 있습니다. 레이아웃을 이동할 때 앵커와 상자 간의 관계를 확인 합니다.
 
-![](absolute-layout-images/anchor-start.png "Anchor at Start")
-![](absolute-layout-images/anchor-center.png "Anchor at Center")
-![](absolute-layout-images/anchor-end.png "Anchor at End")
+![](absolute-layout-images/anchor-start.png)
+ ![ ](absolute-layout-images/anchor-center.png)
+ 끝에 있는 중심 앵커에서 시작 앵커 ![ 에 앵커](absolute-layout-images/anchor-end.png)
 
 ### <a name="specifying-values"></a>값 지정
 
@@ -109,7 +109,7 @@ Title="Absolute Layout Exploration">
 </ContentPage>
 ```
 
-![](absolute-layout-images/exploration.png "AbsoluteLayout Examples")
+![AbsoluteLayout 예제](absolute-layout-images/exploration.png)
 
 다음 사항에 유의하세요.
 
@@ -275,7 +275,7 @@ Title="AbsoluteLayout">
 
 위의 코드는 다음과 같은 레이아웃을 생성 합니다.
 
-![](absolute-layout-images/abs.png "Complex AbsoluteLayout")
+![복합 AbsoluteLayout](absolute-layout-images/abs.png)
 
 `AbsoluteLayout`일부 경우에는 동일한 레이아웃 내에 모든 요소를 표시 하는 것 보다 더 쉽게 중첩 된 레이아웃을 사용할 수 있기 때문에가 중첩 되어 있습니다.
 

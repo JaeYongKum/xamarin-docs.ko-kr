@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1ad4ecad90238436f8d2a02727596186c6205eeb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b1ffe54ad199acbc7bf3918c187e198d96b51c8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572093"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939401"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Xamarin에서 watchOS 탐색 사용
 
@@ -49,7 +49,7 @@ DismissController();
 
 IOS에서 작동 하는 방식과 비슷하게 다시 탐색할 수 있는 스택 처럼 장면을 표시 합니다 `UINavigationController` . 장면을 탐색 스택으로 푸시되 고, 프로그래밍 방식으로 또는 사용자 선택으로 팝 될 수 있습니다.
 
-![](navigation-images/hierarchy-1.png "장면을 탐색 스택으로 푸시할 수 있습니다.") ![](navigation-images/hierarchy-2.png "탐색 스택에서 장면을 팝 할 수 있습니다.")
+![장면을 탐색 스택으로 푸시할 수 있습니다.](navigation-images/hierarchy-1.png) ![탐색 스택에서 장면을 팝 할 수 있습니다.](navigation-images/hierarchy-2.png)
 
 IOS와 마찬가지로 왼쪽에서 오른쪽으로 살짝 밀기는 계층 탐색 스택의 부모 컨트롤러로 다시 이동 합니다.
 
@@ -95,7 +95,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 페이지 기반 인터페이스는 iOS에서 작동 하는 방식과 유사 하 게 왼쪽에서 오른쪽으로 살짝 밉니다 `UIPageViewController` . 표시기 점이 화면 아래쪽에 표시 되어 현재 표시 되는 페이지를 표시 합니다.
 
-![](navigation-images/paged-1.png "샘플 첫 페이지") ![](navigation-images/paged-2.png "샘플 초 페이지") ![](navigation-images/paged-5.png "샘플 5 페이지")
+![샘플 첫 페이지](navigation-images/paged-1.png) ![샘플 초 페이지](navigation-images/paged-2.png) ![샘플 5 페이지](navigation-images/paged-5.png)
 
 페이지 기반 인터페이스를 watch 앱의 기본 UI로 만들려면 `ReloadRootControllers` 인터페이스 컨트롤러 및 컨텍스트의 배열과 함께를 사용 합니다.
 

@@ -10,12 +10,12 @@ ms.date: 06/27/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e86224ffb5da3f4b300c82a2821cee0a9b17469d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135709"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939336"
 ---
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
@@ -37,7 +37,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Android 프로젝트의 대상 프레임 워크가 Android 6.0 (Marshmallow) 인지 확인 합니다. **Android 프로젝트 > 옵션 > 빌드 > 일반** 설정을 확인 하 여 corrent 프레임 워크를 선택 했는지 확인 합니다.
 
- ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
+ ![Android 일반 빌드 구성](appcompat-images/target-android-6-sml.png)
 
 ### <a name="3-add-new-themes-to-support-material-design"></a>3. 지원 자료 디자인에 새 테마 추가
 

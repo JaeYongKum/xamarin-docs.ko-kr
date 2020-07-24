@@ -10,12 +10,12 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131510"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938114"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
@@ -63,7 +63,7 @@ listView.ItemsSource = new string[]
 };
 ```
 
-![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
+![문자열 목록을 표시 하는 ListView](data-and-databinding-images/itemssource-simple.png)
 
 이 방법을 사용 하면가 `ListView` 문자열 목록으로 채워집니다. 기본적으로는를 `ListView` 호출 `ToString` 하 고 `TextCell` 각 행에 대해 결과를 표시 합니다. 데이터가 표시 되는 방식을 사용자 지정 하려면 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)을 참조 하세요.
 
@@ -144,7 +144,7 @@ public EmployeeListPage()
 
 이 XAML 예제는 `ContentPage` 를 포함 하는를 정의 `ListView` 합니다. `ListView`의 데이터 원본은 `ItemsSource` 특성를 통해 설정됩니다. `ItemsSource`에서 각 행의 레이아웃은 `ListView.ItemTemplate` 요소 내에 정의됩니다. 그러면 다음과 같은 스크린샷을 생성 합니다.
 
-![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
+![데이터 바인딩을 사용 하는 ListView](data-and-databinding-images/bound-data.png)
 
 > [!WARNING]
 > `ObservableCollection`는 스레드로부터 안전 하지 않습니다. 을 수정 하면 `ObservableCollection` UI 업데이트가 수정 작업을 수행한 동일한 스레드에서 수행 됩니다. 스레드가 기본 UI 스레드가 아닌 경우 예외를 발생 시킵니다.

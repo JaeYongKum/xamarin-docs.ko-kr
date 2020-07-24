@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3706139a2c15d01af67203c2bd09b281de80ed52
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 855fde62483dcbc6f8769e7a8eb66d84aadfe1da
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140207"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934981"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
@@ -25,7 +25,7 @@ _비 상관 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 
 비 상관 변환의 한 가지 일반적인 응용 프로그램은 3D 공간에서 2D 개체의 회전을 시뮬레이션 하는 것입니다.
 
-![](3d-rotation-images/3drotationsexample.png "A text string rotated in 3D space")
+![3D 공간에서 회전 된 텍스트 문자열입니다.](3d-rotation-images/3drotationsexample.png)
 
 이 작업에는 3 차원 회전을 사용한 다음 `SKMatrix` 이러한 3d 회전을 수행 하는 비 상관 변환의 파생이 포함 됩니다.
 
@@ -412,7 +412,7 @@ public partial class Rotation3DPage : ContentPage
 
 네 번째 슬라이더를 사용 하 여 실험을 수행 하는 경우 다른 깊이 설정에서 개체를 뷰어에서 멀리 이동 하지 않고 큐브 뷰 효과의 범위를 변경 하는 것을 알 수 있습니다.
 
-[![](3d-rotation-images/rotation3d-small.png "Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page")
+[![회전 3D 페이지의 세 번째 스크린샷](3d-rotation-images/rotation3d-small.png)](3d-rotation-images/rotation3d-large.png#lightbox "회전 3D 페이지의 세 번째 스크린샷")
 
 **애니메이션 회전 3d** 는를 사용 `SKMatrix44` 하 여 3d 공간에서 텍스트 문자열에 애니메이션 효과를 주는 데에도 사용 됩니다. `textPaint`필드로 설정 된 개체는 생성자에서 텍스트의 범위를 결정 하는 데 사용 됩니다.
 
@@ -536,7 +536,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 이 3D 회전은 회전 중심을 화면 중심으로 이동 하 고, 텍스트 문자열의 크기를 조정 하 여 화면과 동일한 너비를 갖도록 하는 여러 2D 변환으로 둘러싸여 있습니다.
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
+[![애니메이션 회전 3D 페이지의 세 번째 스크린샷](3d-rotation-images/animatedrotation3d-small.png)](3d-rotation-images/animatedrotation3d-large.png#lightbox "애니메이션 회전 3D 페이지의 세 번째 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b4191ae3c25ee5d2eeccd44377177d7d0df6f19e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573861"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937373"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -191,34 +191,34 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 시작 화면에 storyboard를 사용 하도록 기존 앱을 업데이트 하는 경우 **솔루션 탐색기** 에서 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 파일**추가 ...를 선택 합니다. **IOS**  >  **시작 화면** 을 선택 하 고 **새로 만들기** 단추를 클릭 합니다.
 
-![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
+![IOS 시작 화면을 선택 합니다.](launch-screens-images/storyboard02.png)
 
 그런 다음 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다. **시작 화면**에서 위에서 만든 새 스토리 보드 파일을 선택 합니다.
 
-![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
+![위에서 만든 새 스토리 보드 파일을 선택 합니다.](launch-screens-images/storyboard09.png)
 
 새 스토리 보드를 시작 화면으로 사용 하려면 다음을 수행 합니다.
 
 1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 2. 편집기의 **유니버설 시작 이미지** 섹션으로 스크롤하고 **시작 화면** 드롭다운을 열고 위에서 만든 storyboard의 이름을 선택 합니다. 
 
-    ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
+    ![시작 화면을 storyboard로 설정](launch-screens-images/storyboard08.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**추가 ...를 선택 합니다. 
 
-    ![](launch-screens-images/image012.png "Add new file")
+    ![새 파일 추가](launch-screens-images/image012.png)
 2. 시작 화면에 대 한 이름을 입력 하 고 **추가** 단추를 클릭 합니다. 
 
-    ![](launch-screens-images/image013.png "Enter a name for the launch screen")
+    ![시작 화면에 대 한 이름 입력](launch-screens-images/image013.png)
 3. **솔루션 탐색기**에서 새로 만든 스토리 보드 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 4. **Size 클래스** **를 any로 설정 하 고** 뷰를 **제네릭** **로** 설정 합니다. 
 
-    ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+    ![Size 클래스가 any로 설정 되었는지 확인 하 고 뷰를 제네릭로 설정 합니다.](launch-screens-images/image016.png)
 5. 응용 프로그램의 번들에 포함 된 크기 클래스, 간단한 UI 요소 (예:) 및 이미지에서 시작 화면을 어셈블리 합니다 `UIImageView` . 
 
-    ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+    ![어셈블리 iOS 디자이너의 시작 화면](launch-screens-images/image017.png)
 6. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 -----

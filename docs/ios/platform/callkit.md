@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 116ae63619aa90defb25db31b959e36b8b44edf2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 791ab82e0e5f47929eff561ac836ec87e6d6c134
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934734"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997321"
 ---
 # <a name="callkit-in-xamarinios"></a>Xamarin.ios의 CallKit
 
@@ -635,7 +635,7 @@ Provider = new CXProvider (Configuration);
 Provider.SetDelegate (this, null);
 ```
 
-CallKit를 사용 하는 경우 앱은 더 이상 자체 오디오 세션을 만들고 처리 하지 않으며, 대신 시스템에서 만들고 처리할 오디오 세션을 구성 하 고 사용 해야 합니다. 
+CallKit를 사용 하는 경우 앱은 더 이상 자체 오디오 세션을 만들고 처리 하지 않으며, 대신 시스템에서 만들고 처리할 오디오 세션을 구성 하 고 사용 해야 합니다.
 
 실제 앱 인 경우 `DidActivateAudioSession` 메서드는 `AVAudioSession` 시스템에서 제공 하는 미리 구성 된를 사용 하 여 호출을 시작 하는 데 사용 됩니다.
 
@@ -697,7 +697,7 @@ namespace MonkeyCall
             // Found?
             if (handle == null) {
                 // No, report to system
-                Console.WriteLine ("Unable to get call handle from URL: {0}", url); 
+                Console.WriteLine ("Unable to get call handle from URL: {0}", url);
                 return false;
             } else {
                 // Yes, start call and inform system
@@ -820,7 +820,7 @@ public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallA
 
 사용자가 앱의 UI 내에서 호출을 종료 하려는 경우 다음 작업이 수행 됩니다.
 
-[![](callkit-images/callkit07.png "The user terminates the call from within the app's UI")](callkit-images/callkit07.png#lightbox)
+[![사용자가 앱의 UI 내에서 호출을 종료 합니다.](callkit-images/callkit07.png)](callkit-images/callkit07.png#lightbox)
 
 1. 응용 프로그램에서 생성 되는 `CXEndCallAction` 는 `CXTransaction` 호출을 종료 하 고 있음을 알리기 위해 시스템으로 전송 되는에 번들로 제공 됩니다.
 2. 시스템은 최종 호출 의도를 확인 하 고를 `CXEndCallAction` 통해 다시 앱으로 보냅니다 `CXProvider` .
@@ -872,12 +872,12 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 
 [![시작 호출 의도 받기](callkit-images/callkit08.png)](callkit-images/callkit08.png#lightbox)
 
-1. 앱은 시스템에서 받은 시작 호출 의도에 따라 _호출 시작 동작_ 을 만듭니다. 
+1. 앱은 시스템에서 받은 시작 호출 의도에 따라 _호출 시작 동작_ 을 만듭니다.
 2. 앱은를 사용 `CXCallController` 하 여 시스템에서 시작 호출 작업을 요청 합니다.
 3. 시스템이 작업을 수락 하면 대리자를 통해 응용 프로그램으로 반환 됩니다 `XCProvider` .
 4. 앱은 통신 네트워크를 사용 하 여 나가는 호출을 시작 합니다.
 
-의도에 대 한 자세한 내용은 의도 [및 의도 UI 확장](~/ios/platform/sirikit/understanding-sirikit.md) 설명서를 참조 하세요. 
+의도에 대 한 자세한 내용은 의도 [및 의도 UI 확장](~/ios/platform/sirikit/understanding-sirikit.md) 설명서를 참조 하세요.
 
 ### <a name="the-outgoing-call-lifecycle"></a>나가는 통화 수명 주기
 
@@ -1025,7 +1025,7 @@ public void EndCall (ActiveCall call)
 }
 ```
 
-가 end에 대 한 호출의 UUID를 사용 하 여를 만든 경우 `CXEndCallAction` `CXTransaction` 클래스의 메서드를 사용 하 여 시스템으로 전송 되는에 해당 UUID를 묶습니다 `RequestTransaction` `CXCallController` . 
+가 end에 대 한 호출의 UUID를 사용 하 여를 만든 경우 `CXEndCallAction` `CXTransaction` 클래스의 메서드를 사용 하 여 시스템으로 전송 되는에 해당 UUID를 묶습니다 `RequestTransaction` `CXCallController` .
 
 ## <a name="additional-callkit-details"></a>추가 CallKit 세부 정보
 
@@ -1044,11 +1044,11 @@ public void EndCall (ActiveCall call)
 
 - 지역화 된 이름을 표시 합니다.
 - 비디오 통화 지원 사용.
-- 자체 템플릿 이미지 아이콘을 표시 하 여 호출 UI에서 단추를 사용자 지정 합니다. 사용자 지정 단추와의 사용자 상호 작용은 처리할 앱에 직접 전송 됩니다. 
+- 자체 템플릿 이미지 아이콘을 표시 하 여 호출 UI에서 단추를 사용자 지정 합니다. 사용자 지정 단추와의 사용자 상호 작용은 처리할 앱에 직접 전송 됩니다.
 
 ### <a name="action-errors"></a>작업 오류
 
-CallKit를 사용 하는 iOS 10 VOIP 앱은 정상적으로 실패 한 작업을 처리 하 고 사용자에 게 작업 상태를 항상 알려 주는 상태를 유지 해야 합니다. 
+CallKit를 사용 하는 iOS 10 VOIP 앱은 정상적으로 실패 한 작업을 처리 하 고 사용자에 게 작업 상태를 항상 알려 주는 상태를 유지 해야 합니다.
 
 다음 예제를 고려 합니다.
 
@@ -1082,7 +1082,7 @@ public class ProviderDelegate : CXProviderDelegate
         // Create update to describe the incoming call and caller
         var update = new CXCallUpdate ();
         update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
-    
+
         // Report incoming call to system
         Provider.ReportNewIncomingCall (uuid, update, (error) => {
             // Was the call accepted
@@ -1134,21 +1134,21 @@ Xamarin.ios 앱에서 호출 디렉터리 확장을 구현 하려면 다음을 �
 
 1. Mac용 Visual Studio에서 앱 솔루션을 엽니다.
 2. **솔루션 탐색기** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 프로젝트 추가**를 선택 합니다.
-3. **IOS**  >  **확장**  >  **호출 디렉터리 확장** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
+3. **IOS**  >  **확장**  >  **호출 디렉터리 확장** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
     [![새 호출 디렉터리 확장을 만드는 중](callkit-images/calldir01.png)](callkit-images/calldir01.png#lightbox)
-4. 확장의 **이름을** 입력 하 고 **다음** 단추를 클릭 합니다. 
+4. 확장의 **이름을** 입력 하 고 **다음** 단추를 클릭 합니다.
 
     [![확장의 이름 입력](callkit-images/calldir02.png)](callkit-images/calldir02.png#lightbox)
-5. 필요한 경우 **프로젝트 이름** 및/또는 **솔루션 이름을** 조정 하 고 **만들기** 단추를 클릭 합니다. 
+5. 필요한 경우 **프로젝트 이름** 및/또는 **솔루션 이름을** 조정 하 고 **만들기** 단추를 클릭 합니다.
 
-    [![프로젝트 만들기](callkit-images/calldir03.png)](callkit-images/calldir03.png#lightbox) 
+    [![프로젝트 만들기](callkit-images/calldir03.png)](callkit-images/calldir03.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio에서 앱 솔루션을 엽니다.
 2. **솔루션 탐색기** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 프로젝트 추가**를 선택 합니다.
-3. **IOS**  >  **확장**  >  **호출 디렉터리 확장** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
+3. **IOS**  >  **확장**  >  **호출 디렉터리 확장** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
     [![새 호출 디렉터리 확장을 만드는 중](callkit-images/calldir01w.png)](callkit-images/calldir01.png#lightbox)
 4. 확장의 **이름을** 입력 하 고 **확인** 단추를 클릭 합니다.

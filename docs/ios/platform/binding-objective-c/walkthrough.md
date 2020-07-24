@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: c36159984f314ecbf90f98df6472eee2149eee92
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 342558908c5f42941c9e6e7ef5c7f75d8e0fa9d4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937984"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
 
 > [!IMPORTANT]
-> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사 하 고 있습니다. 향후 개발 노력을 알리기 위해 [**이 설문 조사**](https://www.surveymonkey.com/r/KKBHNLT) 를 수행 하세요.
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 _이 문서에서는 기존 목표-C 라이브러리, InfColorPicker에 대 한 Xamarin.ios 바인딩을 만드는 실습 연습을 제공 합니다. 정적 목표-C 라이브러리 컴파일, 바인딩 및 Xamarin.ios 응용 프로그램에서 바인딩을 사용 하는 것과 같은 항목을 다룹니다._
 
@@ -33,7 +33,7 @@ IOS에서 작업 하는 경우 타사 목표-C 라이브러리를 사용 하려�
 
 이 문서에서는 예를 들어 오픈 소스 [Infcolorpicker](https://github.com/InfinitApps/InfColorPicker) 목표-c 프로젝트를 사용 하 여 바인딩 프로젝트를 만드는 단계별 연습을 제공 하지만,이 가이드의 모든 정보는 타사 목표-c 라이브러리와 함께 사용 하도록 조정할 수 있습니다. InfColorPicker 라이브러리는 다시 사용할 수 있는 뷰 컨트롤러를 제공 합니다 .이를 통해 사용자는이를 통해 HSB 표시를 기준으로 색을 선택 하 여 사용자에 게 더 쉽게 색을 선택할 수 있습니다.
 
-[![](walkthrough-images/run01.png "Example of the InfColorPicker library running on iOS")](walkthrough-images/run01.png#lightbox)
+[![IOS에서 실행 되는 InfColorPicker 라이브러리의 예](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
 
 Xamarin.ios에서이 특정 목표-C API를 사용 하는 데 필요한 모든 단계를 다룹니다.
 
@@ -80,11 +80,11 @@ Xcode FAQ 설명서를 [사용 하 여 명령줄에서](https://developer.apple.
   Europa:~ kmullins$ xcode-select --install
   ```
 
-  - 명령줄 도구를 설치 하 라는 메시지가 표시 되 면 **설치** 단추를 클릭 합니다.[![](walkthrough-images/xcode01.png "명령줄 도구 설치")](walkthrough-images/xcode01.png#lightbox)
+  - 명령줄 도구를 설치 하 라는 메시지가 표시 되 면 **설치** 단추를 클릭 합니다. [ ![ 명령줄 도구 설치](walkthrough-images/xcode01.png)](walkthrough-images/xcode01.png#lightbox)
 
-  - 이 도구는 Apple의 서버에서 다운로드 되 고 설치 됩니다.[![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
+  - 이 도구는 Apple의 서버에서 다운로드 되어 설치 됩니다. [ ![ 도구 다운로드](walkthrough-images/xcode02.png)](walkthrough-images/xcode02.png#lightbox)
 
-- **Apple 개발자를 위한 다운로드** - [Apple 개발자 용 다운로드](https://developer.apple.com/downloads/index.action) 웹 페이지에서 명령줄 도구 패키지를 사용할 수 있습니다. Apple ID로 로그인 한 다음 명령줄 도구를 검색 하 고 다운로드 합니다.[![](walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
+- **Apple 개발자를 위한 다운로드** - [Apple 개발자 용 다운로드](https://developer.apple.com/downloads/index.action) 웹 페이지에서 명령줄 도구 패키지를 사용할 수 있습니다. Apple ID로 로그인 한 다음 명령줄 도구를 검색 하 고 다운로드 합니다. 명령줄 [ ![ 도구 찾기](walkthrough-images/xcode03.png)](walkthrough-images/xcode03.png#lightbox)
 
 명령줄 도구가 설치 되 면 연습을 진행할 준비가 되었습니다.
 
@@ -105,7 +105,7 @@ Xcode FAQ 설명서를 [사용 하 여 명령줄에서](https://developer.apple.
 
 Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 
-[![](walkthrough-images/image02.png "Inspect the code for InfColorPicker in Github")](walkthrough-images/image02.png#lightbox)
+[![Github에서 InfColorPicker에 대 한 코드 검사](walkthrough-images/image02.png)](walkthrough-images/image02.png#lightbox)
 
 프로젝트에서 다음 세 가지 디렉터리를 볼 수 있습니다.
 
@@ -115,7 +115,7 @@ Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 
 [GitHub](https://github.com/InfinitApps/InfColorPicker/archive/master.zip) 에서 InfColorPicker 프로젝트를 다운로드 하 고 선택한 디렉터리에서 압축을 풉니다. 프로젝트에 대 한 Xcode 대상을 열면 `PickerSamplePhone` Xcode 탐색기에 다음과 같은 프로젝트 구조가 표시 됩니다.
 
-[![](walkthrough-images/image03.png "The project structure in the Xcode Navigator")](walkthrough-images/image03.png#lightbox)
+[![Xcode Navigator의 프로젝트 구조](walkthrough-images/image03.png)](walkthrough-images/image03.png#lightbox)
 
 이 프로젝트는 각 샘플 프로젝트에 InfColorPicker 소스 코드 (빨간색 상자)를 직접 추가 하 여 코드를 다시 사용 합니다. 샘플 프로젝트에 대 한 코드는 파란색 상자 안에 있습니다. 이 특정 프로젝트는 정적 라이브러리를 제공 하지 않으므로 Xcode 프로젝트를 만들어 정적 라이브러리를 컴파일해야 합니다.
 
@@ -124,48 +124,48 @@ Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 1. Xcode를 시작합니다.
 2. **파일** 메뉴에서 **새**  >  **프로젝트**...를 선택 합니다.
 
-    [![](walkthrough-images/image04.png "Starting a new project")](walkthrough-images/image04.png#lightbox)
+    [![새 프로젝트 시작](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
 3. **프레임 워크 & 라이브러리**, **Cocoa Touch 정적 라이브러리** 템플릿을 선택 하 고 **다음** 단추를 클릭 합니다.
 
-    [![](walkthrough-images/image05.png "Select the Cocoa Touch Static Library template")](walkthrough-images/image05.png#lightbox)
+    [![Cocoa Touch 정적 라이브러리 템플릿을 선택 합니다.](walkthrough-images/image05.png)](walkthrough-images/image05.png#lightbox)
 
 4. `InfColorPicker` **프로젝트 이름** 으로를 입력 하 고 **다음** 단추를 클릭 합니다.
 
-    [![](walkthrough-images/image06.png "Enter InfColorPicker for the Project Name")](walkthrough-images/image06.png#lightbox)
+    [![프로젝트 이름에 대 한 InfColorPicker 입력](walkthrough-images/image06.png)](walkthrough-images/image06.png#lightbox)
 5. 프로젝트를 저장할 위치를 선택 하 고 **확인** 단추를 클릭 합니다.
 6. 이제 InfColorPicker 프로젝트의 소스를 정적 라이브러리 프로젝트에 추가 해야 합니다. **Infcolorpicker .h** 파일은 기본적으로 정적 라이브러리에 이미 있기 때문에 Xcode에서 해당 파일을 덮어쓸 수 없습니다. **Finder**에서 GitHub에서 압축을 푼 원본 프로젝트의 infcolorpicker 소스 코드로 이동 하 고 모든 infcolorpicker 파일을 복사 하 여 새 정적 라이브러리 프로젝트에 붙여넣습니다.
 
-    [![](walkthrough-images/image12.png "Copy all of the InfColorPicker files")](walkthrough-images/image12.png#lightbox)
+    [![모든 InfColorPicker 파일 복사](walkthrough-images/image12.png)](walkthrough-images/image12.png#lightbox)
 
 7. Xcode로 돌아가서 **Infcolorpicker** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **"infcolorpicker ..."에 파일 추가를**선택 합니다.
 
-    [![](walkthrough-images/image08.png "Adding files")](walkthrough-images/image08.png#lightbox)
+    [![파일 추가](walkthrough-images/image08.png)](walkthrough-images/image08.png#lightbox)
 
 8. 파일 추가 대화 상자에서 방금 복사한 InfColorPicker 소스 코드 파일로 이동 하 여 모두 선택 하 고 **추가** 단추를 클릭 합니다.
 
-    [![](walkthrough-images/image09.png "Select all and click the Add button")](walkthrough-images/image09.png#lightbox)
+    [![모두 선택 하 고 추가 단추를 클릭 합니다.](walkthrough-images/image09.png)](walkthrough-images/image09.png#lightbox)
 
 9. 소스 코드는 프로젝트에 복사 됩니다.
 
-    [![](walkthrough-images/image10.png "The source code will be copied into the project")](walkthrough-images/image10.png#lightbox)
+    [![소스 코드가 프로젝트에 복사 됩니다.](walkthrough-images/image10.png)](walkthrough-images/image10.png#lightbox)
 
 10. Xcode 프로젝트 탐색기에서 **Infcolorpicker** 파일을 선택 하 고 마지막 두 줄을 주석으로 처리 합니다 .이 파일은 사용 되지 않습니다.
 
-    [![](walkthrough-images/image14.png "Editing the InfColorPicker.m file")](walkthrough-images/image14.png#lightbox)
+    [![InfColorPicker. m 파일 편집](walkthrough-images/image14.png)](walkthrough-images/image14.png#lightbox)
 
 11. 이제 라이브러리에 필요한 프레임 워크가 있는지 확인 해야 합니다. 이 정보는 추가 정보에서 찾거나 제공 된 샘플 프로젝트 중 하나를 열어 볼 수 있습니다. 이 예제에서는 `Foundation.framework` , `UIKit.framework` 를 사용 `CoreGraphics.framework` 하므로 추가 해 보겠습니다.
 
 12. **빌드 단계 > Infcolorpicker 대상을** 선택 하 고 **라이브러리를 사용 하 여 이진 파일 연결** 섹션을 확장 합니다.
 
-    [![](walkthrough-images/image16b.png "Expand the Link Binary With Libraries section")](walkthrough-images/image16b.png#lightbox)
+    [![라이브러리를 사용 하 여 이진 파일 연결 섹션을 확장 합니다.](walkthrough-images/image16b.png)](walkthrough-images/image16b.png#lightbox)
 
 13. 단추를 사용 **+** 하 여 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있는 대화 상자를 엽니다.
 
-    [![](walkthrough-images/image16c.png "Add the required frames frameworks listed above")](walkthrough-images/image16c.png#lightbox)
+    [![위에 나열 된 필수 프레임 프레임 워크 추가](walkthrough-images/image16c.png)](walkthrough-images/image16c.png#lightbox)
 
 14. 이제 **라이브러리와 이진 링크** 섹션이 아래 이미지와 같이 표시 됩니다.
 
-    [![](walkthrough-images/image16d.png "The Link Binary With Libraries section")](walkthrough-images/image16d.png#lightbox)
+    [![라이브러리에 이진 링크 섹션](walkthrough-images/image16d.png)](walkthrough-images/image16d.png#lightbox)
 
 이 시점에서이 작업을 완료 하는 것은 아닙니다. 정적 라이브러리가 만들어졌지만 iOS 장치 및 iOS 시뮬레이터 모두에 필요한 모든 아키텍처를 포함 하는 Fat 이진 파일을 만들기 위해 빌드해야 합니다.
 
@@ -218,15 +218,15 @@ clean:
 
 이름 **Makefile** 을 포함 하는 파일을 위에서 만든 InfColorPicker Xcode 정적 라이브러리와 동일한 위치에 저장 합니다.
 
-[![](walkthrough-images/lib00.png "Save the file with the name Makefile")](walkthrough-images/lib00.png#lightbox)
+[![이름 메이크파일을 사용 하 여 파일을 저장 합니다.](walkthrough-images/lib00.png)](walkthrough-images/lib00.png#lightbox)
 
 Mac에서 터미널 응용 프로그램을 열고 메이크파일의 위치로 이동 합니다. 터미널에을 입력 하 `make` 고 **enter** 키를 누르면 **Makefile** 이 실행 됩니다.
 
-[![](walkthrough-images/lib01.png "Sample makefile output")](walkthrough-images/lib01.png#lightbox)
+[![샘플 메이크파일 출력](walkthrough-images/lib01.png)](walkthrough-images/lib01.png#lightbox)
 
 만들기를 실행 하면로 많은 텍스트 스크롤이 표시 됩니다. 모든 것이 제대로 작동 하는 경우 **빌드 성공** 및를 확인 하 `libInfColorPicker-armv7.a` `libInfColorPicker-i386.a` 고 `libInfColorPickerSDK.a` 파일이 **메이크파일의**동일한 위치에 복사 됩니다.
 
-[![](walkthrough-images/lib02.png "The libInfColorPicker-armv7.a, libInfColorPicker-i386.a and libInfColorPickerSDK.a files generated by the Makefile")](walkthrough-images/lib02.png#lightbox)
+[![LibInfColorPicker-armv7, libInfColorPicker-i386. a 및 Libinfcolorankersdk. 메이크파일의 생성 파일](walkthrough-images/lib02.png)](walkthrough-images/lib02.png#lightbox)
 
 다음 명령을 사용 하 여 Fat 이진 내에서 아키텍처를 확인할 수 있습니다.
 
@@ -255,21 +255,21 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 1. Mac용 Visual Studio를 시작합니다.
 1. **파일** 메뉴에서 **새**  >  **솔루션 ...** 을 선택 합니다.
 
-    ![](walkthrough-images/bind01.png "Starting a new solution")
+    ![새 솔루션 시작](walkthrough-images/bind01.png)
 
 1. 새 솔루션 대화 상자에서 **라이브러리**  >  **iOS 바인딩 프로젝트**를 선택 합니다.
 
-    ![](walkthrough-images/bind02.png "Select iOS Binding Project")
+    ![IOS 바인딩 프로젝트 선택](walkthrough-images/bind02.png)
 
 1. **다음** 단추를 클릭합니다.
 
 1. **프로젝트 이름** 으로 "Infcolor kerbinding"을 입력 하 고 **만들기** 단추를 클릭 하 여 솔루션을 만듭니다.
 
-    ![](walkthrough-images/bind02a.png "Enter InfColorPickerBinding as the Project Name")
+    ![프로젝트 이름으로 Infcolor Kerbinding 입력](walkthrough-images/bind02a.png)
 
 솔루션이 만들어지고 다음과 같은 두 개의 기본 파일이 포함 됩니다.
 
-![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
+![솔루션 탐색기의 솔루션 구조](walkthrough-images/bind03.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -287,7 +287,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 솔루션이 만들어지고 다음과 같은 두 개의 기본 파일이 포함 됩니다.
 
-![](walkthrough-images/bind03vs.png "The solution structure in the Solution Explorer")
+![솔루션 탐색기의 솔루션 구조](walkthrough-images/bind03vs.png)
 
 -----
 
@@ -306,14 +306,14 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. Solution Pad에서 **네이티브 참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **네이티브 참조 추가**를 선택 합니다.
 
-    ![](walkthrough-images/bind04a.png "Add Native References")
+    ![네이티브 참조 추가](walkthrough-images/bind04a.png)
 
 1. 이전에 만든 Fat 이진 파일 ()로 이동 `libInfColorPickerSDK.a` 하 고 **열기** 단추를 누릅니다.
 
-    ![](walkthrough-images/bind05.png "Select the libInfColorPickerSDK.a file")
+    ![LibInfColorPickerSDK를 선택 합니다. 파일](walkthrough-images/bind05.png)
 1. 이 파일은 프로젝트에 포함 됩니다.
 
-    ![](walkthrough-images/bind04.png "Including a file")
+    ![파일 포함](walkthrough-images/bind04.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -321,11 +321,11 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **기존 항목 > 추가**...를 선택 합니다.
 
-    ![](walkthrough-images/bind04vs.png "Adding an existing file")
+    ![기존 파일 추가](walkthrough-images/bind04vs.png)
 
 1. 로 이동 하 `libInfColorPickerSDK.a` 고 **추가** 단추를 누릅니다.
 
-    ![](walkthrough-images/bind05vs.png "Adding libInfColorPickerSDK.a")
+    ![LibInfColorPickerSDK를 추가 하 고 있습니다.](walkthrough-images/bind05vs.png)
 
 1. 파일이 프로젝트에 포함 됩니다.
 
@@ -460,13 +460,13 @@ Europa:Resources kmullins$
 
 **InfColorPicker.enums.cs** 및 **InfColorPicker.cs** 파일은 디렉터리에 생성 됩니다.
 
-[![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
+[![InfColorPicker.enums.cs 및 InfColorPicker.cs 파일](walkthrough-images/os06.png)](walkthrough-images/os06.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다 `using` . 문은 그대로 둡니다.
 
-![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
+![InfColorPickerControllerDelegate 파일](walkthrough-images/os07.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -487,11 +487,11 @@ Europa:Resources kmullins$
 
 정의가 다음과 같이 표시 됩니다.
 
-[![](walkthrough-images/os11.png "The definition")](walkthrough-images/os11.png#lightbox)
+[![정의](walkthrough-images/os11.png)](walkthrough-images/os11.png#lightbox)
 
 다음으로 파일의 내용으로 동일한 작업을 수행 하 고 `InfColorPicker.enums.cs` 파일에 복사 하 여 붙여 넣는 방식으로 `StructsAndEnums.cs` `using` 문을 그대로 둡니다.
 
-[![](walkthrough-images/os09.png "The contents the StructsAndEnums.cs file ")](walkthrough-images/os09.png#lightbox)
+[![StructsAndEnums.cs 파일의 내용입니다.](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 또한 목표 Sharpie 특성을 사용 하 여 바인딩에 주석이 추가 되었음을 알 수 있습니다 `[Verify]` . 이러한 특성은 바인딩을 원래 C/목표값-C 선언과 비교 하 여 (바인딩된 선언 위의 설명에 제공 됨) 목표 Sharpie이 올바른 것을 확인 해야 함을 의미 합니다. 바인딩을 확인 한 후에는 verify 특성을 제거 해야 합니다. 자세한 내용은 [확인](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) 가이드를 참조 하세요.
 
@@ -517,21 +517,21 @@ Europa:Resources kmullins$
 
 1. **Xamarin.ios 프로젝트 만들기** -다음 스크린샷에 표시 된 것 처럼 솔루션에 **Infcolorpickersample** 이라는 새 xamarin.ios 프로젝트를 추가 합니다.
 
-    ![](walkthrough-images/use01.png "Adding a Single View App")
+    ![단일 뷰 앱 추가](walkthrough-images/use01.png)
 
-    ![](walkthrough-images/use01a.png "Setting the Identifier")
+    ![식별자 설정](walkthrough-images/use01a.png)
 
 1. **바인딩 프로젝트에 참조 추가** -Infcolor **kerbinding** 프로젝트에 대 한 참조를 포함 하도록 **infcolorpickersample** 프로젝트를 업데이트 합니다.
 
-    ![](walkthrough-images/use02.png "Adding Reference to the Binding Project")
+    ![바인딩 프로젝트에 참조 추가](walkthrough-images/use02.png)
 
 1. **IPhone 사용자 인터페이스 만들기** - **Infcolormainstoryboard.storyboard 샘플** 프로젝트에서 **storyboard** 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집 합니다. 다음과 같이 보기에 **단추** 를 추가 하 고 호출 합니다 `ChangeColorButton` .
 
-    ![](walkthrough-images/use03.png "Adding a Button to the view")
+    ![뷰에 단추 추가](walkthrough-images/use03.png)
 
 1. **Xib** -InfColorPicker 목표-C 라이브러리에 **xib** 파일이 포함 되어 있습니다. Xamarin.ios는 바인딩 프로젝트에이 **xib** 을 포함 하지 않으므로 샘플 응용 프로그램에서 런타임 오류가 발생 합니다. 이에 대 한 해결 방법은 Xamarin.ios 프로젝트에 **xib** 파일을 추가 하는 것입니다. Xamarin.ios 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **추가 > 파일**추가를 선택 하 고 다음 스크린샷에 표시 된 대로 xib 파일을 추가 **합니다** .
 
-    ![](walkthrough-images/use04.png "Add the InfColorPickerView.xib")
+    ![Infcolorxib를 추가 합니다.](walkthrough-images/use04.png)
 
 1. 메시지가 표시 되 면 프로젝트에 **xib** 파일을 복사 합니다.
 
@@ -545,11 +545,11 @@ Europa:Resources kmullins$
 
 1. **바인딩 프로젝트에 참조 추가** -Infcolor **kerbinding** 프로젝트에 대 한 참조를 포함 하도록 **infcolorpickersample** 프로젝트를 업데이트 합니다.
 
-    ![](walkthrough-images/use02vs.png "Add Reference to the Binding Project")
+    ![바인딩 프로젝트에 참조 추가](walkthrough-images/use02vs.png)
 
 1. **IPhone 사용자 인터페이스 만들기** - **Infcolormainstoryboard.storyboard 샘플** 프로젝트에서 **storyboard** 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집 합니다. 다음과 같이 보기에 **단추** 를 추가 하 고 호출 합니다 `ChangeColorButton` .
 
-    ![](walkthrough-images/use03vs.png "Create the iPhone User Interface")
+    ![IPhone 사용자 인터페이스 만들기](walkthrough-images/use03vs.png)
 
 1. **Xib** -InfColorPicker 목표-C 라이브러리에 **xib** 파일이 포함 되어 있습니다. Xamarin.ios는 바인딩 프로젝트에이 **xib** 을 포함 하지 않으므로 샘플 응용 프로그램에서 런타임 오류가 발생 합니다. 이에 대 한 해결 방법은 **Mac 빌드 호스트**의 xamarin.ios 프로젝트에 **xib** 파일을 추가 하는 것입니다. Xamarin.ios 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 **Add**다음  >  **기존 항목**추가 ...를 선택 하 고 **xib** 파일을 추가 합니다.
 
@@ -671,7 +671,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 **응용 프로그램을 실행** 합니다 .이 시점에서 모든 코드를 사용 하 여 완료 됩니다. 응용 프로그램을 실행 하는 경우 `InfColorColorPickerSampleView` 다음 스크린샷에 표시 된 것 처럼의 배경색을 변경할 수 있습니다.
 
-[![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
+[![응용 프로그램 실행](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
 
 지금까지 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
 

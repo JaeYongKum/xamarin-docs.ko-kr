@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d554fa2f967a966195007ea67c48506eaac1e79
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 435fe894e4082f7eddf37d100bb8b2d2ed3a166f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570884"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938010"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9 – 문제 해결
 
@@ -32,7 +32,7 @@ Xcode 7 이상을 설치한 경우 기본적으로 모든 iOS 8 시뮬레이터�
 
 Xcode에서 **Xcode** 메뉴를 선택 하 고 **기본 설정 ...**  >  을 선택 합니다. **다운로드**:
 
-[![](troubleshooting-images/ios8.png "iOS 8 Simulators Downloads")](troubleshooting-images/ios8.png#lightbox)
+[![iOS 8 시뮬레이터 다운로드](troubleshooting-images/ios8.png)](troubleshooting-images/ios8.png#lightbox)
 
 **확인 및 지금 설치** 단추를 클릭 하 여 iOS 8 시뮬레이터를 다시 설치 합니다.
 
@@ -137,28 +137,28 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>신뢰할 수 없는 엔터프라이즈 개발자
 
-실제 iOS 하드웨어에서 iOS 9 버전의 Xamarin.ios 앱을 실행 하려고 할 때 개발자 계정이 장치에서 신뢰 되지 않았다는 메시지가 표시 될 수 있습니다. 예를 들면 다음과 같습니다.
+실제 iOS 하드웨어에서 iOS 9 버전의 Xamarin.ios 앱을 실행 하려고 할 때 개발자 계정이 장치에서 신뢰 되지 않았다는 메시지가 표시 될 수 있습니다. 예를 들어:
 
-[![](troubleshooting-images/untrusted01.png "Untrusted Enterprise Developer alert")](troubleshooting-images/untrusted01.png#lightbox)
+[![신뢰할 수 없는 엔터프라이즈 개발자 경고](troubleshooting-images/untrusted01.png)](troubleshooting-images/untrusted01.png#lightbox)
 
 이 문제를 해결 하려면 다음을 수행 합니다.
 
 1. 개발 Mac에서 Xcode (최신 베타 버전)을 시작 합니다.
 2. **창** 메뉴에서 **장치** 를 선택 하 여 장치 창을 엽니다. 
 
-    [![](troubleshooting-images/untrusted02.png "The Devices Window")](troubleshooting-images/untrusted02.png#lightbox)
+    [![장치 창](troubleshooting-images/untrusted02.png)](troubleshooting-images/untrusted02.png#lightbox)
 3. **장치 측면 패널** 에서 장치를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **프로 비전 프로필 표시**...를 선택 합니다. 
 
-    [![](troubleshooting-images/untrusted03.png "SShow Provisioning Profiles")](troubleshooting-images/untrusted03.png#lightbox)
+    [![프로 비전 프로필 표시](troubleshooting-images/untrusted03.png)](troubleshooting-images/untrusted03.png#lightbox)
 4. 현재 장치에서 각 프로 비전 프로필을 선택 하 고 **-** 단추를 클릭 하 여 삭제 합니다. 
 
-    [![](troubleshooting-images/untrusted04.png "Deleting a provisioning profile")](troubleshooting-images/untrusted04.png#lightbox)
+    [![프로 비전 프로필 삭제](troubleshooting-images/untrusted04.png)](troubleshooting-images/untrusted04.png#lightbox)
 5. **Xcode** 메뉴에서 **기본 설정 ...** 및 **계정**을 선택 합니다. 
 
-    [![](troubleshooting-images/untrusted05.png "Xcode account preferences")](troubleshooting-images/untrusted05.png#lightbox)
+    [![Xcode 계정 기본 설정](troubleshooting-images/untrusted05.png)](troubleshooting-images/untrusted05.png#lightbox)
 6. **자세히 보기** ... 단추를 클릭 한 다음 **모두 다운로드** 단추를 클릭 합니다. 
 
-    [![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
+    [![모든 프로필 다운로드](troubleshooting-images/untrusted06.png)](troubleshooting-images/untrusted06.png#lightbox)
 7. 목록의 업데이트가 완료 되 면 **완료** 단추를 클릭 하 고 기본 설정 창을 닫습니다.
 8. IOS 장치에서 테스트 하려는 기존 버전의 Xamarin.ios 앱을 제거 합니다.
 9. Mac용 Visual Studio으로 돌아가서 클린 빌드를 수행 하 고 장치에서 앱을 다시 실행 해 봅니다.

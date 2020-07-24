@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3045db1248aa16529d4e43b9a8afc97377cfd9cb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9e5aeedb7dd51717a9bb987e90dffdcd9b514da0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128961"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937945"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
@@ -68,11 +68,11 @@ Android 프로젝트에 재질 디자인 테마를 추가 하려면 Xamarin.Form
 
 다음은 기본값을 사용 하는 **Todo** 샘플입니다 `FormsApplicationActivity` .
 
-[![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
+[![AppCompat이 없는 Todo 샘플 응용 프로그램](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "AppCompat이 없는 Todo 샘플 응용 프로그램")
 
 이 코드는를 사용 하 `FormsAppCompatActivity` 고 추가 테마 정보를 추가 하 여 프로젝트를 업그레이드 한 후의 코드와 동일 합니다.
 
-[![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
+[![AppCompat 및 테마를 사용 하는 Todo 샘플 응용 프로그램](images/post-appcompat-sml.png)](images/post-appcompat.png#lightbox "AppCompat 및 테마를 사용 하는 Todo 샘플 응용 프로그램")
 
 > [!NOTE]
 > 를 사용 하 `FormsAppCompatActivity` 는 경우 [일부 Android 사용자 지정 렌더러의 기본 클래스](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) 는 다릅니다.

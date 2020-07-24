@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dcabe3c0067734250834c2927fd4cbb83906943
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5f5e6311c79a88a6018526a2e1c0c06065eefb32
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128793"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929742"
 ---
 # <a name="navigationpage-bar-height-on-android"></a>Android의 NavigationPage Bar Height
 
@@ -51,7 +51,7 @@ public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
 
 그러면의 탐색 모음 높이를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 설정할 수 있습니다.
 
-![](navigationpage-bar-height-images/navigationpage-barheight.png "NavigationPage navigation bar height")
+![NavigationPage 탐색 모음 높이](navigationpage-bar-height-images/navigationpage-barheight.png)
 
 ## <a name="related-links"></a>관련 링크
 

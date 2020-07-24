@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 83edaf46519790d9674b7b537fc424ddd7a09a1c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 3822a03a78c91777ad9614ec298bbac1ab2332b1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566151"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939479"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
 필요한 경우 tvOS 앱은 텍스트 필드 및 화상 키보드를 사용 하 여 사용자 (예: 사용자 Id 및 암호)의 작은 텍스트를 요청할 수 있습니다.
 
-[![](text-fields-and-search-images/intro01.png "Sample Search Field")](text-fields-and-search-images/intro01.png#lightbox)
+[![샘플 검색 필드](text-fields-and-search-images/intro01.png)](text-fields-and-search-images/intro01.png#lightbox)
 
 필요에 따라 검색 필드를 사용 하 여 앱 콘텐츠의 키워드 검색 기능을 제공할 수 있습니다.
 
-[![](text-fields-and-search-images/intro02.png "Sample Search Results")](text-fields-and-search-images/intro02.png#lightbox)
+[![샘플 검색 결과](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
 
 이 문서에서는 tvOS 앱에서 텍스트 및 검색 필드 작업에 대 한 세부 정보를 다룹니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "84566151"
 
 TvOS에서 텍스트 필드는 사용자가 클릭 하면 화상 키보드를 표시 하는 고정 높이의 둥근 모퉁이 항목 상자로 표시 됩니다.
 
-[![](text-fields-and-search-images/text01.png "Text Fields In tvOS")](text-fields-and-search-images/text01.png#lightbox)
+[![TvOS의 텍스트 필드](text-fields-and-search-images/text01.png)](text-fields-and-search-images/text01.png#lightbox)
 
 사용자가 지정 된 텍스트 필드에 [포커스](~/ios/tvos/app-fundamentals/navigation-focus.md) 를 이동 하면 더 크게 커지고 전체 그림자를 표시 합니다. 텍스트 필드는 포커스가 있을 때 다른 UI 요소와 겹칠 수 있으므로 사용자 인터페이스를 디자인할 때이 점을 염두에 두어야 합니다.
 
@@ -57,7 +57,7 @@ Apple에는 텍스트 필드 작업에 대 한 다음과 같은 제안이 있습
 
 사용자가 사용자 인터페이스에서 텍스트 필드를 클릭할 때마다 선형 화상 키보드가 표시 됩니다. 사용자는 [Siri 원격](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) 터치 화면을 사용 하 여 키보드에서 개별 문자를 선택 하 고 요청 된 정보를 입력 합니다.
 
-[![](text-fields-and-search-images/keyboard01.png "The Siri Remote keyboard")](text-fields-and-search-images/keyboard01.png#lightbox)
+[![Siri 원격 키보드](text-fields-and-search-images/keyboard01.png)](text-fields-and-search-images/keyboard01.png#lightbox)
 
 현재 보기에 텍스트 필드가 두 개 이상 있으면 다음 단추가 자동으로 표시 되어 사용자 **가 다음 텍스트** 필드로 이동 합니다. 텍스트 입력을 종료 하 고 사용자를 이전 화면으로 반환 하는 마지막 텍스트 필드에 대해 **완료** 단추가 표시 됩니다.
 
@@ -76,7 +76,7 @@ Apple은 화상 키보드를 사용할 때 다음과 같은 제안 사항을 제
 
 검색 필드는 사용자가 키보드 아래에 표시 되는 항목의 컬렉션을 필터링 할 수 있는 텍스트 필드 및 화상 키보드를 제공 하는 특수 한 화면을 제공 합니다.
 
-[![](text-fields-and-search-images/search01.png "Sample search results")](text-fields-and-search-images/search01.png#lightbox)
+[![샘플 검색 결과](text-fields-and-search-images/search01.png)](text-fields-and-search-images/search01.png#lightbox)
 
 사용자가 검색 필드에 문자를 입력 하면 아래 결과에 검색 결과가 자동으로 반영 됩니다. 사용자는 언제 든 지 결과에 포커스를 이동 하 고 표시 되는 항목 중 하나를 선택할 수 있습니다.
 
@@ -103,16 +103,16 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
 
-    [![](text-fields-and-search-images/text02.png "A Text Field")](text-fields-and-search-images/text02.png#lightbox)
+    [![텍스트 필드](text-fields-and-search-images/text02.png)](text-fields-and-search-images/text02.png#lightbox)
 1. **텍스트 필드** 를 선택 하 고 **Properties Pad**의 **위젯** 탭에서 각 고유 **이름을** 지정 합니다.
 
-    [![](text-fields-and-search-images/text03.png "The Widget tab of the Properties Pad")](text-fields-and-search-images/text03.png#lightbox)
+    [![Properties Pad의 위젯 탭](text-fields-and-search-images/text03.png)](text-fields-and-search-images/text03.png#lightbox)
 1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 **및 기본값과 같은**요소를 정의할 수 있습니다.
 
-    [![](text-fields-and-search-images/text04.png "The Text Field section")](text-fields-and-search-images/text04.png#lightbox)
+    [![텍스트 필드 섹션](text-fields-and-search-images/text04.png)](text-fields-and-search-images/text04.png#lightbox)
 1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
 
-    [![](text-fields-and-search-images/text05.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05.png#lightbox)
+    [![맞춤법 검사, 대문자 표시 및 기본 키보드 종류](text-fields-and-search-images/text05.png)](text-fields-and-search-images/text05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -120,16 +120,16 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
 
-    [![](text-fields-and-search-images/text02-vs.png "A Text Field")](text-fields-and-search-images/text02-vs.png#lightbox)
+    [![텍스트 필드](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
 1. **텍스트 필드** 를 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 각각 고유한 **이름을** 지정 합니다.
 
-    [![](text-fields-and-search-images/text03-vs.png "The Widget tab")](text-fields-and-search-images/text03-vs.png#lightbox)
+    [![위젯 탭](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
 1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 **및 기본값과 같은**요소를 정의할 수 있습니다.
 
-    [![](text-fields-and-search-images/text04-vs.png "The Text Field section")](text-fields-and-search-images/text04-vs.png#lightbox)
+    [![텍스트 필드 섹션](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
 1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
 
-    [![](text-fields-and-search-images/text05-vs.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05-vs.png#lightbox)
+    [![맞춤법 검사, 대문자 표시 및 기본 키보드 종류](text-fields-and-search-images/text05-vs.png)](text-fields-and-search-images/text05-vs.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 -----
@@ -155,17 +155,17 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
-    [![](text-fields-and-search-images/search02.png "A Collection View Controller")](text-fields-and-search-images/search02.png#lightbox)
+    [![컬렉션 뷰 컨트롤러](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
 1. **Properties Pad**의 **위젯** 탭에서 `SearchResultsViewController` **클래스** 및 `SearchResults` **스토리 보드 ID**에 대해를 사용 합니다.
 
-    [![](text-fields-and-search-images/search03.png "The Widget tab")](text-fields-and-search-images/search03.png#lightbox)
+    [![위젯 탭](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
 1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultCell` **클래스** 및 식별자에 대해를 사용 합니다 `ImageCell` . **Identifier**
 
-    [![](text-fields-and-search-images/search04.png "The Widget tab")](text-fields-and-search-images/search04.png#lightbox)
+    [![위젯 탭](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
 1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
 
-    [![](text-fields-and-search-images/search05.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05.png#lightbox)
+    [![셀 프로토타입의 디자인 레이아웃](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -173,17 +173,17 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
-    [![](text-fields-and-search-images/seach02-vs.png "A Collection View Controller")](text-fields-and-search-images/seach02-vs.png#lightbox)
+    [![컬렉션 뷰 컨트롤러](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultsViewController` **클래스** 및 `SearchResults` **Storyboard ID**에 대해를 사용 합니다.
 
-    [![](text-fields-and-search-images/search03-vs.png "The Widget tab")](text-fields-and-search-images/search03-vs.png#lightbox)
+    [![위젯 탭](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
 1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultCell` **클래스** 및 식별자에 대해를 사용 합니다 `ImageCell` . **Identifier**
 
-    [![](text-fields-and-search-images/search04-vs.png "The Widget tab")](text-fields-and-search-images/search04-vs.png#lightbox)
+    [![위젯 탭](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
 1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
 
-    [![](text-fields-and-search-images/search05-vs.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05-vs.png#lightbox)
+    [![셀 프로토타입의 디자인 레이아웃](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
 -----
@@ -196,13 +196,13 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 
 다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**  >  추가 ...를 선택 합니다. **일반**  >  **빈 클래스** 및 **이름을**제공 합니다.
 
-[![](text-fields-and-search-images/search06.png "Select Empty Class and provide a Name")](text-fields-and-search-images/search06.png#lightbox)
+[![빈 클래스를 선택 하 고 이름을 입력 합니다.](text-fields-and-search-images/search06.png)](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 항목**  >  ...을 선택 합니다. **Apple**  >  **기타**  >  **클래스** 및 **이름을**제공 합니다.
 
-[![](text-fields-and-search-images/search06-vs.png "Select Class and provide a Name")](text-fields-and-search-images/search06-vs.png#lightbox)
+[![클래스를 선택 하 고 이름을 입력 합니다.](text-fields-and-search-images/search06-vs.png)](text-fields-and-search-images/search06-vs.png#lightbox)
 
 -----
 
@@ -770,11 +770,11 @@ public override void ViewDidAppear (bool animated)
 
 앱이 실행 되 고 검색 탭이 사용자에 의해 선택 되 면 필터링 되지 않은 전체 항목 목록이 사용자에 게 표시 됩니다.
 
-[![](text-fields-and-search-images/intro02.png "Default search results")](text-fields-and-search-images/intro02.png#lightbox)
+[![기본 검색 결과](text-fields-and-search-images/intro02.png)](text-fields-and-search-images/intro02.png#lightbox)
 
 사용자가 검색 용어를 입력 하기 시작 하면 결과 목록이 해당 용어를 기준으로 필터링 되 고 자동으로 업데이트 됩니다.
 
-[![](text-fields-and-search-images/intro03.png "Filtered search results")](text-fields-and-search-images/intro03.png#lightbox)
+[![필터링 된 검색 결과](text-fields-and-search-images/intro03.png)](text-fields-and-search-images/intro03.png#lightbox)
 
 사용자는 언제 든 지 검색 결과의 항목으로 포커스를 전환 하 고 Siri 원격의 터치 화면을 클릭 하 여 선택할 수 있습니다.
 

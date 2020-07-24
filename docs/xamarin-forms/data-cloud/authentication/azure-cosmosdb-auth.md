@@ -10,12 +10,12 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e1fb6342db4c97ea6946db366d356267c8c1b90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05547e960ba1ea141a830396f803dfc265283627
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570559"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936463"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
 
@@ -36,7 +36,7 @@ _Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하
 
 모바일 응용 프로그램에 대 한 리소스 토큰을 요청, 생성 및 전달 하는 일반적인 방법은 리소스 토큰 브로커를 사용 하는 것입니다. 다음 다이어그램은 샘플 응용 프로그램에서 리소스 토큰 브로커를 사용 하 여 문서 데이터베이스 데이터에 대 한 액세스를 관리 하는 방법에 대 한 개략적인 개요를 보여 줍니다.
 
-![](azure-cosmosdb-auth-images/documentdb-authentication.png "Document Database Authentication Process")
+![문서 데이터베이스 인증 프로세스](azure-cosmosdb-auth-images/documentdb-authentication.png)
 
 리소스 토큰 브로커는 Cosmos DB 계정의 마스터 키를 소유 하는 Azure App Service에서 호스트 되는 중간 계층 웹 API 서비스입니다. 샘플 응용 프로그램은 리소스 토큰 브로커를 사용 하 여 다음과 같이 문서 데이터베이스 데이터에 대 한 액세스를 관리 합니다.
 
@@ -51,7 +51,7 @@ _Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하
 
 Cosmos DB 분할에 대 한 자세한 내용은 [Azure Cosmos DB을 분할 하 고 크기를 조정 하는 방법](/azure/cosmos-db/partition-data/)을 참조 하세요. Cosmos DB access control에 대 한 자세한 내용은 [SQL API에서](/rest/api/documentdb/access-control-on-documentdb-resources/)Cosmos DB 데이터 및 access control에 대 한 [액세스 보안](/azure/cosmos-db/secure-access-to-data/) 을 참조 하세요.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 리소스 토큰 브로커를 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
@@ -85,7 +85,7 @@ Azure App Service에서 리소스 토큰 브로커를 호스트 하는 프로세
 
     다음 스크린샷은이 구성을 보여 줍니다.
 
-    [![](azure-cosmosdb-auth-images/azure-web-app-settings.png "App Service Web App Settings")](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
+    [![웹 앱 설정 App Service](azure-cosmosdb-auth-images/azure-web-app-settings.png)](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "웹 앱 설정 App Service")
 
 1. 리소스 토큰 브로커 솔루션을 Azure App Service 웹 앱에 게시 합니다.
 
@@ -102,7 +102,7 @@ Facebook 앱을 만들어 인증을 수행 하는 프로세스는 다음과 같�
 
   다음 스크린샷은이 구성을 보여 줍니다.
 
-  ![](azure-cosmosdb-auth-images/facebook-oauth-settings.png "Facebook Login OAuth Settings")
+  ![Facebook 로그인 OAuth 설정](azure-cosmosdb-auth-images/facebook-oauth-settings.png)
 
 자세한 내용은 [Facebook을 사용 하 여 응용 프로그램 등록](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook)을 참조 하세요.
 
@@ -117,7 +117,7 @@ App Service 간편한 인증을 구성 하는 프로세스는 다음과 같습�
 
     다음 스크린샷은이 구성을 보여 줍니다.
 
-    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
+    [![웹 앱 인증 설정 App Service](azure-cosmosdb-auth-images/app-service-authentication-settings.png)](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "웹 앱 인증 설정 App Service")
 
 또한 App Service 웹 앱은 Facebook 앱과 통신 하 여 인증 흐름을 사용 하도록 구성 해야 합니다. Facebook id 공급자를 선택 하 고 facebook 개발자 센터의 Facebook 앱 설정에서 **앱 id** 및 **앱 암호** 값을 입력 하 여이를 수행할 수 있습니다. 자세한 내용은 [응용 프로그램에 Facebook 정보 추가](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)를 참조 하세요.
 
@@ -144,7 +144,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 이로 인해 Azure App Service와 Facebook 사이에서 OAuth 인증 흐름이 시작 되어 Facebook 로그인 페이지가 표시 됩니다.
 
-![](azure-cosmosdb-auth-images/login.png "Facebook Login")
+![Facebook 로그인](azure-cosmosdb-auth-images/login.png)
 
 IOS에서 **취소** 단추를 누르거나 Android에서 **뒤로** 단추를 눌러 로그인을 취소할 수 있습니다 .이 경우 사용자가 인증 되지 않은 상태로 유지 되 고 id 공급자 사용자 인터페이스가 화면에서 제거 됩니다.
 

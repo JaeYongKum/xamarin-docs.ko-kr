@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6c2b5869f647f65b932b6ec92f359f8a79402c8f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 46954f989f4bafddf3f57d360096871b4a0f0b22
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569298"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939947"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.ios에서 속성 목록 작업
 
@@ -24,7 +24,7 @@ Mac용 Visual Studio에는 앱 속성과 기능을 보다 쉽게 편집할 수 �
 
 정보 속성 목록 ( `Info.plist` )은 시스템에 응용 프로그램의 구성에 대 한 정보를 제공 하는 필수 iOS 파일입니다. Mac용 Visual Studio의 사용자 지정 `Info.plist` 편집기 기능은 편집기 창의 왼쪽 아래에 탭으로 제어 되는 세 개의 패널을 제공 합니다.
 
- [![](property-lists-images/tabs.png "The Info.plist editor tabs at the bottom left of the editor window")](property-lists-images/tabs.png#lightbox)
+ [![편집기 창의 왼쪽 아래에 있는 info.plist 편집기 탭](property-lists-images/tabs.png)](property-lists-images/tabs.png#lightbox)
 
 각 패널은 아래에 설명 된 대로 서로 다른 속성을 제어 합니다.
 
@@ -54,11 +54,11 @@ Mac용 Visual Studio는 응용 프로그램의 공통 항목을 편집 하기 �
 이 섹션에는 응용 프로그램을 설명 하는 중요 한 정보가 포함 되어 있습니다.
 여기에 저장 된 **식별자** 는 iTunes Connect (앱 스토어 앱의 경우) 및 IOS 프로 비전 포털 앱 id 목록 및 개발 및 배포 인증서에 입력 된 번들 식별자와 일치 해야 합니다.
 
- [![](property-lists-images/image24.png "iOS Application Target")](property-lists-images/image24.png#lightbox)
+ [![iOS 응용 프로그램 대상](property-lists-images/image24.png)](property-lists-images/image24.png#lightbox)
 
 ### <a name="device-deployment"></a>장치 배포
 
- [![](property-lists-images/deployment.png "Device Deployment")](property-lists-images/deployment.png#lightbox)
+ [![장치 배포](property-lists-images/deployment.png)](property-lists-images/deployment.png#lightbox)
 
 장치 **배포** 정보 섹션은 위의 **응용 프로그램 대상** 섹션에서 **장치** 드롭다운의 선택에 따라 선택적으로 표시 됩니다. **주 인터페이스** 드롭다운은 Storyboard 기반 응용 프로그램에서 **mainstoryboard.storyboard** 로 설정 됩니다. 사용자 인터페이스가 코드로 완전히 작성 된 경우 비워 둘 수 있습니다.
 
@@ -70,7 +70,7 @@ Mac용 Visual Studio는 응용 프로그램의 공통 항목을 편집 하기 �
 
 **상태 표시줄 스타일** 섹션은 응용 프로그램을 편집 하기 위한 그래픽 인터페이스입니다 `UIStatusBarStyle` .
 
- [![](property-lists-images/status.png "Status Bar Styles")](property-lists-images/status.png#lightbox)
+ [![상태 표시줄 스타일](property-lists-images/status.png)](property-lists-images/status.png#lightbox)
 
  <a name="Icons"></a>
 
@@ -82,11 +82,11 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
 
 에는 `Info.plist` 지도 통합 및 backgrounding 모드를 지정 하기 위한 특수 섹션이 포함 되어 있습니다. 지원 하려는 옵션을 선택 하면 응용 프로그램에 필요한 속성이 추가 됩니다.
 
- [![](property-lists-images/maps.png "Maps Integration")](property-lists-images/maps.png#lightbox)
+ [![지도 통합](property-lists-images/maps.png)](property-lists-images/maps.png#lightbox)
 
 맵 사용에 대 한 자세한 내용은 Xamarin [IOS maps](~/ios/user-interface/controls/ios-maps/index.md) 가이드를 참조 하세요.
 
- [![](property-lists-images/bging.png "Background Modes")](property-lists-images/bging.png#lightbox)
+ [![백그라운드 모드](property-lists-images/bging.png)](property-lists-images/bging.png#lightbox)
 
 백그라운드 모드에 대 한 자세한 내용은 [iOS의 Xamarin Backgrounding](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) 가이드를 참조 하세요.
 
@@ -94,7 +94,7 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
 
 고급 패널은 응용 프로그램에서 지 원하는 문서 유형 및 URL 스키마를 제어 합니다.
 
- [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
+ [![고급 패널](property-lists-images/image34.png)](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types"></a>
 
@@ -108,7 +108,7 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
 
 응용 프로그램에서 사용자 지정 파일 형식 열기를 지원 해야 하는 경우가 있습니다. 예를 들어 사용자 지정 확장 *. xam*을 사용 하 여 이미지 파일을 열 수 있습니다. 사용자 지정 파일 형식을 지정 하려면 키를 사용 하 여 사용자 지정 UTI-범용 형식 식별자를 만듭니다 `UIExportedTypeDeclarations` . 아래 스크린샷에서는 .xam 확장에 대 한 사용자 지정 UTI을 만드는 방법을 보여 줍니다.
 
- [![](property-lists-images/uti.png "UTIs Editor")](property-lists-images/uti.png#lightbox)
+ [![UTIs 편집기](property-lists-images/uti.png)](property-lists-images/uti.png#lightbox)
 
 내보낸 형식 UTIs는 사용자 지정 UTIs를 앱에 특정 하 게 지정 하는 것 처럼, *가져온 형식 utis* ( `UIImportedTypeDeclarations` 키)는 지원 되지만 응용 프로그램이 소유 하지 않은 사용자 지정 형식을 지정 합니다.
 
@@ -118,7 +118,7 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
 
 Url 체계 이름 (프로토콜이 라고도 함)은 URL의 첫 번째 부분입니다. 예를 들어 `http://` 및 `https://` 는 일반적인 URL 체계입니다. 응용 프로그램에 대 한 사용자 지정 URL 체계를 만들 수 있습니다. 사용자 지정 URL 체계는 다른 응용 프로그램과 주고받는 데이터를 주고받는 데 사용 됩니다. 다음 스크린샷에서는 이라는 새 사용자 지정 URL 구성표를 만드는 방법을 보여 줍니다 `monkeys://` .
 
- [![](property-lists-images/url.png "Custom URLs")](property-lists-images/url.png#lightbox)
+ [![사용자 지정 URL](property-lists-images/url.png)](property-lists-images/url.png#lightbox)
 
 사용자 지정 URL 체계를 구현 하는 방법에 대 한 자세한 내용은 [이 가이드의 Apple의 사용자 지정 Url 구성표 구현 섹션](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html) 을 참조 하세요.
 
@@ -126,15 +126,15 @@ Url 체계 이름 (프로토콜이 라고도 함)은 URL의 첫 번째 부분입
 
 파일의 **원본** 탭을 `Info.plist` 사용 하 여 사용자 지정 값을 추가 하거나 편집할 수 있습니다. Mac용 Visual Studio는 가장 일반적인 속성 목록을 제공 합니다.
 
- [![](property-lists-images/image31.png "Adding a new property from a dropdown")](property-lists-images/image31.png#lightbox)
+ [![드롭다운에서 새 속성 추가](property-lists-images/image31.png)](property-lists-images/image31.png#lightbox)
 
 알려진 속성의 경우 다음 스크린샷에 표시 된 것 처럼 Mac용 Visual Studio는 유효한 값의 목록입니다.
 
- [![](property-lists-images/image32.png "Select a value from a know value list")](property-lists-images/image32.png#lightbox)
+ [![알려진 값 목록에서 값을 선택 합니다.](property-lists-images/image32.png)](property-lists-images/image32.png#lightbox)
 
 Mac용 Visual Studio는 다음과 같이 속성 형식도 검색 합니다.
 
- [![](property-lists-images/image33.png "The available property types")](property-lists-images/image33.png#lightbox)
+ [![사용 가능한 속성 유형](property-lists-images/image33.png)](property-lists-images/image33.png#lightbox)
 
 옵션 속성에 대 한 자세한 내용은 Apple의 [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) 링크를 검토 하세요.
 

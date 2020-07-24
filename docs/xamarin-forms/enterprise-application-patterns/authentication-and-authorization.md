@@ -10,12 +10,12 @@ ms.date: 08/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5550ea7a355492f724459449f3b37cdcb8d05b1e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932147"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -42,7 +42,7 @@ Openid connect Connect와 OAuth 2.0의 조합은 인증 및 API 액세스의 두
 
 EShopOnContainers reference 응용 프로그램과 같은 직접 클라이언트-마이크로 서비스 통신을 사용 하는 응용 프로그램에서 STS (보안 토큰 서비스)로 작동 하는 전용 인증 마이크로 서비스는 그림 9-1에 표시 된 것 처럼 사용자를 인증 하는 데 사용할 수 있습니다. 클라이언트-마이크로 서비스 간 직접 통신에 대 한 자세한 내용은 [클라이언트와 마이크로 서비스 간 통신](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices)을 참조 하세요.
 
-![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
+![전용 인증 마이크로 서비스 인증](authentication-and-authorization-images/authentication.png)
 
 **그림 9-1:** 전용 인증 마이크로 서비스 인증
 
@@ -211,7 +211,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 - 암시적 이 흐름은 브라우저 기반 응용 프로그램에 최적화 되어 있으며 사용자 인증 전용 이거나 인증 및 액세스 토큰 요청에 사용 되어야 합니다. 모든 토큰은 브라우저를 통해 전송 되므로 새로 고침 토큰과 같은 고급 기능을 사용할 수 없습니다.
 - 인증 코드입니다. 이 흐름은 클라이언트 인증을 지 원하는 한편 브라우저 전면 채널과 달리 백 채널에서 토큰을 검색 하는 기능을 제공 합니다.
-- 혼합. 이 흐름은 암시적 및 권한 부여 코드 권한 유형을 조합한 것입니다. Id 토큰은 브라우저 채널을 통해 전송 되 고 인증 코드와 같은 다른 아티팩트와 함께 서명 된 프로토콜 응답을 포함 합니다. 응답의 유효성 검사를 성공적으로 수행한 후에는 백 채널을 사용 하 여 액세스 및 새로 고침 토큰을 검색 해야 합니다.
+- 하이브리드. 이 흐름은 암시적 및 권한 부여 코드 권한 유형을 조합한 것입니다. Id 토큰은 브라우저 채널을 통해 전송 되 고 인증 코드와 같은 다른 아티팩트와 함께 서명 된 프로토콜 응답을 포함 합니다. 응답의 유효성 검사를 성공적으로 수행한 후에는 백 채널을 사용 하 여 액세스 및 새로 고침 토큰을 검색 해야 합니다.
 
 > [!TIP]
 > 하이브리드 인증 흐름을 사용 합니다. 하이브리드 인증 흐름은 브라우저 채널에 적용 되는 여러 공격을 완화 하 고, 액세스 토큰을 검색 하 고 토큰을 새로 고치는 네이티브 응용 프로그램에 권장 되는 흐름입니다.
@@ -224,7 +224,7 @@ IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자�
 
 EShopOnContainers 모바일 앱은 그림 9-2에 나와 있는 하이브리드 인증 흐름을 사용 하 여 IdentityServer를 사용 하 여 인증 합니다.
 
-![](authentication-and-authorization-images/sign-in.png "High-level overview of the sign-in process")
+![로그인 프로세스에 대 한 개략적인 개요](authentication-and-authorization-images/sign-in.png)
 
 **그림 9-2:** 로그인 프로세스에 대 한 개략적인 개요
 
@@ -232,7 +232,7 @@ EShopOnContainers 모바일 앱은 그림 9-2에 나와 있는 하이브리드 �
 
 EShopOnContainers 모바일 앱은에 요청을 전송 하 여 추가 매개 변수를 사용 하 여 IdentityServer를 로그 아웃 합니다 `<base endpoint>:5105/connect/endsession` . 로그 아웃 발생 후 IdentityServer는 post 로그 아웃 리디렉션 URI를 모바일 앱으로 다시 전송 하 여 응답 합니다. 그림 9-3에서는이 프로세스를 보여 줍니다.
 
-![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
+![로그 아웃 프로세스에 대 한 개략적인 개요](authentication-and-authorization-images/sign-out.png)
 
 **그림 9-3:** 로그 아웃 프로세스에 대 한 개략적인 개요
 
@@ -288,7 +288,7 @@ public string CreateAuthorizationRequest()
 
 반환 된 URI는 `LoginUrl` 클래스의 속성에 저장 됩니다 `LoginViewModel` . `IsLogin`속성이 이면의이 `true` 표시 됩니다 [`WebView`](xref:Xamarin.Forms.WebView) `LoginView` . 데이터는 속성 `WebView` [`Source`](xref:Xamarin.Forms.WebView.Source) 을 `LoginUrl` 클래스의 속성에 `LoginViewModel` IdentityServer `LoginUrl` 속성이 IdentityServer의 인증 끝점으로 설정 된 경우 로그인 요청을 호출 합니다. IdentityServer이 요청을 수신 하 고 사용자가 인증 되지 않은 경우는 `WebView` 그림 9-4에 표시 된 구성 된 로그인 페이지로 리디렉션됩니다.
 
-![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
+![웹 보기에서 표시 하는 로그인 페이지](authentication-and-authorization-images/login.png)
 
 **그림 9-4:** 웹 보기에서 표시 하는 로그인 페이지
 
@@ -409,7 +409,7 @@ public class BasketController : Controller
 
 IdentityServer는 제어 권한 부여를 제공 하는 액세스 토큰을 권한 부여 워크플로에 통합할 수 있습니다. 이 방법은 그림 9-5에 나와 있습니다.
 
-![](authentication-and-authorization-images/authorization.png "Authorization by access token")
+![액세스 토큰에의 한 권한 부여](authentication-and-authorization-images/authorization.png)
 
 **그림 9-5:** 액세스 토큰에의 한 권한 부여
 

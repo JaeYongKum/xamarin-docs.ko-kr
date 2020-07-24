@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 3ff868ed10d59a7c1026a222f314a1166a8de45e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 588dadbfe63a46bc7658d5d29a052cebe52be65c
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930197"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997412"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.ios의 CloudKit
 
@@ -146,7 +146,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
 |**할당량**|개발자 할당량에서의 고려|사용자의 할당량에 대 한 고려|
 |**기본 사용 권한**|전 세계 읽기|사용자가 읽을 수 있음|
-|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|해당 없음|
+|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|N/A|
 
 ### <a name="records"></a>레코드
 
@@ -706,7 +706,7 @@ PublicDatabase.FetchRecord(UserID, (record ,er) => {
 
 위의 코드는 공용 데이터베이스를 요청 하 여 위에서 액세스 한 ID 인 사용자에 대 한 사용자 레코드를 반환 합니다. 이 정보는 iCloud 서버에서 제공 되므로 호출은 비동기적 이며 오류 처리가 필요 합니다.
 
-#### <a name="privacy"></a>개인 정보 취급 방침
+#### <a name="privacy"></a>개인 정보 보호
 
 CloudKit는 기본적으로 현재 로그온 한 사용자의 개인 정보 보호를 위해 설계 되었습니다. 사용자에 대 한 개인 식별 정보는 기본적으로 노출 되지 않습니다. 응용 프로그램에서 사용자에 대 한 제한 된 정보를 요구 하는 경우도 있습니다.
 
@@ -811,7 +811,7 @@ CloudKit를 사용 하는 응용 프로그램을 전달 하기 전에 **프로�
 
 6. 응용 프로그램의 보관 위치를 선택 하 고 **내보내기 ...** 단추를 클릭 합니다.
 
-    [![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
+    [![응용 프로그램의 보관 파일](intro-to-cloudkit-images/shipping05.png)](intro-to-cloudkit-images/shipping05.png#lightbox)
 
 7. 내보낼 메서드를 선택 하 고 **다음** 단추를 클릭 합니다.
 

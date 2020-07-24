@@ -7,12 +7,12 @@ ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e117fce77e9cdc8d9e9dc8b9ed7b3aa22eca4e39
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ee3897f14c460149e840fcea8b3fb533beeab935
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001704"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931627"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Xamarin에서 watchOS 앱 그룹 작업
 
@@ -28,15 +28,15 @@ ms.locfileid: "73001704"
 
 ### <a name="provisioning"></a>프로비전
 
-앱 그룹에는 식별자가 포함 됩니다. 일반적으로 번들 ID는 `group.` 접두사가 있습니다. 예를 들어 번들 ID `com.xamarin.WatchSettings`와 앱 그룹 `group.com.xamarin.WatchSettings`를 사용할 수 있습니다.
+앱 그룹에는 일반적으로 접두사를 사용 하는 번들 ID 인 식별자가 포함 됩니다 `group.` . 예를 들어 번들 ID와 앱 그룹을 사용할 수 있습니다 `com.xamarin.WatchSettings` `group.com.xamarin.WatchSettings` .
 
-[![](app-groups-images/app-group-sml.png "Use the Bundle ID com.xamarin.WatchSettings and the app group   group.com.xamarin.WatchSettings")](app-groups-images/app-group.png#lightbox)
+[![번들 ID WatchSettings 및 앱 그룹 WatchSettings를 사용 합니다.](app-groups-images/app-group-sml.png)](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
 프로 비전 프로필을 구성 하는 것 외에도 **info.plist** 에서 **앱 그룹을 사용 하도록 설정** 하 고 선택한 ID를 입력 합니다.
 
-[![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
+[![Info.plist를 구성 하 고 ID를 입력 합니다.](app-groups-images/entitlements-sml.png)](app-groups-images/entitlements.png#lightbox)
 
 ### <a name="deployment"></a>배포
 

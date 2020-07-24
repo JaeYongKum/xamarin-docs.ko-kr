@@ -10,18 +10,18 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b835847fea39e1c2f968e7b81fb9d22f68ea461c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 04669479bb321da4fee6c45fd0f2c00deb5bbf1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929729"
 ---
 # <a name="device-styles-in-xamarinforms"></a>장치 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
-_Xamarin.ios 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일을 포함 합니다._
+_Xamarin.Forms에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다._
 
 *장치* 스타일은 다음과 같습니다.
 
@@ -70,7 +70,7 @@ _Xamarin.ios 클래스에서 장치 스타일 이라고 하는 6 가지 동적 �
 
 장치 스타일은 태그 확장을 사용 하 여 바인딩됩니다 `DynamicResource` . 스타일의 동적 특성은 텍스트 크기에 대 한 **내게 필요한 옵션** 설정을 변경 하 여 iOS에서 볼 수 있습니다. 다음 스크린샷에 표시 된 것 처럼 *장치* 스타일의 모양은 각 플랫폼 마다 다릅니다.
 
-![](device-images/device-styles.png "Device Styles on Each Platform")
+![각 플랫폼의 장치 스타일](device-images/device-styles.png)
 
 *장치 스타일* 은 [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) 속성을 장치 스타일의 키 이름으로 설정 하 여에서 파생 될 수도 있습니다. 위의 코드 예제에서는 `myBodyStyle` 에서 상속 되 [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle) 고 악센트가 있는 텍스트 색을 설정 합니다. 동적 스타일 상속에 대 한 자세한 내용은 [동적 스타일 상속](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance)을 참조 하세요.
 
@@ -114,17 +114,17 @@ public class DeviceStylesPageCS : ContentPage
 
 [`Style`](xref:Xamarin.Forms.NavigableElement.Style)각 인스턴스의 속성은 [`Label`](xref:Xamarin.Forms.Label) 클래스의 적절 한 속성으로 설정 됩니다 [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) .
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a>액세스 가능성
 
 *장치* 스타일은 내게 필요한 옵션 기본 설정을 준수 하므로 각 플랫폼에서 접근성 기본 설정이 변경 될 때 글꼴 크기가 변경 됩니다. 따라서 액세스 가능한 텍스트를 지원 하려면 *장치* 스타일이 응용 프로그램 내의 모든 텍스트 스타일에 대 한 기준으로 사용 되는지 확인 합니다.
 
 다음 스크린샷은 액세스 가능한 최소 글꼴 크기를 사용 하 여 각 플랫폼의 장치 스타일을 보여 줍니다.
 
-[![](device-images/minimum-size.png "Accessible Small Device Styles on Each Platform")](device-images/minimum-size-large.png#lightbox "Accessible Small Device Styles on Each Platform")
+[![각 플랫폼에서 액세스 가능한 작은 장치 스타일](device-images/minimum-size.png)](device-images/minimum-size-large.png#lightbox "각 플랫폼에서 액세스 가능한 작은 장치 스타일")
 
 다음 스크린샷은 액세스할 수 있는 가장 큰 글꼴 크기를 사용 하 여 각 플랫폼의 장치 스타일을 보여 줍니다.
 
-![](device-images/maximum-size.png "Accessible Large Device Styles on Each Platform")
+![각 플랫폼에서 액세스할 수 있는 다양 한 장치 스타일](device-images/maximum-size.png)
 
 ## <a name="related-links"></a>관련 링크
 

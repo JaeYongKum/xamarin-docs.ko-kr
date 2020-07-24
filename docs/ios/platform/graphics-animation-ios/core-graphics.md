@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ac746c8489dae600bc2d8c6d1752d8fb10d4e016
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 84e21378a8ac7b61bc1a389352eb53b75881592a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564721"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929651"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
@@ -133,7 +133,7 @@ path.CloseSubpath ();
 
 결과 뷰는 다음과 같습니다.
 
- ![](core-graphics-images/00-bluetriangle.png "The sample output triangle")
+ ![샘플 출력 삼각형](core-graphics-images/00-bluetriangle.png)
 
 ## <a name="creating-gradient-fills"></a>그라데이션 채우기 만들기
 
@@ -167,7 +167,7 @@ g.Clip ();
 
 이러한 변경 내용에 따라 다음과 같이 그라데이션 채우기가 생성 됩니다.
 
- ![](core-graphics-images/01-gradient-fill.png "The example with a gradient fill")
+ ![그라데이션 채우기가 있는 예제](core-graphics-images/01-gradient-fill.png)
 
 ## <a name="modifying-line-patterns"></a>선 패턴 수정
 
@@ -180,7 +180,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 
 그리기 작업을 수행 하기 전에이 코드를 추가 하면 아래와 같이 파선 사이에 4 개의 간격을 사용 하 여 대시 선이 10 단위 길이입니다.
 
- ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
+ ![그리기 작업 앞에이 코드를 추가 하면 대시 선이 생성 됩니다.](core-graphics-images/02-dashed-stroke.png)
 
 Xamarin.ios에서 Unified API를 사용 하는 경우 배열 형식은 이어야 `nfloat` 하며, 수학. PI로 명시적으로 캐스팅 해야 합니다.
 
@@ -203,7 +203,7 @@ public override void Draw (CGRect rect)
 
 그러나 아래와 같이 뒤집힌 이미지를 생성 합니다.
 
- ![](core-graphics-images/03-upside-down-monkey.png "An image drawn upside down")
+ ![상하로 그린 이미지](core-graphics-images/03-upside-down-monkey.png)
 
 이에 대 한 이유는 이미지 그리기에 대 한 핵심 그래픽 원점이 왼쪽 아래에 있고 뷰는 왼쪽 위에서의 원점입니다. 따라서 이미지를 올바르게 표시 하려면 원본을 수정 해야 합니다 .이는 *ctm (* *현재 변환 매트릭스* )를 수정 하 여 수행할 수 있습니다. CTM은 *사용자 공간이*라고도 하는 위치를 정의 합니다. Y 방향으로 CTM을 반전 하 고 음수 y 방향의 범위 ' 높이로 이동 하면 이미지가 대칭 이동 될 수 있습니다.
 
@@ -225,7 +225,7 @@ public override void Draw (CGRect rect)
 
 그러면 결과 이미지가 수직으로 표시 됩니다.
 
- ![](core-graphics-images/04-upright-monkey.png "The sample image displayed upright")
+ ![위에 표시 된 샘플 이미지](core-graphics-images/04-upright-monkey.png)
 
 > [!IMPORTANT]
 > 그래픽 컨텍스트를 변경 하면 이후의 모든 그리기 작업에 적용 됩니다. 따라서 CTM이 변환 되 면 추가 그리기에 영향을 줍니다. 예를 들어 CTM 변환 후 삼각형을 그린 경우 거꾸로 표시 됩니다.
@@ -264,7 +264,7 @@ public override void Draw (RectangleF rect)
 
 결과 텍스트는 아래와 같이 이미지가 표시 됩니다.
 
- ![](core-graphics-images/05-text-on-image.png "The resulting text is displayed with the image")
+ ![결과 텍스트가 이미지와 함께 표시 됩니다.](core-graphics-images/05-text-on-image.png)
 
 ## <a name="memory-backed-images"></a>메모리 지원 이미지
 

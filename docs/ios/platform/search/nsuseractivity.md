@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: cbf5f8c6f53b075f587a0e7763a4019d44352f14
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bbd3d1663c3d796768095a12e5048b18f447fa7a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569000"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937022"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.ios에서 NSUserActivity를 사용 하 여 검색
 
@@ -21,7 +21,7 @@ ms.locfileid: "84569000"
 
 IOS 9의 새로운 기능과 `NSUserActivity` 함께 인덱싱 (공개적 및 개인용) 하 여 스포트라이트 검색 및 Safari에서 검색할 수 있습니다. 를 `NSUserActivity` 검색 가능한 것으로 표시 하 고 인덱싱 가능한 메타 데이터를 추가 하 여 작업을 iOS 장치의 검색 결과에 나열할 수 있습니다.
 
-[![](nsuseractivity-images/apphistory01.png "The App History overview")](nsuseractivity-images/apphistory01.png#lightbox)
+[![앱 기록 개요](nsuseractivity-images/apphistory01.png)](nsuseractivity-images/apphistory01.png#lightbox)
 
 사용자가 앱에서 작업에 속한 검색 결과를 선택 하면 앱이 시작 되 고에 설명 된 활동이 `NSUserActivity` 다시 시작 되어 사용자에 게 표시 됩니다.
 
@@ -59,7 +59,7 @@ Apple은 충돌을 방지 하기 위해 활동 형식 식별자에 대 한 역�
 
 이 동작을 지원 하기 위해 필요한 활동 형식 식별자를 만들려면 **info.plist** 파일을 편집 하 고 **원본** 뷰로 전환 합니다. `NSUserActivityTypes`다음 형식으로 키를 추가 하 고 식별자를 만듭니다.
 
-[![](nsuseractivity-images/type01.png "The NSUserActivityTypes key and required identifiers in the plist editor")](nsuseractivity-images/type01.png#lightbox)
+[![Info.plist 편집기의 NSUserActivityTypes 키 및 필수 식별자](nsuseractivity-images/type01.png)](nsuseractivity-images/type01.png#lightbox)
 
 위의 예제에서는 검색 작업 ()에 대해 하나의 새 활동 형식 식별자를 만들었습니다 `com.xamarin.platform` . 사용자 고유의 앱을 만들 때 `NSUserActivityTypes` 배열의 내용을 앱이 지 원하는 활동에 특정 한 활동 유형 식별자로 바꿉니다.
 
@@ -88,7 +88,7 @@ activity.BecomeCurrent();
 
 다음과 같이의 속성을 설정 하 여 자세한 정보를 추가할 수 있습니다 `ContentAttributeSet` `NSUserActivity` .
 
-[![](nsuseractivity-images/apphistory02.png "Addition Search Details overview")](nsuseractivity-images/apphistory02.png#lightbox)
+[![추가 검색 정보 개요](nsuseractivity-images/apphistory02.png)](nsuseractivity-images/apphistory02.png#lightbox)
 
 를 사용 하 여 `ContentAttributeSet` 최종 사용자가 상호 작용할 수 있도록 하는 다양 한 검색 결과를 만들 수 있습니다.
 
@@ -96,7 +96,7 @@ activity.BecomeCurrent();
 
 ## <a name="responding-to-an-activity"></a>작업에 응답
 
-앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 예를 들면 다음과 같습니다.
+앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -115,7 +115,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 이는 전달 요청에 응답 하는 데 사용 되는 것과 동일한 메서드 재정의입니다. 이제 사용자가 스포트라이트 검색 결과의 앱에서 링크를 클릭 하면 앱이 포그라운드로 (또는 아직 실행 되지 않은 경우 시작 됨) 해당 링크로 표시 되는 콘텐츠, 탐색 또는 기능이 표시 됩니다.
 
-[![](nsuseractivity-images/apphistory03.png "Restore Previous State from Search")](nsuseractivity-images/apphistory03.png#lightbox)
+[![검색에서 이전 상태 복원](nsuseractivity-images/apphistory03.png)](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing"></a>
 

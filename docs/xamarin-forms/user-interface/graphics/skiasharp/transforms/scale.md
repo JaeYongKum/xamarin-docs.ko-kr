@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932047"
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -25,7 +25,7 @@ _다양 한 크기로 개체 크기를 조정 하기 위한 SkiaSharp 배율 변
 
 [**변환 변환 문서에서**](translate.md) 볼 수 있듯이 변환 변환은 그래픽 개체를 한 위치에서 다른 위치로 이동할 수 있습니다. 반면, 배율 변환은 그래픽 개체의 크기를 변경 합니다.
 
-![](scale-images/scaleexample.png "A tall word scaled in size")
+![크기가 큰 단어 크기 조정](scale-images/scaleexample.png)
 
 크기 조정 변환은 또한 그래픽 좌표가 크게 이동 하는 경우가 많습니다.
 
@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기에서 볼 수 있듯이, 호출 후에 그려진 모든 항목은 `Scale` 비례적으로 늘어납니다.
 
-[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
+[![기본 크기 조정 페이지의 세 번째 스크린샷](scale-images/basicscale-small.png)](scale-images/basicscale-large.png#lightbox "기본 크기 조정 페이지의 세 번째 스크린샷")
 
 텍스트, 파선의 너비, 해당 선의 대시 길이, 모퉁이의 둥근 모양, 그리고 캔버스의 왼쪽과 위쪽 가장자리 사이의 10 픽셀 여백 및 모퉁이가 둥근 사각형은 모두 동일한 크기 조정 요소에 적용 됩니다.
 
@@ -171,7 +171,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 모퉁이가 둥근 사각형의 왼쪽 위 모퉁이는 `margin` 캔버스의 왼쪽부터 픽셀 까지의 픽셀 위치에 배치 됩니다 `margin` . 메서드에 대 한 마지막 두 인수는 `Scale` 텍스트의 너비와 높이를 더한 값으로 설정 되며,이는 모퉁이가 둥근 사각형의 너비와 높이 이기도 합니다. 즉, 모든 크기 조정은 해당 사각형의 중심을 기준으로 합니다.
 
-[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
+[![가운데 맞춤 눈금 페이지의 삼중 스크린 샷](scale-images/centeredscale-small.png)](scale-images/centeredscale-large.png#lightbox "가운데 맞춤 눈금 페이지의 삼중 스크린 샷")
 
 `Slider`이 프로그램의 요소는 &ndash; 10에서 10 사이입니다. 여기에서 볼 수 있듯이 세로 크기 조정의 음수 값 (예: 가운데 Android 화면)은 개체가 크기 조정 중심을 통과 하는 가로 축을 중심으로 대칭 이동 되도록 합니다. 오른쪽의 UWP 화면에서와 같이 가로 배율 값이 음수 이면 개체는 크기 조정 중심을 통과 하는 세로 축을 중심으로 대칭 이동 합니다.
 
@@ -252,7 +252,7 @@ using (SKPaint strokePaint = new SKPaint
 
 `pathBounds`사각형은이 코드의 위쪽 근처에서 가져온 다음 나중에 호출에서 캔버스의 너비 및 높이와 함께 사용 됩니다 `Scale` . 호출에서 렌더링 될 때 해당 호출에서 경로를 조정 `DrawPath` 하지만 별이 캔버스의 오른쪽 위 모퉁이에 가운데 맞춤 됩니다. 왼쪽 아래로 이동 해야 합니다. 호출 작업입니다 `Translate` . 의 두 속성 `pathBounds` 은 약-100 이므로 변환 요소는 약 100입니다. 호출 후에 호출을 수행 하기 때문에 `Translate` `Scale` 이러한 값은 크기 조정 요소에 의해 효과적으로 조정 되므로 별의 중심을 캔버스의 중심으로 이동 합니다.
 
-[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
+[![이방성 크기 조정 페이지의 삼중 스크린샷](scale-images/anisotropicscaling-small.png)](scale-images/anisotropicscaling-large.png#lightbox "이방성 크기 조정 페이지의 삼중 스크린샷")
 
 및 호출에 대해 고려할 수 있는 다른 방법은 `Scale` `Translate` 역방향 시퀀스의 효과를 결정 하는 것입니다. `Translate` 호출은 완전히 표시 되지만 캔버스의 왼쪽 위 모퉁이에 표시 되는 경로를 이동 합니다. `Scale`그런 다음 메서드는 왼쪽 위 모퉁이를 기준으로 더 큰 별을 만듭니다.
 
@@ -295,7 +295,7 @@ using (SKPaint textPaint = new SKPaint
 
 비슷한 논리 이며 텍스트는에서 반환 된 텍스트 범위 사각형 `MeasureText` (실제 텍스트 보다 조금 큼)에 따라 페이지 크기로 확장 됩니다.
 
-[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
+[![이방성 테스트 페이지의 세 번째 스크린샷](scale-images/anisotropictext-small.png)](scale-images/anisotropictext-large.png#lightbox "이방성 테스트 페이지의 세 번째 스크린샷")
 
 그래픽 개체의 가로 세로 비율을 유지 해야 하는 경우에는 isotropic 크기 조정을 사용 하는 것이 좋습니다. **Isotropic 크기 조정** 페이지에서는 11 방향 별에 대해이를 보여 줍니다. 개념적으로 isotropic 크기 조정으로 페이지의 가운데에 그래픽 개체를 표시 하는 단계는 다음과 같습니다.
 
@@ -344,7 +344,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 또한이 코드는 각각 배율 인수를 10% 감소 하 고 색을 빨강에서 파랑으로 변경 하는 시간을 10 번 더 표시 합니다.
 
-[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
+[![Isotropic 크기 조정 페이지의 삼중 스크린샷](scale-images/isotropicscaling-small.png)](scale-images/isotropicscaling-large.png#lightbox "Isotropic 크기 조정 페이지의 삼중 스크린샷")
 
 ## <a name="related-links"></a>관련 링크
 

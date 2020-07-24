@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: bd5217173e00de7d09e4ec14a5acf4d6a8389b10
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: fbd6e4a3b1c5cdb45a057f1ed664a0d5e71e224d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574446"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937893"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Xamarin.ios의 OpenTK 소개
 
 OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL 작업을 용이 하 게 하는 고급 하위 수준 c # 라이브러리입니다. OpenTK는 3D 그래픽, 오디오 또는 계산 기능을 필요로 하는 게임, 공학용 응용 프로그램 또는 기타 프로젝트에 사용할 수 있습니다. 이 문서에서는 Xamarin.ios 앱에서 OpenTK 사용에 대 한 간략 한 소개를 제공 합니다.
 
-[![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
+[![예제 앱 실행](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
@@ -54,11 +54,11 @@ Xamarin.ios 앱에서 OpenTK를 사용 하는 방법에 대 한 간략 한 소�
 
 Mac용 Visual Studio를 시작 하 고 새 Xamarin.ios 솔루션을 만듭니다. **Mac**  >  **앱**  >  **일반**  >  **cocoa 앱**을 선택 합니다.
 
-[![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
+[![새 Cocoa 앱 추가](opentk-images/sample01.png)](opentk-images/sample01.png#lightbox)
 
 `MacOpenTK` **프로젝트 이름**으로를 입력 합니다.
 
-[![](opentk-images/sample02.png "Setting the project name")](opentk-images/sample02.png#lightbox)
+[![프로젝트 이름 설정](opentk-images/sample02.png)](opentk-images/sample02.png#lightbox)
 
 **만들기** 단추를 클릭 하 여 새 프로젝트를 빌드합니다.
 
@@ -70,7 +70,7 @@ Xamarin.ios 응용 프로그램에서 Open TK를 사용 하려면 먼저 OpenTK 
 
 확인을 `OpenTK` 수행 하 고 **확인** 단추를 클릭 합니다.
 
-[![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
+[![프로젝트 참조 편집](opentk-images/sample03.png)](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK"></a>
 
@@ -297,7 +297,7 @@ Game.Run(60.0);
 
 앱을 실행 하 고 출력을 확인 하겠습니다.
 
-[![](opentk-images/intro01.png "A sample of the apps output")](opentk-images/intro01.png#lightbox)
+[![앱 출력 샘플](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 창의 크기를 조정 하는 경우 게임 보기만 존재 하며 삼각형의 크기를 조정 하 고 실시간으로 업데이트 합니다.
 

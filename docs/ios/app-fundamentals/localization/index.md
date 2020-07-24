@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: c42b41f9b853fba58ef70b8bd2f8ab20a3369647
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1f5f9e13607d672a6fdec5ed8fb116466973a260
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569251"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938036"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.ios의 지역화
 
@@ -24,7 +24,7 @@ _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용 하 여 �
 
 이 섹션에서는 iOS의 일부 지역화 기능에 대해 설명 합니다. 특정 코드와 예제를 보려면 [다음 섹션](#localization-basics-in-ios) 으로 건너뜁니다.
 
-### <a name="language"></a>언어
+### <a name="language"></a>Language
 
 사용자가 **설정** 앱에서 해당 언어를 선택 합니다. 이 설정은 운영 체제 및 앱에서 표시 하는 언어 문자열과 이미지에 영향을 줍니다.
 
@@ -173,9 +173,9 @@ IOS에서 이미지를 지역화 하려면:
     UIImage.FromBundle("flag");
     ```
 
-2. 기본 이미지 파일 **플래그** 를 **기본 .lproj** (네이티브 개발 언어 디렉터리)에 넣습니다.
+2. 기본 이미지 파일을 기본 **.lproj** (네이티브 개발 언어 디렉터리)에 **flag.png** 넣습니다.
 
-3. 필요에 따라 각 언어에 대 한 이미지의 지역화 된 버전을 **lproj** 폴더 ( **es. lproj**, **ja-jp**). 각 언어 디렉터리에 동일한 파일 이름 **플래그 .png** 를 사용 합니다.
+3. 필요에 따라 각 언어에 대 한 이미지의 지역화 된 버전을 **lproj** 폴더 ( **es. lproj**, **ja-jp**). 각 언어 디렉터리에 동일한 파일 이름 **flag.png** 를 사용 합니다.
 
 특정 언어에 대 한 이미지가 없는 경우 iOS는 기본 언어 폴더로 대체 되 고 여기에서 이미지를 로드 합니다.
 
@@ -255,9 +255,9 @@ iOS는 RTL 인식 앱을 빌드하는 데 도움이 되는 다양 한 기능을 
 
 다음 스크린샷에서는 아랍어 및 히브리어에서 [지역화 된 Tasky 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 을 보여 줍니다 (영어는 필드에 입력 됨).
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
+[![아랍어의 지역화](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "아랍어")
 
-[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
+[![히브리어의 지역화](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "히브리어")
 
 iOS는 자동으로 `UINavigationController` 를 반대로 하 고 다른 컨트롤은 `UIStackView` 자동 레이아웃 안에 배치 되거나 정렬 됩니다.
 RTL 텍스트는 LTR 텍스트와 동일한 방식으로 **strings** 파일을 사용 하 여 지역화 됩니다.
@@ -270,7 +270,7 @@ RTL 텍스트는 LTR 텍스트와 동일한 방식으로 **strings** 파일을 �
 
 ### <a name="project-structure"></a>프로젝트 구조
 
-![](images/solution-code.png "Resources tree")
+![리소스 트리](images/solution-code.png)
 
 ### <a name="localizablestrings-file"></a>지역화할 수 있는 문자열 파일
 
@@ -311,7 +311,7 @@ someControl.Text = localizedString;
 
 다른 언어 디렉터리에는 코드에서 참조 되는 모든 문자열 리소스에 대 한 **지역화 가능한 strings** 파일 뿐만 아니라 스토리 보드의 텍스트에 대 한 번역이 포함 된 **mainstoryboard.storyboard** 파일이 포함 되어 있습니다.
 
-![](images/solution-storyboard.png "Resources tree")
+![리소스 트리](images/solution-storyboard.png)
 
 언어 디렉터리에는 **기본 .lproj**에 있는 이미지를 재정의 하기 위해 지역화 된 이미지의 복사본이 포함 되어 있어야 합니다.
 
@@ -324,7 +324,7 @@ someControl.Text = localizedString;
 
 이 문자열 값에는 다음 스크린샷에 표시 된 것 처럼 종종 "NF3-h8-xmR" 등의 양식이 있습니다.
 
-![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
+![스토리 보드 지역화의 Xcode 뷰](images/xs-designer-localization-id.png)
 
 이 값은 **문자열** 파일에서 번역 된 텍스트를 각 컨트롤에 자동으로 할당 하는 데 사용 됩니다.
 
@@ -347,7 +347,7 @@ someControl.Text = localizedString;
 > [!IMPORTANT]
 > 크기 클래스가 있는 storyboard를 사용 하면 번역이 응용 프로그램에 표시 되지 않을 수 있습니다. [Apple의 Xcode 릴리스 정보](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) 는 세 가지 항목이 true 인 경우 STORYBOARD 또는 XIB가 올바르게 지역화 되지 않음을 의미 합니다. 즉, 크기 클래스를 사용 하 고, 기본 지역화 및 빌드 대상이 Universal으로 설정 되 고, 빌드는 iOS 7.0를 대상으로 합니다. 해결 방법은 다음 스크린샷에 표시 된 것 처럼 storyboard 문자열 파일을 두 개의 동일한 파일 ( **mainstoryboard.storyboard ~ iphone. strings** 및 **mainstoryboard.storyboard ~ ipad. 문자열**)로 복제 하는 것입니다.
 >
-> ![](images/xs-dup-strings.png "Strings files")
+> ![문자열 파일](images/xs-dup-strings.png)
 
 <a name="appstore"></a>
 

@@ -10,12 +10,12 @@ ms.date: 04/05/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 61ae651a2402204f69f642235d74d8d641b47988
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 074b782bfc5458cf89e593913b6f31de633ffd73
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139024"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938153"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 그리기
 
@@ -25,7 +25,7 @@ _손가락을 사용 하 여 캔버스에 그립니다._
 
 `SKPath`개체를 지속적으로 업데이트 하 고 표시할 수 있습니다. 이 기능을 사용 하면 손가락 그리기 프로그램에서와 같은 대화형 그리기에 경로를 사용할 수 있습니다.
 
-![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
+![손가락 그리기의 연습](finger-paint-images/fingerpaintsample.png)
 
 의 터치 지원은 Xamarin.Forms 화면에서 개별 손가락을 추적 하는 것을 허용 하지 않으므로 터치식 Xamarin.Forms 추적 효과가 추가 터치 지원을 제공 하도록 개발 되었습니다. 이 효과는 [**효과에서 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)하는 문서에 설명 되어 있습니다. 샘플 프로그램 [**터치 추적 효과 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 에는 손가락 그리기 프로그램을 포함 하 여 SkiaSharp를 사용 하는 두 페이지가 포함 되어 있습니다.
 
@@ -168,7 +168,7 @@ public partial class FingerPaintPage : ContentPage
 
 손가락 paintings 사용자의 인재에 의해서만 제한 됩니다.
 
-[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![Finger Paint 페이지의 삼중 스크린샷](finger-paint-images/fingerpaint-small.png)](finger-paint-images/fingerpaint-large.png#lightbox "Finger Paint 페이지의 삼중 스크린샷")
 
 이제 패라메트릭 수식을 사용 하 여 선을 그리고 곡선을 정의 하는 방법을 살펴보았습니다. [**SkiaSharp 곡선 및 경로**](../curves/index.md) 에 대 한 이후 섹션에서는에서 지 원하는 다양 한 곡선 유형을 다룹니다 `SKPath` . 하지만 유용한 필수 구성 요소는 [**SkiaSharp 변환**](../transforms/index.md)에 대 한 탐색입니다.
 

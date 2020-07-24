@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139596"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938215"
 ---
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
@@ -29,7 +29,7 @@ _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만�
 
 다음 스크린샷에는에 추가 된 플랫폼별 뷰가 설명 되어 Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) 있습니다.
 
-[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
+[![플랫폼별 뷰를 포함 하는 StackLayout](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "플랫폼별 뷰를 포함 하는 StackLayout")
 
 플랫폼 특정 뷰를 레이아웃에 추가 하는 기능은 Xamarin.Forms 각 플랫폼에서 두 가지 확장 메서드를 사용 하 여 사용할 수 있습니다.
 
@@ -132,7 +132,7 @@ stackLayout.Children.Add (customControl);
 
 그러나 재정의는 항상 높이를 150으로 반환 하기 때문에 `CustomControl.SizeThatFits` 다음 스크린샷에 표시 된 것 처럼 뷰가 표시 되 고 그 아래에 빈 공간이 표시 됩니다.
 
-![](code-images/ios-bad-measurement.png "iOS CustomControl with Bad SizeThatFits Implementation")
+![SizeThatFits 구현이 잘못 된 iOS CustomControl](code-images/ios-bad-measurement.png)
 
 이 문제에 대 한 해결 방법은 `GetDesiredSizeDelegate` 다음 코드 예제에서 보여 주는 것 처럼 구현을 제공 하는 것입니다.
 
@@ -163,7 +163,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 그러면 다음 스크린샷에 표시 된 것 처럼 사용자 지정 보기가 제대로 표시 되 고 그 아래에 빈 공백이 표시 되지 않습니다.
 
-![](code-images/ios-good-measurement.png "iOS CustomControl with GetDesiredSize Override")
+![GetDesiredSize Override를 사용 하는 iOS CustomControl](code-images/ios-good-measurement.png)
 
 ### <a name="android"></a>Android
 
@@ -201,7 +201,7 @@ stackLayout.Children.Add (customControl);
 
 그러나 `CustomControl.OnMeasure` 재정의는 항상 요청 된 너비의 절반을 반환 하기 때문에 다음 스크린샷에 표시 된 것 처럼 보기는 사용 가능한 장치 너비의 절반만 표시 됩니다.
 
-![](code-images/android-bad-measurement.png "Android CustomControl with Bad OnMeasure Implementation")
+![잘못 된 OnMeasure 구현이 있는 Android CustomControl](code-images/android-bad-measurement.png)
 
 이 문제에 대 한 해결 방법은 `GetDesiredSizeDelegate` 다음 코드 예제에서 보여 주는 것 처럼 구현을 제공 하는 것입니다.
 
@@ -230,7 +230,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 그러면 다음 스크린샷에 표시 된 것 처럼 장치 너비를 차지 하는 사용자 지정 보기가 올바르게 표시 됩니다.
 
-![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
+![사용자 지정 GetDesiredSize 대리자를 사용 하는 Android CustomControl](code-images/android-good-measurement.png)
 
 ### <a name="universal-windows-platform"></a>UWP
 
@@ -298,7 +298,7 @@ stackLayout.Children.Add(brokenControl);
 
 그러나 `CustomControl.ArrangeOverride` 재정의는 항상 요청 된 너비의 절반을 반환 하기 때문에 다음 스크린샷에 표시 된 것 처럼 뷰가 사용 가능한 장치 너비의 1/2로 잘립니다.
 
-![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
+![System.windows.frameworkelement.arrangeoverride 구현이 잘못 된 UWP CustomControl](code-images/winrt-bad-measurement.png)
 
 이 문제에 대 한 해결 방법은 `ArrangeOverrideDelegate` [`StackLayout`](xref:Xamarin.Forms.StackLayout) 다음 코드 예제에서 보여 주는 것 처럼에 뷰를 추가할 때 구현을 제공 하는 것입니다.
 
@@ -317,7 +317,7 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 이 메서드는 메서드에서 제공 하는 너비를 사용 `CustomControl.ArrangeOverride` 하지만 2를 곱합니다. 그러면 다음 스크린샷에 표시 된 것 처럼 장치 너비를 차지 하는 사용자 지정 보기가 올바르게 표시 됩니다.
 
-![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
+![System.windows.frameworkelement.arrangeoverride 대리자를 사용 하는 UWP CustomControl](code-images/winrt-good-measurement.png)
 
 ## <a name="summary"></a>요약
 

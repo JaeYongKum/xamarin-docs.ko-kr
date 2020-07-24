@@ -10,16 +10,16 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 462948905f40679e2b931d4aa0039308c64a0a8f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cf5d3924a726247ea1884acc75720566d76c76e4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136500"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929219"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.FormsCarouselView 스크롤
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
@@ -145,7 +145,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 이 예제 코드는 항목을 뷰의 시작 부분으로 스크롤합니다.
 
-### <a name="center"></a>중심
+### <a name="center"></a>Center
 
 [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition)멤버는 항목을 뷰의 가운데로 스크롤 해야 함을 나타냅니다.
 
@@ -265,7 +265,7 @@ CarouselView carouselView = new CarouselView
 
 [![IOS 및 Android에서 시작 하는 CarouselView의 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CarouselView")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CarouselView")
 
-#### <a name="center"></a>중심
+#### <a name="center"></a>Center
 
 `SnapPointsAlignment.Center`멤버는 맞춤 지점이 항목의 가운데에 정렬 됨을 나타냅니다.
 

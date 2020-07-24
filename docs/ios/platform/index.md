@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: bcf293b29d6ddca10ab60ae061491b60f1e30520
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77495639"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997152"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -20,9 +20,9 @@ ms.locfileid: "77495639"
 
 ## <a name="ios-releases"></a>iOS 릴리스
 
-|  |  |
+| 해제 | 설명 |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [IOS 13 소개](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.ios 13에 대해 설명 합니다.|
+| [iOS 13 소개](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.ios 13에 대해 설명 합니다.|
 | [iOS 12 소개](~/ios/platform/introduction-to-ios12/index.md) | 이 문서에서는 Xamarin.ios 응용 프로그램을 빌드할 때 사용할 수 있는 iOS 12 기능에 대해 설명 합니다.|
 | [iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md) | 이 문서에서는 ARKit, Core ML, Core NFC, 끌어서 놓기, MapKit, PDFKit, SiriKit 및 비전과 같이 iOS 11 및 Xcode 9의 새로운 기능 및 업데이트 된 기능에 대해 설명 합니다. Xamarin.ios에서 이러한 기능을 사용 하는 방법을 설명 하는 가이드로 연결 됩니다. |
 | [iOS 10 소개](~/ios/platform/introduction-to-ios10/index.md) | iOS 10에는 새로운 기능과 기능으로 앱을 개발할 수 있는 몇 가지 새로운 Api 및 서비스가 포함 되어 있습니다. IOS 10을 사용 하는 앱에는 지도, 메시지, 전화, Siri 확장 등의 새로운 기능이 있습니다. 이 섹션에서는 xamarin.ios 앱에서 이러한 기능을 활용 하기 위한에서는를 보여 줍니다. |
@@ -41,7 +41,7 @@ IOS 10의 새로운 CallKit API는 VOIP 앱이 iPhone UI와 통합 되 게 하 �
 
 ## <a name="contacts-and-contactsui"></a>[연락처 및 ContactsUI](~/ios/platform/contacts.md)
 
-IOS 9가 도입 되면서 Apple은 iOS 8 및 이전 버전에서 사용 하는 기존 주소록 및 주소록 UI 프레임 워크를 대체 하는 두 가지 새로운 프레임 워크 인 `Contacts` 및 `ContactsUI`를 출시 했습니다.
+IOS 9가 도입 되면서 Apple은 `Contacts` `ContactsUI` ios 8 및 이전 버전에서 사용 하는 기존 주소록 및 주소록 UI 프레임 워크를 대체 하는 두 가지 새로운 프레임 워크 및를 출시 했습니다.
 
 ## <a name="document-picker"></a>[문서 선택기](~/ios/platform/document-picker.md)
 
@@ -53,13 +53,13 @@ iOS에는 달력 응용 프로그램 및 미리 알림 응용 프로그램 이�
 
 ## <a name="ios-extensions"></a>[iOS 확장](~/ios/platform/extensions.md)
 
-IOS 8에 도입 된 확장은 사용자가 특별 한 입력을 수행 하기 위해 사용자가 요청 하는 사용자 지정 키보드 유형 또는 확장에서 특수 효과 필터를 제공할 수 있는 사진 편집과 같은 기타 컨텍스트를 사용 하 여 **알림 센터**내에서 ios에서 제공 되는 특수 `UIViewControllers`입니다.
+IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과 필터를 제공할 수 있는 사진 편집과 같은 특수 입력 또는 기타 컨텍스트를 수행 하기 위해 사용자가 요청한 사용자 지정 키보드 유형으로 **알림 센터**내에서와 같은 표준 컨텍스트 내에서 ios로 제공 되는 특수화 된 것입니다.
 
-## <a name="graphics-and-animation-in-ios"></a>[IOS의 그래픽 및 애니메이션](~/ios/platform/graphics-animation-ios/index.md)
+## <a name="graphics-and-animation-in-ios"></a>[iOS의 그래픽 및 애니메이션](~/ios/platform/graphics-animation-ios/index.md)
 
 IOS의 그래픽 및 애니메이션은 CoreImage, 핵심 그래픽 및 핵심 애니메이션과 같은 iOS의 핵심 그래픽 개념을 다룹니다.
 
-## <a name="handoff"></a>[Handoff](~/ios/platform/handoff.md)
+## <a name="handoff"></a>[전달](~/ios/platform/handoff.md)
 
 Apple은 iOS 8 및 OS X Yosemite (10.10)에 전달 하 여 사용자가 장치 중 하나에서 시작 된 활동을 동일한 앱을 실행 하는 다른 장치 또는 동일한 활동을 지 원하는 다른 앱으로 전송 하는 일반적인 메커니즘을 제공 합니다.
 
@@ -99,9 +99,9 @@ Photo Kit는 응용 프로그램이 시스템 이미지 라이브러리를 쿼�
 
 ## <a name="request-app-review"></a>[앱 검토 요청](~/ios/platform/request-app-review.md)
 
-IOS 10.3의 새로운 기능으로, `RequestReview()` 방법을 사용 하면 iOS 앱에서 사용자에 게 평가 또는 검토를 요청할 수 있습니다. 사용자가 앱 스토어에서 설치한 배송 앱에서이 메서드를 호출 하면 iOS 10은 개발자에 대 한 전체 등급 및 검토 프로세스를 처리 합니다. 이 프로세스는 앱 스토어 정책에 의해 제어 되므로 경고가 표시 될 수도 있고 표시 되지 않을 수도 있습니다.
+IOS 10.3의 새로운 기능으로, `RequestReview()` 이 방법을 사용 하면 ios 앱에서 사용자에 게 평가 또는 검토를 요청할 수 있습니다. 사용자가 앱 스토어에서 설치한 배송 앱에서이 메서드를 호출 하면 iOS 10은 개발자에 대 한 전체 등급 및 검토 프로세스를 처리 합니다. 이 프로세스는 앱 스토어 정책에 의해 제어 되므로 경고가 표시 될 수도 있고 표시 되지 않을 수도 있습니다.
 
-## <a name="search-apis"></a>[API 검색](~/ios/platform/search/index.md)
+## <a name="search-apis"></a>[Search API](~/ios/platform/search/index.md)
 
 검색은 Xamarin.ios 앱 내에서 정보 및 기능에 액세스 하는 뛰어난 새 방법을 제공 하기 위해 iOS 9에서 확장 되었습니다. 새 앱 검색 Api를 사용 하 여 앱 콘텐츠는 스포트라이트 및 Safari 검색 결과, 전달 및 Siri 미리 알림 및 제안을 통해 검색할 수 있게 됩니다. 이렇게 하면 사용자가 앱 내에서 작업 및 정보 심층에 빠르게 액세스할 수 있습니다.
 
@@ -121,7 +121,7 @@ iOS 10에는 앱에서 연속 음성 인식 및 높여줄 음성 (라이브 또�
 
 텍스트 키트는 강력한 텍스트 레이아웃 및 렌더링 기능을 제공 하는 새로운 API입니다. 낮은 수준의 핵심 텍스트 프레임 워크를 기반으로 하지만 핵심 텍스트 보다 훨씬 더 쉽게 사용할 수 있습니다.
 
-## <a name="3d-touch"></a>[3D Touch](~/ios/platform/3d-touch.md)
+## <a name="3d-touch"></a>[3D 터치](~/ios/platform/3d-touch.md)
 
 이 문서에서는 새로운 3D 터치 Api를 사용 하 여 새로운 iPhone 6s 및 iPhone 6s Plus 장치에서 실행 되는 Xamarin.ios 앱에 압력 민감한 제스처를 추가 하는 방법을 소개 합니다.
 
@@ -139,11 +139,11 @@ iOS 10 및 macOS Sierra는 핵심 그래픽, 핵심 이미지, 금속 및 AVFoun
 
 ## <a name="binding-objective-c"></a>[Objective-C 바인딩](binding-objective-c/index.md)
 
-IOS에서 작업 하는 경우 타사 목표-C 라이브러리를 사용 하려는 경우가 발생할 수 있습니다. 이러한 상황에서는 Monotouch.dialog의 바인딩 프로젝트를 사용 하 여 네이티브 목표- C# C 라이브러리에 대 한 바인딩을 만들 수 있습니다. 프로젝트는 iOS Api를 가져오는 데 사용 하는 것과 동일한 도구를 C#사용 합니다. 이 문서에서는 목표-C Api를 바인딩하는 방법을 설명 합니다.
+IOS에서 작업 하는 경우 타사 목표-C 라이브러리를 사용 하려는 경우가 발생할 수 있습니다. 이러한 상황에서는 Monotouch.dialog의 바인딩 프로젝트를 사용 하 여 네이티브 목표-C 라이브러리에 대 한 c # 바인딩을 만들 수 있습니다. 프로젝트는 iOS Api를 c #으로 가져오는 데 사용 하는 것과 동일한 도구를 사용 합니다. 이 문서에서는 목표-C Api를 바인딩하는 방법을 설명 합니다.
 
-## <a name="bind-ios-swift-libraries"></a>[IOS Swift 라이브러리 바인딩](binding-swift/index.md)
+## <a name="bind-ios-swift-libraries"></a>[iOS Swift 라이브러리 바인딩](binding-swift/index.md)
 
-이 문서에서는 Swift 코드에 C# 대 한 바인딩을 만들어 xamarin.ios 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 하는 방법을 설명 합니다.
+이 문서에서는 Swift 코드에 c # 바인딩을 만들어 Xamarin.ios 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 하는 방법을 설명 합니다.
 
 ## <a name="referencing-native-libraries"></a>[네이티브 라이브러리 참조](native-interop.md)
 

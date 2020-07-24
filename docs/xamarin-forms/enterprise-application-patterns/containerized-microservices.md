@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3ebd3940cbd61342977bde60addc773460a08854
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3f85c6528a1bf599c38a39b4e88400bc8b0c4f05
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569571"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931991"
 ---
 # <a name="containerized-microservices"></a>컨테이너화된 마이크로 서비스
 
@@ -23,17 +23,17 @@ ms.locfileid: "84569571"
 
 특히 클라우드의 연령와 관련 하 여 개별 구성 요소를 쉽게 확장할 수 없습니다. 모놀리식 응용 프로그램은 도메인별 기능을 포함 하며 일반적으로 프런트 엔드, 비즈니스 논리 및 데이터 저장소와 같은 기능 계층으로 구분 됩니다. 모놀리식 응용 프로그램은 그림 8-1에 나와 있는 것 처럼 전체 응용 프로그램을 여러 컴퓨터에 복제 하 여 크기를 조정 합니다.
 
-![](containerized-microservices-images/monolithicapp.png "Monolithic application scaling approach")
+![모놀리식 응용 프로그램 크기 조정 방법](containerized-microservices-images/monolithicapp.png)
 
 **그림 8-1**: 모놀리식 응용 프로그램 크기 조정 방법
 
-## <a name="microservices"></a>마이크로 서비스
+## <a name="microservices"></a>마이크로서비스
 
 마이크로 서비스는 최신 클라우드 응용 프로그램의 민첩성, 확장성 및 안정성 요구 사항에 적합 한 방법인 응용 프로그램 개발 및 배포에 대 한 다양 한 접근 방식을 제공 합니다. 마이크로 서비스 응용 프로그램은 응용 프로그램의 전체 기능을 제공 하기 위해 함께 작동 하는 독립적인 구성 요소로 분해 됩니다. 마이크로 서비스 라는 용어는 각 마이크로 서비스 단일 함수를 구현 하도록 응용 프로그램을 독립적인 문제를 반영 하기에 충분 한 작은 서비스로 구성 해야 함을 강조 합니다. 또한 각 마이크로 서비스는 잘 정의 된 계약을 사용 하 여 다른 마이크로 서비스에서 데이터와 통신 하 고 데이터를 공유할 수 있도록 합니다. 마이크로 서비스의 일반적인 예로는 쇼핑 카트, 재고 처리, 구매 하위 시스템, 지불 처리 등이 있습니다.
 
 마이크로 서비스는 함께 확장 되는 자이언트 모놀리식 응용 프로그램에 비해 독립적으로 확장 될 수 있습니다. 즉, 요청을 지 원하는 데 더 많은 처리 능력 또는 네트워크 대역폭이 필요한 특정 기능 영역은 응용 프로그램의 다른 영역을 불필요 하 게 확장 하는 대신 크기를 조정할 수 있습니다. 그림 8-2에서는 마이크로 서비스를 독립적으로 배포 및 확장 하 여 여러 컴퓨터에서 서비스 인스턴스를 만들어이 접근 방식을 보여 줍니다.
 
-![](containerized-microservices-images/microservicesapp.png "Microservices application scaling approach")
+![마이크로 서비스 응용 프로그램 크기 조정 방법](containerized-microservices-images/microservicesapp.png)
 
 **그림 8-2**: 마이크로 서비스 응용 프로그램 크기 조정 방법
 
@@ -67,7 +67,7 @@ ms.locfileid: "84569571"
 
 그림 8-3에 나와 있는 것 처럼 컨테이너와 가상 컴퓨터 간에는 많은 유사점이 있습니다.
 
-![](containerized-microservices-images/containersvsvirtualmachines.png "Microservices application scaling approach")
+![마이크로 서비스 응용 프로그램 크기 조정 방법](containerized-microservices-images/containersvsvirtualmachines.png)
 
 **그림 8-3**: 가상 컴퓨터 및 컨테이너 비교
 
@@ -87,7 +87,7 @@ ms.locfileid: "84569571"
 
 EShopOnContainers reference 응용 프로그램은 그림 8-4에 나와 있는 것 처럼 Docker를 사용 하 여 4 개의 컨테이너 화 된 백 엔드 마이크로 서비스를 호스팅합니다.
 
-![](containerized-microservices-images/microservicesarchitecture.png "eShopOnContainers reference application back-end microservices")
+![eShopOnContainers reference 응용 프로그램 백 엔드 마이크로 서비스](containerized-microservices-images/microservicesarchitecture.png)
 
 **그림 8-4**: eShopOnContainers reference 응용 프로그램 백 엔드 마이크로 서비스
 
@@ -101,7 +101,7 @@ EShopOnContainers reference 응용 프로그램은 그림 8-4에 나와 있는 �
 
 EShopOnContainers 모바일 앱은 그림 8-5에 표시 된 *직접 클라이언트-마이크로 서비스* 통신을 사용 하 여 컨테이너 화 된 백 엔드 마이크로 서비스와 통신 합니다.
 
-![](containerized-microservices-images/directclienttomicroservicecommunication.png "Microservices application scaling approach")
+![마이크로 서비스 응용 프로그램 크기 조정 방법](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
 **그림 8-5**: 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -120,19 +120,19 @@ EShopOnContainers 모바일 앱은 그림 8-5에 표시 된 *직접 클라이언
 
 그림 8-6에 표시 된 것 처럼 이벤트 버스는 구성 요소가 서로를 명시적으로 인식 하지 않고도 마이크로 서비스 간의 게시-구독 통신을 허용 합니다.
 
-![](containerized-microservices-images/eventbus.png "Publish-subscribe with an event bus")
+![게시-이벤트 버스를 사용 하 여 구독](containerized-microservices-images/eventbus.png)
 
 **그림 8-6:** 게시-이벤트 버스를 사용 하 여 구독
 
 응용 프로그램 관점에서 이벤트 버스는 단순히 인터페이스를 통해 노출 되는 게시-구독 채널입니다. 그러나 이벤트 버스가 구현 되는 방식은 달라질 수 있습니다. 예를 들어 이벤트 버스 구현에서는 RabbitMQ, Azure Service Bus 또는 NServiceBus 및 MassTransit와 같은 다른 서비스 버스를 사용할 수 있습니다. 그림 8-7에서는 eShopOnContainers reference 응용 프로그램에서 이벤트 버스를 사용 하는 방법을 보여 줍니다.
 
-![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Asynchronous event-driven communication in the reference application")
+![참조 응용 프로그램의 비동기 이벤트 기반 통신](containerized-microservices-images/microservicesarchitecturewitheventbus.png)
 
 **그림 8-7:** 참조 응용 프로그램의 비동기 이벤트 기반 통신
 
 RabbitMQ를 사용 하 여 구현 된 eShopOnContainers 이벤트 버스는 일대다 비동기 게시-구독 기능을 제공 합니다. 즉, 이벤트를 게시 한 후 동일한 이벤트를 수신 하는 여러 구독자가 있을 수 있습니다. 그림 8-9에서는이 관계를 보여 줍니다.
 
-![](containerized-microservices-images/eventdrivencommunication.png "One-to-many communication")
+![일 대 다 통신](containerized-microservices-images/eventdrivencommunication.png)
 
 **그림 8-9**: 일대다 통신
 

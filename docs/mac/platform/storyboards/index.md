@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 395ac62cd4db62c02863e352ed5643958348dcff
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b911be4b1bf547a9a1ad5d6b795894ddba3c26d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574392"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939063"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -20,7 +20,7 @@ _이 문서에서는 Xamarin.ios 앱에서 Storyboard를 사용 하는 방법을
 
 스토리 보드를 사용 하면 창 정의 및 컨트롤을 포함할 뿐만 아니라 다른 창 (segue를 통해) 및 뷰 상태 간의 링크도 포함 하는 Xamarin.ios 앱에 대 한 사용자 인터페이스를 개발할 수 있습니다.
 
-[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
+[![Xcode의 샘플 UI](images/intro01.png)](images/intro01.png#lightbox)
 
 이 문서에서는 Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정의 하는 방법을 소개 합니다.
 
@@ -36,11 +36,11 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 위에서 설명한 것 처럼 Storyboard는 지정 된 앱에 대 한 모든 UI를 해당 _뷰 컨트롤러_의 기능 개요로 분할 하 여 정의 합니다. Xcode의 Interface Builder에서 이러한 각 컨트롤러는 자체 _장면_에 상주 합니다.
 
-[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
+[![예제 뷰 컨트롤러](images/intro02.png)](images/intro02.png#lightbox)
 
 각 장면은 UI의 각 장면을 연결 하 여 해당 관계를 표시 하는 일련의 선 (Segue 이라고 함)과 함께 지정 된 뷰 및 뷰 컨트롤러 쌍을 나타냅니다. 일부 Segue는 하나 이상의 자식 뷰나 뷰 컨트롤러를 포함 하는 뷰 컨트롤러를 정의 합니다. 다른 Segue 뷰 컨트롤러 (예: 팝 오버 또는 대화 상자 표시) 간의 전환을 정의 합니다. 
 
-[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
+[![샘플 segue](images/intro03.png)](images/intro03.png#lightbox)
 
 가장 중요 한 점은 각 Segue는 응용 프로그램 UI의 지정 된 요소 간에 일부 형식의 데이터 흐름을 나타내는 것입니다.
 
@@ -50,7 +50,7 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 뷰 컨트롤러는 Mac 앱 내에서 지정 된 정보 보기와 해당 정보를 제공 하는 데이터 모델 간의 관계를 정의 합니다. 스토리 보드의 각 최상위 장면은 Xamarin.ios 앱의 코드에서 하나의 뷰 컨트롤러를 나타냅니다.
 
-[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
+[![예제 지연 뷰 컨트롤러](images/intro04.png)](images/intro04.png#lightbox)
 
 이러한 방식으로 각 뷰 컨트롤러는 정보의 시각적 표시 (보기)와 해당 정보를 표시 하 고 제어 하는 논리에 대 한 자체 포함 된 재사용 가능한 쌍입니다.
 

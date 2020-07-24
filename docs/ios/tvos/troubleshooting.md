@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c73be27ed82a643b01528ccba3887f59beeceb53
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574056"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929027"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin으로 빌드된 tvOS apps 문제 해결
 
@@ -47,7 +47,7 @@ Apple TV 앱 스토어에 tvOS 앱을 제출 하는 동안 _"잘못 된 실행 �
 1. Mac용 Visual Studio에서 **솔루션 탐색기** 의 TvOS 프로젝트 파일을 마우스 오른쪽 단추로 클릭 하 고 **옵션**을 선택 합니다.
 2. **TvOS 빌드** 를 선택 하 고 **릴리스** 구성을 확인 합니다. 
 
-    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
+    [![TvOS 빌드 옵션 선택](troubleshooting-images/ts01.png)](troubleshooting-images/ts01.png#lightbox)
 3. 추가 `--bitcode=asmonly` **mtouch 인수** 필드에을 추가 하 고 **확인** 단추를 클릭 합니다.
 4. **릴리스** 구성에서 앱을 다시 빌드합니다.
 
@@ -80,7 +80,7 @@ Section
 
 사용 중인 타사 정적 ( `.a` ) 라이브러리가 tvOS 라이브러리 (iOS 라이브러리 아님)에 대해 빌드 되었으며 bitcode 정보도 포함 하 고 있는지 확인 해야 합니다.
 
-유효한 bitcode를 포함 하는 앱 또는 라이브러리의 경우 `size` 이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 예를 들면 다음과 같습니다.
+유효한 bitcode를 포함 하는 앱 또는 라이브러리의 경우 `size` 이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 예를 들어:
 
 **잘못 된 Bitcode**
 
@@ -125,7 +125,7 @@ _"Arm64 조각만 포함 된 앱은 info.plist의 UIRequiredDeviceCapabilities �
 
 타사 라이브러리 (예: MonoGame)를 사용 중이 고에서 종료 되는 긴 일련의 오류 메시지와 함께 릴리스 컴파일이 실패 한 경우 `Task "MTouch" execution -- FAILED` `-gcc_flags="-framework OpenAL"` **추가 터치 인수**를 추가 해 보세요.
 
-[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
+[![작업 MTouch 실행](troubleshooting-images/mtouch01.png)](troubleshooting-images/mtouch01.png#lightbox)
 
 `--bitcode=asmonly` **추가 터치 인수**에도를 포함 하 고, 링커 옵션을 **모두 연결** 로 설정 하 고, 완전 한 컴파일을 수행 합니다.
 

@@ -10,12 +10,12 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b1a47d4dcc92fca4d280708a2cbbe9374c17da8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: de5ebf086af7fa8d7c6360bf3a1f48f57b834e44
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573302"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938439"
 ---
 # <a name="device-orientation"></a>디바이스 방향
 
@@ -123,11 +123,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 장치 방향이 변경 되 면 사용 가능한 공간 변경에 대응할 수 있도록 사용자 인터페이스에 대 한 추가 보기를 추가 하거나 제거 하는 것이 좋습니다. 예를 들어 세로에서 각 플랫폼에 대 한 기본 제공 계산기를 살펴보겠습니다.
 
-![](device-orientation-images/calculator-portrait.png "Calculator Application in Portrait")
+![계산기 응용 프로그램 세로](device-orientation-images/calculator-portrait.png)
 
 및 가로:
 
-![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
+![계산기 응용 프로그램 가로](device-orientation-images/calculator-landscape.png)
 
 앱은 가로에서 더 많은 기능을 추가 하 여 사용 가능한 공간을 활용 합니다.
 
@@ -147,11 +147,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 세로 방향으로 표시 되는 다음 응용 프로그램을 고려 합니다.
 
-![](device-orientation-images/photo-stack-portrait.png "Photo Application in Portrait")
+![세로의 사진 응용 프로그램](device-orientation-images/photo-stack-portrait.png)
 
 및 가로:
 
-![](device-orientation-images/photo-stack-landscape.png "Photo Application in Landscape")
+![가로의 사진 응용 프로그램](device-orientation-images/photo-stack-landscape.png)
 
 다음 XAML을 사용 하 여이 작업을 수행 합니다.
 
@@ -221,11 +221,11 @@ protected override void OnSizeAllocated (double width, double height){
 
 세로 방향으로 표시 되는 다음 응용 프로그램을 고려 합니다.
 
-![](device-orientation-images/photo-abs-portrait.png "Photo Application in Portrait")
+![세로의 사진 응용 프로그램](device-orientation-images/photo-abs-portrait.png)
 
 및 가로:
 
-![](device-orientation-images/photo-abs-landscape.png "Photo Application in Landscape")
+![가로의 사진 응용 프로그램](device-orientation-images/photo-abs-landscape.png)
 
 다음 XAML을 사용 하 여이 작업을 수행 합니다.
 
@@ -273,11 +273,11 @@ Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
 
 세로 방향으로 표시 되는 다음 응용 프로그램을 고려 합니다.
 
-![](device-orientation-images/photo-rel-portrait.png "Photo Application in Portrait")
+![세로의 사진 응용 프로그램](device-orientation-images/photo-rel-portrait.png)
 
 및 가로:
 
-![](device-orientation-images/photo-rel-landscape.png "Photo Application in Landscape")
+![가로의 사진 응용 프로그램](device-orientation-images/photo-rel-landscape.png)
 
 다음 XAML을 사용 하 여이 작업을 수행 합니다.
 
@@ -360,15 +360,15 @@ BackgroundImageSource="deer.jpg">
 - 페이지의 레이아웃 방식 때문에 응답성을 도입 하는 절차 코드는 필요 하지 않습니다.
 - `ScrollView`화면의 높이가 단추 및 이미지의 고정 높이의 합계 보다 작은 경우에도를 사용 하 여 레이블을 표시할 수 있습니다.
 
-### <a name="grid"></a>표
+### <a name="grid"></a>그리드
 
 세로 방향으로 표시 되는 다음 응용 프로그램을 고려 합니다.
 
-![](device-orientation-images/photo-grid-portrait.png "Photo Application in Portrait")
+![세로의 사진 응용 프로그램](device-orientation-images/photo-grid-portrait.png)
 
 및 가로:
 
-![](device-orientation-images/photo-grid-landscape.png "Photo Application in Landscape")
+![가로의 사진 응용 프로그램](device-orientation-images/photo-grid-landscape.png)
 
 다음 XAML을 사용 하 여이 작업을 수행 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: aeaa1bb1273bc062e0ac76eaa09722827f15797f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 18720ee396952cfe1feaaa8de35a425f60575eae
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028399"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930119"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Xamarin에서 watchOS 화면 크기 작업
 
@@ -30,11 +30,11 @@ Apple Watch는 다음과 같은 두 가지 화면 크기로 사용할 수 있습
 
 기본적으로 Mac용 Visual Studio 디자이너는 **모든 Apple Watch**에서 조사식 인터페이스 컨트롤러를 표시 합니다.
 
-![](screen-sizes-images/screen-any-sml.png "The Designer displays watch interface controllers at Any Apple Watch")
+![디자이너는 모든 Apple Watch에서 조사식 인터페이스 컨트롤러를 표시 합니다.](screen-sizes-images/screen-any-sml.png)
 
 크기 메뉴를 사용 하 여 사용 가능한 화면 크기 ( **38mm** 또는 **42mm**) 중 하나에서 스토리 보드를 편집 하 고 미리 봅니다.
 
-![](screen-sizes-images/screen-menu-sml.png "Selecting the 38mm or 42mm size")
+![38mm 또는 448mm 크기 선택](screen-sizes-images/screen-menu-sml.png)
 
 화면 크기가 클수록 작은 화면에서 잘리거나 숨겨지는 콘텐츠가 렌더링 되는 경우도 있습니다.
 두 크기를 모두 테스트 해야 합니다.
@@ -43,7 +43,7 @@ Apple Watch는 다음과 같은 두 가지 화면 크기로 사용할 수 있습
 
 앱은 크기에 관계 없이 화면에 동일한 콘텐츠를 표시 하 고 필요에 따라 요소를 확장 하거나 축소 해야 합니다. Mac용 Visual Studio 디자이너의 특성 검사자에서는 컨테이너 또는 크기 **를 기준** 으로 기본 설정의 콘텐츠를 고정 크기에 **맞게** 사용 해야 합니다.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Use Relative to Container or Size to Fit Content in preference to fixed sizes")
+![컨테이너 또는 크기를 기준으로 기본 설정의 콘텐츠를 고정 크기에 맞게 사용](screen-sizes-images/sizeattributepanel-sml.png)
 
 조사식 화면이 검정색 베젤을 묶으 므로 인터페이스 주위의 안쪽 여백을 제공 하지 않는 것이 좋습니다. 화면 가장자리에 대 한 요소를 구성 하 고 베젤을 앱 주위에서 자연 스러운 테두리를 만들도록 합니다.
 
@@ -51,13 +51,13 @@ Apple Watch는 다음과 같은 두 가지 화면 크기로 사용할 수 있습
 
 시뮬레이터에서 테스트할 때 **하드웨어 > 장치** 메뉴를 사용 하 여 두 화면 크기 간을 쉽게 전환할 수 있습니다.
 
-![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
+![시뮬레이터는 하드웨어 장치 메뉴를 사용 하 여 두 화면 크기 간을 전환할 수 있습니다.](screen-sizes-images/simulator.png)
 
 ## <a name="image-resources"></a>이미지 리소스
 
 단일 자산이 여러 크기에서 잘 보이지 않는 경우 여러 이미지 자산을 사용 해야 합니다. 이미지 자산 카탈로그를 사용 하면 각 크기에 대해 별도의 비트맵이 지정 됩니다.
 
-![](screen-sizes-images/images-xcassets.png "Image asset catalog editor")
+![이미지 자산 카탈로그 편집기](screen-sizes-images/images-xcassets.png)
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded

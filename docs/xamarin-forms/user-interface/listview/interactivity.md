@@ -10,12 +10,12 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5142965216b328172ae7fa04cdc0c13590f5ff38
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 287b116d9ba2cb84e4e196fff080b8212e4eca3b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139890"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938413"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
@@ -27,7 +27,7 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 표시 되�
 
 [`ListView`](xref:Xamarin.Forms.ListView)선택 모드는 [`ListView.SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) 속성을 열거형의 값으로 설정 하 여 제어 됩니다 [`ListViewSelectionMode`](xref:Xamarin.Forms.ListViewSelectionMode) .
 
-- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single)선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다. 이것은 기본값입니다.
+- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single)선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다. 기본값입니다.
 - [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None)항목을 선택할 수 없음을 나타냅니다.
 
 사용자가 항목을 탭 하면 다음과 같은 두 개의 이벤트가 발생 합니다.
@@ -48,7 +48,7 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 표시 되�
 
 다음 스크린샷에는 [`ListView`](xref:Xamarin.Forms.ListView) 기본 선택 모드가 포함 된가 나와 있습니다.
 
-![](interactivity-images/selection-default.png "ListView with Selection Enabled")
+![선택 영역이 활성화 된 ListView](interactivity-images/selection-default.png)
 
 ### <a name="disable-selection"></a>선택 사용 안 함
 
@@ -66,7 +66,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 사용자가의 항목에 대 한 작업을 수행 하려고 하는 경우가 종종 `ListView` 있습니다. 예를 들어 메일 앱의 전자 메일 목록을 살펴보겠습니다. IOS에서 살짝 밀어 메시지를 삭제할 수 있습니다.
 
-![](interactivity-images/context-default.png "ListView with Context Actions")
+![컨텍스트 작업을 포함 하는 ListView](interactivity-images/context-default.png)
 
 컨텍스트 작업은 c # 및 XAML로 구현할 수 있습니다. 아래에는 두 가지에 대 한 특정 가이드가 있지만 먼저 두 가지 주요 구현에 대 한 세부 정보를 살펴보겠습니다.
 
@@ -181,11 +181,11 @@ listView.RefreshControlColor = Color.Red;
 
 다음 스크린샷은 사용자가 끌어오기를 수행 하는 동안 끌어오기를 새로 고치는 방법을 보여 줍니다.
 
-![](interactivity-images/refresh-start.png "ListView Pull to Refresh In-Progress")
+![작업 중인 새로 고침을 위한 ListView 풀](interactivity-images/refresh-start.png)
 
 다음 스크린샷은 사용자가 끌어오기를 릴리스한 후를 업데이트 하는 동안 회전자가 표시 되도록 끌어오기를 새로 고치는 방법을 보여 줍니다 [`ListView`](xref:Xamarin.Forms.ListView) .
 
-![](interactivity-images/refresh-in-progress.png "ListView Pull to Refresh Complete")
+![ListView 끌어오기-새로 고침 완료](interactivity-images/refresh-in-progress.png)
 
 [`ListView`](xref:Xamarin.Forms.ListView)이벤트를 발생 [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) 하 여 새로 고침을 시작 하 고 [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) 속성이로 설정 됩니다 `true` . 의 콘텐츠를 새로 고치는 데 필요한 모든 코드는 `ListView` 이벤트에 대 한 이벤트 처리기 또는에서 실행 되는 메서드에 의해 실행 되어야 합니다 `Refreshing` [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . 를 `ListView` 새로 고치면 `IsRefreshing` 속성이로 설정 `false` 되거나, [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) 새로 고침이 완료 되었음을 나타내기 위해 메서드를 호출 해야 합니다.
 

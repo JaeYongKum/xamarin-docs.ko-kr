@@ -10,12 +10,12 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8d7ae5eb16b8a94f16b6eca013b4ec7a93f427bd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 972a5ac99ff775ea7301f803c333d8239ae7f193
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198123"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938192"
 ---
 # <a name="consume-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
@@ -43,7 +43,7 @@ REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세
 
 샘플 응용 프로그램을 실행 하면 다음 스크린샷에 표시 된 것 처럼 로컬에서 호스팅된 REST 서비스에 연결 합니다.
 
-![](rest-images/portal.png "Sample Application")
+![예제 응용 프로그램](rest-images/portal.png)
 
 > [!NOTE]
 > IOS 9 이상에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 하 여 중요 한 정보가 실수로 공개 되는 것을 방지 합니다. ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 모든 연결에 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않으면 예외와 함께 실패 합니다.
@@ -54,12 +54,12 @@ REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세
 
 REST 서비스는 ASP.NET Core를 사용 하 여 작성 되며 다음 작업을 제공 합니다.
 
-|작업(Operation)|HTTP 메서드|상대 URI|매개 변수|
+|작업|HTTP 메서드|상대 URI|매개 변수|
 |--- |--- |--- |--- |
 |할 일 항목의 목록 가져오기|GET|/api/todoitems/|
 |새 할 일 항목 만들기|POST|/api/todoitems/|JSON 형식의 TodoItem|
 |할 일 항목 업데이트|PUT|/api/todoitems/|JSON 형식의 TodoItem|
-|할 일 항목 삭제|Delete|/api/todoitems/{id}|
+|할 일 항목 삭제|DELETE|/api/todoitems/{id}|
 
 대부분의 Uri는 `TodoItem` 경로에 ID를 포함 합니다. 예를 들어 ID가 인를 삭제 하기 위해 `TodoItem` `6bb8a868-dba1-4f1a-93b7-24ebce87e243` 클라이언트는에 삭제 요청을 보냅니다 `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . 예제 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 [데이터 모델링](~/xamarin-forms/data-cloud/web-services/introduction.md)을 참조 하세요.
 

@@ -10,12 +10,12 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: be8dd5d29aebf29395885d650fbd28082013d0d1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139921"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929166"
 ---
 # <a name="listview-appearance"></a>ListView 모양
 
@@ -114,7 +114,7 @@ static PageTypeGroup()
 
 다음 스크린샷은 결과 UI를 보여 줍니다.
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView Grouping Example")
+![ListView 그룹화 예](customizing-list-appearance-images/grouping-depth.png)
 
 ### <a name="customizing-grouping"></a>그룹화 사용자 지정
 
@@ -163,7 +163,7 @@ ListView가 목록의 요소로 스크롤되는 머리글 및 바닥글을 표�
 
 `Header`및/또는를 값으로 설정 `Footer` `string` 하거나 보다 복잡 한 레이아웃으로 설정할 수 있습니다. 또한 `HeaderTemplate` 및 속성을 `FooterTemplate` 사용 하 여 데이터 바인딩을 지 원하는 머리글 및 바닥글에 대해 더 복잡 한 레이아웃을 만들 수 있습니다.
 
-기본 머리글/바닥글을 만들려면 머리글 또는 바닥글 속성을 표시 하려는 텍스트로 설정 하면 됩니다. 코드:
+기본 머리글/바닥글을 만들려면 머리글 또는 바닥글 속성을 표시 하려는 텍스트로 설정 하면 됩니다. 코드
 
 ```csharp
 ListView HeaderList = new ListView()
@@ -183,7 +183,7 @@ XAML에서:
 </ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
+![머리글 및 바닥글이 있는 ListView](customizing-list-appearance-images/header-default.png)
 
 사용자 지정 된 머리글 및 바닥글을 만들려면 머리글 및 바닥글 뷰를 정의 합니다.
 
@@ -204,7 +204,7 @@ XAML에서:
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+![사용자 지정 된 머리글 및 바닥글이 있는 ListView](customizing-list-appearance-images/header-custom.png)
 
 ## <a name="scrollbar-visibility"></a>스크롤 표시 유형
 
@@ -235,7 +235,7 @@ PAGE.XAML
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
+![기본 행 구분 기호가 있는 ListView](customizing-list-appearance-images/separator-default.png)
 
 없음:
 
@@ -251,7 +251,7 @@ PAGE.XAML
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
 ```
 
-![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
+![행 구분 기호가 없는 ListView](customizing-list-appearance-images/separator-none.png)
 
 속성을 통해 구분 기호 선의 색을 설정할 수도 있습니다 `SeparatorColor` .
 
@@ -267,7 +267,7 @@ PAGE.XAML
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
 ```
 
-![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
+![녹색 행 구분 기호가 있는 ListView](customizing-list-appearance-images/separator-custom.png)
 
 > [!NOTE]
 > 을 로드 한 후 Android에서 이러한 속성 중 하나 `ListView` 를 설정 하면 성능이 크게 저하 됩니다.
@@ -295,7 +295,7 @@ PAGE.XAML
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
+![고정 행 높이가 있는 ListView](customizing-list-appearance-images/height-custom.png)
 
 ### <a name="uneven-rows"></a>불균형 행
 
@@ -313,7 +313,7 @@ PAGE.XAML
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView with Uneven Rows")
+![행이 균등 하지 않은 ListView](customizing-list-appearance-images/height-uneven.png)
 
 ### <a name="resize-rows-at-runtime"></a>런타임에 행 크기 조정
 
@@ -334,7 +334,7 @@ void OnImageTapped (object sender, EventArgs args)
 
 `OnImageTapped`이벤트 처리기는 탭 하는 셀의에 대 한 응답으로 실행 되며 [`Image`](xref:Xamarin.Forms.Image) `Image` 쉽게 볼 수 있도록 셀에 표시 되는의 크기를 늘립니다.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
+![런타임 행 크기 조정을 사용 하는 ListView](customizing-list-appearance-images/dynamic-row-resizing.png)
 
 > [!WARNING]
 > 런타임 행 크기 조정을 과도 하 게 사용할 경우 성능이 저하 될 수 있습니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d7491af1ced4e8e0309bb3e22298d33ee5a042be
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 25de402742978ed9d2a4e16e87d786a014f596a0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571547"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933775"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>iOS 6의 StoreKit 변경 내용
 
@@ -34,7 +34,7 @@ IOS6에서 저장소 키트의 주요 변경 내용은 다음과 같은 두 가�
 IOS의 새로운 앱 내 구매 기능을 통해 사용자는 제품 정보를 보고 앱 내에서 제품을 구입 하거나 다운로드할 수 있습니다.
 이전에는 응용 프로그램에서 iTunes, App Store 또는 iBookstore를 트리거해야 합니다. 그러면 사용자가 원래 응용 프로그램을 종료 합니다. 이 새로운 기능은 작업이 완료 되 면 사용자를 앱에 자동으로 반환 합니다.
 
-[![](changes-to-storekit-images/image1.png "Automatically returning to an app after purchase")](changes-to-storekit-images/image1.png#lightbox)
+[![구매한 후 자동으로 앱에 반환](changes-to-storekit-images/image1.png)](changes-to-storekit-images/image1.png#lightbox)
 
 이를 사용 하는 방법의 예는 다음과 같습니다.
 
@@ -88,7 +88,7 @@ void Buy (int productId)
 
 앱은를 실행 하는 경우 아래 스크린샷 처럼 보입니다. 다운로드 또는 구매는 전적으로 내에서 발생 합니다 `SKStoreProductViewController` .
 
-[![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
+[![앱이 실행 될 때 다음과 같이 표시 됩니다.](changes-to-storekit-images/image2.png)](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>이전 운영 체제 지원
 
@@ -125,7 +125,7 @@ Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있
 
 게시 하는 응용 프로그램의 경우 iTunes Connect에서 **APPLE ID** 를 쉽게 찾을 수 있습니다.
 
-[![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
+[![ITunes Connect에서 Apple ID 찾기](changes-to-storekit-images/image3.png)](changes-to-storekit-images/image3.png#lightbox)
 
  <a name="Search_API"></a>
 
@@ -135,7 +135,7 @@ Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 
 
 결과에는 앱에서 제품을 렌더링 하는 데 사용할 수 있는 표시 정보 및 아트 워크 Url을 포함 하는 다른 메타 데이터도 포함 됩니다.
 
-몇 가지 예제는 다음과 같습니다.
+다음은 몇 가지 예입니다.
 
 - **ibooks 앱** – [ https://itunes.apple.com/search?term=ibooks&amp ; 엔터티 = 소프트웨어 &amp; 국가 = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
 - **Dot 및 Kangaroo ibook** – [ https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = 전자책 &amp; country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
@@ -185,7 +185,7 @@ IOS 6 이전에는 제품을 제공 하는 두 가지 방법이 있습니다 ( [
 
 IOS 6 Apple에서는 서버에서 제공 하는 콘텐츠 파일을 호스트 하는 서버에서 제공 하는 제품의 변형을 제공 합니다. 이렇게 하면 별도의 서버를 운영할 필요가 없기 때문에 서버에서 제공 하는 제품을 훨씬 간단 하 게 작성할 수 있으며, 스토어 키트는 이전에 직접 작성 해야 했던 백그라운드 다운로드 기능을 제공 합니다. Apple의 호스팅을 활용 하려면 새로운 앱 내 구매 제품에 콘텐츠 호스팅을 사용 하도록 설정 하 고 저장소 키트 코드를 수정 하 여 활용 하세요. 그런 다음 Xcode를 사용 하 여 제품 콘텐츠 파일을 빌드하고 검토 및 릴리스를 위해 Apple의 서버에 업로드 합니다.
 
-[![](changes-to-storekit-images/image4.png "The build and deliver process")](changes-to-storekit-images/image4.png#lightbox)
+[![빌드 및 배달 프로세스](changes-to-storekit-images/image4.png)](changes-to-storekit-images/image4.png#lightbox)
 
 앱 스토어를 사용 하 여 *호스트 된 콘텐츠와* 앱 내 구매를 제공 하려면 다음 설정 및 구성이 필요 합니다.
 
@@ -198,11 +198,11 @@ IOS 6 Apple에서는 서버에서 제공 하는 콘텐츠 파일을 호스트 �
 
 ### <a name="sample-code"></a>샘플 코드
 
-샘플 프로젝트 *HostedNonConsumables* (StoreKitiOS6)는 호스트 된 콘텐츠를 사용 합니다. 앱은 판매에 대 한 두 개의 "책 장"을 제공 하며,이 콘텐츠는 Apple 서버에서 호스팅됩니다. 콘텐츠는 긴 응용 프로그램에서 훨씬 더 복잡 한 콘텐츠를 사용할 수 있지만 텍스트 파일과 이미지로 구성 되어 있습니다.
+샘플 프로젝트 *HostedNonConsumables* (StoreKitiOS6.zip)에서는 호스팅된 콘텐츠를 사용 합니다. 앱은 판매에 대 한 두 개의 "책 장"을 제공 하며,이 콘텐츠는 Apple 서버에서 호스팅됩니다. 콘텐츠는 긴 응용 프로그램에서 훨씬 더 복잡 한 콘텐츠를 사용할 수 있지만 텍스트 파일과 이미지로 구성 되어 있습니다.
 
 앱은 구매 도중 및 후에 다음과 같이 표시 됩니다.
 
- [![](changes-to-storekit-images/image5.png "The app looks like this before, during and after a purchase")](changes-to-storekit-images/image5.png#lightbox)
+ [![앱은 구매한 후와 구매 후에 다음과 같이 표시 됩니다.](changes-to-storekit-images/image5.png)](changes-to-storekit-images/image5.png#lightbox)
 
 텍스트 파일 및 이미지가 다운로드 되어 응용 프로그램의 Documents 디렉터리에 복사 됩니다. 응용 프로그램 저장소에 사용할 수 있는 다른 디렉터리에 대 한 자세한 내용은 [파일 시스템 설명서](~/ios/app-fundamentals/file-system.md)를 참조 하세요.
 
@@ -210,19 +210,19 @@ IOS 6 Apple에서는 서버에서 제공 하는 콘텐츠 파일을 호스트 �
 
 Apple의 콘텐츠 호스팅을 사용 하는 새 제품을 만들 때 사용할 수 **없는** 제품 유형을 선택 해야 합니다. 다른 제품 유형은 콘텐츠 호스팅을 지원 하지 않습니다. 또한 판매 하는 *기존* 제품에 대 한 콘텐츠 호스팅을 사용 하도록 설정 하면 안 됩니다. 새 제품에 대 한 콘텐츠 호스팅을 켭니다.
 
- [![](changes-to-storekit-images/image6.png "Select the Non-Consumable product type")](changes-to-storekit-images/image6.png#lightbox)
+ [![사용할 비 기능 제품 유형 선택](changes-to-storekit-images/image6.png)](changes-to-storekit-images/image6.png#lightbox)
 
 **제품 ID**를 입력 하십시오. 이 ID는 나중에이 제품에 대 한 콘텐츠를 만들 때 필요 합니다.
 
- [![](changes-to-storekit-images/image7.png "Enter a Product ID")](changes-to-storekit-images/image7.png#lightbox)
+ [![제품 ID 입력](changes-to-storekit-images/image7.png)](changes-to-storekit-images/image7.png#lightbox)
 
 콘텐츠 호스팅은 세부 정보 섹션에 설정 되어 있습니다. 앱 내 구매를 계속 진행 하기 전에 취소 하려는 경우 **Apple에서 콘텐츠 호스트** 확인란의 선택을 취소 합니다 (일부 테스트 콘텐츠를 업로드 한 경우에도). 그러나 앱 내 구매가 라이브 된 후에는 콘텐츠 호스팅을 제거할 수 없습니다.
 
- [![](changes-to-storekit-images/image8.png "Hosting content with Apple")](changes-to-storekit-images/image8.png#lightbox)
+ [![Apple을 사용 하 여 콘텐츠 호스팅](changes-to-storekit-images/image8.png)](changes-to-storekit-images/image8.png#lightbox)
 
 콘텐츠를 호스팅한 후에는 제품에서 업로드 상태를 **대기 중** 으로 전환 하 고 다음 메시지를 표시 합니다.
 
- [![](changes-to-storekit-images/image9.png "The product will enter Waiting for Upload status and show this message")](changes-to-storekit-images/image9.png#lightbox)
+ [![제품이 업로드 상태를 기다리는 중 이며이 메시지를 표시 합니다.](changes-to-storekit-images/image9.png)](changes-to-storekit-images/image9.png#lightbox)
 
 Xcode를 사용 하 여 콘텐츠 패키지를 만들고 보관 도구를 사용 하 여 업로드 해야 합니다. 콘텐츠 패키지 만들기에 대 한 지침은 다음 섹션인 만들기에서 제공 됩니다 **. PKG 파일**.
 
@@ -249,17 +249,17 @@ Apple에 업로드 하는 콘텐츠 파일은 다음 제한 사항을 충족 해
 
 메뉴에서 **파일 > 새 프로젝트** 를 선택 하 고 **앱 내 구매 콘텐츠**를 선택 하 여 시작 합니다.
 
- [![](changes-to-storekit-images/image10.png "Choose In-App Purchase Content")](changes-to-storekit-images/image10.png#lightbox)
+ [![앱 내 구매 콘텐츠 선택](changes-to-storekit-images/image10.png)](changes-to-storekit-images/image10.png#lightbox)
 
 **번들 식별자** 가이 제품에 대 한 iTunes Connect에서 입력 한 **제품 ID** 와 일치 하도록 **제품 이름** 및 **회사 식별자** 를 입력 합니다.
 
-[![](changes-to-storekit-images/image11.png "Enter the  Name and Identifier")](changes-to-storekit-images/image11.png#lightbox)
+[![이름 및 식별자를 입력 하십시오.](changes-to-storekit-images/image11.png)](changes-to-storekit-images/image11.png#lightbox)
 
 이제 비어 **있는 앱 내 구매 콘텐츠** 프로젝트가 표시 됩니다. 마우스 오른쪽 단추를 클릭 하 고 **파일을 추가할** 수 있습니다. 또는 **프로젝트 탐색기**로 끌어 놓습니다. **Contentversion** 이 정확한 지 확인 합니다 (1.0에서 시작 해야 하지만 나중에 콘텐츠를 업데이트 하도록 선택한 경우에는 증가 해야 함).
 
 이 스크린샷에서는 프로젝트에 포함 된 콘텐츠 파일과 주 창에 표시 되는 info.plist 항목을 사용 하 여 Xcode를 보여 줍니다.
 
-[![](changes-to-storekit-images/image12.png "This screenshot shows Xcode with the content files included in the project and the plist entries visible in the main window")](changes-to-storekit-images/image12.png#lightbox)
+[![이 스크린샷에서는 프로젝트에 포함 된 콘텐츠 파일과 주 창에 표시 되는 info.plist 항목을 사용 하 여 Xcode를 보여 줍니다.](changes-to-storekit-images/image12.png)](changes-to-storekit-images/image12.png#lightbox)
 
 모든 콘텐츠 파일을 추가한 후에는이 프로젝트를 저장 하 고 나중에 다시 편집 하거나 업로드 프로세스를 시작할 수 있습니다.
 
@@ -267,20 +267,20 @@ Apple에 업로드 하는 콘텐츠 파일은 다음 제한 사항을 충족 해
 
 콘텐츠 패키지를 업로드 하는 가장 쉬운 방법은 **Xcode Archive 도구**를 사용 하는 것입니다. 메뉴에서 **제품 > 보관** 을 선택 하 여 시작 합니다.
 
-![](changes-to-storekit-images/image13.png "Choose Archiven")
+![Archiven 선택](changes-to-storekit-images/image13.png)
 
 그러면 아래와 같이 콘텐츠 패키지가 보관 위치에 표시 됩니다.
 보관 유형 및 아이콘은이 줄을 **앱 내 구매 콘텐츠 보관**으로 표시 합니다. **유효성 검사** ...를 클릭 합니다. 실제로 업로드를 수행 하지 않고 콘텐츠 패키지에서 오류를 확인 합니다.
 
-[![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
+[![패키지 유효성 검사](changes-to-storekit-images/image14.png)](changes-to-storekit-images/image14.png#lightbox)
 
 ITunes Connect 자격 증명으로 로그인 합니다.
 
-[![](changes-to-storekit-images/image15.png "Login with your iTunes Connect credentials")](changes-to-storekit-images/image15.png#lightbox)
+[![ITunes Connect 자격 증명으로 로그인](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 이 콘텐츠를 연결할 올바른 응용 프로그램 및 앱 내 구매를 선택 합니다.
 
-[![](changes-to-storekit-images/image16.png "Choose the correct application and in-app purchase to associate this content with")](changes-to-storekit-images/image16.png#lightbox)
+[![이 콘텐츠를 연결할 올바른 응용 프로그램 및 앱 내 구매를 선택 합니다.](changes-to-storekit-images/image16.png)](changes-to-storekit-images/image16.png#lightbox)
 
 다음과 같은 메시지가 표시 됩니다.
 
@@ -296,23 +296,23 @@ ITunes Connect 자격 증명으로 로그인 합니다.
 
 다시 로그인 합니다.
 
-[![](changes-to-storekit-images/image15.png "Login in")](changes-to-storekit-images/image15.png#lightbox)
+[![로그인](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 올바른 응용 프로그램 및 앱 내 구매 레코드를 선택 하 여 콘텐츠를 업로드 합니다.
 
-[![](changes-to-storekit-images/image20.png "Choose the application and in-app purchase record")](changes-to-storekit-images/image20.png#lightbox)
+[![응용 프로그램 및 앱 내 구매 레코드 선택](changes-to-storekit-images/image20.png)](changes-to-storekit-images/image20.png#lightbox)
 
 파일이 업로드 될 때까지 기다립니다.
 
-[![](changes-to-storekit-images/image21.png "The content upload dialog")](changes-to-storekit-images/image21.png#lightbox)
+[![콘텐츠 업로드 대화 상자](changes-to-storekit-images/image21.png)](changes-to-storekit-images/image21.png#lightbox)
 
 업로드가 완료 되 면 콘텐츠가 앱 스토어에 전송 되었음을 알리는 메시지가 표시 됩니다.
 
-[![](changes-to-storekit-images/image22.png "An example successful upload message")](changes-to-storekit-images/image22.png#lightbox)
+[![성공적인 업로드 메시지 예제](changes-to-storekit-images/image22.png)](changes-to-storekit-images/image22.png#lightbox)
 
 작업이 완료 되 면 iTunes Connect의 제품 페이지로 돌아가면 패키지 세부 정보를 표시 하 고 상태 **를 제출할 준비가** 됩니다. 제품이이 상태 이면 샌드박스 환경에서 테스트를 시작할 수 있습니다. 샌드박스에서 테스트를 위해 제품을 ' 제출 ' 할 필요는 없습니다.
 
-[![](changes-to-storekit-images/image23.png "iTunes Connect it will show the package details and be in Ready to Submit status")](changes-to-storekit-images/image23.png#lightbox)
+[![iTunes Connect 패키지 세부 정보를 표시 하 고 상태를 제출할 준비가 됨](changes-to-storekit-images/image23.png)](changes-to-storekit-images/image23.png#lightbox)
 
 약간의 시간이 걸릴 수 있습니다 (예: 업데이트 하는 데 몇 분이 걸립니다. 검토를 위해 제품을 별도로 제출 하거나 응용 프로그램 바이너리와 함께 제출할 수 있습니다. Apple에서 공식적으로 승인한 후에만 앱에서 구매할 수 있도록 프로덕션 앱 스토어에서 콘텐츠를 사용할 수 있습니다.
 
@@ -320,7 +320,7 @@ ITunes Connect 자격 증명으로 로그인 합니다.
 
 Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 만들고 업로드 하면 패키지 자체의 내용이 표시 되지 않습니다. 샘플 앱에 대해 만들어진 패키지의 파일 및 디렉터리는 아래 스크린샷에서와 같이 루트의 **info.plist** 파일과 **내용** 하위 디렉터리의 제품 파일을 사용 하 여 표시 됩니다.
 
-[![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
+[![루트의 info.plist 파일과 내용 하위 디렉터리의 제품 파일](changes-to-storekit-images/image24.png)](changes-to-storekit-images/image24.png#lightbox)
 
 `Contents`장치의 패키지에서 파일을 추출 하는 데이 정보를 이해 해야 하므로 패키지의 디렉터리 구조 (특히 하위 디렉터리에 있는 파일의 위치)를 확인 합니다.
 
@@ -340,7 +340,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 
 호스팅된 콘텐츠를 사용 하는 제품을 구매 하 여 다운로드할 때 발생 하는 이벤트 시퀀스는 다음 다이어그램에 나와 있습니다.
 
-[![](changes-to-storekit-images/image25.png "The sequence of events that occurs when a product with hosted content is purchased and download")](changes-to-storekit-images/image25.png#lightbox)
+[![호스팅된 콘텐츠를 사용 하는 제품을 구매 하 여 다운로드할 때 발생 하는 이벤트 시퀀스](changes-to-storekit-images/image25.png)](changes-to-storekit-images/image25.png#lightbox)
 
 1. 새 제품은 호스트 된 콘텐츠가 사용 하도록 설정 된 iTunes Connect에서 만들 수 있습니다. 실제 콘텐츠는 Xcode에서 개별적으로 생성 되 고 (파일을 폴더로 끌어 놓은 후) iTunes에 보관 및 업로드 됩니다 (코딩이 필요 하지 않음). 그런 다음 각 제품은 승인을 위해 제출 되며 이후에는 구매할 수 있게 됩니다. 샘플 코드에서 이러한 제품 Id는 하드 코드 되지만 Apple을 사용 하 여 콘텐츠를 호스트 하는 것은 새 제품 및 콘텐츠를 iTunes Connect에 제출할 때 업데이트 될 수 있도록 사용 가능한 제품 목록을 원격 서버에 저장 하는 경우 더욱 유연 합니다.
 1. 사용자가 제품을 구매 하면 처리를 위해 거래가 지불 큐에 배치 됩니다.
@@ -376,7 +376,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 
 샘플 코드의 클래스 간 상호 작용은이 다이어그램에 표시 됩니다 (호스팅된 콘텐츠 구매 관련 코드는 녹색으로 표시 됨).
 
-[![](changes-to-storekit-images/image26.png "Hosted content purchases is shown in green in this diagram")](changes-to-storekit-images/image26.png#lightbox)
+[![호스팅된 콘텐츠 구매는이 다이어그램에서 녹색으로 표시 됩니다.](changes-to-storekit-images/image26.png)](changes-to-storekit-images/image26.png#lightbox)
 
 이러한 클래스가 사용 된 샘플 코드는이 섹션의 나머지 부분에 나와 있습니다.
 

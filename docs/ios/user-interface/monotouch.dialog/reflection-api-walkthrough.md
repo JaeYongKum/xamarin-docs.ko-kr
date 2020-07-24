@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: c087bb4a75664c4fae551b9288e7900c4c7fce4b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bdbff7760e7680173c57e5fc83cecb80967c0a51
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936996"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996099"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -27,12 +27,12 @@ MT입니다. D 리플렉션 API를 사용 하면 클래스를 MT 인 특성으�
 리플렉션 API를 사용 하는 것은 다음과 같이 간단 합니다.
 
 1. MT로 데코레이팅된 클래스 만들기 D 특성.
-1. 인스턴스를 만들고 `BindingContext` 위의 클래스의 인스턴스를 전달 합니다. 
-1. 를 만들고를 `DialogViewController` 전달 `BindingContext’s` `RootElement` 합니다. 
+1. 인스턴스를 만들고 `BindingContext` 위의 클래스의 인스턴스를 전달 합니다.
+1. 를 만들고를 `DialogViewController` 전달 `BindingContext’s` `RootElement` 합니다.
 
 리플렉션 API를 사용 하는 방법을 보여 주는 예를 살펴보겠습니다. 이 예에서는 아래와 같이 간단한 데이터 입력 화면을 작성 합니다.
 
- [![](reflection-api-walkthrough-images/01-expense-entry.png "In this example, we'll build a simple data entry screen as shown here")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
+ [![이 예제에서는 다음과 같이 간단한 데이터 입력 화면을 작성 합니다.](reflection-api-walkthrough-images/01-expense-entry.png)](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
 ## <a name="creating-a-class-with-mtd-attributes"></a>MT를 사용 하 여 클래스 만들기 D 특성
 
@@ -45,13 +45,13 @@ public class Expense
 
     [Entry("Enter expense name")]
     public string Name;
-        
+
     [Section("Expense Details")]
-  
+
     [Caption("Description")]
     [Entry]
     public string Details;
-        
+
     [Checkbox]
     public bool IsApproved = true;
 }
@@ -81,14 +81,14 @@ UIWindow window;
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {   
     window = new UIWindow (UIScreen.MainScreen.Bounds);
-            
+
     var expense = new Expense ();
     var bctx = new BindingContext (null, expense, "Create a task");
     var dvc = new DialogViewController (bctx.Root);
-            
+
     window.RootViewController = dvc;
     window.MakeKeyAndVisible ();
-            
+
     return true;
 }
 ```
@@ -117,7 +117,7 @@ public enum Category
     Lodging,
     Books
 }
-        
+
 public class Expense
 {
     …

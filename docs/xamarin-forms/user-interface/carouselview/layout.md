@@ -10,16 +10,16 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 44df710df0272afe3c6f6911381af1a88c8cf923
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d245ebbf42333ad822e0d6ed8569cc8193f1b478
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140285"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936710"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsCarouselView 레이아웃
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
@@ -30,7 +30,7 @@ ms.locfileid: "84140285"
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
-기본적으로는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 가로 방향으로 해당 항목을 표시 합니다. 단일 항목이 화면에 표시 되 고, 살짝 밀기 제스처를 사용 하 여 항목 컬렉션을 전달 하 고 뒤로 탐색 합니다. 그러나 세로 방향도 가능 합니다. 이는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) 속성이 `LinearItemsLayout` 클래스에서 상속 되는 형식 이기 때문입니다 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) . `ItemsLayout`클래스는 다음 속성을 정의 합니다.
+기본적으로는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 가로 방향으로 해당 항목을 표시 합니다. 단일 항목이 화면에 표시 되 고, 살짝 밀기 제스처를 사용 하 여 항목 컬렉션을 전달 하 고 뒤로 탐색 합니다. 그러나 세로 방향도 가능 합니다. 이는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) 속성이 `LinearItemsLayout` 클래스에서 상속 되는 형식 이기 때문입니다 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) . `ItemsLayout` 클래스는 다음과 같은 속성을 정의합니다.
 
 - [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation)형식의는 [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) [`CarouselView`](xref:Xamarin.Forms.CarouselView) 항목이 추가 될 때가 확장 되는 방향을 지정 합니다.
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment)형식의는 [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) 맞춤 지점이 항목에 정렬 되는 방법을 지정 합니다.
@@ -274,5 +274,5 @@ void OnImageTapped(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [오른쪽에서 왼쪽으로 쓰는 언어 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
+- [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.FormsCarouselView 스크롤](scrolling.md)

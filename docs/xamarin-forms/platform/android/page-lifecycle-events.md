@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 76724ff17613fcebe35cb68518a1c932eee8aad7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fb4d1e28fded70005ef23eb4f7540eccd2fba372
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128728"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939310"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Android의 페이지 수명 주기 이벤트
 
@@ -58,7 +58,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 결과적으로 응용 프로그램을 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) 일시 중지 하 고 다시 시작 하는 동안 및 페이지 이벤트가 발생 하지 않으며 응용 프로그램이 일시 중지 될 때 소프트 키보드가 표시 되 면 응용 프로그램이 다시 시작 될 때에도 표시 됩니다.
 
-[![](page-lifecycle-events-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Lifecycle Events Platform-Specific")
+[![수명 주기 이벤트 플랫폼별](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 플랫폼별")
 
 ## <a name="related-links"></a>관련 링크
 

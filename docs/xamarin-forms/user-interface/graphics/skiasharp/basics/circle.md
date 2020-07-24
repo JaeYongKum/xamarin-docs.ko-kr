@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 785532d1a8fedfaef367c8fb8ae437220c3de9c4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137724"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938179"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
@@ -27,7 +27,7 @@ _Canvas 및 paint 개체를 포함 하 여 SkiaSharp drawing의 기본 사항을
 
 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램에는이 일련의 SkiaSharp 아티클에 대 한 모든 샘플 코드가 포함 되어 있습니다. 첫 번째 페이지에는 **간단한 원이** 부여 되 고 page 클래스가 호출 됩니다 [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . 이 코드에서는 페이지의 중앙에서 반지름이 100 픽셀인 원을 그리는 방법을 보여 줍니다. 원의 윤곽선은 빨간색이 고 원의 내부는 파란색입니다.
 
-![](circle-images/circleexample.png "A blue circle outlined in red")
+![빨간색으로 표시 된 파란색 원](circle-images/circleexample.png)
 
 [`SimpleCircle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)페이지 클래스는에서 파생 `ContentPage` 되며 `using` SkiaSharp 네임 스페이스에 대 한 두 개의 지시문을 포함 합니다.
 
@@ -146,7 +146,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 IOS 및 Android에서 실행 되는 프로그램은 다음과 같습니다.
 
-[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
+[![단순 원 페이지의 삼중 스크린샷](circle-images/simplecircle-small.png)](circle-images/simplecircle-large.png#lightbox "단순 원 페이지의 삼중 스크린샷")
 
 프로그램을 직접 실행 하는 경우 휴대폰 또는 시뮬레이터를 사용 하 여 그래픽을 다시 그리는 방법을 볼 수 있습니다. 그래픽을 다시 그려야 할 때마다 `PaintSurface` 이벤트 처리기가 다시 호출 됩니다.
 

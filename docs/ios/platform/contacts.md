@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 918030120e6b7d0e22abdf5ea3e57f3849b86616
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572574"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997295"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Xamarin.ios의 연락처 및 연락처
 
@@ -27,7 +27,7 @@ IOS 9가 도입 되면서 Apple은 `Contacts` `ContactsUI` ios 8 및 이전 버�
 
 - [**연락처-ios**](#contactsui) 장치에서 연락처를 표시, 편집, 선택 및 만들 수 있는 xamarin.ios UI 요소를 제공 합니다.
 
-[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
+[![IOS 장치에 대 한 예제 연락처 시트](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > `AddressBook` `AddressBookUI` Ios 8 (및 이전 버전)에서 사용 하는 기존 및 프레임 워크는 ios 9에서 더 이상 사용 되지 않으며, `Contacts` `ContactsUI` 기존 xamarin.ios 앱의 경우 가능한 한 빨리 새 및 프레임 워크로 바꾸어야 합니다. 새 프레임 워크에 대해 새 앱을 작성 해야 합니다.
@@ -46,7 +46,7 @@ IOS 9가 도입 되면서 Apple은 `Contacts` `ContactsUI` ios 8 및 이전 버�
 
 `CNContact`클래스는 이름, 주소 또는 전화 번호와 같은 연락처의 속성에 대 한 읽기 전용 액세스를 스레드로부터 안전 하 게 제공 합니다. `CNContact`및와 같은 함수는 `NSDictionary` 여러 개의 읽기 전용 속성 컬렉션 (예: 주소 또는 전화 번호)을 포함 합니다.
 
-[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
+[![연락처 개체 개요](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
 전자 메일 주소 또는 전화 번호와 같이 여러 값을 가질 수 있는 속성의 경우에는 개체 배열로 표시 됩니다 `NSLabeledValue` . `NSLabeledValue`레이블이 사용자에 게 값을 정의 하는 읽기 전용 레이블 및 값 (예: Home 또는 Work email)으로 구성 된 스레드로부터 안전한 튜플입니다. 연락처 프레임 워크는 `CNLabelKey` 응용 프로그램에서 사용할 수 있는 미리 정의 된 레이블 (및 정적 클래스를 통해)을 선택 `CNLabelPhoneNumberKey` 하거나 사용자 요구에 맞게 사용자 지정 레이블을 정의할 수 있습니다.
 
@@ -108,9 +108,9 @@ else
 }
 ```
 
-이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 예를 들면 다음과 같습니다.
+이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 예를 들어:
 
-[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
+[![사용자의 컬렉션에 추가 된 새 연락처입니다.](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>연락처 서식 지정 및 지역화
 
@@ -121,7 +121,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예를 들면 다음과 같습니다.
+응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예를 들어:
 
 ```csharp
 // Localized properties
@@ -173,7 +173,7 @@ var contacts = store.GetUnifiedContacts(predicate, fetchKeys, out error);
 
 일부 _연락처_ 는의 연락처 저장소에서 사용 가능한 속성 중 일부만 인출 된 연락처입니다. 이전에 인출 되지 않은 속성에 액세스 하려고 하면 예외가 발생 합니다.
 
-인스턴스의 또는 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다 `IsKeyAvailable` `AreKeysAvailable` `CNContact` . 예를 들면 다음과 같습니다.
+인스턴스의 또는 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다 `IsKeyAvailable` `AreKeysAvailable` `CNContact` . 예를 들어:
 
 ```csharp
 // Does the contact contain the requested key?
@@ -193,7 +193,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 사용자에 게 연락처 데이터베이스의 한 사용자에 대 한 연락처 정보 소스가 있을 수 있습니다 (예: iCloud, Facebook, Google 메일). IOS 및 OS X 앱에서이 연락처 정보는 자동으로 함께 연결 되 고 사용자에 게 단일 _통합 연락처로_표시 됩니다.
 
-[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
+[![통합 연락처 개요](contacts-images/unified01.png)](contacts-images/unified01.png#lightbox)
 
 이 통합 된 연락처는 고유한 식별자 (필요한 경우 연락처를 다시 페치 하는 데 사용 해야 함)가 제공 되는 링크 연락처 정보의 임시 메모리 내 뷰입니다. 기본적으로 연락처 프레임 워크는 가능 하면 항상 통합 된 연락처를 반환 합니다.
 
@@ -224,7 +224,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 를 `CNSaveRequest` 사용 하 여 여러 연락처 및 그룹 변경 내용을 단일 작업으로 캐시 하 고 이러한 수정 내용을에 일괄 처리할 수도 있습니다 `CNContactStore` .
 
-Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 예를 들면 다음과 같습니다.
+Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 예를 들어:
 
 ```csharp
 // Get mutable copy of contact
@@ -258,11 +258,11 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 사용자의 연락처는 사용자의 장치에 로컬로 있거나 하나 이상의 서버 계정 (예: Facebook 또는 Google)에서 장치와 동기화 된 연락처로 있을 수 있습니다. 각 연락처 풀에는 자체 _컨테이너가_ 있고 지정 된 연락처는 한 컨테이너에만 존재할 수 있습니다.
 
-[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
+[![컨테이너 및 그룹 개요](contacts-images/containers01.png)](contacts-images/containers01.png#lightbox)
 
 일부 컨테이너는 연락처를 하나 이상의 _그룹_ 또는 _하위 그룹_으로 정렬할 수 있습니다. 이 동작은 지정 된 컨테이너에 대 한 백업 저장소에 종속 됩니다. 예를 들어 iCloud에는 하나의 컨테이너만 있지만 그룹이 여러 개 있을 수 있지만 하위 그룹은 없습니다. 반면에 Microsoft Exchange는 그룹을 지원 하지 않지만 각 Exchange 폴더에 대해 하나씩 여러 컨테이너를 포함할 수 있습니다.
 
-[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
+[![컨테이너 및 그룹 내에서 겹치기](contacts-images/containers02.png)](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui"></a>
 
@@ -278,7 +278,7 @@ Apple의 기본 제공 컨트롤을 사용 하면 Xamarin.ios 앱에서 연락�
 
 클래스를 호출 하기 전에 `CNContactPickerViewController` 사용자가 선택할 수 있는 속성을 정의 하 고 연락처 속성의 표시 및 선택을 제어 하는 조건자를 정의 합니다.
 
-에서 상속 되는 클래스의 인스턴스를 사용 `CNContactPickerDelegate` 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 예를 들면 다음과 같습니다.
+에서 상속 되는 클래스의 인스턴스를 사용 `CNContactPickerDelegate` 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 예를 들어:
 
 ```csharp
 using System;

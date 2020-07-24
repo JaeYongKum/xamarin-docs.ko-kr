@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 7b254d3a7cfc04893b3b240d8d372f8df60c655c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 55e41c01421e2cd5a0bb5c3a0a9fe2d025c8a223
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571764"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938049"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>tvOS 빠른 시작 가이드 시작
 
@@ -34,7 +34,7 @@ TvOS를 사용 하면 *Swift* (또는 *객관적인 c*) 및 *Xcode*에서 개발
 
 이 문서에서는 단추 클릭 횟수를 계산 하는 기본 **Hello, tvOS** 앱을 빌드하는 프로세스를 안내 하 여 TvOS 및 Visual Studio를 사용 하 여 Apple TV 앱을 만드는 데 필요한 주요 개념을 소개 합니다.
 
-[![](hello-tvos-images/run05.png "Example app run")](hello-tvos-images/run05.png#lightbox)
+[![예제 앱 실행](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
 다음 개념을 다룹니다.
 
@@ -51,21 +51,21 @@ TvOS를 사용 하면 *Swift* (또는 *객관적인 c*) 및 *Xcode*에서 개발
 
 1. Mac용 Visual Studio 시작:
 
-    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
+    [![Mac용 Visual Studio](hello-tvos-images/setup01.png)](hello-tvos-images/setup01.png#lightbox)
 2. 화면의 왼쪽 위 모서리에 있는 **새 솔루션 ...** 링크를 클릭 하 여 **새 프로젝트** 대화 상자를 엽니다.
 3. **TvOS**  >  **app**  >  **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
-    [![](hello-tvos-images/setup02.png "Select Single View App")](hello-tvos-images/setup02.png#lightbox)
+    [![단일 뷰 앱 선택](hello-tvos-images/setup02.png)](hello-tvos-images/setup02.png#lightbox)
 4. `Hello, tvOS` **앱 이름**으로를 입력 하 고 **조직 식별자** 를 입력 한 후 **다음** 단추를 클릭 합니다.
 
-    [![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
+    [![Hello, tvOS를 입력 합니다.](hello-tvos-images/setup04.png)](hello-tvos-images/setup04.png#lightbox)
 5. `Hello_tvOS` **프로젝트 이름** 으로를 입력 하 고 **만들기** 단추를 클릭 합니다.
 
-    [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
+    [![HellotvOS 입력](hello-tvos-images/setup03.png)](hello-tvos-images/setup03.png#lightbox)
 
 Mac용 Visual Studio는 새 tvOS 앱을 만들고 응용 프로그램의 솔루션에 추가 되는 기본 파일을 표시 합니다.
 
- [![](hello-tvos-images/project01.png "The default files view")](hello-tvos-images/project01.png#lightbox)
+ [![기본 파일 보기](hello-tvos-images/project01.png)](hello-tvos-images/project01.png#lightbox)
 
 Mac용 Visual Studio는 Visual Studio와 정확히 동일한 방식으로 **솔루션과** **프로젝트**를 사용 합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트에는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등이 포함 될 수 있습니다. 이 경우 Mac용 Visual Studio는 솔루션 및 응용 프로그램 프로젝트를 모두 만들었습니다.
 
@@ -253,11 +253,11 @@ Xamarin Designer for iOS를 사용 하 여 tvOS 앱에 대 한 사용자 인터�
 
 UI 만들기를 시작 하려면 솔루션 탐색기 파일을 두 번 클릭 `Main.storyboard` 하 여 IOS 디자이너 **Solution Explorer** 에서 편집할 수 있도록 엽니다.
 
-[![](hello-tvos-images/designer01.png "The Main.storyboard file in the Solution Explorer")](hello-tvos-images/designer01.png#lightbox)
+[![솔루션 탐색기의 Main.storyboard 파일](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
 
 그러면 디자이너가 시작 되 고 다음과 같이 표시 됩니다.
 
-[![](hello-tvos-images/designer02.png "The Designer")](hello-tvos-images/designer02.png#lightbox)
+[![디자이너](hello-tvos-images/designer02.png)](hello-tvos-images/designer02.png#lightbox)
 
 IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer for iOS 가이드 소개](~/ios/user-interface/designer/introduction.md) 를 참조 하세요.
 
@@ -267,57 +267,57 @@ IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer 
 
 1. 디자인 화면 오른쪽에 있는 **도구 상자**를 찾습니다.
 
-    [![](hello-tvos-images/designer03.png "The Toolbox")](hello-tvos-images/designer03.png#lightbox)
+    [![도구 상자](hello-tvos-images/designer03.png)](hello-tvos-images/designer03.png#lightbox)
 
     여기에서 찾을 수 없는 경우 보기 **> 패드 > 도구 상자** 로 이동 하 여 봅니다.
 2. **도구 상자** 에서 디자인 화면으로 **레이블을** 끌어 옵니다.
 
-    [![](hello-tvos-images/designer04.png "Drag a Label from the Toolbox")](hello-tvos-images/designer04.png#lightbox)
+    [![도구 상자에서 레이블 끌기](hello-tvos-images/designer04.png)](hello-tvos-images/designer04.png#lightbox)
 3. **속성 패드** 에서 **title** 속성을 클릭 하 고, 단추의 제목을로 변경 하 `Hello, tvOS` 고, **글꼴 크기** 를 128으로 설정 합니다.
 
-    [![](hello-tvos-images/designer05.png "Set the title to Hello, tvOS and set the Font Size to 128")](hello-tvos-images/designer05.png#lightbox)
+    [![제목을 Hello, tvOS로 설정 하 고 글꼴 크기를 128으로 설정 합니다.](hello-tvos-images/designer05.png)](hello-tvos-images/designer05.png#lightbox)
 4. 모든 단어가 표시 되도록 레이블의 크기를 조정 하 고 창 위쪽의 가운데에 배치 합니다.
 
-    [![](hello-tvos-images/designer06.png "Resize and center the label")](hello-tvos-images/designer06.png#lightbox)
+    [![레이블 크기 조정 및 가운데 맞춤](hello-tvos-images/designer06.png)](hello-tvos-images/designer06.png#lightbox)
 5. 이제 레이블이 의도 한 대로 표시 되도록 해당 위치에 대 한 제약을 받아야 합니다. 화면 크기에 관계 없이 이렇게 하려면 *T 모양 핸들이* 표시 될 때까지 레이블을 클릭 합니다.
 
-    [![](hello-tvos-images/designer07.png "The T-shaped handle")](hello-tvos-images/designer07.png#lightbox)
+    [![T 모양 핸들입니다.](hello-tvos-images/designer07.png)](hello-tvos-images/designer07.png#lightbox)
 6. 레이블을 가로로 제한 하려면 가운데 사각형을 선택 하 고 세로 파선으로 끕니다.
 
-    [![](hello-tvos-images/designer08.png "Select the center square")](hello-tvos-images/designer08zoom.png#lightbox)
+    [![중심 사각형 선택](hello-tvos-images/designer08.png)](hello-tvos-images/designer08zoom.png#lightbox)
 
      레이블에 주황색을 설정 해야 합니다.
 7. 레이블 위쪽에서 T 핸들을 선택 하 고 창의 위쪽 가장자리로 끕니다.
 
-    [![](hello-tvos-images/designer09.png "Drag the handle to the top edge of the window")](hello-tvos-images/designer09.png#lightbox)
+    [![핸들을 창의 위쪽 가장자리로 끌어 옵니다.](hello-tvos-images/designer09.png)](hello-tvos-images/designer09.png#lightbox)
 8. 그런 다음 아래 그림과 같이 너비와 높이 *뼈 핸들* 을 차례로 클릭 합니다.
 
-    [![](hello-tvos-images/designer10.png "The width and the height bone handles")](hello-tvos-images/designer10.png#lightbox)
+    [![너비 및 높이 뼈 핸들](hello-tvos-images/designer10.png)](hello-tvos-images/designer10.png#lightbox)
 
      각 *뼈 핸들* 을 클릭 하면 너비와 높이를 각각 선택 하 여 고정 된 차원을 설정 합니다.
 9. 완료 되 면 제약 조건은 속성 패드의 레이아웃 탭에 있는 것과 유사 하 게 표시 됩니다.
 
-    [![](hello-tvos-images/designer11.png "Example Constraints")](hello-tvos-images/designer11.png#lightbox)
+    [![예제 제약 조건](hello-tvos-images/designer11.png)](hello-tvos-images/designer11.png#lightbox)
 10. **도구 상자** 에서 **단추** 를 끌어 레이블 아래에 놓습니다.
 11. **속성 패드** 에서 **title** 속성을 클릭 하 고 단추의 제목을 `Click Me` 다음과 같이 변경 합니다.
 
-    [![](hello-tvos-images/designer12.png "Change the buttons title to Click Me")](hello-tvos-images/designer12.png#lightbox)
+    [![단추 제목을 변경 하 여 클릭 합니다.](hello-tvos-images/designer12.png)](hello-tvos-images/designer12.png#lightbox)
 12. 위의 5 ~ 8 단계를 반복 하 여 tvOS 창에서 단추를 제한 합니다. 그러나 #7 단계에서와 같이 T 핸들을 창의 맨 위로 끄는 대신 레이블 맨 아래로 끌어 옵니다.
 
-    [![](hello-tvos-images/designer14.png "Constrain the button")](hello-tvos-images/designer14.png#lightbox)
+    [![단추 제한](hello-tvos-images/designer14.png)](hello-tvos-images/designer14.png#lightbox)
 13. 단추 아래에 있는 다른 레이블을 끌어서 첫 번째 레이블과 같은 너비로 크기를 조정 하 고 **가운데** **맞춤** 을 설정 합니다.
 
-    [![](hello-tvos-images/designer15.png "Drag another label under the button, size it to be the same width as the first label and set its Alignment to Center")](hello-tvos-images/designer15.png#lightbox)
+    [![단추 아래에 있는 다른 레이블을 끌어서 첫 번째 레이블과 같은 너비로 크기를 조정 하 고 가운데 맞춤을 설정 합니다.](hello-tvos-images/designer15.png)](hello-tvos-images/designer15.png#lightbox)
 14. 첫 번째 레이블 및 단추와 마찬가지로이 레이블을 가운데로 설정 하 고 위치 및 크기에 고정 합니다.
 
-    [![](hello-tvos-images/designer16.png "Pin the label into location and size")](hello-tvos-images/designer16.png#lightbox)
+    [![위치 및 크기에 레이블 고정](hello-tvos-images/designer16.png)](hello-tvos-images/designer16.png#lightbox)
 15. 사용자 인터페이스에 대 한 변경 내용을 저장 합니다.
 
 컨트롤의 크기를 조정 하 고 이동 하는 동안에는 디자이너가 [APPLE TV 휴먼 인터페이스 지침](https://developer.apple.com/tvos/human-interface-guidelines/)을 기반으로 하는 유용한 맞춤 힌트를 제공 하는 것을 알 수 있습니다. 이러한 지침은 Apple TV 사용자에 게 친숙 한 모양과 느낌을 주는 고품질 응용 프로그램을 만드는 데 도움이 됩니다.
 
 **문서 개요** 섹션에 표시 되는 경우 사용자 인터페이스를 구성 하는 요소의 레이아웃과 계층이 표시 되는 방식을 확인 합니다.
 
-[![](hello-tvos-images/designer17.png "The Document Outline section")](hello-tvos-images/designer17.png#lightbox)
+[![문서 개요 섹션](hello-tvos-images/designer17.png)](hello-tvos-images/designer17.png#lightbox)
 
 여기에서 필요에 따라 편집 하거나 끌 항목을 선택 하 여 UI 요소를 다시 정렬할 수 있습니다. 예를 들어 다른 요소에서 UI 요소를 검사 하는 경우이 요소를 목록의 맨 아래로 끌어 창에서 맨 위 항목으로 만들 수 있습니다.
 
@@ -339,16 +339,16 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 1. Xamarin iOS 디자이너에서 보기 컨트롤러의 단추를 선택 합니다.
 2. 속성 패드에서 **이벤트** 탭을 선택 합니다.
 
-    [![](hello-tvos-images/event1.png "The Events tab")](hello-tvos-images/event1.png#lightbox)
+    [![이벤트 탭](hello-tvos-images/event1.png)](hello-tvos-images/event1.png#lightbox)
 3. TouchUpInside 이벤트를 찾아 이라는 이벤트 처리기를 제공 합니다 `Clicked` .
 
-    [![](hello-tvos-images/event2.png "The TouchUpInside event")](hello-tvos-images/event2.png#lightbox)
+    [![TouchUpInside 이벤트입니다.](hello-tvos-images/event2.png)](hello-tvos-images/event2.png#lightbox)
 4. **Enter**키를 누르면 코드에서 이벤트 처리기에 대 한 위치를 제안 하는 **viewcontroller**.cs 파일이 열립니다. 키보드의 화살표 키를 사용 하 여 위치를 설정 합니다.
 
-    [![](hello-tvos-images/event3.png "Setting the location")](hello-tvos-images/event3.png#lightbox)
+    [![위치 설정](hello-tvos-images/event3.png)](hello-tvos-images/event3.png#lightbox)
 5. 이렇게 하면 아래와 같이 부분 메서드를 만듭니다.
 
-    [![](hello-tvos-images/event4.png "The partial method")](hello-tvos-images/event4.png#lightbox)
+    [![부분 메서드](hello-tvos-images/event4.png)](hello-tvos-images/event4.png#lightbox)
 
 이제 단추를 사용할 수 있는 일부 코드를 추가 하기 시작할 준비가 되었습니다.
 
@@ -359,10 +359,10 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 1. 스토리 보드를 열고 보기 컨트롤러의 맨 아래에 있는 레이블을 선택 합니다.
 2. 속성 패드에서 **위젯** 탭을 선택 합니다.
 
-    [![](hello-tvos-images/name1.png "Select the Widget tab")](hello-tvos-images/name1.png#lightbox)
+    [![위젯 탭 선택](hello-tvos-images/name1.png)](hello-tvos-images/name1.png#lightbox)
 3. **Id > 이름**아래에서 다음을 추가 합니다 `ClickedLabel` .
 
-    [![](hello-tvos-images/name2.png "Set ClickedLabel")](hello-tvos-images/name2.png#lightbox)
+    [![ClickedLabel 설정](hello-tvos-images/name2.png)](hello-tvos-images/name2.png#lightbox)
 
 이제 레이블 업데이트를 시작할 준비가 되었습니다.
 
@@ -370,7 +370,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 
 `ViewController.designer.cs` **솔루션 탐색기** 에서를 선택 하면 `ClickedLabel` 레이블 및 `Clicked` 이벤트 처리기가 c #의 **콘센트** 및 **작업** 에 매핑되는 방법을 확인할 수 있습니다.
 
-[![](hello-tvos-images/accesscontrol.png "Outlets and Actions")](hello-tvos-images/accesscontrol.png#lightbox)
+[![출선 및 작업](hello-tvos-images/accesscontrol.png)](hello-tvos-images/accesscontrol.png#lightbox)
 
 는 `ViewController.designer.cs` partial 클래스 이므로 Mac용 Visual Studio는 `ViewController.cs` 클래스에 대 한 변경 내용을 덮어쓸 수 있는 수정이 필요 하지 않습니다.
 
@@ -386,7 +386,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 
 응용 프로그램에서 첫 번째 단추를 클릭할 때마다 단추를 클릭 한 횟수를 표시 하는 레이블을 업데이트할 예정입니다. 이렇게 하려면 `ViewController.cs` **Solution Pad**에서 파일을 두 번 클릭 하 여 편집을 위해 파일을 열어야 합니다.
 
-[![](hello-tvos-images/code01.png "The Solution Pad")](hello-tvos-images/code01.png#lightbox)
+[![Solution Pad](hello-tvos-images/code01.png)](hello-tvos-images/code01.png#lightbox)
 
 첫째, `ViewController` 발생 한 클릭 수를 추적 하기 위해 클래스에서 클래스 수준 변수를 만들어야 합니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
 
@@ -440,7 +440,7 @@ partial void Clicked (UIButton sender)
 
 Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기에서** 빌드 유형을 선택할 수 있습니다.
 
-[![](hello-tvos-images/run01.png "Select the type of build")](hello-tvos-images/run01.png#lightbox)
+[![빌드 유형 선택](hello-tvos-images/run01.png)](hello-tvos-images/run01.png#lightbox)
 
 ### <a name="building-the-application"></a>애플리케이션 빌드
 
@@ -462,13 +462,13 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 **하드웨어** 메뉴에서 시뮬레이터를 제어할 수 있도록 **Apple TV 원격 표시** 를 선택 합니다.
 
-[![](hello-tvos-images/run04.png "Select Show Apple TV Remote")](hello-tvos-images/run04.png#lightbox)
+[![Apple TV 원격 표시를 선택 합니다.](hello-tvos-images/run04.png)](hello-tvos-images/run04.png#lightbox)
 
 시뮬레이터의 원격을 사용 하 여 단추를 몇 번 클릭 하면 레이블이 다음 개수로 업데이트 됩니다.
 
-[![](hello-tvos-images/run05.png "The label with updated count")](hello-tvos-images/run05.png#lightbox)
+[![업데이트 된 수의 레이블](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
-축하합니다! 여기에서는 많은 사항을 설명 했지만이 자습서를 처음부터 끝까지 수행한 경우 tvOS 앱의 구성 요소와 이러한 구성 요소를 만드는 데 사용 되는 도구에 대해 확실 하 게 이해 해야 합니다.
+지금까지 여기에서는 많은 사항을 설명 했지만이 자습서를 처음부터 끝까지 수행한 경우 tvOS 앱의 구성 요소와 이러한 구성 요소를 만드는 데 사용 되는 도구에 대해 확실 하 게 이해 해야 합니다.
 
 ## <a name="where-to-next"></a>다음 위치
 

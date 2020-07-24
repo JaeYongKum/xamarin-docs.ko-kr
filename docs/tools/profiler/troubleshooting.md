@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 93c3f4dcb56710c72cdc61c25aa6481fbd27582e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566959"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934916"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -43,11 +43,11 @@ Windows에서는 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.l
 
 **Mac용 Visual Studio**:
 
-![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
+![Mac용 Visual Studio에서 mlpd 파일 저장 중](troubleshooting-images/image17.png)
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
+![Visual Studio에서 mlpd 파일 저장 중](troubleshooting-images/image17-vs.png)
 
 **Mlpd** 는 많은 정보를 포함 하며 파일 크기는 커집니다.
 
@@ -73,7 +73,7 @@ Windows에서는 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.l
 
 Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자가 표시 되 면 다음을 수행 합니다.
 
-![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
+![Visual Studio에서 프로파일러를 사용 하는 경우의 오류 상자](troubleshooting-images/error.png)
 
 일반적으로 시뮬레이터/에뮬레이터를 시작할 수 없기 때문입니다. 앱을 정상적으로 실행 하 고, 제공 하는 문제를 해결 한 후 프로파일러를 다시 사용 해 보세요.
 

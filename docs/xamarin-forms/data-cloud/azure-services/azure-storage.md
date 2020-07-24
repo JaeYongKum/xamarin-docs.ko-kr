@@ -10,12 +10,12 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a69edd3bf014809cc479dcb7cba0e430dcefbe5b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f67543a6c678e2c3a1395f816e020d69af4bf873
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564682"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936658"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
 
@@ -46,7 +46,7 @@ Azure Storage에 대 한 자세한 내용은 [저장소 소개](https://azure.mi
 
 Blob storage는 다음 다이어그램에 표시 된 세 가지 구성 요소로 구성 됩니다.
 
-![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
+![Blob Storage 개념](azure-storage-images/blob-storage.png)
 
 Azure Storage에 대 한 모든 액세스는 저장소 계정을 통해 사용 됩니다. 저장소 계정에는 개수에 제한 없이 컨테이너를 포함할 수 있으며, 컨테이너는 저장소 계정의 최대 용량 한도까지 blob을 무제한으로 저장할 수 있습니다.
 
@@ -65,11 +65,11 @@ Azure Storage에 저장 된 모든 개체에는 고유한 URL 주소가 있습�
 
 스토리지 계정의 개체에 액세스하기 위한 URL은 스토리지 계정의 개체 위치를 엔드포인트에 추가하여 작성됩니다. 예를 들어, blob 주소는 형식을 갖습니다 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 Azure Storage 계정을 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
-1. 스토리지 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account)를 참조 하세요.
+1. 스토리지 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) 를 참조하세요.
 1. 응용 프로그램에 [Azure Storage 클라이언트 라이브러리](https://www.nuget.org/packages/WindowsAzure.Storage/) 를 추가 Xamarin.Forms 합니다.
 1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결](#connecting-to-azure-storage)을 참조 하세요.
 1. `using` `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` Azure Storage에 액세스 하는 클래스에 및 네임 스페이스에 대 한 지시문을 추가 합니다.

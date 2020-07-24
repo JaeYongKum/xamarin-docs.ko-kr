@@ -10,12 +10,12 @@ ms.date: 09/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 02749c9f8f55427bb1742e78464bbc003f1f7358
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 36f4946ffc6d5a42e1997f389501f921449d0259
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136177"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937594"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -271,7 +271,7 @@ XAML에서:
 </ContentPage>
 ```
 
-![](editor-images/textbackgroundcolor.png "Editor with BackgroundColor Example")
+![BackgroundColor 예제가 있는 편집기](editor-images/textbackgroundcolor.png)
 
 선택한 배경색과 텍스트 색을 각 플랫폼에서 사용할 수 있으며 자리 표시자 텍스트가 모호 하지 않은지 확인 합니다.
 
@@ -347,7 +347,7 @@ void EditorTextChanged (object sender, TextChangedEventArgs e)
 
 완료 된 이벤트는 코드 및 XAML에서 구독할 수 있습니다.
 
-코드:
+코드
 
 ```csharp
 public partial class EditorPage : ContentPage

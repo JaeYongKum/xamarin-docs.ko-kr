@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 71d5ed3512980086d244acc5a604d7b33a5dd77c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 87ba471dad102059788695f3fe50633bc1a3de0c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571352"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930184"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -42,7 +42,7 @@ ms.locfileid: "84571352"
 대상 플랫폼에서 구현할 수 있는 높은 수준의 디자인으로 시작 합니다. 플랫폼 특정 UI 제약 조건을 주의 해야 합니다. 예를 들어 `TabBarController` iOS의 a는 5 개 이상의 단추를 표시할 수 있는 반면, Windows Phone 해당 하는 값은 최대 4 개까지 표시할 수 있습니다.
 선택한 도구를 사용 하 여 화면 흐름을 그립니다 (paper works).
 
- [![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png#lightbox)
+ [![선택한 용지의 도구를 사용 하 여 화면 흐름 그리기](case-study-tasky-images/taskydesign.png)](case-study-tasky-images/taskydesign.png#lightbox)
 
  <a name="Data_Model"></a>
 
@@ -79,7 +79,7 @@ Tasky는 각 ' TaskItem '에 대 한 세 가지 속성을 저장 해야 합니�
 - **일반 코드** – 작업 데이터를 저장 하는 데 재사용 가능한 코드를 포함 하는 공용 프로젝트입니다. 모델 클래스 및 API를 노출 하 여 데이터의 저장 및 로드를 관리 합니다.
 - **플랫폼별 코드** – 일반적인 코드를 ' 백 엔드 '로 활용 하 여 각 운영 체제에 대 한 네이티브 UI를 구현 하는 플랫폼별 프로젝트입니다.
 
-[![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![플랫폼별 프로젝트는 각 운영 체제에 대 한 기본 UI를 구현 하 여 일반 코드를 백 엔드로 활용 합니다.](case-study-tasky-images/taskypro-architecture.png)](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 이러한 두 부분에 대해서는 다음 섹션에서 설명 합니다.
 
@@ -93,11 +93,11 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
 전체 PCL 프로젝트가 아래에 나와 있습니다. 이식 가능한 라이브러리의 모든 코드는 각 대상 플랫폼과 호환 됩니다. 배포 되 면 각 네이티브 앱이 해당 라이브러리를 참조 합니다.
 
-![](case-study-tasky-images/portable-project.png "When deployed, each native app will reference that library")
+![배포 되 면 각 네이티브 앱이 해당 라이브러리를 참조 합니다.](case-study-tasky-images/portable-project.png)
 
 아래 클래스 다이어그램에서는 계층 별로 그룹화 된 클래스를 보여 줍니다. `SQLiteConnection`클래스는 Sqlite-NET 패키지의 상용구 코드입니다. 나머지 클래스는 Tasky의 사용자 지정 코드입니다. `TaskItemManager`및 `TaskItem` 클래스는 플랫폼별 응용 프로그램에 노출 되는 API를 나타냅니다.
 
- [![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png#lightbox)
+ [![TaskItemManager 및 TaskItem 클래스는 플랫폼별 응용 프로그램에 노출 되는 API를 나타냅니다.](case-study-tasky-images/classdiagram-core.png)](case-study-tasky-images/classdiagram-core.png#lightbox)
 
 네임 스페이스를 사용 하 여 레이어를 분리 하면 각 계층 간의 참조를 관리할 수 있습니다. 플랫폼별 프로젝트는 `using` 비즈니스 계층에 대 한 문만 포함 해야 합니다. 데이터 액세스 계층 및 데이터 계층은 `TaskItemManager` 비즈니스 계층에서에 의해 노출 되는 API에 의해 캡슐화 되어야 합니다.
 
@@ -255,11 +255,11 @@ Tasky에서 모델은 `TaskItem` 클래스 이며,을 `TaskItemManager` 관리 �
 
 데이터를 저장 하 고 검색 하기 위해 일반적인 PCL 프로젝트를 사용 하 여 iOS Tasky 응용 프로그램을 구현 하는 데 필요한 클래스는 몇 가지 뿐입니다. 전체 iOS Xamarin.ios 프로젝트는 다음과 같습니다.
 
- ![](case-study-tasky-images/taskyios-solution.png "iOS project is shown here")
+ ![iOS 프로젝트가 여기에 표시 됩니다.](case-study-tasky-images/taskyios-solution.png)
 
 클래스는 계층으로 그룹화 된이 다이어그램에 표시 됩니다.
 
- [![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![클래스는 계층으로 그룹화 된이 다이어그램에 표시 됩니다.](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -270,7 +270,7 @@ IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.
 또한 PCL 프로젝트를 참조 해야 합니다 `TaskyPortableLibrary` .
 참조 목록이 여기에 표시 됩니다.
 
- ![](case-study-tasky-images/taskyios-references.png "The references list is shown here")
+ ![참조 목록은 여기에 표시 됩니다.](case-study-tasky-images/taskyios-references.png)
 
 응용 프로그램 계층 및 사용자 인터페이스 계층은 이러한 참조를 사용 하 여이 프로젝트에서 구현 됩니다.
 
@@ -328,7 +328,7 @@ public class TaskDialog {
 
 홈 화면은 `MonoTouch.Dialog` SQLite 데이터베이스의 작업 목록을 표시 하는 화면입니다. 이 클래스는에서 상속 `DialogViewController` 되며, 표시를 `Root` 위해 개체의 컬렉션을 포함 하도록를 설정 하는 코드를 구현 합니다 `TaskItem` .
 
- [![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![이 클래스는 DialogViewController에서 상속 되며 표시를 위해 TaskItem 개체의 컬렉션을 포함 하도록 루트를 설정 하는 코드를 구현 합니다.](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox)
 
 작업 목록과 상호 작용을 표시 하 고 상호 작용 하는 데 관련 된 두 가지 주요 메서드는 다음과 같습니다.
 
@@ -345,7 +345,7 @@ Tasky는 `MonoTouch.Dialog` 의 리플렉션 API를 사용 하 여 화면을 표
 
 이 스크린샷에서는 `Entry` **이름** 및 **메모** 필드의 워터 마크 텍스트를 설정 하는 특성을 보여 주는 빈 화면을 보여 줍니다.
 
- [![](case-study-tasky-images/ios-taskydetail.png "This screenshot shows an empty screen that demonstrates the Entry attribute setting the watermark text in the Name and Notes fields")](case-study-tasky-images/ios-taskydetail.png#lightbox)
+ [![이 스크린샷에서는 이름 및 메모 필드의 워터 마크 텍스트를 설정 하는 항목 특성을 보여 주는 빈 화면을 보여 줍니다.](case-study-tasky-images/ios-taskydetail.png)](case-study-tasky-images/ios-taskydetail.png#lightbox)
 
 작업 **세부 정보** 화면의 기능 (예: 작업 저장 또는 삭제)은 클래스에서 구현 해야 합니다 .이는가 생성 되는 `HomeScreen` 위치 이기 때문입니다 `MonoTouch.Dialog.BindingContext` . 다음 `HomeScreen` 메서드는 작업 세부 정보 화면을 지원 합니다.
 
@@ -359,11 +359,11 @@ Tasky는 `MonoTouch.Dialog` 의 리플렉션 API를 사용 하 여 화면을 표
 
 전체 Xamarin Android 프로젝트는 아래 그림에 나와 있습니다.
 
- ![](case-study-tasky-images/taskyandroid-solution.png "Android project is pictured here")
+ ![Android 프로젝트는 여기에 나와 있습니다.](case-study-tasky-images/taskyandroid-solution.png)
 
 계층 별로 그룹화 된 클래스를 포함 하는 클래스 다이어그램:
 
- [![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![클래스 다이어그램, 계층 별로 그룹화 된 클래스 포함](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -373,7 +373,7 @@ Android 앱 프로젝트는 Android SDK의 클래스에 액세스 하기 위해 
 
 또한 PCL 프로젝트를 참조 해야 합니다 (예: TaskyPortableLibrary)를 사용 하 여 공통 데이터 및 비즈니스 계층 코드에 액세스할 수 있습니다.
 
- ![](case-study-tasky-images/taskyandroid-references.png "TaskyPortableLibrary to access the common data and business layer code")
+ ![공통 데이터 및 비즈니스 계층 코드에 액세스 하기 위한 TaskyPortableLibrary](case-study-tasky-images/taskyandroid-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -399,7 +399,7 @@ Android 앱의 사용자 인터페이스 계층은 코드 및 XML 태그의 조�
 
 홈 화면은 작업 하위 클래스 `HomeScreen` 와 `HomeScreen.axml` 레이아웃을 정의 하는 파일 (단추 및 작업 목록 위치)로 구성 됩니다. 화면은 다음과 같습니다.
 
- [![](case-study-tasky-images/android-taskylist.png "The screen looks like this")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [![화면은 다음과 같이 표시 됩니다.](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)
 
 홈 화면 코드는 단추를 클릭 하 고 목록에서 항목을 클릭 하 고 메서드의 목록을 채울 뿐만 아니라 `OnResume` 작업 세부 정보 화면에서 변경한 내용을 반영 하기 위한 처리기를 정의 합니다. 데이터는 비즈니스 계층 `TaskItemManager` 및 응용 프로그램 계층의를 사용 하 여 로드 됩니다 `TaskListAdapter` .
 
@@ -409,7 +409,7 @@ Android 앱의 사용자 인터페이스 계층은 코드 및 XML 태그의 조�
 
 또한 작업 세부 정보 화면은 `Activity` 하위 클래스와 AXML 레이아웃 파일로 구성 됩니다. 레이아웃은 입력 컨트롤의 위치를 결정 하 고 c # 클래스는 개체를 로드 하 고 저장 하는 동작을 정의 합니다 `TaskItem` .
 
- [![](case-study-tasky-images/android-taskydetail.png "The class defines the behavior to load and save TaskItem objects")](case-study-tasky-images/android-taskydetail.png#lightbox)
+ [![클래스는 TaskItem 개체를 로드 하 고 저장 하는 동작을 정의 합니다.](case-study-tasky-images/android-taskydetail.png)](case-study-tasky-images/android-taskydetail.png#lightbox)
 
 PCL 라이브러리에 대 한 모든 참조는 클래스를 통해 진행 됩니다 `TaskItemManager` .
 
@@ -418,11 +418,11 @@ PCL 라이브러리에 대 한 모든 참조는 클래스를 통해 진행 됩�
 ## <a name="windows-phone-app"></a>Windows Phone 앱
 전체 Windows Phone 프로젝트:
 
- ![](case-study-tasky-images/taskywp7-solution.png "Windows Phone App The complete Windows Phone project")
+ ![Windows Phone 앱 전체 Windows Phone 프로젝트](case-study-tasky-images/taskywp7-solution.png)
 
 아래 다이어그램에서는 계층으로 그룹화 된 클래스를 보여 줍니다.
 
- [![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png#lightbox)
+ [![이 다이어그램에서는 계층으로 그룹화 된 클래스를 보여 줍니다.](case-study-tasky-images/classdiagram-wp7.png)](case-study-tasky-images/classdiagram-wp7.png#lightbox)
 
  <a name="References"></a>
 
@@ -432,7 +432,7 @@ PCL 라이브러리에 대 한 모든 참조는 클래스를 통해 진행 됩�
 
 또한 PCL 프로젝트를 참조 해야 합니다 (예: `TaskyPortableLibrary`)를 사용 하 여 `TaskItem` 클래스와 데이터베이스를 활용할 수 있습니다.
 
- ![](case-study-tasky-images/taskywp7-references.png "TaskyPortableLibrary to utilize the TaskItem class and database")
+ ![TaskItem 클래스 및 데이터베이스를 활용 하는 TaskyPortableLibrary](case-study-tasky-images/taskywp7-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -479,7 +479,7 @@ TaskDetailsPage에 정의 된 XAML에를 바인딩하여 각 작업을 표시 `T
 
 응용 프로그램은 탐색 모음에 배치 되는 ' 추가 ' 단추와 기본 제공 **더하기 (+)** 아이콘을 사용 하 여 iOS 표준 사용자 인터페이스 디자인을 사용 합니다. 또한 기본 `UINavigationController` ' 뒤로 ' 단추 동작을 사용 하며 테이블에서 ' 살짝 밀기-삭제 '를 지원 합니다.
 
- [![](case-study-tasky-images/ios-taskylist.png "또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블의 살짝 밀기 삭제를 지원 합니다.")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블의 살짝 밀기 삭제를 지원 합니다.")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [ ![ 또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블의 살짝 밀기로 삭제를 지원](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox) 합니다. [ ![ 또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블에서 뒤로 삭제를 지원](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox) 합니다.
 
  <a name="Android"></a>
 
@@ -487,7 +487,7 @@ TaskDetailsPage에 정의 된 XAML에를 바인딩하여 각 작업을 표시 `T
 
 Android 앱은 ' 틱 '이 표시 되어야 하는 행의 기본 제공 레이아웃을 포함 하는 기본 제공 컨트롤을 사용 합니다. 하드웨어/시스템 뒤로 동작은 화상 뒤로 단추 외에도 지원 됩니다.
 
- [![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [ ![ 하드웨어/시스템 뒤로 동작은 화상 뒤로 단추 외](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)에도 화면 후면 단추[ ![ 외에도 하드웨어/시스템 뒤로 동작이 지원 됩니다](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox) .
 
  <a name="Windows_Phone"></a>
 
@@ -495,7 +495,7 @@ Android 앱은 ' 틱 '이 표시 되어야 하는 행의 기본 제공 레이아
 
 Windows Phone 앱은 표준 레이아웃을 사용 하 여 위쪽의 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다.
 
- [![](case-study-tasky-images/wp-taskylist.png "Windows Phone 앱은 표준 레이아웃을 사용 하 고 맨 위에 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다.")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "Windows Phone 앱은 표준 레이아웃을 사용 하 고 맨 위에 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다.")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [ ![ Windows Phone 앱은 표준 레이아웃을 사용 하 고 맨 위에 있는 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox) . [ ![ Windows Phone 앱은 표준 레이아웃을 사용 하 고 맨 위에 있는 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox) .
 
  <a name="Summary"></a>
 

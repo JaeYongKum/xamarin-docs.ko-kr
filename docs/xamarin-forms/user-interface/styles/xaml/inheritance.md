@@ -1,6 +1,6 @@
 ---
-title: 의 스타일 상속Xamarin.Forms
-description: 스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사용을 가능 하 게 합니다. 이 문서에서는 응용 프로그램에서 스타일 상속을 수행 하는 방법을 설명 합니다 Xamarin.Forms .
+title: '의 스타일 상속:::no-loc(Xamarin.Forms):::'
+description: '스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사용을 가능 하 게 합니다. 이 문서에서는 응용 프로그램에서 스타일 상속을 수행 하는 방법을 설명 합니다 :::no-loc(Xamarin.Forms)::: .'
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
 no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80cc419ae098f4a0cbbd782785c0ec5ba03fa703
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+- ':::no-loc(Xamarin.Forms):::'
+- ':::no-loc(Xamarin.Essentials):::'
+ms.openlocfilehash: 9b374987ce7741c82c433b2e35261c3a23ef778f
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138959"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996749"
 ---
-# <a name="style-inheritance-in-xamarinforms"></a>의 스타일 상속Xamarin.Forms
+# <a name="style-inheritance-in-no-locxamarinforms"></a>의 스타일 상속:::no-loc(Xamarin.Forms):::
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
@@ -25,9 +25,9 @@ _스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사�
 
 ## <a name="style-inheritance-in-xaml"></a>XAML의 스타일 상속
 
-스타일 상속은 속성을 기존로 설정 하 여 수행 됩니다 [`Style.BasedOn`](xref:Xamarin.Forms.Style.BasedOn) [`Style`](xref:Xamarin.Forms.Style) . XAML에서는 `BasedOn` 속성을 `StaticResource` 이전에 만든를 참조 하는 태그 확장으로 설정 하 여이를 구현 `Style` 합니다. C #에서는 속성을 인스턴스로 설정 하 여이를 구현 `BasedOn` `Style` 합니다.
+스타일 상속은 속성을 기존로 설정 하 여 수행 됩니다 [`Style.BasedOn`](xref::::no-loc(Xamarin.Forms):::.Style.BasedOn) [`Style`](xref::::no-loc(Xamarin.Forms):::.Style) . XAML에서는 `BasedOn` 속성을 `StaticResource` 이전에 만든를 참조 하는 태그 확장으로 설정 하 여이를 구현 `Style` 합니다. C #에서는 속성을 인스턴스로 설정 하 여이를 구현 `BasedOn` `Style` 합니다.
 
-기본 스타일에서 상속 하는 스타일에는 [`Setter`](xref:Xamarin.Forms.Setter) 새 속성의 인스턴스가 포함 될 수 있으며, 기본 스타일에서 스타일을 재정의 하는 데 사용할 수 있습니다. 또한 기본 스타일에서 상속 되는 스타일은 동일한 형식을 대상으로 하거나 기본 스타일을 대상으로 하는 형식에서 파생 되는 형식 이어야 합니다. 예를 들어 기본 스타일이 인스턴스를 대상으로 하는 경우 [`View`](xref:Xamarin.Forms.View) 기본 스타일을 기반으로 하는 스타일은 `View` `View` 및 인스턴스와 같이 클래스에서 파생 된 인스턴스 또는 형식을 대상으로 지정할 수 있습니다 [`Label`](xref:Xamarin.Forms.Label) [`Button`](xref:Xamarin.Forms.Button) .
+기본 스타일에서 상속 하는 스타일에는 [`Setter`](xref::::no-loc(Xamarin.Forms):::.Setter) 새 속성의 인스턴스가 포함 될 수 있으며, 기본 스타일에서 스타일을 재정의 하는 데 사용할 수 있습니다. 또한 기본 스타일에서 상속 되는 스타일은 동일한 형식을 대상으로 하거나 기본 스타일을 대상으로 하는 형식에서 파생 되는 형식 이어야 합니다. 예를 들어 기본 스타일이 인스턴스를 대상으로 하는 경우 [`View`](xref::::no-loc(Xamarin.Forms):::.View) 기본 스타일을 기반으로 하는 스타일은 `View` `View` 및 인스턴스와 같이 클래스에서 파생 된 인스턴스 또는 형식을 대상으로 지정할 수 있습니다 [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) .
 
 다음 코드에서는 XAML 페이지의 *명시적* 스타일 상속을 보여 줍니다.
 
@@ -65,9 +65,9 @@ _스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사�
 </ContentPage>
 ```
 
-는 `baseStyle` 대상 [`View`](xref:Xamarin.Forms.View) 인스턴스를 지정 하 고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 설정 합니다. 는 `baseStyle` 컨트롤에서 직접 설정 되지 않습니다. 대신, `labelStyle` 및 `buttonStyle` 에서 상속 되며 추가 바인딩 가능한 속성 값을 설정 합니다. `labelStyle` `buttonStyle` 그런 다음 및는 [`Label`](xref:Xamarin.Forms.Label) [`Button`](xref:Xamarin.Forms.Button) 해당 속성을 설정 하 여 인스턴스 및 인스턴스에 적용 됩니다 [`Style`](xref:Xamarin.Forms.NavigableElement.Style) . 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
+는 `baseStyle` 대상 [`View`](xref::::no-loc(Xamarin.Forms):::.View) 인스턴스를 지정 하 고 [`HorizontalOptions`](xref::::no-loc(Xamarin.Forms):::.View.HorizontalOptions) 및 [`VerticalOptions`](xref::::no-loc(Xamarin.Forms):::.View.VerticalOptions) 속성을 설정 합니다. 는 `baseStyle` 컨트롤에서 직접 설정 되지 않습니다. 대신, `labelStyle` 및 `buttonStyle` 에서 상속 되며 추가 바인딩 가능한 속성 값을 설정 합니다. `labelStyle` `buttonStyle` 그런 다음 및는 [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) 해당 속성을 설정 하 여 인스턴스 및 인스턴스에 적용 됩니다 [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) . 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
+[![스타일 상속 스크린샷](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
 > 암시적 스타일은 명시적 스타일에서 파생 될 수 있지만 명시적 스타일은 암시적 스타일에서 파생 될 수 없습니다.
@@ -113,7 +113,7 @@ _스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사�
 
 ## <a name="style-inheritance-in-c35"></a>C&#35;의 스타일 상속
 
-[`Style`](xref:Xamarin.Forms.Style)인스턴스가 필요한 컨트롤의 속성에 직접 할당 되는 해당 c # 페이지는 [`Style`](xref:Xamarin.Forms.NavigableElement.Style) 다음 코드 예제에 나와 있습니다.
+[`Style`](xref::::no-loc(Xamarin.Forms):::.Style)인스턴스가 필요한 컨트롤의 속성에 직접 할당 되는 해당 c # 페이지는 [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -156,13 +156,13 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-는 `baseStyle` 대상 [`View`](xref:Xamarin.Forms.View) 인스턴스를 지정 하 고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 설정 합니다. 는 `baseStyle` 컨트롤에서 직접 설정 되지 않습니다. 대신, `labelStyle` 및 `buttonStyle` 에서 상속 되며 추가 바인딩 가능한 속성 값을 설정 합니다. `labelStyle` `buttonStyle` 그런 다음 및는 [`Label`](xref:Xamarin.Forms.Label) [`Button`](xref:Xamarin.Forms.Button) 해당 속성을 설정 하 여 인스턴스 및 인스턴스에 적용 됩니다 [`Style`](xref:Xamarin.Forms.NavigableElement.Style) .
+는 `baseStyle` 대상 [`View`](xref::::no-loc(Xamarin.Forms):::.View) 인스턴스를 지정 하 고 [`HorizontalOptions`](xref::::no-loc(Xamarin.Forms):::.View.HorizontalOptions) 및 [`VerticalOptions`](xref::::no-loc(Xamarin.Forms):::.View.VerticalOptions) 속성을 설정 합니다. 는 `baseStyle` 컨트롤에서 직접 설정 되지 않습니다. 대신, `labelStyle` 및 `buttonStyle` 에서 상속 되며 추가 바인딩 가능한 속성 값을 설정 합니다. `labelStyle` `buttonStyle` 그런 다음 및는 [`Label`](xref::::no-loc(Xamarin.Forms):::.Label) [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) 해당 속성을 설정 하 여 인스턴스 및 인스턴스에 적용 됩니다 [`Style`](xref::::no-loc(Xamarin.Forms):::.NavigableElement.Style) .
 
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [Style](xref:Xamarin.Forms.Style)
-- [Setter](xref:Xamarin.Forms.Setter)
+- [ResourceDictionary](xref::::no-loc(Xamarin.Forms):::.ResourceDictionary)
+- [Style](xref::::no-loc(Xamarin.Forms):::.Style)
+- [Setter](xref::::no-loc(Xamarin.Forms):::.Setter)

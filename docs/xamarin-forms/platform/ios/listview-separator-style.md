@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c8d660896684283ba9b40cde168adbfe30ca0c51
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fda45bc0aa2b7bc582c30b752662055bd4bd4865
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135995"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937061"
 ---
 # <a name="listview-separator-style-on-ios"></a>IOS의 ListView 구분 기호 스타일
 
@@ -51,7 +51,7 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 그러면 지정 된 [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 값이에 적용 되어 [`ListView`](xref:Xamarin.Forms.ListView) 셀 간의 구분 기호 너비를 제어 합니다.
 
-![](listview-separator-style-images/listview-separatorstyle.png "ListView SeparatorStyle Platform-Specific")
+![ListView SeparatorStyle 플랫폼 관련](listview-separator-style-images/listview-separatorstyle.png)
 
 > [!NOTE]
 > 구분 기호 스타일이로 설정 된 후에는 `FullWidth` 런타임에로 다시 변경할 수 없습니다 `Default` .

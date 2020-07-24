@@ -10,12 +10,12 @@ ms.date: 04/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13b46fd06b0116332241b0d523aea707d56b39ec
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 06f7a138ee27fe095b99a55917267aaa6e01998e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573367"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939024"
 ---
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
@@ -35,21 +35,21 @@ UWP는 Xamarin.Forms 2.1 이상 및에서 사용할 수 있습니다 Xamarin.For
 
  1(sp1). 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **추가 > 새 프로젝트 ...** 를 선택 하 고 **비어 있는 앱 (유니버설 Windows)** 프로젝트를 추가 합니다.
 
-  ![](universal-images/add-wu.png "Add New Project Dialog")
+  ![새 프로젝트 추가 대화 상자](universal-images/add-wu.png)
 
  sr-2. **새 유니버설 Windows 플랫폼 프로젝트** 대화 상자에서 앱이 실행 되는 최소 및 대상 버전의 Windows 10을 선택 합니다.
 
-  ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
+  ![새 유니버설 Windows 플랫폼 프로젝트 대화 상자](universal-images/target-version.png)
 
  3. UWP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 선택 하 고 패키지를 추가 합니다. **Xamarin.Forms** 솔루션의 다른 프로젝트도 동일한 버전의 패키지로 업데이트 되는지 확인 Xamarin.Forms 합니다.
 
  3-4. 새 UWP 프로젝트가 **빌드 > Configuration Manager** 창에 빌드 되었는지 확인 합니다 .이는 기본적으로 발생 하지 않습니다. 유니버설 프로젝트에 대 한 **빌드** 및 **배포** 상자의 틱:
 
-  [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
+  [![Configuration Manager 창](universal-images/configuration-sml.png)](universal-images/configuration.png#lightbox "Configuration Manager 창")
 
  5. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 참조** 를 선택 하 고 Xamarin.Forms 응용 프로그램 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
 
-  ![](universal-images/addref-sml.png "Reference Manager Dialog")
+  ![참조 관리자 대화 상자](universal-images/addref-sml.png)
 
  6@@. UWP 프로젝트에서 **App.xaml.cs** 를 편집 하 여 메서드 `Init` 내에 메서드 호출을 `OnLaunched` 52 줄에 포함 시킵니다.
 

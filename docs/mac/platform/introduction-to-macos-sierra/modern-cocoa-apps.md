@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 13d1709f77b312dbdf357c8ce1871727b2073fef
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5d10f1def56d73c6837587bbbd47299d208a345a
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574433"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997477"
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -24,7 +24,7 @@ _이 문서에서는 개발자가 Xamarin.ios에서 최신 macOS 앱을 빌드�
 
 최신 창 및 도구 모음 모양 (예: 아래에 표시 된 예제 앱)이 포함 됩니다.
 
-[![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png#lightbox)
+[![최신 Mac 앱 UI의 예](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views"></a>
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 창을 선택 하 고 **전체 크기의 콘텐츠 보기**를 확인 하 여 Xcode의 Interface Builder 에서도이 기능을 사용 하도록 설정할 수 있습니다.
 
-[![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png#lightbox)
+[![Xcode의 Interface Builder에서 주 스토리 보드 편집](modern-cocoa-apps-images/content01.png)](modern-cocoa-apps-images/content01.png#lightbox)
 
 전체 크기 콘텐츠 보기를 사용 하는 경우 개발자는 특정 콘텐츠 (예: 레이블)에서 슬라이드를 이동 하지 않도록 제목 및 도구 모음 영역 아래에 콘텐츠를 오프셋 해야 할 수 있습니다.
 
@@ -145,11 +145,11 @@ topConstraint.Active = true;
 
 표준 macOS 창에는 창의 위쪽 가장자리를 따라 실행에 표준 제목 표시줄이 있습니다. 창에도 도구 모음이 포함 되어 있으면이 제목 표시줄 영역 아래에 표시 됩니다.
 
-[![](modern-cocoa-apps-images/content02.png "A standard Mac Toolbar")](modern-cocoa-apps-images/content02.png#lightbox)
+[![표준 Mac 도구 모음](modern-cocoa-apps-images/content02.png)](modern-cocoa-apps-images/content02.png#lightbox)
 
 간소화 된 도구 모음을 사용 하면 제목 영역이 사라지고 도구 모음이 창 닫기, 최소화 및 최대화 단추를 사용 하 여 제목 표시줄의 위치로 이동 합니다.
 
-[![](modern-cocoa-apps-images/content03.png "A streamlined Mac Toolbar")](modern-cocoa-apps-images/content03.png#lightbox)
+[![간소화 된 Mac 도구 모음](modern-cocoa-apps-images/content03.png)](modern-cocoa-apps-images/content03.png#lightbox)
 
 간소화 된 도구 모음은의 메서드를 재정의 하 여 활성화 되며 다음과 같이 표시 됩니다 `ViewWillAppear` `NSViewController` .
 
@@ -163,7 +163,7 @@ public override void ViewWillAppear ()
 }
 ```
 
-이 효과는 일반적으로 지도, 일정, 메모 및 시스템 기본 설정과 같은 _Shoebox 응용 프로그램_ (하나의 창 앱)에 사용 됩니다. 
+이 효과는 일반적으로 지도, 일정, 메모 및 시스템 기본 설정과 같은 _Shoebox 응용 프로그램_ (하나의 창 앱)에 사용 됩니다.
 
 <a name="Using-Accessory-View-Controllers"></a>
 
@@ -171,22 +171,22 @@ public override void ViewWillAppear ()
 
 개발자는 앱의 디자인에 따라 제목/도구 모음 영역 바로 아래에 표시 되는 액세서리 뷰 컨트롤러를 사용 하 여 제목 표시줄 영역을 보완 하 여 현재 사용 중인 활동을 기준으로 사용자에 게 상황에 맞는 컨트롤을 제공할 수도 있습니다.
 
-[![](modern-cocoa-apps-images/content04.png "An example Accessory View Controller")](modern-cocoa-apps-images/content04.png#lightbox)
+[![예제 액세서리 뷰 컨트롤러](modern-cocoa-apps-images/content04.png)](modern-cocoa-apps-images/content04.png#lightbox)
 
 액세서리 뷰 컨트롤러는 개발자 개입 없이 시스템에 의해 자동으로 흐리게 표시 되 고 크기가 조정 됩니다.
 
 액세서리 뷰 컨트롤러를 추가 하려면 다음을 수행 합니다.
 
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
-2. **사용자 지정 뷰 컨트롤러** 를 창의 계층으로 끌어 옵니다. 
+2. **사용자 지정 뷰 컨트롤러** 를 창의 계층으로 끌어 옵니다.
 
-    [![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
-3. 액세서리 보기의 UI 레이아웃: 
+    [![새 사용자 지정 뷰 컨트롤러 추가](modern-cocoa-apps-images/content05.png)](modern-cocoa-apps-images/content05.png#lightbox)
+3. 액세서리 보기의 UI 레이아웃:
 
-    [![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
-4. 해당 UI에 대 한 **콘센트** 및 기타 **작업** 또는 **콘센트** 로 액세서리 보기를 노출 합니다. 
+    [![새 뷰 디자인](modern-cocoa-apps-images/content06.png)](modern-cocoa-apps-images/content06.png#lightbox)
+4. 해당 UI에 대 한 **콘센트** 및 기타 **작업** 또는 **콘센트** 로 액세서리 보기를 노출 합니다.
 
-    [![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
+    [![필요한 콘센트 추가](modern-cocoa-apps-images/content07.png)](modern-cocoa-apps-images/content07.png#lightbox)
 5. 변경 내용을 저장합니다.
 6. Mac용 Visual Studio로 돌아와서 변경 내용을 동기화 합니다.
 
@@ -248,7 +248,7 @@ accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
 
 또한 macOS 시스템은 앱의 창에 액세서리 보기 컨트롤러를 추가할 수 있습니다. 예를 들어 여러 앱 창이 하나의 가상 창으로 병합 되는 탭 창을 만들려면 다음을 수행 합니다.
 
-[![](modern-cocoa-apps-images/content08.png "An example of a tabbed Mac Window")](modern-cocoa-apps-images/content08.png#lightbox)
+[![탭 Mac 창의 예](modern-cocoa-apps-images/content08.png)](modern-cocoa-apps-images/content08.png#lightbox)
 
 일반적으로 개발자는 사용자의 Xamarin.ios 앱에서 탭 창을 사용 하 여 제한 된 작업을 수행 해야 합니다. 시스템은 다음과 같이 자동으로 처리 합니다.
 
@@ -302,7 +302,7 @@ namespace MacModern
 
             // Display
             controller.ShowWindow (this);
-        } 
+        }
         #endregion
     }
 }
@@ -430,13 +430,13 @@ public override void GetNewWindowForTab (NSObject sender)
 
 계층을 지 원하는 `WantsLayer` `NSView` 작업은 `true` **주요 애니메이션 계층**을 확인 하 여 **보기 효과 검사자** 아래에서 Xcode의 Interface Builder에 대 한 또는 내부의를 설정 하 여 사용할 수 있습니다.
 
-[![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png#lightbox)
+[![보기 효과 검사자](modern-cocoa-apps-images/content09.png)](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers"></a>
 
 #### <a name="redrawing-views-with-layers"></a>레이어를 사용 하 여 뷰 다시 그리기
 
-Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서의 `NSView` 를로 설정 하는 것입니다 `OnSetNeedsDisplay` `NSViewController` . 예를 들면 다음과 같습니다.
+Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서의 `NSView` 를로 설정 하는 것입니다 `OnSetNeedsDisplay` `NSViewController` . 예를 들어:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -496,7 +496,7 @@ namespace MacModern
         {
             base.UpdateLayer ();
 
-            // Draw view 
+            // Draw view
             Layer.BackgroundColor = NSColor.Red.CGColor;
         }
         #endregion
@@ -571,7 +571,7 @@ namespace MacModern
         {
             // Return required pasteboard writer
             ...
-            
+
             // Pasteboard writer failed
             return null;
         }
@@ -637,7 +637,7 @@ macOS Sierra는 이전 버전의 OS에서 사용할 수 있는 기존 컨테이�
 
 ## <a name="table-view-enhancements"></a>테이블 뷰 향상
 
-개발자는 항상 `NSView` 와 같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다 `NSTableView` . 예를 들면 다음과 같습니다.
+개발자는 항상 `NSView` 와 같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다 `NSTableView` . 예를 들어:
 
 ```csharp
 using System;
@@ -733,7 +733,7 @@ Static은 `NSTableViewRowAction.FromStyle` 다음 스타일의 새 테이블 행
 
 <a name="Scroll-View-Enhancements"></a>
 
-## <a name="scroll-view-enhancements"></a>스크롤 뷰 향상 
+## <a name="scroll-view-enhancements"></a>스크롤 뷰 향상
 
 스크롤 뷰 ( `NSScrollView` )를 직접 사용 하거나 다른 컨트롤의 일부로 사용 하는 경우 (예: `NSTableView` ) 스크롤 뷰의 내용이 최신 모양과 보기를 사용 하 여 xamarin.ios 앱의 제목 및 도구 모음 영역에서 슬라이드를 사용할 수 있습니다.
 
@@ -760,9 +760,9 @@ Apple은 개발자가 국제화 된 macOS 앱을 쉽게 만들 수 있도록 하
 
 <a name="Implementing-Base-Internationalization"></a>
 
-### <a name="implementing-base-internationalization"></a>기본 국제화 구현 
+### <a name="implementing-base-internationalization"></a>기본 국제화 구현
 
-개발자는 기본 국제화를 구현 하 여 응용 프로그램의 UI를 나타내는 단일 스토리 보드 파일을 제공 하 고 모든 사용자 연결 문자열을 구분할 수 있습니다. 
+개발자는 기본 국제화를 구현 하 여 응용 프로그램의 UI를 나타내는 단일 스토리 보드 파일을 제공 하 고 모든 사용자 연결 문자열을 구분할 수 있습니다.
 
 개발자가 앱의 사용자 인터페이스를 정의 하는 초기 Storyboard 파일 (또는 파일)을 만드는 경우 기본 국제화 (개발자가 말하는 언어)에서 빌드됩니다.
 
@@ -792,7 +792,7 @@ Apple에서는 다음을 수행 하는 것이 좋습니다.
 
 Apple은 지역화를 지원 하기 위해 응용 프로그램의 UI를 디자인 하거나 편집할 때 개발자가 사용할 수 있는 Xcode의 Interface Builder에 몇 가지 기능을 제공 합니다. 개발자는 **특성 검사자** 의 **텍스트 방향** 섹션을 사용 하 여 텍스트 기반 보기 선택 (예:)에서 방향을 사용 하 고 업데이트 하는 방법에 대 한 힌트를 제공할 수 있습니다 `NSTextField` .
 
-[![](modern-cocoa-apps-images/content10.png "The Text Direction options")](modern-cocoa-apps-images/content10.png#lightbox)
+[![텍스트 방향 옵션입니다.](modern-cocoa-apps-images/content10.png)](modern-cocoa-apps-images/content10.png#lightbox)
 
 **텍스트 방향**에는 세 가지 값을 사용할 수 있습니다.
 
@@ -836,7 +836,7 @@ public override void ViewDidLoad ()
 
 `Alignment` `ImagePosition` 컨트롤의을 기반으로 및를 설정 하는입니다 `UserInterfaceLayoutDirection` .
 
-macOS Sierra `CreateButton` 는 여러 가지 매개 변수 (예: 제목, 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 예를 들면 다음과 같습니다.
+macOS Sierra `CreateButton` 는 여러 가지 매개 변수 (예: 제목, 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 예를 들어:
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -851,9 +851,9 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 최신 macOS 앱은 이미지 생성, 편집 또는 프레젠테이션 앱에서 잘 작동 하는 새로운 짙은 인터페이스 모양을 채택할 수 있습니다.
 
-[![](modern-cocoa-apps-images/content11.png "An example of a dark Mac Window UI")](modern-cocoa-apps-images/content11.png#lightbox)
+[![어두운 Mac 창 UI의 예](modern-cocoa-apps-images/content11.png)](modern-cocoa-apps-images/content11.png#lightbox)
 
-이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 예를 들면 다음과 같습니다.
+이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -865,7 +865,7 @@ namespace MacModern
     public partial class ViewController : NSViewController
     {
         ...
-    
+
         #region Override Methods
         public override void ViewWillAppear ()
         {
@@ -898,7 +898,7 @@ Apple에는 시스템 모양새 사용에 대 한 다음과 같은 제안이 있
 
 개발자는 컨트롤러를 사용 하 여 요소를 컴퍼지션 및 Segue abstract 단위로 수집 하 고, 뷰 계층 구조 전체에서 이동 하는 데 필요한 일반적인 "글 루 코드"를 제거할 수 있습니다.
 
-[![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png#lightbox)
+[![Xcode의 Interface Builder에서 UI 편집](modern-cocoa-apps-images/content12.png)](modern-cocoa-apps-images/content12.png#lightbox)
 
 자세한 내용은 [Storyboard 소개](~/mac/platform/storyboards/index.md) 설명서를 참조 하세요.
 
@@ -908,7 +908,7 @@ Apple에는 시스템 모양새 사용에 대 한 다음과 같은 제안이 있
 - Ui 구조적 dependancies을 사용 하지 마십시오 .이는 UI 유연성이 제한 되기 때문입니다.
 - C # 인터페이스를 사용 하 여 제네릭 데이터 dependancies을 제공 합니다.
 
-Segue의 소스로 작동 하는 뷰 컨트롤러는 `PrepareForSegue` Segue를 실행 하 여 대상 뷰 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 예를 들면 다음과 같습니다.
+Segue의 소스로 작동 하는 뷰 컨트롤러는 `PrepareForSegue` Segue를 실행 하 여 대상 뷰 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 예를 들어:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: e90ee165073dbbe792e4ca1916463517ad86255d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 39a18a775946c2f139b4c032d2c360bc5680a0e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572301"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937919"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.ios의 대체 앱 아이콘
 
@@ -25,7 +25,7 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 - `AlternateIconName`-현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
 - `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![앱이 해당 아이콘을 변경 하는 경우의 샘플 경고](alternate-app-icons-images/icons04.png)
 
 <a name="Adding-Alternate-Icons"></a>
 
@@ -37,15 +37,15 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 
 1. 폴더에서 필수 아이콘 이미지를 선택 하 고 모두를 선택한 다음 **솔루션 탐색기**의 **Resources** 폴더로 끕니다.
 
-    ![](alternate-app-icons-images/icons00.png "Select the icons images from a folder")
+    ![폴더에서 아이콘 이미지 선택](alternate-app-icons-images/icons00.png)
 
 2. 메시지가 표시 되 면 **복사**를 선택 하 고 **선택한 모든 파일에 대해 동일한 작업을 사용** 하 고 **확인** 단추를 클릭 합니다.
 
-    ![](alternate-app-icons-images/icons02.png "The Add File to Folder dialog box")
+    ![폴더에 파일 추가 대화 상자](alternate-app-icons-images/icons02.png)
 
 3. 완료 되 면 **Resources** 폴더는 다음과 같이 표시 됩니다.
 
-    ![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
+    ![리소스 폴더는 다음과 같습니다.](alternate-app-icons-images/icons01.png)
 
 <a name="Modifying-the-Info.plist-File"></a>
 
@@ -56,18 +56,18 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 다음을 수행합니다.
 
 1. **솔루션 탐색기**에서 **Info.plist** 파일을 두 번 클릭하여 편집용으로 엽니다.
-2. **원본** 뷰로 전환 합니다.
+2. **원본** 보기로 전환합니다.
 3. **번들 아이콘** 키를 추가 하 고 해당 **형식을** **사전**으로 설정 된 상태로 둡니다.
 4. 키를 추가 하 `CFBundleAlternateIcons` 고 **형식을** **사전**으로 설정 합니다.
 5. 키를 추가 하 `AppIcon2` 고 **형식을** **사전**으로 설정 합니다. 새 대체 앱 아이콘 집합의 이름입니다.
 6. 키를 추가 하 `CFBundleIconFiles` 고 **형식을** **배열로** 설정 합니다.
 7. `CFBundleIconFiles`확장 및, 등의 접미사를 남기고 각 아이콘 파일의 배열에 새 문자열을 추가 합니다 `@2x` `@3x` (예: `100_icon` ). 대체 아이콘 집합을 구성 하는 모든 파일에 대해이 단계를 반복 합니다.
 8. `UIPrerenderedIcon`사전에 키를 추가 하 `AppIcon2` 고, **형식을** **부울** 로 설정 하 고, 값을 **아니요**로 설정 합니다.
-9. 파일의 변경 내용을 저장합니다.
+9. 변경 내용을 파일에 저장합니다.
 
 완료 되 면 결과 **info.plist** 파일이 다음과 같이 표시 됩니다.
 
-![](alternate-app-icons-images/icons03.png "The completed Info.plist file")
+![완료 된 info.plist 파일입니다.](alternate-app-icons-images/icons03.png)
 
 또는 텍스트 편집기에서 연 경우 다음과 같이 합니다.
 
@@ -111,7 +111,7 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 
 Xamarin.ios 프로젝트에 포함 된 아이콘 이미지와 **info.plist** 파일이 올바르게 구성 된 상태에서 개발자는 iOS 10.3에 추가 된 많은 새 기능 중 하나를 사용 하 여 앱의 아이콘을 제어할 수 있습니다.
 
-`SupportsAlternateIcons` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 응용 프로그램에서 대체 아이콘을 지원 하는지 여부를 확인할 수 있습니다. 예를 들면 다음과 같습니다.
+`SupportsAlternateIcons` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 응용 프로그램에서 대체 아이콘을 지원 하는지 여부를 확인할 수 있습니다. 예를 들어:
 
 ```csharp
 // Can the app select a different icon?
@@ -119,14 +119,14 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-`ApplicationIconBadgeNumber` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들면 다음과 같습니다.
+`ApplicationIconBadgeNumber` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
 
 ```csharp
 // Set the badge number to 1
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-`AlternateIconName`개발자는 클래스의 속성을 사용 `UIApplication` 하 여 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 있으며, `null` 앱에서 기본 아이콘을 사용 하는 경우에는를 반환 합니다. 예를 들면 다음과 같습니다.
+`AlternateIconName`개발자는 클래스의 속성을 사용 `UIApplication` 하 여 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 있으며, `null` 앱에서 기본 아이콘을 사용 하는 경우에는를 반환 합니다. 예를 들어:
 
 ```csharp
 // Get the name of the currently selected alternate
@@ -138,7 +138,7 @@ if (name != null ) {
 }
 ```
 
-`SetAlternameIconName` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 앱 아이콘을 변경할 수 있습니다. 아이콘의 이름을 전달 하 여 또는를 선택 하 여 `null` 기본 아이콘으로 돌아갑니다. 예를 들면 다음과 같습니다.
+`SetAlternameIconName` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 앱 아이콘을 변경할 수 있습니다. 아이콘의 이름을 전달 하 여 또는를 선택 하 여 `null` 기본 아이콘으로 돌아갑니다. 예를 들어:
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)
@@ -158,11 +158,11 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 앱이 실행 되 고 사용자가 대체 아이콘을 선택 하는 경우 다음과 같은 경고가 표시 됩니다.
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![앱이 해당 아이콘을 변경 하는 경우의 샘플 경고](alternate-app-icons-images/icons04.png)
 
 사용자가 기본 아이콘으로 다시 전환 하는 경우 다음과 같은 경고가 표시 됩니다.
 
-![](alternate-app-icons-images/icons05.png "A sample alert when an app changes to the primary icon")
+![앱이 기본 아이콘으로 변경 되는 경우의 샘플 경고](alternate-app-icons-images/icons05.png)
 
 <a name="Summary"></a>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1d64a212dae055d6a7a5ff1005b25dc48a10d52e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e779b874cda016a0cd6cc0444ff42a761ee7483e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566203"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934682"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Xamarin에서 tvOS 사용자 인터페이스 스타일
 
@@ -28,11 +28,11 @@ _이 문서에서는 Apple이 tvOS 10에 추가 하 고 tvOS 앱에서이를 구
 
 사용자는 **설정**  >  **일반**  >  **모양** 으로 이동 하 고 **밝은** 와 **어둡게**간을 전환 하 여이 테마를 전환할 수 있습니다.
 
-[![](user-interface-styles-images/theme01.png "The Settings app")](user-interface-styles-images/theme01.png#lightbox)
+[![설정 앱](user-interface-styles-images/theme01.png)](user-interface-styles-images/theme01.png#lightbox)
 
 **어두운** 테마를 선택 하면 모든 사용자 인터페이스 요소가 어두운 배경의 밝은 텍스트로 전환 됩니다.
 
-[![](user-interface-styles-images/theme02.png "The Dark theme")](user-interface-styles-images/theme02.png#lightbox)
+[![어두운 테마](user-interface-styles-images/theme02.png)](user-interface-styles-images/theme02.png#lightbox)
 
 사용자는 언제 든 지 테마를 전환할 수 있으며, Apple TV가 있는 현재 작업 또는 시간을 기준으로이 작업을 수행할 수 있습니다.
 
@@ -50,11 +50,11 @@ _이 문서에서는 Apple이 tvOS 10에 추가 하 고 tvOS 앱에서이를 구
 2. 편집기의 맨 아래에서 **원본** 뷰를 선택 합니다.
 3. 새 키를 추가 하 고 호출 합니다 `UIUserInterfaceStyle` .
 
-    [![](user-interface-styles-images/theme03.png "The UIUserInterfaceStyle key")](user-interface-styles-images/theme03.png#lightbox)
+    [![UIUserInterfaceStyle 키](user-interface-styles-images/theme03.png)](user-interface-styles-images/theme03.png#lightbox)
 4. 형식을로 설정 된 채로 두고 `String` 값을 입력 합니다 `Automatic` .
 
-    [![](user-interface-styles-images/theme04.png "Enter Automatic")](user-interface-styles-images/theme04.png#lightbox)
-5. 파일의 변경 내용을 저장합니다.
+    [![자동으로 입력](user-interface-styles-images/theme04.png)](user-interface-styles-images/theme04.png#lightbox)
+5. 변경 내용을 파일에 저장합니다.
 
 키에 대해 다음과 같은 세 가지 값을 사용할 수 있습니다 `UIUserInterfaceStyle` .
 
@@ -128,7 +128,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 개발자는 선택 된 UI 테마를 기반으로 하는 UI 요소의 모양을 세부적으로 제어 해야 `TraitCollectionDidChange` `UIView` 합니다. 또는 클래스의 메서드를 재정의할 수 있습니다 `UIViewController` .
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -146,7 +146,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 TvOS 앱의 디자인에 따라 개발자가 지정 된 사용자 인터페이스 요소의 특성 컬렉션을 재정의 하 고 항상 특정 UI 테마를 사용 해야 하는 경우가 있을 수 있습니다.
 
-클래스의 메서드를 사용 하 여이 작업을 수행할 수 있습니다 `SetOverrideTraitCollection` `UIViewController` . 예를 들면 다음과 같습니다.
+클래스의 메서드를 사용 하 여이 작업을 수행할 수 있습니다 `SetOverrideTraitCollection` `UIViewController` . 예를 들어:
 
 ```csharp
 // Create new trait and configure it
@@ -169,13 +169,13 @@ TvOS 10에서는 특성 컬렉션에 응답 하도록 앱의 스토리 보드를
 
 1. **솔루션 탐색기** 에서 스토리 보드 파일을 마우스 오른쪽 단추로 클릭 하 고 Xcode Interface Builder **를 사용 하 여 열기**를 선택 합니다  >  **Xcode Interface Builder**.
 
-    [![](user-interface-styles-images/theme05.png "Open With Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox)
+    [![Xcode를 사용 하 여 열기 Interface Builder](user-interface-styles-images/theme05.png)](user-interface-styles-images/theme05.png#lightbox)
 2. 성분 컬렉션 지원을 사용 하려면 **파일 검사자** 로 전환 하 고 **Interface Builder 문서** 섹션에서 **특성 변형 사용** 속성을 선택 합니다.
 
-    [![](user-interface-styles-images/theme06.png "Enable Trait Collection support")](user-interface-styles-images/theme06.png#lightbox)
+    [![성분 컬렉션 지원 사용](user-interface-styles-images/theme06.png)](user-interface-styles-images/theme06.png#lightbox)
 3. 특성 변형을 사용 하기 위해 변경 내용을 확인 합니다.
 
-    [![](user-interface-styles-images/theme07.png "The use Trait Variations alert")](user-interface-styles-images/theme07.png#lightbox)
+    [![특성 변형 사용 경고](user-interface-styles-images/theme07.png)](user-interface-styles-images/theme07.png#lightbox)
 4. 스토리 보드 파일의 변경 내용을 저장 합니다.
 
 Apple은 Interface Builder에서 tvOS Storyboard를 편집할 때 다음과 같은 기능을 추가 했습니다.
@@ -184,20 +184,20 @@ Apple은 Interface Builder에서 tvOS Storyboard를 편집할 때 다음과 같�
 
   - 이제 몇 가지 속성은 **+** 클릭 하 여 UI 테마 특정 버전을 추가할 수 있습니다.
 
-    [![](user-interface-styles-images/theme08.png "Add a UI theme specific version")](user-interface-styles-images/theme08.png#lightbox)
+    [![UI 테마 특정 버전 추가](user-interface-styles-images/theme08.png)](user-interface-styles-images/theme08.png#lightbox)
 
   - 개발자는 새 속성을 지정 하거나 **x** 단추를 클릭 하 여 제거할 수 있습니다.
 
-    [![](user-interface-styles-images/theme09.png "Specify a new property or click the x button to remove it")](user-interface-styles-images/theme09.png#lightbox)
+    [![새 속성을 지정 하거나 x 단추를 클릭 하 여 제거 합니다.](user-interface-styles-images/theme09.png)](user-interface-styles-images/theme09.png#lightbox)
 - 개발자는 Interface Builder 내에서 밝은 테마 또는 어두운 테마 중 하나에서 UI 디자인을 미리 볼 수 있습니다.
 
   - Design Surface의 맨 아래에서 개발자는 현재 UI 테마를 전환할 수 있습니다.
 
-    [![](user-interface-styles-images/theme10.png "The bottom of the Design Surface")](user-interface-styles-images/theme10.png#lightbox)
+    [![Design Surface의 아래쪽입니다.](user-interface-styles-images/theme10.png)](user-interface-styles-images/theme10.png#lightbox)
 
   - 새 테마는 Interface Builder 표시 되 고 특성 컬렉션 특정 조정 내용이 표시 됩니다.
 
-    [![](user-interface-styles-images/theme11.png "The theme displayed in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+    [![에 표시 되는 테마 Interface Builder](user-interface-styles-images/theme11.png)](user-interface-styles-images/theme11.png#lightbox)
 
 또한 tvOS 시뮬레이터에는 tvOS 앱을 디버그할 때 개발자가 밝은 테마와 어두운 테마 간을 빠르게 전환할 수 있는 바로 가기 키가 있습니다. **Command Shift-D** 키보드 시퀀스를 사용 하 여 밝은와 어둡게 사이를 전환 합니다.
 

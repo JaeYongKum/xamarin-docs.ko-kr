@@ -10,12 +10,12 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 89f0182bfebc4d018eb083904595f0fbb211e3ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b13ec7ab079dcf7069b5f4b0dccbb52faf25f927
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573380"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933798"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>단순 애니메이션Xamarin.Forms
 
@@ -66,7 +66,7 @@ image.Rotation = 0;
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 회전이 나와 있습니다.
 
-![](simple-images/rotateto.png "Rotation Animation")
+![회전 애니메이션](simple-images/rotateto.png)
 
 > [!NOTE]
 > [ `RotateTo` ] (F:) 외에도 Xamarin.Forms ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속/가속) 메서드를 사용할 수 있습니다. [ `RotateXTo` ] (f:)도 Xamarin.Forms 있습니다. ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속) 및 [ `RotateYTo` ] (f: Xamarin.Forms . ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속/가속) 메서드를 각각에 애니메이션을 적용 [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) 합니다.
@@ -83,7 +83,7 @@ await image.RelRotateTo (360, 2000);
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 상대적인 회전이 나와 있습니다.
 
-![](simple-images/relrotateto.png "Relative Rotation Animation")
+![상대 회전 애니메이션](simple-images/relrotateto.png)
 
 ### <a name="scaling"></a>확장
 
@@ -97,7 +97,7 @@ await image.ScaleTo (2, 2000);
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 확장이 나와 있습니다.
 
-![](simple-images/scaleto.png "Scaling Animation")
+![애니메이션 크기 조정](simple-images/scaleto.png)
 
 > [!NOTE]
 > 메서드 외에 [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) 도 및 `ScaleXTo` 속성에 `ScaleYTo` 각각 애니메이션을 적용 하는 메서드와 메서드가 있습니다 [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) .
@@ -126,7 +126,7 @@ await image.RotateTo(360, 2000);
 
 [`Image`](xref:Xamarin.Forms.Image)레이아웃의 중심 주위로 인스턴스를 회전 하려면 [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) 및 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) 속성을의 너비와 높이를 기준으로 하는 값으로 설정 해야 합니다 `Image` . 이 예제에서의 중심은 `Image` 레이아웃의 중심에 있도록 정의 되므로 `AnchorX` 0.5의 기본값은 변경할 필요가 없습니다. 그러나 속성은의 `AnchorY` 위쪽에서 레이아웃 중심점 까지의 값으로 다시 정의 됩니다 `Image` . 이렇게 하면 `Image` 다음 스크린샷에 표시 된 것 처럼가 레이아웃 중심점을 기준으로 360도 전체 회전 합니다.
 
-![](simple-images/rotate-anchors.png "Rotation Animation with Anchors")
+![앵커를 사용 하는 회전 애니메이션](simple-images/rotate-anchors.png)
 
 ### <a name="translation"></a>Translation
 
@@ -140,7 +140,7 @@ await image.TranslateTo (-100, -100, 1000);
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 번역이 나와 있습니다.
 
-![](simple-images/translateto.png "Translation Animation")
+![번역 애니메이션](simple-images/translateto.png)
 
 > [!NOTE]
 > 요소가 처음에 화면에 배치 된 다음 화면으로 변환 된 경우 변환 후 요소의 입력 레이아웃은 화면을 벗어나 그대로 유지 되 고 사용자는 조작할 수 없습니다. 따라서 뷰를 최종 위치에 배치 하 고 필요한 모든 번역을 수행 하는 것이 좋습니다.
@@ -158,7 +158,7 @@ await image.FadeTo (1, 4000);
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 작업이 표시 됩니다.
 
-![](simple-images/fadeto.png "Fading Animation")
+![페이딩 애니메이션](simple-images/fadeto.png)
 
 ## <a name="compound-animations"></a>복합 애니메이션
 
@@ -218,7 +218,7 @@ await Task.WhenAll (
 
 다음 스크린샷에는 각 플랫폼에서 진행 중인 여러 회전이 나와 있습니다.
 
-![](simple-images/multiple-rotations.png "Composite Animation")
+![복합 애니메이션](simple-images/multiple-rotations.png)
 
 ## <a name="canceling-animations"></a>애니메이션 취소
 
