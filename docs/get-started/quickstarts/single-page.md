@@ -1,6 +1,6 @@
 ---
-title: 'title: “단일 페이지 Xamarin.Forms 애플리케이션 만들기” description: “이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 설명합니다.”'
-description: 'zone_pivot_groups: platform-dev16 ms.topic: quickstart ms.prod: xamarin ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
+description: 이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 설명합니다.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b9a3017fc8188d3669b64d95c968b2d0a5325358
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: cc09f93a8d86b96324435bf63cd3d19b51242ed2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84136073"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931809"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "84136073"
 
 빠른 시작에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 안내합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
+[![Notes 애플리케이션](single-page-images/screenshots-sml.png)](single-page-images/screenshots.png#lightbox "Notes 애플리케이션")
 
 ::: zone pivot="windows"
 
@@ -47,28 +47,28 @@ ms.locfileid: "84136073"
 
 1. Visual Studio 2019를 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
-    ![](single-page-images/vs/new-solution-2019.png "New Project")
+    ![새 프로젝트](single-page-images/vs/new-solution-2019.png)
 
 2. **새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일**을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
 
-    ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
+    ![플랫폼 간 프로젝트 템플릿](single-page-images/vs/new-project-2019.png)
 
 3. **새 프로젝트 구성** 창에서 **프로젝트 이름**을 **Notes**로 지정하고 적절한 프로젝트 위치를 선택한 다음 **만들기** 단추를 클릭합니다.
 
-    ![](single-page-images/vs/configure-project.png "Configure your Project")
+    ![프로젝트 구성](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
 4. **새 플랫폼 간 앱** 대화 상자에서 **빈 앱**을 클릭한 후 **확인** 단추를 클릭합니다.
 
-    ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
+    ![새 플랫폼 간 앱](single-page-images/vs/new-app-2019.png)
 
     생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 5. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
+    ![MainPage.xaml 열기](single-page-images/vs/open-mainpage-xaml-2019.png)
 
 6. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -105,7 +105,7 @@ ms.locfileid: "84136073"
 
 7. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
+    ![MainPage.xaml.cs 열기](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
 8. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -155,15 +155,15 @@ ms.locfileid: "84136073"
 
 1. Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택하거나 F6을 누릅니다. 솔루션이 빌드하고 성공 메시지가 Visual Studio 상태 표시줄에 표시됩니다.
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![빌드 성공](single-page-images/vs/build-succeeded.png)
 
     오류가 있는 경우 이전 단계를 반복하고 솔루션이 성공적으로 빌드할 때까지 실수를 수정합니다.
 
 2. Visual Studio 도구 모음에서 선택한 Android 에뮬레이터의 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Visual Studio Android 도구 모음](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Android Emulator의 Notes](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Android 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -174,13 +174,13 @@ ms.locfileid: "84136073"
 
 3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![iOS를 시작 프로젝트로 설정](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. Visual Studio 도구 모음에서 선택한 [iOS 원격 에뮬레이터](~/tools/ios-simulator/index.md)의 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Visual Studio iOS 도구 모음](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![iOS 시뮬레이터의 Notes](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "iOS 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -201,24 +201,24 @@ ms.locfileid: "84136073"
 
 1. Visual Studio 2017을 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
-    ![](single-page-images/vs/new-solution.png "New Project")
+    ![새 프로젝트](single-page-images/vs/new-solution.png)
 
 2. **새 프로젝트** 대화 상자에서 **플랫폼 간**을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름을 **Notes**로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
 
-    ![](single-page-images/vs/new-project.png "Cross-Platform Project Templates")
+    ![플랫폼 간 프로젝트 템플릿](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
 3. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
 
-    ![](single-page-images/vs/new-app.png "New Cross-Platform App")
+    ![새 플랫폼 간 앱](single-page-images/vs/new-app.png)
 
     생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 4. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+    ![MainPage.xaml 열기](single-page-images/vs/open-mainpage-xaml.png)
 
 5. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -255,7 +255,7 @@ ms.locfileid: "84136073"
 
 6. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+    ![MainPage.xaml.cs 열기](single-page-images/vs/open-mainpage-codebehind.png)
 
 7. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -305,15 +305,15 @@ ms.locfileid: "84136073"
 
 1. Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택하거나 F6을 누릅니다. 솔루션이 빌드하고 성공 메시지가 Visual Studio 상태 표시줄에 표시됩니다.
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![빌드 성공](single-page-images/vs/build-succeeded.png)
 
     오류가 있는 경우 이전 단계를 반복하고 솔루션이 성공적으로 빌드할 때까지 실수를 수정합니다.
 
 2. Visual Studio 도구 모음에서 선택한 Android 에뮬레이터의 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Visual Studio Android 도구 모음](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Android Emulator의 Notes](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Android 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -324,13 +324,13 @@ ms.locfileid: "84136073"
 
 3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![iOS를 시작 프로젝트로 설정](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. Visual Studio 도구 모음에서 선택한 [iOS 원격 에뮬레이터](~/tools/ios-simulator/index.md)의 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Visual Studio iOS 도구 모음](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![iOS 시뮬레이터의 Notes](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "iOS 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -351,19 +351,19 @@ ms.locfileid: "84136073"
 
 1. Mac용 Visual Studio를 시작하고 시작 창에서 **새로 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
-    ![](single-page-images/vsmac/new-project.png "New Solution")
+    ![새 솔루션](single-page-images/vsmac/new-project.png)
 
 2. **Choose a template for your new project** 대화 상자에서 **Multiplatform > App**을 클릭하여 **Blank Forms App** 템플릿을 선택하고 **Next** 단추를 클릭합니다.
 
-    ![](single-page-images/vsmac/choose-template.png "Choose a Template")
+    ![템플릿 선택](single-page-images/vsmac/choose-template.png)
 
 3. **빈 양식 앱 구성** 대화 상자에서 새 앱 이름을 **Notes**로 설정하고, **.NET Standard** 라디오 단추가 선택되었는지 확인하고, **다음** 단추를 클릭합니다.    
 
-    ![](single-page-images/vsmac/configure-app.png "Configure the Forms Application")
+    ![Forms 애플리케이션 구성](single-page-images/vsmac/configure-app.png)
 
 4. **새 빈 Forms 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 **Notes**로 설정된 채로 두고, 프로젝트에 적절한 위치를 선택하고, **만들기** 단추를 클릭하여 프로젝트를 만듭니다.
 
-    ![](single-page-images/vsmac/configure-project.png "Configure the Forms Project")
+    ![Forms 프로젝트 구성](single-page-images/vsmac/configure-project.png)
 
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션과 프로젝의 이름이 모두 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 프로젝트로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
@@ -372,7 +372,7 @@ ms.locfileid: "84136073"
 
 5. **Solution Pad**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vsmac/mainpage-xaml.png "MainPage.xaml")
+    ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
 6. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -409,7 +409,7 @@ ms.locfileid: "84136073"
 
 7. **Solution Pad**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vsmac/mainpage-xaml-cs.png "MainPage.xaml.cs")
+    ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
 8. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -459,19 +459,19 @@ ms.locfileid: "84136073"
 
 1. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(하거나 **&#8984; + B** 키를 누릅니다). 프로젝트가 빌드되고 성공 메시지가 Mac용 Visual Studio 도구 모음에 표시됩니다.
 
-      ![](single-page-images/vsmac/build-successful.png "Build Successful")
+      ![빌드 성공](single-page-images/vsmac/build-successful.png)
 
     오류가 있는 경우 이전 단계를 반복하고 프로젝트가 성공적으로 빌드할 때까지 실수를 수정합니다.
 
 2. **Solution Pad**에서 **Notes.iOS** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-      ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
+      ![iOS를 시작 프로젝트로 설정](single-page-images/vsmac/set-startup-project-ios.png)
 
 3. Mac용 Visual Studio 도구 모음에서 선택한 iOS Simulator 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-      ![](single-page-images/vsmac/start.png "Visual Studio for Mac Toolbar")
+      ![Mac용 Visual Studio 도구 모음](single-page-images/vsmac/start.png)
 
-      [![](single-page-images/vsmac/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+      [![iOS 시뮬레이터의 Notes](single-page-images/vsmac/notes-ios.png)](single-page-images/vsmac/notes-ios-large.png#lightbox "iOS 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -479,11 +479,11 @@ ms.locfileid: "84136073"
 
 4. **Solution Pad**에서 **Notes.Droid** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-      ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
+      ![Android를 시작 프로젝트로 설정](single-page-images/vsmac/set-startup-project-android.png)
 
 5. Mac용 Visual Studio 도구 모음에서 선택한 Android 에뮬레이터 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-      [![](single-page-images/vsmac/notes-android.png "Notes in the Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![Android Emulator의 Notes](single-page-images/vsmac/notes-android.png)](single-page-images/vsmac/notes-android-large.png#lightbox "Android 시뮬레이터의 Notes")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 

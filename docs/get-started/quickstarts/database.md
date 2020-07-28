@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2864c7edabde18faec06c2c42042168d3e6c9671
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a28e391c6bacd460f095c94e30b2d9433a5191e4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139804"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931796"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
 
@@ -30,8 +30,8 @@ ms.locfileid: "84139804"
 
 이 빠른 시작은 로컬 SQLite.NET 데이터베이스에 데이터를 저장하는 방법을 안내합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
-[![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes 페이지](database-images/screenshots1-sml.png)](database-images/screenshots1.png#lightbox "Notes 페이지")
+[![참고 항목 페이지](database-images/screenshots2-sml.png)](database-images/screenshots2.png#lightbox "참고 항목 페이지")
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -45,11 +45,11 @@ ms.locfileid: "84139804"
 
 2. **솔루션 탐색기**에서 **Notes** 프로젝트를 선택하고, 마우스 오른쪽 단추로 클릭한 다음, **NuGet 패키지 관리...** 를 선택합니다.
 
-    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
+    ![NuGet 패키지 추가](database-images/vs/add-nuget-packages.png)    
 
 3. **NuGet 패키지 관리자**에서 **찾아보기** 탭을 선택하고 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **설치** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![](database-images/vs/add-package.png "Add Package")
+    ![패키지 추가](database-images/vs/add-package.png)
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
@@ -262,11 +262,11 @@ ms.locfileid: "84139804"
 
 2. **Solution Pad**에서 **Notes** 프로젝트를 선택하고 마우스 오른쪽 단추를 클릭한 다음 **추가 > NuGet 패키지 추가...** 를 선택합니다.
 
-    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
+    ![NuGet 패키지 추가](database-images/vsmac/add-nuget-packages.png)    
 
 3. **패키지 추가** 창에서 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **패키지 추가** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![](database-images/vsmac/add-package.png "Add Package")
+    ![패키지 추가](database-images/vsmac/add-package.png)
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.

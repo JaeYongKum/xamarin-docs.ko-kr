@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139141"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929283"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart(미리 보기)
 
@@ -44,7 +44,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 
 2. 도구 모음에서 **로컬 디바이스**를 선택한 후 클릭하여 설치 마법사를 시작합니다.
 
-    [![](hot-restart-images/toolbar.png "Screenshot of the Visual Studio toolbar with local device set as the debug target.")](hot-restart-images/toolbar.png)
+    [![디버그 대상으로 설정된 로컬 디바이스를 비롯한 Visual Studio 도구 모음의 스크린샷](hot-restart-images/toolbar.png)](hot-restart-images/toolbar.png)
 
 3. iTunes가 설치되지 않았다면 **iTunes 다운로드**를 클릭하여 설치 관리자를 다운로드합니다. iTunes 설치가 완료되면 **다음**을 클릭합니다.
 
@@ -62,7 +62,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 
 디버깅하는 동안 코드 파일을 편집한 다음 디버그 도구 모음에서 **다시 시작** 단추를 누르거나 **Ctrl+Shift+F5**를 눌러 새 변경 사항이 적용된 상태로 디버그 세션을 다시 시작할 수 있습니다.
 
-[![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
+[![다시 시작 단추가 강조 표시된 디버그 도구 모음의 스크린샷](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
 `HOTRESTART` 전처리기 기호를 사용하여 Xamarin Hot Restart로 디버깅할 때 특정 코드가 실행되지 않도록 할 수도 있습니다.
 

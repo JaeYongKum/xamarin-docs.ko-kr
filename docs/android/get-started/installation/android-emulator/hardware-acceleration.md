@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: 2a9260bc782d2b19e6fd74356738276e1648dcf2
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 93336f5a741cf9643288163f2bf1d8ef44ea52d2
+ms.sourcegitcommit: d42dadc6da584953865b1adb616489d91a7b25d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104349"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473439"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -49,7 +49,7 @@ Windows에서 최상의 경험을 위해서는 WHPX를 사용하여 Android 에�
 - 에뮬레이터가 **x86** 기반 가상 디바이스용으로 생성된 시스템 이미지를 실행 중입니다.
 
 > [!IMPORTANT]
-> VM 가속화된 에뮬레이터는 VirtualBox, VMWare 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Android Emulator를 실행해야 합니다.
+> VM 가속화된 에뮬레이터는 VirtualBox, VMware 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Android Emulator를 실행해야 합니다.
 
 Android 에뮬레이터를 시작하고 디버깅하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
 
@@ -177,7 +177,7 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
 
 > [!IMPORTANT]
 >
-> VM 가속화된 에뮬레이터는 VirtualBox, VMWare 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Android Emulator를 실행해야 합니다.
+> VM 가속화된 에뮬레이터는 VirtualBox, VMware 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Android Emulator를 실행해야 합니다.
 
 Android 에뮬레이터를 시작하고 디버깅하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
 

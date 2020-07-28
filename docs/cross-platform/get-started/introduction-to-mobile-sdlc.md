@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 32dec6b8fcdd5387e138a7812d8c3e2074673111
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724836"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939622"
 ---
 # <a name="mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기
 
@@ -72,7 +72,7 @@ ms.locfileid: "76724836"
 
 UX는 일반적으로 여러 [디자인 도구 키트](https://docs.microsoft.com/windows/uwp/design/downloads/) 중 하나를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다. UX 모형을 통해 실제 UI 디자인을 고민할 필요없이 UX를 디자인할 수 있습니다.
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![UX는 일반적으로 Balsamiq와 같은 도구를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다.](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인터페이스 지침을 고려하는 것이 중요합니다. 앱은 각 플랫폼에서 “익숙한 방식”이어야 합니다. 각 플랫폼의 공식 디자인 지침은 다음과 같습니다.
 
@@ -84,11 +84,11 @@ UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인�
 
 또한 하드웨어 자체는 UX 의사 결정도 지정합니다. 예를 들어 iOS 디바이스에는 물리적 *뒤로* 단추가 없으므로 탐색 컨트롤러 메타포를 도입합니다.
 
- ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "iOS devices have no physical back button, and therefore introduce the Navigation Controller metaphor")
+ ![iOS 디바이스에는 물리적 뒤로 단추가 없으므로 탐색 컨트롤러 메타포를 도입합니다.](introduction-to-mobile-sdlc-images/01-navigation-controller.png)
 
 또한 폼 팩터도 UX 결정에 영향을 줍니다. 태블릿은 훨씬 더 많은 화면 공간을 보유하고 있으므로 더 많은 정보를 표시할 수 있습니다. 보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png)](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 그리고 수많은 폼 팩터가 있기 때문에 대상으로 지정할 수 있는 중간 크기의 폼 팩터(휴대폰과 태블릿 중간)가 있습니다.
 
@@ -98,7 +98,7 @@ UX가 결정되면 다음 단계는 UI 디자인을 만드는 것입니다. UX�
 
 UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으므로 잘 디자인된 애플리케이션은 각 플랫폼마다 다르게 나타날 수 있습니다.
 
- [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
+ [![잘 디자인된 애플리케이션은 각 플랫폼마다 다르게 보일 수 있습니다.](introduction-to-mobile-sdlc-images/multiplatform-1.png)](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 ### <a name="development"></a>개발
 

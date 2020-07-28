@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 173af9638f4e7b2da39a89dd745ec53f54cf6c39
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303728"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937568"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -537,7 +537,7 @@ public class AppController : UIApplicationDelegate {
 > [!IMPORTANT]
 > 이 섹션에서는 XIB 파일을 사용할 때의 출선과의 IDE 통합에 대해 설명합니다. Xamarin Designer for iOS를 사용하는 경우, 아래와 같이 IDE의 속성 섹션의 **ID > 이름**에 이름을 입력하여 모두 바꿉니다.
 >
-> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
+> [![iOS 디자이너에 항목 이름 입력](images/designeroutlet.png)](images/designeroutlet.png#lightbox)
 >
 >iOS 디자이너에 대한 자세한 내용은 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md#how-it-works) 문서를 확인하세요.
 

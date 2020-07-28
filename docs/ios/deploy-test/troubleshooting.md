@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: b27608642ed04216b10767d37d26699a0aef7f3e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 12194eed21fc95aaadc194be8a57319cf5c3cd3d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573770"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937243"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Xamarin.iOS 테스트 및 배포 - 문제 해결
 
@@ -22,7 +22,7 @@ iOS를 통한 코드 서명 및 프로비전은 매우 어려울 수 있으므�
 
 - 대규모 팀은 가능한 한 Xcode에서 다음과 같은 "문제 해결" 단추를 사용하지 않아야 합니다.
 
-    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png#lightbox)
+    [![문제 해결 대화 상자](troubleshooting-images/fixissue.png)](troubleshooting-images/fixissue.png#lightbox)
 
     그러면 새 프로비전 프로필과 인증서가 만들어집니다. 이렇게 하면 팀 구성원이 프로비전 프로필을 클릭할 때마다 해당 프로필을 만들어 프로필의 순서가 혼란스럽게 될 수 있습니다. 최악의 경우 회사의 다른 모든 사용자에 대한 인증서를 철회하여 앱의 작동이 중지됩니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 이중 화면 레이아웃” description: “이 가이드에서는 Xamarin.Forms TwoPaneView를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 이중 화면 레이아웃
+description: 이 가이드에서는 Xamarin.Forms TwoPaneView를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 28d4b3da44cc1a022b70c0de0720be747e047f9f
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: fb5474c7436cb985a1404b662fcf842f22cfdc0d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138894"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937698"
 ---
-# <a name="xamarinforms-dual-screen-layout"></a>Xamarin.Forms 이중 화면 레이아웃
+# <a name="xamarinforms-twopaneview-layout"></a>Xamarin.Forms TwoPaneView 레이아웃
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -27,24 +27,31 @@ ms.locfileid: "84138894"
 
 ## <a name="set-up-twopaneview"></a>TwoPaneView 설정
 
-`TwoPaneView.Source` 속성은 URI 또는 로컬 파일 경로를 받습니다. 미디어를 열면 바로 재생이 시작됩니다.
+앱에서 이중 화면 레이아웃을 만들려면 다음 지침을 따르세요.
 
-```xaml
-<ContentPage xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
-    <dualScreen:TwoPaneView>
-        <dualScreen:TwoPaneView.Pane1>
-            <StackLayout>
-                <Label Text="Pane1 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane1>
-        <dualScreen:TwoPaneView.Pane2>
-            <StackLayout>
-                <Label Text="Pane2 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane2>
-    </dualScreen:TwoPaneView>
-</ContentPage>
-```
+1. [시작](index.md) 지침에 따라 NuGet을 추가하고 Android `MainActivity` 클래스를 구성합니다.
+1. 다음 XAML을 사용하여 기본 `TwoPaneView`를 시작합니다.
+
+    ```xaml
+    <ContentPage 
+        xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
+        <dualScreen:TwoPaneView>
+            <dualScreen:TwoPaneView.Pane1>
+                <StackLayout>
+                    <Label Text="Pane1 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane1>
+            <dualScreen:TwoPaneView.Pane2>
+                <StackLayout>
+                    <Label Text="Pane2 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane2>
+        </dualScreen:TwoPaneView>
+    </ContentPage>
+    ```
+
+> [!TIP]
+> 위의 XAML은 `ContentPage` 요소에서 많은 공통 특성을 생략합니다. `TwoPaneView`를 앱에 추가할 때는 표시된 대로 `xmlns:dualScreen` 네임스페이스를 선언해야 합니다.
 
 ## <a name="understand-twopaneview-modes"></a>TwoPaneView 모드 이해
 

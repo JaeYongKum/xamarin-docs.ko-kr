@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1f71179ccafc2daf65e792c4538bf47ea2df1e7d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2f70dd3b18c36d478548672bb78d329cb2a4c9ab
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75663717"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938777"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 디바이스용으로 컴파일 중
 
@@ -20,11 +20,11 @@ ms.locfileid: "75663717"
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
+[![프로젝트 iOS 빌드 속성 페이지](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png#lightbox)
+[![프로젝트 iOS 빌드 속성 페이지](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
@@ -58,9 +58,9 @@ LLVM 최적화 백 엔드 엔진은 Mono 엔진보다 빠르고 엄격한 코드
 
 이 방법은 Mac용 Visual Studio 또는 Visual Studio의 iOS 빌드 옵션에서 사용할 수 있습니다.
 
-[![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
+[![LLVM 사용](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
+[![LLVM 사용](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
 
 ## <a name="architecture-support"></a>아키텍처 지원
 
@@ -112,7 +112,7 @@ Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입�
 - **프로젝트 옵션**을 열고 **iOS 빌드** 창으로 이동합니다.
 - 약하게 연결하려는 각 구성의 **추가 옵션**에 `'-gcc_flags "-weak_framework iAd"'`를 추가합니다.
 
-[![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
+[![추가 옵션](compiling-for-different-devices-images/image3.png)](compiling-for-different-devices-images/image3.png#lightbox)
 
 그 외에도 사용하는 유형이 존재하지 않는 이전 iOS 버전에서 실행되지 않도록 보호해야 합니다. 이렇게 하는 여러 가지 방법이 있는데, 그 중 하나는 `UIDevice.CurrentDevice.SystemVersion`을 구문 분석하는 것입니다.
 

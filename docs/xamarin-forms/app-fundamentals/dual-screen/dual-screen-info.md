@@ -10,20 +10,28 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 760d03cb5667853ab7eea021e281ebd863dd8dc4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946353"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935241"
 ---
-# <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Forms 이중 화면 디바이스 기능
+# <a name="xamarinforms-dualscreeninfo-helper-class"></a>Xamarin.Forms DualScreenInfo 도우미 클래스
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 `DualScreenInfo` 클래스를 사용하면 보기가 표시된 창과 그 크기, 디바이스의 방향, 힌지 각도 등을 확인할 수 있습니다.
+
+## <a name="configure-dualscreeninfo"></a>DualScreenInfo 구성
+
+앱에서 이중 화면 레이아웃을 만들려면 다음 지침을 따르세요.
+
+1. [시작](index.md) 지침에 따라 NuGet을 추가하고 Android `MainActivity` 클래스를 구성합니다.
+1. 클래스 파일에 `using Xamarin.Forms.DualScreen;`을 추가합니다.
+1. 앱에서 `DualScreenInfo.Current` 클래스를 사용합니다.
 
 ## <a name="properties"></a>속성
 
@@ -213,7 +221,7 @@ public partial class GridUsingDualScreenInfo : ContentPage
 
 다음 스크린샷은 결과 레이아웃을 보여 줍니다.
 
-![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
+![두 화면에 그리드 배치](dual-screen-info-images/grid-on-two-screens.png)
 
 ## <a name="related-links"></a>관련 링크
 

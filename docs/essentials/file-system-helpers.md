@@ -9,12 +9,12 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: eb35750372c5ccb878c7b38f9d25898b09fd7f1e
+ms.sourcegitcommit: e412858ce431b3280c88241e324fcab33066eb58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802359"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865899"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
 
@@ -69,6 +69,9 @@ Android 프로젝트의 **Assets** 폴더에 파일을 추가하고 빌드 작�
 
 - **CacheDirectory** – [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) 디렉터리를 반환합니다.
 - **AppDataDirectory** – iTunes 및 iCloud를 통해 백업되는 [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) 디렉터리를 반환합니다.
+
+> [!IMPORTANT]
+> iOS 시뮬레이터에서 애플리케이션 ID(디렉터리 이름에 포함됨)는 모든 빌드에서 변경되므로, 시뮬레이터용 애플리케이션을 빌드할 때마다 올바른 ID를 검색해야 합니다.
 
 iOS 프로젝트의 **Resources** 폴더에 파일을 추가하고 빌드 작업을 **BundledResource**로 표시하여 `OpenAppPackageFileAsync`와 함께 사용합니다.
 

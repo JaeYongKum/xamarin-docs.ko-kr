@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 동작 만들기” description: “Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다.'
-description: '이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.” ms.prod: xamarin ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/06/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 동작 만들기
+description: Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: f265d1da894b195402c91cbf9468a11837c53bcf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84135826"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933713"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
-_Xamarin.Forms 동작은 Behavior 또는 Behavior&lt;T&gt; 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다._
+‘Xamarin.Forms 동작은 Behavior 또는 Behavior&lt;T&gt; 클래스에서 파생되어 만들어집니다. _이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
@@ -113,7 +113,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 동작을 설명합니다.
 
-[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
+[![Xamarin.Forms Behavior가 있는 애플리케이션 예제](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Xamarin.Forms 동작을 사용한 샘플 애플리케이션")
 
 > [!NOTE]
 > 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며, 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하면 예외가 throw됩니다.

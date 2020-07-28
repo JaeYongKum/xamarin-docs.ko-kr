@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a705eef2ecd240b8944117a67a90ebeebc382bcb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139427"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933749"
 ---
 # <a name="attached-behaviors"></a>연결된 동작
 
@@ -106,7 +106,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 연결된 동작을 설명합니다.
 
-[![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png#lightbox "Sample Application with Attached Behavior")
+[![연결된 동작이 있는 애플리케이션 예제](attached-images/screenshots-sml.png)](attached-images/screenshots.png#lightbox "연결된 동작이 있는 애플리케이션 예제")
 
 > [!NOTE]
 > 연결된 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하려고 하면 알 수 없는 동작이 발생하고 동작 구현에 따라 결과가 달라집니다.

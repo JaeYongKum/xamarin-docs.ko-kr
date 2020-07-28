@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 이중 화면 트리거” description: “이 문서에서는 Xamarin.Forms 이중 화면 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 이중 화면 트리거
+description: 이 문서에서는 Xamarin.Forms 이중 화면 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 2e4d85077e1047f4158164d0c752570519c8ecdc
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84131198"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936840"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Forms 이중 화면 트리거
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) 네임스페이스에는 다음 두 가지 상태 트리거가 포함되어 있습니다.
 

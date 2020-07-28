@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 이중 화면 디자인 패턴” description: “이 가이드에서는 Xamarin.Forms가 이중 화면 디바이스에 최적화된 다양한 디자인 패턴을 지원하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 이중 화면 디자인 패턴
+description: 이 가이드에서는 Xamarin.Forms가 이중 화면 디바이스에 최적화된 다양한 디자인 패턴을 지원하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 79c0f41e8ed0bffce0154ee618729316aab5e8e2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84138790"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935280"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Forms 이중 화면 디자인 패턴
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -29,7 +29,7 @@ ms.locfileid: "84138790"
 
 확장된 캔버스 패턴에서는 두 화면을 하나의 큰 캔버스로 처리하여 지도, 이미지, 스프레드시트와 같이 펼쳐져서 최대한의 공간을 사용하면 좋은 콘텐츠를 표시합니다.
 
-![](design-patterns-images/extended-canvas-sample.png "Extended canvas sample")
+![확장된 캔버스 샘플](design-patterns-images/extended-canvas-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -59,7 +59,7 @@ ms.locfileid: "84138790"
 
 마스터-세부 패턴은 (일반적으로 왼쪽에 목록으로 나타나는) 마스터 보기에서 사용자가 항목을 선택하면 오른쪽에 해당 항목의 세부 정보가 나타나는 경우에 사용됩니다.
 
-![](design-patterns-images/master-detail-sample.png "Master detail sample")
+![마스터 세부 샘플](design-patterns-images/master-detail-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -85,7 +85,7 @@ ms.locfileid: "84138790"
 
 두 페이지 패턴은 문서 리더, 메모, 아트보드와 같이 2단 레이아웃을 사용하면 좋은 콘텐츠에 적합합니다.
 
-![](design-patterns-images/two-page-sample.png "Two page sample")
+![두 페이지 샘플](design-patterns-images/two-page-sample.png)
 
 ```xaml
 <Grid x:Name="layout">
@@ -126,7 +126,7 @@ ms.locfileid: "84138790"
 
 이중 보기 패턴은 “두 페이지” 보기처럼 보이긴 하나, 콘텐츠와 사용자 시나리오에서 차이가 있습니다. 이 패턴에서는 예를 들어 문서 또는 사진을 편집하거나 여러 식당 메뉴를 비교하거나 코드 파일의 병합 충돌을 살펴볼 때 콘텐츠를 나란히 두고 비교합니다.
 
-![](design-patterns-images/dual-view-sample.png "Dual view sample")
+![이중 보기 샘플](design-patterns-images/dual-view-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -164,7 +164,7 @@ ms.locfileid: "84138790"
 
 보조 패턴에서는 그리기 앱, 게임, 미디어 편집과 같은 경우에서처럼 두 번째 화면을 사용하여 기본 보기와 관련된 두 번째 수준의 콘텐츠를 제공하는 방법을 보여 줍니다.
 
-![](design-patterns-images/companion-pane-sample.png "Companion pane sample")
+![보조 창 샘플](design-patterns-images/companion-pane-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 52a6c3c996e2d5df204b6d0df40368bc835e990f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026363"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936775"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -32,7 +32,7 @@ Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **Mac용 Visual Studio > 기본 설정...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 선택
-3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png#lightbox)
+3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다.  [![로그 세부 정보 표시 설정](ios-build-mechanics-images/image2.png)](ios-build-mechanics-images/image2.png#lightbox)
 4. **확인** 을 클릭합니다.
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드
@@ -44,7 +44,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **도구 > 옵션...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 및 솔루션 > 빌드 및 실행** 선택
-3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png#lightbox)
+3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다.  [![MSBuild 빌드 출력 세부 정보 표시 설정](ios-build-mechanics-images/image2-vs.png)](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. **확인** 을 클릭합니다.
 5. 패키지를 지우고 다시 빌드합니다.
 6. 출력 패널에 진단 출력이 표시됩니다.
@@ -97,7 +97,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
+[![옵션 설정](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>디바이스 트릭
 
@@ -148,7 +148,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
+[![옵션 설정](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>링커 사용
 

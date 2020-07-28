@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 빠른 시작 심층 분석” description: “이 문서에서는 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본적인 사항을 검사합니다.'
-description: 'Xamarin.Forms 애플리케이션 분석, 아키텍처 및 애플리케이션 기본 사항, 사용자 인터페이스에 대해 다루었습니다.” zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.custom: video ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/27/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 빠른 시작 심층 분석
+description: 이 문서에서는 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 애플리케이션 분석, 아키텍처 및 애플리케이션 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -13,12 +13,12 @@ ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: d1670506fa78b39825368fc91d2452a44ddf8f03
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132524"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939921"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
 
@@ -30,7 +30,7 @@ ms.locfileid: "84132524"
 
 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션, 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. Notes 애플리케이션은 다음 스크린샷처럼 4개의 프로젝트를 포함하는 솔루션 하나로 구성됩니다.
 
-![](deepdive-images/vs/solution.png "Visual Studio Solution Explorer")
+![Visual Studio 솔루션 탐색기](deepdive-images/vs/solution.png)
 
 프로젝트는 다음과 같습니다.
 
@@ -43,7 +43,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 다음 스크린샷은 Visual Studio의 Notes .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
 
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard Project Contents")
+![Phoneword .NET Standard 프로젝트 콘텐츠](deepdive-images/vs/net-standard-project.png)
 
 프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
@@ -57,7 +57,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 [Mac용 Visual Studio](/visualstudio/mac/)는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션, 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. Notes 애플리케이션은 다음 스크린샷처럼 3개의 프로젝트를 포함하는 솔루션 하나로 구성됩니다.
 
-![](deepdive-images/vsmac/solution.png "Visual Studio for Mac Solution Pane")
+![Mac용 Visual Studio 솔루션 창](deepdive-images/vsmac/solution.png)
 
 프로젝트는 다음과 같습니다.
 
@@ -69,7 +69,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 다음 스크린샷은 Mac용 Visual Studio의 Notes .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
 
-![](deepdive-images/vsmac/net-standard-project.png "Phoneword .NET Standard Library Project Contents")
+![Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠](deepdive-images/vsmac/net-standard-project.png)
 
 프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
@@ -98,12 +98,12 @@ Xamarin.Forms 애플리케이션은 전통적인 플랫폼 간 애플리케이�
 
 ::: zone pivot="windows"
 
-![](deepdive-images/vs/architecture.png "Notes Architecture")
+![Notes 아키텍처](deepdive-images/vs/architecture.png)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-![](deepdive-images/vsmac/architecture.png "Notes Architecture")
+![Notes 아키텍처](deepdive-images/vsmac/architecture.png)
 
 ::: zone-end
 
@@ -388,7 +388,7 @@ await Navigation.PopAsync();
 
 데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어 한 [`Editor`](xref:Xamarin.Forms.Editor)(*대상* 개체)는 일반적으로 *소스* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
 
-![](deepdive-images/data-binding.png "Data Binding")
+![데이터 바인딩](deepdive-images/data-binding.png)
 
 데이터 바인딩의 주요 장점은 더 이상 뷰와 데이터 원본 간의 데이터 동기화에 대해 걱정할 필요가 없다는 것입니다. *source* 개체의 변경 사항은 바인딩 프레임워크가 화면 뒤에서 *target* 개체에 자동으로 푸시하며, 대상(target) 개체의 변경 내용은 필요한 경우 *source* 개체로 다시 푸시될 수 있습니다.
 
@@ -532,7 +532,7 @@ Visual Studio와 Mac용 Visual Studio는 애플리케이션을 테스트하고 �
 - 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과의 경우, 플랫폼별 프로젝트에서 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 클래스를 하위 클래스로 지정하여 만들어지고, 적절한 Xamarin.Forms 컨트롤에 연결하여 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 - 공유 코드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 네이티브 기능에 액세스할 수 있습니다. 자세한 내용은 [DependencyService를 사용한 네이티브 기능 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 
-또는 Charles Petzold의 책인 [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)는 Xamarin.Forms에 대해 더 배울 수 있는 좋은 자료입니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.
+또는 Charles Petzold의 서적인 [_Creating Mobile Apps with Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)에서 Xamarin.Forms에 대해 자세히 배울 수도 있습니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

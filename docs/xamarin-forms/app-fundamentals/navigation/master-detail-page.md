@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 마스터-세부 정보 페이지” description: “Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 해당 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다.'
-description: '이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 마스터-세부 정보 페이지
+description: Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 3a65e9bb90f01bcb5e0b1182a21d998e2335da9a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569636"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934526"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
@@ -27,7 +27,7 @@ Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 마스터 페이지는 일반적으로 다음 스크린샷과 같이 항목 목록을 표시합니다.
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![마스터 페이지 구성 요소](master-detail-page-images/masterpage-components.png)](master-detail-page-images/masterpage-components-large.png#lightbox "마스터 페이지 구성 요소")
 
 항목 목록의 위치는 각 플랫폼에서 동일하며, 항목 중 하나를 선택하면 해당 세부 정보 페이지로 이동합니다. 또한 마스터 페이지에는 활성 세부 정보 페이지로 이동하는 데 사용할 수 있는 단추가 포함된 탐색 모음이 있습니다.
 
@@ -37,7 +37,7 @@ Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 세부 정보 페이지에는 마스터 페이지에서 선택한 항목에 해당하는 데이터가 표시되고, 세부 정보 페이지의 주요 구성 요소는 다음 스크린샷에 표시됩니다.
 
-![](master-detail-page-images/detailpage-components.png "Detail Page Components")
+![세부 정보 페이지 구성 요소](master-detail-page-images/detailpage-components.png)
 
 세부 정보 페이지에는 콘텐츠가 플랫폼에 따라 달라지는 탐색 모음이 있습니다.
 
@@ -213,7 +213,7 @@ public class MasterPageCS : ContentPage
 
 다음 스크린샷에서는 각 플랫폼의 마스터 페이지를 보여 줍니다.
 
-![](master-detail-page-images/masterpage.png "Master Page Example")
+![마스터 페이지 예제](master-detail-page-images/masterpage.png)
 
 ### <a name="creating-and-displaying-the-detail-page"></a>세부 정보 페이지 만들기 및 표시
 
@@ -248,7 +248,7 @@ public partial class MainPage : MasterDetailPage
 
 다음 스크린샷에서는 마스터 페이지에서 선택한 후에 표시되는 `ContactPage` 세부 정보 페이지를 보여 줍니다.
 
-![](master-detail-page-images/detailpage.png "Detail Page Example")
+![세부 정보 페이지 예제](master-detail-page-images/detailpage.png)
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>세부 정보 페이지의 표시 동작 제어
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f5796ee17e947494d1e22f750bc43ff823d56d55
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028453"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937282"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Xamarin.iOS 앱 단위 테스트
 
@@ -23,11 +23,11 @@ Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사�
 
 프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트 추가**를 차례로 선택합니다. 목록에서 **iOS > 테스트 > 통합 API > iOS 단위 테스트 프로젝트**(C# 또는 F# 중 하나를 선택할 수 있음)를 차례로 선택합니다.
 
-![](touch.unit-images/00.png "Choose either C# or F#")
+![C# 또는 F# 선택](touch.unit-images/00.png)
 
 위에서는 기본 실행기 프로그램을 포함하고 새 MonoTouch.NUnitLite 어셈블리를 참조하는 기본 프로젝트를 만듭니다. 이 프로젝트는 다음과 같습니다.
 
-![](touch.unit-images/01.png "The project in the Solution Explorer")
+![솔루션 탐색기의 프로젝트](touch.unit-images/01.png)
 
 `AppDelegate.cs` 클래스에는 테스트 실행기가 포함되어 있으며 다음과 같습니다.
 
@@ -105,14 +105,14 @@ namespace Fixtures {
 
 테스트 실행기를 사용하면 등록된 테스트를 확인하고 실행할 수 있는 테스트를 개별적으로 선택할 수 있습니다.
 
-[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
+[![등록된 테스트 목록](touch.unit-images/02-sml.png)](touch.unit-images/02.png#lightbox) 
+[![개별 텍스트](touch.unit-images/03-sml.png)](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
+[![실행 결과](touch.unit-images/04-sml.png)](touch.unit-images/04.png#lightbox)
 
 중첩된 뷰에서 테스트 픽스쳐를 선택하여 개별 테스트 픽스쳐를 실행하거나, "모든 항목 실행"으로 모든 테스트를 실행할 수 있습니다. 기본 테스트를 실행하는 경우 통과한 테스트, 실패한 테스트 및 무시한 테스트를 하나씩 포함하도록 되어 있습니다. 보고서는 다음과 같이 표시되며, 실패한 테스트를 직접 드릴다운하여 실패에 대한 자세한 정보를 확인할 수 있습니다.
 
-[![](touch.unit-images/05-sml.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "샘플 보고서")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "샘플 보고서")](touch.unit-images/07.png#lightbox)
+[![샘플 보고서](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![샘플 보고서](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![샘플 보고서](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 또한 IDE에서 애플리케이션 출력 창을 통해 실행 중인 테스트와 현재 상태를 확인할 수도 있습니다.
 

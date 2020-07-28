@@ -10,12 +10,12 @@ ms.date: 11/09/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0967845ac61ddf5f8e1cc76664a50877d041f011
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135800"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939674"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
@@ -35,7 +35,7 @@ _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명
 다음과 같은 선택적 동작 속성도 설정할 수 있습니다.
 
 - **CommandParameter** – 명령에 전달될 `object`입니다.
-- **Converter** – 바인딩 엔진이 원본과 대상 사이에서 데이터를 전달할 때 이벤트 인수의 데이터의 형식을 변경하는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현입니다. 
+- **Converter** – 바인딩 엔진이 원본과 대상 사이에서 데이터를 전달할 때 이벤트 인수의 데이터의 형식을 변경하는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현입니다.
 
 > [!NOTE]
 > `EventToCommandBehavior`는 [EventToCommand 동작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)에 배치할 수 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
@@ -72,7 +72,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 
 `EventToCommandBehavior` 클래스가 사용되면 `Command` 속성은 `EventName` 속성에 정의된 이벤트 발생에 대한 응답으로 실행되는 `ICommand`에 바인딩된 데이터여야 합니다. 동작은 연결된 컨트롤의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에서 `ICommand`를 찾을 것으로 예상됩니다.
 
-기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달됩니다. 이 데이터는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 `Converter` 속성 값으로 지정하면 바인딩 엔진을 통해 원본에서 대상으로 전달되면서 선택적으로 변환될 수 있습니다.  또는 `CommandParameter` 속성 값을 지정하여 매개 변수를 명령에 전달할 수 있습니다.
+기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달됩니다. 이 데이터는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 `Converter` 속성 값으로 지정하면 바인딩 엔진을 통해 원본에서 대상으로 전달되면서 선택적으로 변환될 수 있습니다. 또는 `CommandParameter` 속성 값을 지정하여 매개 변수를 명령에 전달할 수 있습니다.
 
 ### <a name="implementing-the-overrides"></a>재정의 구현
 
@@ -150,7 +150,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 `OnEvent` 메서드는 `EventName` 속성에 정의된 이벤트 발생에 대한 응답으로 실행됩니다. `Command` 속성이 유효한 `ICommand`를 참조하는 경우, 메서드는 다음과 같이 `ICommand`에 전달할 매개 변수를 검색하려고 시도합니다.
 
 - `CommandParameter` 속성이 매개 변수를 정의하면 해당 매개 변수가 검색됩니다.
-- 그렇지 않은 경우, `Converter` 속성이 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 정의하면, 변환기가 실행되고 바인딩 엔진에 의해 이벤트 인수 데이터가 원본과 대상 사이에서 전달될 때 이벤트 인수 데이터를 변환합니다. 
+- 그렇지 않은 경우, `Converter` 속성이 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 정의하면, 변환기가 실행되고 바인딩 엔진에 의해 이벤트 인수 데이터가 원본과 대상 사이에서 전달될 때 이벤트 인수 데이터를 변환합니다.
 - 그렇지 않으면 이벤트 인수가 매개 변수로 간주됩니다.
 
 [`CanExecute`](xref:Xamarin.Forms.Command.CanExecute(System.Object)) 메서드가 `true`를 반환하면 데이터 바인딩 `ICommand`가 실행되고 매개 변수가 명령에 전달됩니다.
@@ -201,7 +201,7 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 런타임 시 동작은 컨트롤과의 상호 작용에 응답합니다. [`ListView`](xref:Xamarin.Forms.ListView)에서 항목을 선택하면 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트가 발생하고 ViewModel에서 `OutputAgeCommand`가 실행됩니다. 그러면 다음 스크린샷과 같이 [`Label`](xref:Xamarin.Forms.Label)이 바인딩되는 ViewModel `SelectedItemText` 속성이 업데이트됩니다.
 
-[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
+[![EventToCommandBehavior가 있는 애플리케이션 예제](event-to-command-behavior-images/screenshots-sml.png)](event-to-command-behavior-images/screenshots.png#lightbox "EventToCommandBehavior가 있는 애플리케이션 예제")
 
 이벤트가 발생할 때 이 동작을 사용하여 명령을 실행하는 이점은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결할 수 있다는 점입니다. 또한 상용구 이벤트 처리 코드가 코드 숨김 파일에서 제거됩니다.
 

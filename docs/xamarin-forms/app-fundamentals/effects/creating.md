@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d1aead9297312e190a5a04ee0f33328d81f2547a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139388"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939960"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -38,12 +38,12 @@ _효과는 컨트롤 사용자 지정을 간소화합니다. 이 문서에서는
 
 샘플 애플리케이션은 포커스가 있는 경우 컨트롤의 배경색을 변경하는 `FocusEffect`를 보여줍니다. 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](creating-images/focus-effect.png "Focus Effect Project Responsibilities")
+![포커스 효과 프로젝트 책임](creating-images/focus-effect.png)
 
 `HomePage`의 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤은 각 플랫폼별 프로젝트에서 `FocusEffect` 클래스로 사용자 지정됩니다. 각 `FocusEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷과 같이 컨트롤에 포커스가 있는 경우 변경되는 `Entry` 컨트롤이 플랫폼별 배경색으로 렌더링됩니다.
 
-![](creating-images/screenshots-1.png "Focus Effect on each Platform")
-![](creating-images/screenshots-2.png "Focus Effect on each Platform")
+![각 플랫폼의 포커스 효과](creating-images/screenshots-1.png)
+![각 플랫폼의 포커스 효과](creating-images/screenshots-2.png)
 
 ## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼의 효과 만들기
 

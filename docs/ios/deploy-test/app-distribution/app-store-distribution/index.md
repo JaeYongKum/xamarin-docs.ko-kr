@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: ee8ff58566732c6a86a339d3080c7243be4b4a4e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c9882944938b2d5136d36304c4a400208a68663a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572197"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937334"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -53,13 +53,13 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
 4. *프로덕션* 제목 아래에서 **앱 스토어 및 임시**를 선택합니다.
 
-    [![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
+    [![앱 스토어 및 임시 선택](images/createcertmanually01.png)](images/createcertmanually01.png#lightbox)
 5. **계속**을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-    [![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
+    [![키 집합 액세스를 통해 인증서 서명 요청 만들기](images/createcertmanually02.png)](images/createcertmanually02.png#lightbox)
 6. 지시한 대로 CSR을 만들었으면 **계속**을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-    [![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
+    [![Member Center에 CSR 업로드](images/createcertmanually03.png)](images/createcertmanually03.png#lightbox)
 
 7. **생성**을 클릭하여 인증서를 만듭니다.
 8. 마지막으로 완성된 인증서를 **다운로드**하고 파일을 두 번 클릭하여 설치합니다.
@@ -67,11 +67,11 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![](images/selectteam.png "팀을 선택하고 세부 정보 보기")](images/selectteam.png#lightbox)
+1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![팀을 선택하고 세부 정보 보기](images/selectteam.png)](images/selectteam.png#lightbox)
 
-2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.  [![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
+2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.  [![iOS 배포 인증서 만들기](images/selectcert.png)](images/selectcert.png#lightbox)
 
-3. 팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다.  [![](images/generated.png "서명 ID 생성 및 대화 상자 표시")](images/generated.png#lightbox)
+3. 팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다.  [![서명 ID 생성 및 대화 상자 표시](images/generated.png)](images/generated.png#lightbox)
 
 <a name="creatingprofile"></a>
 
@@ -97,27 +97,27 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 1. Apple 프로비전 포털로 돌아가서 **프로비전** > **배포**를 차례로 선택합니다.
 
-    [![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
+    [![프로비저닝 > 배포 선택](images/distribute01.png)](images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **앱 스토어**로 선택합니다.
 
-    [![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
+    [![앱 스토어 배포 프로필 만들기](images/distribute02.png)](images/distribute02.png#lightbox)
 
 3. **계속** 단추를 클릭하고 드롭다운 목록에서 배포 프로필을 만들려는 앱 ID를 선택합니다.
 
-    [![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png#lightbox)
+    [![드롭다운 목록에서 앱 ID 선택](images/distribute03.png)](images/distribute03.png#lightbox)
 
 4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 인증서를 선택합니다.
 
-    [![](images/distribute04.png "Select the certificate required to sign the application")](images/distribute04.png#lightbox)
+    [![애플리케이션 서명에 필요한 인증서 선택](images/distribute04.png)](images/distribute04.png#lightbox)
 
 5. **계속** 단추를 클릭하고 Xamarin.iOS 애플리케이션이 실행될 수 있는 iOS 디바이스를 선택합니다.
 
-    [![](images/distribute05.png "Select the iOS devices that app will be allowed to run on")](images/distribute05.png#lightbox)
+    [![앱을 실행할 수 있는 iOS 디바이스 선택](images/distribute05.png)](images/distribute05.png#lightbox)
 
 6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
-    [![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png#lightbox)
+    [![새 배포 프로필에 대한 이름 입력](images/distribute06.png)](images/distribute06.png#lightbox)
 
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
@@ -144,13 +144,13 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 �
 1. 편집하기 위해 **솔루션 탐색기**에서 프로젝트 이름을 두 번 클릭하여 엽니다.
 2. **구성** 드롭다운에서 **iOS 번들 서명** 및 **릴리스 | iPhone**을 선택합니다.
 
-    ![](images/releasexs01.png "Select Release | iPhone from the Configuration dropdown")
+    ![구성 드롭다운에서 릴리스 | iPhone 선택](images/releasexs01.png)
 3. 대부분의 경우 **서명 ID** 및 **프로비전 프로필**은 기본값(**자동**)으로 그대로 둘 수 있으며, Mac용 Visual Studio에서는 Info.plist의 번들 식별자에 따라 올바른 프로필을 선택합니다.
 
-    ![](images/releasexs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![기본값(자동)으로 설정된 서명 ID 및 프로비저닝 프로필](images/releasexs02.png)
 4. 필요한 경우 드롭다운에서 서명 ID 및 배포 프로필(위에서 만든 항목)을 선택합니다.
 
-    ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
+    ![서명 ID 및 배포 프로필 선택](images/releasexs03.png)
 5. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -160,13 +160,13 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 �
 1. 편집하기 위해 **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 엽니다.
 2. **구성** 드롭다운에서 **iOS 번들 서명** 및 **릴리스 | iPhone**을 선택합니다.
 
-    ![](images/releasevs01.png "Select Release | iPhone from the Configuration dropdown")
+    ![구성 드롭다운에서 릴리스 | iPhone 선택](images/releasevs01.png)
 3. 대부분의 경우 **서명 ID** 및 **프로비전 프로필**은 기본값(**자동**)으로 그대로 둘 수 있으며, Visual Studio에서는 Info.plist의 번들 식별자에 따라 올바른 프로필을 선택합니다.
 
-    ![](images/releasevs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![기본값(자동)으로 설정된 서명 ID 및 프로비저닝 프로필](images/releasevs02.png)
 4. 필요한 경우 드롭다운에서 서명 ID 및 배포 프로필(위에서 만든 항목)을 선택합니다.
 
-    ![](images/releasevs03.png "Select the Signing Identity and Distribution Profile")
+    ![서명 ID 및 배포 프로필 선택](images/releasevs03.png)
 5. 프로젝트의 속성에 대한 변경 내용을 저장합니다.
 
 -----

@@ -10,18 +10,18 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 65aa0f060e4d48834017a334d69b2f21645825f3
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937191"
 ---
 # <a name="xamarinforms-navigation"></a>Xamarin.Forms 탐색
 
-_Xamarin.Forms는 사용되는 페이지 유형에 따라 다양한 페이지 탐색 환경을 제공합니다._
+‘Xamarin.Forms는 사용되는 페이지 형식에 따라 다양한 페이지 탐색 환경을 제공합니다.’
 
-![](images/page-types.png "Xamarin.Forms Page Types")
+![Xamarin.Forms 페이지 유형](images/page-types.png)
 
 또는 Xamarin.Forms Shell 애플리케이션은 설정된 탐색 계층 구조를 적용하지 않는 URI 기반의 탐색 환경을 사용합니다. 자세한 내용은 [Xamarin.Forms Shell 탐색](~/xamarin-forms/app-fundamentals/shell/navigation.md)를 참조하세요.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 66d832f624bdd942f53c5f6d890457958969b1b7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c7cc3c74f5a26ec7e07636ebab865e9016409f89
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028416"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939180"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 애플리케이션 프로파일링
 
@@ -35,13 +35,13 @@ Xcode 계측은 Mac에서만 실행됩니다.
 
 이제 계측이 열리고 다음 대화 상자가 표시됩니다.
 
- [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
+ [![프로파일링 템플릿 선택](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 클릭하여 **할당** 템플릿을 선택합니다. 다른 템플릿도 유효하지만, 이 문서에서는 **할당** 프로필 템플릿만 설명합니다.
 
 다음으로, 창의 위쪽에 있는 메뉴를 사용하여 디바이스와 애플리케이션을 선택합니다.
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Select the device and application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
+[![디바이스 및 애플리케이션 선택](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 iOS 디바이스는 창 위쪽의 메뉴에서 선택해야 하며, 프로비전할 애플리케이션은 해당 디바이스(위 스크린샷의 **MemoryDemo**) 옆에서 선택해야 합니다.
 
@@ -49,13 +49,13 @@ iOS 디바이스는 창 위쪽의 메뉴에서 선택해야 하며, 프로비전
 
 **선택** 단추를 클릭하면 다음 화면이 표시됩니다.
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "The profiling interface")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![프로파일링 인터페이스](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 레코드 단추(왼쪽 위의 빨간색 원)를 클릭하여 프로파일링을 시작합니다.
 
 다음 스크린샷에서는 **계측**을 사용한 프로파일링의 예를 보여 줍니다.
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "An example of profiling using Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
+[![계측을 사용한 프로파일링의 예제](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>요약
 

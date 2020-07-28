@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929045"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -30,7 +30,7 @@ Mac용 Visual Studio는 Visual Studio와 XCode의 기능을 결합하는 무료 
 
 Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 애플리케이션** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
 
-![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
+![초기 솔루션의 스크린샷](hello-ios-deepdive-images/image30.png)
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -41,7 +41,7 @@ Visual Studio는 Microsoft의 강력한 IDE입니다. 완전히 통합된 비주
 
 Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 애플리케이션** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
 
-![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
+![초기 솔루션의 스크린샷](hello-ios-deepdive-images/vs-image30.png)
 
 ::: zone-end
 
@@ -51,14 +51,14 @@ Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루
 
 왼쪽은 **솔루션 패드**로, 솔루션과 연결된 디렉터리 구조와 모든 파일이 포함됩니다.
 
-![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
+![솔루션과 연결된 디렉터리 구조와 모든 파일이 포함된 솔루션 패드](hello-ios-deepdive-images/image31.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 오른쪽은 **솔루션 창**으로, 솔루션과 연결된 디렉터리 구조와 모든 파일이 포함됩니다.
 
-![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
+![솔루션과 연결된 디렉터리 구조와 모든 파일이 포함된 솔루션 창](hello-ios-deepdive-images/vs-image31.png)
 
 ::: zone-end
 
@@ -81,7 +81,7 @@ iOS 애플리케이션이 사용자 인터페이스를 로드하려면 두 가�
 
 이 섹션에서는 다음 다이어그램에 표시된 관계를 연구합니다.
 
-[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
+[![아키텍처 및 앱의 기본 관계가 이 다이어그램에 설명되었습니다.](hello-ios-deepdive-images/image32.png)](hello-ios-deepdive-images/image32.png#lightbox)
 
 ### <a name="main-method"></a>Main 메서드
 
@@ -146,28 +146,28 @@ iOS 디자이너는 Xamarin에서 사용자 인터페이스를 빌드하는 비�
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
+![iOS 디자이너 인터페이스](hello-ios-deepdive-images/image33.png)
 
 *스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 애플리케이션** 프로젝트를 템플릿에서 만들면 Mac용 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
 
-![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Mac용 Visual Studio가 자동으로 Main.storyboard라는 스토리보드 파일을 생성하고 단일 장면에 채웁니다.](hello-ios-deepdive-images/image34.png)
 
 장면에 대한 뷰 컨트롤러를 선택하려면 스토리보드 아래쪽의 검은색 표시줄을 선택합니다. 뷰 컨트롤러는 콘텐츠 뷰 계층 구조에 대한 백업 코드를 포함하는 `UIViewController` 클래스의 인스턴스입니다. 이 뷰 컨트롤러의 속성은 아래 스크린샷에 나온 것처럼 **Properties Pad**에서 확인하고 설정할 수 있습니다.
 
-![](hello-ios-deepdive-images/image35.png "The Properties Pane")
+![속성 창](hello-ios-deepdive-images/image35.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
+![iOS 디자이너 인터페이스](hello-ios-deepdive-images/vs-image33.png)
 
 *스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 애플리케이션** 프로젝트를 템플릿에서 만들면 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
 
-![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Visual Studio가 자동으로 Main.storyboard라는 스토리보드 파일을 생성하고 단일 장면에 채웁니다.](hello-ios-deepdive-images/vs-image34.png)
 
 장면에 대한 뷰 컨트롤러를 선택하려면 스토리보드 화면 아래쪽의 표시줄을 선택합니다. 뷰 컨트롤러는 콘텐츠 뷰 계층 구조에 대한 백업 코드를 포함하는 `UIViewController` 클래스의 인스턴스입니다. 이 뷰 컨트롤러의 속성은 아래 스크린샷에 나온 것처럼 **속성 창**에서 확인하고 설정할 수 있습니다.
 
-![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
+![속성 창](hello-ios-deepdive-images/vs-image35.png)
 
 ::: zone-end
 
@@ -175,7 +175,7 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 아래 스크린샷에서 나온 것처럼 장면의 왼쪽에 플래그 아이콘이 포함된 회색 화살표가 있습니다.
 
- [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
+ [![플래그 아이콘이 포함된 회색 화살표](hello-ios-deepdive-images/image37.png)](hello-ios-deepdive-images/image37.png#lightbox)
 
 회색 화살표는 *Segue*(“세그웨이”라고 발음)라고 하는 스토리보드 전환을 나타냅니다. 이 Segue에는 원본이 없으므로 *원본 없는 Segue*라고 합니다. 원본 없는 Segue는 애플리케이션 시작 시 뷰가 애플리케이션의 창으로 로드되는 첫 번째 장면을 가리킵니다. 그 안에 포함된 장면 및 뷰는 앱이 로드 될 때 사용자에게 가장 먼저 표시됩니다.
 
@@ -183,12 +183,12 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![도구 상자에서 디자인 화면에 있는 주 뷰로 끌 수 있는 추가 뷰](hello-ios-deepdive-images/image38.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![도구 상자에서 디자인 화면에 있는 주 뷰로 끌 수 있는 추가 뷰](hello-ios-deepdive-images/vs-image38.png)
 
 ::: zone-end
 
@@ -196,12 +196,12 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
+![문서 개요 패드](hello-ios-deepdive-images/image39.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
+![문서 개요 패드](hello-ios-deepdive-images/vs-image39.png)
 
 ::: zone-end
 
@@ -209,12 +209,12 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
+![다이어그램에서 강조 표시되어 있는 하위 뷰](hello-ios-deepdive-images/image40.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
+![다이어그램에서 강조 표시되어 있는 하위 뷰](hello-ios-deepdive-images/vs-image40.png)
 
 ::: zone-end
 
@@ -224,24 +224,24 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단일 뷰 컨트롤러에서 관리하는 뷰 및 하위 뷰의 스택입니다.
 
- [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
+ [![콘텐츠 보기 계층 구조](hello-ios-deepdive-images/image41.png)](hello-ios-deepdive-images/image41.png#lightbox)
 
 `ViewController`의 콘텐츠 뷰 계층 구조를 더 쉽게 확인할 수 있도록 **속성 패드**의 뷰 섹션에서 루트 뷰의 배경 색상을 아래 스크린샷에 나온 것처럼 일시적으로 노란색으로 변경할 수 있습니다.
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Properties Pad의 뷰 섹션에서 루트 뷰의 배경색을 노란색으로 변경](hello-ios-deepdive-images/image42.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Properties Pad의 뷰 섹션에서 루트 뷰의 배경색을 노란색으로 변경](hello-ios-deepdive-images/vs-image42.png)
 
 ::: zone-end
 
 다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
 
-[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
+[![창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계](hello-ios-deepdive-images/image43.png)](hello-ios-deepdive-images/image43.png#lightbox)
 
 다음 섹션에서는 코드에서 뷰를 사용하고 뷰 컨트롤러 및 뷰 수명 주기를 사용하여 사용자 상호 작용을 프로그래밍하는 방법에 대해 알아봅니다.
 
@@ -255,22 +255,22 @@ _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단�
 
 뷰 컨트롤러는 장면의 아래쪽에 표시줄로 스토리보드에 표시됩니다. 뷰 컨트롤러를 선택하면 해당 속성이 **Properties Pad**에 나타납니다.
 
-![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![뷰 컨트롤러를 선택하면 해당 속성이 속성 창에 나타남](hello-ios-deepdive-images/image44.png)
 
 이 장면으로 표시되는 콘텐츠 뷰 계층 구조에 대한 사용자 지정 뷰 컨트롤러 클래스는 **Properties Pad**에 있는 **ID** 섹션의 **클래스** 속성을 편집하여 설정할 수 있습니다. 예를 들어 **Phoneword** 애플리케이션은 아래 스크린샷에 나온 것처럼 `ViewController`를 첫 번째 화면에 대한 뷰 컨트롤러로 설정합니다.
 
-![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
+![Phoneword 애플리케이션이 ViewController를 뷰 컨트롤러로 설정](hello-ios-deepdive-images/image45new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 뷰 컨트롤러는 장면의 아래쪽에 표시줄로 스토리보드에 표시됩니다. 뷰 컨트롤러를 선택하면 해당 속성이 **속성 창**에 나타남
 
-![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![뷰 컨트롤러를 선택하면 해당 속성이 속성 창에 나타남](hello-ios-deepdive-images/vs-image44.png)
 
 이 장면으로 표시되는 콘텐츠 뷰 계층 구조에 대한 사용자 지정 뷰 컨트롤러 클래스는 **속성 창**에 있는 **ID** 섹션의 **클래스** 속성을 편집하여 설정할 수 있습니다. 예를 들어 **Phoneword** 애플리케이션은 아래 스크린샷에 나온 것처럼 `ViewController`를 첫 번째 화면에 대한 뷰 컨트롤러로 설정합니다.
 
-![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
+![Phoneword 애플리케이션이 ViewController를 뷰 컨트롤러로 설정](hello-ios-deepdive-images/vs-image45.png)
 
 ::: zone-end
 
@@ -313,7 +313,7 @@ public partial class ViewController : UIViewController
 이 과정을 살펴보겠습니다.
 `Phoneword_iOS` 프로젝트에서 콘텐츠 뷰 계층 구조에 `TranslateButton`이라고 하는 단추가 추가되었습니다.
 
-[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
+[![콘텐츠 보기 계층 구조에 TranslateButton이라는 단추가 추가되었습니다.](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 **이름**이 **속성 패드**의 **단추** 컨트롤에 할당되는 경우 iOS 디자이너는 `ViewController` 클래스 내에서 `TranslateButton`을 사용할 수 있도록 자동으로  **ViewController.designer.cs**의 컨트롤에 매핑합니다. 컨트롤은 먼저 뷰 수명 주기의 `ViewDidLoad` 단계에서 사용할 수 있게 되므로 이 수명 주기 메서드는 사용자의 터치에 응답하는 데 사용됩니다.
 
@@ -414,24 +414,24 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 디바이스를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침이 나와 있습니다.
 
 > [!NOTE]
-> 현재 Apple의 요구 사항에 따라 물리적 디바이스 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 ‘서명 ID’가 필요합니다.  이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+> 현재 Apple의 요구 사항에 따라 물리적 디바이스 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 ‘서명 ID’가 필요합니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 디바이스가 프로비전되고 나면, 다음 스크린샷에 표시된 것처럼 플러그 인하고 빌드 도구 모음에 있는 대상을 iOS 디바이스로 변경한 다음, **Start**(**Play**) 키를 눌러 배포할 수 있습니다.
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
+![Start/Play 키 누르기](hello-ios-deepdive-images/image46new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
+![Start/Play 키 누르기](hello-ios-deepdive-images/vs-image46.png)
 
 ::: zone-end
 
 앱이 iOS 디바이스에 배포합니다.
 
-[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
+[![앱이 iOS 디바이스에 배포되고 실행됩니다.](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>사용자 지정 아이콘 및 시작 이미지 생성
 
@@ -454,7 +454,7 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 
 ## <a name="summary"></a>요약
 
-지금까지 이제 Xamarin.iOS 애플리케이션의 구성 요소와 이를 만드는 데 사용되는 도구에 대해 확실하게 이해했습니다.
+축하합니다! 이제 Xamarin.iOS 애플리케이션의 구성 요소와 이를 만드는 데 사용되는 도구에 대해 확실하게 이해했습니다.
 [시작하기 시리즈의 다음 자습서](~/ios/get-started/hello-ios-multiscreen/index.md)에서는 여러 화면을 처리하도록 애플리케이션을 확장합니다. 그 과정에서 여러 화면을 처리하도록 애플리케이션을 확장하면서 탐색 컨트롤러를 구현하고, 스토리보드 Segues에 대해 알아보며, MVC(모델, 뷰, 컨트롤러) 패턴을 소개합니다.
 
 ## <a name="related-links"></a>관련 링크
