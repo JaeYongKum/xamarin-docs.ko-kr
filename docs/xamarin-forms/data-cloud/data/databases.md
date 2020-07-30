@@ -10,14 +10,14 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2268f9034a4b09adce697f5fb7b6652baa4feed6
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 021831da13a936fc5eb9d2e4cb63412484ceb465
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226822"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426866"
 ---
-# <a name="xamarinforms-local-databases"></a>Xamarin.Forms로컬 데이터베이스
+# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms로컬 데이터베이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
@@ -42,7 +42,7 @@ NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 �
 - **ID:** sqlite-net-pcl
 - **작성자:** SQLite-net
 - **소유자:** praeclarum
-- **프로젝트 URL:**https://github.com/praeclarum/sqlite-net
+- **프로젝트 URL:** https://github.com/praeclarum/sqlite-net
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -122,8 +122,8 @@ public class TodoItemDatabase
             if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
             {
                 await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
-                initialized = true;
             }
+            initialized = true;
         }
     }
 
@@ -219,7 +219,7 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>데이터 액세스Xamarin.Forms
+## <a name="access-data-in-no-locxamarinforms"></a>데이터 액세스Xamarin.Forms
 
 Xamarin.Forms `App` 클래스는 클래스의 인스턴스를 노출 합니다 `TodoItemDatabase` .
 

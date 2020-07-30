@@ -10,12 +10,12 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e38080fc9bc4ef0b74eb8c12c3a3f646c4888f53
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 874793975f027e1323dbf8a8acd30d19e980370b
+ms.sourcegitcommit: 562d4f2d51a43af21b7dc3ab892dd3a4264349a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177647"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1부. XAML 시작
 
@@ -148,7 +148,7 @@ Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하�
 
 이 프로그램을 컴파일하고 실행 하면 XAML에서 제안 하는 `Label` 대로 요소가 페이지의 가운데에 표시 됩니다.
 
-[![기본 Xamarin.Forms 표시](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
+[![Default::: no loc (Xamarin.ios)::: display](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 더 흥미로운 시각적 개체의 경우 더 흥미로운 XAML이 필요 합니다.
 
@@ -214,7 +214,7 @@ Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하�
 
 이러한 속성의 값을 설정 하는 데 많은 단축키가 있습니다. 일부 속성은 기본 데이터 형식입니다. 예를 들어 및 속성은 형식이 고, `Title` `Text` 는 형식이 며, `String` `Rotation` `Double` `IsVisible` `true` 기본적으로이 고 여기서는 그림에만 설정 됨은 형식입니다 `Boolean` .
 
-`HorizontalTextAlignment`속성은 열거형 인 형식입니다 `TextAlignment` . 열거형 형식의 속성의 경우 모든 사용자에 게 멤버 이름을 제공 해야 합니다.
+`HorizontalTextAlignment`속성은 열거형 인 형식입니다 `TextAlignment` . 열거형 형식의 속성의 경우에는 멤버 이름만 제공 하면 됩니다.
 
 그러나 더 복잡 한 형식의 속성에 대 한 변환기는 XAML을 구문 분석 하는 데 사용 됩니다. 이러한 클래스는에서 Xamarin.Forms 파생 되는의 클래스입니다 `TypeConverter` . 대부분은 public 클래스 이지만 일부는 그렇지 않습니다. 이 특정 XAML 파일의 경우 이러한 클래스 중 일부는 내부적으로 역할을 수행 합니다.
 
