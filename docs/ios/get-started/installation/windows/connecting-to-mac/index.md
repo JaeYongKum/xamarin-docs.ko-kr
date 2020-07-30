@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 81377d790d695b60465319aeb166eb1e62483211
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7bc6a7ce1b8cd20aa782ddde42925e4e72374ec4
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940938"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996949"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -44,7 +44,7 @@ Mac에 페어링을 사용하면 다음과 같은 개발 워크플로를 수행�
 >
 > - Windows 머신에서 [Visual Studio 2019 설치](~/get-started/installation/windows.md)
 > - Mac에서 [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) 및 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation)를 설치합니다.
->   - 설치 후 구성 요소를 추가할 수 있도록 ‘Xcode를 수동으로 열어야’  합니다.
+>   - 설치 후 구성 요소를 추가할 수 있도록 ‘Xcode를 수동으로 열어야’합니다.
 >
 > Mac용 Visual Studio를 설치하지 않으려는 경우 Visual Studio 2019는 Xamarin.iOS 및 Mono를 사용하여 Mac 빌드 호스트를 자동으로 구성할 수 있습니다.
 > 그래도 Xcode는 설치하고 실행해야 합니다.
@@ -176,9 +176,9 @@ Mac에 페어링은 Mono가 설치되어 있는지 확인합니다. 설치되어
 
 진행 상황은 다음 스크린샷과 같이 다양한 프롬프트로 표시됩니다(확대/축소하려면 클릭).
 
-||설치 확인|다운로드|설치
+|Mono|설치 확인|다운로드|설치
 |---|---|---|---|
-|Mono|[![Mono 설치 누락](images/mono-missing.png "Mono 설치 누락")](images/mono-missing-large.png#lightbox)|[![Mono 다운로드](images/mono-downloading.png "Mono 다운로드")](images/mono-downloading-large.png#lightbox)|[![Mono 설치](images/mono-installing.png "Mono 설치")](images/mono-installing-large.png#lightbox)|
+||[![Mono 설치 누락](images/mono-missing.png "Mono 설치 누락")](images/mono-missing-large.png#lightbox)|[![Mono 다운로드](images/mono-downloading.png "Mono 다운로드")](images/mono-downloading-large.png#lightbox)|[![Mono 설치](images/mono-installing.png "Mono 설치")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,17 +192,17 @@ Mac에 페어링은 Windows 컴퓨터에 설치된 버전과 일치하도록 Mac
 
 진행 상황은 다음 스크린샷과 같이 다양한 프롬프트로 표시됩니다(확대/축소하려면 클릭).
 
-||설치 확인|다운로드|설치
+|Xamarin.iOS|설치 확인|다운로드|설치
 |---|---|---|---|
-|Xamarin.iOS|[![Xamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![Xamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![Xamarin.iOS 설치](images/xamios-installing.png "Xmarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
+||[![Xamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![Xamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![Xamarin.iOS 설치](images/xamios-installing.png "Xmarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Xcode 도구 및 라이선스
 
 Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인되었는지 여부도 확인합니다. Mac에 페어링은 Xcode를 설치하지 않지만 다음 스크린샷과 같이 라이선스 승인을 요구합니다(확대/축소하려면 클릭).
 
-||설치 확인|라이선스 승인|
+|Xcode|설치 확인|라이선스 승인|
 |---|---|---|
-|Xcode|[![Xcode 설치 누락](images/xcode-missing.png "Xcode 설치 누락")](images/xcode-missing-large.png#lightbox)|[![Xcode 라이선스](images/xcode-license.png "Xcode 라이선스")](images/xcode-license-large.png#lightbox)|
+||[![Xcode 설치 누락](images/xcode-missing.png "Xcode 설치 누락")](images/xcode-missing-large.png#lightbox)|[![Xcode 라이선스](images/xcode-license.png "Xcode 라이선스")](images/xcode-license-large.png#lightbox)|
 
 또한 Mac에 페어링은 Xcode와 함께 배포되는 다양한 패키지를 설치하거나 업데이트합니다. 예를 들어:
 
