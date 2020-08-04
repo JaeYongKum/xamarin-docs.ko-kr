@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1de157540011011be6d48db25414c8667195c679
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 90309fe8a9282110a685151455d0b1407b269128
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932710"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997360"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -185,7 +185,7 @@ Apple에서는 개발자가 자신의 웹 사이트에 대한 링크를 제공�
 4. **이름** 섹션으로 스크롤합니다.
 5. 필요한 모든 정보를 입력합니다.
 
-    [![](itunesconnect-images/name01.png "Editing Name, Description, What's New, Keywords and URLs in iTunes Connect")](itunesconnect-images/name01.png#lightbox)
+    [![iTunes Connect에서 이름, 설명, 새로운 기능, 키워드 및 URL 편집](itunesconnect-images/name01.png)](itunesconnect-images/name01.png#lightbox)
 6. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!IMPORTANT]

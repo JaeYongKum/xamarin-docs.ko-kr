@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 043ad02f9ca9148910364ac82917551ee58d72ba
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 56c9fc307166ec9c72ab6cb1f7a726c4cd12cb3e
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027398"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997035"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>조각 연습 &ndash; 휴대폰
 
-이 연습은 가로 방향의 Android 디바이스를 대상으로 Xamarin.Android 앱을 만들기 위한 연습의 첫 번째 부분입니다. 이 연습에서는 Xamarin.Android에서 조각을 만드는 방법과 이를 샘플에 추가하는 방법을 설명합니다.
+이 연습은 세로 방향의 Android 디바이스를 대상으로 Xamarin.Android 앱을 만들기 위한 연습의 첫 번째 부분입니다. 이 연습에서는 Xamarin.Android에서 조각을 만드는 방법과 이를 샘플에 추가하는 방법을 설명합니다.
 
-[![](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
+[![연습 앱 스크린샷](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
 이 앱에 대해서는 다음 클래스가 생성됩니다.
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: 767282516d9fc2ce097d13641697290dad7bd8ad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fe052fee9bd72164ce0d739f01cc1c21a9517cc6
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938075"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997165"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – 연습
 
@@ -324,7 +324,7 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 3. **특성 검사기**에서 **제목** 속성을 클릭하고 단추 제목을 **Click Me**로 변경합니다.
 
-    [![](hello-mac-images/xcode09.png "Setting the button's properties")](hello-mac-images/xcode09.png#lightbox)
+    [![단추의 속성 설정](hello-mac-images/xcode09.png)](hello-mac-images/xcode09.png#lightbox)
 
 4. **라이브러리 섹션**에서 **레이블**을 끕니다.
 

@@ -10,18 +10,21 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fe099235857f6bd0531539e3aa84e41bf59b50ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7e92385f3a82c2d12881be4ff3e54bc47533696d
+ms.sourcegitcommit: ea2abdc789d0e292c3e1700a2b53b92097e0e542
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139869"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517495"
 ---
-# <a name="xamarinforms-map-geocoding"></a>Xamarin.Forms지도 지 오 코딩
+# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms지도 지 오 코딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)네임 스페이스는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 개체에 저장 되는 문자열 주소와 위도 및 경도 좌표 간을 변환 하는 클래스를 제공 합니다 [`Position`](xref:Xamarin.Forms.Maps.Position) . 구조체에 대 한 자세한 내용은 [`Position`](xref:Xamarin.Forms.Maps.Position) [지도 위치 및 거리](position-distance.md)를 참조 하세요.
+
+> [!NOTE]
+> 대체 지 오 코딩 API는 사용할에 Xamarin.Essentials 있습니다. Xamarin.Essentials `Geocoding` Api는 지 오 코딩 때이 api에서 반환 된 문자열과는 달리 구조화 된 주소 데이터를 제공 합니다. 자세한 내용은 [ Xamarin.Essentials 지 오 코딩](~/essentials/geocoding.md)를 참조 하세요.
 
 ## <a name="geocode-an-address"></a>Geocode 주소
 

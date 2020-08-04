@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e6eb62def5aeb9e4a4a347becffcae82116c1b11
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020476"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997074"
 ---
 # <a name="external-storage"></a>외부 스토리지
 
@@ -50,7 +50,7 @@ Xamarin.Android의 파일 읽기 및 쓰기는 다른 모든 .NET 애플리케�
 
 `GetExternalFilesDir()`의 매개 변수는 _애플리케이션 디렉터리_를 지정하는 문자열입니다. 이는 파일의 논리적인 조직에 대한 표준 위치를 제공하기 위한 디렉터리입니다. 문자열 값은 다음과 같은 `Android.OS.Environment` 클래스의 상수를 통해 사용할 수 있습니다.
 
-| `Android.OS.Environment` | 디렉터리 |
+| Android.OS.Environment | 디렉터리 |
 |-|-|
 | DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
 | DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |

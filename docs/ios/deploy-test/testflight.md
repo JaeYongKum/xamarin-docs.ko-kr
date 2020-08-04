@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: f020219f28ce9389c3f8d5157ddfddc32af07f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939973"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997490"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -75,8 +75,8 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
 양식은 아래 그림과 같이 앱의 Info.plist 파일에 있는 정보를 정확히 반영해야 합니다.
 
-[![](testflight-images/infoplist.png "앱의 Info.plist")](testflight-images/infoplist.png#lightbox)
-[![iTunes Connect의 양식](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
+[![앱의 Info.plist](testflight-images/infoplist.png)](testflight-images/infoplist.png#lightbox)
+[![iTunes Connect 양식](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
 
 - **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **애플리케이션 이름** 항목과 정확히 일치해야 합니다.
 - **기본 언어** - 앱 내에서 사용되는 기본 언어입니다. 일반적으로 말하는 모든 언어입니다.
@@ -227,7 +227,7 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 외부 테스터가 많은 경우 **파일 가져오기** 링크를 사용하여 줄마다 다음과 같은 형식으로 채워진 `CSV` 파일을 가져올 수 있습니다.
 
-``` 
+```
 first name, last name, email address
 ```
 

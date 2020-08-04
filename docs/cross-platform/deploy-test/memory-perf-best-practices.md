@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 89b5dc2ae296b9e9033c45bf93c87de83054f721
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571040"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996489"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -298,11 +298,11 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 애플
 
 다음과 같은 스크린샷에서는 Xamarin.iOS 프로젝트의 Mac용 Visual Studio에 있는 링커 옵션을 보여줍니다.
 
-![](memory-perf-best-practices-images/linker-options-ios.png)
+![Xamarin.iOS용 링커 옵션](memory-perf-best-practices-images/linker-options-ios.png)
 
 다음과 같은 스크린샷에서는 Xamarin.Android 프로젝트의 Mac용 Visual Studio에 있는 링커 옵션을 보여줍니다.
 
-![](memory-perf-best-practices-images/linker-options-droid.png)
+![Xamarin.Android용 링커 옵션](memory-perf-best-practices-images/linker-options-droid.png)
 
 링커는 다음과 같은 세 가지 설정을 제공하여 해당 동작을 제어합니다.
 

@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0de2ed96c7b2af69e99fbd742c0fd07b27f2ef9d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2725f189ee3999061d3dcd397eed17cc4590eaa8
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020725"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996151"
 ---
-# <a name="setup-and-installation"></a>설정 및 설치
+# <a name="install-and-setup-xamarinandroid"></a>Xamarin.Android 설치 및 설정
 
 이 섹션의 항목에서는 Windows 및 macOS에서 Visual Studio를 사용하도록 Xamarin.Android를 설치하고 구성하는 방법, Android SDK Manager를 사용하여 앱을 빌드하고 테스트하는 데 필요한 Android SDK 도구 및 구성 요소를 다운로드하고 설치하는 방법, 디버깅하기 위해 Android 에뮬레이터를 구성하는 방법 및 앱을 디버깅하고 최종 테스트하기 위해 개발 컴퓨터에 물리적 Android 디바이스를 연결하는 방법에 대해 설명합니다.
 

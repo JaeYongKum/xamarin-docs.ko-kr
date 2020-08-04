@@ -10,14 +10,14 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb5474c7436cb985a1404b662fcf842f22cfdc0d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4f7fdc0bb18a49e601c00ce1e3eb13371bb80be3
+ms.sourcegitcommit: 3698b35c823225a74892a47139d19e8ae8e6d9ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937698"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113814"
 ---
-# <a name="xamarinforms-twopaneview-layout"></a>Xamarin.Forms TwoPaneView 레이아웃
+# <a name="no-locxamarinforms-twopaneview-layout"></a>Xamarin.Forms TwoPaneView 레이아웃
 
 ![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
 
@@ -77,8 +77,8 @@ ms.locfileid: "86937698"
 
 다음 속성은 `TwoPaneView`가 하나의 화면 또는 두 개의 화면을 차지하고 있는 경우에 적용됩니다.
 
-- `TallModeConfiguration`은 세로 모드일 때 왼쪽/오른쪽 정렬을 나타내거나 TwoPaneViewPriority에서 정의한 대로 단일 창만 표시할지 여부를 나타냅니다.
-- `WideModeConfiguration`은 가로 모드일 때 위쪽/아래쪽 정렬을 나타내거나 TwoPaneViewPriority에서 정의한 대로 단일 창만 표시할지 여부를 나타냅니다.
+- `TallModeConfiguration`은 세로 모드일 때 위쪽/아래쪽 정렬을 나타내거나 TwoPaneViewPriority에서 정의한 대로 단일 창만 표시할지 여부를 나타냅니다.
+- `WideModeConfiguration`은 가로 모드일 때 왼쪽/오른쪽 정렬을 나타내거나 TwoPaneViewPriority에서 정의한 대로 단일 창만 표시할지 여부를 나타냅니다.
 - `PanePriority`는 SinglePane 모드일 경우 Pane1와 Pane2 중 어느 것을 표시할지를 정합니다.
 
 ## <a name="related-links"></a>관련 링크

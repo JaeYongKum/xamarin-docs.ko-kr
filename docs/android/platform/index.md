@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 38052eee1b71ace9795f5c16bdf714f9538e353d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9b4b74b3dbde34cb94b2ce3b104b2b5a4e1abe21
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303478"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996892"
 ---
-# <a name="platform-features"></a>플랫폼 기능
+# <a name="xamarinandroid-platform-features"></a>Xamarin.Android 플랫폼 기능
 
 _이 섹션의 문서에서는 Android와 관련된 기능을 다룹니다. 여기에서 조각 사용, 맵 작업 및 콘텐츠 공급자를 사용하여 데이터 캡슐화와 같은 항목을 찾을 수 있습니다._
 

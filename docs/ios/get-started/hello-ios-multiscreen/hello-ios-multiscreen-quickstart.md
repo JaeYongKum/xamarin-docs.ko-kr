@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 1b279b125ce88a37ddb3209cfe689a7fef50a256
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b937cc653275f509b7f759af5c3d995e84381cb2
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938751"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997347"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
@@ -67,7 +67,7 @@ ms.locfileid: "86938751"
 
 8. **Phoneword** 화면의 **제목** 표시줄을 두 번 클릭하고 **제목**을 **Phoneword**로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/09.png "Change the Title to 'Phoneword'")
+    ![제목을 Phoneword로 변경합니다.](hello-ios-multiscreen-quickstart-images/09.png)
 
 9. **도구 상자**에서 **단추**를 끌어서 **호출 단추** 아래에 배치합니다. 핸들을 끌어 새 **단추**가 **호출 단추**와 동일한 너비가 되도록 합니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "86938751"
     ![Solution Pad의 CallHistoryController.cs 파일](hello-ios-multiscreen-quickstart-images/14new.png)
 
 13. **CallHistoryController.cs** 파일을 두 번 클릭하여 열고 내용을 다음 코드로 바꿉니다.
-    
+
     ```csharp
     using System;
     using Foundation;
@@ -314,7 +314,7 @@ ms.locfileid: "86938751"
 
 10. **속성 탐색기**에서 **단추**의 **이름**을 `CallHistoryButton`으로 변경하고 **제목**을 **통화 기록**으로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
+    ![단추의 이름을 CallHistoryButton으로 변경하고 제목을 통화 기록으로 변경합니다.](hello-ios-multiscreen-quickstart-images/image9.png)
 
 11. **통화 기록** 화면을 만듭니다. **도구 상자**에서 **테이블 보기 컨트롤러**를 디자인 화면으로 끕니다.
 
