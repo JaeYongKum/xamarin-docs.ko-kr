@@ -10,14 +10,14 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a71f48fb9911267188e7aa4b4124cd9b7488d31
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fa907babc8dae0f466fd870f55b0e5be23114498
+ms.sourcegitcommit: 37ad3c1ef8faa5bfeeb305fde06e7b4654a643e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936476"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795996"
 ---
-# <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
+# <a name="no-locxamarinforms-triggers"></a>Xamarin.Forms 트리거
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
@@ -276,7 +276,7 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
         <Trigger TargetType="Entry"
                  Property="Entry.IsFocused" Value="True">
             <Trigger.EnterActions>
-                <local:FadeTriggerAction StartsFrom="0"" />
+                <local:FadeTriggerAction StartsFrom="0" />
             </Trigger.EnterActions>
 
             <Trigger.ExitActions>
@@ -319,7 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>상태 트리거
 
-상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)를 적용해야 하는 조건을 정의하는 특수한 트리거 그룹입니다. 
+상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)를 적용해야 하는 조건을 정의하는 특수한 트리거 그룹입니다.
 
 상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)의 [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) 컬렉션에 추가됩니다. 이 컬렉션은 단일 상태 트리거 또는 여러 상태 트리거를 포함할 수 있습니다. 컬렉션의 상태 트리거가 활성 상태인 경우 [`VisualState`](xref:Xamarin.Forms.VisualState)가 적용됩니다.
 

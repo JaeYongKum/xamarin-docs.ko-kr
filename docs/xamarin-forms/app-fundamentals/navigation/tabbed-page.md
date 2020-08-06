@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms TabbedPage” description: “Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다.'
-description: '이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/07/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms TabbedPage
+description: Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 733ec985f4d285f26aca62930868970026847825
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137516"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426879"
 ---
-# <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
+# <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
@@ -33,7 +33,7 @@ iOS에서 탭 목록은 화면 맨 아래에 나타나고 세부 내용 영역�
 Android에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 각 탭은 제목과 아이콘으로 구성되며 알파 채널이 있는 PNG 파일이어야 합니다. 그러나 탭은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 6개 이상의 탭이 있고 탭 목록이 화면 아래쪽에 있는 경우 추가 탭에 액세스하는 데 사용할 수 있는 *자세히* 탭이 나타납니다. 아이콘 요구 사항에 대한 자세한 내용은 material.io의 [Tabs](https://material.io/components/tabs/#) 및 developer.android.com의 [다양한 픽셀 밀도 지원](https://developer.android.com/training/multiscreen/screendensities)을 참조하세요. 화면 아래쪽으로 탭을 이동하는 방법에 대한 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md)을 참조하세요.
 
 > [!TIP]
-> Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIconDrawable` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다. 또는 위쪽 탭 표시줄의 경우 재정의 가능한 `SetTabIcon` 메서드를 사용하여 사용자 지정 `Drawable`에서 탭 아이콘을 로드할 수 있습니다.
+> Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `SetTabIconImageSource` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다.
 
 UWP(유니버설 Windows 플랫폼)에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 표시됩니다. 각 탭은 제목으로 구성됩니다. 그러나 플랫폼별로 각 탭에 아이콘을 추가할 수 있습니다. 자세한 내용은 [Windows의 TabbedPage 아이콘](~/xamarin-forms/platform/windows/tabbedpage-icons.md)을 참조하세요.
 

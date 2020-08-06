@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 셸 레이아웃” description: “플라이아웃 후에 셸 애플리케이션에서 다음 탐색 수준은 아래쪽 탭 표시줄입니다.'
-description: '또는 애플리케이션에 대한 탐색 패턴은 아래쪽 탭에서 시작될 수 있으며 플라이아웃을 사용하지 않습니다. 두 경우 모두 아래쪽 탭에 둘 이상의 페이지가 포함되면 위쪽 탭으로 페이지를 탐색할 수 있습니다.” ms.prod: xamarin ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms Shell 레이아웃
+description: 플라이아웃 후에 셸 애플리케이션에서 다음 탐색 수준은 아래쪽 탭 표시줄입니다. 또는 애플리케이션에 대한 탐색 패턴은 아래쪽 탭에서 시작될 수 있으며 플라이아웃을 사용하지 않습니다. 두 경우 모두 아래쪽 탭에 둘 이상의 페이지가 포함되면 위쪽 탭으로 페이지를 탐색할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139960"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426892"
 ---
-# <a name="xamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
+# <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -268,7 +268,7 @@ ms.locfileid: "84139960"
 </Shell>
 ```
 
-이 XAML은 서브클래싱된 `Shell` 개체에 선언된 콘텐츠의 첫 번째 항목이므로 `CatsPage`를 만들고 표시합니다. 아래쪽 탭을 통해 `CatsPage` 및 `MonkeysPage`로 이동할 수 있고 이 페이지는 사용자가 해당 페이지로 이동할 경우에만 생성됩니다. 이 방법의 이점은, 애플리케이션 시작 시가 아니라 탐색에 대한 응답으로 요청 시 페이지가 만들어지므로 시작 환경의 성능이 저하되지 않는다는 것입니다.
+이 XAML은 서브클래싱된 `Shell` 개체에 선언된 콘텐츠의 첫 번째 항목이므로 `CatsPage`를 만들고 표시합니다. 아래쪽 탭을 통해 `DogsPage` 및 `MonkeysPage`로 이동할 수 있고 이 페이지는 사용자가 해당 페이지로 이동할 경우에만 생성됩니다. 이 방법의 이점은, 애플리케이션 시작 시가 아니라 탐색에 대한 응답으로 요청 시 페이지가 만들어지므로 시작 환경의 성능이 저하되지 않는다는 것입니다.
 
 ## <a name="tab-appearance"></a>탭 모양
 
