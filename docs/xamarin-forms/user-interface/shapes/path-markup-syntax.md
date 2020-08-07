@@ -10,16 +10,16 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 971cf76fece1ea9b0744052eb23e696d02ce0bc1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8250bd5e5f7d6c9cb93a986656e908b40cec9ae2
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937737"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918510"
 ---
-# <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
+# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -27,6 +27,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 

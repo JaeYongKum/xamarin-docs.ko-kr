@@ -6,28 +6,24 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3738a0fa3519f18864c2430430a6716bed5be130
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136203"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918226"
 ---
-# <a name="xamarinforms-entry"></a>Xamarin.Forms엔트리의
+# <a name="no-locxamarinforms-entry"></a>Xamarin.Forms엔트리의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_한 줄 텍스트 또는 암호 입력_
-
 는 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 한 줄 텍스트 입력에 사용 됩니다. `Entry`뷰와 마찬가지로는 [`Editor`](xref:Xamarin.Forms.Editor) 여러 키보드 유형을 지원 합니다. 또한를 `Entry` 암호 필드로 사용할 수 있습니다.
 
-## <a name="display-customization"></a>사용자 지정 표시
-
-### <a name="setting-and-reading-text"></a>텍스트 설정 및 읽기
+## <a name="set-and-read-text"></a>텍스트 설정 및 읽기
 
 `Entry`다른 텍스트 표시 뷰와 마찬가지로는 속성을 노출 합니다 [`Text`](xref:Xamarin.Forms.InputView.Text) . 이 속성을 사용 하 여에 표시 되는 텍스트를 설정 하 고 읽을 수 있습니다 `Entry` . 다음 예제에서는 XAML에서 속성을 설정 하는 방법을 보여 줍니다 `Text` .
 
@@ -47,7 +43,7 @@ var MyEntry = new Entry { Text = "I am an Entry" };
 var text = MyEntry.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>자리 표시자 텍스트 설정
+## <a name="set-placeholder-text"></a>자리 표시자 텍스트 설정
 
 [`Entry`](xref:Xamarin.Forms.Entry)사용자 입력을 저장 하지 않을 경우 자리 표시자 텍스트를 표시 하도록를 설정할 수 있습니다. 이렇게 하려면 속성을으로 설정 하 여이를 수행 합니다 [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) `string` . 일반적으로에 적절 한 콘텐츠 형식을 나타내는 데 사용 됩니다 `Entry` . 또한 속성을로 설정 하 여 자리 표시자 텍스트 색을 제어할 수 있습니다 [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) [`Color`](xref:Xamarin.Forms.Color) .
 
@@ -62,7 +58,7 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 > [!NOTE]
 > 의 너비는 `Entry` 속성을 설정 하 여 정의할 수 있습니다 `WidthRequest` . `Entry`속성의 값에 따라 정의 되는의 너비에 의존 하지 않습니다 `Text` .
 
-### <a name="preventing-text-entry"></a>텍스트 입력 방지
+## <a name="prevent-text-entry"></a>텍스트 입력 방지
 
 사용자는 속성을로 설정 하 여의 텍스트를 수정할 수 없도록 할 수 있습니다 [`Entry`](xref:Xamarin.Forms.Entry) `IsReadOnly` .이 속성의 기본값은입니다 `false` `true` .
 
@@ -78,7 +74,33 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 > [!NOTE]
 > 속성은의 `IsReadonly` [`Entry`](xref:Xamarin.Forms.Entry) `IsEnabled` 시각적 모양을 회색으로 변경 하는 속성과 달리의 시각적 모양을 변경 하지 않습니다 `Entry` .
 
-### <a name="limiting-input-length"></a>입력 길이 제한
+## <a name="transform-text"></a>텍스트 변환
+
+는 [`Entry`](xref:Xamarin.Forms.Entry) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
+
+- `None`텍스트가 변환 되지 않음을 나타냅니다.
+- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+
+다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
+
+```xaml
+<Entry Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Entry entry = new Entry
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
+
+## <a name="limit-input-length"></a>입력 길이 제한
 
 속성은에 [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) 대해 허용 되는 입력 길이를 제한 하는 데 사용할 수 있습니다 [`Entry`](xref:Xamarin.Forms.Entry) . 이 속성은 양의 정수로 설정 해야 합니다.
 
@@ -92,7 +114,7 @@ var entry = new Entry { ... MaxLength = 10 };
 
 [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength)속성 값이 0 이면 입력이 허용 되지 않으며, `int.MaxValue` 에 대 한 기본값인 값이 이면 [`Entry`](xref:Xamarin.Forms.Entry) 입력 될 수 있는 문자 수에 대 한 유효 한도가 없음을 나타냅니다.
 
-### <a name="character-spacing"></a>문자 간격
+## <a name="character-spacing"></a>문자 간격
 
 [`Entry`](xref:Xamarin.Forms.Entry)속성을 값으로 설정 하 여에 문자 간격을 적용할 수 있습니다 `Entry.CharacterSpacing` `double` .
 
@@ -112,7 +134,7 @@ Entry entry = new Entry { CharacterSpacing = 10 };
 > [!NOTE]
 > `CharacterSpacing`속성 값은 및 속성에 의해 표시 되는 텍스트에 적용 됩니다 `Text` `Placeholder` .
 
-### <a name="password-fields"></a>암호 필드
+## <a name="password-fields"></a>암호 필드
 
 `Entry`속성을 제공 합니다 `IsPassword` . `IsPassword`가 이면 `true` 필드의 내용이 검정 원으로 표시 됩니다.
 
@@ -146,7 +168,7 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![항목 IsPassword 및 자리 표시자 예제](entry-images/passwordplaceholder.png)
 
-### <a name="setting-the-cursor-position-and-text-selection-length"></a>커서 위치 및 텍스트 선택 길이 설정
+## <a name="set-the-cursor-position-and-text-selection-length"></a>커서 위치 및 텍스트 선택 길이 설정
 
 [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition)속성을 사용 하 여 속성에 저장 된 문자열에 다음 문자를 삽입할 위치를 반환 하거나 설정할 수 있습니다 [`Text`](xref:Xamarin.Forms.InputView.Text) .
 
@@ -172,7 +194,7 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
 
 속성의 기본값은 [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) 0으로, 선택 된 텍스트가 없음을 나타냅니다.
 
-### <a name="displaying-a-clear-button"></a>지우기 단추 표시
+## <a name="display-a-clear-button"></a>지우기 단추 표시
 
 `ClearButtonVisibility`속성을 사용 하 여 [`Entry`](xref:Xamarin.Forms.Entry) 가 텍스트를 지울 수 있는 지우기 단추를 표시 하는지 여부를 제어할 수 있습니다. 이 속성은 열거형 멤버로 설정 해야 합니다 `ClearButtonVisibility` .
 
@@ -196,7 +218,7 @@ var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearBut
 
 ![IOS 및 Android에서 지우기 단추가 있는 항목의 스크린샷](entry-images/entry-clear-button.png)
 
-### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
+## <a name="customize-the-keyboard"></a>키보드 사용자 지정
 
 사용자가와 상호 작용할 때 표시 되는 키보드는 [`Entry`](xref:Xamarin.Forms.Entry) 속성을 통해 프로그래밍 방식으로 [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) 클래스의 다음 속성 중 하나로 설정할 수 있습니다 [`Keyboard`](xref:Xamarin.Forms.Keyboard) .
 
@@ -255,7 +277,7 @@ var entry = new Entry { Placeholder = "Enter text here" };
 entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-#### <a name="customizing-the-return-key"></a>반환 키 사용자 지정
+### <a name="customize-the-return-key"></a>반환 키 사용자 지정
 
 에 포커스가 있을 때 표시 되는 소프트 키보드의 반환 키 모양은 [`Entry`](xref:Xamarin.Forms.Entry) [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) 속성을 열거형의 값으로 설정 하 여 사용자 지정할 수 있습니다 [`ReturnType`](xref:Xamarin.Forms.ReturnType) .
 
@@ -283,7 +305,7 @@ var entry = new Entry { ReturnType = ReturnType.Send };
 
 반환 키를 누르면 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생 하 고 `ICommand` 속성에 의해 지정 된 [`ReturnCommand`](xref:Xamarin.Forms.Entry.ReturnCommand) 이 실행 됩니다. 또한 `object` 속성에 의해 지정 된는 [`ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter) 매개 변수로에 전달 됩니다 `ICommand` . 명령에 대한 자세한 내용은 [명령 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)를 참조하세요.
 
-### <a name="enabling-and-disabling-spell-checking"></a>맞춤법 검사 사용 및 사용 안 함
+## <a name="enable-and-disable-spell-checking"></a>맞춤법 검사 사용 및 사용 안 함
 
 [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)속성은 맞춤법 검사 사용 여부를 제어 합니다. 기본적으로 속성은로 설정 됩니다 `true` . 사용자가 텍스트를 입력 하면 맞춤법 오류가 표시 됩니다.
 
@@ -300,7 +322,7 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)속성이로 설정 되 `false` 고 사용자 지정 키보드를 사용 하지 않는 경우 네이티브 맞춤법 검사기가 비활성화 됩니다. 그러나 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 와 같은 맞춤법 검사를 사용 하지 않도록 설정한 경우에는 [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat) `IsSpellCheckEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 `Keyboard` 명시적으로 사용 하지 않도록 설정 하는에 대 한 맞춤법 검사를 사용 하도록 설정할 수 없습니다.
 
-### <a name="enabling-and-disabling-text-prediction"></a>텍스트 예측 사용 및 사용 안 함
+## <a name="enable-and-disable-text-prediction"></a>텍스트 예측 사용 및 사용 안 함
 
 [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)속성은 텍스트 예측과 자동 텍스트 교정이 사용 되는지 여부를 제어 합니다. 기본적으로 속성은로 설정 됩니다 `true` . 사용자가 텍스트를 입력 하면 단어 예측이 표시 됩니다.
 
@@ -317,7 +339,7 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > [`IsTextPredictionEnabled`](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)속성이로 설정 되 `false` 고 사용자 지정 키보드를 사용 하지 않는 경우 텍스트 예측 및 자동 텍스트 수정을 사용할 수 없습니다. 그러나가 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 텍스트 예측을 사용 하지 않도록 설정 된 경우에는 `IsTextPredictionEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 명시적으로 사용 하지 않도록 설정 하는에 대해 텍스트 예측을 사용 하도록 설정할 수 없습니다 `Keyboard` .
 
-### <a name="colors"></a>색
+## <a name="colors"></a>색
 
 다음 바인딩 가능한 속성을 통해 사용자 지정 배경 및 텍스트 색을 사용 하도록 항목을 설정할 수 있습니다.
 

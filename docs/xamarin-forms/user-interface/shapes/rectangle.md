@@ -10,16 +10,16 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91960c08640a412e02298ed051469a86c1a9f368
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 42ecfc9f09683ccc61640520975b3f50beedaaf5
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930574"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918501"
 ---
-# <a name="xamarinforms-shapes-rectangle"></a>Xamarin.Forms도형: 사각형
+# <a name="no-locxamarinforms-shapes-rectangle"></a>Xamarin.Forms도형: 사각형
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 

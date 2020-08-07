@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 49aa0ffcf7e7fa4d22024ee08f8bdf509cafd73a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a78536463b4966c38025d5c46a33aa07cb81bfdf
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937802"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918380"
 ---
-# <a name="xamarinforms-carouselview-introduction"></a>Xamarin.FormsCarouselView 소개
+# <a name="no-locxamarinforms-carouselview-introduction"></a>Xamarin.FormsCarouselView 소개
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)는 스크롤 가능한 레이아웃으로 데이터를 표시 하기 위한 뷰입니다. 사용자는 항목 컬렉션을 통해 이동할 수 있습니다. 기본적으로는 `CarouselView` 가로 방향으로 해당 항목을 표시 합니다. 단일 항목이 화면에 표시 되 고, 살짝 밀기 제스처를 사용 하 여 항목 컬렉션을 전달 하 고 뒤로 탐색 합니다. 또한의 각 항목을 나타내는 표시기를 표시할 수 있습니다 `CarouselView` .
 

@@ -10,16 +10,16 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be0c12231ff6106e07c935a111195df779698172
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 420099cadd3a541736084403265b9302c9a32b37
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934279"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918314"
 ---
-# <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
+# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -62,7 +62,8 @@ ms.locfileid: "86934279"
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red">
+      Stroke="Red"
+      StrokeThickness="1">
   <Path.Data>
     <EllipseGeometry Center="50,50"
                      RadiusX="50"
@@ -89,7 +90,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `LineGeometry` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
   <Path.Data>
     <LineGeometry StartPoint="10,20"
                   EndPoint="100,130" />
@@ -108,13 +110,14 @@ ms.locfileid: "86934279"
 
 사각형 기 하 도형은 사각형 또는 사각형의 기 하 도형을 나타내며 `Rect` 상대 위치와 높이 및 너비를 지정 하는 구조체를 사용 하 여 정의 됩니다.
 
-`RectangleGeometry`클래스는 `Rect` 사각형의 크기를 나타내는 형식의 속성을 정의 합니다 [`Rectangle`](xref:Xamarin.Forms.Rectangle) . 이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
+`RectangleGeometry`클래스는 `Rect` 사각형의 크기를 나타내는 형식의 속성을 정의 합니다 `Rect` . 이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
 
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `RectangleGeometry` `Path` .
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red">
+      Stroke="Red"
+      StrokeThickness="1">
   <Path.Data>
     <RectangleGeometry Rect="10,10,150,100" />
   </Path.Data>
@@ -156,7 +159,8 @@ ms.locfileid: "86934279"
 내의 세그먼트는 `PathFigure` 각 세그먼트의 끝점이 다음 세그먼트의 시작점 인 단일 기 하 도형으로 결합 됩니다. `StartPoint`의 속성은 `PathFigure` 첫 번째 세그먼트를 그릴 지점을 지정 합니다. 각 후속 세그먼트는 이전 세그먼트의 끝점에서 시작합니다. 예를 들어 `10,50` `10,150` 속성을로 설정 하 `StartPoint` `10,50` 고 `LineSegment` `Point` 속성 설정을 사용 `10,150` 하 여를 만들면에서로의 세로선을 정의할 수 있습니다.
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -202,7 +206,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `ArcSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -247,7 +252,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `BezierSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -285,6 +291,7 @@ ms.locfileid: "86934279"
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>
@@ -323,7 +330,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `PolyBezierSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -358,7 +366,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `PolyLineSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -389,7 +398,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `PolyQuadraticBezierSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -429,7 +439,8 @@ ms.locfileid: "86934279"
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `QuadraticBezierSegment` `Path` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -458,7 +469,8 @@ ms.locfileid: "86934279"
 개체의 조합을 사용 하 여 더 복잡 한 기 하 도형을 만들 수 있습니다 `PathSegment` . 다음 예제에서는, 및를 사용 하 여 셰이프를 만듭니다 `BezierSegment` `LineSegment` `ArcSegment` .
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>

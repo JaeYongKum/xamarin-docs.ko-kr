@@ -6,31 +6,24 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 36f4946ffc6d5a42e1997f389501f921449d0259
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3a7dedad6fc33b75a687f94897b64d04a72a0b08
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937594"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918440"
 ---
-# <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
+# <a name="no-locxamarinforms-editor"></a>Xamarin.Forms 편집기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_여러 줄 텍스트 입력_
+[`Editor`](xref:Xamarin.Forms.Editor)컨트롤은 여러 줄 입력을 허용 하는 데 사용 됩니다.
 
-[`Editor`](xref:Xamarin.Forms.Editor)컨트롤은 여러 줄 입력을 허용 하는 데 사용 됩니다. 이 문서에서는 다음 내용을 설명합니다.
-
-- **[사용자 지정](#customization)** &ndash; 키보드 및 색 옵션
-- **[대화형 작업](#interactivity)** &ndash; 에서 대화형 작업을 제공 하기 위해 수신 대기 하는 이벤트입니다.
-
-## <a name="customization"></a>사용자 지정
-
-### <a name="setting-and-reading-text"></a>텍스트 설정 및 읽기
+## <a name="set-and-read-text"></a>텍스트 설정 및 읽기
 
 [`Editor`](xref:Xamarin.Forms.Editor)다른 텍스트 표시 뷰와 마찬가지로는 속성을 노출 합니다 `Text` . 이 속성을 사용 하 여에 표시 되는 텍스트를 설정 하 고 읽을 수 있습니다 `Editor` . 다음 예제에서는 XAML에서 속성을 설정 하는 방법을 보여 줍니다 `Text` .
 
@@ -50,7 +43,7 @@ var MyEditor = new Editor { Text = "I am an Editor" };
 var text = MyEditor.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>자리 표시자 텍스트 설정
+## <a name="set-placeholder-text"></a>자리 표시자 텍스트 설정
 
 [`Editor`](xref:Xamarin.Forms.Editor)사용자 입력을 저장 하지 않을 경우 자리 표시자 텍스트를 표시 하도록를 설정할 수 있습니다. 이렇게 하려면 속성을으로 설정 하 여이를 수행 합니다 [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) `string` . 일반적으로에 적절 한 콘텐츠 형식을 나타내는 데 사용 됩니다 `Editor` . 또한 속성을로 설정 하 여 자리 표시자 텍스트 색을 제어할 수 있습니다 [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) [`Color`](xref:Xamarin.Forms.Color) .
 
@@ -62,7 +55,7 @@ var text = MyEditor.Text;
 var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
-### <a name="preventing-text-entry"></a>텍스트 입력 방지
+## <a name="prevent-text-entry"></a>텍스트 입력 방지
 
 사용자는 속성을로 설정 하 여의 텍스트를 수정할 수 없도록 할 수 있습니다 [`Editor`](xref:Xamarin.Forms.Editor) `IsReadOnly` .이 속성의 기본값은입니다 `false` `true` .
 
@@ -78,7 +71,33 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 > [!NOTE]
 > 속성은의 `IsReadonly` [`Editor`](xref:Xamarin.Forms.Editor) `IsEnabled` 시각적 모양을 회색으로 변경 하는 속성과 달리의 시각적 모양을 변경 하지 않습니다 `Editor` .
 
-### <a name="limiting-input-length"></a>입력 길이 제한
+## <a name="transform-text"></a>텍스트 변환
+
+는 [`Editor`](xref:Xamarin.Forms.Editor) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
+
+- `None`텍스트가 변환 되지 않음을 나타냅니다.
+- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+
+다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
+
+```xaml
+<Editor Text="This text will be displayed in uppercase."
+        TextTransform="Uppercase" />
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Editor editor = new Editor
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
+
+## <a name="limit-input-length"></a>입력 길이 제한
 
 속성은에 [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) 대해 허용 되는 입력 길이를 제한 하는 데 사용할 수 있습니다 [`Editor`](xref:Xamarin.Forms.Editor) . 이 속성은 양의 정수로 설정 해야 합니다.
 
@@ -92,7 +111,7 @@ var editor = new Editor { ... MaxLength = 10 };
 
 [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength)속성 값이 0 이면 입력이 허용 되지 않으며, `int.MaxValue` 에 대 한 기본값인 값이 이면 [`Editor`](xref:Xamarin.Forms.Editor) 입력 될 수 있는 문자 수에 대 한 유효 한도가 없음을 나타냅니다.
 
-### <a name="character-spacing"></a>문자 간격
+## <a name="character-spacing"></a>문자 간격
 
 [`Editor`](xref:Xamarin.Forms.Editor)속성을 값으로 설정 하 여에 문자 간격을 적용할 수 있습니다 `Editor.CharacterSpacing` `double` .
 
@@ -112,7 +131,7 @@ Editor editor = new editor { CharacterSpacing = 10 };
 > [!NOTE]
 > `CharacterSpacing`속성 값은 및 속성에 의해 표시 되는 텍스트에 적용 됩니다 `Text` `Placeholder` .
 
-### <a name="auto-sizing-an-editor"></a>편집기 자동 크기 조정
+## <a name="auto-size-an-editor"></a>편집기 자동 크기 조정
 
 [`Editor`](xref:Xamarin.Forms.Editor) [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) 속성을 열거형 값으로 설정 하 여 해당 콘텐츠에 대 한 크기를 자동으로 조정 하도록 만들 수 있습니다 [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) . 이 열거형에는 두 개의 값이 있습니다.
 
@@ -134,7 +153,7 @@ var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOpt
 > [!NOTE]
 > 속성이 설정 된 경우에는가 [`Editor`](xref:Xamarin.Forms.Editor) 자동으로 크기가 조정 되지 않습니다 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) .
 
-### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
+## <a name="customize-the-keyboard"></a>키보드 사용자 지정
 
 사용자가와 상호 작용할 때 표시 되는 키보드는 [`Editor`](xref:Xamarin.Forms.Editor) 속성을 통해 프로그래밍 방식으로 [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) 클래스의 다음 속성 중 하나로 설정할 수 있습니다 [`Keyboard`](xref:Xamarin.Forms.Keyboard) .
 
@@ -193,7 +212,7 @@ var editor = new Editor();
 editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-### <a name="enabling-and-disabling-spell-checking"></a>맞춤법 검사 사용 및 사용 안 함
+## <a name="enable-and-disable-spell-checking"></a>맞춤법 검사 사용 및 사용 안 함
 
 [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)속성은 맞춤법 검사 사용 여부를 제어 합니다. 기본적으로 속성은로 설정 됩니다 `true` . 사용자가 텍스트를 입력 하면 맞춤법 오류가 표시 됩니다.
 
@@ -210,7 +229,7 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)속성이로 설정 되 `false` 고 사용자 지정 키보드를 사용 하지 않는 경우 네이티브 맞춤법 검사기가 비활성화 됩니다. 그러나 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 와 같은 맞춤법 검사를 사용 하지 않도록 설정한 경우에는 [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat) `IsSpellCheckEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 `Keyboard` 명시적으로 사용 하지 않도록 설정 하는에 대 한 맞춤법 검사를 사용 하도록 설정할 수 없습니다.
 
-### <a name="enabling-and-disabling-text-prediction"></a>텍스트 예측 사용 및 사용 안 함
+## <a name="enable-and-disable-text-prediction"></a>텍스트 예측 사용 및 사용 안 함
 
 `IsTextPredictionEnabled`속성은 텍스트 예측과 자동 텍스트 교정이 사용 되는지 여부를 제어 합니다. 기본적으로 속성은로 설정 됩니다 `true` . 사용자가 텍스트를 입력 하면 단어 예측이 표시 됩니다.
 
@@ -227,7 +246,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > `IsTextPredictionEnabled`속성이로 설정 되 `false` 고 사용자 지정 키보드를 사용 하지 않는 경우 텍스트 예측 및 자동 텍스트 수정을 사용할 수 없습니다. 그러나가 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 텍스트 예측을 사용 하지 않도록 설정 된 경우에는 `IsTextPredictionEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 명시적으로 사용 하지 않도록 설정 하는에 대해 텍스트 예측을 사용 하도록 설정할 수 없습니다 `Keyboard` .
 
-### <a name="colors"></a>색
+## <a name="colors"></a>색
 
 `Editor`속성을 통해 사용자 지정 배경색을 사용 하도록 설정할 수 있습니다 `BackgroundColor` . 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 색의 기본값이 다르기 때문에 각 플랫폼에 대 한 사용자 지정 배경색을 설정 해야 할 수도 있습니다. 각 플랫폼에 대 한 UI를 최적화 하는 방법에 대 한 자세한 내용은 [플랫폼 조정 작업](~/xamarin-forms/platform/device.md) 을 참조 하세요.
 
@@ -275,7 +294,7 @@ XAML에서:
 
 선택한 배경색과 텍스트 색을 각 플랫폼에서 사용할 수 있으며 자리 표시자 텍스트가 모호 하지 않은지 확인 합니다.
 
-## <a name="interactivity"></a>대화형 작업
+## <a name="events-and-interactivity"></a>이벤트 및 대화형 작업
 
 `Editor`는 다음과 같은 두 이벤트를 노출 합니다.
 

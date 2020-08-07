@@ -6,18 +6,18 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 06/19/2020
+ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795025"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918351"
 ---
-# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
 
 Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되는 대부분의 컨트롤에 대 한 기본 클래스입니다 Xamarin.Forms . `VisualElement`클래스는 클래스 파생에 사용 되는 여러 [속성](#properties), [메서드](#methods)및 [이벤트](#events) 를 정의 합니다.
 
@@ -32,6 +32,10 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
 `AnchorY`속성은 `double` 눈금 및 회전과 같은 변환에 대 한 X 축의 중심점을 정의 하는 값입니다. 기본값은 0.5입니다.
+
+### `Background`
+
+`Background`속성은 `Brush` 모든 컨트롤에서 브러시를 배경으로 사용할 수 있도록 하는 값입니다. 기본값은 `Brush.Default`입니다.
 
 ### [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor)
 

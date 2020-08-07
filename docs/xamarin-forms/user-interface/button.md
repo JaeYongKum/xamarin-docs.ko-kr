@@ -6,18 +6,18 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 595367d94bcc4ac384763e915a0a19db7517341d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7ed24d38c75036245a024eecbef7f9a74380b591
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573393"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917893"
 ---
-# <a name="xamarinforms-button"></a>Xamarin.Forms단추만
+# <a name="no-locxamarinforms-button"></a>Xamarin.Forms단추만
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
@@ -426,7 +426,8 @@ public partial class PressAndReleaseButtonPage : ContentPage
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)텍스트가 기울임꼴 또는 굵은 글꼴 인지 여부를 나타냅니다.
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)테두리의 너비입니다.
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius)는의 모퉁이 반경입니다.`Button`
-- `CharacterSpacing`텍스트 문자 사이의 간격입니다. `Button`
+- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing)텍스트 문자 사이의 간격입니다 `Button` .
+- `TextTransform`텍스트의 대/소문자를 결정 합니다 `Button` .
 
 > [!NOTE]
 > `Button`또한 클래스에 [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) 는의 레이아웃 동작을 제어 하는 및 속성이 있습니다 `Button` . 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.

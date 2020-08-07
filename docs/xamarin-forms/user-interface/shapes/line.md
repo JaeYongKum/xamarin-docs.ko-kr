@@ -10,16 +10,16 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d79f232a77972b6abbce23ba65d9c277b090311
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935449"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918625"
 ---
-# <a name="xamarinforms-shapes-line"></a>Xamarin.Forms도형: 선
+# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms도형: 선
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -50,7 +50,8 @@ ms.locfileid: "86935449"
       Y1="0"
       X2="0"
       Y2="120"
-      Stroke="Red" />
+      Stroke="Red"
+      StrokeThickness="1" />
 ```
 
 이 예제에서는 (40, 0)에서 (0120)까지 빨간색 대각선을 그립니다.
@@ -61,6 +62,7 @@ ms.locfileid: "86935449"
 
 ```xaml
 <Line Stroke="Red"
+      StrokeThickness="1"
       X2="200" />
 ```
 
@@ -74,6 +76,7 @@ ms.locfileid: "86935449"
       X2="0"
       Y2="120"
       Stroke="DarkBlue"
+      StrokeThickness="1"
       StrokeDashArray="1,1"
       StrokeDashOffset="6" />
 ```

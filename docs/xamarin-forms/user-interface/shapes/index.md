@@ -6,20 +6,20 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/22/2020
+ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 053da71fdd91af91f0a037e7573def91c36df503
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6a0771ac0dbbbc89301aeca3812c3b49e14655a2
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935514"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918462"
 ---
-# <a name="xamarinforms-shapes"></a>Xamarin.Forms셰이프도
+# <a name="no-locxamarinforms-shapes"></a>Xamarin.Forms셰이프도
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 는 `Shape` [`View`](xref:Xamarin.Forms.View) 화면에 모양을 그릴 수 있는의 형식입니다. `Shape``Shape`클래스는 클래스에서 파생 되므로 레이아웃 클래스 및 대부분의 컨트롤 내에서 개체를 사용할 수 있습니다 `View` .
 
@@ -31,13 +31,14 @@ Xamarin.Forms셰이프는 `Xamarin.Forms.Shapes` iOS, Android, macOS, 유니버�
 `Shape`는 다음 속성을 정의합니다.
 
 - `Aspect`형식의은 `Stretch` 셰이프가 할당 된 공간을 채우는 방법을 설명 합니다. 이 속성의 기본값은 `Stretch.None`입니다.
-- `Fill`형식의는 [`Color`](xref:Xamarin.Forms.Color) 도형의 내부를 그리는 데 사용 되는 색을 나타냅니다.
-- `Stroke`형식의는 [`Color`](xref:Xamarin.Forms.Color) 도형의 윤곽선을 그리는 데 사용 되는 색을 나타냅니다.
+- `Fill`형식의는 `Brush` 도형의 내부를 그리는 데 사용 되는 브러시를 나타냅니다.
+- `Stroke`형식의는 `Brush` 도형의 윤곽선을 그리는 데 사용 되는 브러시를 나타냅니다.
 - `StrokeDashArray`는 `DoubleCollection` `double` 도형의 윤곽선을 지정 하는 데 사용 되는 대시와 간격의 패턴을 나타내는 값의 컬렉션을 나타내는 형식의입니다.
 - `StrokeDashOffset`형식의는 대시 `double` 패턴 내에서 대시가 시작 되는 거리를 지정 합니다. 이 속성의 기본값은 0.0입니다.
 - `StrokeLineCap`형식의는 `PenLineCap` 선 또는 세그먼트의 시작과 끝에 있는 셰이프를 설명 합니다. 이 속성의 기본값은 `PenLineCap.Flat`입니다.
 - `StrokeLineJoin`형식의는 `PenLineJoin` 도형의 꼭 짓 점에 사용 되는 조인 유형을 지정 합니다. 이 속성의 기본값은 `PenLineJoin.Miter`입니다.
-- `StrokeThickness`형식의는 `double` 셰이프 윤곽선의 너비를 나타냅니다. 이 속성의 기본값은 1.0입니다.
+- `StrokeMiterLimit`형식의는 `double` 사접 길이와 도형의 절반의 비율에 대 한 제한을 지정 합니다 `StrokeThickness` . 이 속성의 기본값은 10.0입니다.
+- `StrokeThickness`형식의는 `double` 셰이프 윤곽선의 너비를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
 
@@ -45,7 +46,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ## <a name="paint-shapes"></a>그리기 모양
 
-[`Color`](xref:Xamarin.Forms.Color)개체는 모양의 및을 그리는 데 사용 `Stroke` 됩니다 `Fill` .
+`Brush`개체는 모양의 및을 그리는 데 사용 `Stroke` 됩니다 `Fill` .
 
 ```xaml
 <Ellipse Fill="DarkBlue"
@@ -61,9 +62,11 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 ![그리기 모양](images/ellipse.png "그리기 모양")
 
 > [!IMPORTANT]
-> 에 값을 지정 하지 [`Color`](xref:Xamarin.Forms.Color) `Stroke` 않거나 `StrokeThickness` 를 0으로 설정 하면 셰이프 주위의 테두리가 그려지지 않습니다.
+> `Brush`개체는 [`Color`](xref:Xamarin.Forms.Color) 속성에 대해 값을 지정할 수 있도록 하는 형식 변환기를 사용 `Stroke` 합니다.
 
-유효한 값에 대 한 자세한 내용은 [`Color`](xref:Xamarin.Forms.Color) [의 Xamarin.Forms 색 ](~/xamarin-forms/user-interface/colors.md)을 참조 하세요.
+에 개체를 지정 하지 `Brush` `Stroke` 않거나 `StrokeThickness` 를 0으로 설정 하면 셰이프 주위의 테두리가 그려지지 않습니다.
+
+개체에 대 한 자세한 내용은 `Brush` [ Xamarin.Forms 브러시](~/xamarin-forms/user-interface/brushes/index.md)를 참조 하세요. 유효한 값에 대 한 자세한 내용은 [`Color`](xref:Xamarin.Forms.Color) [의 Xamarin.Forms 색 ](~/xamarin-forms/user-interface/colors.md)을 참조 하세요.
 
 ## <a name="stretch-shapes"></a>Stretch 셰이프
 
@@ -81,6 +84,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
+      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"
@@ -158,6 +162,9 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 - `Bevel`는 경사진 정점을 나타냅니다.
 - `Round`는 반올림 된 꼭 짓 점을 나타냅니다.
 
+> [!NOTE]
+> `StrokeLineJoin`속성이로 설정 된 경우 `Miter` 속성을 `StrokeMiterLimit` 로 설정 하 여 `double` 모양의 줄 조인에 대 한 마이터 길이를 제한할 수 있습니다.
+
 다음 XAML은 속성을 설정 하는 방법을 보여 줍니다 `StrokeLineJoin` .
 
 ```xaml
@@ -174,4 +181,5 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 ## <a name="related-links"></a>관련 링크
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms브러시](~/xamarin-forms/user-interface/brushes/index.md)
 - [색의Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

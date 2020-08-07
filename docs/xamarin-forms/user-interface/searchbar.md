@@ -6,18 +6,18 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 11/04/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a4c782f95db0f8e777494c47e9e668e9af67a2cc
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917772"
 ---
-# <a name="xamarinforms-searchbar"></a>Xamarin.FormsSearchBar
+# <a name="no-locxamarinforms-searchbar"></a>Xamarin.FormsSearchBar
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
@@ -25,7 +25,7 @@ ms.locfileid: "84127545"
 
 [![IOS 및 Android에 대 한 SearchBar의 스크린샷](searchbar-images/device-searchbars-cropped.png "IOS 및 Android의 SearchBar")](searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 SearchBar")
 
-`SearchBar`클래스는 다음 속성을 정의 합니다.
+`SearchBar` 클래스는 다음과 같은 속성을 정의합니다.
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)는 `Color` 취소 단추의 색을 정의 하는입니다.
 * `double` 형식의 `CharacterSpacing`은 `SearchBar` 텍스트를 구성하는 문자 사이의 간격입니다.
@@ -40,6 +40,7 @@ ms.locfileid: "84127545"
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `SearchCommand` .
 * [`Text`](xref:Xamarin.Forms.InputView.Text)는의 `string` 쿼리 텍스트를 포함 하는입니다 `SearchBar` .
 * [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)는 `Color` 쿼리 텍스트 색을 정의 하는입니다.
+* `TextTransform``TextTransform`텍스트의 대/소문자를 결정 하는 값입니다 `SearchBar` .
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,를 `SearchBar` 사용자 지정 하 고 데이터 바인딩의 대상으로 지정할 수 있습니다. 에서 글꼴 속성을 지정 하 `SearchBar` 는 것은 다른 [ Xamarin.Forms 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [의 Xamarin.Forms 글꼴 ](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
 
@@ -66,6 +67,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
            CancelButtonColor="Orange"
            PlaceholderColor="Orange"
            TextColor="Orange"
+           TextTransform="Lowercase"
            HorizontalTextAlignment="Center"
            FontSize="Medium"
            FontAttributes="Italic" />
@@ -79,6 +81,7 @@ SearchBar searchBar = new SearchBar
     Placeholder = "Search items...",
     PlaceholderColor = Color.Orange,
     TextColor = Color.Orange,
+    TextTransform = TextTransform.Lowercase,
     HorizontalTextAlignment = TextAlignment.Center,
     FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(SearchBar)),
     FontAttributes = FontAttributes.Italic

@@ -6,18 +6,18 @@ ms.prod: xamarin
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/17/2020
+ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b451fe004ca21c8770658f31c9c38253e073c259
-ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
+ms.openlocfilehash: efd9cabc9504a9fa56f1f7a763013e6852be9382
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100185"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918100"
 ---
-# <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
+# <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
@@ -26,9 +26,6 @@ ms.locfileid: "86100185"
 시스템 테마는 장치 구성에 따라 다양 한 이유로 변경 될 수 있습니다. 여기에는 사용자가 명시적으로 변경 하는 시스템 테마, 하루 중 시간으로 변경 된 시스템 테마 및 낮은 광원 등의 환경적 요소로 인 한 변경 내용이 포함 됩니다.
 
 Xamarin.Forms응용 프로그램은 `AppThemeBinding` 태그 확장 및 `SetAppThemeColor` 및 확장 메서드를 사용 하 여 리소스를 사용 하 여 시스템 테마 변경에 응답할 수 있습니다 `SetOnAppTheme<T>` .
-
-> [!IMPORTANT]
-> 시스템 테마 변경에 대 한 응답은 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `AppTheme_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조 하세요.
 
 Xamarin.Forms시스템 테마 변경에 응답 하려면에 대해 다음과 같은 요구 사항을 충족 해야 합니다.
 

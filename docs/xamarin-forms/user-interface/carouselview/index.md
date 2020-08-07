@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 40b918adff523fa446e69c064029311c54d01290
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2ff88431869c4a14919fb13e5059cd11fcdbdc3c
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935046"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918640"
 ---
-# <a name="xamarinforms-carouselview"></a>Xamarin.FormsCarouselView
+# <a name="no-locxamarinforms-carouselview"></a>Xamarin.FormsCarouselView
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 ## <a name="introduction"></a>[소개](introduction.md)
 

@@ -10,16 +10,16 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 279df31eeda506d6780533bac8ae190f799424a3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936034"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918564"
 ---
-# <a name="xamarinforms-c-markup"></a>Xamarin.FormsC # 태그
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsC # 태그
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 

@@ -10,16 +10,16 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e23e4151c4841dd4dce80ba0358471c64a26f39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937614"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918255"
 ---
-# <a name="xamarinforms-shapes-path"></a>Xamarin.Forms셰이프: 경로
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms셰이프: 경로
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -48,6 +48,7 @@ ms.locfileid: "86937614"
 ```xaml
 <Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start" />
 ```
@@ -71,6 +72,7 @@ ms.locfileid: "86937614"
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>

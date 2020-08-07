@@ -6,18 +6,18 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/22/2019
+ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 425eb7abc14fb941dbfc28219907d98558cbfabb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 73e7ace96c17aea2b397f2706e128ea498338b09
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137438"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918263"
 ---
-# <a name="xamarinforms-collectionview-layout"></a>Xamarin.FormsCollectionView 레이아웃
+# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.FormsCollectionView 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -97,7 +97,7 @@ ms.locfileid: "84137438"
 </CollectionView>
 ```
 
-그러나 완전성을 위해의 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하 여 해당 항목을 세로 목록에 표시 하도록를 설정할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `VerticalList` .
+그러나 완전성을 위해 XAML에서 속성을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 로 설정 하 여 해당 항목을 세로 목록에 표시 하도록를 설정할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `VerticalList` .
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -133,7 +133,7 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="horizontal-list"></a>가로 목록
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)에서는 속성을로 설정 하 여 해당 항목을 가로 목록에 표시할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `HorizontalList` .
+XAML에서은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하 여 해당 항목을 가로 목록에 표시할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `HorizontalList` .
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -197,14 +197,11 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="vertical-grid"></a>세로 눈금
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 속성이 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) 로 설정 된 개체에 속성을 설정 하 여 해당 항목을 세로 모눈에 표시할 수 있습니다 [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) `Vertical` .
+XAML에서은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하 여 해당 항목을 세로 모눈에 표시할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `VerticalGrid` .
 
 ```xaml
-<CollectionView ItemsSource="{Binding Monkeys}">
-    <CollectionView.ItemsLayout>
-       <GridItemsLayout Orientation="Vertical"
-                        Span="2" />
-    </CollectionView.ItemsLayout>
+<CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="VerticalGrid, 2">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -237,6 +234,18 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
+또는 속성이 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) 로 설정 된 개체로 속성을 설정 하 여이 레이아웃을 수행할 수도 있습니다 `Vertical` .
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2" />
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
 해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
@@ -253,14 +262,11 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="horizontal-grid"></a>가로 눈금
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 속성이 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) 로 설정 된 개체로 속성을 설정 하 여 가로 모눈에 항목을 표시할 수 있습니다 [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) `Horizontal` .
+XAML에서은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하 여 가로 모눈에 항목을 표시할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) `HorizontalGrid` .
 
 ```xaml
-<CollectionView ItemsSource="{Binding Monkeys}">
-    <CollectionView.ItemsLayout>
-       <GridItemsLayout Orientation="Horizontal"
-                        Span="4" />
-    </CollectionView.ItemsLayout>
+<CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="HorizontalGrid, 4">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -290,6 +296,18 @@ CollectionView collectionView = new CollectionView
             </Grid>
         </DataTemplate>
     </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+또는 속성이 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) 로 설정 된 개체로 속성을 설정 하 여이 레이아웃을 수행할 수도 있습니다 `Horizontal` .
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Horizontal"
+                        Span="4" />
+    </CollectionView.ItemsLayout>
+    ...
 </CollectionView>
 ```
 
@@ -532,7 +550,7 @@ CollectionView collectionView = new CollectionView
 
 의 UI 요소가 고정 크기를 지정 하지 않는 경우 기본적으로의 각 항목 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 개별적으로 측정 되 고 크기가 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 지정 됩니다. 변경할 수 있는이 동작은 속성 값으로 지정 됩니다 [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) . 이 속성 값은 열거형 멤버 중 하나로 설정할 수 있습니다 [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) .
 
-- `MeasureAllItems`– 각 항목은 개별적으로 측정 됩니다. 이것은 기본값입니다.
+- `MeasureAllItems`– 각 항목은 개별적으로 측정 됩니다. 기본값입니다.
 - `MeasureFirstItem`– 첫 번째 항목만 측정 되며 이후의 모든 항목은 첫 번째 항목의 크기와 동일 하 게 지정 됩니다.
 
 > [!IMPORTANT]
@@ -600,5 +618,5 @@ void OnImageTapped(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [오른쪽에서 왼쪽으로 쓰는 언어 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
+- [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.FormsCollectionView 스크롤](scrolling.md)

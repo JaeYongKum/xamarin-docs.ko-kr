@@ -6,25 +6,26 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/15/2020
+ms.date: 07/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bd35722c76cce245701b7a548514d402cd978d38
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 6dafdc547e4673134e8ff3badc85a3527dfc55c4
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853069"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917423"
 ---
-# <a name="xamarinforms-experimental-flags"></a>Xamarin.Forms실험적 플래그
+# <a name="no-locxamarinforms-experimental-flags"></a>Xamarin.Forms실험적 플래그
 
 새 Xamarin.Forms 기능이 구현 되 면 종종 실험적 플래그 뒤에 배치 됩니다. 이를 통해 엔지니어링 팀은 새로운 기능을 보다 신속 하 게 제공할 수 있으며, 기능 Api를 안정적인 릴리스로 전환 하기 전에 계속 해 서 변경할 수 있습니다. 그러면 기능이 안정적인 릴리스로 이동 되 면 실험적 플래그가 제거 됩니다.
 
 Xamarin.Forms에는 다음 실험적 플래그가 포함 되어 있습니다.
 
-- `AppTheme_Experimental`
+- `Brush_Experimental`
 - `CarouselView_Experimental`
+- `DragAndDrop_Experimental`
 - `Expander_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`

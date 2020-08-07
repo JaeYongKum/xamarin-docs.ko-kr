@@ -6,22 +6,22 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/09/2020
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8bf6517e3624ad80c2fd4d209e5a77472460be76
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1fcfc2c3fbb91a7ee326db7aeef08459e05d834d
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570520"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917875"
 ---
-# <a name="xamarinforms-label"></a>Xamarin.Forms레이블
+# <a name="no-locxamarinforms-label"></a>Xamarin.Forms레이블
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Xamarin.ios에 텍스트 표시_
+_텍스트 표시Xamarin.Forms_
 
 [`Label`](xref:Xamarin.Forms.Label)뷰는 단일 및 여러 줄 텍스트를 표시 하는 데 사용 됩니다. 레이블에는 텍스트 장식, 색이 지정 된 텍스트 및 사용자 지정 글꼴 (패밀리, 크기 및 옵션)을 사용할 수 있습니다.
 
@@ -55,6 +55,32 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 > [!NOTE]
 > 텍스트 장식을 인스턴스에 적용할 수도 있습니다 [`Span`](xref:Xamarin.Forms.Span) . 클래스에 대 한 자세한 내용은 `Span` 서식 있는 [텍스트](#formatted-text)를 참조 하세요.
+
+## <a name="transform-text"></a>텍스트 변환
+
+는 [`Label`](xref:Xamarin.Forms.Entry) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
+
+- `None`텍스트가 변환 되지 않음을 나타냅니다.
+- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+
+다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
+
+```xaml
+<Label Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Label label = new Label
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
 
 ## <a name="character-spacing"></a>문자 간격
 
@@ -143,7 +169,7 @@ public partial class LabelPage : ContentPage
 
 색에 대 한 자세한 내용은 [색](~/xamarin-forms/user-interface/colors.md)을 참조 하세요.
 
-## <a name="fonts"></a>Fonts
+## <a name="fonts"></a>글꼴
 
 에 글꼴을 지정 하는 방법에 대 한 자세한 내용은 `Label` [글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
 
@@ -390,7 +416,7 @@ var label = new Label
 
 ![Span LineHeight 예](label-images/span-lineheight.png)
 
-## <a name="padding"></a>여백
+## <a name="padding"></a>안쪽 여백
 
 안쪽 여백은 요소와 자식 요소 사이의 공간을 나타내며 요소를 자체 콘텐츠에서 구분 하는 데 사용 됩니다. [`Label`](xref:Xamarin.Forms.Label)속성을 값으로 설정 하 여 인스턴스에 안쪽 여백을 적용할 수 있습니다 `Label.Padding` [`Thickness`](xref:Xamarin.Forms.Thickness) .
 
