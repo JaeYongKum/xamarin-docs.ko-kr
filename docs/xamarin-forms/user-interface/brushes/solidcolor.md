@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04e882f9b64d0e1f56e1170d353af4e13b079933
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 7b77cab7c0f87dbedf66651c3ab59ef20b7f3ecd
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919142"
+ms.locfileid: "87919565"
 ---
 # <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms브러시: 단색
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 
 클래스는 `SolidColorBrush` 클래스에서 파생 `Brush` 되며 단색으로 영역을 그리는 데 사용 됩니다. 의 색을 지정 하는 방법에는 여러 가지가 있습니다 `SolidColorBrush` . 예를 들어 값을 사용 [`Color`](xref:Xamarin.Forms.Color) 하거나 `SolidColorBrush` 클래스에서 제공 하는 미리 정의 된 개체 중 하나를 사용 하 여 색을 지정할 수 있습니다 `Brush` .
 
@@ -131,5 +131,5 @@ Frame frame = new Frame
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 - [색의Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b6fe37fda3fd54b4df5cb6f5dacce0d910ecb3f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 254a4433888be0e441ae37d41c24b1886040998b
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919192"
+ms.locfileid: "87919621"
 ---
 # <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms브러시: 그라데이션
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 
 `GradientBrush`클래스는 클래스에서 파생 `Brush` 되며 그라데이션 중지점으로 구성 된 그라데이션을 설명 하는 추상 클래스입니다. 그라데이션 브러시는 축을 따라 서로 혼합되는 여러 색으로 영역을 그립니다. 에서 파생 되는 클래스는 `GradientBrush` 그라데이션 중지점을 해석 하는 다양 한 방법을 설명 하 고 Xamarin.Forms 다음과 같은 그라데이션 브러시를 제공 합니다.
 
@@ -71,6 +71,6 @@ ms.locfileid: "87919192"
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 - [Xamarin.Forms브러시: 선형 그라데이션](lineargradient.md)
 - [Xamarin.Forms브러시: 방사형 그라데이션](radialgradient.md)

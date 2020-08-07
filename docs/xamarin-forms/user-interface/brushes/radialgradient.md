@@ -10,18 +10,18 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dd915384c630cc08a2bd79a52dd22ccb40835dfa
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 897ffd8b86eb161f0264a095b5a041828e631dae
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919155"
+ms.locfileid: "87919552"
 ---
 # <a name="no-locxamarinforms-brushes-radial-gradients"></a>Xamarin.Forms브러시: 방사형 그라데이션
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 
 클래스는 `RadialGradientBrush` 클래스에서 파생 `GradientBrush` 되 고 방사형 그라데이션을 사용 하 여 영역을 그리며,이는 원에서 두 개 이상의 색을 혼합 합니다. `GradientStop`개체는 그라데이션의 색과 위치를 지정 하는 데 사용 됩니다. 개체에 대 한 자세한 내용은 `GradientStop` [ Xamarin.Forms 브러시: 그라데이션](gradient.md)을 참조 하세요.
 
@@ -102,5 +102,5 @@ ms.locfileid: "87919155"
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 - [Xamarin.Forms브러시: 그라데이션](gradient.md)
