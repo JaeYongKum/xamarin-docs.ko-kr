@@ -6,18 +6,18 @@ ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 07/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 321539f877a86804245d27a2d76d1edeb1abd1e9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 76f9b4e243af908e5d00ba8b812dfd143104fe65
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137789"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426853"
 ---
-# <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.Forms Shell 사용자 지정 렌더러
+# <a name="no-locxamarinforms-shell-custom-renderers"></a>Xamarin.Forms Shell 사용자 지정 렌더러
 
 Xamarin.Forms Shell 애플리케이션의 이점 중 하나는 다양한 셸 클래스가 공개하는 속성 및 메서드를 통해 해당 모양과 동작을 세부적으로 사용자 지정할 수 있다는 것입니다. 그러나 더 정교한 플랫폼별 사용자 지정이 필요한 경우에는 셸 사용자 지정 렌더러를 만들 수도 있습니다. 다른 사용자 지정 렌더러와 마찬가지로, 다른 플랫폼에서 기본 동작을 허용하는 동안 셸 사용자 지정 렌더러를 하나의 플랫폼 프로젝트에만 추가하여 모양과 동작을 사용자 지정할 수 있습니다. 또는 다른 셸 사용자 지정 렌더러를 각 플랫폼 프로젝트에 추가하여 iOS 및 Android에서 모양과 동작을 사용자 지정할 수 있습니다.
 
@@ -42,14 +42,14 @@ iOS 및 Android에서는 `ShellRenderer` 클래스를 사용하여 셸 애플리
 
 `ShellRenderer` 클래스는 다음 재정의 가능한 메서드를 공개합니다.
 
-| iOS | Android |
-| --- | --- |
-| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+| iOS | Android | UWP |
+| --- | --- | --- |
+| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` | `CreateShellFlyoutTemplateSelector`<br />`CreateShellHeaderRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateFlyoutBackdropColor`<br />`UpdateFlyoutBackgroundColor` |
 
 `FlyoutItem` 및 `TabBar` 클래스는 `ShellItem` 클래스의 별칭이고 `Tab` 클래스는 `ShellSection` 클래스의 별칭입니다. 따라서 `FlyoutItem` 개체의 사용자 지정 렌더러를 만들 때는 `CreateShellItemRenderer` 메서드를 재정의하고 `Tab` 개체의 사용자 지정 렌더러를 만들 때는 `CreateShellSectionRenderer` 메서드를 재정의해야 합니다.
 
 > [!IMPORTANT]
-> iOS 및 Android에는 둘 다 `ShellSectionRenderer` 및 `ShellItemRenderer`와 같은 셸 렌더러 클래스가 있습니다. 그러나 이 추가 렌더러 클래스는 `ShellRenderer` 클래스에서 재정의를 통해 생성됩니다. 따라서 이 추가 렌더러 클래스의 동작을 사용자 지정하려면 해당 클래스를 서브클래싱하고 서브클래싱된 `ShellRenderer` 클래스에서 적절한 재정의로 서브클래스 인스턴스를 만들면 됩니다.
+> iOS, Android 및 UWP에 `ShellSectionRenderer` 및 `ShellItemRenderer`와 같은 추가 셸 렌더러 클래스가 있습니다. 그러나 이 추가 렌더러 클래스는 `ShellRenderer` 클래스에서 재정의를 통해 생성됩니다. 따라서 이 추가 렌더러 클래스의 동작을 사용자 지정하려면 해당 클래스를 서브클래싱하고 서브클래싱된 `ShellRenderer` 클래스에서 적절한 재정의로 서브클래스 인스턴스를 만들면 됩니다.
 
 ### <a name="ios-example"></a>iOS 예제
 
