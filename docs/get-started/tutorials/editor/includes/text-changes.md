@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 653d3677f96d7da78af61531c535b1b7db684e7e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f1671f4f40e3eb44465431d39994cf5e623665a1
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "77135097"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87919254"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -47,7 +47,7 @@ ms.locfileid: "77135097"
 
     두 개의 이벤트 처리기에서 중단점을 설정하고, [`Editor`](xref:Xamarin.Forms.Editor)에 텍스트를 입력하고, [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 이벤트가 발생하는지 살펴봅니다. `Editor`의 포커스를 제거하여 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생하는지 살펴봅니다.
 
-    [`Editor`](xref:Xamarin.Forms.Editor) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 편집기](~/xamarin-forms/user-interface/text/editor.md) 가이드에서 [대화형 작업](~/xamarin-forms/user-interface/text/editor.md#interactivity)을 참조하세요.
+    [`Editor`](xref:Xamarin.Forms.Editor) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 편집기](~/xamarin-forms/user-interface/text/editor.md) 가이드에서 [이벤트 및 대화형 작업](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity)을 참조하세요.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
@@ -90,4 +90,4 @@ ms.locfileid: "77135097"
 
     두 개의 이벤트 처리기에서 중단점을 설정하고, [`Editor`](xref:Xamarin.Forms.Editor)에 텍스트를 입력하고, [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 이벤트가 발생하는지 살펴봅니다. `Editor`의 포커스를 제거하여 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생하는지 살펴봅니다.
 
-    [`Editor`](xref:Xamarin.Forms.Editor) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 편집기](~/xamarin-forms/user-interface/text/editor.md) 가이드에서 [대화형 작업](~/xamarin-forms/user-interface/text/editor.md#interactivity)을 참조하세요.
+    [`Editor`](xref:Xamarin.Forms.Editor) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 편집기](~/xamarin-forms/user-interface/text/editor.md) 가이드에서 [이벤트 및 대화형 작업](~/xamarin-forms/user-interface/text/editor.md#events-and-interactivity)을 참조하세요.
