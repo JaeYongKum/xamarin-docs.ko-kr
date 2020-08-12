@@ -10,14 +10,14 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9a097d6dad067f209d3aad27bde382f28910324a
+ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138504"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88130931"
 ---
-# <a name="choose-a-xamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
+# <a name="choose-a-no-locxamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
@@ -25,7 +25,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 다음 이미지는 주 레이아웃 클래스를 사용 하 여 얻을 수 있는 일반적인 레이아웃을 보여 줍니다 Xamarin.Forms .
 
-[![의 주 레이아웃 클래스Xamarin.Forms](images/layouts.png "[! OP. 비-LOC (Xamarin.ios)] 레이아웃 클래스")](images/layouts-large.png#lightbox "[! OP. 비-LOC (Xamarin.ios)] 레이아웃 클래스")
+[![::: No loc (Xamarin.ios):::의 주 레이아웃 클래스](images/layouts.png "::: no loc (Xamarin.ios)::: layout 클래스")](images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: layout 클래스")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -78,7 +78,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 자세한 내용은 [ Xamarin.Forms stacklayout](stacklayout.md)을 참조 하세요.
 
-## <a name="grid"></a>표
+## <a name="grid"></a>Grid
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 비례 또는 절대 크기를 가질 수 있는 행 및 열에 요소를 표시 하는 데 사용 됩니다. 표의 행과 열은 및 속성을 사용 하 여 지정 됩니다 [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) .
 
@@ -234,7 +234,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 > [!CAUTION]
 > [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize)레이아웃 엔진이 추가 레이아웃 계산을 수행 하 게 하므로 가능 하면 항상 속성을 사용 하지 않도록 합니다.
 
-자세한 내용은 [ Xamarin.Forms AbsoluteLayout](absolute-layout.md)를 참조 하세요.
+자세한 내용은 [ Xamarin.Forms AbsoluteLayout](absolutelayout.md)를 참조 하세요.
 
 ## <a name="input-transparency"></a>입력 투명도
 
@@ -255,7 +255,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 - [Xamarin.FormsStackLayout](stacklayout.md)
 - [Xamarin.Forms그리드에](grid.md)
 - [Xamarin.Forms가는 레이아웃](flex-layout.md)
-- [Xamarin.FormsAbsoluteLayout](absolute-layout.md)
+- [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
 - [Xamarin.FormsRelativeLayout](relative-layout.md)
 - [레이아웃 성능 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [레이아웃 압축](layout-compression.md)

@@ -10,14 +10,14 @@ ms.date: 07/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 06f1813bafb34a9c32603490e66f8caa6c6a6a22
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3f4788c0201d2d286ff4de9b29ba6385d323a3b0
+ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573822"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88130944"
 ---
-# <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
+# <a name="no-locxamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
@@ -64,13 +64,13 @@ ms.locfileid: "84573822"
 </ContentPage>
 ```
 
-결과는 다음과 같습니다.
+결과:
 
 [![기본 BoxView](boxview-images/basicboxview-small.png "기본 BoxView")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
 `VerticalOptions` `HorizontalOptions` 태그에서 및 속성을 제거 `BoxView` 하거나로 설정 하면가 `Fill` `BoxView` 페이지 크기에 따라 제약 되 고 페이지를 채우도록 확장 됩니다.
 
-는 `BoxView` 의 자식일 수도 있습니다 `AbsoluteLayout` . 이 경우의 위치와 크기는 모두 `BoxView` 연결 된 바인딩 가능 속성을 사용 하 여 설정 됩니다 `LayoutBounds` . 는 `AbsoluteLayout` [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md)문서에서 설명 합니다.
+는 `BoxView` 의 자식일 수도 있습니다 `AbsoluteLayout` . 이 경우의 위치와 크기는 모두 `BoxView` 연결 된 바인딩 가능 속성을 사용 하 여 설정 됩니다 `LayoutBounds` . 는 `AbsoluteLayout` [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolutelayout.md)문서에서 설명 합니다.
 
 다음 샘플 프로그램에서 이러한 모든 사례에 대 한 예제를 확인할 수 있습니다.
 
