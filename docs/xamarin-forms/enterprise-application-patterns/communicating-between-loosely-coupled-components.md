@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0a43ce2d27c8152137101d616302f6e56a57bd39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bf0315d2d077e06ff3ded4d66814afe050fdfad4
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931978"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186202"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
 
@@ -55,10 +55,10 @@ EShopOnContainers 모바일 앱에서 [`MessagingCenter`](xref:Xamarin.Forms.Mes
 
 ## <a name="defining-a-message"></a>메시지 정의
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)메시지는 메시지를 식별 하는 데 사용 되는 문자열입니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱 내에서 정의 된 메시지를 보여 줍니다.
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 메시지는 메시지를 식별 하는 데 사용 되는 문자열입니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱 내에서 정의 된 메시지를 보여 줍니다.
 
 ```csharp
-public class MessengerKeys  
+public class MessageKeys  
 {  
     // Add product to basket  
     public const string AddProduct = "AddProduct";  
@@ -78,7 +78,7 @@ public class MessengerKeys
 게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 오버로드 중 하나로 구독자에게 메시지를 알립니다. 다음 코드 예제에서는 메시지를 게시 하는 방법을 보여 줍니다 `AddProduct` .
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 이 예제에서 메서드는 [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 세 개의 인수를 지정 합니다.
@@ -118,7 +118,7 @@ MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(
 구독자는 더 이상 수신하지 않을 메시지를 구독 취소할 수 있습니다. 이는 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 다음 코드 예제에서 보여 주는 것 처럼 오버 로드 중 하나를 사용 하 여 수행 됩니다.
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 이 예제에서 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메서드 구문은 메시지 수신을 구독할 때 지정 된 형식 인수를 반영 합니다 `AddProduct` .

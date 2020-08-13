@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1545af984c0a409244c323048b448ec44e9be6a8
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573419"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186189"
 ---
 # <a name="inspector-installation-and-requirements"></a>검사기 설치 및 요구 사항
 
@@ -33,7 +33,7 @@ ms.locfileid: "84573419"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>지원되는 운영 체제
 
 - **Mac** -OS X 10.11 이상
 - **Windows** -windows 7 이상 (Internet Explorer 11 이상 및 .net 4.6.1 이상)
@@ -49,10 +49,10 @@ ms.locfileid: "84573419"
 
 ### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
-|앱 플랫폼|IDE 지원|메모|
+|앱 플랫폼|IDE 지원|참고|
 |--- |--- |--- |
 |Mac|에서만 지원 Mac용 Visual Studio|
-|iOS|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨| 링커 동작을 **연결 안 함** 으로 설정 해야 합니다 ( **iOS 빌드** 프로젝트 옵션 아래). |
+|iOS|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨| 링커 동작을 [**연결 안 함**](~/ios/deploy-test/linker.md) 으로 설정 해야 합니다 ( **iOS 빌드** 프로젝트 옵션 아래). |
 |Android|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨|**Fastdev** 를 사용 하도록 설정한 상태에서 Android >= 4.0.3를 대상으로 해야 합니다.<br />Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 합니다. Android 7 에뮬레이터는 현재 검사를 허용 하지 않을 수 있습니다.|
 |WPF|Visual Studio 2017 에서만 지원 됨|
 

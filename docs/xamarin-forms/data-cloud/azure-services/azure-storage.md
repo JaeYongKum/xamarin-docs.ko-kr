@@ -10,14 +10,14 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f67543a6c678e2c3a1395f816e020d69af4bf873
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d7b97f21e5184a445cfac85dc06a7da0e1a6a4c5
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936658"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186215"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
@@ -81,22 +81,22 @@ Azure Storage 계정을 응용 프로그램에 통합 하는 프로세스는 다
 - 공유 키. 이 방법은 Azure Storage 계정 이름과 계정 키를 사용 하 여 저장소 서비스에 액세스 합니다. 저장소 계정에는 만들 때 공유 키 인증에 사용할 수 있는 두 개의 개인 키가 할당 됩니다.
 - 공유 액세스 서명입니다. URL에 추가할 수 있는 토큰으로, 지정 된 사용 권한을 사용 하 여 저장소 리소스에 대 한 위임 된 액세스를 사용 하 여 유효한 기간을 지정 합니다.
 
-응용 프로그램에서 Azure Storage 리소스에 액세스 하는 데 필요한 인증 정보를 포함 하는 연결 문자열을 지정할 수 있습니다. 또한 Visual Studio에서 Azure Storage 에뮬레이터에 연결 하도록 연결 문자열을 구성할 수 있습니다.
+응용 프로그램에서 Azure Storage 리소스에 액세스 하는 데 필요한 인증 정보를 포함 하는 연결 문자열을 지정할 수 있습니다. 또한 Visual Studio에서 Azure storage 에뮬레이터에 연결 하도록 연결 문자열을 구성할 수 있습니다.
 
 > [!NOTE]
 > Azure Storage는 연결 문자열에서 HTTP 및 HTTPS를 지원 합니다. 그러나 HTTPS를 사용 하는 것이 좋습니다.
 
 ### <a name="connecting-to-the-azure-storage-emulator"></a>Azure Storage 에뮬레이터에 연결
 
-Azure Storage 에뮬레이터는 개발 목적으로 Azure blob, 큐 및 table service를 에뮬레이트하는 로컬 환경을 제공 합니다.
+Azure storage 에뮬레이터는 개발 목적으로 Azure blob, queue 및 table service를 에뮬레이트하는 로컬 환경을 제공 합니다.
 
-Azure Storage 에뮬레이터에 연결 하려면 다음 연결 문자열을 사용 해야 합니다.
+다음 연결 문자열을 사용 하 여 Azure 저장소 에뮬레이터에 연결 해야 합니다.
 
 ```csharp
 UseDevelopmentStorage=true
 ```
 
-Azure Storage 에뮬레이터에 대 한 자세한 내용은 [개발 및 테스트에 Azure Storage 에뮬레이터 사용](https://azure.microsoft.com/documentation/articles/storage-use-emulator/)을 참조 하세요.
+Azure storage 에뮬레이터에 대 한 자세한 내용은 [개발 및 테스트에 azure storage 에뮬레이터 사용](https://azure.microsoft.com/documentation/articles/storage-use-emulator/)을 참조 하세요.
 
 ### <a name="connecting-to-azure-storage-using-a-shared-key"></a>공유 키를 사용 하 여 Azure Storage에 연결
 
