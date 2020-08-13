@@ -628,7 +628,7 @@ items:
           - name: 핵심 레이아웃
             items:
               - name: AbsoluteLayout
-                href: user-interface/layouts/absolute-layout.md
+                href: user-interface/layouts/absolutelayout.md
               - name: FlexLayout
                 href: user-interface/layouts/flex-layout.md
               - name: 표
