@@ -10,12 +10,12 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a097d6dad067f209d3aad27bde382f28910324a
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130931"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181487"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
@@ -194,7 +194,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 > [!WARNING]
 > 가능한 경우 `RelativeLayout`을 사용하지 마세요. 그러면 CPU가 훨씬 더 많은 작업을 수행해야 합니다.
 
-자세한 내용은 [ Xamarin.Forms RelativeLayout](relative-layout.md)를 참조 하세요.
+자세한 내용은 [ Xamarin.Forms RelativeLayout](relativelayout.md)를 참조 하세요.
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -256,6 +256,6 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 - [Xamarin.Forms그리드에](grid.md)
 - [Xamarin.Forms가는 레이아웃](flex-layout.md)
 - [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relative-layout.md)
+- [Xamarin.FormsRelativeLayout](relativelayout.md)
 - [레이아웃 성능 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [레이아웃 압축](layout-compression.md)

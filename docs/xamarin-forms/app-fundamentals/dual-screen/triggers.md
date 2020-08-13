@@ -10,16 +10,16 @@ ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e4d85077e1047f4158164d0c752570519c8ecdc
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 16a76fb06c0ee54e90fa1bf0d44e419be40ee254
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918293"
 ---
-# <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Forms 이중 화면 트리거
+# <a name="no-locxamarinforms-dual-screen-triggers"></a>Xamarin.Forms 이중 화면 트리거
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) 네임스페이스에는 다음 두 가지 상태 트리거가 포함되어 있습니다.
 

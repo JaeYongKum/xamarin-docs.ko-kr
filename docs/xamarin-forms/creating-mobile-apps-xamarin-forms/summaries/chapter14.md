@@ -10,12 +10,12 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 72ee9c4a481388e69aeeb52dbd5b8eeaabb164f6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5aa62927efe0a9803efbddaef97ac6557edccd6c
+ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136762"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88130905"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 - 14장 절대 레이아웃
 
@@ -106,5 +106,5 @@ XAML에서 `AbsoluteLayout`을 사용하고 `AbsoluteLayout.LayoutBounds` 및 `A
 
 - [14장 전체 텍스트(PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
 - [14장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
-- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolute-layout.md)
+- [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolutelayout.md)
 - [연결된 속성](~/xamarin-forms/xaml/attached-properties.md)

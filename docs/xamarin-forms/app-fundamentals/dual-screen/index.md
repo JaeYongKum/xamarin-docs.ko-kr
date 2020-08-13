@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 737cb819cfd762e81536fba03f3ae5b563416a4e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b0290daedab4a6e825d2bab4bea9889b4966645
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930743"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918304"
 ---
-# <a name="xamarinforms-dual-screen"></a>Xamarin.Forms 이중 화면
+# <a name="no-locxamarinforms-dual-screen"></a>Xamarin.Forms 이중 화면
 
-![시험판 API](~/media/shared/preview.png "이 API는 현재 시험판임")
+![시험판 API](~/media/shared/preview.png)
 
 Microsoft Surface Duo와 같은 이중 화면 디바이스는 애플리케이션에 대한 새로운 사용자 환경 가능성을 용이하게 합니다. Xamarin.Forms에는 `TwoPaneView` 및 `DualScreenInfo` 클래스가 포함되어 있으므로, 이중 화면 디바이스용 앱을 개발할 수 있습니다.
 
@@ -41,7 +41,7 @@ Xamarin.Forms 앱에 이중 화면 기능을 추가하려면 다음 단계를 �
 5. Android 프로젝트의 `MainActivity` 클래스에서 `Activity` 특성을 업데이트하여 다음 `ConfigurationChanges` 옵션이 ‘모두’ 포함되도록 합니다.
 
     ```@csharp
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
         | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
     ```
 

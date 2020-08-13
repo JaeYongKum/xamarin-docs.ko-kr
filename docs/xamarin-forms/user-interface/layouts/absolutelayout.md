@@ -10,12 +10,12 @@ ms.date: 08/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 696429e04775640d46add77ec6a4bbf6e69f675b
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88134157"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181500"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
@@ -55,7 +55,7 @@ ms.locfileid: "88134157"
 
 ## <a name="absolute-positioning-and-sizing"></a>절대 위치 지정 및 크기 조정
 
-기본적으로는 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 레이아웃에 배치 해야 하는 위치를 명시적으로 정의 하는 장치 독립적 단위에 지정 된 절대 값을 사용 하 여 자식 위치 및 크기를 지정 합니다. 이는의 컬렉션에 자식을 추가 하 `Children` `AbsoluteLayout` 고 [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) 각 자식의 연결 된 속성을 절대 위치 및/또는 크기 값으로 설정 하 여 수행 됩니다.
+기본적으로는 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 레이아웃에서 자식을 배치 해야 하는 위치를 명시적으로 정의 하는 장치 독립적 단위로 지정 된 절대 값을 사용 하 여 자식 위치 및 크기를 지정 합니다. 이는의 컬렉션에 자식을 추가 하 `Children` `AbsoluteLayout` 고 [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) 각 자식의 연결 된 속성을 절대 위치 및/또는 크기 값으로 설정 하 여 수행 됩니다.
 
 > [!WARNING]
 > 여러 장치의 화면 크기와 해상도가 다르기 때문에 자식을 배치 하 고 크기를 조정 하는 데 절대값을 사용 하면 문제가 발생할 수 있습니다. 따라서 한 장치에서 화면 중심의 좌표는 다른 장치에서 오프셋 될 수 있습니다.
@@ -190,7 +190,7 @@ C #에서는 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) `Children` �
 
 다음 스크린샷은 결과 레이아웃을 보여 줍니다.
 
-![비례 positino 값을 사용 하 여 AbsoluteLayout에 배치 된 자식](absolutelayout-images/proportional-position.png)
+![비례 위치 값을 사용 하 여 AbsoluteLayout에 배치 된 자식](absolutelayout-images/proportional-position.png)
 
 해당 c # 코드는 다음과 같습니다.
 

@@ -10,12 +10,12 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b23aca29fa77b58183a1f09053bc2bb9ba66bb49
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84903113"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181513"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -23,26 +23,26 @@ ms.locfileid: "84903113"
 
 XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있도록 하 여 XAML의 기능과 유연성을 향상 시키는 데 도움이 됩니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 파일은 일반적인 네임 스페이스 접두사를 사용 하 여 XAML 파일에 표시 `x` 되며 일반적으로이 접두사를 사용 하 여 참조 됩니다. 이 문서에서는 다음과 같은 태그 확장에 대해 설명 합니다.
 
-- [`x:Static`](#xstatic-markup-extension)– 정적 속성, 필드 또는 열거형 멤버를 참조 합니다.
-- [`x:Reference`](#xreference-markup-extension)– 페이지의 명명 된 요소를 참조 합니다.
-- [`x:Type`](#xtype-markup-extension)– 특성을 `System.Type` 개체로 설정 합니다.
-- [`x:Array`](#xarray-markup-extension)– 특정 형식의 개체 배열을 생성 합니다.
-- [`x:Null`](#xnull-markup-extension)– 특성을 값으로 설정 `null` 합니다.
-- [`OnPlatform`](#onplatform-markup-extension)– 플랫폼 별로 UI 모양을 사용자 지정 합니다.
-- [`OnIdiom`](#onidiom-markup-extension)– 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정 합니다.
-- [`DataTemplate`](#datatemplate-markup-extension)– 형식을로 변환 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 합니다.
-- [`FontImage`](#fontimage-markup-extension)–를 표시할 수 있는 모든 보기에 글꼴 아이콘을 표시 `ImageSource` 합니다.
-- [`AppThemeBinding`](#appthemebinding-markup-extension)– 현재 시스템 테마를 기반으로 리소스를 사용 합니다.
+- [`x:Static`](#xstatic-markup-extension) – 정적 속성, 필드 또는 열거형 멤버를 참조 합니다.
+- [`x:Reference`](#xreference-markup-extension) – 페이지의 명명 된 요소를 참조 합니다.
+- [`x:Type`](#xtype-markup-extension) – 특성을 `System.Type` 개체로 설정 합니다.
+- [`x:Array`](#xarray-markup-extension) – 특정 형식의 개체 배열을 생성 합니다.
+- [`x:Null`](#xnull-markup-extension) – 특성을 값으로 설정 `null` 합니다.
+- [`OnPlatform`](#onplatform-markup-extension) – 플랫폼 별로 UI 모양을 사용자 지정 합니다.
+- [`OnIdiom`](#onidiom-markup-extension) – 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정 합니다.
+- [`DataTemplate`](#datatemplate-markup-extension) – 형식을로 변환 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 합니다.
+- [`FontImage`](#fontimage-markup-extension) –를 표시할 수 있는 모든 보기에 글꼴 아이콘을 표시 `ImageSource` 합니다.
+- [`AppThemeBinding`](#appthemebinding-markup-extension) – 현재 시스템 테마를 기반으로 리소스를 사용 합니다.
 
 추가 XAML 태그 확장은 이전에 다른 XAML 구현에서 지원 되었으며 에서도 지원 됩니다 Xamarin.Forms . 이에 대해서는 다른 문서에 자세히 설명 되어 있습니다.
 
-- `StaticResource`- [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 개체를 참조 합니다.
-- `DynamicResource`- [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 합니다.
-- `Binding`- [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)문서에 설명 된 대로 두 개체의 속성 간에 링크를 설정 합니다.
+- `StaticResource` -  [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 개체를 참조 합니다.
+- `DynamicResource` - [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 합니다.
+- `Binding` - [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)문서에 설명 된 대로 두 개체의 속성 간에 링크를 설정 합니다.
 - `TemplateBinding`-컨트롤 [** Xamarin.Forms 템플릿**](~/xamarin-forms/app-fundamentals/templates/control-template.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
-- `RelativeSource`- [상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)문서에 설명 된 대로 바인딩 대상의 위치를 기준으로 바인딩 소스를 설정 합니다.
+- `RelativeSource` - [상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)문서에 설명 된 대로 바인딩 대상의 위치를 기준으로 바인딩 소스를 설정 합니다.
 
-[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)레이아웃은 사용자 지정 태그 확장을 사용 합니다 [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . 이 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)문서에 설명 되어 있습니다.
+[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)레이아웃은 사용자 지정 태그 확장을 사용 합니다 [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . 이 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md)문서에 설명 되어 있습니다.
 
 ## <a name="xstatic-markup-extension"></a>x:Static 태그 확장
 
@@ -192,7 +192,7 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 
 ## <a name="xtype-markup-extension"></a>x:Type 태그 확장
 
-`x:Type`태그 확장은 c # 키워드와 동일한 XAML입니다 [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) . 클래스 [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) `string` 또는 구조체 이름으로 설정 된 형식의 속성 하나를 정의 하는 클래스에서 지원 됩니다. `x:Type`태그 확장은 [`System.Type`](xref:System.Type) 해당 클래스 또는 구조체의 개체를 반환 합니다. `TypeName`는의 content 속성 `TypeExtension` 이므로 `TypeName=` `x:Type` 중괄호와 함께 표시 되는 경우에는 필요 하지 않습니다.
+`x:Type`태그 확장은 c # 키워드와 동일한 XAML입니다 [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) . 클래스 [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) `string` 또는 구조체 이름으로 설정 된 형식의 속성 하나를 정의 하는 클래스에서 지원 됩니다. `x:Type`태그 확장은 [`System.Type`](xref:System.Type) 해당 클래스 또는 구조체의 개체를 반환 합니다. `TypeName` 는의 content 속성 `TypeExtension` 이므로 `TypeName=` `x:Type` 중괄호와 함께 표시 되는 경우에는 필요 하지 않습니다.
 
 에는 Xamarin.Forms 형식의 인수를 포함 하는 몇 가지 속성이 있습니다 `Type` . 예제에는 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 의 속성과 `Style` 제네릭 클래스에서 인수를 지정 하는 데 사용 되는 [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#specifying-a-generic-type-argument) 특성이 포함 됩니다. 그러나 XAML 파서는 `typeof` 작업을 자동으로 수행 하며 `x:Type` 태그 확장은 이러한 경우에 사용 되지 않습니다.
 
@@ -460,16 +460,16 @@ public partial class TypeDemoPage : ContentPage
 
 `OnPlatform`태그 확장은 다음 속성을 정의 하는 클래스에서 지원 됩니다 [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) .
 
-- `Default`형식으로 `object` , 플랫폼을 나타내는 속성에 적용 되는 기본값으로 설정 됩니다.
+- `Default` 형식으로 `object` , 플랫폼을 나타내는 속성에 적용 되는 기본값으로 설정 됩니다.
 - `Android``object`Android에 적용 되는 값으로 설정 하는 형식입니다.
-- `GTK`유형으로 `object` , GTK 플랫폼에 적용 되는 값으로 설정 합니다.
+- `GTK` 유형으로 `object` , GTK 플랫폼에 적용 되는 값으로 설정 합니다.
 - `iOS``object`iOS에 적용 되는 값으로 설정 하는 형식의입니다.
-- `macOS`사용자가 `object` macOS에 적용 되는 값으로 설정 하는 형식입니다.
+- `macOS` 사용자가 `object` macOS에 적용 되는 값으로 설정 하는 형식입니다.
 - `Tizen``object`Tizen 플랫폼에 적용 되는 값으로 설정 하는 형식의입니다.
 - `UWP``object`유니버설 Windows 플랫폼에 적용할 값으로 설정 하는 형식의입니다.
 - `WPF``object`Windows Presentation Foundation 플랫폼에 적용 되는 값으로 설정 하는 형식입니다.
 - `Converter``IValueConverter`구현으로 설정할 수 있는 형식의입니다 `IValueConverter` .
-- `ConverterParameter`형식으로 `object` , 구현에 전달할 값으로 설정할 수 있습니다 `IValueConverter` .
+- `ConverterParameter` 형식으로 `object` , 구현에 전달할 값으로 설정할 수 있습니다 `IValueConverter` .
 
 > [!NOTE]
 > XAML 파서는 [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스를 약식으로 지정할 수 있습니다 `OnPlatform` .
@@ -498,14 +498,14 @@ public partial class TypeDemoPage : ContentPage
 
 `OnIdiom`태그 확장을 사용 하면 응용 프로그램이 실행 되는 장치를 기반으로 UI 모양을 사용자 지정할 수 있습니다. [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension)다음 속성을 정의 하는 클래스에서 지원 됩니다.
 
-- `Default`형식으로 `object` , 장치 관용구을 나타내는 속성에 적용 되는 기본값으로 설정 됩니다.
+- `Default` 형식으로 `object` , 장치 관용구을 나타내는 속성에 적용 되는 기본값으로 설정 됩니다.
 - `Phone``object`휴대폰에 적용 되는 값으로 설정 하는 형식의입니다.
 - `Tablet``object`태블릿에 적용할 값으로 설정 하는 형식의입니다.
-- `Desktop`형식으로 `object` , 데스크톱 플랫폼에 적용 되는 값으로 설정 합니다.
+- `Desktop` 형식으로 `object` , 데스크톱 플랫폼에 적용 되는 값으로 설정 합니다.
 - `TV``object`TV 플랫폼에 적용 되는 값으로 설정 하는 형식입니다.
-- `Watch`형식으로 `object` , 조사식 플랫폼에 적용 되는 값으로 설정 합니다.
+- `Watch` 형식으로 `object` , 조사식 플랫폼에 적용 되는 값으로 설정 합니다.
 - `Converter``IValueConverter`구현으로 설정할 수 있는 형식의입니다 `IValueConverter` .
-- `ConverterParameter`형식으로 `object` , 구현에 전달할 값으로 설정할 수 있습니다 `IValueConverter` .
+- `ConverterParameter` 형식으로 `object` , 구현에 전달할 값으로 설정할 수 있습니다 `IValueConverter` .
 
 > [!NOTE]
 > XAML 파서는 [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스를 약식으로 지정할 수 있습니다 `OnIdiom` .
@@ -557,8 +557,8 @@ public partial class TypeDemoPage : ContentPage
 
 - `FontFamily``string`글꼴 아이콘이 속한 글꼴 패밀리 형식의입니다.
 - `Glyph``string`글꼴 아이콘의 유니코드 문자 값인 형식의입니다.
-- `Color`형식의 [`Color`](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용 되는 색입니다.
-- `Size`형식 `double` , 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)입니다. 기본값은 30입니다. 또한이 속성은 명명 된 글꼴 크기로 설정할 수 있습니다.
+- `Color` 형식의 [`Color`](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용 되는 색입니다.
+- `Size` 형식 `double` , 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)입니다. 기본값은 30입니다. 또한이 속성은 명명 된 글꼴 크기로 설정할 수 있습니다.
 
 > [!NOTE]
 > XAML 파서를 사용하면 `FontImageExtension` 클래스를 `FontImage`로 축약할 수 있습니다.

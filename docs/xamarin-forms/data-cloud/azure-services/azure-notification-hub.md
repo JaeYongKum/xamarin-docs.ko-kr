@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 5f7b83c1fc907de790b382aabde0c5a957e5a8bb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5fd657a3d55bd26b95e79e39540dcfe5b8bce08f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565423"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918587"
 ---
-# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
+# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
 [![샘플 다운로드](~/media/shared/download.png)샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
@@ -77,7 +77,7 @@ Azure Notification Hub를 사용하려면 모바일 애플리케이션을 허브
 
 해당 단계는 [알림을 위한 Android 애플리케이션 구성](#configure-the-android-application-for-notifications) 및 [알림을 위한 iOS 구성](#configure-ios-for-notifications) 섹션에서 각 플랫폼에 대한 세부 정보에 설명되어 있습니다.
 
-## <a name="xamarinforms-application-functionality"></a>Xamarin.Forms 애플리케이션 기능
+## <a name="no-locxamarinforms-application-functionality"></a>Xamarin.Forms 애플리케이션 기능
 
 Xamarin.Forms 애플리케이션 예제는 푸시 알림 메시지 목록을 표시합니다. 이는 지정된 푸시 알림 메시지를 UI에 추가하는 `AddMessage` 메서드로 구현됩니다. 또한 이 메서드는 중복 메시지가 UI에 추가되는 것을 방지하며, 모든 스레드에서 호출될 수 있도록 주 스레드에서 실행됩니다. 다음 코드에서는 `AddMessage` 메서드를 보여 줍니다.
 
@@ -169,7 +169,7 @@ public static class AppConstants
 </manifest>
 ```
 
-### <a name="override-firebasemessagingservice-to-handle-messages"></a>메시지를 처리하도록 `FirebaseMessagingService` 재정의
+### <a name="override-no-locfirebasemessagingservice-to-handle-messages"></a>메시지를 처리하도록 `FirebaseMessagingService` 재정의
 
 Firebase에 등록하고 메시지를 처리하려면 `FirebaseMessagingService` 클래스를 서브클래싱합니다. 애플리케이션 예제는 `FirebaseMessagingService`를 서브클래싱하는 `FirebaseService` 클래스를 정의합니다. 이 클래스는 `com.google.firebase.MESSAGING_EVENT` 필터를 포함하는 `IntentFilter` 특성으로 태그가 지정됩니다. Android는 이 필터를 사용하여 들어오는 메시지가 처리되도록 이 클래스에 전달할 수 있습니다.
 
@@ -281,7 +281,7 @@ void SendMessageToMainPage(string body)
 > [!NOTE]
 > Android 애플리케이션은 백그라운드 또는 포그라운드로 실행되는 경우에만 푸시 알림을 받게 됩니다. 기본 `Activity`가 실행되고 있지 않을 때 푸시 알림을 받으려면 이 샘플의 범위를 벗어난 서비스를 구현해야 합니다. 자세한 내용은 [Android 서비스 만들기](/xamarin/android/app-fundamentals/services/)를 참조하세요.
 
-### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Xamarin.Forms UI에 들어오는 알림 추가
+### <a name="add-incoming-notifications-to-the-no-locxamarinforms-ui"></a>Xamarin.Forms UI에 들어오는 알림 추가
 
 `MainActivity` 클래스는 알림을 처리하고 들어오는 메시지 데이터를 관리할 수 있는 권한을 얻어야 합니다. 다음 코드는 `MainActivity` 구현을 보여 줍니다.
 
@@ -471,9 +471,9 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 ```
 
 > [!NOTE]
-> 네트워크에 연결되지 않은 경우 원격 알림에 대한 등록이 실패할 수 있습니다. 등록 오류를 처리하도록 `FailedToRegisterForRemoveNotifications` 메서드를 재정의할 수 있습니다.
+> 네트워크에 연결되지 않은 경우 원격 알림에 대한 등록이 실패할 수 있습니다. 등록 오류를 처리하도록 `FailedToRegisterForRemoteNotifications` 메서드를 재정의할 수 있습니다.
 
-### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Xamarin.Forms UI에 APNS 알림 추가
+### <a name="add-apns-notifications-to-no-locxamarinforms-ui"></a>Xamarin.Forms UI에 APNS 알림 추가
 
 디바이스가 원격 알림을 수신하면 iOS는 `ReceivedRemoteNotification` 메서드를 호출합니다. 들어오는 메시지 JSON은 `NSDictionary` 개체로 변환되고, `ProcessNotification` 메서드는 사전에서 값을 추출하여 Xamarin.Forms `MainPage` 인스턴스로 보냅니다. `ReceivedRemoteNotifications` 메서드는 다음 코드와 같이 `ProcessNotification`을 호출하도록 재정의됩니다.
 
