@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms웹
+title: Xamarin.Forms 웹
 description: 이 문서에서는 웹 보기 클래스를 사용 하 여 Xamarin.Forms 로컬 또는 네트워크 웹 콘텐츠와 문서를 사용자에 게 제공 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
@@ -10,32 +10,32 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b07e044e55f99a7a183e55c566bf59dbd082655
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0fbdc91c2661732e3afdbde44ce9891f89c5f62
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198162"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228640"
 ---
-# <a name="xamarinforms-webview"></a>Xamarin.Forms웹
+# <a name="no-locxamarinforms-webview"></a>Xamarin.Forms 웹
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
-[`WebView`](xref:Xamarin.Forms.WebView)는 앱에서 웹 및 HTML 콘텐츠를 표시 하는 보기입니다.
+[`WebView`](xref:Xamarin.Forms.WebView) 는 앱에서 웹 및 HTML 콘텐츠를 표시 하는 보기입니다.
 
 ![앱 브라우저에서](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>콘텐츠
 
-`WebView`는 다음과 같은 콘텐츠 형식을 지원 합니다.
+`WebView` 는 다음과 같은 콘텐츠 형식을 지원 합니다.
 
 - HTML & CSS websites 웹 &ndash; 보기에는 JavaScript 지원을 비롯 하 여 html & css를 사용 하 여 작성 된 웹 사이트에 대 한 모든 지원이 있습니다
-- 문서 &ndash; 보기는 각 플랫폼에서 네이티브 구성 요소를 사용 하 여 구현 되므로 웹 보기는 각 플랫폼에서 볼 수 있는 문서를 표시할 수 있습니다. 즉, iOS 및 Android에서 PDF 파일이 작동 합니다.
+- 문서 &ndash; 보기는 각 플랫폼에서 네이티브 구성 요소를 사용 하 여 구현 되므로 웹 보기는 기본 플랫폼에서 지원 되는 형식으로 문서를 표시할 수 있습니다.
 - HTML 문자열 &ndash; 웹 보기는 메모리의 html 문자열을 표시할 수 있습니다.
 - 로컬 파일 &ndash; 웹 보기는 앱에 포함 된 모든 콘텐츠 형식을 제공할 수 있습니다.
 
 > [!NOTE]
-> `WebView`Windows에서는 해당 플랫폼에서 Internet Explorer가 지 원하는 경우에도 Silverlight, Flash 또는 ActiveX 컨트롤을 지원 하지 않습니다.
+> `WebView` Windows에서는 해당 플랫폼에서 Internet Explorer가 지 원하는 경우에도 Silverlight, Flash 또는 ActiveX 컨트롤을 지원 하지 않습니다.
 
 ### <a name="websites"></a>Websites
 
@@ -56,7 +56,7 @@ var browser = new WebView
 버전 9부터 iOS는 응용 프로그램이 기본적으로 최상의 보안을 구현 하는 서버와 통신할 수 있도록 허용 합니다. `Info.plist`안전 하지 않은 서버와의 통신을 사용 하려면에서 값을 설정 해야 합니다.
 
 > [!NOTE]
-> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`매우 긴급 한 상황 에서만 사용 해야 합니다.
+> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads` 매우 긴급 한 상황 에서만 사용 해야 합니다.
 
 다음은 특정 도메인 (이 경우 xamarin.com)을 사용 하 여 ATS 요구 사항을 무시 하는 방법을 보여 줍니다.
 
@@ -117,7 +117,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 다음은 그 예입니다.
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예:
 
 ```html
 <html>
@@ -243,7 +243,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 }
 ```
 
-#### <a name="universal-windows-platform"></a>UWP
+#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용*으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
 
@@ -267,10 +267,10 @@ namespace WorkingWithWebview.UWP
 
 웹 보기에서 사용할 수 있는 몇 가지 메서드 및 속성을 탐색할 수 있습니다.
 
-- **Goforward ()** &ndash; `CanGoForward`이 true 이면를 호출 하면 `GoForward` 다음에 방문한 페이지로 이동 합니다.
-- **GoBack ()** &ndash; `CanGoBack`이 true 이면를 호출 하면 `GoBack` 마지막으로 방문한 페이지로 이동 합니다.
-- **CanGoBack** &ndash; `true`다시 탐색할 페이지가 있으면이 고, `false` 브라우저가 시작 URL에 있으면입니다.
-- **CanGoForward** &ndash; `true`사용자가 뒤로 탐색 하 여 이미 방문한 페이지로 이동할 수 있는 경우입니다.
+- **Goforward ()** &ndash; `CanGoForward` 이 true 이면를 호출 하면 `GoForward` 다음에 방문한 페이지로 이동 합니다.
+- **GoBack ()** &ndash; `CanGoBack` 이 true 이면를 호출 하면 `GoBack` 마지막으로 방문한 페이지로 이동 합니다.
+- **CanGoBack** &ndash; `true` 다시 탐색할 페이지가 있으면이 고, `false` 브라우저가 시작 URL에 있으면입니다.
+- **CanGoForward** &ndash; `true` 사용자가 뒤로 탐색 하 여 이미 방문한 페이지로 이동할 수 있는 경우입니다.
 
 페이지 내에서 `WebView` 는 멀티 터치 제스처를 지원 하지 않습니다. 콘텐츠가 모바일에 최적화 되 고 확대/축소를 요구 하지 않고 표시 되는지 확인 하는 것이 중요 합니다.
 
@@ -337,25 +337,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 웹 보기 상태 변경 내용에 응답 하는 데 도움이 되는 다음 이벤트를 발생 시킵니다.
 
-- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating)– 웹 보기에서 새 페이지를 로드 하기 시작 하면 이벤트가 발생 합니다.
-- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated)– 페이지가 로드 되 고 탐색이 중지 되 면 이벤트가 발생 합니다.
-- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested)– 현재 콘텐츠를 다시 로드 하는 요청을 만들 때 발생 하는 이벤트입니다.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) – 웹 보기에서 새 페이지를 로드 하기 시작 하면 이벤트가 발생 합니다.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) – 페이지가 로드 되 고 탐색이 중지 되 면 이벤트가 발생 합니다.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) – 현재 콘텐츠를 다시 로드 하는 요청을 만들 때 발생 하는 이벤트입니다.
 
 [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs)이벤트와 함께 제공 되는 개체에는 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 다음과 같은 네 가지 속성이 있습니다.
 
-- `Cancel`– 탐색을 취소할지 여부를 나타냅니다.
-- `NavigationEvent`– 발생 한 탐색 이벤트입니다.
-- `Source`– 탐색을 수행한 요소입니다.
-- `Url`– 탐색 대상입니다.
+- `Cancel` – 탐색을 취소할지 여부를 나타냅니다.
+- `NavigationEvent` – 발생 한 탐색 이벤트입니다.
+- `Source` – 탐색을 수행한 요소입니다.
+- `Url` – 탐색 대상입니다.
 
 [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs)이벤트와 함께 제공 되는 개체에는 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 다음과 같은 네 가지 속성이 있습니다.
 
-- `NavigationEvent`– 발생 한 탐색 이벤트입니다.
-- `Result`– 열거형 멤버를 사용 하 여 탐색 결과를 설명 합니다 [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) . 유효한 값은 `Cancel`, `Failure`, `Success` 및 `Timeout`입니다.
-- `Source`– 탐색을 수행한 요소입니다.
-- `Url`– 탐색 대상입니다.
+- `NavigationEvent` – 발생 한 탐색 이벤트입니다.
+- `Result` – 열거형 멤버를 사용 하 여 탐색 결과를 설명 합니다 [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) . 유효한 값은 `Cancel`, `Failure`, `Success` 및 `Timeout`입니다.
+- `Source` – 탐색을 수행한 요소입니다.
+- `Url` – 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 다음은 그 예입니다.
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -394,7 +394,7 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 ## <a name="reloading-content"></a>콘텐츠 다시 로드
 
-[`WebView`](xref:Xamarin.Forms.WebView)에는 `Reload` 현재 콘텐츠를 다시 로드 하는 데 사용할 수 있는 메서드가 있습니다.
+[`WebView`](xref:Xamarin.Forms.WebView) 에는 `Reload` 현재 콘텐츠를 다시 로드 하는 데 사용할 수 있는 메서드가 있습니다.
 
 ```csharp
 var webView = new WebView();
@@ -418,7 +418,7 @@ webView.Reload();
 [assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
 ```
 
-`WebView`Android의 경우 기본적으로 기본 제공 브라우저 만큼 빠르게 제공 됩니다.
+`WebView` Android의 경우 기본적으로 기본 제공 브라우저 만큼 빠르게 제공 됩니다.
 
 [UWP 웹 보기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) 에서는 Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치에는 Edge 브라우저 자체를 사용 하는 것과 동일한 성능이 표시 되어야 합니다.
 
@@ -427,10 +427,10 @@ webView.Reload();
 가 `WebView` 작동 하려면 각 플랫폼에 대 한 사용 권한이 설정 되어 있는지 확인 해야 합니다. 일부 플랫폼에서는 `WebView` 디버그 모드에서 작동 하지만 릴리스를 위해 빌드할 때는 작동 하지 않습니다. Android에서 인터넷에 액세스 하는 것과 같은 일부 사용 권한은 기본적으로 디버그 모드에서 Mac용 Visual Studio 하 여 설정 되기 때문입니다.
 
 - **UWP** &ndash; 네트워크 콘텐츠를 표시 하는 경우 인터넷 (클라이언트 & 서버) 기능이 필요 합니다.
-- **Android** &ndash; `INTERNET`네트워크에서 콘텐츠를 표시 하는 경우에만 필요 합니다. 로컬 콘텐츠에는 특별 한 권한이 필요 하지 않습니다.
+- **Android** &ndash; `INTERNET`  네트워크에서 콘텐츠를 표시 하는 경우에만 필요 합니다. 로컬 콘텐츠에는 특별 한 권한이 필요 하지 않습니다.
 - **iOS** &ndash; 특별 한 권한이 필요 하지 않습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 대부분의 다른 Xamarin.Forms 뷰와 달리에서는 `WebView` `HeightRequest` `WidthRequest` stacklayout 또는 RelativeLayout에 포함 된 경우 및가 지정 되어야 합니다. 이러한 속성을 지정 하지 않으면 `WebView` 가 렌더링 되지 않습니다.
 
@@ -490,7 +490,7 @@ HeightRequest를 & 하는 wrequest가 *없는* 그리드. 그리드는 요청 �
 
 ## <a name="invoking-javascript"></a>JavaScript 호출
 
-[`WebView`](xref:Xamarin.Forms.WebView)c #에서 JavaScript 함수를 호출 하 고 모든 결과를 호출 하는 c # 코드에 반환 하는 기능을 포함 합니다. 이 [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 작업은 [웹 보기](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) 샘플의 다음 예제에 표시 된 메서드를 사용 하 여 수행 됩니다.
+[`WebView`](xref:Xamarin.Forms.WebView) c #에서 JavaScript 함수를 호출 하 고 모든 결과를 호출 하는 c # 코드에 반환 하는 기능을 포함 합니다. 이 [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 작업은 [웹 보기](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) 샘플의 다음 예제에 표시 된 메서드를 사용 하 여 수행 됩니다.
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -547,7 +547,7 @@ webView.Cookies = cookieContainer;
 webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 ```
 
-이 예제에서는 `Cookie` 개체에 단일가 추가 되 `CookieContainer` 고,이 개체는 속성의 값으로 설정 됩니다 `WebView.Cookies` . 에서 [`WebView`](xref:Xamarin.Forms.WebView) 지정 된 URL로 웹 요청을 보내는 경우 쿠키는 요청과 함께 전송 됩니다.
+이 예제에서는 `Cookie` 개체에 단일가 추가 되 `CookieContainer` 고,이 개체는 속성의 값으로 설정 됩니다 `WebView.Cookies` . 에서  [`WebView`](xref:Xamarin.Forms.WebView) 지정 된 URL로 웹 요청을 보내는 경우 쿠키는 요청과 함께 전송 됩니다.
 
 ## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>UIWebView 보기 사용 중단 및 앱 스토어 거부 (ITMS-90809)
 
@@ -557,7 +557,7 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 이 작업을 수행 하기 위한 필수 구성 요소는 다음과 같습니다.
 
-- ** Xamarin.Forms 4.5 이상**. Xamarin.Forms앱에서 재질 시각적 개체를 사용 하는 경우 4.6 이상이 필요 합니다.
+- ** Xamarin.Forms 4.5 이상**. Xamarin.Forms 앱에서 재질 시각적 개체를 사용 하는 경우 4.6 이상이 필요 합니다.
 - **Xamarin.ios 13.10.0.17 이상** [Visual Studio에서](~/cross-platform/troubleshooting/questions/version-logs.md#version-information)xamarin.ios 버전을 확인 합니다. 이 버전의 Xamarin.ios는 Mac용 Visual Studio 8.4.1 및 Visual Studio 16.4.3에 포함 되어 있습니다.
 - **에 대 한 `UIWebView` 참조를 제거 **합니다. 코드에를 `UIWebView` 사용 하는 또는 클래스에 대 한 참조가 없어야 합니다 `UIWebView` .
 

@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5bab1166ade7a5eeebbb720fa48f6116b4ec95d0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 920246e9cbbe85c606969333ccb05d3c87dcef66
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933720"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228588"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>IOS의 안전 영역 레이아웃 가이드
 
@@ -53,7 +53,7 @@ On<iOS>().SetUseSafeArea(true);
 > [!NOTE]
 > Apple에서 정의한 안전 영역은에서 Xamarin.Forms 속성을 설정 하는 데 사용 되며 [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) 설정 된이 속성의 이전 값을 재정의 합니다.
 
-네임 스페이스의 메서드를 사용 하 여 해당 값을 검색 하 여 안전 영역을 사용자 지정할 수 있습니다 [`Thickness`](xref:Xamarin.Forms.Thickness) `Page.SafeAreaInsets` [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) . 그런 다음 필요에 따라 수정 하 고 `Padding` 페이지 생성자 또는 재정의에서 속성에 다시 할당할 수 있습니다 [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) .
+네임 스페이스의 메서드를 사용 하 여 해당 값을 검색 하 여 안전 영역을 사용자 지정할 수 있습니다 [`Thickness`](xref:Xamarin.Forms.Thickness) `Page.SafeAreaInsets` [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) . 그런 다음 필요에 따라 수정 하 고 재정의에서 속성에 다시 할당할 수 있습니다 `Padding` [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) .
 
 ```csharp
 protected override void OnAppearing()
