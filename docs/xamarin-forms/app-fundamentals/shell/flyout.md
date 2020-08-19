@@ -6,18 +6,18 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/10/2020
+ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a1d47b2b37fa532b3e2a64ada5f367e612f557d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946262"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917835"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms 셸 플라이아웃
+# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms 셸 플라이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -234,6 +234,7 @@ Shell.Current.FlyoutIsPresented = false;
 - `boolean` 형식의 `IsChecked` - 플라이아웃에서 현재 항목을 강조 표시할지 여부를 정의합니다.
 - `boolean` 형식의 `IsEnabled` - 크롬에서 항목을 선택할 수 있는지 여부를 정의합니다.
 - `bool` 형식의 `IsTabStop` - `FlyoutItem`이 탭 탐색에 포함되는지 여부를 나타냅니다. 해당 기본값은 `true`이며, 해당 값이 `false`인 경우 `FlyoutItem`은 `TabIndex`가 설정되었는지 여부에 관계없이 탭 탐색 인프라에서 무시됩니다.
+- `bool` 형식의 `IsVisible` - 플라이아웃 메뉴에서 `FlyoutItem`을 숨기는지 여부를 나타냅니다. 기본값은 `true`합니다.
 - `int` 형식의 `TabIndex` - 사용자가 Tab 키를 눌러 항목을 탐색할 때 `FlyoutItem` 개체가 포커스를 받는 순서를 나타냅니다. 속성의 기본값은 0입니다.
 - `string` 형식의 `Title` - UI에 표시할 제목입니다.
 - `string` 형식의 `Route` - 항목을 처리하는 데 사용되는 문자열입니다.
@@ -249,6 +250,46 @@ Shell.Current.FlyoutIsPresented = false;
 - `OnTabStopPropertyChanged` - `IsTabStop` 속성이 변경될 때마다 호출됩니다.
 - `TabIndexDefaultValueCreator` - `int`를 반환하고 `TabIndex` 속성의 기본값을 설정하기 위해 호출됩니다.
 - `TabStopDefaultValueCreator` - `bool`을 반환하고 `TabStop` 속성의 기본값을 설정하기 위해 호출됩니다.
+
+## <a name="flyout-backdrop"></a>플라이아웃 배경
+
+플라이아웃 오버레이의 모양인 플라이아웃 배경은 `Shell.FlyoutBackdrop` 연결된 속성을 `Brush`로 설정하여 지정할 수 있습니다.
+
+```xaml
+<Shell ...
+       FlyoutBackdrop="Silver">
+    ...
+</Shell>
+```
+
+이 예제에서는 플라이아웃 배경이 은색 `SolidColorBrush`로 그려집니다.
+
+> [!IMPORTANT]
+> `FlyoutBackdrop` 연결된 속성은 모든 셸 요소에 설정할 수 있지만 `Shell`, `FlyoutItem` 또는 `TabBar` 개체에 설정된 경우에만 적용됩니다.
+
+다음 예제에서는 `FlyoutItem`에서 플라이아웃 배경을 `LinearGradientBrush`로 설정하는 방법을 보여 줍니다.
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...>
+      <Shell.FlyoutBackdrop>
+          <LinearGradientBrush StartPoint="0,0"
+                               EndPoint="1,1">
+              <GradientStop Color="#8A2387"
+                            Offset="0.1" />
+              <GradientStop Color="#E94057"
+                            Offset="0.6" />
+              <GradientStop Color="#F27121"
+                            Offset="1.0" />
+          </LinearGradientBrush>
+      </Shell.FlyoutBackdrop>
+      ...
+    </FlyoutItem>
+    ...
+</Shell>
+```
+
+브러시에 대한 자세한 내용은 [Xamarin.Forms 브러시](~/xamarin-forms/user-interface/brushes/index.md)를 참조하세요.
 
 ## <a name="flyout-vertical-scroll"></a>플라이아웃 세로 스크롤
 
@@ -652,3 +693,4 @@ Shell에는 `FlyoutItem` 및 `MenuItem` 개체에 자동으로 적용되는 세 
 - [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms 브러시](~/xamarin-forms/user-interface/brushes/index.md)

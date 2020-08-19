@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
+ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929283"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88029723"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart(미리 보기)
 
@@ -73,6 +73,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 - 스토리보드 및 XIB 파일은 지원되지 않으며 런타임에 로드하려고 하면 앱이 충돌할 수도 있습니다. `HOTRESTART` 전처리기 기호를 사용하여 이 코드가 실행되지 않도록 합니다.
 - 정적 iOS 라이브러리 및 프레임워크는 지원되지 않으며 앱에서 이러한 라이브러리 및 프레임워크를 로드하려고 하면 런타임 오류가 발생하거나 충돌이 발생할 수 있습니다. `HOTRESTART` 전처리기 기호를 사용하여 이 코드가 실행되지 않도록 합니다. 동적 iOS 라이브러리가 지원됩니다.
 - Xamarin Hot Restart는 게시용 앱 번들을 만드는 데에 사용할 수 없습니다. 프로덕션으로의 애플리케이션 전체 컴파일, 서명 및 배포를 위해서는 Mac 컴퓨터가 계속 필요합니다.
+- 자산 카탈로그는 현재 지원되지 않습니다. 핫 다시 시작을 사용하는 경우 앱은 Xamarin 앱에 대한 기본 아이콘 및 시작 화면을 표시합니다. Mac에 페어링하거나 Mac에서 개발하는 경우 자산 카탈로그가 작동합니다.
 
 ## <a name="troubleshoot"></a>문제 해결
 

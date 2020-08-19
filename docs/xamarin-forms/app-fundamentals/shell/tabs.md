@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 9ecdc3aca3264b52163d35e29659f434f521147f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426892"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918616"
 ---
 # <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
@@ -184,6 +184,7 @@ ms.locfileid: "87426892"
 - `ImageSource` 형식의 `Icon` - 플라이아웃이 아닌 크롬의 일부로 표시할 아이콘을 정의합니다.
 - `boolean` 형식의 `IsChecked` - 플라이아웃에서 현재 항목을 강조 표시할지 여부를 정의합니다.
 - `boolean` 형식의 `IsEnabled` - 크롬에서 항목을 선택할 수 있는지 여부를 정의합니다.
+- `bool` 형식의 `IsVisible` - 모든 UI 구조체에서 `ShellContent`를 숨기는지 여부를 나타냅니다. 기본값은 `true`합니다.
 - `MenuItemCollection` 형식의 `MenuItems` - 이 `ShellContent`가 제공된 페이지인 경우 플라이아웃에 표시할 메뉴 항목입니다.
 - `string` 형식의 `Title` - UI에 표시할 제목입니다.
 

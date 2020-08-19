@@ -6,18 +6,18 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc5e0c4cb8b474a1b7e23b476b0c5125eb2ba298
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138088"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917549"
 ---
-# <a name="xamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
+# <a name="no-locxamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -224,6 +224,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 - `TextAlignment` 형식의 `HorizontalTextAlignment`는 검색 상자 텍스트의 가로 맞춤입니다.
 - `Color` 형식의 `PlaceholderColor`는 자리 표시자 검색 상자 텍스트의 색입니다.
 - `Color` 형식의 `TextColor`는 검색 상자 텍스트의 색입니다.
+- `TextTransform` 형식의 `TextTransform` - 검색 상자 텍스트의 대/소문자를 결정합니다.
 - `TextAlignment` 형식의 `VerticalTextAlignment`는 검색 상자 텍스트의 세로 맞춤입니다.
 
 ## <a name="searchhandler-keyboard"></a>SearchHandler 키보드
@@ -320,6 +321,7 @@ searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFla
 - `object` 형식의 `SelectedItem` - 검색 결과의 선택된 항목입니다. 이 속성은 읽기 전용이고 `null`의 기본값을 포함합니다.
 - `bool` 형식의 `ShowsResults` - 텍스트 입력 시 제안 영역에서 검색 결과를 예상할지 여부를 나타냅니다. 기본값은 `false`입니다.
 - `Color` 형식의 `TextColor`는 검색 상자 텍스트의 색입니다.
+- `TextTransform` 형식의 `TextTransform` - 검색 상자 텍스트의 대/소문자를 결정합니다.
 
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 

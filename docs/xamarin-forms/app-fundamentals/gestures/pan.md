@@ -1,6 +1,6 @@
 ---
-title: 'title: “이동 제스처 인식기 추가” description: “이 문서에서는 이미지 콘텐츠가 이미지 차원보다 작게 뷰포트에 표시되는 경우 모든 이미지 콘텐츠를 볼 수 있도록 이동 제스처를 사용하여 이미지를 가로 및 세로로 이동하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/21/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: 이동 제스처 인식기 추가
+description: 이 문서에서는 이미지 콘텐츠가 이미지 차원보다 작게 뷰포트에 표시되는 경우 모든 이미지 콘텐츠를 볼 수 있도록 이동 제스처를 사용하여 이미지를 가로 및 세로로 이동하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 886191725421a754e696409deb7a3cca0f6ea923
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137633"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917695"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>이동 제스처 인식기 추가
+# <a name="add-a-pan-gesture-recognizer"></a>이동 제스처 인식기 추가
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 

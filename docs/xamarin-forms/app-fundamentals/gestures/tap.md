@@ -10,14 +10,14 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f5b476ac83f801b4ccded3e18bb601c06e0d0ef
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fddee777ac74cb3ca50ebd0dca809d4a2f1412ab
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570611"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918419"
 ---
-# <a name="adding-a-tap-gesture-recognizer"></a>탭 제스처 인식기 추가
+# <a name="add-a-tap-gesture-recognizer"></a>탭 제스처 인식기 추가
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 
