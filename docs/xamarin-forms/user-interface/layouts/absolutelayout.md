@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAbsoluteLayout
+title: Xamarin.Forms AbsoluteLayout
 description: Xamarin.FormsAbsoluteLayout는 명시적 값 또는 레이아웃 크기에 비례 하는 값을 사용 하 여 요소를 배치 하 고 크기를 조정 하는 데 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
@@ -7,17 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020
+ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
+ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181500"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88648163"
 ---
-# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
+# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
@@ -236,6 +237,6 @@ public class ProportionalDemoPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [AbsoluteLayout 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
-- [Xamarin.Forms연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)
+- [Xamarin.Forms 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)
 - [레이아웃 선택 Xamarin.Forms](choose-layout.md)
 - [Xamarin.Forms앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)
