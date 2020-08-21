@@ -1,27 +1,37 @@
 ---
 title: 패키지 마모 앱
+description: 이 문서에서는 Android 앱을 패키지 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 83c4ba8cbdc360682a4e06a885be15dd20d0f249
+ms.sourcegitcommit: f4b26c5b8cc84f79123951e80c15061eb859452d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028641"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720307"
 ---
 # <a name="packaging-wear-apps"></a>패키지 마모 앱
 
-Android 마모 된 앱은 Google Play에 배포할 수 있도록 전체 Android 앱으로 패키지 됩니다. 
+> [!WARNING]
+> 다음 문서 및 샘플 프로젝트는 더 이상 유지 되지 않을 수 있습니다.
+> [Xamarin android 11.1][xa-11.1]의 경우 android 핸드헬드 응용 프로그램 내에서 android 마모 응용 프로그램을 자동으로 패키징하는 기능은 더 이상 지원 되지 않습니다. Android 마모 응용 프로그램을 [독립 실행형 응용 프로그램][standalone] 으로 배포 하는 것이 좋습니다.
+
+Android 마모 1.0 앱은 Google Play에 배포할 수 있도록 전체 Android 앱으로 패키지 됩니다.
+
+Android 마모 2.0 앱은 Google Play에 [독립 실행형 응용 프로그램][standalone]으로 제출할 수 있습니다.
+
+[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## <a name="automatic-packaging"></a>자동 패키징
 
 Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 한 프로젝트 참조를 만들 때 앱이 자동으로 핸드헬드 앱에 리소스로 패키지 됩니다. 다음 단계를 사용 하 여이 연결을 만들 수 있습니다. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. 사용자의 앱이 핸드헬드 솔루션에 아직 포함 되지 않은 경우 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 기존 프로젝트 추가**...를 선택 합니다.
 
@@ -33,7 +43,7 @@ Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 
 
 5. 사용자의 프로젝트에 대 한 패키지 이름이 핸드헬드 프로젝트의 패키지 이름과 일치 하도록 변경 합니다. 패키지 이름은 **속성 > Android Manifest**에서 변경할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. 사용자의 앱이 핸드헬드 솔루션에 아직 포함 되지 않은 경우 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 기존 프로젝트 추가**...를 선택 합니다.
 
@@ -47,7 +57,7 @@ Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 
 
 -----
 
-마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들면,
+마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들면 다음과 같습니다.
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -62,7 +72,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 - 패키지 이름이 일치 하는지 확인 합니다. 
 
-- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들면, 
+- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들면 다음과 같습니다. 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -83,9 +93,9 @@ Android 용 앱은 버전 5.0 이전에 Xamarin.ios에서 작성할 수 있지�
 
 2. Wearable 프로젝트를 **릴리스** 빌드로 수동으로 빌드합니다.
 
-3. 수동으로 릴리스를 추가 **합니다.** (2)에서 핸드헬드 (전화) 프로젝트의 **리소스/원시** 디렉터리로 apk를 실행 합니다.
+3. 수동으로 릴리스를 추가 **합니다. ** (2)에서 핸드헬드 (전화) 프로젝트의 **리소스/원시** 디렉터리로 apk를 실행 합니다.
 
-4. Wearable **Apk** 의 단계 (3)를 참조 하는 핸드헬드 프로젝트에서 새 Xml 리소스 **리소스/x m l/wearable_app_desc** 을 수동으로 추가 합니다.
+4. Wearable **Apk** 의 단계 (3)를 참조 하는 핸드헬드 프로젝트에서 새 Xml 리소스 **리소스/x m l/wearable_app_desc.xml** 를 수동으로 추가 합니다.
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -95,7 +105,7 @@ Android 용 앱은 버전 5.0 이전에 Xamarin.ios에서 작성할 수 있지�
     </wearableApp>
     ```
 
-5. 새 XML 리소스를 참조 하는 핸드헬드 프로젝트의 **Androidmanifest** `<application>` 요소에 `<meta-data />` 요소를 수동으로 추가 합니다.
+5. `<meta-data />` **AndroidManifest.xml** `<application>` 새 XML 리소스를 참조 하는 핸드헬드 프로젝트의AndroidManifest.xml요소에 요소를 수동으로 추가 합니다.
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
