@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms의 문자열 및 이미지 지역화” description: “.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다.”'
-description: 'zone_pivot_groups: "platform" ms.prod: xamarin ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509 ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 11/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms의 문자열 및 이미지 지역화
+description: .NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
@@ -11,14 +11,14 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: d68227fbf4a4c9db8f4ba8858fdeda6637ce4732
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137607"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228610"
 ---
-# <a name="xamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화
+# <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
@@ -59,7 +59,7 @@ ms.locfileid: "84137607"
 
 **액세스 한정자** 드롭다운 설정은 Visual Studio에서 리소스에 액세스하는 데 사용되는 클래스를 생성하는 방법을 결정합니다. 액세스 한정자를 **Public** 또는 **Internal**로 설정하면 지정된 접근성 수준으로 클래스가 생성됩니다. 액세스 한정자를 **코드 생성 안 됨**으로 설정하면 클래스 파일이 생성되지 않습니다. 기본 리소스 파일은 클래스 파일을 생성하도록 구성해야 합니다. 그러면 확장명이 **.designer.cs**인 파일이 프로젝트에 추가됩니다.
 
-기본 리소스 파일을 만든 후에는 애플리케이션에서 지원하는 각 문화권에 대해 추가 파일을 만들 수 있습니다. 각 추가 리소스 파일은 파일 이름에 번역 문화권을 포함해야 하고 **액세스 한정자**가 **코드 생성 안 됨**으로 설정되어야 합니다. 
+기본 리소스 파일을 만든 후에는 애플리케이션에서 지원하는 각 문화권에 대해 추가 파일을 만들 수 있습니다. 각 추가 리소스 파일은 파일 이름에 번역 문화권을 포함해야 하고 **액세스 한정자**가 **코드 생성 안 됨**으로 설정되어야 합니다.
 
 런타임에 애플리케이션은 특정성 순서대로 리소스 요청을 확인하려고 시도합니다. 예를 들어 디바이스 문화권이 **en-US**인 경우 애플리케이션은 다음 순서로 리소스 파일을 찾습니다.
 
@@ -149,7 +149,37 @@ using System.Resources;
 
 리소스 파일에 대한 자세한 내용은 [.NET 앱의 리소스 파일 만들기](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하세요.
 
-## <a name="localize-text-in-xamarinforms"></a>Xamarin.Forms의 텍스트 지역화
+## <a name="specify-supported-languages-on-ios"></a>iOS에서 지원되는 언어 지정
+
+iOS의 경우 프로젝트에 대한 **info.plist** 파일에서 지원되는 모든 언어를 선언해야 합니다. **info.plist** 파일에서 **소스** 뷰를 사용하여 `CFBundleLocalizations` 키에 대한 배열을 설정하고 Resx 파일에 해당하는 값을 제공합니다. 또한 `CFBundleDevelopmentRegion` 키를 통해 필요한 언어를 설정했는지 확인합니다.
+
+![지역화 섹션을 보여주는 Info.plist 편집기의 스크린샷](text-images/info-plist.png)
+
+또는 XML 편집기에서 **Info.plist** 파일을 열고 다음을 추가합니다.
+
+```xml
+<key>CFBundleLocalizations</key>
+<array>
+    <string>de</string>
+    <string>es</string>
+    <string>fr</string>
+    <string>ja</string>
+    <string>pt</string> <!-- Brazil -->
+    <string>pt-PT</string> <!-- Portugal -->
+    <string>ru</string>
+    <string>zh-Hans</string>
+    <string>zh-Hant</string>
+</array>
+<key>CFBundleDevelopmentRegion</key>
+<string>en</string>
+```
+
+> [!NOTE]
+> Apple에서는 기대했던 것과 약간 다르게 포르투갈어를 처리합니다. 자세한 내용은 developer.apple.com에서 [언어 추가](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2)를 참조하세요.
+
+자세한 내용은 [info.plist에서 기본 및 지원되는 언어 지정](~/ios/app-fundamentals/localization/index.md#specifying-default-and-supported-languages-in-infoplist)을 참조하세요.
+
+## <a name="localize-text-in-no-locxamarinforms"></a>Xamarin.Forms의 텍스트 지역화
 
 텍스트는 생성된 `AppResources` 클래스를 사용하여 Xamarin.Forms에서 지역화됩니다. 이 클래스는 기본 리소스 파일 이름을 기반으로 이름이 지정됩니다. 샘플 프로젝트 리소스 파일의 이름이 **AppResources.cs**이므로 Visual Studio는 `AppResources`라는 일치하는 클래스를 생성합니다. 정적 속성은 리소스 파일의 각 행에 대해 `AppResources` 클래스에서 생성됩니다. 다음 정적 속성은 샘플 애플리케이션의 `AppResources` 클래스에서 생성됩니다.
 
@@ -178,19 +208,19 @@ public LocalizedCodePage()
         Text = AppResources.NotesLabel,
         // ...
     };
-    
+
     Entry notesEntry = new Entry
     {
         Placeholder = AppResources.NotesPlaceholder,
         //...
     };
-    
+
     Button addButton = new Button
     {
         Text = AppResources.AddButton,
         // ...
     };
-    
+
     Content = new StackLayout
     {
         Children = {

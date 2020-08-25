@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 746433293c52d7071a3289962ea021f716fd0cfe
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303668"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186176"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Xamarin.Android를 사용한 파일 스토리지 및 액세스
 
@@ -23,7 +23,7 @@ Android 앱에 적용되는 공통된 요구 사항은 그림 저장, 문서 다
 
 이는 단지 개념상의 분류일 뿐이며, 반드시 디바이스의 특정 파티션 또는 디렉터리를 가리키는 것은 아닙니다. Android 디바이스는 항상 내부 스토리지와 내부 스토리지를 위한 파티션을 제공합니다. 일부 디바이스에는 외부 스토리지로 간주되는 파티션이 여러 개 있을 수 있습니다. 파티션의 구성과 관계없이 파일 읽기, 쓰기 또는 만들기를 위한 API는 동일합니다. Xamarin.Android 애플리케이션이 파일 액세스를 위해 사용할 수 있는 API에는 다음과 같은 두 가지 종류가 있습니다.
 
-1. **.NET API(Mono에서 제공하고 Xamarin.Android에 의해 래핑됨)** &ndash;  여기에는 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android)에서 제공하는 [파일 시스템 도우미](~/essentials/file-system-helpers.md?context=xamarin/android)가 포함됩니다. .NET API는 가장 좋은 플랫폼 간 호환성을 제공합니다. 따라서 이 가이드에서는 .NET API를 중점적으로 살펴봅니다.
+1. **.Net api (Mono에서 제공되고 xamarin.ios로 래핑된)** &ndash; 여기에는 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android)에서 제공하는 [파일 시스템 도우미가](~/essentials/file-system-helpers.md?context=xamarin/android) 포함됩니다. .NET API는 가장 좋은 플랫폼 간 호환성을 제공합니다. 따라서 이 가이드에서는 .NET API를 중점적으로 살펴봅니다.
 1. **네이티브 Java 파일 액세스 API(Java에서 제공하고 Xamarin.Android에 의해 래핑됨)** &ndash; Java는 파일 읽기 및 쓰기를 위한 자체 API를 제공합니다. 네이티브 Java 파일 액세스 API는 얼마든지 .NET API 대신 사용할 수 있긴 하나, Android에만 적용되며 플랫폼 간 호환성을 지원하지 않습니다.
 
 Xamarin.Android의 파일 읽기 및 쓰기는 다른 모든 .NET 애플리케이션의 파일 읽기 및 쓰기와 거의 동일합니다. Xamarin.Android 앱이 조작할 파일의 경로를 확인한 다음에 표준 .NET 관용구를 사용하여 파일에 액세스합니다. 내부 스토리지와 외부 스토리지의 실제 경로는 디바이스별로 또는 Android 버전별로 다를 수 있으므로 파일 경로를 하드 코딩하는 것은 권장되지 않습니다. 그 대신 Xamarin.Android API를 사용하여 파일 경로를 확인하시기 바랍니다. 이렇게 하면 파일 읽기 및 쓰기를 위한 .NET API가 내부 스토리지와 외부 스토리지의 파일 경로를 확인하는 데 도움이 되는 네이티브 Android API를 노출합니다.
@@ -74,6 +74,10 @@ Xamarin.Android의 파일 읽기 및 쓰기는 다른 모든 .NET 애플리케�
 | `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
 | `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
 | `Personal` | **_INTERNAL\_STORAGE_** |
+| `Fonts` | **_INTERNAL\_STORAGE_/.fonts** |
+| `Templates` | **_INTERNAL\_STORAGE_/Templates** |
+| `CommonApplicationData` | **/usr/share** |
+| `CommonApplicationData` | **/usr/share** |
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>내부 스토리지에 있는 파일 읽기 또는 쓰기
 

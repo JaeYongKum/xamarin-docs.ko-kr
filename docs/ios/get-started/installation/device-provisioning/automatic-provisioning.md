@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: 069c40b74876bea1d3a0c8fca23b3d90c4b91635
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 09d20ef2e4fece36ce67a7891892defb05a5f3df
+ms.sourcegitcommit: ca1eca5bcf6c82bc4ec05db12ee1be585006d59f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79510681"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88514631"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -45,13 +45,15 @@ IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수�
 
 2. **Info.plist** 파일을 엽니다.
 
-3. **서명** 섹션에서 **자동 프로비저닝**을 선택합니다.
+3. **애플리케이션** 탭을 선택합니다.
+
+4. **서명** 섹션에서 **자동 프로비저닝**을 선택합니다.
 
     ![팀 선택기 드롭다운](automatic-provisioning-images/image2.png)
 
-4. **팀** 드롭다운에서 팀을 선택합니다.
+5. **팀** 드롭다운에서 팀을 선택합니다.
 
-5. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성됩니다.
+6. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성됩니다.
 
     ![성공적으로 생성된 인증서와 프로필](automatic-provisioning-images/image5.png)
 
@@ -102,7 +104,7 @@ Mac용 Visual Studio 및 Visual Studio 2019(버전 16.5 이상)에서, 자동 �
 - 앱에서 바로 구매
 - 다중 경로
 - NFC
-- 개인 VPN
+- Personal VPN(개인 VPN)
 - 푸시 알림
 - 무선 액세서리 구성
 
