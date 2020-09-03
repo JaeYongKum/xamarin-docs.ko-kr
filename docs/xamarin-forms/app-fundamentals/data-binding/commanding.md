@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 명령 인터페이스” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 Command 속성을 구현하는 방법을 설명합니다.'
-description: '명령 인터페이스는 MVVM 아키텍처에 훨씬 더 적합한 명령을 구현하는 또 다른 방법을 제공합니다.” ms.prod: xamarin ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 명령 인터페이스
+description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 Command 속성을 구현하는 방법을 설명합니다. 명령 인터페이스는 MVVM 아키텍처에 훨씬 더 적합한 명령을 구현하는 또 다른 방법을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: ad36bd5efe09909753fed948a961a690feb0592a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139726"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964664"
 ---
-# <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
+# <a name="the-no-locxamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -688,10 +688,6 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 인수가 소수점이고(소수점을 눌렀는지 나타냄) `Entry`에 이미 소수점이 포함되어 있는 경우에만 `canExecute` 메서드에서 `false`를 반환합니다.
 
 모든 `execute` 메서드는 `RefreshCanExecutes`를 호출한 다음, `DigitCommand` 및 `ClearCommand` 모두에 대해 `ChangeCanExecute`를 호출합니다. 이렇게 하면 입력된 숫자의 현재 순서에 따라 소수점 및 백스페이스 단추가 활성화 또는 비활성화되도록 보장합니다.
-
-## <a name="adding-commands-to-existing-views"></a>기존 보기에 명령 추가
-
-명령 인터페이스를 지원하지 않는 보기에서 명령 인터페이스를 사용하려면 이벤트를 명령으로 변환하는 Xamarin.Forms 동작을 사용하면 됩니다. 이에 대해 [**재사용 가능한 EventToCommandBehavior**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md) 문서에서 설명하고 있습니다.
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>비동기 탐색 메뉴 명령
 

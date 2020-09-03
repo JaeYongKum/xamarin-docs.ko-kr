@@ -10,14 +10,14 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 83952982bd163725fb931c860cac3e267726315c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d917d7d6421cfae7fc877c81023a835573fa99b1
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135813"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964625"
 ---
-# <a name="xamarinforms-behaviors"></a>Xamarin.Forms 동작
+# <a name="no-locxamarinforms-behaviors"></a>Xamarin.Forms 동작
 
 _동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 동작은 코드로 작성되고 XAML 또는 코드의 컨트롤에 추가됩니다._
 
@@ -29,10 +29,10 @@ _동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨�
 
 연결된 동작은 연결된 속성이 하나 이상 있는 `static` 클래스입니다. 이 문서에서는 연결된 동작을 만들고 사용하는 방법을 설명합니다.
 
-## <a name="xamarinforms-behaviorscreatingmd"></a>[Xamarin.Forms 동작](creating.md)
+## <a name="no-locxamarinforms-behaviors"></a>[Xamarin.Forms 동작](creating.md)
 
 Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.
 
-## <a name="reusable-behaviors"></a>[재사용 가능한 동작](reusable/index.md)
+## <a name="reusable-effectbehavior"></a>[재사용 가능한 EffectBehavior](effect-behavior.md)
 
-동작은 둘 이상의 애플리케이션에서 다시 사용할 수 있습니다. 이 문서에서는 일반적으로 사용되는 기능을 수행하는 유용한 동작을 만드는 방법을 설명합니다.
+동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 컨트롤에 효과를 추가하는 방법을 보여 줍니다.
