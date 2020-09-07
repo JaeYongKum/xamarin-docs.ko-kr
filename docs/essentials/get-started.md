@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Essentials 시작” description: “Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.”'
-description: 'ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 05/11/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Essentials 시작하기
+description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
@@ -9,14 +9,14 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 3599958a493dd4051064b5e7f54aa5901e6bf32c
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84129313"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052762"
 ---
-# <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작하기
+# <a name="get-started-with-no-locxamarinessentials"></a>Xamarin.Essentials 시작하기
 
 Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다. 지원되는 운영 체제에 대한 자세한 내용은 [플랫폼 및 기능 지원 지침](platform-feature-support.md)을 참조하세요.
 
@@ -93,7 +93,7 @@ Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio�
 
 6. 각 기능에 대한 코드 조각을 복사하여 붙여넣을 수 있는 [Xamarin.Essentials 가이드](index.md)를 따르세요.
 
-## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials - 모바일 앱용 플랫폼 간 API(비디오)
+## <a name="no-locxamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials - 모바일 앱용 플랫폼 간 API(비디오)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 

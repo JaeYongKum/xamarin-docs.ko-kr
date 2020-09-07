@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 37c76a5f325c363a92c2a2c1e597dab28f064cd9
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135774"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964612"
 ---
 # <a name="introduction-to-behaviors"></a>동작 소개
 
@@ -32,7 +32,7 @@ _동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨�
 
 Xamarin.Forms는 두 가지 동작 스타일을 지원합니다.
 
-- **Xamarin.Forms 동작** – [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생된 클래스입니다. 여기서 `T`는 동작이 적용되어야 하는 컨트롤의 형식입니다. Xamarin.Forms 동작에 대한 자세한 내용은 [Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/creating.md) 및 [재사용 가능한 동작](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md)을 참조하세요.
+- **Xamarin.Forms 동작** – [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생된 클래스입니다. 여기서 `T`는 동작이 적용되어야 하는 컨트롤의 형식입니다. Xamarin.Forms 동작에 관한 자세한 내용은 [Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/creating.md)을 참조하세요.
 - **연결된 동작** – 첨부된 속성이 하나 이상 있는 `static` 클래스입니다. 연결된 동작에 대한 자세한 내용은 [연결된 동작](~/xamarin-forms/app-fundamentals/behaviors/attached.md)을 참조하세요.
 
 이 가이드에서는 선호되는 동작 생성 방식인 Xamarin.Forms 동작을 집중적으로 다룹니다.

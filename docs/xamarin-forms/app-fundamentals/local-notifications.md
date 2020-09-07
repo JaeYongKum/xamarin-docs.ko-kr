@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 로컬 알림” description: “이 문서에서는 Xamarin.Forms에서 로컬 알림을 주고받는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7 ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 10/10/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 로컬 알림
+description: 이 문서에서는 Xamarin.Forms에서 로컬 알림을 주고받는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 10/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 40e040f216ddda40931273f4e7f5614964862fe8
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: da867dd017ed50ccbc09f969891bb91011379d3f
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84137596"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052749"
 ---
-# <a name="local-notifications-in-xamarinforms"></a>Xamarin.Forms의 로컬 알림
+# <a name="local-notifications-in-no-locxamarinforms"></a>Xamarin.Forms의 로컬 알림
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 
@@ -50,7 +50,7 @@ public interface INotificationManager
 
 이 인터페이스는 각 플랫폼 프로젝트에서 구현됩니다. `NotificationReceived` 이벤트를 사용하면 애플리케이션이 들어오는 알림을 처리할 수 있습니다. `Initialize` 메서드는 알림 시스템을 준비하는 데 필요한 모든 네이티브 플랫폼 논리를 수행합니다. `ScheduleNotification` 메서드는 알림을 보냅니다. 메시지가 수신되면 기본 플랫폼에서 `ReceiveNotification` 메서드를 호출합니다.
 
-## <a name="consume-the-interface-in-xamarinforms"></a>Xamarin.Forms에서 인터페이스 사용
+## <a name="consume-the-interface-in-no-locxamarinforms"></a>Xamarin.Forms에서 인터페이스 사용
 
 인터페이스를 만든 후에는 플랫폼 구현이 아직 만들어지지 않은 경우에도 공유 Xamarin.Forms 프로젝트에서 인터페이스를 사용할 수 있습니다. 샘플 애플리케이션에는 다음 내용이 있는 **MainPage.xaml**이라는 `ContentPage`가 포함되어 있습니다.
 
@@ -113,6 +113,16 @@ public partial class MainPage : ContentPage
 ```
 
 `MainPage` 클래스 생성자는 Xamarin.Forms `DependencyService`를 사용하여 `INotificationManager`의 플랫폼별 인스턴스를 검색합니다. `OnScheduleClicked` 메서드는 `INotificationManager` 인스턴스를 사용하여 새 알림을 예약합니다. `ShowNotification` 메서드는 `NotificationReceived` 이벤트에 연결된 이벤트 처리기에서 호출되고, 이벤트가 호출될 때 페이지에 새 `Label`을 삽입합니다.
+
+`NotificationReceived` 이벤트 처리기는 이벤트 인수를 `NotificationEventArgs`로 캐스팅합니다. 이 형식은 공유 Xamarin.Forms 프로젝트에 정의되어 있습니다.
+
+```csharp
+public class NotificationEventArgs : EventArgs
+{
+    public string Title { get; set; }
+    public string Message { get; set; }
+}
+```
 
 Xamarin.Forms `DependencyService`에 대한 자세한 내용은 [Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)를 참조하세요.
 

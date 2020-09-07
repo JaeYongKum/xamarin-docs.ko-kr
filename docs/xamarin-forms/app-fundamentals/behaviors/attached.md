@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a705eef2ecd240b8944117a67a90ebeebc382bcb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55c987ab9f9a95eaeacf648af11c3518a1c27c2a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933749"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964651"
 ---
 # <a name="attached-behaviors"></a>연결된 동작
 
@@ -32,7 +32,7 @@ _연결된 동작은 연결된 속성이 하나 이상 있는 정적 클래스�
 1. `propertyChanged` 대리자는 [`BindableObject`](xref:Xamarin.Forms.BindableObject)로 수신된 컨트롤 참조를 성능 향상을 위해 동작이 설계된 컨트롤 형식으로 캐스트합니다.
 1. `propertyChanged` 대리자는 핵심 동작 기능을 구현하기 위해 컨트롤의 속성을 수정하거나, 컨트롤의 메서드를 호출하거나, 컨트롤에 의해 노출된 이벤트에 이벤트 처리기를 등록합니다.
 
-연결된 동작과 관련된 문제는 `static` 속성 및 메서드를 통해 `static` 클래스에 정의됩니다. 이 때문에 상태가 있는 연결된 동작을 만들기가 어려워집니다. 또한 Xamarin.Forms 동작은 동작 생성을 위한 기본 접근 방식으로 연결된 동작을 대체하였습니다. Xamarin.Forms 동작에 대한 자세한 내용은 [Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/creating.md) 및 [재사용 가능한 동작](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md)을 참조하세요.
+연결된 동작과 관련된 문제는 `static` 속성 및 메서드를 통해 `static` 클래스에 정의됩니다. 이 때문에 상태가 있는 연결된 동작을 만들기가 어려워집니다. 또한 Xamarin.Forms 동작은 동작 생성을 위한 기본 접근 방식으로 연결된 동작을 대체하였습니다. Xamarin.Forms 동작에 관한 자세한 내용은 [Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/creating.md)을 참조하세요.
 
 ## <a name="creating-an-attached-behavior"></a>연결된 동작 만들기
 

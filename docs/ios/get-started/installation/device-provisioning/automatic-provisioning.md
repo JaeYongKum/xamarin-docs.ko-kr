@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: 09d20ef2e4fece36ce67a7891892defb05a5f3df
-ms.sourcegitcommit: ca1eca5bcf6c82bc4ec05db12ee1be585006d59f
+ms.openlocfilehash: 32d9142fb74cba637982438a2aa984adb759d847
+ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88514631"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88950718"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -25,7 +25,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 > [!NOTE]
 > 이 기능을 사용하려면 유료 Apple 개발자 계정도 필요합니다. Apple 개발자 계정에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
-> 유료 Apple 개발자 계정이 없는 경우 [Xamarin.iOS에 대한 무료 프로비저닝](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 참조하세요.
+> 유료 Apple 개발자 계정이 없는 경우 [Xamarin.iOS에 대한 체험 프로비저닝](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 참조하세요.
 
 > [!NOTE]
 > 시작하기에 앞서, [Apple 개발자 포털](https://developer.apple.com/account/) 또는 [App Store Connect](https://appstoreconnect.apple.com/)에서 모든 라이선스 계약에 동의하시기 바랍니다.

@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d1aead9297312e190a5a04ee0f33328d81f2547a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bb4e0c81fb3f2e58be9c44d1ec7fddcf4d72a656
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939960"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964599"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -42,8 +42,8 @@ _효과는 컨트롤 사용자 지정을 간소화합니다. 이 문서에서는
 
 `HomePage`의 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤은 각 플랫폼별 프로젝트에서 `FocusEffect` 클래스로 사용자 지정됩니다. 각 `FocusEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷과 같이 컨트롤에 포커스가 있는 경우 변경되는 `Entry` 컨트롤이 플랫폼별 배경색으로 렌더링됩니다.
 
-![각 플랫폼의 포커스 효과](creating-images/screenshots-1.png)
-![각 플랫폼의 포커스 효과](creating-images/screenshots-2.png)
+![각 플랫폼의 포커스 효과, 컨트롤에 포커스가 있음](creating-images/screenshots-1.png)
+![각 플랫폼의 포커스 효과, 컨트롤에 포커스가 없음](creating-images/screenshots-2.png)
 
 ## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼의 효과 만들기
 
@@ -239,7 +239,7 @@ public class FocusEffect : RoutingEffect
 
 `FocusEffect` 클래스는 [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 클래스를 서브클래스하며, 일반적으로 플랫폼에 따라 내부 효과를 래핑하는 플랫폼 독립적인 효과를 나타냅니다. `FocusEffect` 클래스는 기본 클래스 생성자를 호출하여 해상도 그룹 이름(효과 클래스의 [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) 특성을 사용하여 지정됨)의 연결과 효과 클래스의 [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) 특성을 사용하여 지정된 고유 ID로 이루어진 매개 변수를 전달합니다. 따라서 [`Entry`](xref:Xamarin.Forms.Entry)가 런타임 시 초기화되는 경우 `MyCompany.FocusEffect`의 새 인스턴스는 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가됩니다.
 
-동작을 사용하거나 연결된 속성을 사용하여 효과를 컨트롤에 연결할 수도 있습니다. 동작을 사용하여 효과를 컨트롤에 연결에 대한 자세한 내용은 [재사용 가능한 EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md)를 참조하세요. 연결된 속성을 사용하여 효과를 컨트롤에 연결에 대한 자세한 내용은 [효과에 매개 변수 전달](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md)을 참조하세요.
+동작을 사용하거나 연결된 속성을 사용하여 효과를 컨트롤에 연결할 수도 있습니다. 동작을 사용하여 효과를 컨트롤에 연결에 대한 자세한 내용은 [재사용 가능한 EffectBehavior](~/xamarin-forms/app-fundamentals/behaviors/effect-behavior.md)를 참조하세요. 연결된 속성을 사용하여 효과를 컨트롤에 연결에 대한 자세한 내용은 [효과에 매개 변수 전달](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md)을 참조하세요.
 
 ## <a name="consuming-the-effect-in-cnum"></a>C&num;에서 효과 사용
 
