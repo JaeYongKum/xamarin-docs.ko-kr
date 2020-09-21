@@ -5,13 +5,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
-ms.date: 03/06/2020
-ms.openlocfilehash: 202041614d6a5b632aba6e92a77869effc21bb4f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.date: 09/11/2020
+ms.openlocfilehash: d4c8e9ba717602aa30cb736957da5a61d2a91130
+ms.sourcegitcommit: e4a51ca35887dd3e45016cf10111cee68d343fbe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568323"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027609"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -437,6 +437,16 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   [manifest-merger]: https://developer.android.com/studio/build/manifest-merge
 
+- **AndroidManifestPlaceholders** &ndash; *AndroidManifest.xml*의 키-값 대체 쌍의 세미콜론으로 구분된 목록입니다. 여기서 각 쌍은 `key=value` 형식입니다.
+
+  예를 들어 `assemblyName=$(AssemblyName)`의 속성 값은 *AndroidManifest.xml*에 나타날 수 있는 `${assemblyName}` 자리 표시자를 정의합니다.
+
+  ```xml
+  <application android:label="${assemblyName}"
+  ```
+
+  이를 통해 빌드 프로세스의 변수를 *AndroidManifest.xml* 파일에 삽입할 수 있습니다.
+
 - **AndroidMultiDexClassListExtraArgs** - 개발자가 `multidex.keep` 파일을 생성할 때 추가 인수를 `com.android.multidex.MainDexListBuilder`에 전달할 수 있는 문자열 속성입니다.
 
   한 가지 특별한 사례는 `dx` 컴파일 중에 다음 오류가 발생하는 경우입니다.
@@ -456,7 +466,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 8.3에 추가되었습니다.
 
-- **AndroidPackageFormat** - 유효한 값이 `apk` 또는 `aab`인 열거형 스타일 속성입니다. Android 애플리케이션을 [APK 파일][apk] 또는 [Android 앱 번들][bundle]로 패키지할지 여부를 나타냅니다. 앱 번들은 Google Play에서 전송용으로 사용되는 `Release` 빌드의 새로운 형식입니다. 현지 이 값은 기본적으로 `apk`로 설정됩니다.
+- **AndroidPackageFormat** &ndash; 유효한 값이 `apk` 또는 `aab`인 열거형 스타일 속성입니다. Android 애플리케이션을 [APK 파일][apk] 또는 [Android 앱 번들][bundle]로 패키지할지 여부를 나타냅니다. 앱 번들은 Google Play에서 전송용으로 사용되는 `Release` 빌드의 새로운 형식입니다. 현지 이 값은 기본적으로 `apk`로 설정됩니다.
 
   `$(AndroidPackageFormat)`가 `aab`로 설정되면 Android 앱 번들에 필요한 기타 MSBuild 속성이 설정됩니다.
 
@@ -475,9 +485,9 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 10.1에 추가되었습니다.
 
-- **AndroidR8JarPath** - r8 dex 컴파일러 및 shrinker와 함께 사용할 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
+- **AndroidR8JarPath** &ndash; r8 dex 컴파일러 및 shrinker와 함께 사용하기 위한 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
 
-- **AndroidSdkBuildToolsVersion** - Android SDK 빌드 도구 패키지는 **aapt**, **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다. 
+- **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다.**
 
   `$(AndroidSdkBuildToolsVersion)` MSBuild 속성에는 기본 설정 빌드 도구 버전이 포함되어 있습니다. Xamarin.Android 빌드 시스템에서 `Xamarin.Android.Common.targets`에 기본값을 제공하고, 최신 aapt가 충돌하고 있지만 이전 버전의 aapt가 작동하는 것으로 알려져 있는 경우와 같이 다른 빌드 도구 버전을 선택하기 위해 프로젝트 파일 내에서 기본값을 재정의할 수 있습니다.
 
@@ -490,7 +500,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
   - `arm64-v8a`: Xamarin.Android 5.1 이상이 필요합니다.
   - `x86_64`: Xamarin.Android 5.1 이상이 필요합니다.
 
-- **AndroidTlsProvider** - 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은
+- **AndroidTlsProvider** &ndash; 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은 다음과 같습니다.
 
   - 설정 해제/빈 문자열: Xamarin.Android 7.3 이상에서는 `btls`에 해당합니다.
 
@@ -498,7 +508,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Visual Studio 속성 페이지의 **Default** 설정에 해당합니다.
 
-  - `btls`: [HttpWebRequest](xref:System.Net.HttpWebRequest)와의 TLS 통신에는 [Boring SSL](https://boringssl.googlesource.com/boringssl)을 사용합니다.
+  - `btls`: [HttpWebRequest](xref:System.Net.HttpWebRequest)와의 TLS 통신을 위해 [Boring SSL](https://boringssl.googlesource.com/boringssl)을 사용합니다.
 
     이렇게 하면 모든 Android 버전에서 TLS 1.2를 사용할 수 있습니다.
 
@@ -528,7 +538,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 10.1에 추가되었습니다.
 
-- **AndroidUseLegacyVersionCode** - 부울 속성을 사용하면 개발자가 versionCode 계산을 이전의 사전 Xamarin.Android 8.2 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 애플리케이션을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
+- **AndroidUseLegacyVersionCode** &ndash; 부울 속성을 사용하면 개발자가 versionCode 계산을 이전의 사전 Xamarin.Android 8.2 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 애플리케이션을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
 
   Xamarin.Android 8.2에 추가되었습니다.
 
@@ -536,11 +546,11 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 8.1에 추가되었습니다.
 
-- **AndroidUseSharedRuntime** - 대상 디바이스에서 애플리케이션을 실행하기 위해 *공유 런타임 패키지*가 필요한지 여부를 결정하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
+- **AndroidUseSharedRuntime** &ndash; 대상 디바이스에서 애플리케이션을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
 
   이 속성은 디버그 빌드의 경우 `True`, 릴리스 프로젝트의 경우 `False`여야 합니다.
 
-- **AndroidVersionCodePattern** - 개발자가 매니페스트의 `versionCode`를 사용자 지정할 수 있게 해주는 문자열 속성입니다.
+- **AndroidVersionCodePattern** &ndash; 개발자가 매니페스트의 `versionCode`를 사용자 지정할 수 있게 해주는 문자열 속성입니다.
   `versionCode`를 확인하는 방법에 대한 자세한 내용은 [APK의 버전 코드 만들기](~/android/deploy-test/building-apps/abi-specific-apks.md)를 참조하세요.
 
   예를 들어 `abi`가 `armeabi`이고 매니페스트의 `versionCode`가 `123`일 경우 `{abi}{versionCode}`는 `$(AndroidCreatePackagePerAbi)`가 True일 때 `1123`의 versionCode를 생성하고, 그렇지 않을 경우 값 123을 생성합니다.
@@ -553,7 +563,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   미리 정의된 주요 항목
 
-  - **abi** - 앱의 대상 abi를 삽입합니다.
+  - **abi**  &ndash; 앱에 대한 대상 abi를 삽입합니다.
     - 2 &ndash; `armeabi-v7a`
     - 3 &ndash; `x86`
     - 4 &ndash; `arm64-v8a`
@@ -569,17 +579,17 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 7.2에 추가되었습니다.
 
-- **AndroidVersionCodeProperties** - 개발자가 `AndroidVersionCodePattern`과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다. `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_AndroidApiLevel)` 보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
+- **AndroidVersionCodeProperties** &ndash; 개발자가 `AndroidVersionCodePattern`과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다. `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_AndroidApiLevel)` 보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
 
   Xamarin.Android 7.2에 추가되었습니다.
 
-- **AotAssemblies** - 어셈블리를 네이티브 코드에 Ahead-of-Time 컴파일하고 `.apk`에 포함할지 여부를 결정하는 부울 속성입니다.
+- **AotAssemblies** &ndash; 어셈블리를 네이티브 코드에 Ahead-of-Time 컴파일하고 `.apk`에 포함할지 여부를 결정하는 부울 속성입니다.
 
   이 속성에 대한 지원은 Xamarin.Android 5.1에 추가되었습니다.
 
   기본적으로 이 속성은 `False`입니다.
 
-- **EmbedAssembliesIntoApk** - 앱의 어셈블리를 애플리케이션 패키지에 포함해야 하는지 여부를 결정하는 부울 속성입니다.
+- **EmbedAssembliesIntoApk** &ndash; 앱의 어셈블리가 애플리케이션 패키지에 포함되어야 하는지 여부를 결정하는 부울 속성입니다.
 
   이 속성은 릴리스 빌드의 경우 `True`, 디버그 빌드의 경우 `False`여야 합니다. 빠른 배포에서 대상 디바이스를 지원하지 않는 경우 디버그 빌드에서 `True`가 되어야 *할 수 있습니다*.
 
@@ -595,7 +605,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   `$(AotAssemblies)` MSBuild 속성이 `True`가 아닐 경우 이러한 속성이 무시됩니다.
 
-- **EnableProguard** - Java 코드를 연결하기 위해 패키징 프로세스의 일부로 [proguard](https://developer.android.com/tools/help/proguard.html)를 실행할지 여부를 결정하는 부울 속성입니다.
+- **EnableProguard** &ndash; Java 코드를 연결하기 위해 패키징 프로세스의 일부로 [proguard](https://developer.android.com/tools/help/proguard.html)를 실행할지 여부를 결정하는 부울 속성입니다.
 
   이 속성에 대한 지원은 Xamarin.Android 5.1에 추가되었습니다.
 
@@ -616,25 +626,25 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 - **JavaOptions** - `.dex` 파일을 빌드할 때 **java**에 전달할 추가 명령줄 옵션을 지정합니다.
 
-- **LinkerDumpDependencies** - 링커 종속성 파일 생성을 활성화하는 부울 속성입니다. 이 파일은 [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md) 도구에 대한 입력으로 사용할 수 있습니다.
+- **LinkerDumpDependencies** &ndash; 링커 종속성 파일 생성을 활성화하는 부울 속성입니다. 이 파일은 [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md) 도구에 대한 입력으로 사용할 수 있습니다.
 
   기본값은 False입니다.
 
-- **MandroidI18n** - 애플리케이션에 포함할 국제화 지원(예: 데이터 정렬, 정렬 테이블)을 지정합니다. 값은 다음과 같은 대/소문자 구분 값이 하나 이상 포함된 쉼표 또는 세미콜론으로 구분된 목록입니다.
+- **MandroidI18n** &ndash; 데이터 정렬 및 정렬 테이블처럼 애플리케이션에 포함할 국제화 지원을 지정합니다. 값은 다음과 같은 대/소문자 구분 값이 하나 이상 포함된 쉼표 또는 세미콜론으로 구분된 목록입니다.
 
-  - **없음**: 추가 인코딩을 포함하지 않습니다.
+  - **None**: 추가 인코딩을 포함하지 않습니다.
 
   - **All**: 사용 가능한 모든 인코딩을 포함합니다.
 
-  - **CJK**: ‘일본어(EUC)’ \[enc-jp, CP51932\], ‘일본어(Shift-JIS)’ \[iso-2022-jp, shift\_jis, CP932\], ‘일본어(JIS)’ \[CP50220\], ‘중국어 간체(GB2312)’ \[gb2312, CP936\], ‘한국어(UHC)’ \[ks\_c\_5601-1987, CP949\], ‘한국어(EUC)’ \[euc-kr, CP51949\], ‘중국어 번체(Big5)’ \[big5, CP950\] 및 ‘중국어 간체(GB18030)’ \[GB18030, CP54936\] 같은 중국어, 일본어 및 한국어 인코딩을 포함합니다.        
+  - **CJK**: *일본어(EUC)* \[enc-jp, CP51932\], *일본어(Shift-JIS)* \[iso-2022-jp, shift\_jis, CP932\], *일본어(JIS)* \[CP50220\], *중국어 간체(GB2312)* \[gb2312, CP936\], *한국어(UHC)* \[ks\_c\_5601-1987, CP949\], *한국어(EUC)* \[euc-kr, CP51949\], *중국어 번체(Big5)* \[big5, CP950\] 및 *중국어 간체(GB18030)* \[GB18030, CP54936\] 같은 중국어, 일본어 및 한국어 인코딩을 포함합니다.
 
-  - **MidEast**: ‘터키어(Windows)’ \[iso-8859-9, CP1254\], ‘히브리어(Windows)’ \[windows-1255, CP1255\], ‘아랍어(Windows)’ \[windows-1256, CP1256\], ‘아랍어(ISO)’ \[iso-8859-6, CP28596\], ‘히브리어(ISO)’ \[iso-8859-8, CP28598\], ‘라틴어 5(ISO)’ \[iso-8859-9, CP28599\] 및 ‘히브리어(Iso Alternative)’ \[iso-8859-8, CP38598\] 같은 중동 인코딩을 포함합니다.       
+  - **MidEast**: *터키어(Windows)* \[iso-8859-9, CP1254\], *히브리어(Windows)* \[windows-1255, CP1255\], *아랍어(Windows)* \[windows-1256, CP1256\], *아랍어(ISO)* \[iso-8859-6, CP28596\], *히브리어(ISO)* \[iso-8859-8, CP28598\], *라틴어 5(ISO)* \[iso-8859-9, CP28599\] 및 *히브리어(Iso Alternative)* \[iso-8859-8, CP38598\] 같은 중동 인코딩을 포함합니다.
 
-  - **기타**: ‘키릴 자모(Windows)’ \[CP1251\], ‘발트어(Windows)’ \[iso-8859-4, CP1257\], ‘베트남어(Windows)’ \[CP1258\], ‘키릴 자모(KOI8-R)’ \[koi8-r, CP1251\], ‘우크라이나어(KOI8-U)’ \[koi8-u, CP1251\], ‘발트어(ISO)’ \[iso-8859-4, CP1257\], ‘키릴 자모(ISO)’ \[iso-8859-5, CP1251\], ‘ISCII 데바나가리 문자’ \[x-iscii-de, CP57002\], ‘ISCII 벵골어’ \[x-iscii-be, CP57003\], ‘ISCII 타밀어’ \[x-iscii-ta, CP57004\], ‘ISCII 텔루구어’ \[x-iscii-te, CP57005\], ‘ISCII 아삼어’ \[x-iscii-as, CP57006\], ‘ISCII 오리야어’ \[x-iscii-or, CP57007\], ‘ISCII 칸나다어’ \[x-iscii-ka, CP57008\], ‘ISCII 말라얄람어’ \[x-iscii-ma, CP57009\], ‘ISCII 구자라트어’ \[x-iscii-gu, CP57010\], ‘ISCII 펀잡어’ \[x-iscii-pa, CP57011\] 및 ‘태국어(Windows)’ \[CP874\] 같은 기타 인코딩을 포함합니다.                  
+  - **Other**: *키릴 자모(Windows)* \[CP1251\], *발트어(Windows)* \[iso-8859-4, CP1257\], *베트남어(Windows)* \[CP1258\], *키릴 자모(KOI8-R)* \[koi8-r, CP1251\], *우크라이나어(KOI8-U)* \[koi8-u, CP1251\], *발트어(ISO)* \[iso-8859-4, CP1257\], *키릴 자모(ISO)* \[iso-8859-5, CP1251\], *ISCII 데바나가리 문자* \[x-iscii-de, CP57002\], *ISCII 벵골어* \[x-iscii-be, CP57003\], *ISCII 타밀어* \[x-iscii-ta, CP57004\], *ISCII 텔루구어* \[x-iscii-te, CP57005\], *ISCII 아삼어* \[x-iscii-as, CP57006\], *ISCII 오리야어* \[x-iscii-or, CP57007\], *ISCII 칸나다어* \[x-iscii-ka, CP57008\], *ISCII 말라얄람어* \[x-iscii-ma, CP57009\], *ISCII 구자라트어* \[x-iscii-gu, CP57010\], *ISCII 펀잡어* \[x-iscii-pa, CP57011\] 및 *태국어(Windows)* \[CP874\] 같은 기타 인코딩을 포함합니다.
 
-  - **Rare**: ‘IBM EBCDIC(터키어)’ \[CP1026\], ‘IBM EBCDIC(개방형 시스템 라틴어 1)’ \[CP1047\], ‘IBM EBCDIC(미국-캐나다와 유로)’ \[CP1140\], ‘IBM EBCDIC(독일과 유로)’ \[CP1141\], ‘IBM EBCDIC(덴마크/노르웨이와 유로)’ \[CP1142\], ‘IBM EBCDIC(핀란드/스웨덴과 유로)’ \[CP1143\], ‘IBM EBCDIC(이탈리아와 유로)’ \[CP1144\], ‘IBM EBCDIC(라틴 아메리카/스페인과 유로)’ \[CP1145\], ‘IBM EBCDIC(영국과 유로)’ \[CP1146\], ‘IBM EBCDIC(프랑스와 유로)’ \[CP1147\], ‘IBM EBCDIC(국가별 설정과 유로)’ \[CP1148\], ‘IBM EBCDIC(아이슬란드어와 유로)’ \[CP1149\], ‘IBM EBCDIC(독일)’ \[CP20273\], ‘IBM EBCDIC(덴마크/노르웨이)’ \[CP20277\], ‘IBM EBCDIC(핀란드/스웨덴)’ \[CP20278\], ‘IBM EBCDIC(이탈리아)’ \[CP20280\], ‘IBM EBCDIC(라틴 아메리카/스페인)’ \[CP20284\], ‘IBM EBCDIC(영국)’ \[CP20285\], ‘IBM EBCDIC(일본어 가타카나 확장)’ \[CP20290\], ‘IBM EBCDIC(프랑스)’ \[CP20297\], ‘IBM EBCDIC(아랍어)’ \[CP20420\], ‘IBM EBCDIC(히브리어)’ \[CP20424\], ‘IBM EBCDIC(아이슬란드어)’ \[CP20871\], ‘IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)’ \[CP21025\], ‘IBM EBCDIC(미국-캐나다)’ \[CP37\], IBM EBCDIC(국가별 설정)’ \[CP500\], ‘아랍어(ASMO 708)’ \[CP708\], ‘중앙 유럽어(DOS)’ \[CP852\], ‘키릴 자모(DOS)’ \[CP855\], ‘터키어(DOS)’ \[CP857\], ‘서유럽어(DOS와 유로)’ \[CP858\], ‘히브리어(DOS)’ \[CP862\], ‘아랍어(DOS)’ \[CP864\], ‘러시아어(DOS)’ \[CP866\], ‘그리스어(DOS)’ \[CP869\], ‘IBM EBCDIC(라틴어 2)’ \[CP870\] 및 ‘IBM EBCDIC(그리스어)’ \[CP875\] 같은 희귀한 인코딩을 포함합니다.                                     
+  - **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\]*, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
 
-  - **West**: ‘서유럽어(Mac)’ \[macintosh, CP10000\], ‘아이슬란드어(Mac)’ \[x-mac-icelandic, CP10079\], ‘중앙 유럽어(Windows)’ \[iso-8859-2, CP1250\], ‘서유럽어(Windows)’ \[iso-8859-1, CP1252\], ‘그리스어(Windows)’ \[iso-8859-7, CP1253\], ‘중앙 유럽어(ISO)’ \[iso-8859-2, CP28592\], ‘라틴어 3(ISO)’ \[iso-8859-3, CP28593\], ‘그리스어(ISO)’ \[iso-8859-7, CP28597\], ‘라틴어 9(ISO)’ \[iso-8859-15, CP28605\], ‘OEM 미국’ \[CP437\], ‘서유럽어(DOS)’ \[CP850\], ‘포르투갈어(DOS)’ \[CP860\], ‘아이슬란드어(DOS)’ \[CP861\], ‘프랑스어(캐나다)(DOS)’ \[CP863\] 및 ‘북유럽어(DOS)’ \[CP865\] 같은 서부 인코딩을 포함합니다.               
+  - **West**: *서유럽어(Mac)* \[macintosh, CP10000\], *아이슬란드어(Mac)* \[x-mac-icelandic, CP10079\], *중앙 유럽어(Windows)* \[iso-8859-2, CP1250\], *서유럽어(Windows)* \[iso-8859-1, CP1252\], *그리스어(Windows)* \[iso-8859-7, CP1253\], *중앙 유럽어(ISO)* \[iso-8859-2, CP28592\], *라틴어 3(ISO)* \[iso-8859-3, CP28593\], *그리스어(ISO)* \[iso-8859-7, CP28597\], *라틴어 9 (ISO)* \[iso-8859-15, CP28605\], *OEM 미국* \[CP437\], *서유럽어(DOS)* \[CP850\], *포르투갈어(DOS)* \[CP860\], *아이슬란드어(DOS)* \[CP861\], *프랑스어(캐나다)(DOS)* \[CP863\] 및 *북유럽어(DOS)* \[CP865\] 같은 서부 인코딩을 포함합니다.
 
   ```xml
   <MandroidI18n>West</MandroidI18n>
@@ -650,9 +660,9 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 다음 MSBuild 속성을 [바인딩 프로젝트](~/android/platform/binding-java-library/index.md)와 함께 사용할 수 있습니다.
 
-- **AndroidClassParser** - `.jar` 파일이 구문 분석되는 방법을 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
+- **AndroidClassParser** &ndash;`.jar` 파일이 구문 분석되는 방법을 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
 
-  - **클래스 구문 분석**: JVM의 보조 없이 `class-parse.exe`를 사용하여 Java 바이트코드의 구문 분석을 바로 수행합니다. 이 값은 실험적입니다.
+  - **class-parse**: JVM의 보조 없이 `class-parse.exe`를 사용하여 Java 바이트코드의 구문 분석을 바로 수행합니다. 이 값은 실험적입니다.
 
   - **jar2xml**: `jar2xml.jar`을 통해 Java 리플렉션을 사용하여 `.jar` 파일에서 형식과 멤버를 추출합니다.
 
@@ -668,7 +678,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   이 기본값은 향후 릴리스에서 변경될 예정입니다.
 
-- **AndroidCodegenTarget** - 코드 생성 대상 ABI를 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
+- **AndroidCodegenTarget** &ndash; 코드 생성 대상 ABI를 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
 
   - **XamarinAndroid**: Mono for Android 1.0 이후에 제공되는 JNI 바인딩 API를 사용합니다. Xamarin.Android 5.0 이상을 사용하여 빌드된 바인딩 어셈블리는 Xamarin.Android 5.0 이상(API/ABI 추가)에서만 실행할 수 있지만 *소스*는 이전 제품 버전과 호환됩니다.
 
@@ -688,25 +698,25 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 리소스 속성은 Android 리소스에 대한 액세스를 제공하는 `Resource.designer.cs` 파일의 생성을 제어합니다.
 
-- **AndroidAapt2CompileExtraArgs** - Android 자산 및 리소스 처리 시 **aapt2 컴파일** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
+- **AndroidAapt2CompileExtraArgs** &ndash; Android 자산 및 리소스 처리 시 **aapt2 컴파일** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
 
   Xamarin.Android 9.1에 추가되었습니다.
 
-- **AndroidAapt2LinkExtraArgs** - Android 자산 및 리소스 처리 시 **aapt2 링크** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
+- **AndroidAapt2LinkExtraArgs** &ndash; Android 자산 및 리소스 처리 시 **aapt2 링크** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
 
   Xamarin.Android 9.1에 추가되었습니다.
 
-- **AndroidExplicitCrunch** - 많은 로컬 드로어블을 사용하여 앱을 빌드할 경우 초기 빌드(또는 재빌드)를 완성하는 데 몇 분이 걸릴 수 있습니다. 빌드 프로세스 속도를 높이려면 이 속성을 포함하고 `True`로 설정해 보세요. 이 속성이 설정되면 빌드 프로세스가 .png 파일을 사전에 크런치합니다.
+- **AndroidExplicitCrunch** &ndash; Xamarin.Android 11.0에서 더 이상 지원되지 않습니다.
 
-  참고: 이 옵션은 `$(AndroidUseAapt2)` 옵션과 호환되지 않습니다. `$(AndroidUseAapt2)`를 사용하면 이 기능은 사용할 수 없습니다. 이 기능을 계속 사용하려면 `$(AndroidUseAapt2)`를 `False`로 설정합니다.
+- **AndroidR8IgnoreWarnings** &ndash; `r8`에 대한 `-ignorewarnings` proguard 규칙을 자동으로 지정합니다. 이렇게 하면 특정 경고가 발생한 경우에도 `r8`에서 dex 컴파일을 계속할 수 있습니다. 기본값은 `True`이지만 `False`로 설정하여 보다 엄격한 동작을 적용할 수 있습니다. 자세한 내용은 [ProGuard 설명서](https://www.guardsquare.com/products/proguard/manual/usage)를 참조하세요.
 
-  **실험적**. Xamarin.Android 7.0에 추가되었습니다.
+  Xamarin.Android 10.3에 추가되었습니다.
 
-- **AndroidResgenExtraArgs** - Android 자산 및 리소스 처리 시 **aapt** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
+- **AndroidResgenExtraArgs** &ndash; Android 자산 및 리소스 처리 시 **aapt** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
 
-- **AndroidResgenFile** - 생성할 리소스 파일의 이름을 지정합니다. 기본 템플릿은 이를 `Resource.designer.cs`로 설정합니다.
+- **AndroidResgenFile** &ndash; 생성할 리소스 파일의 이름을 지정합니다. 기본 템플릿은 이를 `Resource.designer.cs`로 설정합니다.
 
-- **AndroidUseAapt2** - 개발자가 패키징을 위한 `aapt2` 도구 사용을 제어할 수 있게 해 주는 부울 속성입니다.
+- **AndroidUseAapt2** &ndash; 개발자가 패키징을 위해 `aapt2` 도구의 사용을 제어할 수 있게 해 주는 부울 속성입니다.
   기본적으로 이 값은 False로 설정되며 `aapt`를 사용합니다.
   개발자가 새로운 `aapt2` 기능을 사용하려는 경우 설정할 수 있습니다.
 
@@ -722,7 +732,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 8.3에 추가되었습니다.
 
-- **MonoAndroidResourcePrefix** - 빌드 작업이 `AndroidResource`인 파일 이름의 앞부분에서 제거되는 ‘경로 접두사’를 지정합니다.  리소스가 있는 위치를 변경하도록 하기 위함입니다.
+- **MonoAndroidResourcePrefix** &ndash; 빌드 동작이 `AndroidResource`인 파일 이름의 앞 부분에서 제거되는 *경로 접두사*를 지정합니다. 리소스가 있는 위치를 변경하도록 하기 위함입니다.
 
   기본값은 `Resources`입니다. Java 프로젝트 구조체의 경우 이를 `res`로 변경합니다.
 
@@ -734,19 +744,19 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 기본적으로 서명 대상은 필요한 경우 새 디버그 서명 키를 생성합니다. 예를 들어 빌드 서버에서 특정 키를 사용하려는 경우 다음 MSBuild 속성을 사용할 수 있습니다.
 
-- **AndroidDebugKeyAlgorithm** - `debug.keystore`에 사용할 기본 알고리즘을 지정합니다. 기본값은 `RSA`입니다.
+- **AndroidDebugKeyAlgorithm** &ndash;`debug.keystore`에 사용할 기본 알고리즘을 지정합니다. 기본값은 `RSA`입니다.
 
-- **AndroidDebugKeyValidity** - `debug.keystore`에 사용할 기본 유효성을 지정합니다. 기본값은 `10950`, `30 * 365` 또는 `30 years`입니다.
+- **AndroidDebugKeyValidity** &ndash;`debug.keystore`에 사용할 기본 유효성을 지정합니다. 기본값은 `10950`, `30 * 365` 또는 `30 years`입니다.
 
 - **AndroidDebugStoreType** &ndash; `debug.keystore`에 사용할 키 저장소 파일 형식을 지정합니다. 기본값은 `pkcs12`입니다.
 
   Xamarin.Android 10.2에 추가되었습니다.
 
-- **AndroidKeyStore** - 사용자 지정 서명 정보를 사용할지 여부를 나타내는 부울 값입니다. 기본값은 `False`이며, 이는 기본 디버그 서명 키를 사용하여 패키지에 서명한다는 의미입니다.
+- **AndroidKeyStore** &ndash; 사용자 지정 서명 정보를 사용할지 여부를 나타내는 부울 값입니다. 기본값은 `False`이며, 이는 기본 디버그 서명 키를 사용하여 패키지에 서명한다는 의미입니다.
 
-- **AndroidSigningKeyAlias** - 키 저장소의 키 별칭을 지정합니다. 이는 키 저장소를 만들 때 사용되는 **keytool -alias** 값입니다.
+- **AndroidSigningKeyAlias** &ndash; 키 저장소의 키에 대한 별칭을 지정합니다. 이는 키 저장소를 만들 때 사용되는 **keytool -alias** 값입니다.
 
-- **AndroidSigningKeyPass** - 키 저장소 파일 내에서 키의 암호를 지정합니다. 이는 `keytool`이 **$(AndroidSigningKeyAlias)에 대한 키 암호 입력**을 요청하는 경우에 입력하는 값입니다.
+- **AndroidSigningKeyPass** &ndash; 키 저장소 파일 내에 키의 암호를 지정합니다. 이는 `keytool`이 **$(AndroidSigningKeyAlias)에 대한 키 암호 입력**을 요청하는 경우에 입력하는 값입니다.
 
   Xamarin.Android 10.0 및 이전 버전에서 이 속성은 일반 텍스트 암호만 지원합니다.
 
@@ -771,9 +781,9 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
   > [!NOTE]
   > `$(AndroidPackageFormat)`이 `aab`로 설정된 경우에는 `env:` 접두사가 지원되지 않습니다.
 
-- **AndroidSigningKeyStore** - `keytool`에서 만든 키 저장소 파일의 파일 이름을 지정합니다. 이는 **keytool -keystore** 옵션에 입력된 값에 해당합니다.
+- **AndroidSigningKeyStore** &ndash;`keytool`에서 만든 키 저장소 파일의 파일 이름을 지정합니다. 이는 **keytool -keystore** 옵션에 입력된 값에 해당합니다.
 
-- **AndroidSigningStorePass** - `$(AndroidSigningKeyStore)`의 암호를 지정합니다. 이는 키 저장소 파일을 만들 때 `keytool`에 제공되고 **키 저장소 암호 입력:** 을 요청하는 값입니다.
+- **AndroidSigningStorePass** &ndash;`$(AndroidSigningKeyStore)`에 대한 암호를 지정합니다. 이는 키 저장소 파일을 만들 때 `keytool`에 제공되고 **키 저장소 암호 입력:** 을 요청하는 값입니다.
 
   Xamarin.Android 10.0 및 이전 버전에서 이 속성은 일반 텍스트 암호만 지원합니다.
 
@@ -903,7 +913,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 
 #### <a name="item-attribute-name"></a>항목 특성 이름
 
-**Abi** - 네이티브 라이브러리의 ABI를 지정합니다.
+**Abi** &ndash; 네이티브 라이브러리의 ABI를 지정합니다.
 
 ```xml
 <ItemGroup>
@@ -937,7 +947,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 </PropertyGroup>
 ```
 
-**LogicalName** - 리소스 경로를 명시적으로 지정합니다. 여러 개별 리소스 이름으로 사용할 수 있도록 &ldquo;별칭&rdquo; 파일을 허용합니다.
+**LogicalName** &ndash; 리소스 경로를 명시적으로 지정합니다. 여러 개별 리소스 이름으로 사용할 수 있도록 &ldquo;별칭&rdquo; 파일을 허용합니다.
 
 ```xml
 <ItemGroup Condition="'$(Configuration)'!='Debug'">
@@ -958,7 +968,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 
 Xamarin.Android 10.2에 추가되었습니다.
 
-### <a name="content"></a>콘텐츠
+### <a name="content"></a>Content
 
 일반적인 `Content` 빌드 동작이 지원되지 않습니다(비용이 많이 드는 최초 실행 단계 없이 지원하는 방법을 파악하지 못했기 때문).
 

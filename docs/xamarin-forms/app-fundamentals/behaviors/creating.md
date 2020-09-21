@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: f265d1da894b195402c91cbf9468a11837c53bcf
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/10/2020
 ms.locfileid: "86933713"
 ---
-# <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
+# <a name="create-no-locxamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
@@ -59,7 +59,7 @@ public class CustomBehavior : Behavior<View>
 
 그런 다음, 적절한 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션에 연결하여 동작을 사용할 수 있습니다.
 
-## <a name="creating-a-xamarinforms-behavior"></a>Xamarin.Forms 동작 만들기
+## <a name="creating-a-no-locxamarinforms-behavior"></a>Xamarin.Forms 동작 만들기
 
 샘플 애플리케이션은 사용자가 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 입력한 값이 `double`이 아닌 경우 빨간색으로 강조 표시하는 `NumericValidationBehavior`를 설명합니다. 동작은 다음 코드 예제에 나와 있습니다.
 
@@ -92,7 +92,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 > [!NOTE]
 > 동작은 스타일을 통해 공유되고 여러 컨트롤에 적용할 수 있으므로 Xamarin.Forms는 동작의 `BindingContext`를 설정하지 않습니다.
 
-## <a name="consuming-a-xamarinforms-behavior"></a>Xamarin.Forms 동작 사용
+## <a name="consuming-a-no-locxamarinforms-behavior"></a>Xamarin.Forms 동작 사용
 
 모든 Xamarin.Forms 컨트롤에는 다음 XAML 코드 예제에서 설명한 것처럼 하나 이상의 동작을 추가할 수 있는 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션이 있습니다.
 
@@ -113,12 +113,12 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 동작을 설명합니다.
 
-[![Xamarin.Forms Behavior가 있는 애플리케이션 예제](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Xamarin.Forms 동작을 사용한 샘플 애플리케이션")
+[![Xamarin.Forms 동작을 사용한 샘플 애플리케이션](creating-images/screenshots-sml.png)](creating-images/screenshots.png#lightbox "Xamarin.Forms 동작을 사용한 샘플 애플리케이션 동작")
 
 > [!NOTE]
 > 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며, 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하면 예외가 throw됩니다.
 
-### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>스타일과 함께 Xamarin.Forms 동작 사용
+### <a name="consuming-a-no-locxamarinforms-behavior-with-a-style"></a>스타일과 함께 Xamarin.Forms 동작 사용
 
 동작은 명시적 또는 암시적 스타일에 의해 사용될 수도 있습니다. 그러나 속성은 읽기 전용이므로 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 속성을 설정하는 스타일을 만드는 것은 불가능합니다. 솔루션은 동작 추가 및 제거를 제어하는 동작 클래스에 연결된 속성을 추가하는 것입니다. 프로세스는 다음과 같습니다.
 
