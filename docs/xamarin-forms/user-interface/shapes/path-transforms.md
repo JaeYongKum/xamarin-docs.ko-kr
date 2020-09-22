@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms셰이프: 경로 변환'
+title: 'Xamarin.Forms 셰이프: 경로 변환'
 description: Xamarin.Forms변환은 한 좌표 공간에서 다른 좌표 공간으로 경로 개체를 변환 하는 방법을 정의 합니다.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
@@ -10,14 +10,14 @@ ms.date: 07/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc0ff4a361175b52c0014427cee54ce5e14ab8f8
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 6bc61eadb40a66c278955936e15158f34709fd18
+ms.sourcegitcommit: aeefe667156ca8d3ee2ee21d9bec0fa629589e33
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918392"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90928643"
 ---
-# <a name="no-locxamarinforms-shapes-path-transforms"></a>Xamarin.Forms셰이프: 경로 변환
+# <a name="no-locxamarinforms-shapes-path-transforms"></a>Xamarin.Forms 셰이프: 경로 변환
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -25,20 +25,20 @@ ms.locfileid: "87918392"
 
 는 `Transform` `Path` 한 좌표 공간에서 다른 좌표 공간으로 개체를 변환 하는 방법을 정의 합니다. 개체에 변환을 적용 하면 `Path` 개체가 UI에서 렌더링 되는 방식을 변경 합니다.
 
-변환은 회전, 크기 조정, 기울이기 및 변환의 네 가지 일반적인 분류로 분류할 수 있습니다. Xamarin.Forms이러한 각 변환 분류에 대해 클래스를 정의 합니다.
+변환은 회전, 크기 조정, 기울이기 및 변환의 네 가지 일반적인 분류로 분류할 수 있습니다. Xamarin.Forms 이러한 각 변환 분류에 대해 클래스를 정의 합니다.
 
 - `RotateTransform`지정 된로를 회전 하는입니다 `Path` `Angle` .
 - `ScaleTransform`는 `Path` 지정 된 및 양만큼 개체 크기를 조정 `ScaleX` `ScaleY` 합니다.
 - `SkewTransform`는 `Path` 지정 된 및 양만큼 개체를 `AngleX` 기울입니다 `AngleY` .
 - `TranslateTransform`는 `Path` 지정 된 및 양만큼 개체를 `X` 이동 `Y` 합니다.
 
-Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래스도 제공 합니다.
+Xamarin.Forms 에서는 더 복잡 한 변환을 만들기 위한 다음 클래스도 제공 합니다.
 
 - `TransformGroup`는 여러 transform 개체로 구성 된 복합 변환을 나타냅니다.
 - `CompositeTransform`-개체에 여러 변환 작업을 적용 `Path` 합니다.
 - `MatrixTransform`는 다른 변환 클래스에서 제공 하지 않는 사용자 지정 변환을 만듭니다.
 
-이러한 모든 클래스는 `Transform` 형식의 속성을 정의 하는 클래스에서 파생 `Value` `Matrix` 됩니다. 이 속성은 현재 변환을 `Matrix` 개체로 나타냅니다. 구조체에 대 한 자세한 내용은 `Matrix` [Transform 행렬](#transform-matrix)을 참조 하세요.
+이러한 모든 클래스는 `Transform` `Value` 현재 변환을 개체로 나타내는 형식의 속성을 정의 하는 클래스에서 파생 `Matrix` `Matrix` 됩니다. 이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다. 구조체에 대 한 자세한 내용은 `Matrix` [Transform 행렬](#transform-matrix)을 참조 하세요.
 
 에 변환을 적용 하려면 `Path` transform 클래스를 만들고이를 속성의 값으로 설정 `Path.RenderTransform` 합니다.
 
@@ -52,7 +52,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 - `CenterX`형식의는 `double` 회전 중심점의 x 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 - `CenterY`형식의는 `double` 회전 중심점의 y 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 `CenterX`및 `CenterY` 속성은 `Path` 개체가 회전 되는 지점을 지정 합니다. 이 중심점은 변환 된 개체의 좌표 공간으로 표현 됩니다. 기본적으로 회전은 개체의 왼쪽 위 모퉁이에 해당 하는 (0, 0)에 적용 됩니다 `Path` .
 
@@ -87,7 +87,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 - `CenterX`-형식의 이며, `double` 이 변환의 중심점의 x 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 - `CenterY`-형식의 이며, `double` 이 변환의 중심점의 y 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 및의 값 `ScaleX` 은 `ScaleY` 결과 크기 조정에 큰 영향을 미칩니다.
 
@@ -133,7 +133,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 - `CenterX``double`변환 중심의 x 좌표를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 - `CenterY``double`변환 중심의 y 좌표를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 기울이기 변환의 효과를 예측 하려면가 `AngleX` 원래 좌표계를 기준으로 x 축 값을 기울이는 것이 좋습니다. 따라서 `AngleX` 30의 경우 y 축은 원본을 통해 30도 회전 하 고 x의 값을 해당 원점에서 30도 기울입니다. 마찬가지로, `AngleY` 30의는 개체의 y 값을 `Path` 원점 으로부터 30도 기울입니다.
 
@@ -170,7 +170,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 - `X``double`x-축을 따라 이동할 거리를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 - `Y``double`y 축을 따라 이동할 거리를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 음수 `X` 값은 개체를 왼쪽으로 이동 하 고, 양수 값은 개체를 오른쪽으로 이동 합니다. 음수 `Y` 값은 개체를 위로 이동 하 고, 양수 값은 개체를 아래로 이동 합니다.
 
@@ -195,7 +195,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 
 ## <a name="multiple-transforms"></a>여러 변환
 
-Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 클래스가 있습니다 `Path` . 이는 `TransformGroup` , 및 `CompositeTransform` 입니다. 는 `TransformGroup` 원하는 순서로 변환을 수행 하는 반면는 `CompositeTransform` 특정 순서로 변환을 수행 합니다.
+Xamarin.Forms 에는 개체에 다중 변환 적용을 지 원하는 두 개의 클래스가 있습니다 `Path` . 이는 `TransformGroup` , 및 `CompositeTransform` 입니다. 는 `TransformGroup` 원하는 순서로 변환을 수행 하는 반면는 `CompositeTransform` 특정 순서로 변환을 수행 합니다.
 
 ### <a name="transform-groups"></a>변환 그룹
 
@@ -243,7 +243,7 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 - `TranslateX``double`x-축을 따라 이동할 거리를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 - `TranslateY``double`y 축을 따라 이동할 거리를 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 는 `CompositeTransform` 다음 순서로 변환을 적용 합니다.
 
@@ -401,4 +401,4 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 ## <a name="related-links"></a>관련 링크
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
+- [Xamarin.Forms 셰이프도](index.md)
