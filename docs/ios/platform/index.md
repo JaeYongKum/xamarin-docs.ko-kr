@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: aca9227bc5c885000bffe858e0fc8b34d3724dfd
+ms.sourcegitcommit: 0c45e3f810947e3d43223aa01bf3e43a0defca65
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997152"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90843501"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -20,8 +20,9 @@ ms.locfileid: "86997152"
 
 ## <a name="ios-releases"></a>iOS 릴리스
 
-| 해제 | 설명 |
+| 해제 | Description |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [IOS 14 소개](~/ios/platform/ios14/index.md) | 이 문서에서는 Xamarin.ios 14에 대해 설명 합니다.|
 | [iOS 13 소개](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.ios 13에 대해 설명 합니다.|
 | [iOS 12 소개](~/ios/platform/introduction-to-ios12/index.md) | 이 문서에서는 Xamarin.ios 응용 프로그램을 빌드할 때 사용할 수 있는 iOS 12 기능에 대해 설명 합니다.|
 | [iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md) | 이 문서에서는 ARKit, Core ML, Core NFC, 끌어서 놓기, MapKit, PDFKit, SiriKit 및 비전과 같이 iOS 11 및 Xcode 9의 새로운 기능 및 업데이트 된 기능에 대해 설명 합니다. Xamarin.ios에서 이러한 기능을 사용 하는 방법을 설명 하는 가이드로 연결 됩니다. |
