@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 87ba471dad102059788695f3fe50633bc1a3de0c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 96f5dd638de17569d105e95c44a539e652b35986
+ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930184"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91248128"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -115,7 +115,7 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
 데이터 계층에는 데이터베이스, 플랫 파일 또는 기타 메커니즘과 관련 된 데이터의 실제 저장소를 수행 하는 코드가 포함 되어 있습니다. Tasky 데이터 계층은 SQLite 네트워크 라이브러리와 연결에 추가 된 사용자 지정 코드의 두 부분으로 구성 됩니다.
 
-Tasky는 Frank Kreuger에서 게시 한 Sqlite-net NuGet 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. `TaskItemDatabase`클래스는에서 상속 되 `SQLiteConnection` 고 SQLite에서 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
+Tasky는 Frank Krueger에서 게시 한 Sqlite-net NuGet 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. `TaskItemDatabase`클래스는에서 상속 되 `SQLiteConnection` 고 SQLite에서 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
 
 는 `TaskItemDatabase` 단일 항목으로, 동일한 인스턴스에 대 한 모든 액세스가 수행 되도록 합니다. 잠금은 여러 스레드의 동시 액세스를 방지 하는 데 사용 됩니다.
 
@@ -280,7 +280,7 @@ IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.
 
 응용 프로그램 계층에는 PCL에서 노출 한 개체를 UI에 ' 바인딩 ' 하는 데 필요한 플랫폼별 클래스가 포함 되어 있습니다. IOS 관련 응용 프로그램에는 작업을 표시 하는 데 도움이 되는 두 가지 클래스가 있습니다.
 
-- **EditingSource** –이 클래스는 작업 목록을 사용자 인터페이스에 바인딩하는 데 사용 됩니다. 는 `MonoTouch.Dialog` 작업 목록에 사용 되기 때문에에서 살짝의 삭제 기능을 사용 하려면이 도우미를 구현 해야 `UITableView` 합니다. 살짝 밀기-삭제는 iOS에서 일반적 이지만 Android 또는 Windows Phone에는 적용 되지 않으므로 iOS 관련 프로젝트는이를 구현 하는 유일한 프로젝트입니다.
+- **EditingSource** –이 클래스는 작업 목록을 사용자 인터페이스에 바인딩하는 데 사용 됩니다. 는 `MonoTouch.Dialog` 작업 목록에 사용 되기 때문에에서 살짝의 삭제 기능을 사용 하려면이 도우미를 구현 해야  `UITableView` 합니다. 살짝 밀기-삭제는 iOS에서 일반적 이지만 Android 또는 Windows Phone에는 적용 되지 않으므로 iOS 관련 프로젝트는이를 구현 하는 유일한 프로젝트입니다.
 - **Taskdialog** –이 클래스는 단일 작업을 UI에 바인딩하는 데 사용 됩니다. 리플렉션 API를 사용 하 여 `MonoTouch.Dialog` 올바른 특성이 포함 된 클래스를 사용 하 여 개체를 ' 래핑 ' 하 고, `TaskItem` 입력 화면의 형식이 올바르게 지정 될 수 있도록 합니다.
 
 클래스는 특성을 사용 하 여 `TaskDialog` `MonoTouch.Dialog` 클래스의 속성을 기반으로 화면을 만듭니다. 클래스는 다음과 같습니다.
@@ -318,7 +318,7 @@ public class TaskDialog {
 
 사용자 인터페이스 계층은 다음 클래스로 구성 됩니다.
 
-1. **AppDelegate** – 응용 프로그램에 사용 되는 글꼴 및 색의 스타일을 표시 하는 모양 API에 대 한 호출을 포함 합니다. Tasky는 간단한 응용 프로그램 이므로에서 실행 되는 다른 초기화 작업이 없습니다 `FinishedLaunching` .
+1. **AppDelegate** – 응용 프로그램에 사용 되는 글꼴 및 색의 스타일을 표시 하는 모양 API에 대 한 호출을 포함 합니다. Tasky는 간단한 응용 프로그램 이므로에서 실행 되는 다른 초기화 작업이 없습니다  `FinishedLaunching` .
 2. **Screens** `UIViewController` Screen – 각 화면 및 해당 동작을 정의 하는의 서브 클래스입니다. 응용 프로그램 계층 클래스 및 공용 API ()를 사용 하 여 UI를 함께 연결 `TaskItemManager` 합니다. 이 예제에서는 코드에서 화면을 만들지만 Xcode의 Interface Builder 또는 스토리 보드 디자이너를 사용 하 여 디자인할 수 있습니다.
 3. **이미지** – 시각적 요소는 모든 응용 프로그램에서 중요 한 부분입니다. Tasky에는 iOS 용 시작 화면 및 아이콘 이미지가 있고,이 이미지는 regular 및 레 티 나 resolution에서 제공 되어야 합니다.
 
@@ -332,7 +332,7 @@ public class TaskDialog {
 
 작업 목록과 상호 작용을 표시 하 고 상호 작용 하는 데 관련 된 두 가지 주요 메서드는 다음과 같습니다.
 
-1. **PopulateTable** – 비즈니스 계층의 메서드를 사용 하 여 `TaskManager.GetTasks` 표시할 개체의 컬렉션을 검색 `TaskItem` 합니다.
+1. **PopulateTable** – 비즈니스 계층의 메서드를 사용 하 여  `TaskManager.GetTasks` 표시할 개체의 컬렉션을 검색  `TaskItem` 합니다.
 2. **선택 됨** – 행이 작업 될 때 새 화면에 작업을 표시 합니다.
 
  <a name="Task_Details_Screen"></a>
@@ -349,9 +349,9 @@ Tasky는 `MonoTouch.Dialog` 의 리플렉션 API를 사용 하 여 화면을 표
 
 작업 **세부 정보** 화면의 기능 (예: 작업 저장 또는 삭제)은 클래스에서 구현 해야 합니다 .이는가 생성 되는 `HomeScreen` 위치 이기 때문입니다 `MonoTouch.Dialog.BindingContext` . 다음 `HomeScreen` 메서드는 작업 세부 정보 화면을 지원 합니다.
 
-1. **Showtaskdetails** – `MonoTouch.Dialog.BindingContext` 화면을 렌더링 하기 위한를 만듭니다. 리플렉션을 사용 하 여 입력 화면을 만들어 클래스에서 속성 이름 및 형식을 검색 `TaskDialog` 합니다. 입력란의 워터 마크 텍스트와 같은 추가 정보는 속성에 대 한 특성으로 구현 됩니다.
-2. **Savetask** -이 메서드는 특성을 통해 클래스에서 참조 됩니다 `TaskDialog` `OnTap` . **저장** 을 누를 때 호출 되며를 `MonoTouch.Dialog.BindingContext` 사용 하 여 변경 내용을 저장 하기 전에 사용자가 입력 한 데이터를 검색 `TaskItemManager` 합니다.
-3. **Deletetask** –이 메서드는 특성을 통해 클래스에서 참조 됩니다 `TaskDialog` `OnTap` . 를 사용 하 여 `TaskItemManager` 기본 키 (ID 속성)를 사용 하 여 데이터를 삭제 합니다.
+1. **Showtaskdetails** –  `MonoTouch.Dialog.BindingContext` 화면을 렌더링 하기 위한를 만듭니다. 리플렉션을 사용 하 여 입력 화면을 만들어 클래스에서 속성 이름 및 형식을 검색  `TaskDialog` 합니다. 입력란의 워터 마크 텍스트와 같은 추가 정보는 속성에 대 한 특성으로 구현 됩니다.
+2. **Savetask** -이 메서드는 특성을 통해 클래스에서 참조 됩니다  `TaskDialog`  `OnTap` . **저장** 을 누를 때 호출 되며를 `MonoTouch.Dialog.BindingContext` 사용 하 여 변경 내용을 저장 하기 전에 사용자가 입력 한 데이터를 검색 `TaskItemManager` 합니다.
+3. **Deletetask** –이 메서드는 특성을 통해 클래스에서 참조 됩니다  `TaskDialog`  `OnTap` . 를 사용 하 여  `TaskItemManager` 기본 키 (ID 속성)를 사용 하 여 데이터를 삭제 합니다.
 
  <a name="Android_App"></a>
 

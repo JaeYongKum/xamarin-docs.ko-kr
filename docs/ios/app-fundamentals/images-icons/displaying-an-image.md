@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018
-ms.openlocfilehash: f9de09065d7c26c9ae98ef664be63599becb4da5
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a7bc2b87e267e78d841217b7860e5d54c046b788
+ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997451"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91248141"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.ios에서 이미지 표시
 
@@ -100,9 +100,9 @@ IOS 8부터 개발자가 다른 해상도의 개별 비트맵 파일을 포함 �
 
 예를 들어 개발자가 `MonkeyIcon.pdf` 150px x 150px의 해상도를 사용 하 여 자산 카탈로그의 벡터로 파일을 포함 하는 경우 컴파일할 때 다음 비트맵 자산이 최종 앱 번들에 포함 됩니다.
 
-- `MonkeyIcon@1x.png`-150px x 150px resolution.
-- `MonkeyIcon@2x.png`-300px x 300px 해상도입니다.
-- `MonkeyIcon@3x.png`-450px x 450px resolution.
+- `MonkeyIcon@1x.png` -150px x 150px resolution.
+- `MonkeyIcon@2x.png` -300px x 300px 해상도입니다.
+- `MonkeyIcon@3x.png` -450px x 450px resolution.
 
 자산 카탈로그에서 PDF 벡터 이미지를 사용 하는 경우 다음 사항을 고려해 야 합니다.
 
@@ -159,9 +159,9 @@ if (MyIcon.Image != null) {
 
 열거형을 통해 다음과 같은 세 가지 설정이 있을 수 있습니다 `UIImage.RenderMode` `UIImageRenderingMode` .
 
-- `AlwaysOriginal`-이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
-- `AlwaysTemplate`-지정 된 색으로 픽셀의 색을 지정 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다 `Tint` .
-- `Automatic`-이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 렌더링 합니다. 예를 들어, 또는에서 이미지를 사용 하는 경우에는 `UIToolBar` `UINavigationBar` `UITabBar` `UISegmentControl` 템플릿으로 처리 됩니다.
+- `AlwaysOriginal` -이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
+- `AlwaysTemplate` -지정 된 색으로 픽셀의 색을 지정 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다 `Tint` .
+- `Automatic` -이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 렌더링 합니다. 예를 들어, 또는에서 이미지를 사용 하는 경우에는 `UIToolBar` `UINavigationBar` `UITabBar` `UISegmentControl` 템플릿으로 처리 됩니다.
 
 ## <a name="adding-new-assets-collections"></a>새 자산 컬렉션 추가
 
@@ -207,7 +207,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage");
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-다른 이미지 형식의 경우 이름으로 확장을 포함 합니다. 예를 들어:
+다른 이미지 형식의 경우 이름으로 확장을 포함 합니다. 다음은 그 예입니다.
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
@@ -215,7 +215,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 아이콘 및 이미지에 대 한 자세한 내용은 [사용자 지정 아이콘 및 이미지 만들기 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)에 대 한 Apple 설명서를 참조 하세요.
 
-## <a name="displaying-an-image-in-a-storyboards"></a>스토리 보드에 이미지 표시
+## <a name="displaying-an-image-in-a-storyboard"></a>스토리 보드에 이미지 표시
 
 자산 카탈로그를 사용 하 여 Xamarin.ios 프로젝트에 이미지를 추가 하면 iOS 디자이너에서를 사용 하 여 스토리 보드에 쉽게 표시할 수 있습니다 `UIImageView` . 예를 들어 다음 이미지 자산이 추가 된 경우:
 
