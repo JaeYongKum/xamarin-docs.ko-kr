@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: 시작
+    - name: 시작하기
       href: get-started/index.md
       expanded: true
       items:
@@ -147,7 +147,7 @@
               href: user-interface/android-designer/diagnostic-analyzers.md
         - name: 재질 테마
           href: user-interface/material-theme.md
-        - name: 사용자 프로필
+        - name: User Profile
           href: user-interface/user-profile.md
         - name: 시작 화면
           href: user-interface/splash-screen.md
@@ -200,7 +200,7 @@
               href: user-interface/controls/action-bar.md
             - name: 자동 완성
               href: user-interface/controls/auto-complete.md
-            - name: 단추
+            - name: Buttons
               href: user-interface/controls/buttons/index.md
               items:
                 - name: Radio Button
@@ -211,7 +211,7 @@
                   href: user-interface/controls/buttons/check-box.md
                 - name: 사용자 지정 단추
                   href: user-interface/controls/buttons/custom-button.md
-            - name: 일정
+            - name: 달력
               href: user-interface/controls/calendar.md
             - name: CardView
               href: user-interface/controls/card-view.md
@@ -226,7 +226,7 @@
               items:
                 - name: 날짜 선택
                   href: user-interface/controls/pickers/date-picker.md
-                - name: 시간 선택기
+                - name: 시간 선택
                   href: user-interface/controls/pickers/time-picker.md
             - name: 팝업 메뉴
               href: user-interface/controls/popup-menu.md
@@ -238,7 +238,7 @@
               href: user-interface/controls/switch.md
             - name: TextureView
               href: user-interface/controls/texture-view.md
-            - name: Toolbar
+            - name: 도구 모음
               href: user-interface/controls/tool-bar/index.md
               items:
                 - name: 작업 모음 바꾸기
@@ -271,7 +271,7 @@
         - name: 지문 인증
           href: platform/fingerprint-authentication/index.md
           items:
-            - name: 시작
+            - name: 시작하기
               href: platform/fingerprint-authentication/get-started.md
             - name: 지문 검사
               href: platform/fingerprint-authentication/scanning.md
@@ -330,7 +330,7 @@
         - name: 콘텐츠 공급자
           href: platform/content-providers/index.md
           items:
-            - name: 작동 방법
+            - name: 작동 방식
               href: platform/content-providers/how-it-works.md
             - name: 연락처 ContentProvider 사용
               href: platform/content-providers/contacts-contentprovider.md
@@ -359,7 +359,7 @@
               href: platform/java-integration/android-callable-wrappers.md
             - name: JNI 작업
               href: platform/java-integration/working-with-jni.md
-            - name: 'Java를 C#으로 이식'
+            - name: Java를 C#으로 이식
               href: platform/java-integration/porting-java-to-csharp.md
         - name: Java 라이브러리 바인딩
           href: platform/binding-java-library/index.md
@@ -391,7 +391,7 @@
     - name: Xamarin.Essentials
       href: ~/essentials/index.md?context=xamarin/android
       items:
-        - name: 시작
+        - name: 시작하기
           href: ~/essentials/get-started.md?context=xamarin/android
         - name: 플랫폼 및 기능 지원
           href: ~/essentials/platform-feature-support.md?context=xamarin/android
@@ -504,7 +504,7 @@
         - name: Google 메시징
           href: data-cloud/google-messaging/index.md
           items:
-            - name: Firebase 클라우드 메시징
+            - name: Firebase Cloud 메시징
               href: data-cloud/google-messaging/firebase-cloud-messaging.md
             - name: FCM 알림 연습
               href: data-cloud/google-messaging/remote-notifications-with-fcm.md
@@ -526,6 +526,12 @@
           items:
             - name: 빌드 프로세스
               href: deploy-test/building-apps/build-process.md
+            - name: 항목 빌드
+              href: deploy-test/building-apps/build-items.md
+            - name: 빌드 속성
+              href: deploy-test/building-apps/build-properties.md
+            - name: 빌드 대상
+              href: deploy-test/building-apps/build-targets.md
             - name: ABI 관련 APK 빌드
               href: deploy-test/building-apps/abi-specific-apks.md
         - name: 명령줄 에뮬레이터
@@ -541,7 +547,7 @@
               href: deploy-test/debugging/android-debug-log.md
         - name: 디버깅 가능한 특성
           href: deploy-test/debuggable-attribute.md
-        - name: 환경
+        - name: Environment
           href: deploy-test/environment.md
         - name: GDB
           href: deploy-test/gdb.md
@@ -586,13 +592,13 @@
     - name: 고급 개념 및 내부 요소
       href: internals/index.md
       items:
-        - name: 아키텍처
+        - name: Architecture
           href: internals/architecture.md
         - name: 사용 가능한 어셈블리
           href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
         - name: API 디자인
           href: internals/api-design.md
-        - name: 가비지 컬렉션
+        - name: 가비지 수집
           href: internals/garbage-collection.md
         - name: 제한 사항
           href: internals/limitations.md
@@ -643,7 +649,7 @@
     - name: Wear
       href: wear/index.md
       items:
-        - name: 시작
+        - name: 시작하기
           href: wear/get-started/index.md
           items:
             - name: Android Wear 소개
@@ -674,7 +680,7 @@
               href: wear/deploy-test/debug-on-emulator.md
             - name: Wear 디바이스에서 디버그
               href: wear/deploy-test/debug-on-device.md
-            - name: 패키지
+            - name: 패키징
               href: wear/deploy-test/packaging.md
     - name: 릴리스 정보
       href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
