@@ -6,12 +6,12 @@ ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: davidortinau
 ms.author: daortin
 ms.date: 08/06/2018
-ms.openlocfilehash: 5edfd8216892eb28a2b1ad14d3ccee1668b21a43
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b097a0549db6178576d9e10eb3282c88e96b9ddb
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571222"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453300"
 ---
 # <a name="sharing-code-overview"></a>코드 공유 개요
 
@@ -49,7 +49,7 @@ _이 문서에서는 플랫폼 간 프로젝트 간에 코드를 공유 하는 �
 
 ### <a name="remarks"></a>설명
 
-.NET Standard는 [PCL과 유사](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries)하지만 플랫폼 지원에 대 한 간단한 모델과 BCL의 많은 클래스가 있습니다.
+.NET Standard는 [PCL과 유사](/dotnet/standard/net-standard#comparison-to-portable-class-libraries)하지만 플랫폼 지원에 대 한 간단한 모델과 BCL의 많은 클래스가 있습니다.
 
 <a name="Shared_Projects"></a>
 
@@ -82,7 +82,7 @@ IOS, Android 및 Windows를 지 원하는 플랫폼 간 응용 프로그램에�
 
 - 여러 프로젝트 간에 코드를 공유할 수 있습니다.
 - 컴파일러 지시문을 사용 하 여 공유 코드를 분기할 수 있습니다 (예: `#if __ANDROID__` [플랫폼 간 응용 프로그램 작성](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) 문서에 설명 된 대로를 사용 합니다.
-- 응용 프로그램 프로젝트에는 공유 코드에서 활용할 수 있는 플랫폼별 참조가 포함 될 수 있습니다 (예: `Community.CsharpSqlite.WP7` Windows Phone에 대 한 Tasky 샘플에서 사용).
+- 응용 프로그램 프로젝트에는 공유 코드에서 활용할 수 있는 플랫폼별 참조가 포함 될 수 있습니다 (예:  `Community.CsharpSqlite.WP7` Windows Phone에 대 한 Tasky 샘플에서 사용).
 
 ### <a name="disadvantages"></a>단점
 
@@ -113,9 +113,9 @@ IOS, Android 및 Windows를 지 원하는 플랫폼 간 응용 프로그램에�
 
 ### <a name="disadvantages"></a>단점
 
-- 최신 버전의 Visual Studio에서 더 이상 사용 되지 않는 .NET Standard 라이브러리를 대신 사용 하는 것이 좋습니다. PCL과 .NET Standard 간의 [차이점에 대 한 설명은](https://docs.microsoft.com/dotnet/standard/net-standard#comparison-to-portable-class-libraries) 다음을 참조 하세요.
+- 최신 버전의 Visual Studio에서 더 이상 사용 되지 않는 .NET Standard 라이브러리를 대신 사용 하는 것이 좋습니다. PCL과 .NET Standard 간의 [차이점에 대 한 설명은](/dotnet/standard/net-standard#comparison-to-portable-class-libraries) 다음을 참조 하세요.
 - 컴파일러 지시문을 사용할 수 없습니다.
-- 선택한 프로필에 따라 결정 되는 .NET framework의 하위 집합만 사용할 수 있습니다. 자세한 내용은 [PCL 소개](~/cross-platform/app-fundamentals/pcl.md) 를 참조 하세요.
+- 선택한 프로필에 따라 결정 되는 .NET framework의 하위 집합만 사용할 수 있습니다. 자세한 내용은  [PCL 소개](~/cross-platform/app-fundamentals/pcl.md) 를 참조 하세요.
 
 ### <a name="remarks"></a>설명
 

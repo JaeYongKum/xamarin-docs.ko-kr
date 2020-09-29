@@ -6,12 +6,12 @@ ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 6050ede8a8f725f75011a1ebc018406c197b1dcd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f6fca3bd02833e429ca3cbe8592124cb4cfba65b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938838"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453183"
 ---
 # <a name="getting-started-with-f35"></a>F&#35; 시작
 
@@ -45,12 +45,12 @@ Mac용 Visual Studio의 **새 솔루션** 대화 상자 내에서 F # 자습서�
 
 [샘플 목록을](~/cross-platform/platform/fsharp/samples.md) 확인 하 여 F # 작업을 확인 하세요.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참고 자료
 
 모든 proficiencies를 포함 하 여 F # 언어로 빠르게 다양 한 온라인 정보를 온라인으로 사용할 수 있습니다. 다음은 몇 가지 권장 사항입니다.
 
 - [F# Software Foundation](https://fsharp.org)
 - [Visual F# 개발 포털](https://go.microsoft.com/fwlink/?LinkID=234174)
-- [Visual F# 코드 갤러리](https://go.microsoft.com/fwlink/?LinkID=124614)
-- [Visual F# 수학/Stats 프로그래밍](https://go.microsoft.com/fwlink/?LinkId=235173)
-- [Visual F# 차트](https://go.microsoft.com/fwlink/?LinkId=235176)
+- [Visual F# 코드 갤러리](/samples/browse/)
+- [Visual F# 수학/Stats 프로그래밍](/previous-versions/visualstudio/visual-studio-2010/hh273075(v=vs.100))
+- [Visual F# 차트](/previous-versions/visualstudio/visual-studio-2010/hh273079(v=vs.100))

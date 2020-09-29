@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: ea54dcd1df800df1df855fc6b7efedecfda1a24f
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7c63f4c245d6fc5cb6e9da6320e159229b07de6e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996866"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453677"
 ---
 # <a name="install-and-setup-wear-os-on-xamarinandroid"></a>Xamarin Android에서 OS 설치 및 설정
 
@@ -28,7 +28,7 @@ Xamarin 기반 Android 마모 앱을 만들려면 다음이 필요 합니다.
 
 - Android SDK Manager를 통해 **Android SDK** Android SDK 5.0.1 용 (API 21) 이상을 설치 해야 합니다.
 
-- **Java 개발자 키트** &ndash; API 레벨 24 이상에 대해 개발 중인 경우 Xamarin Android 개발에 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이 필요 합니다 (jdk 1.8은 24 이전 API 수준도 지원).
+- **Java 개발자 키트** &ndash; API 레벨 24 이상에 대해 개발 중인 경우 Xamarin Android 개발에   [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이 필요 합니다 (jdk 1.8은 24 이전 API 수준도 지원).
 
 API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
 
@@ -115,4 +115,4 @@ Android 마모 응용 프로그램을 주 Android 응용 프로그램에 대 한
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkeletonWear (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)
+- [SkeletonWear (샘플)](/samples/xamarin/monodroid-samples/wear-skeletonwear)

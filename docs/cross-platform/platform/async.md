@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 3bb2ba863913c2cc3098a2481ebd034c78eabdea
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9821519c680de61767792c8122938bf826e457f5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938864"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453248"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -23,7 +23,7 @@ Xamarin의 비동기 지원은 Mono 3.0 foundation을 기반으로 하며, 모�
 
 이 문서에서는 새로운 async 및 wait 키워드를 소개 하 고 Xamarin.ios 및 Xamarin.ios에서 비동기 메서드를 구현 하는 몇 가지 간단한 예제를 안내 합니다.
 
-C # 5의 새로운 비동기 기능에 대 한 자세한 내용은 (많은 샘플과 다양 한 사용 시나리오 포함) [비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async)문서를 참조 하세요.
+C # 5의 새로운 비동기 기능에 대 한 자세한 내용은 (많은 샘플과 다양 한 사용 시나리오 포함) [비동기 프로그래밍](/dotnet/csharp/async)문서를 참조 하세요.
 
 이 샘플 응용 프로그램은 기본 스레드를 차단 하지 않고 간단한 비동기 웹 요청을 만든 다음 다운로드 된 html 및 문자 개수로 UI를 업데이트 합니다.
 
@@ -37,7 +37,7 @@ C # 5 기능에는 Xamarin.ios 6.4 및 Xamarin. Android 4.8에 포함 된 Mono 3
 
 ## <a name="using-async-amp-await"></a>Async &amp; wait 사용
 
- `async`및 `await` 는 작업 병렬 라이브러리와 함께 작동 하 여 응용 프로그램의 주 스레드를 차단 하지 않고 장기 실행 작업을 수행 하는 스레드 코드를 쉽게 작성할 수 있도록 하는 새로운 c # 언어 기능입니다.
+ `async` 및 `await` 는 작업 병렬 라이브러리와 함께 작동 하 여 응용 프로그램의 주 스레드를 차단 하지 않고 장기 실행 작업을 수행 하는 스레드 코드를 쉽게 작성할 수 있도록 하는 새로운 c # 언어 기능입니다.
 
 ## <a name="async"></a>async
 
@@ -69,7 +69,7 @@ Wait를 사용 하면 호출자의 스레드를 차단 하지 않고 제어가 �
 
 작업이 완료 되 면 메서드는 코드의 동일한 지점에서 실행을 다시 시작 합니다. 여기에는 try-catch-finally 블록의 try 범위로의 반환 (있는 경우)이 포함 됩니다. wait는 catch 또는 finally 블록에서 사용할 수 없습니다.
 
-Microsoft Docs [에 대 한 자세한](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) 내용은을 참조 하세요.
+Microsoft Docs [에 대 한 자세한](/dotnet/csharp/language-reference/keywords/await) 내용은을 참조 하세요.
 
 ## <a name="exception-handling"></a>예외 처리
 
@@ -85,11 +85,11 @@ Microsoft Docs [에 대 한 자세한](https://docs.microsoft.com/dotnet/csharp/
 
 그런 다음 작업 자체를 취소 하 고 취소를 승인 합니다.
 
-취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)을 참조하세요.
+취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)을 참조하세요.
 
 ## <a name="example"></a>예제
 
-[예제 Xamarin 솔루션](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (IOS 및 Android 모두)을 다운로드 하 여 `async` 모바일 앱에서 및의 작업 예를 확인 `await` 합니다. 이 섹션에서는 예제 코드에 대해 자세히 설명 합니다.
+[예제 Xamarin 솔루션](/samples/xamarin/mobile-samples/asyncawait/) (IOS 및 Android 모두)을 다운로드 하 여 `async` 모바일 앱에서 및의 작업 예를 확인 `await` 합니다. 이 섹션에서는 예제 코드에 대해 자세히 설명 합니다.
 
 ### <a name="writing-an-async-method"></a>비동기 메서드 작성
 
@@ -120,9 +120,9 @@ public async Task<int> DownloadHomepage()
 
 다음 사항에 유의 하세요.
 
-- 메서드 선언에는 키워드가 포함 됩니다 `async` .
-- 반환 형식은를 `Task<int>` 호출 하는 코드가 `int` 이 메서드에서 계산 된 값에 액세스할 수 있도록 합니다.
-- Return 문은 `return exampleInt;` 정수 개체입니다. 메서드가 반환 하는 사실은 `Task<int>` 언어 개선의 일부입니다.
+- 메서드 선언에는 키워드가 포함 됩니다  `async` .
+- 반환 형식은를  `Task<int>` 호출 하는 코드가  `int` 이 메서드에서 계산 된 값에 액세스할 수 있도록 합니다.
+- Return 문은  `return exampleInt;` 정수 개체입니다. 메서드가 반환 하는 사실은  `Task<int>` 언어 개선의 일부입니다.
 
 ### <a name="calling-an-async-method-1"></a>비동기 메서드 호출 1
 
@@ -145,12 +145,12 @@ GetButton.Click += async (sender, e) => {
 };
 ```
 
-메모:
+참고:
 
 - 익명 대리자에는 async 키워드 접두사가 있습니다.
 - 비동기 메서드 DownloadHomepage는 sizeTask 변수에 저장 된 작업을 반환 합니다 \<int> .
 - SizeTask 변수에 대 한 기다립니다 코드입니다.  *이* 위치는 메서드가 일시 중단 되 고 비동기 작업이 자체 스레드에서 완료 될 때까지 제어를 호출 코드로 반환 하는 위치입니다.
-- 작업을 만들 때에도 메서드의 첫 번째 줄에 작업이 생성 되 면 실행이 일시 중지 *되지* 않습니다. Wait 키워드는 실행이 일시 중지 된 위치를 나타냅니다.
+- 작업을 만들 때에도 메서드의 첫 번째 줄에 작업이 생성 되 면 실행이 일시 중지  *되지* 않습니다. Wait 키워드는 실행이 일시 중지 된 위치를 나타냅니다.
 - 비동기 작업이 완료 되 면 intResult가 설정 되 고 wait 줄에서 원래 스레드에서 실행이 계속 됩니다.
 
 ### <a name="calling-an-async-method-2"></a>비동기 메서드 2 호출
@@ -179,9 +179,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 몇 가지 중요 한 사항은 다음과 같습니다.
 
-- 메서드가로 표시 되었지만를 `async` 반환 `void` 합니다. 이는 일반적으로 이벤트 처리기에 대해서만 수행 됩니다. 그렇지 않으면 `Task` 또는를 반환 `Task<TResult>` 합니다.
+- 메서드가로 표시 되었지만를  `async` 반환  `void` 합니다. 이는 일반적으로 이벤트 처리기에 대해서만 수행 됩니다. 그렇지 않으면  `Task` 또는를 반환  `Task<TResult>` 합니다.
 - `await`메서드의 키워드는 `DownloadHomepage` `intResult` 중간 변수를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 ()에 직접 할당 합니다 `Task<int>` .  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
-- 비동기 메서드가 완료 되 고를 반환 하면에서 실행이 다시 시작 `await` 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
+- 비동기 메서드가 완료 되 고를 반환 하면에서 실행이 다시 시작  `await` 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
 
 ## <a name="summary"></a>요약
 
@@ -191,14 +191,14 @@ Async 및 wait를 사용 하면 주 스레드를 차단 하지 않고 백그라�
 
 ## <a name="related-links"></a>관련 링크
 
-- [AsyncAwait (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
+- [AsyncAwait (샘플)](/samples/xamarin/mobile-samples/asyncawait/)
 - [세대의 ' Go To ' 문으로 콜백](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [데이터 (iOS) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
-- [HttpClient (iOS) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
+- [데이터 (iOS) (샘플)](/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (샘플)](/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (샘플)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async)
-- [Async 애플리케이션 미세 조정(C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
+- [비동기 프로그래밍](/dotnet/csharp/async)
+- [Async 애플리케이션 미세 조정(C#)](/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
 - [대기 하 고, UI를 대기 하 고, 교착 상태를 기다립니다. 오.](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
 - [작업이 완료 되 면 처리)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
-- [TAP(작업 기반 비동기 패턴)](https://msdn.microsoft.com/library/hh873175.aspx)
-- [C # 5의 비동기 (Eric Lippert의 블로그) – 키워드 소개 정보](https://blogs.msdn.microsoft.com/ericlippert/2010/11/11/asynchrony-in-c-5-part-six-whither-async/)
+- [TAP(작업 기반 비동기 패턴)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [C # 5의 비동기 (Eric Lippert의 블로그) – 키워드 소개 정보](/archive/blogs/ericlippert/asynchrony-in-c-5-part-six-whither-async)

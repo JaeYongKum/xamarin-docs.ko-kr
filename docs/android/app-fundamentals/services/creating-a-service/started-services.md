@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 74226aff2ae135144172a06be5e7869c5cd8e408
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6075b125f36625a8dec12c041631e3794a71cc6a
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568453"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455368"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Xamarin Android를 사용 하 여 서비스 시작
 
@@ -23,7 +23,7 @@ ms.locfileid: "84568453"
 
 - `OnCreate`&ndash;서비스가 처음 시작 될 때 한 번 호출 됩니다. 초기화 코드를 구현 해야 하는 위치입니다.
 - `OnBind`&ndash;이 메서드는 모든 서비스 클래스에서 구현 해야 하지만 시작 된 서비스에는 일반적으로 클라이언트가 바인딩되어 있지 않습니다. 이로 인해 시작 된 서비스는만 반환 `null` 합니다. 이와 달리 하이브리드 서비스 (바인딩된 서비스와 시작 된 서비스의 조합)는 클라이언트에 대해를 구현 하 고 반환 해야 `Binder` 합니다.
-- `OnStartCommand`&ndash;에 대 한 호출 `StartService` 또는 시스템 다시 시작에 대 한 응답으로 서비스를 시작 하는 각 요청에 대해 호출 됩니다. 서비스에서 장기 실행 작업을 시작할 수 있는 위치입니다. 메서드는 `StartCommandResult` 메모리 부족으로 인해 종료 된 후 시스템에서 서비스를 다시 시작 해야 하는지 여부를 나타내는 값을 반환 합니다. 이 호출은 주 스레드에서 수행 됩니다. 이 방법은 아래에 자세히 설명 되어 있습니다.
+- `OnStartCommand`&ndash;에 대 한 호출 `StartService` 또는 시스템 다시 시작에 대 한 응답으로 서비스를 시작 하는 각 요청에 대해 호출 됩니다. 서비스에서 장기 실행 작업을 시작할 수 있는 위치입니다. 메서드는  `StartCommandResult` 메모리 부족으로 인해 종료 된 후 시스템에서 서비스를 다시 시작 해야 하는지 여부를 나타내는 값을 반환 합니다. 이 호출은 주 스레드에서 수행 됩니다. 이 방법은 아래에 자세히 설명 되어 있습니다.
 - `OnDestroy`&ndash;이 메서드는 서비스가 제거 될 때 호출 됩니다. 필요한 최종 정리 작업을 수행 하는 데 사용 됩니다.
 
 시작 된 서비스에 대 한 중요 한 메서드는 `OnStartCommand` 메서드입니다. 서비스에서 작업을 수행 하는 요청을 받을 때마다 호출 됩니다. 다음 코드 조각은의 예제입니다 `OnStartCommand` . 
@@ -81,7 +81,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ## <a name="related-links"></a>관련 링크
 
-- [StartedServicesDemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
+- [StartedServicesDemo (샘플)](/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
 - [Android. App. 서비스](xref:Android.App.Service)
 - [Android. StartCommandFlags](xref:Android.App.StartCommandFlags)
 - [Android. StartCommandResult](xref:Android.App.StartCommandResult)

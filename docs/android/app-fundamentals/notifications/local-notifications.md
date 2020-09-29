@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/16/2018
-ms.openlocfilehash: 87a6790e89f7f7ff0f84b4b59e7b4de9b1383bc3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f56e02a89474ebf5f89800b1f96318db7965159d
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566967"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456303"
 ---
 # <a name="local-notifications-on-android"></a>Android의 로컬 알림
 
@@ -114,13 +114,13 @@ Android Oreo와 함께 설치 되는 **YouTube** 앱은 **다운로드 알림과
 
 [![Android Oreo의 YouTube에 대 한 알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-이러한 각 범주는 알림 채널에 해당 합니다. YouTube 앱은 **다운로드 알림** 채널 및 **일반 알림** 채널을 구현 합니다. 사용자는 앱의 다운로드 알림 채널에 대 한 설정 화면을 표시 하는 **다운로드 알림**을 탭 할 수 있습니다.
+이러한 각 범주는 알림 채널에 해당 합니다. YouTube 앱은 **다운로드 알림**  채널 및 **일반 알림** 채널을 구현 합니다. 사용자는 앱의 다운로드 알림 채널에 대 한 설정 화면을 표시 하는 **다운로드 알림**을 탭 할 수 있습니다.
 
 [![YouTube 앱에 대 한 알림 다운로드 화면](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 이 화면에서 사용자는 다음을 수행 하 여 **다운로드** 알림 채널의 동작을 수정할 수 있습니다.
 
-- 중요도 수준을 **긴급**, **높음**, **중간**또는 **낮음**으로 설정 하 여 사운드 및 시각적 중단의 수준을 구성 합니다.
+- 중요도 수준을 **긴급**, **높음**, **중간**또는   **낮음**으로 설정 하 여 사운드 및 시각적 중단의 수준을 구성 합니다.
 
 - 알림 점을 설정 하거나 해제 합니다.
 
@@ -139,9 +139,9 @@ Android Oreo와 함께 설치 되는 **YouTube** 앱은 **다운로드 알림과
 ## <a name="notification-creation"></a>알림 만들기
 
 Android에서 알림을 만들려면 Nuget.exe NuGet 패키지에서 [Notificationcompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) 클래스를 사용 합니다. [Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 이 클래스를 사용 하면 이전 버전의 Android에서 알림을 만들고 게시할 수 있습니다.
-`NotificationCompat.Builder`도 설명 합니다.
+`NotificationCompat.Builder` 도 설명 합니다.
 
-`NotificationCompat.Builder`알림에서 다음과 같은 다양 한 옵션을 설정 하는 메서드를 제공 합니다.
+`NotificationCompat.Builder` 알림에서 다음과 같은 다양 한 옵션을 설정 하는 메서드를 제공 합니다.
 
 - 제목, 메시지 텍스트 및 알림 아이콘이 포함 된 콘텐츠입니다.
 
@@ -236,7 +236,7 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-이 예제에서는 `NotificationCompat.Builder` `builder` 사용할 알림 채널의 ID와 함께 라는 새 개체가 인스턴스화됩니다. 알림의 제목과 텍스트가 설정 되 고, 알림 아이콘이 **리소스/그릴 수 있는/ic_notification .png**에서 로드 됩니다. 알림 작성기의 메서드에 대 한 호출은 `Build` 이러한 설정을 사용 하 여 알림 개체를 만듭니다. 다음 단계는 `Notify` 알림 관리자의 메서드를 호출 하는 것입니다. 알림 관리자를 찾으려면 위와 같이를 호출 `GetSystemService` 합니다.
+이 예제에서는 `NotificationCompat.Builder` `builder` 사용할 알림 채널의 ID와 함께 라는 새 개체가 인스턴스화됩니다. 알림의 제목과 텍스트는 설정 되며, 알림 아이콘은 **리소스/그릴 수 있는/ic_notification.png**에서 로드 됩니다. 알림 작성기의 메서드에 대 한 호출은 `Build` 이러한 설정을 사용 하 여 알림 개체를 만듭니다. 다음 단계는 `Notify` 알림 관리자의 메서드를 호출 하는 것입니다. 알림 관리자를 찾으려면 위와 같이를 호출 `GetSystemService` 합니다.
 
 `Notify`메서드는 알림 식별자와 알림 개체의 두 가지 매개 변수를 허용 합니다. 알림 id는 응용 프로그램에 대 한 알림을 식별 하는 고유한 정수입니다. 이 예제에서 알림 식별자는 0으로 설정 됩니다. 그러나 프로덕션 응용 프로그램에서는 각 알림에 고유한 식별자를 지정 하는 것이 좋습니다. 호출에서 이전 식별자 값을 다시 사용 `Notify` 하면 마지막 알림이 덮어쓰여집니다.
 
@@ -297,7 +297,7 @@ notification.Defaults |= NotificationDefaults.Vibrate;
 
 ### <a name="updating-a-notification"></a>알림 업데이트
 
-게시 된 알림의 콘텐츠를 업데이트 하려는 경우 기존 개체를 다시 사용 `NotificationCompat.Builder` 하 여 새 알림 개체를 만들고이 알림을 마지막 알림의 식별자로 게시할 수 있습니다. 예를 들면 다음과 같습니다.
+게시 된 알림의 콘텐츠를 업데이트 하려는 경우 기존 개체를 다시 사용 `NotificationCompat.Builder` 하 여 새 알림 개체를 만들고이 알림을 마지막 알림의 식별자로 게시할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Update the existing notification builder content:
@@ -454,13 +454,13 @@ Android 알림은 일반적으로 알림의 왼쪽에 있는 원래 앱의 아�
 
 알림이 크게 아이콘 형식으로 표시 되는 경우 작은 앱 아이콘은 크게 아이콘의 오른쪽 아래 모서리에 배지로 표시 됩니다.
 
-알림에서 이미지를 큼 아이콘으로 사용 하려면 알림 작성기의 [SetLargeIcon](xref:Android.App.Notification.Builder.SetLargeIcon*) 메서드를 호출 하 고 이미지의 비트맵을 전달 합니다. 와 달리는 `SetSmallIcon` `SetLargeIcon` 비트맵만 허용 합니다. 비트맵으로 이미지 파일을 변환 하려면 [BitmapFactory](xref:Android.Graphics.BitmapFactory) 클래스를 사용 합니다. 예를 들면 다음과 같습니다.
+알림에서 이미지를 큼 아이콘으로 사용 하려면 알림 작성기의 [SetLargeIcon](xref:Android.App.Notification.Builder.SetLargeIcon*) 메서드를 호출 하 고 이미지의 비트맵을 전달 합니다. 와 달리는 `SetSmallIcon` `SetLargeIcon` 비트맵만 허용 합니다. 비트맵으로 이미지 파일을 변환 하려면 [BitmapFactory](xref:Android.Graphics.BitmapFactory) 클래스를 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-이 예제 코드는 **Resources/그릴 수 있는/monkey_icon .png**에서 이미지 파일을 열고 비트맵으로 변환한 다음 결과 비트맵을에 전달 `NotificationCompat.Builder` 합니다. 일반적으로 원본 이미지 해상도는 작은 아이콘 보다 크지만 크게 &ndash; 크지 않습니다. 이미지가 너무 크면 알림 게시를 지연 시킬 수 있는 불필요 한 크기 조정 작업이 발생할 수 있습니다.
+이 예제 코드는 **리소스/그릴 수 있는/monkey_icon.png**에서 이미지 파일을 열고, 비트맵으로 변환 하 고, 결과 비트맵을에 전달 `NotificationCompat.Builder` 합니다. 일반적으로 원본 이미지 해상도는 작은 아이콘 보다 크지만 크게 &ndash; 크지 않습니다. 이미지가 너무 크면 알림 게시를 지연 시킬 수 있는 불필요 한 크기 조정 작업이 발생할 수 있습니다.
 
 ### <a name="big-text-style"></a>큰 텍스트 스타일
 
@@ -495,7 +495,7 @@ builder.SetStyle (textStyle);
 // Create the notification and publish it ...
 ```
 
-이 예제에서 메시지 텍스트와 요약 텍스트는 `BigTextStyle` `textStyle` 에 전달 되기 전에 개체 ()에 저장 됩니다.`NotificationCompat.Builder.`
+이 예제에서 메시지 텍스트와 요약 텍스트는 `BigTextStyle` `textStyle` 에 전달 되기 전에 개체 ()에 저장 됩니다. `NotificationCompat.Builder.`
 
 ### <a name="image-style"></a>이미지 스타일
 
@@ -511,7 +511,7 @@ builder.SetStyle (textStyle);
 
 알림이 압축 형식으로 표시 되 면 알림 텍스트 (이전에 표시 된 것 처럼 알림 작성기의 메서드에 전달 되는 텍스트)가 표시 됩니다 `SetContentText` . 그러나 이미지를 표시 하도록 알림을 확장 하면 이미지 위에 요약 텍스트가 표시 됩니다.
 
-*이미지* 알림을 만들려면 이전 처럼 개체를 인스턴스화한 다음 개체에 개체에 대 한 개체를 `NotificationCompat.Builder` 만들어 삽입 [BigPictureStyle](xref:Android.App.Notification.BigPictureStyle) `NotificationCompat.Builder` 합니다. 예를 들면 다음과 같습니다.
+*이미지* 알림을 만들려면 이전 처럼 개체를 인스턴스화한 다음 개체에 개체에 대 한 개체를 `NotificationCompat.Builder` 만들어 삽입 [BigPictureStyle](xref:Android.App.Notification.BigPictureStyle) `NotificationCompat.Builder` 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -529,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-`SetLargeIcon`의 메서드와 마찬가지로 `NotificationCompat.Builder` 의 이상 [그림](xref:Android.App.Notification.BigPictureStyle.BigPicture*) 메서드는 `BigPictureStyle` 알림의 본문에 표시 하려는 이미지의 비트맵이 필요 합니다. 이 예제에서 [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) 메서드는 `BitmapFactory` **Resources/그릴 수 있는/x_bldg .png** 에 있는 이미지 파일을 읽고 비트맵으로 변환 합니다.
+`SetLargeIcon`의 메서드와 마찬가지로 `NotificationCompat.Builder` 의 이상 [그림](xref:Android.App.Notification.BigPictureStyle.BigPicture*) 메서드는 `BigPictureStyle` 알림의 본문에 표시 하려는 이미지의 비트맵이 필요 합니다. 이 예제에서 [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) 메서드는 `BitmapFactory` **리소스/그릴 수/x_bldg.png** 에 있는 이미지 파일을 읽고 비트맵으로 변환 합니다.
 
 리소스로 패키지 되지 않은 이미지를 표시할 수도 있습니다. 예를 들어 다음 샘플 코드는 로컬 SD 카드에서 이미지를 로드 하 고 *이미지* 알림에 표시 합니다.
 
@@ -596,7 +596,7 @@ builder.SetStyle (inboxStyle);
 
 ## <a name="configuring-metadata"></a>메타 데이터 구성
 
-`NotificationCompat.Builder`에는 우선 순위, 표시 유형, 범주 등 알림에 대 한 메타 데이터를 설정 하기 위해 호출할 수 있는 메서드가 포함 되어 있습니다. Android에서는 사용자 기본 설정과 함께이 정보를 사용 하 여 &mdash; &mdash; 알림을 표시 하는 방법과 시기를 결정 합니다.
+`NotificationCompat.Builder` 에는 우선 순위, 표시 유형, 범주 등 알림에 대 한 메타 데이터를 설정 하기 위해 호출할 수 있는 메서드가 포함 되어 있습니다. Android에서는 사용자 기본 설정과 함께이 정보를 사용 하 여 &mdash; &mdash; 알림을 표시 하는 방법과 시기를 결정 합니다.
 
 ### <a name="priority-settings"></a>우선 순위 설정
 
@@ -619,7 +619,7 @@ Xamarin.ios는 알림 우선 순위를 설정 하기 위해 다음 열거형을 
 
 - `NotificationPriority.Min`&ndash;사용자가 알림 (예: 위치 또는 날씨 정보)을 볼 때만 확인 하는 배경 정보
 
-알림의 우선 순위를 설정 하려면 개체의 [Setpriority](xref:Android.App.Notification.Builder.SetPriority*) 메서드를 호출 하 여 `NotificationCompat.Builder` 우선 순위 수준으로 전달 합니다. 예를 들면 다음과 같습니다.
+알림의 우선 순위를 설정 하려면 개체의 [Setpriority](xref:Android.App.Notification.Builder.SetPriority*) 메서드를 호출 하 여 `NotificationCompat.Builder` 우선 순위 수준으로 전달 합니다. 다음은 그 예입니다.
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -697,7 +697,7 @@ Android 5.0 부터는 미리 정의 된 범주를 순위 및 필터링 알림에
 
 - `Notification.CategoryStatus`&ndash;장치에 대 한 정보입니다.
 
-알림이 정렬 되 면 알림 우선 순위가 해당 범주 설정 보다 우선 적용 됩니다. 예를 들어 우선 순위가 높은 알림은 범주에 속한 경우에도 준비로 표시 됩니다 `Promo` . 알림의 범주를 설정 하려면 개체의 메서드를 호출 하 여 `SetCategory` `NotificationCompat.Builder` 범주 설정을 전달 합니다. 예를 들면 다음과 같습니다.
+알림이 정렬 되 면 알림 우선 순위가 해당 범주 설정 보다 우선 적용 됩니다. 예를 들어 우선 순위가 높은 알림은 범주에 속한 경우에도 준비로 표시 됩니다 `Promo` . 알림의 범주를 설정 하려면 개체의 메서드를 호출 하 여 `SetCategory` `NotificationCompat.Builder` 범주 설정을 전달 합니다. 다음은 그 예입니다.
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);
@@ -709,7 +709,7 @@ builder.SetCategory (Notification.CategoryCall);
 
 위의 스크린샷에 나와 있는 것 처럼 사용자가 전화 통화를 제외한 모든 인터럽트를 차단 하도록 *방해* 금지를 구성 하는 경우, Android는 `Notification.CategoryCall` 장치가 *방해 금지* 모드로 설정 된 상태에서 범주가 설정 된 알림을 제공할 수 있도록 허용 합니다. `Notification.CategoryAlarm`알림은 *방해* 금지 모드에서 차단 되지 않습니다.
 
-[Localnotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) 샘플에서는를 사용 하 여 `NotificationCompat.Builder` 알림에서 두 번째 활동을 시작 하는 방법을 보여 줍니다. 이 샘플 코드는 [xamarin.ios 연습의 로컬 알림 사용](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) 에서 설명 합니다.
+[Localnotifications](/samples/xamarin/monodroid-samples/localnotifications) 샘플에서는를 사용 하 여 `NotificationCompat.Builder` 알림에서 두 번째 활동을 시작 하는 방법을 보여 줍니다. 이 샘플 코드는 [xamarin.ios 연습의 로컬 알림 사용](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) 에서 설명 합니다.
 
 ### <a name="notification-styles"></a>알림 스타일
 
@@ -756,8 +756,8 @@ Android에 대 한 알림을 디자인 하는 방법에 대 한 지침은 [알�
 
 ## <a name="related-links"></a>관련 링크
 
-- [NotificationsLab 래 브 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-notificationslab)
-- [LocalNotifications (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
+- [NotificationsLab 래 브 (샘플)](/samples/xamarin/monodroid-samples/android50-notificationslab)
+- [LocalNotifications (샘플)](/samples/xamarin/monodroid-samples/localnotifications)
 - [Android의 로컬 알림 연습](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
 - [사용자에 게 알림](https://developer.android.com/training/notify-user/index.html)
 - [알림](xref:Android.App.Notification)

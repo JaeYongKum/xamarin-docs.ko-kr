@@ -7,22 +7,22 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: a5370cfb8a5c4950b361e5f58b253c63f4f1e240
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5d445f84b7634895c59120e905daaf6fee403ac9
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029170"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453608"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Xamarin Android 팝업 메뉴
 
 [PopupMenu](xref:Android.Widget.PopupMenu) ( _바로 가기 메뉴_라고도 함)는 특정 뷰에 고정 된 메뉴입니다. 다음 예제에서 단일 활동에는 단추가 포함 되어 있습니다. 사용자가 단추를 누르면 세 개의 항목 팝업 메뉴가 표시 됩니다.
 
-[단추 및 3 항목 팝업 메뉴를 사용 하는 앱의![예제](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![단추 및 3 항목 팝업 메뉴를 사용 하는 앱의 예](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 ## <a name="creating-a-popup-menu"></a>팝업 메뉴 만들기
 
-첫 번째 단계는 메뉴에 대 한 메뉴 리소스 파일을 만들고 **리소스/메뉴**에 추가 하는 것입니다. 예를 들어 다음 XML은 이전 스크린샷 **Resources/menu/popup_menu**에 표시 된 세 항목 메뉴에 대 한 코드입니다.
+첫 번째 단계는 메뉴에 대 한 메뉴 리소스 파일을 만들고 **리소스/메뉴**에 추가 하는 것입니다. 예를 들어 다음 XML은 이전 스크린샷, **리소스/메뉴/popup_menu.xml**에 표시 되는 3 개 항목 메뉴에 대 한 코드입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -36,9 +36,9 @@ ms.locfileid: "73029170"
 </menu>
 ```
 
-그런 다음 `PopupMenu`의 인스턴스를 만들고 해당 뷰에 고정 합니다. `PopupMenu`인스턴스를 만들 때 해당 생성자에 `Context`에 대 한 참조 및 메뉴가 연결 될 뷰를 전달 합니다. 결과적으로 팝업 메뉴는 생성 중에이 뷰에 고정 됩니다.
+그런 다음의 인스턴스를 만들고 `PopupMenu` 해당 뷰에 앵커를 고정 합니다. 의 인스턴스를 만들 때 `PopupMenu` 해당 생성자에에 대 한 참조와 `Context` 메뉴가 연결 될 뷰를 전달 합니다. 결과적으로 팝업 메뉴는 생성 중에이 뷰에 고정 됩니다.
 
-다음 예제에서는 단추에 대 한 click 이벤트 처리기 (`showPopupMenu`명명 됨)에서 `PopupMenu`를 만듭니다. 이 단추는 다음 코드 예제와 같이 `PopupMenu` 고정 된 뷰입니다.
+다음 예제에서는 `PopupMenu` 단추에 대 한 click 이벤트 처리기에가 생성 됩니다 (이름이 지정 됨 `showPopupMenu` ). 이 단추는 `PopupMenu` 다음 코드 예제와 같이이 앵커 되는 뷰입니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -58,7 +58,7 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="handling-menu-events"></a>메뉴 이벤트 처리
 
-사용자가 메뉴 항목을 선택 하면 [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) click 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 외부의 아무 곳 이나 누르면 간단히 해제 됩니다. 두 경우 모두 메뉴를 해제 하면 해당 [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) 이 발생 합니다. 다음 코드는 `MenuItemClick` 및 `DismissEvent` 이벤트 모두에 대 한 이벤트 처리기를 추가 합니다.
+사용자가 메뉴 항목을 선택 하면 [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) click 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 외부의 아무 곳 이나 누르면 간단히 해제 됩니다. 두 경우 모두 메뉴를 해제 하면 해당 [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) 이 발생 합니다. 다음 코드는 및 이벤트에 대 한 이벤트 처리기를 추가 합니다 `MenuItemClick` `DismissEvent` .
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -78,4 +78,4 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [PopupMenuDemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo)
+- [PopupMenuDemo (샘플)](/samples/xamarin/monodroid-samples/popupmenudemo)
