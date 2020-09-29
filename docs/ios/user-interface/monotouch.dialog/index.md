@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 8216e0e41eea98dcdcd34ccfac6a9573224f3093
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c57a6d02488272934ea77714b07c0328ac501d26
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936671"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431219"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Xamarin.ios에 대 한 Monotouch.dialog 소개
 
@@ -54,8 +54,8 @@ IOS에서 테이블을 사용 하는 경우 종종 반복적인 코드가 있습
 
 휴먼. D는 테이블을 만들기 위해 모든 코드를 일반 API에 캡슐화 하 여이를 단순화 합니다. 그런 다음 해당 API 위에 추상화를 제공 하 여 선언적 개체 바인딩 구문을 사용 하 여 훨씬 더 쉽게 만들 수 있도록 합니다. 따라서 MT에서 사용할 수 있는 두 가지 Api가 있습니다. 2
 
-- **하위 수준 요소 api** – *elements api* 는 화면과 해당 구성 요소를 나타내는 요소의 계층적 트리를 만드는 방법을 기반으로 합니다. 요소 API를 사용 하면 개발자는 Ui를 만들 때 가장 유연 하 고 유연 하 게 제어할 수 있습니다. 또한 Elements API에는 JSON을 통한 선언적 정의에 대 한 고급 지원이 포함 되어 있으므로 서버에서 동적 UI를 생성 하는 것 뿐만 아니라 매우 빠른 선언을 모두 사용할 수 있습니다. 
-- **상위 수준 리플렉션 api** -클래스에 UI 힌트와 MT로 주석이 추가 된 *바인딩*  *api* 라고도 합니다. D는 개체를 기반으로 화면을 자동으로 만들며, 화면에 표시 되는 항목과 필요에 따라 편집 되는 항목 간의 바인딩을 제공 합니다. 위의 예제에서는 리플렉션 API를 사용 하는 방법을 보여 줍니다. 이 API는 요소 API에서 수행 하는 세분화 된 제어를 제공 하지 않지만 클래스 특성을 기반으로 요소 계층 구조를 자동으로 작성 하 여 복잡성을 더욱 줄입니다. 
+- **하위 수준 요소 api** –  *elements api* 는 화면과 해당 구성 요소를 나타내는 요소의 계층적 트리를 만드는 방법을 기반으로 합니다. 요소 API를 사용 하면 개발자는 Ui를 만들 때 가장 유연 하 고 유연 하 게 제어할 수 있습니다. 또한 Elements API에는 JSON을 통한 선언적 정의에 대 한 고급 지원이 포함 되어 있으므로 서버에서 동적 UI를 생성 하는 것 뿐만 아니라 매우 빠른 선언을 모두 사용할 수 있습니다. 
+- **상위 수준 리플렉션 api** -클래스에 UI 힌트와 MT로 주석이 추가 된  *바인딩*  *api* 라고도 합니다. D는 개체를 기반으로 화면을 자동으로 만들며, 화면에 표시 되는 항목과 필요에 따라 편집 되는 항목 간의 바인딩을 제공 합니다. 위의 예제에서는 리플렉션 API를 사용 하는 방법을 보여 줍니다. 이 API는 요소 API에서 수행 하는 세분화 된 제어를 제공 하지 않지만 클래스 특성을 기반으로 요소 계층 구조를 자동으로 작성 하 여 복잡성을 더욱 줄입니다. 
 
 휴먼. D는 화면 생성을 위해 기본 제공 되는 다양 한 UI 요소 집합을 제공 하지만 사용자 지정 된 요소 및 고급 화면 레이아웃에 대 한 필요성도 인식 합니다. 따라서 확장성은 API에 대 한 최고 수준의 주요 구운입니다. 개발자는 기존 요소를 확장 하거나 새 요소를 만든 다음 원활 하 게 통합할 수 있습니다.
 
@@ -64,8 +64,8 @@ IOS에서 테이블을 사용 하는 경우 종종 반복적인 코드가 있습
 이 문서는 MT로 작업 하는 방법에 대해 자세히 설명 합니다. D, 다음을 포함 합니다.
 
 - **MT. D 구성 요소** – MT를 구성 하는 클래스를 이해 하는 데 중점을 둡니다. D를 사용 하면 신속 하 게 속도를 높일 수 있습니다. 
-- **요소 참조** – MT의 기본 제공 요소에 대 한 포괄적인 목록입니다. 2. 
-- **고급 사용** – 끌어오기-새로 고침, 검색, 백그라운드 이미지 로드, LINQ를 사용 하 여 요소 계층 구조 작성, MT에서 사용할 사용자 지정 요소, 셀 및 컨트롤러 만들기와 같은 고급 기능을 다룹니다. 2. 
+- **요소 참조** – MT. D의 기본 제공 요소에 대 한 포괄적인 목록입니다. 
+- **고급 사용** – 끌어오기-새로 고침, 검색, 백그라운드 이미지 로드, LINQ를 사용 하 여 요소 계층 구조 작성, MT. D에서 사용할 사용자 지정 요소, 셀 및 컨트롤러 만들기와 같은 고급 기능을 다룹니다. 
 
 ## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
 
@@ -73,7 +73,7 @@ IOS에서 테이블을 사용 하는 경우 종종 반복적인 코드가 있습
 
 ## <a name="understanding-the-pieces-of-mtd"></a>MT의 피스를 이해 합니다. 2
 
-리플렉션 API를 사용 하는 경우에도 MT. D는 요소 API를 통해 직접 생성 된 것 처럼 내부적으로 요소 계층 구조를 만듭니다. 또한 이전 섹션에서 언급 한 JSON 지원도 요소를 만듭니다. 이러한 이유로 MT의 구성 요소를 기본적으로 이해 하는 것이 중요 합니다. 2.
+리플렉션 API를 사용 하는 경우에도 MT. D는 요소 API를 통해 직접 생성 된 것 처럼 내부적으로 요소 계층 구조를 만듭니다. 또한 이전 섹션에서 언급 한 JSON 지원도 요소를 만듭니다. 따라서 MT. D의 구성 요소를 기본적으로 이해 하는 것이 중요 합니다.
 
 휴먼. D는 다음 네 부분을 사용 하 여 화면을 빌드합니다.
 
@@ -114,7 +114,7 @@ RootElement가 섹션/요소 값을 사용 하 여 초기화 되는 경우이 �
 
  [ ![ 이 스크린샷에서는 오른쪽의 세부 정보 화면 제목이 포함 된 셀이 왼쪽에 표시 되 고, 선택 된 후 식의 값과 함께 왼쪽에 있는 표가 표시](images/image4.png)](images/image4.png#lightbox) 되 고, 아래 스크린샷에는 선택한 사막의 값 [ ![ 과 함께 오른쪽의 세부 정보 화면 제목이 포함 된 셀이 왼쪽에 표시](images/image5.png)](images/image5.png#lightbox) 됩니다.
 
-위에 표시 된 것 처럼 루트 요소를 섹션 내에서 사용 하 여 새 중첩 구성 페이지 로드를 트리거할 수도 있습니다. 이 모드에서 사용 하는 경우 제공 된 캡션은 섹션 내에서 렌더링 되는 동안 사용 되며 하위 페이지의 제목으로도 사용 됩니다. 예를 들어:
+위에 표시 된 것 처럼 루트 요소를 섹션 내에서 사용 하 여 새 중첩 구성 페이지 로드를 트리거할 수도 있습니다. 이 모드에서 사용 하는 경우 제공 된 캡션은 섹션 내에서 렌더링 되는 동안 사용 되며 하위 페이지의 제목으로도 사용 됩니다. 다음은 그 예입니다.
 
 ```csharp
 var root = new RootElement ("Meals") {
@@ -164,7 +164,7 @@ var section = new Section (header);
 #### <a name="handling-nsaction"></a>NSAction 처리
 
 휴먼. D는 `NSAction` 콜백을 처리 하기 위한 대리자로를 표시 합니다.
-예를 들어 MT로 만든 테이블 셀에 대 한 터치 이벤트를 처리 하려는 경우를 가정해 보겠습니다. 2. MT를 사용 하 여 요소를 만드는 경우 D, 다음과 같이 콜백 함수를 제공 하기만 하면 됩니다.
+예를 들어 MT. D로 만든 테이블 셀에 대 한 터치 이벤트를 처리 하려는 경우를 가정해 보겠습니다. MT를 사용 하 여 요소를 만드는 경우 D, 다음과 같이 콜백 함수를 제공 하기만 하면 됩니다.
 
 ```csharp
 new Section () {
@@ -254,9 +254,9 @@ new StringElement ("Click me", () => {
 또한 `KeyboardType` 만든 시간에 속성을 데이터 입력에 필요한 키보드 유형 스타일로 설정할 수 있습니다. 아래에 나열 된 값을 사용 하 여 키보드를 구성 하는 데 사용할 수 있습니다 `UIKeyboardType` .
 
 - 숫자
-- Phone
+- 전화
 - Url
-- 메일
+- 전자 메일
 
 ### <a name="boolean-element"></a>부울 요소
 
@@ -276,7 +276,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 
  [![RadioElement를 사용 하려면 RootElement에 RadioGroup을 지정 해야 합니다.](images/image14.png)](images/image14.png#lightbox)
 
- `RootElements`는 라디오 요소를 조정 하는 데도 사용 됩니다. `RadioElement`멤버는 여러 섹션에 걸쳐 있을 수 있습니다. 예를 들어 링 톤 선택기와 유사한 항목을 구현 하 고 시스템 벨 소리의 개별 사용자 지정 링 톤을 구현할 수 있습니다. 요약 보기에는 현재 선택 된 radio 요소가 표시 됩니다. 이를 사용 하려면 `RootElement` 다음과 같이 group 생성자를 사용 하 여를 만듭니다.
+ `RootElements` 는 라디오 요소를 조정 하는 데도 사용 됩니다. `RadioElement`멤버는 여러 섹션에 걸쳐 있을 수 있습니다. 예를 들어 링 톤 선택기와 유사한 항목을 구현 하 고 시스템 벨 소리의 개별 사용자 지정 링 톤을 구현할 수 있습니다. 요약 보기에는 현재 선택 된 radio 요소가 표시 됩니다. 이를 사용 하려면 `RootElement` 다음과 같이 group 생성자를 사용 하 여를 만듭니다.
 
 ```csharp
 var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
@@ -391,7 +391,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-With MT에 JSON을 사용 하는 방법에 대 한 자세한 내용입니다. D. [JSON 요소 연습](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) 자습서를 참조 하세요.
+With MT에 JSON을 사용 하는 방법에 대 한 자세한 내용입니다. D. [JSON 요소 연습](./json-element-walkthrough.md) 자습서를 참조 하세요.
 
 ## <a name="other-features"></a>기타 기능
 
@@ -569,7 +569,7 @@ public override Source CreateSizingSource (bool unevenRows)
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Monotouch.dialog에 대 한 많은 정보를 설명 했습니다. 여기서는 MT의 기본 사항에 대해 설명 했습니다. D는 MT를 구성 하는 다양 한 구성 요소에 적용 됩니다. 2. 또한 MT에서 지 원하는 다양 한 요소 및 테이블 사용자 지정을 보여 줍니다. D. MT에 대해 설명 했습니다. D는 사용자 지정 요소로 확장할 수 있습니다. 또한 MT에서 JSON 지원에 대해 설명 했습니다. D를 사용 하 여 JSON에서 동적으로 요소를 만들 수 있습니다.
+이 문서에서는 Monotouch.dialog에 대 한 많은 정보를 설명 했습니다. 여기서는 MT의 기본 사항에 대해 설명 했습니다. D는 MT. D를 구성 하는 다양 한 구성 요소를 작동 하 고 다룹니다. 또한 MT에서 지 원하는 다양 한 요소 및 테이블 사용자 지정을 보여 줍니다. D. MT에 대해 설명 했습니다. D는 사용자 지정 요소로 확장할 수 있습니다. 또한 MT에서 JSON 지원에 대해 설명 했습니다. D를 사용 하 여 JSON에서 동적으로 요소를 만들 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

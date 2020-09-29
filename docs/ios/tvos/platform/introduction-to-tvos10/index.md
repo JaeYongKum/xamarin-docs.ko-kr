@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 02fda984d65bb89ac3dc8a4ae5e15e2c61ec7d90
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5d59646f111e5ac3f50de7319f8d5065492c9942
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030620"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434905"
 ---
 # <a name="introduction-to-tvos-10"></a>tvOS 10 소개
 
@@ -38,7 +38,7 @@ Apple은 다음을 비롯 한 기존 기능에 대 한 여러 향상 된 기능�
 
 Apple은 tvOS 10의 보안 및 개인 정보 모두에 대해 몇 가지 향상 된 기능을 통해 개발자가 앱의 보안을 개선 하 고 최종 사용자의 개인 정보를 확인 하는 데 도움이 됩니다.
 
-따라서 watchOS 3 이상에서 실행 되는 앱은 사용자에 게 액세스 권한을 얻으려고 하는 이유를 설명 하는 개인 정보를 하나 이상 해당 `Info.plist` 파일에 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하는 의도를 정적으로 선언 해야 합니다.
+따라서 watchOS 3 이상에서 실행 되는 앱은 해당 파일에 하나 이상의 개인 정보 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스할 수 있도록 정적으로 선언 해야 합니다 `Info.plist` .
 
 TvOS 10은 이러한 변경 내용을 iOS 10과 공유 하므로 iOS 10 [보안 및 개인 정보 향상](~/ios/app-fundamentals/security-privacy.md) 가이드를 참조 하 여 자세한 내용을 확인 하세요.
 
@@ -52,12 +52,12 @@ TvOS 10의 새로운 기능으로, 비디오 구독자 계정 프레임 워크�
 
 tvOS 10은 핵심 그래픽, 핵심 이미지, 금속 및 AVFoundation과 같은 프레임 워크를 포함 하 여 시스템 전체의 확장 범위 픽셀 형식 및 넓은 색 영역 색 공간에 대 한 지원을 확장 합니다. 넓은 색 표시를 사용 하는 장치에 대 한 지원은 전체 그래픽 스택에이 동작을 제공 하 여 추가로 줄어들 됩니다.
 
-또한 `UIKit`은 새로운 확장 된 **sRGB** colorspace에서 작동 하도록 수정 되었으므로 상당한 성능 손실 없이 넓은 색 gamuts 색을 쉽게 혼합할 수 있습니다.
+또한는 `UIKit` 새로운 확장 된 **sRGB** colorspace에서 작동 하도록 수정 되어 상당한 성능 손실 없이 광범위 한 색 gamuts 색을 더 쉽게 혼합할 수 있게 되었습니다.
 
 Apple은 넓은 색으로 작업할 때 다음과 같은 모범 사례를 제공 합니다.
 
-- 이제 `UIColor`는 sRGB 색 공간을 사용 하 고 `1.0` 범위에 대 한 `0.0`에 값을 더 이상 클램프 하지 않습니다. 앱이 이전 클램프 동작에 의존 하는 경우에는 tvOS 10에 대해 수정 해야 합니다.
-- 앱이 `UIImages`의 사용자 지정 렌더링을 수행 하는 경우 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 클래스를 사용 하 여 확장 범위 또는 표준 범위 서식의 사용을 지정 합니다.
+- `UIColor` 이제는 sRGB 색 공간을 사용 하며이 값은 더 이상 to 범위로 값을 클램프 하지 않습니다 `0.0` `1.0` . 앱이 이전 클램프 동작에 의존 하는 경우에는 tvOS 10에 대해 수정 해야 합니다.
+- 앱이의 사용자 지정 렌더링을 수행 하는 경우 `UIImages` 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 클래스를 사용 하 여 확장 범위 또는 표준 범위 형식의 사용을 지정 합니다.
 - 핵심 그래픽 또는 금속과 같은 하위 수준 API를 사용 하 여 이미지 처리를 제공 하는 경우 앱은 16 비트 부동 소수점 값을 지 원하는 확장 된 범위 색 공간과 픽셀 형식을 사용 해야 합니다. 필요한 경우 앱은 색 구성 요소 값을 수동으로 클램프 해야 합니다.
 - 핵심 그래픽, 핵심 이미지 및 금속 성능 셰이더는 모두 두 색상 공간 간을 변환 하기 위한 새로운 방법을 제공 합니다.
 
@@ -86,5 +86,5 @@ Api 또는 프레임 워크는 tvOS 10에서 더 이상 사용 되지 않습니�
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [TvOS 10의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

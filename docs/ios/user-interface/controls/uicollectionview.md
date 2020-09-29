@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: eccd0415fdc1db357f904b843a015df60a35a488
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e71760f813a8974a11ac46e6c9b286bb0eb55f83
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939609"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432830"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -40,9 +40,9 @@ iOS `UICollectionViewFlowLayout` 는 추가 작업 없이 그리드와 같은 �
 
 클래스에는 `UICollectionViewCell` 이러한 각 뷰에 대해 다음과 같은 속성이 있습니다.
 
-- `ContentView`–이 보기에는 셀에 표시 되는 내용이 포함 됩니다. 화면의 맨 위 z 순서에서 렌더링 됩니다.
-- `SelectedBackgroundView`– 셀에는 기본적으로 선택이 지원 됩니다. 이 보기는 셀이 선택 되어 있음을 시각적으로 나타내는 데 사용 됩니다. 셀이 선택 될 때 바로 아래에 렌더링 됩니다 `ContentView` .
-- `BackgroundView`– 셀은에서 제공 하는 배경을 표시할 수도 있습니다 `BackgroundView` . 이 뷰는 아래에 렌더링 됩니다 `SelectedBackgroundView` .
+- `ContentView` –이 보기에는 셀에 표시 되는 내용이 포함 됩니다. 화면의 맨 위 z 순서에서 렌더링 됩니다.
+- `SelectedBackgroundView` – 셀에는 기본적으로 선택이 지원 됩니다. 이 보기는 셀이 선택 되어 있음을 시각적으로 나타내는 데 사용 됩니다. 셀이 선택 될 때 바로 아래에 렌더링 됩니다  `ContentView` .
+- `BackgroundView` – 셀은에서 제공 하는 배경을 표시할 수도 있습니다  `BackgroundView` . 이 뷰는 아래에 렌더링 됩니다  `SelectedBackgroundView` .
 
 `ContentView`이러한 값을 및 보다 작게 설정 하면를 사용 하 여 콘텐츠를 `BackgroundView` 시각적으로 `SelectedBackgroundView` `BackgroundView` 프레임으로 지정할 수 있습니다. 반면에는 `SelectedBackgroundView` 아래와 같이 셀이 선택 될 때 표시 됩니다.
 
@@ -138,10 +138,10 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 및와 같은 iOS의 다른 부분과 마찬가지로는 `UITableView` `MKMapView` 클래스를 `UICollectionView` 통해 xamarin.ios에 노출 되는 *데이터 소스*에서 해당 데이터를 가져옵니다 **`UICollectionViewDataSource`** . 이 클래스는 다음과 같은에 콘텐츠를 제공 합니다 `UICollectionView` .
 
-- **Cells** – 메서드에서 반환 `GetCell` 됩니다.
-- **보조 뷰** -메서드에서 반환 `GetViewForSupplementaryElement` 됩니다.
-- **섹션 수** - `NumberOfSections` 메서드에서 반환 됩니다. 구현 되지 않은 경우 기본값은 1입니다.
-- **섹션 당 항목 수** - `GetItemsCount` 메서드에서 반환 됩니다.
+- **Cells** – 메서드에서 반환  `GetCell` 됩니다.
+- **보조 뷰** -메서드에서 반환  `GetViewForSupplementaryElement` 됩니다.
+- **섹션 수** -  `NumberOfSections` 메서드에서 반환 됩니다. 구현 되지 않은 경우 기본값은 1입니다.
+- **섹션 당 항목 수** -  `GetItemsCount` 메서드에서 반환 됩니다.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 편의상 `UICollectionViewController` 클래스를 사용할 수 있습니다. 이는 다음 섹션에서 설명 하는 대리자와 해당 뷰의 데이터 원본으로 자동으로 구성 됩니다 `UICollectionView` .
@@ -233,7 +233,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 강조 표시를 사용 하지 않도록 설정 하면 셀을 선택 하는 프로세스도 사용 하지 않도록 설정 됩니다. 또한을 `ShouldSelectItem` `ShouldHighlightItem` 구현 하 고 false를 반환 하는 경우를 호출 하지 않더라도 선택 항목을 직접 제어 하는 메서드도 있습니다 `ShouldSelectItem` .
 
- `ShouldSelectItem`가 구현 되지 않은 경우 항목을 기준으로 선택 항목을 설정 하거나 해제할 수 있습니다 `ShouldHighlightItem` . 또한 `ShouldHighlightItem` 가 구현 되 고 true를 반환 하는 경우에서 false를 반환 하는 경우 선택 없이 강조 표시를 허용 `ShouldSelectItem` 합니다.
+ `ShouldSelectItem` 가 구현 되지 않은 경우 항목을 기준으로 선택 항목을 설정 하거나 해제할 수 있습니다 `ShouldHighlightItem` . 또한 `ShouldHighlightItem` 가 구현 되 고 true를 반환 하는 경우에서 false를 반환 하는 경우 선택 없이 강조 표시를 허용 `ShouldSelectItem` 합니다.
 
  <a name="Cell_Menus"></a>
 
@@ -251,9 +251,9 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
  <a name="Layout"></a>
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
-`UICollectionView`모든 요소, 셀, 보조 뷰 및 장식 보기의 위치를 독립적으로 관리할 수 있도록 하는 레이아웃 시스템을 지원 합니다 `UICollectionView` .
+`UICollectionView` 모든 요소, 셀, 보조 뷰 및 장식 보기의 위치를 독립적으로 관리할 수 있도록 하는 레이아웃 시스템을 지원 합니다 `UICollectionView` .
 응용 프로그램은 레이아웃 시스템을 사용 하 여이 문서에 표시 된 것과 같은 레이아웃을 지원 하 고 사용자 지정 레이아웃을 제공할 수 있습니다.
 
  <a name="Layout_Basics"></a>
@@ -262,8 +262,8 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 의 레이아웃 `UICollectionView` 은에서 상속 되는 클래스에서 정의 됩니다 `UICollectionViewLayout` . 레이아웃 구현은의 모든 항목에 대 한 레이아웃 특성을 만드는 역할을 합니다 `UICollectionView` . 다음 두 가지 방법으로 레이아웃을 만들 수 있습니다.
 
-- 기본 제공을 사용 합니다 `UICollectionViewFlowLayout` .
-- 에서 상속 하 여 사용자 지정 레이아웃을 제공 `UICollectionViewLayout` 합니다.
+- 기본 제공을 사용 합니다  `UICollectionViewFlowLayout` .
+- 에서 상속 하 여 사용자 지정 레이아웃을 제공  `UICollectionViewLayout` 합니다.
 
  <a name="Flow_Layout"></a>
 
@@ -273,13 +273,13 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 선형 레이아웃을 사용 하려면 다음을 수행 합니다.
 
-- 다음의 인스턴스를 만듭니다 `UICollectionViewFlowLayout` .
+- 다음의 인스턴스를 만듭니다  `UICollectionViewFlowLayout` .
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
-- 인스턴스를의 생성자에 전달 합니다 `UICollectionView` .
+- 인스턴스를의 생성자에 전달 합니다  `UICollectionView` .
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -315,9 +315,9 @@ Edition에서 직접를 사용 하는 `UICollectionViewFlowLayout` 경우에는 
 서브 클래스에서이를 구현 하려면 `UICollectionViewFlowLayout` 다음이 필요 합니다.
 
 - 생성자의 레이아웃 자체 또는 모든 항목에 적용 되는 레이아웃 속성을 초기화 하는 중입니다.
-- 를 재정의 `ShouldInvalidateLayoutForBoundsChange` 하 여의 범위가 변경 될 때 `UICollectionView` 셀 레이아웃이 다시 계산 되도록 true를 반환 합니다. 이 경우에는 가운데 대부분 셀에 적용 되는 변환에 대 한 코드가 스크롤 중에 적용 되도록 합니다.
+- 를 재정의  `ShouldInvalidateLayoutForBoundsChange` 하 여의 범위가 변경 될 때  `UICollectionView` 셀 레이아웃이 다시 계산 되도록 true를 반환 합니다. 이 경우에는 가운데 대부분 셀에 적용 되는 변환에 대 한 코드가 스크롤 중에 적용 되도록 합니다.
 - `TargetContentOffset`를 재정의 하면 `UICollectionView` 스크롤이 중지 될 때 대부분의 셀 가운데 맞춤을 설정 합니다.
-- `LayoutAttributesForElementsInRect`를 재정의 하 여의 배열을 반환 `UICollectionViewLayoutAttributes` 합니다. 각에는,, 등의 속성을 포함 하 여 `UICollectionViewLayoutAttribute` 특정 항목을 레이아웃 하는 방법에 대 한 정보가 포함 되어 있습니다 `Center` `Size` `ZIndex` `Transform3D` .
+- `LayoutAttributesForElementsInRect`를 재정의 하 여의 배열을 반환 `UICollectionViewLayoutAttributes` 합니다. 각에는,, 등의 속성을 포함 하 여  `UICollectionViewLayoutAttribute` 특정 항목을 레이아웃 하는 방법에 대 한 정보가 포함 되어 있습니다  `Center`  `Size`  `ZIndex`  `Transform3D` .
 
 다음 코드는 이러한 구현을 보여 줍니다.
 
@@ -396,9 +396,9 @@ namespace SimpleCollectionView
 
 재정의할 주요 메서드는 다음과 같습니다.
 
-- `PrepareLayout`– 레이아웃 프로세스 전체에서 사용 되는 초기 기하학적 계산을 수행 하는 데 사용 됩니다.
-- `CollectionViewContentSize`– 콘텐츠를 표시 하는 데 사용 되는 영역의 크기를 반환 합니다.
-- `LayoutAttributesForElementsInRect`– 앞에서 설명한 UICollectionViewFlowLayout 예제와 마찬가지로이 메서드는 `UICollectionView` 각 항목을 레이아웃 하는 방법에 대 한 정보를에 제공 하는 데 사용 됩니다. 그러나와는 달리 `UICollectionViewFlowLayout` 사용자 지정 레이아웃을 만들 때 선택한 항목의 위치를 지정할 수 있습니다.
+- `PrepareLayout` – 레이아웃 프로세스 전체에서 사용 되는 초기 기하학적 계산을 수행 하는 데 사용 됩니다.
+- `CollectionViewContentSize` – 콘텐츠를 표시 하는 데 사용 되는 영역의 크기를 반환 합니다.
+- `LayoutAttributesForElementsInRect` – 앞에서 설명한 UICollectionViewFlowLayout 예제와 마찬가지로이 메서드는  `UICollectionView` 각 항목을 레이아웃 하는 방법에 대 한 정보를에 제공 하는 데 사용 됩니다. 그러나와는 달리  `UICollectionViewFlowLayout` 사용자 지정 레이아웃을 만들 때 선택한 항목의 위치를 지정할 수 있습니다.
 
 예를 들어 아래와 같이 동일한 콘텐츠가 원형 레이아웃으로 표시 될 수 있습니다.
 
@@ -430,7 +430,7 @@ IOS 9에서 컬렉션 뷰 ()는 `UICollectionView` 이제 새 기본 제스처 �
 
 IOS 9에서 컬렉션 뷰에 다시 정렬을 추가 하는 가장 빠른 방법은를 사용 하는 것입니다 `UICollectionViewController` .
 이제 컬렉션 뷰 컨트롤러에는 `InstallsStandardGestureForInteractiveMovement` 컬렉션의 항목을 다시 정렬 하기 위해 끌기를 지 원하는 표준 *제스처 인식기* 를 추가 하는 속성이 있습니다.
-기본값은 이므로, 다시 `true` `MoveItem` `UICollectionViewDataSource` 정렬을 지원 하도록 클래스의 메서드를 구현 하기만 하면 됩니다. 예를 들어:
+기본값은 이므로, 다시 `true` `MoveItem` `UICollectionViewDataSource` 정렬을 지원 하도록 클래스의 메서드를 구현 하기만 하면 됩니다. 다음은 그 예입니다.
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -672,7 +672,7 @@ namespace CollectionView
 
 UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 사용자가 목록에서 항목을 선택 하 여 새 위치로 끌면 항목을 이동할 때 다른 항목이 자동으로 애니메이션 효과를 적용 합니다.
-사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예를 들어:
+사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 다음은 그 예입니다.
 
 [![항목을 새 위치로 끌어 오는 예](uicollectionview-images/intro01.png)](uicollectionview-images/intro01.png#lightbox)
 
@@ -680,7 +680,7 @@ UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 
 ### <a name="using-a-custom-gesture-recognizer"></a>사용자 지정 제스처 인식기 사용
 
-을 사용할 수 없고 정기적으로 사용 해야 하는 경우 `UICollectionViewController` `UIViewController` 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들어:
+을 사용할 수 없고 정기적으로 사용 해야 하는 경우 `UICollectionViewController` `UIViewController` 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -718,10 +718,10 @@ public override void ViewDidLoad ()
 
 여기서는 컬렉션 뷰에 추가 된 몇 가지 새로운 메서드를 사용 하 여 끌기 작업을 구현 하 고 제어 합니다.
 
-- `BeginInteractiveMovementForItem`-이동 작업의 시작을 표시 합니다.
-- `UpdateInteractiveMovementTargetPosition`-항목의 위치가 업데이트 됨에 따라 전송 됩니다.
-- `EndInteractiveMovement`-항목 이동의 끝을 표시 합니다.
-- `CancelInteractiveMovement`-이동 작업을 취소 하는 사용자를 표시 합니다.
+- `BeginInteractiveMovementForItem` -이동 작업의 시작을 표시 합니다.
+- `UpdateInteractiveMovementTargetPosition` -항목의 위치가 업데이트 됨에 따라 전송 됩니다.
+- `EndInteractiveMovement` -항목 이동의 끝을 표시 합니다.
+- `CancelInteractiveMovement` -이동 작업을 취소 하는 사용자를 표시 합니다.
 
 응용 프로그램이 실행 될 때 끌기 작업은 컬렉션 뷰와 함께 제공 되는 기본 끌기 제스처 인식기와 똑같이 작동 합니다.
 
@@ -1195,77 +1195,77 @@ Xamarin.ios 앱을 다시 실행 하는 경우 컬렉션 뷰는 다음과 같습
 
 IOS 9의 클래스에 대 한 다음 변경 내용이 변경 되거나 추가 되었습니다 `UICollectionView` .
 
-- `BeginInteractiveMovementForItem`– 끌기 작업의 시작을 표시 합니다.
-- `CancelInteractiveMovement`– 사용자가 끌기 작업을 취소 했음을 컬렉션 뷰에 알립니다.
-- `EndInteractiveMovement`– 컬렉션 뷰에 사용자가 끌기 작업을 완료 했음을 알립니다.
-- `GetIndexPathsForVisibleSupplementaryElements`– `indexPath` 컬렉션 뷰 섹션에서 머리글 또는 바닥글의를 반환 합니다.
-- `GetSupplementaryView`– 지정 된 머리글 또는 바닥글을 반환 합니다.
-- `GetVisibleSupplementaryViews`– 표시 되는 모든 머리글 및 바닥글의 목록을 반환 합니다.
-- `UpdateInteractiveMovementTargetPosition`– 끌기 작업을 수행 하는 동안 사용자가 항목을 이동 하거나 이동 했음을 컬렉션 뷰에 알립니다.
+- `BeginInteractiveMovementForItem` – 끌기 작업의 시작을 표시 합니다.
+- `CancelInteractiveMovement` – 사용자가 끌기 작업을 취소 했음을 컬렉션 뷰에 알립니다.
+- `EndInteractiveMovement` – 컬렉션 뷰에 사용자가 끌기 작업을 완료 했음을 알립니다.
+- `GetIndexPathsForVisibleSupplementaryElements` – `indexPath` 컬렉션 뷰 섹션에서 머리글 또는 바닥글의를 반환 합니다.
+- `GetSupplementaryView` – 지정 된 머리글 또는 바닥글을 반환 합니다.
+- `GetVisibleSupplementaryViews` – 표시 되는 모든 머리글 및 바닥글의 목록을 반환 합니다.
+- `UpdateInteractiveMovementTargetPosition` – 끌기 작업을 수행 하는 동안 사용자가 항목을 이동 하거나 이동 했음을 컬렉션 뷰에 알립니다.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewController` .
 
-- `InstallsStandardGestureForInteractiveMovement`– `true` 자동으로 끌기를 지 원하는 새 제스처 인식기가 사용 되 면이 고,
-- `CanMoveItem`– 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
-- `GetTargetContentOffset`– 지정 된 컬렉션 뷰 항목의 오프셋을 가져오는 데 사용 됩니다.
-- `GetTargetIndexPathForMove`– `indexPath` 끌기 작업에 대해 지정 된 항목의를 가져옵니다.
-- `MoveItem`– 목록에서 지정 된 항목의 순서를 이동 합니다.
+- `InstallsStandardGestureForInteractiveMovement` – `true` 자동으로 끌기를 지 원하는 새 제스처 인식기가 사용 되 면이 고,
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
+- `GetTargetContentOffset` – 지정 된 컬렉션 뷰 항목의 오프셋을 가져오는 데 사용 됩니다.
+- `GetTargetIndexPathForMove` – `indexPath` 끌기 작업에 대해 지정 된 항목의를 가져옵니다.
+- `MoveItem` – 목록에서 지정 된 항목의 순서를 이동 합니다.
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewDataSource` .
 
-- `CanMoveItem`– 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
-- `MoveItem`– 목록에서 지정 된 항목의 순서를 이동 합니다.
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
+- `MoveItem` – 목록에서 지정 된 항목의 순서를 이동 합니다.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewDelegate` .
 
-- `GetTargetContentOffset`– 지정 된 컬렉션 뷰 항목의 오프셋을 가져오는 데 사용 됩니다.
-- `GetTargetIndexPathForMove`– `indexPath` 끌기 작업에 대해 지정 된 항목의를 가져옵니다.
+- `GetTargetContentOffset` – 지정 된 컬렉션 뷰 항목의 오프셋을 가져오는 데 사용 됩니다.
+- `GetTargetIndexPathForMove` – `indexPath` 끌기 작업에 대해 지정 된 항목의를 가져옵니다.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewFlowLayout` .
 
-- `SectionFootersPinToVisibleBounds`– 표시 된 컬렉션 보기 범위에 섹션 바닥글을 표시 합니다.
-- `SectionHeadersPinToVisibleBounds`– 섹션 헤더를 표시 되는 컬렉션 뷰 범위에 표시 합니다.
+- `SectionFootersPinToVisibleBounds` – 표시 된 컬렉션 보기 범위에 섹션 바닥글을 표시 합니다.
+- `SectionHeadersPinToVisibleBounds` – 섹션 헤더를 표시 되는 컬렉션 뷰 범위에 표시 합니다.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewLayout` .
 
-- `GetInvalidationContextForEndingInteractiveMovementOfItems`– 사용자가 끌기를 완료 하거나 취소 하는 경우 끌기 작업이 끝날 때 무효화 컨텍스트를 반환 합니다.
-- `GetInvalidationContextForInteractivelyMovingItems`– 끌기 작업을 시작할 때 무효화 컨텍스트를 반환 합니다.
-- `GetLayoutAttributesForInteractivelyMovingItem`– 항목을 끄는 동안 지정 된 항목의 레이아웃 특성을 가져옵니다.
-- `GetTargetIndexPathForInteractivelyMovingItem`– 항목을 `indexPath` 끌 때 지정 된 지점에 있는 항목의를 반환 합니다.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` – 사용자가 끌기를 완료 하거나 취소 하는 경우 끌기 작업이 끝날 때 무효화 컨텍스트를 반환 합니다.
+- `GetInvalidationContextForInteractivelyMovingItems` – 끌기 작업을 시작할 때 무효화 컨텍스트를 반환 합니다.
+- `GetLayoutAttributesForInteractivelyMovingItem` – 항목을 끄는 동안 지정 된 항목의 레이아웃 특성을 가져옵니다.
+- `GetTargetIndexPathForInteractivelyMovingItem` – 항목을 `indexPath` 끌 때 지정 된 지점에 있는 항목의를 반환 합니다.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewLayoutAttributes` .
 
-- `CollisionBoundingPath`– 끌기 작업 동안 두 항목의 충돌 경로를 반환 합니다.
-- `CollisionBoundsType`– `UIDynamicItemCollisionBoundsType` 끌기 작업 중에 발생 한 충돌 유형 ()을 반환 합니다.
+- `CollisionBoundingPath` – 끌기 작업 동안 두 항목의 충돌 경로를 반환 합니다.
+- `CollisionBoundsType` – `UIDynamicItemCollisionBoundsType` 끌기 작업 중에 발생 한 충돌 유형 ()을 반환 합니다.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewLayoutInvalidationContext` .
 
-- `InteractiveMovementTarget`– 끌기 작업의 대상 항목을 반환 합니다.
-- `PreviousIndexPathsForInteractivelyMovingItems`– `indexPaths` 순서를 바꾸기 위한 끌어서 작업에 관련 된 다른 항목의를 반환 합니다.
-- `TargetIndexPathsForInteractivelyMovingItems`– `indexPaths` 순서 바꾸기 작업의 결과로 다시 정렬 될 항목의를 반환 합니다.
+- `InteractiveMovementTarget` – 끌기 작업의 대상 항목을 반환 합니다.
+- `PreviousIndexPathsForInteractivelyMovingItems` – `indexPaths` 순서를 바꾸기 위한 끌어서 작업에 관련 된 다른 항목의를 반환 합니다.
+- `TargetIndexPathsForInteractivelyMovingItems` – `indexPaths` 순서 바꾸기 작업의 결과로 다시 정렬 될 항목의를 반환 합니다.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니다 `UICollectionViewSource` .
 
-- `CanMoveItem`– 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
-- `GetTargetContentOffset`– 순서 바꾸기 작업을 통해 이동 하는 항목의 오프셋을 반환 합니다.
-- `GetTargetIndexPathForMove`– `indexPath` 순서를 바꾸기 작업을 수행 하는 동안 이동 하는 항목의를 반환 합니다.
-- `MoveItem`– 목록에서 지정 된 항목의 순서를 이동 합니다.
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있는 경우 컬렉션 뷰에 알립니다.
+- `GetTargetContentOffset` – 순서 바꾸기 작업을 통해 이동 하는 항목의 오프셋을 반환 합니다.
+- `GetTargetIndexPathForMove` – `indexPath` 순서를 바꾸기 작업을 수행 하는 동안 이동 하는 항목의를 반환 합니다.
+- `MoveItem` – 목록에서 지정 된 항목의 순서를 이동 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -1274,8 +1274,8 @@ IOS 9에서 클래스가 다음과 같이 변경 되거나 추가 되었습니�
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [컬렉션 뷰 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-collectionview)
-- [SimpleCollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplecollectionview)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [컬렉션 뷰 샘플](/samples/xamarin/ios-samples/ios9-collectionview)
+- [SimpleCollectionView (샘플)](/samples/xamarin/ios-samples/simplecollectionview)
 - [이벤트, 프로토콜 및 대리자](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md)

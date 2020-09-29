@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: 6588747fb806c858f5bc7b024980ae0d0771c60e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cace68a1b85a4404774ca88ec697d419920d05cb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938790"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432901"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.ios에서 iCloud 사용
 
@@ -47,11 +47,11 @@ ICloud에 액세스 하도록 응용 프로그램을 올바르게 구성 하려�
 
 - [Developer.apple.com](https://developer.apple.com) 에 대 한 **teamid** -로그인을 찾은 다음 **회원 > 센터 > 개발자 계정 요약** 을 방문 하 여 팀 id (또는 단일 개발자를 위한 개별 id)를 가져옵니다. 10 자리 문자열 (예: **A93A5CM278** ) 이며, "컨테이너 식별자"의 일부를 형성 합니다.
 
-- **새 앱 Id 만들기** -앱 id를 만들려면 [장치 프로 비전 가이드의 스토어 기술 프로 비전 섹션](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)에 설명 된 단계에 따라 **iCloud** 를 허용 되는 서비스로 확인 합니다.
+- **새 앱 Id 만들기** -앱 id를 만들려면  [장치 프로 비전 가이드의 스토어 기술 프로 비전 섹션](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)에 설명 된 단계에 따라 **iCloud** 를 허용 되는 서비스로 확인 합니다.
 
  [![ICloud를 허용 되는 서비스로 확인](introduction-to-icloud-images/icloud-sml.png)](introduction-to-icloud-images/icloud.png#lightbox)
 
-- **새 프로 비전 프로필 만들기** -프로 비전 프로필을 만들려면 [장치 프로 비전 가이드](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) 에 설명 된 단계를 따릅니다.
+- **새 프로 비전 프로필 만들기** -프로 비전 프로필을 만들려면  [장치 프로 비전 가이드](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) 에 설명 된 단계를 따릅니다.
 
 - **컨테이너 식별자를 info.plist에 추가** 합니다. 컨테이너 식별자 형식은 `TeamID.BundleID` 입니다. 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조 하세요.
 
@@ -275,7 +275,7 @@ public class MonkeyDocument : UIDocument
 
 ### <a name="finding-and-opening-icloud-documents"></a>ICloud 문서 찾기 및 열기
 
-샘플 앱은 단일 파일 test.txt만 처리 하므로 **AppDelegate.cs** 의 코드는를 만들고 `NSPredicate` `NSMetadataQuery` 해당 파일 이름을 확인 하는 데 사용 됩니다. 는 `NSMetadataQuery` 비동기식으로 실행 되 고 완료 되 면 알림을 보냅니다. `DidFinishGathering`알림 관찰자가 호출 하 고, 쿼리를 중지 하 고, `UIDocument.Open` 완료 처리기와 함께 메서드를 사용 하 여 파일을 로드 하 고에 표시 하는 LoadDocument를 호출 `MonkeyDocumentViewController` 합니다.
+샘플 앱은 단일 파일 test.txt만 처리 하므로 **AppDelegate.cs** 의 코드는를 만들고 `NSPredicate` `NSMetadataQuery` 해당 파일 이름을 확인 하는 데 사용 됩니다. 는 `NSMetadataQuery` 비동기식으로 실행 되 고 완료 되 면 알림을 보냅니다. `DidFinishGathering` 알림 관찰자가 호출 하 고, 쿼리를 중지 하 고, `UIDocument.Open` 완료 처리기와 함께 메서드를 사용 하 여 파일을 로드 하 고에 표시 하는 LoadDocument를 호출 `MonkeyDocumentViewController` 합니다.
 
 ```csharp
 string monkeyDocFilename = "test.txt";
@@ -341,7 +341,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 UIDocument를 표시 하는 것은 다른 모델 클래스와 다를 수 없습니다. 속성은 UI 컨트롤에 표시 됩니다 .이 속성은 사용자가 편집 하 고 모델에 다시 쓸 수 있습니다.
 
-예제에서는 **iCloudUIDoc\MonkeyDocumentViewController.cs** 에 MonkeyDocument 텍스트를 표시 합니다 `UITextView` . `ViewDidLoad`메서드에서 보내는 알림을 수신 합니다 `MonkeyDocument.LoadFromContents` . `LoadFromContents`iCloud에 파일에 대 한 새 데이터가 있으므로 알림이 문서를 업데이트 했음을 나타내는 경우 호출 됩니다.
+예제에서는 **iCloudUIDoc\MonkeyDocumentViewController.cs** 에 MonkeyDocument 텍스트를 표시 합니다 `UITextView` . `ViewDidLoad` 메서드에서 보내는 알림을 수신 합니다 `MonkeyDocument.LoadFromContents` . `LoadFromContents` iCloud에 파일에 대 한 새 데이터가 있으므로 알림이 문서를 업데이트 했음을 나타내는 경우 호출 됩니다.
 
 ```csharp
 NSNotificationCenter.DefaultCenter.AddObserver (this,
@@ -427,7 +427,7 @@ Apple은 개발자가 iOS 응용 프로그램에서 수행할 수 있는 [Ios �
 
 ## <a name="related-links"></a>관련 링크
 
-- [ICloud 소개 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
+- [ICloud 소개 (샘플)](/samples/xamarin/ios-samples/introductiontoicloud)
 - [iCloud 세미나 샘플 코드](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud 세미나 슬라이드](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)

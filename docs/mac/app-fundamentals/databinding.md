@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f9b4dfac4909a5c68b6c53fc913925ee95313a3
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 688febbb8b2aae3ae9dff45ea06ef3cf3809641a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997516"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436538"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
 
@@ -70,7 +70,7 @@ namespace MacDatabinding
 
 먼저, `[Register("PersonModel")]` 특성은 클래스를 등록 하 고 목표-C에 노출 합니다. 그런 다음 클래스는 `NSObject` (또는에서 상속 되는 서브 클래스)에서 상속 해야 하며 `NSObject` ,이는 클래스가 kvc 규격이 될 수 있도록 하는 몇 가지 기본 메서드를 추가 합니다. 그런 다음 `[Export("Name")]` 특성은 속성을 노출 하 `Name` 고 나중에 kvc 및 KVO 기술을 통해 속성에 액세스 하는 데 사용 되는 키 값을 정의 합니다.
 
-마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 해당 값에 대 한 변경 내용을 래핑해야 합니다 `DidChangeValue` `Export` .  예를 들어:
+마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 해당 값에 대 한 변경 내용을 래핑해야 합니다 `DidChangeValue` `Export` .  다음은 그 예입니다.
 
 ```csharp
 set {
@@ -159,7 +159,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 ### <a name="observing-value-changes"></a>값 변경 관찰
 
-키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 c # 코드에서 지정 된 속성에 직접 액세스 하는 경우) 알릴 수 있습니다. 예를 들어:
+키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 c # 코드에서 지정 된 속성에 직접 액세스 하는 경우) 알릴 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Watch for the name value changing
@@ -371,10 +371,10 @@ public void SetPeople(NSMutableArray array) {
 
 그러면 컨트롤러에서 표시 되는 데이터를 요청 하 고 수정할 수 있습니다. 위에 표시 된 것 처럼 `NSArray` 이러한 명명 규칙 (일반적인 c # 명명 규칙)은 매우 구체적입니다.
 
-- `addObject:`-배열에 개체를 추가 합니다.
-- `insertObject:in{class_name}ArrayAtIndex:`-여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드는 지정 된 인덱스에서 개체를 배열에 삽입 합니다.
-- `removeObjectFrom{class_name}ArrayAtIndex:`-여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드는 지정 된 인덱스의 배열에서 개체를 제거 합니다.
-- `set{class_name}Array:`-여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드를 사용 하면 기존 전달을 새 항목으로 바꿀 수 있습니다.
+- `addObject:` -배열에 개체를 추가 합니다.
+- `insertObject:in{class_name}ArrayAtIndex:` -여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드는 지정 된 인덱스에서 개체를 배열에 삽입 합니다.
+- `removeObjectFrom{class_name}ArrayAtIndex:` -여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드는 지정 된 인덱스의 배열에서 개체를 제거 합니다.
+- `set{class_name}Array:` -여기서 `{class_name}` 은 클래스의 이름입니다. 이 메서드를 사용 하면 기존 전달을 새 항목으로 바꿀 수 있습니다.
 
 이러한 메서드 내에서 `WillChangeValue` `DidChangeValue` KVO 준수를 위해 및 메시지의 배열에 대 한 변경 내용을 래핑 했습니다.
 
@@ -610,7 +610,7 @@ public override void AwakeFromNib ()
 
 응용 프로그램을 실행 하는 경우 테이블은 다음의 배열로 채워집니다 `PersonModels` .
 
-[![애플리케이션 실행](databinding-images/table11.png "애플리케이션 실행")](databinding-images/table11-large.png#lightbox)
+[![응용 프로그램 실행](databinding-images/table11.png "애플리케이션 실행")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding"></a>
 
@@ -724,7 +724,7 @@ public override void AwakeFromNib ()
 3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline09.png "모델 키 경로 입력")](databinding-images/outline09-large.png#lightbox)
-4. `objectValue`는 `PersonModel` 트리 컨트롤러에서 관리 중인 배열의 현재입니다.
+4. `objectValue` 는 `PersonModel` 트리 컨트롤러에서 관리 중인 배열의 현재입니다.
 5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline10.png "모델 키 경로 입력")](databinding-images/outline10-large.png#lightbox)
@@ -732,7 +732,7 @@ public override void AwakeFromNib ()
 
 응용 프로그램을 실행 하는 경우 개요는 다음의 배열로 채워집니다 `PersonModels` .
 
-[![애플리케이션 실행](databinding-images/outline11.png "애플리케이션 실행")](databinding-images/outline11-large.png#lightbox)
+[![응용 프로그램 실행](databinding-images/outline11.png "애플리케이션 실행")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>컬렉션 뷰 데이터 바인딩
 
@@ -891,13 +891,13 @@ For more information on working with Collection Views, please see our [Collectio
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacDatabinding 스토리 보드 (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
-- [MacDatabinding Xib (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)
+- [MacDatabinding 스토리 보드 (샘플)](/samples/xamarin/mac-samples/macdatabinding-storyboard)
+- [MacDatabinding Xib (샘플)](/samples/xamarin/mac-samples/macdatabinding-xibs)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [표준 컨트롤](~/mac/user-interface/standard-controls.md)
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)
-- [컬렉션 보기](~/mac/user-interface/collection-view.md)
+- [컬렉션 뷰](~/mac/user-interface/collection-view.md)
 - [키-값 코딩 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/index.html)
 - [키-값을 관찰 하는 프로그래밍 가이드 소개](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html)
 - [Cocoa 바인딩 프로그래밍 항목 소개](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html)

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/17/2018
-ms.openlocfilehash: bb3fd0623d0361a42c573cf2b2bcb8249d32181c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 08ef81f55ac1705224f2953197bfe582718b9cf7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933188"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432513"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Xamarin.ios 용 응용 프로그램 수명 주기 데모
 
-이 문서 및 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) 는 iOS의 네 가지 응용 프로그램 상태와 `AppDelegate` 상태가 변경 될 때 응용 프로그램에 알리는 메서드의 역할을 보여 줍니다. 응용 프로그램은 앱 상태를 변경할 때마다 콘솔에 대 한 업데이트를 인쇄 합니다.
+이 문서 및 [샘플 코드](/samples/xamarin/ios-samples/lifecycledemo) 는 iOS의 네 가지 응용 프로그램 상태와 `AppDelegate` 상태가 변경 될 때 응용 프로그램에 알리는 메서드의 역할을 보여 줍니다. 응용 프로그램은 앱 상태를 변경할 때마다 콘솔에 대 한 업데이트를 인쇄 합니다.
 
 [![샘플 앱](application-lifecycle-demo-images/image3-sml.png)](application-lifecycle-demo-images/image3.png#lightbox)
 
@@ -51,9 +51,9 @@ ms.locfileid: "86933188"
     }
     ```
 
-1. 시뮬레이터 또는 장치에서 응용 프로그램을 시작 합니다. `OnActivated`앱이 시작 될 때가 호출 됩니다. 응용 프로그램이 _현재 활성_ 상태입니다.
-1. 응용 프로그램을 백그라운드로 가져오려면 시뮬레이터 또는 장치의 홈 단추를 누릅니다. `OnResignActivation`및는 `DidEnterBackground` 앱이에서로 전환 되 `Active` `Inactive` 고 상태로 전환 될 때 호출 됩니다 `Backgrounded` . 백그라운드에서 실행할 응용 프로그램 코드를 설정 하지 않았으므로 응용 프로그램이 메모리에서 _일시 중단_ 된 것으로 간주 됩니다.
-1. 앱으로 다시 이동 하 여 다시 포그라운드로 가져옵니다. `WillEnterForeground`및 `OnActivated` 가 모두 호출 됩니다.
+1. 시뮬레이터 또는 장치에서 응용 프로그램을 시작 합니다. `OnActivated` 앱이 시작 될 때가 호출 됩니다. 응용 프로그램이 _현재 활성_ 상태입니다.
+1. 응용 프로그램을 백그라운드로 가져오려면 시뮬레이터 또는 장치의 홈 단추를 누릅니다. `OnResignActivation` 및는 `DidEnterBackground` 앱이에서로 전환 되 `Active` `Inactive` 고 상태로 전환 될 때 호출 됩니다 `Backgrounded` . 백그라운드에서 실행할 응용 프로그램 코드를 설정 하지 않았으므로 응용 프로그램이 메모리에서 _일시 중단_ 된 것으로 간주 됩니다.
+1. 앱으로 다시 이동 하 여 다시 포그라운드로 가져옵니다. `WillEnterForeground` 및 `OnActivated` 가 모두 호출 됩니다.
 
     ![콘솔에 상태 변경 내용을 인쇄 합니다.](application-lifecycle-demo-images/image4.png)
 
@@ -77,4 +77,4 @@ iOS에서 응용 프로그램이 종료 됩니다. `WillTerminate`응용 프로�
 
 ## <a name="related-links"></a>관련 링크
 
-- [LifecycleDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
+- [LifecycleDemo (샘플)](/samples/xamarin/ios-samples/lifecycledemo)

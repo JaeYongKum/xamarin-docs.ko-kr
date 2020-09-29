@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: db630ba7db1532f24fb6e810653427d1678ad5e2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929027"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434651"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin으로 빌드된 tvOS apps 문제 해결
 
@@ -76,11 +76,11 @@ Section
  reserved2 0
 ```
 
-`addr`및 `size` 는 다르지만 다른 필드는 동일 해야 합니다.
+`addr` 및 `size` 는 다르지만 다른 필드는 동일 해야 합니다.
 
 사용 중인 타사 정적 ( `.a` ) 라이브러리가 tvOS 라이브러리 (iOS 라이브러리 아님)에 대해 빌드 되었으며 bitcode 정보도 포함 하 고 있는지 확인 해야 합니다.
 
-유효한 bitcode를 포함 하는 앱 또는 라이브러리의 경우 `size` 이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 예를 들어:
+유효한 bitcode를 포함 하는 앱 또는 라이브러리의 경우 `size` 이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 다음은 그 예입니다.
 
 **잘못 된 Bitcode**
 
@@ -202,7 +202,7 @@ _호환 되지 않는 대상 프레임 워크:. NetPortable 가능, 버전 = v 4
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

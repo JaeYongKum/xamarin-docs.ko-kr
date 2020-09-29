@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 795bbffe17a5b14f3814967c1ec4032dfd2739aa
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b51eeb3594f1b41f8b8f7fdaedc7577138c4f5ba
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937074"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435667"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Xamarin.ios에서 앱 검토 요청
 
@@ -71,4 +71,4 @@ namespace iOSTenThree
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOSTenThree 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [iOSTenThree 샘플](/samples/xamarin/ios-samples/ios10-iostenthree/)

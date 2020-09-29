@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: b4191ae3c25ee5d2eeccd44377177d7d0df6f19e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f4f24ee8bfc6bdde0becb9539ff9e2f532d06381
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937373"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432028"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -225,7 +225,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [동적 실행 화면 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [동적 실행 화면 (샘플)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [통합 Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 디자이너 기본 사항](~/ios/user-interface/designer/index.md)
 - [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: cf0e617b225cc7535acffa0880a0bc089ae8da28
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 01a09294d55490a723eb59b0365ac2dc516110c9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934058"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434670"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Xamarin.ios의 슬라이더, 스위치 및 분할 컨트롤
 
@@ -62,7 +62,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 iOS는를 `UISwitch` 다른 플랫폼의 라디오 단추로 표현할 수 있는 부울 입력으로 사용 합니다. 사용자는 **설정/해제** 위치 사이의 *엄지 단추* 를 이동 하 여 컨트롤을 조작할 수 있습니다.
 
- [![스위치](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![바꿀](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 스위치의 모양은 디자이너의 **Properties Pad** 에서 사용자 지정할 수 있으며,이를 통해 기본 상태, **설정/해제 색조** 색 및 **설정/해제 이미지**를 제어할 수 있습니다. 이는 아래 이미지에 나와 있습니다.
 
@@ -94,5 +94,5 @@ switch1.On = true;
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)
 - [경고 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

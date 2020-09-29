@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ddd46da0787f853e949d08c45dff5be17b9451fd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d25d48421ad9b05925c1fa373ddba600ad3bac2e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932758"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431224"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.ios의 핵심 애니메이션
 
@@ -46,7 +46,7 @@ UIKit는 응용 프로그램에 애니메이션을 쉽게 추가할 수 있도�
 
 ### <a name="view-controller-transitions"></a>뷰 컨트롤러 전환
 
- `UIViewController`에서는 메서드를 통해 뷰 컨트롤러를 전환 하는 기능을 기본적으로 지원 합니다 `PresentViewController` . 를 사용 하는 경우 `PresentViewController` 두 번째 컨트롤러에 대 한 전환은 선택적으로 애니메이션을 적용할 수 있습니다.
+ `UIViewController` 에서는 메서드를 통해 뷰 컨트롤러를 전환 하는 기능을 기본적으로 지원 합니다 `PresentViewController` . 를 사용 하는 경우 `PresentViewController` 두 번째 컨트롤러에 대 한 전환은 선택적으로 애니메이션을 적용할 수 있습니다.
 
 예를 들어 두 개의 컨트롤러를 사용 하는 응용 프로그램의 경우 첫 번째 컨트롤러의 단추를 터치 `PresentViewController` 하 여 두 번째 컨트롤러를 표시 합니다. 두 번째 컨트롤러를 표시 하는 데 사용 되는 전환 애니메이션을 제어 하려면 [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) 아래와 같이 속성을 설정 하기만 하면 됩니다.
 
@@ -58,9 +58,9 @@ SecondViewController vc2 = new SecondViewController {
 
 이 경우 다음을 `PartialCurl` 비롯 한 여러 다른 항목을 사용할 수 있지만 애니메이션을 사용 합니다.
 
-- `CoverVertical`– 화면 아래쪽에서 위쪽으로 슬라이드
-- `CrossDissolve`– 이전 뷰에서 새 보기가 페이드 인 & 페이드 아웃 됩니다.
-- `FlipHorizontal`-가로 오른쪽에서 왼쪽으로 대칭 이동 합니다. 해제에서는 전환이 왼쪽에서 오른쪽으로 대칭 이동 됩니다.
+- `CoverVertical` – 화면 아래쪽에서 위쪽으로 슬라이드
+- `CrossDissolve` – 이전 뷰에서 새 보기가 페이드 인 & 페이드 아웃 됩니다.
+- `FlipHorizontal` -가로 오른쪽에서 왼쪽으로 대칭 이동 합니다. 해제에서는 전환이 왼쪽에서 오른쪽으로 대칭 이동 됩니다.
 
 전환에 애니메이션 효과를 주려면의 `true` 두 번째 인수로를 전달 합니다 `PresentViewController` .
 
@@ -88,7 +88,7 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition`또한는 `duration` 애니메이션 실행 시간을 제어 하는 매개 변수를 [`options`](xref:UIKit.UIViewAnimationOptions) 사용 하 고 사용 하는 애니메이션 및 감속/가속 함수와 같은 항목을 지정 하는 매개 변수도 사용 합니다. 또한 애니메이션이 완료 될 때 호출 되는 완료 처리기를 지정할 수 있습니다.
+`UIView.Transition` 또한는 `duration` 애니메이션 실행 시간을 제어 하는 매개 변수를 [`options`](xref:UIKit.UIViewAnimationOptions) 사용 하 고 사용 하는 애니메이션 및 감속/가속 함수와 같은 항목을 지정 하는 매개 변수도 사용 합니다. 또한 애니메이션이 완료 될 때 호출 되는 완료 처리기를 지정할 수 있습니다.
 
 아래 스크린샷은를 사용할 때 이미지 보기 간의 애니메이션 전환을 보여줍니다 `TransitionFlipFromTop` .
 
@@ -103,7 +103,7 @@ UIKit는 다음을 포함 하 여 클래스에서 다양 한 속성에 대 한 �
 - Center
 - 알파
 - 변환
-- 색상
+- 색
 
 이러한 애니메이션은 정적 메서드에 전달 된 대리자의 속성 변경 내용을 지정 하 여 암시적으로 발생 `NSAction` `UIView.Animate` 합니다. 예를 들어 다음 코드는의 중심점에 애니메이션 효과를 적용 합니다 `UIImageView` .
 
@@ -133,7 +133,7 @@ UIView.Animate (
 
 ## <a name="using-core-animation"></a>핵심 애니메이션 사용
 
- `UIView`애니메이션은 많은 기능을 허용 하므로 구현 용이성 때문에 가능 하면 사용 해야 합니다. 앞서 언급 했 듯이 UIView 애니메이션은 핵심 애니메이션 프레임 워크를 사용 합니다. 그러나 뷰로 애니메이션을 적용할 수 없는 `UIView` 추가 속성에 애니메이션을 적용 하거나 비선형 경로를 따라 보간 하는 것과 같은 애니메이션으로는 일부 작업을 수행할 수 없습니다. 더 세밀 하 게 제어 해야 하는 경우에도 핵심 애니메이션을 직접 사용할 수 있습니다.
+ `UIView` 애니메이션은 많은 기능을 허용 하므로 구현 용이성 때문에 가능 하면 사용 해야 합니다. 앞서 언급 했 듯이 UIView 애니메이션은 핵심 애니메이션 프레임 워크를 사용 합니다. 그러나 뷰로 애니메이션을 적용할 수 없는 `UIView` 추가 속성에 애니메이션을 적용 하거나 비선형 경로를 따라 보간 하는 것과 같은 애니메이션으로는 일부 작업을 수행할 수 없습니다. 더 세밀 하 게 제어 해야 하는 경우에도 핵심 애니메이션을 직접 사용할 수 있습니다.
 
 ### <a name="layers"></a>계층
 
@@ -143,7 +143,7 @@ UIView.Animate (
 
 ### <a name="implicit-animations"></a>암시적 애니메이션
 
-계층의 속성에 애니메이션 효과를 주는 한 가지 방법은 암시적 애니메이션을 통하는 것입니다. `UIView`애니메이션은 암시적 애니메이션을 만듭니다. 그러나 계층에 대해서도 직접 암시적 애니메이션을 만들 수 있습니다.
+계층의 속성에 애니메이션 효과를 주는 한 가지 방법은 암시적 애니메이션을 통하는 것입니다. `UIView` 애니메이션은 암시적 애니메이션을 만듭니다. 그러나 계층에 대해서도 직접 암시적 애니메이션을 만들 수 있습니다.
 
 예를 들어 다음 코드는 이미지에서 계층을 설정 `Contents` 하 고, 테두리 너비와 색을 설정 하 고, 계층을 뷰 계층의 하위 계층으로 추가 합니다.
 
@@ -237,7 +237,7 @@ public override void ViewDidAppear (bool animated)
 
 ## <a name="related-links"></a>관련 링크
 
-- [핵심 애니메이션 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [핵심 애니메이션 샘플](/samples/xamarin/ios-samples/graphicsandanimation)
 - [핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [그래픽 및 애니메이션 연습](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [핵심 애니메이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

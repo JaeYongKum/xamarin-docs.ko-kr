@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 25de402742978ed9d2a4e16e87d786a014f596a0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 85e6be722b0d2ddbd2c63955bd19b2907e062156
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933775"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433008"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>iOS 6의 StoreKit 변경 내용
 
@@ -57,8 +57,8 @@ IOS의 새로운 앱 내 구매 기능을 통해 사용자는 제품 정보를 �
 
 1. `StoreProductParameters`생성자에를 포함 하 여 매개 변수를 뷰 컨트롤러에 전달 하는 개체를 만듭니다 `productId` .
 1. `SKProductViewController`를 인스턴스화합니다. 클래스 수준 필드에 할당 합니다.
-1. 뷰 컨트롤러의 이벤트에 처리기를 할당 합니다 `Finished` .이 경우 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
-1. `LoadProduct`및 완료 처리기를 전달 하는 메서드를 호출 합니다 `StoreProductParameters` . 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 모달을 표시 합니다 `SKProductViewController` . 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
+1. 뷰 컨트롤러의 이벤트에 처리기를 할당 합니다  `Finished` .이 경우 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
+1. `LoadProduct`및 완료 처리기를 전달 하는 메서드를 호출 합니다 `StoreProductParameters` . 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 모달을 표시 합니다  `SKProductViewController` . 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
 
 ### <a name="example"></a>예제
 
@@ -129,13 +129,13 @@ Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있
 
  <a name="Search_API"></a>
 
-### <a name="search-api"></a>API 검색
+### <a name="search-api"></a>검색 API
 
 Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 하는 동적 검색 API를 제공 합니다. 검색 API에 액세스 하는 방법에 대 한 정보는 Apple의 관련 리소스에서 찾을 수 있습니다. 단, API는 등록 된 계열사가 아니라 누구나 노출 됩니다. 결과 JSON을 구문 분석 하 여에 `trackId` 사용할 APPLE ID 인를 검색할 수 있습니다 `SKStoreProductViewController` .
 
 결과에는 앱에서 제품을 렌더링 하는 데 사용할 수 있는 표시 정보 및 아트 워크 Url을 포함 하는 다른 메타 데이터도 포함 됩니다.
 
-다음은 몇 가지 예입니다.
+몇 가지 예제는 다음과 같습니다.
 
 - **ibooks 앱** – [ https://itunes.apple.com/search?term=ibooks&amp ; 엔터티 = 소프트웨어 &amp; 국가 = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
 - **Dot 및 Kangaroo ibook** – [ https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = 전자책 &amp; country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
@@ -144,7 +144,7 @@ Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 
 
 Apple은 다운로드 가능한 데이터베이스 지원 플랫 파일 형식으로 모든 제품에 대 한 완전 한 데이터 덤프를 승인 된 파트너에 게 제공 합니다. 엔터프라이즈 파트너 피드에 대 한 액세스 권한이 있는 경우 모든 제품에 대 한 Apple ID를 해당 데이터 집합에서 찾을 수 있습니다.
 
-엔터프라이즈 파트너 피드의 많은 사용자는 제품 판매를 커미션 수 있도록 하는 관련 [프로그램](https://www.apple.com/itunes/affiliates) 의 멤버입니다. `SKStoreProductViewController`는 관련 Id (작성 시점)를 지원 하지 않습니다.
+엔터프라이즈 파트너 피드의 많은 사용자는 제품 판매를 커미션 수 있도록 하는 관련 [프로그램](https://www.apple.com/itunes/affiliates) 의 멤버입니다. `SKStoreProductViewController` 는 관련 Id (작성 시점)를 지원 하지 않습니다.
 
 ### <a name="direct-product-links"></a>직접 제품 링크
 
@@ -362,7 +362,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 
 - 이상 **다운로드** – 진행 중인 다운로드를 나타내는 새 클래스입니다. API는 제품별을 하나 이상 허용 하지만 처음에는 하나만 구현 되었습니다.
 - 이상 **제품** – 새 속성이 추가 되었습니다. `Downloadable` , `ContentVersion` , `ContentLengths` array.
-- **SKPaymentTransaction** – 새 속성 추가 됨: `Downloads` `SKDownload` 이 제품에 다운로드할 수 있는 호스트 된 콘텐츠가 있는 경우 개체의 컬렉션이 포함 됩니다.
+- **SKPaymentTransaction** – 새 속성 추가 됨: `Downloads`  `SKDownload` 이 제품에 다운로드할 수 있는 호스트 된 콘텐츠가 있는 경우 개체의 컬렉션이 포함 됩니다.
 - **SKPaymentQueue** – 새 메서드가 추가 되었습니다 `StartDownloads` . 개체를 사용 하 여이 메서드 `SKDownload` 를 호출 하 여 호스팅된 콘텐츠를 페치합니다. 다운로드는 백그라운드에서 수행 될 수 있습니다.
 - **SKPaymentTransactionObserver** – 새 `UpdateDownloads` 메서드: 스토어 키트는 현재 다운로드 작업에 대 한 진행률 정보를 사용 하 여이 메서드를 호출 합니다.
 
@@ -371,7 +371,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 - **진행률** – 사용자에 게 완료율 표시기를 표시 하는 데 사용할 수 있는 0-1 사이의 값입니다. Progress = = 1을 사용 하 여 다운로드가 완료 되었는지 여부를 검색 하지 말고 상태 = = 완료를 확인 합니다.
 - **TimeRemaining** – 남은 다운로드 시간 (초)입니다. -1은 여전히 예상 값을 계산 하 고 있음을 의미 합니다.
 - **상태** – 활성, 대기 중, 완료, 실패, 일시 중지 됨, 취소 됨
-- **Contenturl** – 디렉터리에서 콘텐츠가 디스크에 저장 된 파일 위치 `Cache` 입니다. 다운로드가 완료 된 후에만 채워집니다.
+- **Contenturl** – 디렉터리에서 콘텐츠가 디스크에 저장 된 파일 위치  `Cache` 입니다. 다운로드가 완료 된 후에만 채워집니다.
 - **Error** – 상태가 실패 인 경우이 속성을 확인 합니다.
 
 샘플 코드의 클래스 간 상호 작용은이 다이어그램에 표시 됩니다 (호스팅된 콘텐츠 구매 관련 코드는 녹색으로 표시 됨).
@@ -521,7 +521,7 @@ Apple의 iCloud 백업 지침은 서버에서 쉽게 복원 되는 사용자가 
 
 ## <a name="related-links"></a>관련 링크
 
-- [에이 키트 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
+- [에이 키트 (샘플)](/samples/xamarin/ios-samples/storekit)
 - [앱에서 바로 구매](~/ios/platform/in-app-purchasing/index.md)
 - [나이 키트 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [이 클래스 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

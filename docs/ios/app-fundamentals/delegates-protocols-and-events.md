@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/17/2017
-ms.openlocfilehash: 1a7d7ec017bb226efb05014dc7ac80160aeaae48
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ce436f907c70657ff6d08f39bdec9e7d796d519c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938367"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431032"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Xamarin.ios의 이벤트, 프로토콜 및 대리자
 
@@ -146,7 +146,7 @@ Apple은 iOS 전체에서 프로토콜을 사용 하 여 클래스에 대 한 �
 
 ### <a name="protocols-with-xamarinios"></a>Xamarin.ios를 사용 하는 프로토콜
 
-Xamarin.ios에서 목표-C 프로토콜을 사용 하는 예를 살펴보겠습니다. 이 예제에서는 `MKAnnotation` 프레임 워크의 일부인 프로토콜을 사용 `MapKit` 합니다. `MKAnnotation`는이를 채택 하는 모든 개체가 맵에 추가할 수 있는 주석에 대 한 정보를 제공 하는 데 사용할 수 있는 프로토콜입니다. 예를 들어를 구현 하는 개체는 `MKAnnotation` 주석의 위치와 연결 된 제목을 제공 합니다.
+Xamarin.ios에서 목표-C 프로토콜을 사용 하는 예를 살펴보겠습니다. 이 예제에서는 `MKAnnotation` 프레임 워크의 일부인 프로토콜을 사용 `MapKit` 합니다. `MKAnnotation` 는이를 채택 하는 모든 개체가 맵에 추가할 수 있는 주석에 대 한 정보를 제공 하는 데 사용할 수 있는 프로토콜입니다. 예를 들어를 구현 하는 개체는 `MKAnnotation` 주석의 위치와 연결 된 제목을 제공 합니다.
 
 이러한 방식으로 프로토콜은 `MKAnnotation` 주석과 함께 제공 되는 관련 데이터를 제공 하는 데 사용 됩니다. 주석 자체에 대 한 실제 뷰는 프로토콜을 채택 하는 개체의 데이터를 기반으로 빌드됩니다 `MKAnnotation` . 예를 들어 아래 스크린샷에서와 같이 사용자가 주석에서 탭 할 때 표시 되는 설명선의 텍스트는 `Title` 프로토콜을 구현 하는 클래스의 속성에서 제공 됩니다.
 
@@ -385,7 +385,7 @@ map.DidSelectAnnotationView += (s,e) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [프로토콜, 대리자 및 이벤트 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/protocols-delegates-events)
+- [프로토콜, 대리자 및 이벤트 (샘플)](/samples/xamarin/ios-samples/protocols-delegates-events)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [바인딩 목표-C 형식](~/ios/platform/binding-objective-c/index.md)
 - [목표-C 프로그래밍 언어](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)

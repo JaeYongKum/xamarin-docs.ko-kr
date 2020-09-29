@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: 8069e28dabb804be862334dab5c75b888e23ef74
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b765a3ddb5a34c764d9e1b7cd4776e68cf404b08
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030575"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434786"
 ---
 # <a name="introduction-to-tvos-11"></a>tvOS 11 소개
 
@@ -40,7 +40,7 @@ TvOS 11에 도입 된 Apple 변경 내용에 대 한 전체 목록은 [tvOS의 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [TvOS 소개](~/ios/tvos/index.md)
 - [TvOS 11의 새로운 기능 (Apple 개발자 가이드)](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)
 - [TvOS 11의 새로운 기능 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/209/)

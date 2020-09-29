@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e779b874cda016a0cd6cc0444ff42a761ee7483e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 793a82b7bb88f3e0c0a233c8c18c2d90f741b137
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934682"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434765"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Xamarin에서 tvOS 사용자 인터페이스 스타일
 
@@ -81,8 +81,8 @@ TvOS 앱이 표준 기본 제공 기반 컨트롤을 사용 하는 경우 `UIVie
 
 TvOS 10 앱에서 밝은 테마와 어두운 테마를 지원 하기 위해 Apple에서는 두 개의 새로운 흐림 효과를 추가 했습니다. 이러한 새 효과는 다음과 같이 사용자가 선택한 UI 테마에 따라 자동으로 흐림 효과를 조정 합니다.
 
-- `UIBlurEffectStyleRegular`-밝은 테마에서 밝은 흐림 효과를 사용 하 고 어두운 테마에서 짙은 흐림 효과를 사용 합니다.
-- `UIBlurEffectStyleProminent`-밝은 테마에서 매우 밝은 흐림 효과를 사용 하 고 어두운 테마에서 짙은 짙은 흐림 효과를 사용 합니다.
+- `UIBlurEffectStyleRegular` -밝은 테마에서 밝은 흐림 효과를 사용 하 고 어두운 테마에서 짙은 흐림 효과를 사용 합니다.
+- `UIBlurEffectStyleProminent` -밝은 테마에서 매우 밝은 흐림 효과를 사용 하 고 어두운 테마에서 짙은 짙은 흐림 효과를 사용 합니다.
 
 <a name="Working-with-Trait-Collections"></a>
 
@@ -128,7 +128,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 개발자는 선택 된 UI 테마를 기반으로 하는 UI 요소의 모양을 세부적으로 제어 해야 `TraitCollectionDidChange` `UIView` 합니다. 또는 클래스의 메서드를 재정의할 수 있습니다 `UIViewController` .
 
-예를 들어:
+다음은 그 예입니다.
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -146,7 +146,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 TvOS 앱의 디자인에 따라 개발자가 지정 된 사용자 인터페이스 요소의 특성 컬렉션을 재정의 하 고 항상 특정 UI 테마를 사용 해야 하는 경우가 있을 수 있습니다.
 
-클래스의 메서드를 사용 하 여이 작업을 수행할 수 있습니다 `SetOverrideTraitCollection` `UIViewController` . 예를 들어:
+클래스의 메서드를 사용 하 여이 작업을 수행할 수 있습니다 `SetOverrideTraitCollection` `UIViewController` . 다음은 그 예입니다.
 
 ```csharp
 // Create new trait and configure it
@@ -209,5 +209,5 @@ Apple은 Interface Builder에서 tvOS Storyboard를 편집할 때 다음과 같�
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [TvOS 10의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

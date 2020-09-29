@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c4b818bcf3c4a5280c0280a2e28e2f59c65c8c81
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98cbcd333d223d741602786643ef1948915d7dfc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930223"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436465"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -66,7 +66,7 @@ IOS 10을 처음 접하는 Apple은 iOS 앱에서 음성 인식을 구현할 수
 
 음성 인식 API에서 제공 하는 결과는 앱이 개인 사용자 데이터를 수집 하거나 액세스 하지 않고도 개별 사용자에 게 투명 하 게 사용자 지정 됩니다.
 
-음성 인식 API는 사용자가 말하는 동안 거의 실시간으로 호출 앱에 결과를 다시 제공 하며, 단순히 텍스트 보다 번역 결과에 대 한 자세한 정보를 제공 합니다. 특수 Azure 지역은 다음과 같습니다.
+음성 인식 API는 사용자가 말하는 동안 거의 실시간으로 호출 앱에 결과를 다시 제공 하며, 단순히 텍스트 보다 번역 결과에 대 한 자세한 정보를 제공 합니다. 내용은 다음과 같습니다.
 
 - 사용자가 말한 작업을 여러 번 해석 합니다.
 - 개별 번역을 위한 신뢰 수준입니다.
@@ -105,10 +105,10 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 2. **원본** 뷰로 전환 합니다. 
 
     [![원본 뷰](speech-images/speech02.png)](speech-images/speech02.png#lightbox)
-3. **새 항목 추가**를 클릭 하 `NSSpeechRecognitionUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 예를 들어: 
+3. **새 항목 추가**를 클릭 하 `NSSpeechRecognitionUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 다음은 그 예입니다. 
 
     [![NSSpeechRecognitionUsageDescription 추가](speech-images/speech03.png)](speech-images/speech03.png#lightbox)
-4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 `NSMicrophoneUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 예를 들어: 
+4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 `NSMicrophoneUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 다음은 그 예입니다. 
 
     [![NSMicrophoneUsageDescription 추가](speech-images/speech04.png)](speech-images/speech04.png#lightbox)
 5. 변경 내용을 파일에 저장합니다.
@@ -116,10 +116,10 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. 파일을 두 번 클릭 `Info.plist` 하 여 편집용으로 엽니다.
-2. **새 항목 추가**를 클릭 하 `NSSpeechRecognitionUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 예를 들어: 
+2. **새 항목 추가**를 클릭 하 `NSSpeechRecognitionUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 다음은 그 예입니다. 
 
     [![NSSpeechRecognitionUsageDescription 추가](speech-images/speech03w.png)](speech-images/speech03w.png#lightbox)
-3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 `NSMicrophoneUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 예를 들어: 
+3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 `NSMicrophoneUsageDescription` **Property** `String` 고 **형식** 및 **사용 설명** 에 대 한 속성에 **값**을 입력 합니다. 다음은 그 예입니다. 
 
     [![NSMicrophoneUsageDescription 추가](speech-images/speech04w.png)](speech-images/speech04w.png#lightbox)
 4. 변경 내용을 파일에 저장합니다.
@@ -240,7 +240,7 @@ public void RecognizeFile (NSUrl url)
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예를 들어:
+앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -398,4 +398,4 @@ Apple에는 iOS 앱에서 음성 인식을 포함 하 여 사용자의 개인 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [SpeakToMe (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-speaktome)
+- [SpeakToMe (샘플)](/samples/xamarin/ios-samples/ios10-speaktome)

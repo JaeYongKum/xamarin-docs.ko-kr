@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 632577d290c6d50a53d2f3fc236b5956f3795b35
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1245531d68e43c833e892fe888830decc9d07c85
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929547"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430601"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Xamarin.ios에서 핵심 그래픽 및 핵심 애니메이션 사용
 
@@ -22,7 +22,7 @@ ms.locfileid: "86929547"
 
 ![완료 된 응용 프로그램](graphics-animation-walkthrough-images/00-final-app.png)
 
-이 가이드와 함께 제공 되는 *GraphicsDemo* 샘플을 다운로드 하기 시작 합니다. [여기](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) 에서 다운로드할 수 있으며 GraphicsWalkthrough 디렉터리 내에 있는 **GraphicsWalkthrough** 디렉터리를 두 번 클릭 하 여 **GraphicsDemo_starter** 라는 프로젝트를 시작 하 고 클래스를 엽니다 `DemoView` .
+이 가이드와 함께 제공 되는 *GraphicsDemo* 샘플을 다운로드 하기 시작 합니다. [여기](/samples/xamarin/ios-samples/graphicsandanimation) 에서 다운로드할 수 있으며 GraphicsWalkthrough 디렉터리 내에 있는 **GraphicsWalkthrough** 디렉터리를 두 번 클릭 하 여 **GraphicsDemo_starter** 라는 프로젝트를 시작 하 고 클래스를 엽니다 `DemoView` .
 
 ## <a name="drawing-a-path"></a>패스 그리기
 
@@ -79,7 +79,7 @@ ms.locfileid: "86929547"
     }
     ```
 
-    `SetNeedsDisplay`는 `Draw` 다음 실행 루프 패스에서 호출 되기 위해 매번 접촉 될 때마다 호출 됩니다.
+    `SetNeedsDisplay` 는 `Draw` 다음 실행 루프 패스에서 호출 되기 위해 매번 접촉 될 때마다 호출 됩니다.
 
 4. 메서드의 경로에 줄을 추가 하 `Draw` 고 빨간색 파선을 사용 하 여 그립니다. [구현 `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) 다음과 같은 코드를 사용 합니다.
 

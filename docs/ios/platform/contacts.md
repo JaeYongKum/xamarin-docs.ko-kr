@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 6fe6c254daf23f5f3d2fb267f6ba4986b94bcbd7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997295"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431745"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Xamarin.ios의 연락처 및 연락처
 
@@ -44,11 +44,11 @@ IOS 9가 도입 되면서 Apple은 `Contacts` `ContactsUI` ios 8 및 이전 버�
 
 ### <a name="contact-objects"></a>연락처 개체
 
-`CNContact`클래스는 이름, 주소 또는 전화 번호와 같은 연락처의 속성에 대 한 읽기 전용 액세스를 스레드로부터 안전 하 게 제공 합니다. `CNContact`및와 같은 함수는 `NSDictionary` 여러 개의 읽기 전용 속성 컬렉션 (예: 주소 또는 전화 번호)을 포함 합니다.
+`CNContact`클래스는 이름, 주소 또는 전화 번호와 같은 연락처의 속성에 대 한 읽기 전용 액세스를 스레드로부터 안전 하 게 제공 합니다. `CNContact` 및와 같은 함수는 `NSDictionary` 여러 개의 읽기 전용 속성 컬렉션 (예: 주소 또는 전화 번호)을 포함 합니다.
 
 [![연락처 개체 개요](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
-전자 메일 주소 또는 전화 번호와 같이 여러 값을 가질 수 있는 속성의 경우에는 개체 배열로 표시 됩니다 `NSLabeledValue` . `NSLabeledValue`레이블이 사용자에 게 값을 정의 하는 읽기 전용 레이블 및 값 (예: Home 또는 Work email)으로 구성 된 스레드로부터 안전한 튜플입니다. 연락처 프레임 워크는 `CNLabelKey` 응용 프로그램에서 사용할 수 있는 미리 정의 된 레이블 (및 정적 클래스를 통해)을 선택 `CNLabelPhoneNumberKey` 하거나 사용자 요구에 맞게 사용자 지정 레이블을 정의할 수 있습니다.
+전자 메일 주소 또는 전화 번호와 같이 여러 값을 가질 수 있는 속성의 경우에는 개체 배열로 표시 됩니다 `NSLabeledValue` . `NSLabeledValue` 레이블이 사용자에 게 값을 정의 하는 읽기 전용 레이블 및 값 (예: Home 또는 Work email)으로 구성 된 스레드로부터 안전한 튜플입니다. 연락처 프레임 워크는 `CNLabelKey`  응용 프로그램에서 사용할 수 있는 미리 정의 된 레이블 (및 정적 클래스를 통해)을 선택 `CNLabelPhoneNumberKey` 하거나 사용자 요구에 맞게 사용자 지정 레이블을 정의할 수 있습니다.
 
 기존 연락처의 값을 조정 해야 하는 Xamarin.ios 앱 (또는 새로 만들기)의 경우 `NSMutableContact` 클래스 및 해당 하위 클래스의 버전 (예:)을 사용 `CNMutablePostalAddress` 합니다.
 
@@ -108,7 +108,7 @@ else
 }
 ```
 
-이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 예를 들어:
+이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 다음은 그 예입니다.
 
 [![사용자의 컬렉션에 추가 된 새 연락처입니다.](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
@@ -121,7 +121,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예를 들어:
+응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Localized properties
@@ -173,7 +173,7 @@ var contacts = store.GetUnifiedContacts(predicate, fetchKeys, out error);
 
 일부 _연락처_ 는의 연락처 저장소에서 사용 가능한 속성 중 일부만 인출 된 연락처입니다. 이전에 인출 되지 않은 속성에 액세스 하려고 하면 예외가 발생 합니다.
 
-인스턴스의 또는 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다 `IsKeyAvailable` `AreKeysAvailable` `CNContact` . 예를 들어:
+인스턴스의 또는 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다 `IsKeyAvailable` `AreKeysAvailable` `CNContact` . 다음은 그 예입니다.
 
 ```csharp
 // Does the contact contain the requested key?
@@ -224,7 +224,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 를 `CNSaveRequest` 사용 하 여 여러 연락처 및 그룹 변경 내용을 단일 작업으로 캐시 하 고 이러한 수정 내용을에 일괄 처리할 수도 있습니다 `CNContactStore` .
 
-Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 예를 들어:
+Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Get mutable copy of contact
@@ -278,7 +278,7 @@ Apple의 기본 제공 컨트롤을 사용 하면 Xamarin.ios 앱에서 연락�
 
 클래스를 호출 하기 전에 `CNContactPickerViewController` 사용자가 선택할 수 있는 속성을 정의 하 고 연락처 속성의 표시 및 선택을 제어 하는 조건자를 정의 합니다.
 
-에서 상속 되는 클래스의 인스턴스를 사용 `CNContactPickerDelegate` 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 예를 들어:
+에서 상속 되는 클래스의 인스턴스를 사용 `CNContactPickerDelegate` 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -359,7 +359,7 @@ PresentViewController(view, true, null);
 
 ## <a name="related-links"></a>관련 링크
 
-- [연락처 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts/)
+- [연락처 샘플](/samples/xamarin/ios-samples/contacts/)
 - [IOS 9의 새로운 기능](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [연락처 프레임 워크 참조](https://developer.apple.com/documentation/contacts?language=objc)
 - [연락처 Sui 프레임 워크 참조](https://developer.apple.com/documentation/contactsui?language=objc)

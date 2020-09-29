@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: a77b5cd33710a7a8755441efc8b7134d82855c2a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0c5f2a5c6a3274b298d3de216a2a0f42ed590611
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937971"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436482"
 ---
 # <a name="social-framework-in-xamarinios"></a>Xamarin.ios의 소셜 프레임 워크
 
@@ -50,11 +50,11 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController`사용자 개입 없이 직접 트 윗를 전송 하지 않습니다. 그러나 다음 방법을 사용 하 여 초기화할 수 있습니다.
+ `SLComposeViewController` 사용자 개입 없이 직접 트 윗를 전송 하지 않습니다. 그러나 다음 방법을 사용 하 여 초기화할 수 있습니다.
 
-- `SetInitialText`– 트 윗에서 표시할 초기 텍스트를 추가 합니다.
-- `AddUrl`– 트 윗에 Url을 추가 합니다.
-- `AddImage`– 이미지를 트 윗에 추가 합니다.
+- `SetInitialText` – 트 윗에서 표시할 초기 텍스트를 추가 합니다.
+- `AddUrl` – 트 윗에 Url을 추가 합니다.
+- `AddImage` – 이미지를 트 윗에 추가 합니다.
 
 초기화 되 면를 호출 하면에서 `PresentVIewController` 만든 뷰가 표시 됩니다 `SLComposeViewController` . 사용자는 필요에 따라 트 윗를 편집 및 전송 하거나 송신을 취소할 수 있습니다. 두 경우 모두에서 컨트롤러를 해제 해야 합니다 `CompletionHandler` . 그런 다음 아래와 같이 트 윗를 보내거나 취소 했는지 여부를 확인 하기 위해 결과를 확인할 수도 있습니다.
 
@@ -298,7 +298,7 @@ request.PerformRequest ((data, response, error) => {
 
 소셜 프레임 워크는 여러 소셜 네트워크에 액세스 하도록 디자인 된 통합 API 이므로 사용 중인 소셜 네트워크에 관계 없이 코드는 거의 동일 하 게 유지 됩니다.
 
-예를 들어 앞에서 설명한 `SLComposeViewController` Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 예를 들어:
+예를 들어 앞에서 설명한 `SLComposeViewController` Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -472,5 +472,5 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [SocialFrameworkDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
+- [SocialFrameworkDemo (샘플)](/samples/xamarin/ios-samples/socialframeworkdemo)
 - [웹 서비스 소개](~/cross-platform/data-cloud/web-services/index.md)

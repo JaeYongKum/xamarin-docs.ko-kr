@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 791ab82e0e5f47929eff561ac836ec87e6d6c134
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 0dd7736d37f6db17ad794258d9dff852b2745053
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997321"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431850"
 ---
 # <a name="callkit-in-xamarinios"></a>Xamarin.ios의 CallKit
 
@@ -56,8 +56,8 @@ IOS 10에서 Apple은 모든 시스템 서비스에서 callkit를 채택 하 여
 
 앱에서 사용 하는 CallKit에는 두 가지 주요 인터페이스가 있습니다.
 
-- `CXProvider`-이를 통해 MonkeyCall 앱에서 발생할 수 있는 대역 외 알림을 시스템에 알릴 수 있습니다.
-- `CXCallController`-MonkeyCall 앱에서 로컬 사용자 동작을 시스템에 알릴 수 있습니다.
+- `CXProvider` -이를 통해 MonkeyCall 앱에서 발생할 수 있는 대역 외 알림을 시스템에 알릴 수 있습니다.
+- `CXCallController` -MonkeyCall 앱에서 로컬 사용자 동작을 시스템에 알릴 수 있습니다.
 
 ### <a name="the-cxprovider"></a>CXProvider
 
@@ -217,7 +217,7 @@ namespace MonkeyCall
 }
 ```
 
-`ActiveCall`호출 상태를 정의 하는 여러 속성과 호출 상태가 변경 될 때 발생할 수 있는 두 개의 이벤트를 포함 합니다. 이는 예제 이기 때문에 시뮬레이션 시작, 응답 및 종료를 시뮬레이션 하는 데 사용 되는 세 가지 메서드가 있습니다.
+`ActiveCall` 호출 상태를 정의 하는 여러 속성과 호출 상태가 변경 될 때 발생할 수 있는 두 개의 이벤트를 포함 합니다. 이는 예제 이기 때문에 시뮬레이션 시작, 응답 및 종료를 시뮬레이션 하는 데 사용 되는 세 가지 메서드가 있습니다.
 
 ### <a name="the-startcallrequest-class"></a>StartCallRequest 클래스
 
@@ -1261,4 +1261,4 @@ VOIP 앱에 알려진 연락처 번호의 연락처에 알리기 위해 클래�
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

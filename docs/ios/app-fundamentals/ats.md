@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 74647a3c9128496373917e714755f5aaa7f73187
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 476c19f22755775f7b2b8b1d4205747b4bc6b313
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931692"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432532"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
@@ -172,7 +172,7 @@ NSAppTransportSecurity
 - **NSAllowsArbitraryLoads** ( `Boolean` )- `YES` 에 나열 **되지 않은** 모든 도메인에 대해 ATS를 사용 하지 않도록 설정 `NSExceptionDomains` 합니다. 나열 된 도메인에 대해 지정 된 보안 설정이 사용 됩니다.
 - **NSAllowsArbitraryLoadsInWebContent** ( `Boolean` )- `YES` 응용 프로그램의 나머지 부분에 대해 ATS (Apple Transport Security) 보호가 계속 사용 되는 동안 웹 페이지를 올바르게 로드할 수 있습니다.
 - **NSExceptionDomains** ( `Dictionary` )-ATS에서 지정 된 도메인에 사용 해야 하는 보안 설정 및 도메인의 컬렉션입니다.
-- **\<domain-name-for-exception-as-string>**( `Dictionary` )-지정 된 도메인에 대 한 예외 컬렉션입니다 (예: `www.xamarin.com`).
+- **\<domain-name-for-exception-as-string>** ( `Dictionary` )-지정 된 도메인에 대 한 예외 컬렉션입니다 (예: `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** ( `String` )-최소 TLS 버전은 `TLSv1.0` `TLSv1.1` 또는 `TLSv1.2` (기본값)입니다.
 - **NSExceptionRequiresForwardSecrecy** ( `Boolean` )- `NO` 도메인이 전달 보안과 함께 암호를 사용할 필요가 없는 경우입니다. 기본값은 `YES`입니다.
 - **NSExceptionAllowsInsecureHTTPLoads** ( `Boolean` )- `NO` (기본값)이 도메인과의 모든 통신은 프로토콜에 있어야 합니다 `HTTPS` .
@@ -239,7 +239,7 @@ Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 
 [![Info.plist 파일의 소스 뷰입니다.](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 **always** 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`매우 긴급 한 상황 에서만 사용 해야 합니다.
+> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 **always** 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads` 매우 긴급 한 상황 에서만 사용 해야 합니다.
 
 ATS를 사용 하지 않도록 설정 하는 것은 보안 연결로 전환 하는 것이 불가능 하거나 불가능 한 경우 마지막 수단 _으로만_ 사용 해야 합니다.
 
@@ -251,6 +251,6 @@ ATS를 사용 하지 않도록 설정 하는 것은 보안 연결로 전환 하�
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

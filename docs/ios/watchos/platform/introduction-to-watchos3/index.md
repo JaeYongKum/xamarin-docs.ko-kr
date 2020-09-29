@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: abe9c95c889aed5258ea3a5367e05368ddb7c77f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ec43c98b891ee1541be9b1ac2563e280730628e3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574173"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430496"
 ---
 # <a name="introduction-to-watchos-3"></a>watchOS 3 소개
 
@@ -149,7 +149,7 @@ WatchOS 3에 도입 된 사용자 알림 프레임 워크는 Apple Watch에 대 
 watchOS 3에는 다음과 같은 WatchKit 프레임 워크에 대 한 몇 가지 향상 된 기능이 포함 되어 있습니다.
 
 - 앱은 새 [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) 클래스를 사용 하 여 Digital Crown 상태를 가져올 수 있으며, 사용자가 [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) 클래스를 사용 하 여 ccs (crown를 회전 하면 업데이트를 받을 수 있습니다.
-- 이제 [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) 클래스에 앱 `ApplicationState` 의 런타임 상태를 추적 하는 데 사용할 수 있는 메서드 및 [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) 상수가 포함 됩니다. `WKExtension`또한에서는 백그라운드 작업을 예약 하는 데 사용할 수 있는 두 가지 새로운 메서드를 제공 합니다.
+- 이제 [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) 클래스에 앱 `ApplicationState` 의 런타임 상태를 추적 하는 데 사용할 수 있는 메서드 및 [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) 상수가 포함 됩니다. `WKExtension` 또한에서는 백그라운드 작업을 예약 하는 데 사용할 수 있는 두 가지 새로운 메서드를 제공 합니다.
 - 이제 [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) 에는 `ApplicationWillEnterForeground` `ApplicationDidEnterBackground` `HandleBackgroundTasks` 응용 프로그램의 상태 변경 내용을 모니터링 하 고 백그라운드 작업 업데이트를 처리 하는 새로운 및 메서드가 포함 됩니다.
 - Watch 앱에 [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) 및 [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer)유형의 제스처 인식을 제공 하기 위해 새 [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) 클래스가 추가 되었습니다.
 - 새 [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) 클래스는 모든 HomeKit 연결 된 IP 카메라에 대 한 인터페이스를 제공 합니다.
@@ -190,5 +190,5 @@ WatchOS 3에서 다음 Api는 더 이상 사용 되지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [watchOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [WatchOS 3의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

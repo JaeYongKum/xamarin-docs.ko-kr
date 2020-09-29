@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 50f671febdc698454dd5bc7e00d040672c7a79af
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028278"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436535"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>추가 watchOS 3 프레임 워크 변경 내용
 
@@ -27,8 +27,8 @@ Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 
 - Root [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) 개체는 serialization 없이 동시에 오류 및 가져오기를 지원 합니다.
 - [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) 클래스는 SQLite 데이터 저장소의 풀을 유지 관리 합니다.
 - 모드 (관리 개체 컨텍스트)를 사용 하는 새 쿼리 생성 기능을 사용 하 여 [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) 개체를 WAL 저널 모드에 저장 하면 나중에 인출 하 고 오류를 발생 시킬 수 있습니다.
-- 상위 수준 `NSPersistenceContainer`를 사용 하 여 `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
-- Fetch를 더 쉽게 수행 하 고 하위 클래스를 만들 수 있도록 `NSManagedObject`에 몇 가지 새로운 편의 방법이 추가 되었습니다.
+- 상위 수준을 사용 하 여 `NSPersistenceContainer` `NSPersistentStoreCoordinator` , [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
+- 더 쉽게 페치를 수행 하 고 하위 클래스를 만들 수 있도록 몇 가지 새로운 편의 방법이 추가 되었습니다 `NSManagedObject` .
 
 자세한 내용은 Apple의 [핵심 데이터 프레임 워크 참조](https://developer.apple.com/reference/coredata)를 참조 하세요.
 
@@ -39,7 +39,7 @@ Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 
 - 새 장치 동작 이벤트는가 속도계 및 자이로스코프가를 사용 하 여 동작 및 방향 업데이트를 제공 합니다. 앱은이 업데이트를 등록할 수 있습니다 (최대 100Hz).
 - 새 Pedometer 이벤트를 사용 하면 사용자가 일시 중지 하 고 실행을 다시 시작할 때 실시간으로 신속 하 게 알림을 받을 수 있습니다. [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) 를 사용 하 여 포그라운드 또는 background pedometer 이벤트에 등록 합니다.
 
-## <a name="foundation"></a>Mfc
+## <a name="foundation"></a>Foundation
 
 다음은 watch OS 3 용 Foundation framework에 대 한 향상 된 기능입니다.
 
@@ -53,9 +53,9 @@ Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 
 
 Watch OS 3 용 HealthKit 프레임 워크에 대 한 다음과 같은 향상 된 기능이 향상 되었습니다.
 
-- 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 `ActivityType` 및 체력 `LocationType`를 지정 합니다.
-- [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 새 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 및 `WheelchairUse` 메서드는 휠체어 관련 상태 데이터를 사용 하기 위해 추가 되었습니다.
-- 날씨 유형 (예: `HKWeatherConditionClear` 및 `HKWeatherConditionCloudy`)에 대 한 새 메타 데이터 키가 추가 되었고, 체력 유형 (예: `HKWorkoutActivityTypeFlexibility` 및 `HKWorkoutActivityTypeWheelchairRunPace`)이 추가 되었습니다.
+- 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 `ActivityType` 체력의 및를 지정 합니다 `LocationType` .
+- [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) `WheelchairUse` 휠체어 관련 상태 데이터를 사용 하기 위해 새 HKWheelchairUseObject 및 [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 메서드가 추가 되었습니다.
+- 날씨 유형 (예: 및)에 대 한 새 메타 데이터 키가 추가 되 `HKWeatherConditionClear` `HKWeatherConditionCloudy` 고, 및 등의 체력 유형 (예: `HKWorkoutActivityTypeFlexibility` 및 `HKWorkoutActivityTypeWheelchairRunPace` )이 추가 되었습니다.
 
 ## <a name="homekit"></a>HomeKit
 
@@ -76,10 +76,10 @@ Watch OS 3 용 PassKit 프레임 워크에 대 한 다음과 같은 향상 된 �
 
 다음은 watch OS 3 용 UIKit 프레임 워크에 대 한 향상 된 기능입니다.
 
-- 레이블에서 동적 형식을 지원 하기 위해 텍스트 필드와 텍스트 상자에 `UIFont` 클래스의 새 `PreferredFontForTextStyle` 메서드가 사용 됩니다.
-- `ColorWithDisplayP3` 메서드가 넓은 색을 지원 하기 위해 추가 되었습니다.
+- 레이블에서 동적 형식을 지원 하기 위해 텍스트 필드와 텍스트 상자는 `PreferredFontForTextStyle` 클래스의 새 메서드를 사용 `UIFont` 합니다.
+- `ColorWithDisplayP3`와이드 색을 지원 하기 위해 메서드가 추가 되었습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS%20watchos)
+- [watchOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchos)
 - [WatchOS 3의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

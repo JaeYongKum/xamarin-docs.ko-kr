@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 9d346dc52437b5c079d499e142036e94cfaef65d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4f79fe550966c36a2be15431757fb7443e090ec9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030435"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436399"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Xamarin에서 tvOS 진행률 표시기 사용
 
@@ -45,7 +45,7 @@ Apple에는 진행률 표시줄을 사용 하기 위한 다음과 같은 제안�
 
 TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **Solution Pad**에서 **주 storyboard** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 
@@ -57,7 +57,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
     ![활동 표시기의 위젯 탭](progress-indicators-images/activity02.png "활동 표시기의 위젯 탭")
     
-    **이름** 은 코드의 C# 작업 표시기를 나타내는 속성의 이름을 결정 합니다.
+    **이름** 은 c # 코드의 작업 표시기를 나타내는 속성의 이름을 결정 합니다.
 
 4. **도구 상자** 에서 **진행률 보기** 를 끌어서 뷰에 놓습니다. 
 
@@ -67,11 +67,11 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
     ![진행률 보기의 위젯 탭](progress-indicators-images/activity04.png "진행률 보기의 위젯 탭")
     
-    **이름** 은 코드에서 C# 진행률 뷰를 나타내는 속성의 이름을 결정 합니다.
+    **이름** 은 c # 코드에서 진행률 뷰를 나타내는 속성의 이름을 결정 합니다.
 
 6. 변경 내용을 저장합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기**에서 **주 storyboard** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 
@@ -84,7 +84,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
     ![활동 표시기의 위젯 탭](progress-indicators-images/activity02-vs.png "활동 표시기의 위젯 탭")
 
-    **이름** 은 코드의 C# 작업 표시기를 나타내는 속성의 이름을 결정 합니다.
+    **이름** 은 c # 코드의 작업 표시기를 나타내는 속성의 이름을 결정 합니다.
 
 4. **도구 상자** 에서 **진행률 보기** 를 끌어서 뷰에 놓습니다. 
 
@@ -94,7 +94,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
     ![진행률 보기의 위젯 탭](progress-indicators-images/activity04-vs.png "진행률 보기의 위젯 탭")
     
-    **이름** 은 코드에서 C# 진행률 뷰를 나타내는 속성의 이름을 결정 합니다.
+    **이름** 은 c # 코드에서 진행률 뷰를 나타내는 속성의 이름을 결정 합니다.
 
 6. 변경 내용을 저장합니다.
 
@@ -106,7 +106,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
 위에서 설명한 것 처럼 앱이 길이가 정해 지지 않은 긴 프로세스를 실행 하는 경우 활동 표시기가 표시 되어야 합니다.
 
-언제 든 지 `IsAnimating` 속성을 확인 하 여 활동 표시기가 애니메이션 효과를 주는 지 확인할 수 있습니다. `HidesWhenStopped` 속성이 `true`이면 애니메이션이 중지 될 때 작업 표시기가 자동으로 숨겨집니다.
+언제 든 지 해당 속성을 확인 하 여 활동 표시기가 애니메이션 효과를 주는 지 확인할 수 있습니다 `IsAnimating` . `HidesWhenStopped`속성이 인 경우 `true` 애니메이션을 중지 하면 작업 표시기가 자동으로 숨겨집니다.
 
 애니메이션을 시작 하려면 다음 코드를 사용할 수 있습니다. 
 
@@ -127,7 +127,7 @@ ActivityIndicator.StopAnimating();
 
 앱이 알려진 기간의 장기 실행 작업을 실행할 때 언제 든 지 진행률 표시줄을 사용 해야 합니다. 
 
-`Progress` 속성은 완료 된 작업의 양을 0%에서 100% (0.0에서 1.0)로 설정 하는 데 사용 됩니다. `ProgressTintColor` 속성을 사용 하 여 완료 된 막대의 색을 설정 하 고 `TrackTintColor` 속성을 사용 하 여 배경색을 설정 합니다 (완료 되지 않은 금액).
+`Progress`속성은 완료 된 작업의 양을 0%에서 100% (0.0에서 1.0)로 설정 하는 데 사용 됩니다. 속성을 사용 `ProgressTintColor` 하 여 완료 된 막대의 색을 설정 하 고 `TrackTintColor` 속성을 사용 하 여 배경색을 설정 합니다 (완료 되지 않은 금액).
 
 ## <a name="summary"></a>요약
 
@@ -135,7 +135,7 @@ ActivityIndicator.StopAnimating();
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 6002e5cc62dfe30c14f21943c690a5a1b15a0c12
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55f471fe02618becbfc4a7ab8571d9690fe44843
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936593"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430590"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
@@ -78,7 +78,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 
 - **Uitableview** – 스크롤 컨테이너 내의 셀 컬렉션을 포함 하는 뷰입니다. 일반적으로 테이블 뷰는 iPhone 앱에서 전체 화면을 사용 하지만 iPad에서 더 큰 보기의 일부로 존재 하거나 팝 오버 표시 될 수 있습니다. 
 - **Uitableviewcell** – 테이블 뷰의 단일 셀 또는 행을 나타내는 뷰입니다. 네 가지 기본 제공 셀 형식이 있으며, c # 또는 iOS 디자이너를 사용 하 여 사용자 지정 셀을 만들 수 있습니다. 
-- **Uitableviewsource** – xamarin.ios-배타적 추상 클래스로, 행 개수, 각 행에 대 한 셀 뷰 반환, 행 선택 처리 및 기타 여러 가지 선택적 기능을 포함 하 여 테이블을 표시 하는 데 필요한 모든 메서드를 제공 합니다. UITableView를 가져오려면이를 서브 클래스 *해야* 합니다. 
+- **Uitableviewsource** – xamarin.ios-배타적 추상 클래스로, 행 개수, 각 행에 대 한 셀 뷰 반환, 행 선택 처리 및 기타 여러 가지 선택적 기능을 포함 하 여 테이블을 표시 하는 데 필요한 모든 메서드를 제공 합니다. UITableView를 가져오려면이를 서브 클래스  *해야* 합니다. 
 - **Nsindexpath** – 테이블에서 셀의 위치를 고유 하 게 식별 하는 Row 및 Section 속성을 포함 합니다. 
 - **Uitableviewcontroller** – TableView 속성을 통해 해당 뷰로 하드 코딩 되 고 액세스 가능한 UITableView를 포함 하는 바로 사용할 수 있는 uiviewcontroller입니다. 
 - **Uiviewcontroller** – 테이블이 전체 화면을 사용 하지 않는 경우 해당 프레임을 적절 하 게 설정 하 여 Uiviewcontroller에 UITableView를 추가할 수 있습니다. 
@@ -92,4 +92,4 @@ UITableViewSource는 Xamarin.ios에서 여전히 사용할 수 있지만 일반�
 
 ## <a name="related-links"></a>관련 링크
 
-- [WorkingWithTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (샘플)](/samples/xamarin/ios-samples/workingwithtables)

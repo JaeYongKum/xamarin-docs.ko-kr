@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: dfb03815f8642519cecf49ab7b626b9575821af1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ccec89253c58d7d43cb09f33777c253a2f0da56d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937633"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431121"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>MonoGame에서 꼭 짓 점을 사용 하 여 3D 그래픽 그리기
 
@@ -42,7 +42,7 @@ _MonoGame는 꼭 짓 점 배열의 사용을 지원 하 여 3D 개체가 특정 
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-먼저 시작 지점 역할을 하는 프로젝트를 다운로드 합니다. [여기에서 찾을 수 있는](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/)모델 프로젝트를 사용 합니다.
+먼저 시작 지점 역할을 하는 프로젝트를 다운로드 합니다. [여기에서 찾을 수 있는](/samples/xamarin/mobile-samples/modelrenderingmg/)모델 프로젝트를 사용 합니다.
 
 다운로드 하 고 압축을 푼 후 프로젝트를 열고 실행 합니다. 화면에 표시 되는 여섯 개의 로봇 모델이 표시 될 것입니다.
 
@@ -219,7 +219,7 @@ protected override void Draw (GameTime gameTime)
 
 ### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
-`DrawUserPrimitives`는 꼭 짓 점이 렌더링 되는 위치입니다. 첫 번째 매개 변수는 메서드를 메서드로 구성 하는 방법을 알려 줍니다. 각 삼각형이 세 개의 정렬 된 꼭 짓 점으로 정의 되도록 구성 했으므로 값을 사용 `PrimitiveType.TriangleList` 합니다.
+`DrawUserPrimitives` 는 꼭 짓 점이 렌더링 되는 위치입니다. 첫 번째 매개 변수는 메서드를 메서드로 구성 하는 방법을 알려 줍니다. 각 삼각형이 세 개의 정렬 된 꼭 짓 점으로 정의 되도록 구성 했으므로 값을 사용 `PrimitiveType.TriangleList` 합니다.
 
 두 번째 매개 변수는 앞에서 정의한 꼭 짓 점의 배열입니다.
 
@@ -468,4 +468,4 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 ## <a name="related-links"></a>관련 링크
 
 - [바둑판 파일 (샘플)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [완료 된 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)
+- [완료 된 프로젝트 (샘플)](/samples/xamarin/mobile-samples/modelsandvertsmg/)

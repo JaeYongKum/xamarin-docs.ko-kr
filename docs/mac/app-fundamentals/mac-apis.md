@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: c8fd877c6addac7dd865d8464e24a455b2f1aa88
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 67638a261cd9a6e8c356924d47ea4adb4eae6a80
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573939"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430996"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>Xamarin.ios 개발자를 위한 macOS Api
 
@@ -31,12 +31,12 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 선언은 왼쪽에서 오른쪽으로 읽을 수 있습니다.
 
 - `-`접두사는 인스턴스 (비정적) 메서드 임을 의미 합니다. +는 클래스 (정적) 메서드 임을 의미 합니다.
-- `(BOOL)`반환 형식 (c #의 경우 bool)입니다.
-- `canDragRowsWithIndexes`이름의 첫 번째 부분입니다.
-- `(NSIndexSet *)rowIndexes`는 첫 번째 매개 변수이 고이 매개 변수의 형식은입니다. 첫 번째 매개 변수는 다음과 같은 형식입니다.`(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint`는 두 번째 매개 변수 및 해당 형식입니다. 첫 번째 뒤의 모든 매개 변수는 형식입니다.`selectorPart:(Type) pararmName`
+- `(BOOL)` 반환 형식 (c #의 경우 bool)입니다.
+- `canDragRowsWithIndexes` 이름의 첫 번째 부분입니다.
+- `(NSIndexSet *)rowIndexes` 는 첫 번째 매개 변수이 고이 매개 변수의 형식은입니다. 첫 번째 매개 변수는 다음과 같은 형식입니다. `(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint` 는 두 번째 매개 변수 및 해당 형식입니다. 첫 번째 뒤의 모든 매개 변수는 형식입니다. `selectorPart:(Type) pararmName`
 - 이 메시지 선택기의 전체 이름은 `canDragRowsWithIndexes:atPoint:` 입니다. 끝에는 `:` 이 중요 합니다.
-- 실제 Xamarin.ios c # 바인딩은 다음과 같습니다.`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- 실제 Xamarin.ios c # 바인딩은 다음과 같습니다. `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 이 선택기 호출은 다음과 같은 방식으로 읽을 수 있습니다.
 
@@ -45,7 +45,7 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 ```
 
 - 인스턴스는 `v` `canDragRowsWithIndexes:atPoint` 두 매개 변수 및가 전달 된 라는 선택기를 사용 `set` `point` 합니다.
-- C #에서 메서드 호출은 다음과 같습니다.`x.CanDragRows (set, point);`
+- C #에서 메서드 호출은 다음과 같습니다. `x.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 
@@ -56,8 +56,8 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 1. 자동 완성 목록을 사용 하 여 같은 이름의 항목을 빠르게 검색할 수 있습니다. 이 인스턴스는의 인스턴스 이므로 다음을 `NSTableView` 입력할 수 있습니다.
 
     - `NSTableView x;`
-    - `x.`[ctrl + space (목록이 표시 되지 않는 경우).
-    - `CanDrag`들어가서
+    - `x.` [ctrl + space (목록이 표시 되지 않는 경우).
+    - `CanDrag` 들어가서
     - 메서드를 마우스 오른쪽 단추로 클릭 하 고 선언으로 이동 하 여 해당 `Export` 특성을 문제의 선택기와 비교할 수 있는 어셈블리 브라우저를 엽니다.
 
 2. 전체 클래스 바인딩을 검색 합니다. 이 인스턴스는의 인스턴스 이므로 다음을 `NSTableView` 입력할 수 있습니다.
@@ -66,7 +66,7 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
     - 마우스 오른쪽 단추 `NSTableView` 를 클릭 하 고 선언으로 이동 어셈블리 브라우저
     - 문제의 선택기 검색
 
-3. [XAMARIN.IOS API 온라인 설명서](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) 를 사용할 수 있습니다.
+3. [XAMARIN.IOS API 온라인 설명서](/dotnet/api/?view=xamarinmac-3.0) 를 사용할 수 있습니다.
 
 4. Miel el은 지정 된 API를 검색할 수 있는 [Xamarin.ios api의](https://tirania.org/tmp/rosetta.html) "Rosetta 석재" 보기를 제공 합니다. API가 AppKit 또는 macOS와 관련 되지 않은 경우 찾을 수 있습니다.
 

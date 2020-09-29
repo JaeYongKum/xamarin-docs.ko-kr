@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: d4fe04412eb4fb456bc49d71c1e5fe87df5f9e76
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 207aac33101615a0a103176cd2bf5dd061e0d264
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939644"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430422"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.ios에서 향상 된 사용자 알림
 
@@ -242,7 +242,7 @@ content.Badge = 1;
 만든 알림의 콘텐츠를 사용 하 여 앱은 *트리거*를 설정 하 여 사용자에 게 알림이 표시 되는 시점을 예약 해야 합니다. iOS 10은 다음과 같은 네 가지 트리거 유형을 제공 합니다.
 
 - **푸시 알림** -원격 알림과 독점적으로 사용 되며 APNs가 장치에서 실행 중인 앱에 알림 패키지를 보낼 때 트리거됩니다.
-- **시간 간격** -시간 간격에서 시작 하 여 일정을 예약 하는 데 사용할 수 있습니다. 예를 들어 `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
+- **시간 간격** -시간 간격에서 시작 하 여 일정을 예약 하는 데 사용할 수 있습니다. 예, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
 - **일정 날짜** -특정 날짜 및 시간에 대해 로컬 알림이 예약 되도록 허용 합니다.
 - **위치 기반** -iOS 장치에서 특정 지리적 위치를 입력 하거나 종료 하거나 Bluetooth 오류 신호에 대 한 지정 된 근접 위치에 있을 때 로컬 알림을 예약할 수 있습니다.
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>포그라운드 앱 알림 처리
 
-IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 제공 하 `UNUserNotificationCenterDelegate` 고 메서드를 구현 하 여 `WillPresentNotification` 앱은 알림을 표시 하는 데 책임이 있습니다. 예를 들어:
+IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 제공 하 `UNUserNotificationCenterDelegate` 고 메서드를 구현 하 여 `WillPresentNotification` 앱은 알림을 표시 하는 데 책임이 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -307,7 +307,7 @@ namespace MonkeyNotification
 
 이 코드는 단순히 응용 프로그램 출력에의 콘텐츠를 작성 하 `UNNotification` 고 시스템에 알림에 대 한 표준 경고를 표시 하도록 요청 하는 것입니다. 
 
-응용 프로그램이 전경에 있을 때 알림 자체를 표시 하 고 시스템 기본값을 사용 하지 않으려는 경우 `None` 완료 처리기에 전달 합니다. 예:
+응용 프로그램이 전경에 있을 때 알림 자체를 표시 하 고 시스템 기본값을 사용 하지 않으려는 경우 `None` 완료 처리기에 전달 합니다. 예제:
 
 ```csharp
 completionHandler (UNNotificationPresentationOptions.None);
@@ -358,7 +358,7 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 
 ### <a name="updating-an-existing-notification"></a>기존 알림 업데이트
 
-기존 알림을 업데이트 하려면 원하는 매개 변수를 수정 하 여 새 알림 (예: 새 트리거 시간)을 만들고 수정 해야 하는 알림과 동일한 요청 식별자를 사용 하 여 시스템에 추가 하면 됩니다. 예:
+기존 알림을 업데이트 하려면 원하는 매개 변수를 수정 하 여 새 알림 (예: 새 트리거 시간)을 만들고 수정 해야 하는 알림과 동일한 요청 식별자를 사용 하 여 시스템에 추가 하면 됩니다. 예제:
 
 ```csharp
 using UserNotifications;
@@ -430,7 +430,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 사용자 지정 작업 및 범주 집합을 만들고 시스템에 등록 한 후에는 로컬 또는 원격 알림에서 표시할 수 있습니다.
 
-원격 알림에 대해 `category` 위에서 만든 범주 중 하 나와 일치 하는 원격 알림 페이로드의를 설정 합니다. 예를 들어:
+원격 알림에 대해 `category` 위에서 만든 범주 중 하 나와 일치 하는 원격 알림 페이로드의를 설정 합니다. 다음은 그 예입니다.
 
 ```csharp
 {
@@ -441,7 +441,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-로컬 알림의 경우 `CategoryIdentifier` 개체의 속성을 설정 합니다 `UNMutableNotificationContent` . 예를 들어:
+로컬 알림의 경우 `CategoryIdentifier` 개체의 속성을 설정 합니다 `UNMutableNotificationContent` . 다음은 그 예입니다.
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -457,7 +457,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>작업 해제 처리
 
-위에서 설명한 것 처럼 사용자가 알림을 해제할 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작이 아니기 때문에 범주를 만들 때 옵션을 설정 해야 합니다. 예를 들어:
+위에서 설명한 것 처럼 사용자가 알림을 해제할 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작이 아니기 때문에 범주를 만들 때 옵션을 설정 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 var categoryID = "message";
@@ -470,7 +470,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>작업 응답 처리
 
-사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 제공 하 고 메서드를 구현 하 여이 작업을 수행 `UNUserNotificationCenterDelegate` `UserNotificationCenter` 합니다. 예를 들어:
+사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 제공 하 고 메서드를 구현 하 여이 작업을 수행 `UNUserNotificationCenterDelegate` `UserNotificationCenter` 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -558,9 +558,9 @@ Xamarin.ios 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 -----
 
 > [!IMPORTANT]
-> 서비스 확장의 번들 식별자는 끝에 추가 된 주 앱의 번들 식별자와 일치 해야 합니다 `.appnameserviceextension` . 예를 들어 기본 앱에의 번들 식별자가 있는 경우 `com.xamarin.monkeynotify` 서비스 확장에는 번들 식별자가 있어야 합니다 `com.xamarin.monkeynotify.monkeynotifyserviceextension` . 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
+> 서비스 확장의 번들 식별자는 끝에 추가 된 주 앱의 번들 식별자와 일치 해야 합니다 `.appnameserviceextension` . 예를 들어 기본 앱에의 번들 식별자가 있는 경우  `com.xamarin.monkeynotify` 서비스 확장에는 번들 식별자가 있어야 합니다 `com.xamarin.monkeynotify.monkeynotifyserviceextension` . 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
 
-알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예를 들어:
+알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -615,7 +615,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>서비스 확장 트리거
 
-서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들어:
+서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 {
@@ -666,7 +666,7 @@ namespace myApp {
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [UserNotifications 프레임 워크 참조](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications)

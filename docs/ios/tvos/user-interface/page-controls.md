@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: d4a1cab23b8d295d899c47edc5ffe77f6d20a467
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 47e9c1ed4a043f7d11b5dfd52dca903e0a613b33
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939765"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436421"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Xamarin에서 tvOS 페이지 컨트롤 사용
 
@@ -43,7 +43,7 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 
     [![위젯 탭](page-controls-images/page03.png)](page-controls-images/page03.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들면 다음과 같습니다.
+1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 다음은 그 예입니다.
 
     [![컨트롤 이름](page-controls-images/page04.png)](page-controls-images/page04.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -58,7 +58,7 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 
     [![위젯 탭](page-controls-images/page03-vs.png)](page-controls-images/page03-vs.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들면 다음과 같습니다.
+1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 다음은 그 예입니다.
 
     [![컨트롤 이름](page-controls-images/page04-vs.png)](page-controls-images/page04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -68,7 +68,7 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 > [!IMPORTANT]
 > `TouchUpInside`IOS 디자이너에서 UIButton 등의 UI 요소에와 같은 이벤트를 할당할 수 있지만, APPLE TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. `Primary Action`TvOS 사용자 인터페이스 요소에 대 한 이벤트 처리기를 만들 때 항상 이벤트를 사용 해야 합니다.
 
-뷰 컨트롤러 (예제 `ViewController.cs` ) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예를 들면 다음과 같습니다.
+뷰 컨트롤러 (예제 `ViewController.cs` ) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -166,7 +166,7 @@ PageView.CurrentPage = PageNumber;
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

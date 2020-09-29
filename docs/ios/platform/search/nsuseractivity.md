@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: bbd3d1663c3d796768095a12e5048b18f447fa7a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 29ccf115facf9a086db473301f7dfb548a80dc9f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937022"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431115"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.ios에서 NSUserActivity를 사용 하 여 검색
 
-`NSUserActivity`는 iOS 8에서 도입 되었으며 전달 데이터를 제공 하는 데 사용 됩니다.
+`NSUserActivity` 는 iOS 8에서 도입 되었으며 전달 데이터를 제공 하는 데 사용 됩니다.
 앱의 특정 부분에서 활동을 만든 다음 다른 iOS 장치에서 실행 되는 앱의 다른 인스턴스로 전달할 수 있습니다. 그러면 수신 장치는 이전 장치에서 시작 된 작업을 계속할 수 있습니다. 그러면 사용자가 남은 위치에서 바로 이동 합니다. 핸드 오프를 사용 하는 방법에 대 한 자세한 내용은 전달 설명서 [소개](~/ios/platform/handoff.md) 를 참조 하세요.
 
 IOS 9의 새로운 기능과 `NSUserActivity` 함께 인덱싱 (공개적 및 개인용) 하 여 스포트라이트 검색 및 Safari에서 검색할 수 있습니다. 를 `NSUserActivity` 검색 가능한 것으로 표시 하 고 인덱싱 가능한 메타 데이터를 추가 하 여 작업을 iOS 장치의 검색 결과에 나열할 수 있습니다.
@@ -27,14 +27,14 @@ IOS 9의 새로운 기능과 `NSUserActivity` 함께 인덱싱 (공개적 및 �
 
 의 다음 속성은 `NSUserActivity` 앱 검색을 지 원하는 데 사용 됩니다.
 
-- `EligibleForHandoff`– 인 경우 전달 `true` 작업에이 작업을 사용할 수 있습니다.
-- `EligibleForSearch`– 인 경우 `true` 이 작업은 장치 인덱스에 추가 되 고 검색 결과에 표시 됩니다.
-- `EligibleForPublicIndexing`– 인 경우 `true` 이 작업은 Apple의 클라우드 기반 인덱스에 추가 되 고 iOS 장치에 앱을 아직 설치 하지 않은 사용자 (검색을 통해)에 표시 됩니다. 자세한 내용은 아래의 [공용 검색 인덱싱](#public-search-indexing) 섹션을 참조 하세요.
-- `Title`– 활동의 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자는 제목 자체의 텍스트를 검색할 수도 있습니다.
-- `Keywords`– 인덱스 되어 최종 사용자가 검색할 수 있는 작업을 설명 하는 데 사용 되는 문자열 배열입니다.
-- `ContentAttributeSet`– 작업을 `CSSearchableItemAttributeSet` 자세히 설명 하 고 검색 결과에 다양 한 콘텐츠를 제공 하는 데 사용 되는입니다.
-- `ExpirationDate`– 활동이 지정 된 날짜 까지만 표시 되도록 하려면 해당 날짜를 여기에 제공할 수 있습니다.
-- `WebpageURL`– 작업을 웹에서 볼 수 있거나 앱이 Safari의 딥 링크를 지 원하는 경우 여기에서 방문 하도록 링크를 설정할 수 있습니다.
+- `EligibleForHandoff` – 인 경우 전달 `true` 작업에이 작업을 사용할 수 있습니다.
+- `EligibleForSearch` – 인 경우 `true` 이 작업은 장치 인덱스에 추가 되 고 검색 결과에 표시 됩니다.
+- `EligibleForPublicIndexing` – 인 경우 `true` 이 작업은 Apple의 클라우드 기반 인덱스에 추가 되 고 iOS 장치에 앱을 아직 설치 하지 않은 사용자 (검색을 통해)에 표시 됩니다. 자세한 내용은 아래의 [공용 검색 인덱싱](#public-search-indexing) 섹션을 참조 하세요.
+- `Title` – 활동의 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자는 제목 자체의 텍스트를 검색할 수도 있습니다.
+- `Keywords` – 인덱스 되어 최종 사용자가 검색할 수 있는 작업을 설명 하는 데 사용 되는 문자열 배열입니다.
+- `ContentAttributeSet` – 작업을 `CSSearchableItemAttributeSet` 자세히 설명 하 고 검색 결과에 다양 한 콘텐츠를 제공 하는 데 사용 되는입니다.
+- `ExpirationDate` – 활동이 지정 된 날짜 까지만 표시 되도록 하려면 해당 날짜를 여기에 제공할 수 있습니다.
+- `WebpageURL` – 작업을 웹에서 볼 수 있거나 앱이 Safari의 딥 링크를 지 원하는 경우 여기에서 방문 하도록 링크를 설정할 수 있습니다.
 
 ## <a name="nsuseractivity-quickstart"></a>NSUserActivity 빠른 시작
 
@@ -96,7 +96,7 @@ activity.BecomeCurrent();
 
 ## <a name="responding-to-an-activity"></a>작업에 응답
 
-앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 예를 들어:
+앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -168,7 +168,7 @@ activity.BecomeCurrent();
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [앱 검색 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

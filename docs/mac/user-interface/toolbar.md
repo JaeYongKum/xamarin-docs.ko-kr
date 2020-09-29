@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 5cf86adf07043a60c6fe445265e14591692e365b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5a6c7a013a72d2ad0e80e305b8c4c550011a1737
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008350"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430749"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Xamarin.ios의 도구 모음
 
 _이 문서에서는 Xamarin.ios 응용 프로그램에서 도구 모음을 사용 하는 방법을 설명 합니다. Xcode 및 Interface Builder에서 도구 모음을 만들고 유지 관리 하 고, 코드에 노출 하 고, 프로그래밍 방식으로 작업 하는 방법에 대해 설명 합니다._
 
-Mac용 Visual Studio 작업 하는 xamarin.ios 개발자는 도구 모음 컨트롤을 비롯 하 여 Xcode으로 작업 하는 macOS 개발자가 사용할 수 있는 것과 동일한 UI 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 Interface Builder를 사용 하 여 도구 모음 항목을 만들고 유지 관리할 수 있습니다. 이러한 도구 모음 항목은에서 C#만들 수도 있습니다.
+Mac용 Visual Studio 작업 하는 xamarin.ios 개발자는 도구 모음 컨트롤을 비롯 하 여 Xcode으로 작업 하는 macOS 개발자가 사용할 수 있는 것과 동일한 UI 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 Interface Builder를 사용 하 여 도구 모음 항목을 만들고 유지 관리할 수 있습니다. 이러한 도구 모음 항목은 c #으로도 만들 수 있습니다.
 
 MacOS의 도구 모음은 창의 위쪽 섹션에 추가 되 고 해당 기능과 관련 된 명령에 쉽게 액세스할 수 있도록 합니다. 응용 프로그램 사용자가 도구 모음을 숨기 거 나 표시 하거나 사용자 지정할 수 있으며, 도구 모음 항목을 다양 한 방식으로 제공할 수 있습니다.
 
@@ -26,7 +26,7 @@ MacOS의 도구 모음은 창의 위쪽 섹션에 추가 되 고 해당 기능�
 
 계속 하기 전에이 가이드 전체에서 사용 되는 주요 개념 및 기술에 대해 설명 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서 (특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션 소개)를 참조 하세요.
 
-또한 [Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드 C# 를 목표로 노출-C](~/mac/internals/how-it-works.md) 섹션을 살펴보세요. 클래스를 목표-C 클래스에 연결 C# 하는 데 사용 되는 `Register` 및 `Export` 특성을 설명 합니다.
+또한 [Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [c # 클래스/메서드를 목표로 표시-c](~/mac/internals/how-it-works.md) 섹션을 살펴보세요. 이 자습서에서는 `Register` `Export` c # 클래스를 목표로 c 클래스에 연결 하는 데 사용 되는 및 특성을 설명 합니다.
 
 ## <a name="introduction-to-toolbars"></a>도구 모음 소개
 
@@ -46,7 +46,7 @@ MacOS 응용 프로그램의 모든 창에는 도구 모음이 포함 될 수 �
 
      ![아이콘 전용 도구 모음](toolbar-images/info03.png "아이콘 전용 도구 모음")
 
-3. **텍스트만** 
+3. **텍스트만 사용** 
 
      ![텍스트 전용 도구 모음](toolbar-images/info04.png "텍스트 전용 도구 모음")
 
@@ -76,7 +76,7 @@ Xcode의 Interface Builder에서 도구 모음을 설정 하면 개발자가 기
 
 ## <a name="setting-a-custom-main-window-controller"></a>사용자 지정 주 창 컨트롤러 설정
 
-콘센트 및 작업을 통해 C# 코드에 UI 요소를 노출 하려면 xamarin.ios 앱에서 사용자 지정 창 컨트롤러를 사용 해야 합니다.
+콘센트 및 작업을 통해 c # 코드에 UI 요소를 노출 하려면 Xamarin.ios 앱에서 사용자 지정 창 컨트롤러를 사용 해야 합니다.
 
 1. Xcode의 Interface Builder에서 앱의 스토리 보드를 엽니다.
 2. 디자인 화면에서 창 컨트롤러를 선택 합니다.
@@ -198,7 +198,7 @@ Xcode의 Interface Builder를 사용 하 여 도구 모음이 생성 및 유지 
 
 **이미지 도구 모음 항목**을 사용 하 여 **리소스** 폴더 (및 **번들 리소스**의 빌드 작업 지정)에 추가 된 비트맵 이미지를 도구 모음에 아이콘으로 표시할 수 있습니다.
 
-1. Mac용 Visual Studio의 **Solution Pad**에서 **리소스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가**  > **파일 추가**를 선택 합니다.
+1. Mac용 Visual Studio의 **Solution Pad**에서 **리소스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **파일**추가를 선택 합니다.
 2. **파일 추가** 대화 상자에서 원하는 이미지로 이동 하 여 선택 하 고 **열기** 단추를 클릭 합니다. 
 
     [![추가할 이미지 선택](toolbar-images/edit11.png "추가할 이미지 선택")](toolbar-images/edit11-large.png#lightbox)
@@ -269,7 +269,7 @@ public void EraseDocument() {
 }
 ```
 
-그런 다음 **WindowController.cs** 파일을 편집 하 고 `WindowController` 클래스의 맨 아래에 다음 코드를 추가 합니다.
+그런 다음 **WindowController.cs** 파일을 편집 하 고 클래스의 맨 아래에 다음 코드를 추가 합니다 `WindowController` .
 
 ```csharp
 [Export ("trashDocument:")]
@@ -288,9 +288,9 @@ void TrashDocument (NSObject sender) {
 
 ## <a name="disabling-toolbar-items"></a>도구 모음 항목 사용 안 함
 
-도구 모음에서 항목을 사용 하지 않도록 설정 하려면 사용자 지정 `NSToolbarItem` 클래스를 만들고 `Validate` 메서드를 재정의 합니다. 그런 다음 Interface Builder에서 사용/사용 하지 않을 항목에 사용자 지정 형식을 할당 합니다.
+도구 모음에서 항목을 사용 하지 않도록 설정 하려면 사용자 지정 클래스를 만들고 `NSToolbarItem` 메서드를 재정의 `Validate` 합니다. 그런 다음 Interface Builder에서 사용/사용 하지 않을 항목에 사용자 지정 형식을 할당 합니다.
 
-사용자 지정 `NSToolbarItem` 클래스를 만들려면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**  > **새 파일**...을 선택 합니다. **일반**  > **빈 클래스**를 선택 하 고 **이름**에 "ActivatableItem"를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다. 
+사용자 지정 클래스를 만들려면 `NSToolbarItem` 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 파일**...을 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 **이름**에 "ActivatableItem"를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다. 
 
 ![Mac용 Visual Studio에서 빈 클래스 추가](toolbar-images/custom01.png "Mac용 Visual Studio에서 빈 클래스 추가")
 
@@ -338,7 +338,7 @@ Xcode에서 열려면 **주 storyboard** 를 두 번 클릭 합니다. 위에서
 
 ![도구 모음 항목에 대 한 사용자 지정 클래스 설정](toolbar-images/custom02.png "도구 모음 항목에 대 한 사용자 지정 클래스 설정")
 
-**휴지통** 도구 모음 항목에 대 한 `trashItem` 라는 콘센트를 만듭니다. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다. 마지막으로 **MainWindow.cs** 을 열고 다음과 같이 `AwakeFromNib` 메서드를 업데이트 하 여 읽습니다.
+`trashItem` **휴지통** 도구 모음 항목에 대해 호출 되는 콘센트를 만듭니다. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다. 마지막으로 **MainWindow.cs** 를 열고 다음과 같이 `AwakeFromNib` 메서드를 업데이트 하 여 읽습니다.
 
 ```csharp
 public override void AwakeFromNib ()
@@ -356,11 +356,11 @@ public override void AwakeFromNib ()
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 도구 모음 및 도구 모음 항목 작업에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 도구 모음을 만들고 유지 관리 하는 방법, 일부 UI 컨트롤이 도구 모음 항목에서 자동으로 작동 하는 방법, 코드 C# 에서 도구 모음을 사용 하도록 설정 및 해제 하는 방법에 대해 설명 했습니다.
+이 문서에서는 Xamarin.ios 응용 프로그램의 도구 모음 및 도구 모음 항목 작업에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 도구 모음을 만들고 유지 관리 하는 방법, 일부 UI 컨트롤이 도구 모음 항목에서 자동으로 작동 하는 방법, c # 코드에서 도구 모음을 사용 하는 방법, 도구 모음 항목을 설정 및 해제 하는 방법을 설명 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacToolbar (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)
+- [MacToolbar (샘플)](/samples/xamarin/mac-samples/mactoolbar)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [도구 모음에 대 한 인간 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
 - [도구 모음 소개](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Toolbars/Toolbars.html)

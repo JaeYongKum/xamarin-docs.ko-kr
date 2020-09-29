@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: eb95970066f85bb62eb207f23cfc135dc1625a11
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 364aa1ebc70517ee8378e603922486ae29adf6c1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436442"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -731,7 +731,7 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>모두 함께 끌어오기
 
-이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들어: 
+이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 다음은 그 예입니다. 
 
 [![샘플 앱 실행](table-views-images/intro01.png)](table-views-images/intro01.png#lightbox)
 
@@ -883,8 +883,8 @@ namespace tvTable
 
 이 클래스는 분할 뷰 컨트롤러의 두 면에서 보다 쉽게 통신할 수 있도록 몇 가지 바로 가기를 정의 하기만 합니다.
 
-- `SplitView`-탐색 뷰 컨트롤러가 속한 분할 뷰 컨트롤러 ()에 대 한 링크입니다 `MainSpiltViewController` .
-- `TableController`- `AttractionTableViewController` 탐색 뷰 컨트롤러에서 최상위 뷰로 표시 되는 테이블 뷰 컨트롤러 ()를 가져옵니다.
+- `SplitView` -탐색 뷰 컨트롤러가 속한 분할 뷰 컨트롤러 ()에 대 한 링크입니다 `MainSpiltViewController` .
+- `TableController` - `AttractionTableViewController` 탐색 뷰 컨트롤러에서 최상위 뷰로 표시 되는 테이블 뷰 컨트롤러 ()를 가져옵니다.
 
 <a name="The-Split-View-Controller"></a>
 
@@ -941,7 +941,7 @@ namespace tvTable
 
 그런 다음 분할 뷰가 메모리에 로드 되 면 분할 보기의 양쪽에 분할 뷰 컨트롤러를 연결 하 고 분할 `AttractionHighlighted` 뷰의 **세부 정보** 쪽에 새 인력를 표시 하 여 테이블 뷰 ()의 인력를 강조 표시 하는 사용자에 게 응답 합니다.
 
-분할 뷰 내에서 테이블 뷰의 전체 구현을 보려면 [tvTables](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvtable) 샘플 앱을 참조 하세요.
+분할 뷰 내에서 테이블 뷰의 전체 구현을 보려면 [tvTables](/samples/xamarin/ios-samples/tvos-tvtable) 샘플 앱을 참조 하세요.
 
 ## <a name="table-views-in-detail"></a>테이블 보기 세부 정보
 
@@ -955,7 +955,7 @@ TvOS는 iOS의 기반 이므로 테이블 뷰와 테이블 뷰 컨트롤러는 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)

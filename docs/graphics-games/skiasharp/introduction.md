@@ -7,12 +7,12 @@ ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: fd8926edce6b2310271e15418f2498162723ba49
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "64749925"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436456"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>SkiaSharp 플랫폼 독립적인 예
 
@@ -22,7 +22,7 @@ SkiaSharp는 2D 버퍼로 렌더링 하는 데 사용할 수 있는 풍부 하 �
 
 라이브러리는 현재 플랫폼 간 [Nuget 패키지로](https://www.nuget.org/packages/SkiaSharp)사용할 수 있으며, nuget 참조를 추가 하 여 프로젝트에 추가할 수 있습니다.
 
-그리기를 위해 코드에서 그리기 작업을 수행할 화면을 설명 하는 `SkCanvas`을 만듭니다.
+그리기를 위해 코드에서 `SkCanvas` 그리기 작업을 수행할 화면을 설명 하는를 만듭니다.
 
 ## <a name="obtaining-an-skcanvas"></a>가 나 캔버스 가져오기
 
@@ -36,9 +36,9 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>가 나 캔버스에서 그리기
 
-@No__t_0는 사용자가 잘 알고 있는 다른 그리기 모델에 대 한 스피릿와 비슷한 그리기 모델을 사용 하며, 선택적 투명도 채널에서 색을 사용 하 고 선, 원호, 텍스트 및 이미지를 그릴 수 있습니다.
+는 `SKCanvas` 사용자가 익숙한 다른 그리기 모델에 대 한 스피릿와 비슷한 그리기 모델을 사용 하며, 선택적 투명도 채널에서 색을 사용 하 고 선, 원호, 텍스트 및 이미지를 그릴 수 있습니다.
 
-다음은 SkiaSharp를 사용 하 여 수행할 수 있는 몇 가지 다양 한 작업입니다.  아래 예제에서 변수 `canvas`은 (는) 서 형식 Canvas입니다.
+다음은 SkiaSharp를 사용 하 여 수행할 수 있는 몇 가지 다양 한 작업입니다.  아래 예제에서 변수는 `canvas` 가 나 canvas 형식입니다.
 
 ### <a name="drawing-xamagon"></a>Xamagon 그리기
 
@@ -133,6 +133,6 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
-SkiaSharp 사용에 대 한 자세한 내용은 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp) 에서 찾을 수 있습니다.
+SkiaSharp 사용에 대 한 자세한 내용은 [API 설명서](/dotnet/api/skiasharp) 에서 찾을 수 있습니다.

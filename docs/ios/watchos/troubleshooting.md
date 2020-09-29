@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 497096e7f422e8337498339737ab304b0d896dfe
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7e56eed866cb647bd654370d587b02bcaba04d4e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432807"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -36,7 +36,7 @@ ms.locfileid: "86938998"
 <a name="deploy"></a>
 
 - 이전 버전의 Mac용 Visual Studio 잘못 된 **설정** 아이콘 중 하나를 88x88 픽셀로 잘못 표시 합니다. 그러면 앱 스토어에 제출 하려고 할 때 **아이콘 오류가** 표시 되지 않습니다.
-    이 아이콘은 87x87 픽셀 (레 티 나 화면의 경우 29 단위) 이어야 합니다 **@3x** . Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 파일 **에서Contents.js** 을 수동으로 편집 합니다.
+    이 아이콘은 87x87 픽셀 (레 티 나 화면의 경우 29 단위) 이어야 합니다 **@3x** . Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 파일 ** 에서Contents.js** 을 수동으로 편집 합니다.
 
 - Watch 확장 프로젝트의 **info.plist > WKApp 번들** Id가 watch 앱의 **번들 id**와 일치 하도록 [올바르게 설정](~/ios/watchos/get-started/project-references.md) 되지 않은 경우 디버거는 연결에 실패 하 Mac용 Visual Studio 고 *"디버거가 연결 되기를 기다리는 중입니다." 라는*메시지와 함께 대기 합니다.
 
@@ -162,7 +162,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 6. Xcode 동기화가 사용 된 새 클래스 (특성을 통해)를 인식할 수 있도록 **빌드 > 모두 빌드** 를 선택 `Register` 합니다.
 
-7. Watch 앱 스토리 보드 파일을 마우스 오른쪽 단추로 클릭 하 고 **> Xcode Interface Builder를 사용**하 여 열기를 선택 하 여 스토리 보드를 다시 엽니다.
+7. Watch 앱 스토리 보드 파일을 마우스 오른쪽 단추로 클릭 하 고  **> Xcode Interface Builder를 사용**하 여 열기를 선택 하 여 스토리 보드를 다시 엽니다.
 
     ![Interface Builder에서 스토리 보드 열기](troubleshooting-images/add-6.png)
 
@@ -233,7 +233,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 > [!NOTE]
 > 제공 해야 하는 경로는 *iPhone 응용 프로그램 파일*에 대 한 것입니다. 즉, iOS 시뮬레이터에 배포 되 고 조사식 확장과 조사식 앱을 모두 포함 하는 앱입니다.
 
-예:
+예제:
 
 ```bash
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
@@ -259,7 +259,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 필수 사항입니다. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
 
-예:
+예제:
 
 ```bash
  --sdkroot /Applications/Xcode.app/Contents/Developer/
@@ -277,7 +277,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **UDID**
 
-예:
+예제:
 
 ```bash
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
@@ -285,7 +285,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **런타임 및 장치 유형**
 
-예:
+예제:
 
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
@@ -293,5 +293,5 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (샘플)](/samples/xamarin/ios-samples/watchos-watchtables)

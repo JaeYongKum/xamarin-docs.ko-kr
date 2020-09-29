@@ -1,18 +1,18 @@
 ---
 title: tvOS 12 소개
-description: 이 문서에서는 현재 Xamarin preview 릴리스가 바인딩을 제공 C# 하는 tvOS 12의 새롭고 업데이트 된 기능에 대 한 개략적인 개요를 제공 합니다.
+description: '이 문서에서는 현재 Xamarin preview 릴리스가 c # 바인딩을 제공 하는 tvOS 12의 새롭고 업데이트 된 기능에 대 한 개략적인 개요를 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ea9ddcf5f8a2412502c1133fdc9f87474bdd830
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030550"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434752"
 ---
 # <a name="introduction-to-tvos-12"></a>tvOS 12 소개
 
@@ -26,7 +26,7 @@ tvOS 12에는 tvOS 개발자가 포스터 보기, 캡션 단추, 카드 보기 �
 
 ## <a name="password-autofill"></a>암호 자동 채우기
 
-TvOS 12를 사용 하면 사용자는 자신의 iOS 장치를 사용 하 여 한 번의 탭으로 tvOS 앱에 로그인 할 수 있습니다. `UITextContentType` 사용 하 여 사용자 이름 및 암호 필드를 지정 하 고, 연결 된 도메인을 사용 하 여 iOS 앱과 tvOS 앱 간의 관계를 설정 하 고, 사용자가 포커스를 받을 항목을 선택할 수 있는 기본 포커스 환경을 사용 하 여 사용 하도록 설정 됩니다. 사용자 이름 및 암호를 제공 합니다.
+TvOS 12를 사용 하면 사용자는 자신의 iOS 장치를 사용 하 여 한 번의 탭으로 tvOS 앱에 로그인 할 수 있습니다. 이는 사용을 조합 하 여 사용자 `UITextContentType` 이름 및 암호 필드를 지정 하 고, 연결 된 도메인을 사용 하 여 iOS 앱과 tvOS 앱 간의 관계를 설정 하 고, 사용자가 사용자 이름과 암호를 입력 한 후 포커스를 받을 항목을 선택할 수 있는 기본 포커스 환경을 제공 합니다.
 
 ## <a name="focus-engine-enhancements"></a>포커스 엔진 향상
 
@@ -40,13 +40,13 @@ tvOS 12는 모든 앱이 렌더링 되는 방식에 관계 없이 포커스 엔�
 
 자연어 프레임 워크를 사용 하면 응용 프로그램에서 다양 한 유형의 언어 분석을 수행할 수 있습니다. 예를 들어, 음성의 일부를 식별 하 고 텍스트 블록이 나타내는 언어를 결정 하는 데 사용할 수 있습니다.
 
-## <a name="deprecations"></a>결함
+## <a name="deprecations"></a>지원 중단
 
 TvOS 12를 사용 하 여 Apple은 OpenGL ES를 사용 하지 않으므로 개발자가 금속을 채택 하도록 [장려](https://developer.apple.com/tvos/whats-new/) 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS – apple Developer (apple)](https://developer.apple.com/tvos/)
 - [TvOS 12 (Apple)의 새로운 기능 (비디오)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)

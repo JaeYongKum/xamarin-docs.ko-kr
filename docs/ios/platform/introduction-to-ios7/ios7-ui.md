@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: c02b810cc61779f5c3b5ee5eb61169e8c3fceab4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 724d6ab8d39a5c0054302685c5f9f4ba0f3d9908
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931211"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431728"
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -144,7 +144,7 @@ IOS 7 용 응용 프로그램을 준비할 때 *Interface Builder* 또는 *Xamar
 
 #### <a name="toplayoutguide-and-bottomlayoutguide"></a>TopLayoutGuide 및 BottomLayoutGuide
 
- `TopLayoutGuide`및은 `BottomLayoutGuide` `UIKit` 다음 예제와 같이 뷰가 시작 또는 종료 되어야 하는 위치에 대 한 참조로 제공 되므로 콘텐츠가 투명 한 막대로 겹치지 않습니다.
+ `TopLayoutGuide` 및은 `BottomLayoutGuide` `UIKit` 다음 예제와 같이 뷰가 시작 또는 종료 되어야 하는 위치에 대 한 참조로 제공 되므로 콘텐츠가 투명 한 막대로 겹치지 않습니다.
 
  [![반투명 UIKit 막대로 겹쳐진 샘플 콘텐츠](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
@@ -168,12 +168,12 @@ public override void ViewDidLayoutSubviews ()
 
  [![예제 ImageViews 화면 위쪽에서 치환](ios7-ui-images/good2.png)](ios7-ui-images/good2.png#lightbox)
 
-작업 샘플은 [Imageviewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
+작업 샘플은 [Imageviewer](/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
 
 변위 값은 뷰가 계층에 추가 된 후 동적으로 생성 되므로 `TopLayoutGuide` 에서 및 값을 읽으려고 시도 `BottomLayoutGuide` `ViewDidLoad` 하면 0이 반환 됩니다. 뷰가 로드 된 후의 값을 계산 합니다 (예:) `ViewDidLayoutSubviews` .
 
 > [!IMPORTANT]
-> `TopLayoutGuide`및 `BottomLayoutGuide` 은 새로운 안전 영역 레이아웃을 위해 iOS 11에서 더 이상 사용 되지 않습니다. Apple은 safe 영역 사용이 iOS 11 이전의 iOS 버전과 호환 된다는 것을 언급 했습니다. 자세한 내용은 [iOS 11 용 응용 프로그램 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드를 참조 하세요.
+> `TopLayoutGuide` 및 `BottomLayoutGuide` 은 새로운 안전 영역 레이아웃을 위해 iOS 11에서 더 이상 사용 되지 않습니다. Apple은 safe 영역 사용이 iOS 11 이전의 iOS 버전과 호환 된다는 것을 언급 했습니다. 자세한 내용은 [iOS 11 용 응용 프로그램 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드를 참조 하세요.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -203,7 +203,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 및 api의 효과는 유사 하지만 `TopLayoutGuide/BottomLayoutGuide` `EdgesForExtendedLayout` 서로 다른 목표를 채우는 것을 의미 합니다. `EdgesForExtendedLayout`기본값에서 설정을 변경 하면 ios 6 용으로 설계 된 응용 프로그램의 잘린 보기가 수정 될 수 있지만, 좋은 iOS 7 디자인은 전체 화면 미적을 준수 하 고, `TopLayoutGuide` 사용자를 위한 편안 하 게 `BottomLayoutGuide` 조작할 수 있는 콘텐츠를 적절 하 게 배치 하기 위해 및에 의존 하는 전체 화면 보기 환경을 제공 해야 합니다.
 
-작업 샘플은 [Imageviewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
+작업 샘플은 [Imageviewer](/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
 
 ### <a name="status-and-navigation-bars"></a>상태 및 탐색 모음
 
@@ -256,7 +256,7 @@ public override bool PrefersStatusBarHidden ()
 
 ### <a name="dynamic-type"></a>동적 형식
 
-IOS 7에서 사용자는 시스템 설정에서 텍스트 크기를 지정할 수 있습니다. 동적 유형을 사용 하면 글꼴을 동적으로 조정 하 여 크기에 관계 없이 제대로 보이도록 합니다. `UIFont.PreferredFontForTextStyle`사용자가 제어 하는 크기에 맞게 최적화 된 글꼴을 가져오는 데 사용 해야 합니다.
+IOS 7에서 사용자는 시스템 설정에서 텍스트 크기를 지정할 수 있습니다. 동적 유형을 사용 하면 글꼴을 동적으로 조정 하 여 크기에 관계 없이 제대로 보이도록 합니다. `UIFont.PreferredFontForTextStyle` 사용자가 제어 하는 크기에 맞게 최적화 된 글꼴을 가져오는 데 사용 해야 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -264,4 +264,4 @@ IOS 7에서 사용자는 시스템 설정에서 텍스트 크기를 지정할 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [ImageViewer (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)
+- [ImageViewer (샘플)](/samples/xamarin/ios-samples/ios7-ui-updates)

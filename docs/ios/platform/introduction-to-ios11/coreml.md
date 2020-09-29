@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 572ba31a1f19ab099765cc92bb1b389ba1115d1b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 875ae9c4712c974c663854f7790c51111eea4807
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564695"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434506"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Xamarin.ios의 CoreML 소개
 
@@ -27,7 +27,7 @@ CoreML는 iOS에 기계 학습을 제공 합니다. 앱은 학습 된 기계 학
 
 ## <a name="getting-started-with-coreml"></a>CoreML 시작
 
-이러한 단계에서는 CoreML를 iOS 프로젝트에 추가 하는 방법을 설명 합니다. 실제 예는 [Mars Habitat Pricer 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 을 참조 하세요.
+이러한 단계에서는 CoreML를 iOS 프로젝트에 추가 하는 방법을 설명 합니다. 실제 예는 [Mars Habitat Pricer 샘플](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 을 참조 하세요.
 
 ![Mars Habitat 가격 예측 샘플 스크린샷](coreml-images/marspricer-heading.png)
 
@@ -92,7 +92,7 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 CoreML를 비전 프레임 워크와 함께 사용 하 여 이미지에 대 한 작업을 수행할 수도 있습니다 (예: 셰이프 인식, 개체 식별 및 기타 작업).
 
-아래 단계에서는 [Coreml비전 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)에서 coreml 및 비전을 함께 사용 하는 방법을 설명 합니다. 이 샘플에서는 비전 프레임 워크의 [사각형 인식 기능](~/ios/platform/introduction-to-ios11/vision.md#rectangles) 을 _MNINSTClassifier_ coreml 모델과 결합 하 여 사진에서 필기 한 숫자를 식별 합니다.
+아래 단계에서는 [Coreml비전 샘플](/samples/xamarin/ios-samples/ios11-coremlvision)에서 coreml 및 비전을 함께 사용 하는 방법을 설명 합니다. 이 샘플에서는 비전 프레임 워크의 [사각형 인식 기능](~/ios/platform/introduction-to-ios11/vision.md#rectangles) 을 _MNINSTClassifier_ coreml 모델과 결합 하 여 사진에서 필기 한 숫자를 식별 합니다.
 
 ![숫자 3의 이미지 인식](coreml-images/vision3.png) ![숫자 5의 이미지 인식](coreml-images/vision5.png)
 
@@ -171,17 +171,17 @@ void HandleClassification(VNRequest request, NSError error){
 
 다음 세 가지 CoreML 샘플이 있습니다.
 
-- [Mars Habitat Price 예측 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 은 간단한 숫자 입력 및 출력을 포함 합니다.
+- [Mars Habitat Price 예측 샘플](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 은 간단한 숫자 입력 및 출력을 포함 합니다.
 
-- [비전 & coreml 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) 은 이미지 매개 변수를 수락 하 고, 비전 프레임 워크를 사용 하 여 이미지의 사각형 영역을 식별 하며,이는 단일 숫자를 인식 하는 coreml 모델에 전달 됩니다.
+- [비전 & coreml 샘플](/samples/xamarin/ios-samples/ios11-coremlvision) 은 이미지 매개 변수를 수락 하 고, 비전 프레임 워크를 사용 하 여 이미지의 사각형 영역을 식별 하며,이는 단일 숫자를 인식 하는 coreml 모델에 전달 됩니다.
 
-- 마지막으로 [Coreml 이미지 인식 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) 은 coreml를 사용 하 여 사진의 기능을 식별 합니다. 기본적으로 더 작은 5MB ( **SqueezeNet** model)를 사용 하지만, 더 큰 **VGG16** 모델 (553MB)을 다운로드 하 여 통합할 수 있도록 작성 되었습니다. 자세한 내용은 [샘플의 추가](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md)정보를 참조 하세요.
+- 마지막으로 [Coreml 이미지 인식 샘플](/samples/xamarin/ios-samples/ios11-coremlimagerecognition) 은 coreml를 사용 하 여 사진의 기능을 식별 합니다. 기본적으로 더 작은 5MB ( **SqueezeNet** model)를 사용 하지만, 더 큰 **VGG16** 모델 (553MB)을 다운로드 하 여 통합할 수 있도록 작성 되었습니다. 자세한 내용은 [샘플의 추가](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md)정보를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Machine Learning (Apple)](https://developer.apple.com/machine-learning/)
-- [CoreML 예제 (Mars Habitat) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
-- [CoreML 및 비전 (숫자 인식) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-- [CoreML 이미지 인식 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-- [Azure Custom Vision을 사용 하는 CoreML (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [CoreML 예제 (Mars Habitat) (샘플)](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
+- [CoreML 및 비전 (숫자 인식) (샘플)](/samples/xamarin/ios-samples/ios11-coremlvision)
+- [CoreML 이미지 인식 (샘플)](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [Azure Custom Vision을 사용 하는 CoreML (샘플)](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [CoreML (WWDC) 소개 (비디오)](https://developer.apple.com/videos/play/wwdc2017/703/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: cd04450d1429092453e6d8b65278d87b5d52e45e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 65a76c0196b79a17f935f59902c8e6d2f9f25933
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571625"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434914"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Xamarin을 사용 하 여 빌드된 tvOS 10 앱 문제 해결
 
@@ -28,7 +28,7 @@ ms.locfileid: "84571625"
 
 <a name="App-Store"></a>
 
-## <a name="app-store"></a>앱 스토어
+## <a name="app-store"></a>App Store
 
 알려진 문제:
 
@@ -57,13 +57,13 @@ ms.locfileid: "84571625"
 
 ## <a name="cloudkit"></a>CloudKit
 
-장기 실행 작업은 _"파일을 저장할 수 있는 권한이 없습니다."를 반환 합니다._ 오류가 표시됩니다.
+장기 실행 작업은 _"파일을 저장할 수 있는 권한이 없습니다."를 반환 합니다._ error.
 
 <a name="CoreImage"></a>
 
 ## <a name="core-image"></a>핵심 이미지
 
-`CIImageProcessor`이제 API는 임의의 입력 이미지 수를 지원 합니다. `CIImageProcessor`TvOS 10 beta 1에 포함 된 API가 제거 됩니다.
+`CIImageProcessor`이제 API는 임의의 입력 이미지 수를 지원 합니다. `CIImageProcessor` TvOS 10 beta 1에 포함 된 API가 제거 됩니다.
 
 <a name="NSUserActivity"></a>
 
@@ -86,5 +86,5 @@ ms.locfileid: "84571625"
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [TvOS 10의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)
