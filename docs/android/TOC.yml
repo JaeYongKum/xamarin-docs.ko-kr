@@ -397,6 +397,8 @@
           href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: 가속도계
           href: ~/essentials/accelerometer.md?context=xamarin/android
+        - name: 앱 작업
+          href: ~/essentials/app-actions.md?context=xamarin/android
         - name: 앱 정보
           href: ~/essentials/app-information.md?context=xamarin/android
         - name: 앱 테마
@@ -413,6 +415,8 @@
           href: ~/essentials/compass.md?context=xamarin/android
         - name: 연결
           href: ~/essentials/connectivity.md?context=xamarin/android
+        - name: 연락처
+          href: ~/essentials/contacts.md?context=xamarin/android
         - name: 흔들림 탐지
           href: ~/essentials/detect-shake.md?context=xamarin/android
         - name: 디바이스 표시 정보
@@ -421,6 +425,8 @@
           href: ~/essentials/device-information.md?context=xamarin/android
         - name: 전자 메일
           href: ~/essentials/email.md?context=xamarin/android
+        - name: 파일 선택기
+          href: ~/essentials/file-picker.md?context=xamarin/android
         - name: 파일 시스템 도우미
           href: ~/essentials/file-system-helpers.md?context=xamarin/android
         - name: 손전등
@@ -431,6 +437,8 @@
           href: ~/essentials/geolocation.md?context=xamarin/android
         - name: 자이로스코프
           href: ~/essentials/gyroscope.md?context=xamarin/android
+        - name: 햅틱 피드백
+          href: ~/essentials/haptic-feedback.md?context=xamarin/android
         - name: 시작 관리자
           href: ~/essentials/launcher.md?context=xamarin/android
         - name: 지자기 센터
@@ -439,6 +447,8 @@
           href: ~/essentials/main-thread.md?context=xamarin/android
         - name: 지도
           href: ~/essentials/maps.md?context=xamarin/android
+        - name: 미디어 선택기
+          href: ~/essentials/media-picker.md?context=xamarin/android
         - name: 브라우저 열기
           href: ~/essentials/open-browser.md?context=xamarin/android
         - name: 방향 센서
@@ -451,6 +461,8 @@
           href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: 기본 설정
           href: ~/essentials/preferences.md?context=xamarin/android
+        - name: 스크린샷
+          href: ~/essentials/screenshot.md?context=xamarin/android
         - name: 보안 스토리지
           href: ~/essentials/secure-storage.md?context=xamarin/android
         - name: 공유

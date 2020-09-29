@@ -836,6 +836,8 @@ items:
         href: ~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms
       - name: 가속도계
         href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
+      - name: 앱 작업
+        href: ~/essentials/app-actions.md?context=xamarin/xamarin-forms
       - name: 앱 정보
         href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
       - name: 앱 테마
@@ -852,6 +854,8 @@ items:
         href: ~/essentials/compass.md?context=xamarin/xamarin-forms
       - name: 연결
         href: ~/essentials/connectivity.md?context=xamarin/xamarin-forms
+      - name: 연락처
+        href: ~/essentials/contacts.md?context=xamarin/xamarin-forms
       - name: 흔들림 탐지
         href: ~/essentials/detect-shake.md?context=xamarin/xamarin-forms
       - name: 디바이스 표시 정보
@@ -860,6 +864,8 @@ items:
         href: ~/essentials/device-information.md?context=xamarin/xamarin-forms
       - name: 전자 메일
         href: ~/essentials/email.md?context=xamarin/xamarin-forms
+      - name: 파일 선택기
+        href: ~/essentials/file-picker.md?context=xamarin/xamarin-forms
       - name: 파일 시스템 도우미
         href: ~/essentials/file-system-helpers.md?context=xamarin/xamarin-forms
       - name: 손전등
@@ -870,6 +876,8 @@ items:
         href: ~/essentials/geolocation.md?context=xamarin/xamarin-forms
       - name: 자이로스코프
         href: ~/essentials/gyroscope.md?context=xamarin/xamarin-forms
+      - name: 햅틱 피드백
+        href: ~/essentials/haptic-feedback.md?context=xamarin/xamarin-forms
       - name: 시작 관리자
         href: ~/essentials/launcher.md?context=xamarin/xamarin-forms
       - name: 지자기 센터
@@ -878,6 +886,8 @@ items:
         href: ~/essentials/main-thread.md?context=xamarin/xamarin-forms
       - name: 지도
         href: ~/essentials/maps.md?context=xamarin/xamarin-forms
+      - name: 미디어 선택기
+        href: ~/essentials/media-picker.md?context=xamarin/xamarin-forms
       - name: 브라우저 열기
         href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
       - name: 방향 센서
@@ -890,6 +900,8 @@ items:
         href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
       - name: 기본 설정
         href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
+      - name: 스크린샷
+        href: ~/essentials/screenshot.md?context=xamarin/xamarin-forms
       - name: 보안 스토리지
         href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
       - name: 공유
