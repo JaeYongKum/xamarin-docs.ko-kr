@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 05/12/2020
-ms.openlocfilehash: 540fd0180899f8eb7c1b171148be81c5d541613b
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: d305f671ef68e9a1eded61936f3f32cc8769393f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997503"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436290"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.ios의 iOS 확장
 
@@ -27,7 +27,7 @@ IOS 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 한 효과
 
 ## <a name="extension-points"></a>확장 위치
 
-|형식|설명|확장 지점|호스트 앱|
+|유형|설명|확장 지점|호스트 앱|
 |--- |--- |--- |--- |
 |작업|특정 미디어 유형에 대 한 특수 편집기나 뷰어|`com.apple.ui-services`|모두|
 |문서 공급자|앱에서 원격 문서 저장소를 사용할 수 있습니다.|`com.apple.fileprovider-ui`|[Uidocumentpickerviewcontroller](xref:UIKit.UIDocumentPickerViewController) 를 사용 하는 앱|
@@ -472,6 +472,6 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 ## <a name="related-links"></a>관련 링크
 
-- [ContainerApp (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
+- [ContainerApp (샘플)](/samples/xamarin/ios-samples/intro-to-extensions)
 - [Xamarin.ios에서 확장 만들기 (비디오)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
 - [IOS 앱 확장의 효율성 및 성능 최적화](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW7)

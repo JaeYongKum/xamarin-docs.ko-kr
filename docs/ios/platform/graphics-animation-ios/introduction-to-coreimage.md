@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9e0363f941784ecc488861c0d2f089a30c275a10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7cb94956266a3094cc62ccc66c3d44e97884f04d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937399"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435299"
 ---
 # <a name="core-image-in-xamarinios"></a>Xamarin.ios의 핵심 이미지
 
@@ -222,7 +222,7 @@ foreach (var filter in filters){
 
 ## <a name="related-links"></a>관련 링크
 
-- [핵심 이미지 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/coreimage)
+- [핵심 이미지 (샘플)](/samples/xamarin/ios-samples/coreimage)
 - [이미지 조리법의 계약 및 밝기 조정](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [핵심 이미지 필터 사용](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter 클래스 참조](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

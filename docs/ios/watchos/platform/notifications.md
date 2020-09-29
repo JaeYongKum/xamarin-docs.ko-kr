@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0358b2b422e4cc69faa15187ee24d72c7d02ca38
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c8275811cb61aaa1a033ca414e9abd4d20ecc873
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937932"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435421"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>Xamarin에서 watchOS 알림
 
@@ -99,7 +99,7 @@ Mac용 Visual Studio은 조사식 확장이 **시작 프로젝트로**설정 된
 
 [![사용자 지정 속성으로 실행](notifications-images/runwith-customparams-sml.png)](notifications-images/runwith-customparams.png#lightbox)
 
-그러면 **WatchKit** 탭이 포함 된 **실행 인수** 창이 열립니다. **알림** 을 선택 하 고 JSON 페이로드를 제공한 다음 **실행** 을 눌러 시뮬레이터에서 조사식 앱을 시작 합니다.
+그러면 **WatchKit** 탭이 포함 된 **실행 인수** 창이 열립니다. **알림** 을 선택 하 고 JSON 페이로드를 제공한 다음 **실행** 을 눌러 시뮬레이터에서 시청 앱을 시작 합니다.
 
 [![알림 페이로드 기본값 선택](notifications-images/runwith-execargs-sml.png)](notifications-images/runwith-execargs.png#lightbox)
 
@@ -123,7 +123,7 @@ Visual Studio에서 테스트 알림 페이로드를 설정 하려면 조사식 
 
 ### <a name="example-notification-payload"></a>알림 페이로드 예
 
-[Watch Kit 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 예제 페이로드 JSON 파일 (아래에 나열 됨)이 **NotificationPayload.js** 있습니다.
+[Watch Kit 카탈로그](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 예제 페이로드 JSON 파일 (아래에 나열 됨)이 **NotificationPayload.js** 있습니다.
 
 ```json
 {
@@ -146,5 +146,5 @@ Visual Studio에서 테스트 알림 페이로드를 설정 하려면 조사식 
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple의 감시 키트 알림 문서](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

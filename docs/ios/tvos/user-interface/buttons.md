@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 0de41379800d3f8fcb26e2bc58497010b8e3bf95
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 07d48a38751680f5e7227682d0639b77b3a3627b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931380"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436154"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin에서 tvOS 단추 사용
 
@@ -130,7 +130,7 @@ namespace tvRemote
 
 ## <a name="buttons-and-code"></a>단추 및 코드
 
-필요에 따라 `UIButton` c # 코드에서를 만들어 tvOS 앱의 뷰에 추가할 수 있습니다. 예를 들면 다음과 같습니다.
+필요에 따라 `UIButton` c # 코드에서를 만들어 tvOS 앱의 뷰에 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -158,7 +158,7 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-그런 다음 단추의 제목을 설정 합니다. `UIButtons`는 `UIKit` 상태를 포함 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 된에 대해 변경 해야 합니다 `UIControlState` . 예를 들면 다음과 같습니다.
+그런 다음 단추의 제목을 설정 합니다. `UIButtons` 는 `UIKit` 상태를 포함 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 된에 대해 변경 해야 합니다 `UIControlState` . 다음은 그 예입니다.
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -192,19 +192,19 @@ tvOS는 `UIButton` 제목을 제공 하는 데 사용할 수 있는의 여러 �
 
 ### <a name="button-titles"></a>단추 제목
 
-위에서 언급 한 것 처럼 `UIButtons` 은 `UIKit` 상태를 포함 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수는 없습니다. 지정 된에 대해 변경 해야 합니다 `UIControlState` . 예를 들면 다음과 같습니다.
+위에서 언급 한 것 처럼 `UIButtons` 은 `UIKit` 상태를 포함 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수는 없습니다. 지정 된에 대해 변경 해야 합니다 `UIControlState` . 다음은 그 예입니다.
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다 `SetTitleColor` . 예를 들면 다음과 같습니다.
+메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다 `SetTitleColor` . 다음은 그 예입니다.
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-를 사용 하 여 제목의 그림자를 조정할 수도 있습니다 `SetTitleShadowColor` . 예를 들면 다음과 같습니다.
+를 사용 하 여 제목의 그림자를 조정할 수도 있습니다 `SetTitleShadowColor` . 다음은 그 예입니다.
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -216,7 +216,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-또한 특성 사용 텍스트를 단추의 제목으로 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+또한 특성 사용 텍스트를 단추의 제목으로 사용할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -254,7 +254,7 @@ button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

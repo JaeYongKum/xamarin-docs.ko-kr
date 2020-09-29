@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 51b28ec05af91dea21b1291956de30c549b1868e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6803ecf2303ff2c91265f3ac8352a7aa15e74d40
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571677"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436211"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Xamarin.ios의 ARKit 소개
 
@@ -113,6 +113,6 @@ ARKit는 surface 추적 및 사용자 상호 작용과 같은 다양 한 고급 
 
 - [확대 현실 (Apple)](https://developer.apple.com/arkit/)
 - [UrhoSharp에서 ARKit 사용](urhosharp.md)
-- [Jet (Simple ARKit) 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-- [개체를 배치 하는 ARKit (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [Jet (Simple ARKit) 샘플](/samples/xamarin/ios-samples/ios11-arkitsample)
+- [개체를 배치 하는 ARKit (샘플)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [IOS에 대 한 ARKit-확대 현실 소개 (WWDC) (비디오)](https://developer.apple.com/videos/play/wwdc2017/602/)

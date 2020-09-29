@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b36ae9f9fe04ea060ef0238d5af25fb771cafe85
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e8f8c2196edd5450ca2949d59c2fc06ff62274b7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932342"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435374"
 ---
 # <a name="text-input-in-xamarinios"></a>Xamarin.ios의 텍스트 입력
 
@@ -38,7 +38,7 @@ ms.locfileid: "86932342"
 
 - **Placeholder** – 선택 사항입니다. 설정 하는 경우 텍스트 필드가 비어 있을 때 표시 되며, 일반적으로 사용자에 게 예상 되는 입력을 설명 합니다.
 - **지우기 단추** – 사용자가 텍스트를 신속 하 게 지울 수 있는 방법으로 표준 지우기 단추 (X)가 있는 회색 원 (X)이 텍스트 필드에 표시 되는 경우이를 제어 합니다. 필드를 편집 하 고 있는지 여부에 따라 영구적으로 숨겨지거나 영구적으로 표시 하거나 표시할 수 있습니다.
-- **최소 글꼴 크기** 및 **맞춤으로 조정** – 글꼴 크기를 자동으로 조정 하 여 긴 텍스트에 맞추고 잘림 방지 하 고 지정 된 크기 보다 작게 제한할 수 있습니다.
+- **최소 글꼴 크기** 및  **맞춤으로 조정** – 글꼴 크기를 자동으로 조정 하 여 긴 텍스트에 맞추고 잘림 방지 하 고 지정 된 크기 보다 작게 제한할 수 있습니다.
 - **대문자화** – 단어, 문장 또는 모든 입력을 자동으로 대문자로 표시할지 여부입니다.
 - **수정** – 맞춤법 검사 및 제안을 사용 하는지 여부를 나타냅니다.
 - **키보드** -입력에 대해 표시 되는 키보드 스타일을 제어 하므로 키보드에서 사용할 수 있는 키가 있습니다. 여기에는 숫자 패드, 휴대폰 패드, 전자 메일, URL 및 기타 옵션이 포함 됩니다.
@@ -91,4 +91,4 @@ textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorTyp
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)

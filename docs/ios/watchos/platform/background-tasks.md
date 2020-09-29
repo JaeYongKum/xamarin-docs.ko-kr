@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: 84953ce2ec09cc757b5719991e499dc24b708cae
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 98f7f7b23fc437dee28f6797c3401bae472fa672
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996112"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433360"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Xamarin에서 백그라운드 작업 watchOS
 
@@ -54,7 +54,7 @@ WatchOS 3에 포함 된 새 Api를 사용 하 여 앱은 _백그라운드 새로
 
 Apple은 앱이 자신을 업데이트 하는 프로세스를 완료할 때까지이 작업을 보류 하 여 앱에 대 한 제한 된 리소스 이므로이 작업을 최대한 활용 하는 것이 좋습니다.
 
-시스템은 대리자의 새 메서드를 호출 하 여 이러한 작업을 제공 합니다 `HandleBackgroundTasks` `WKExtensionDelegate` . 예를 들어:
+시스템은 대리자의 새 메서드를 호출 하 여 이러한 작업을 제공 합니다 `HandleBackgroundTasks` `WKExtensionDelegate` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -646,7 +646,7 @@ Apple에서는 백그라운드 작업을 수행할 때 다음과 같은 모범 �
 - 시스템이 백그라운드 새로 고침 작업을 보내고 앱에 업데이트가 필요 하지 않은 경우 업데이트가 실제로 필요할 때까지 작업을 연기 합니다.
 - 앱에서 사용할 수 있는 모든 런타임 기회를 고려 합니다.
   - 도킹 및 포그라운드 활성화.
-  - 알림을.
+  - 알림.
   - 복잡 한 업데이트.
   - 백그라운드 새로 고침
 - `ScheduleBackgroundRefresh`다음과 같은 범용 백그라운드 런타임에 사용 합니다.
@@ -699,4 +699,4 @@ Apple의 제안 사항은 다음과 같습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6d87f99ae504346d55c4ddf86a093799ba9ddbd5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78a4f3ae90b1b20e9fe3cd4164726fee34f38eb7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936723"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435503"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Xamarin.ios에서 사용할 때 제품이 아닌 제품 구매
 
@@ -20,7 +20,7 @@ ms.locfileid: "86936723"
 
 ## <a name="non-consumable-products-sample"></a>사용할 없는 제품 샘플
 
-[InAppPurchaseSample 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) 에는 *비 소비*라는 프로젝트가 포함 되어 있습니다. 코드 샘플에서는 사진 필터를 사용 하 여 사용할 수 없는 제품을 구현 하는 방법을 보여 줍니다. 필터를 구매한 후에는 사진에 다시 적용할 수 있습니다. 다시 구매할 필요가 없습니다.   
+[InAppPurchaseSample 코드](/samples/xamarin/ios-samples/storekit) 에는 *비 소비*라는 프로젝트가 포함 되어 있습니다. 코드 샘플에서는 사진 필터를 사용 하 여 사용할 수 없는 제품을 구현 하는 방법을 보여 줍니다. 필터를 구매한 후에는 사진에 다시 적용할 수 있습니다. 다시 구매할 필요가 없습니다.   
 
 구매 프로세스는이 일련의 스크린샷에 표시 됩니다. **구입** 단추는 기능 활성화 단추가 됩니다.   
 
@@ -48,4 +48,4 @@ ms.locfileid: "86936723"
 
 - 사용자가 제품에 대 한 요금이 다시 청구 되지 않습니다.
 - `SKPaymentTransaction`응용 프로그램에 전달 되는 개체에는 `OriginalTransaction` 제품을 처음 구입할 때 생성 된 트랜잭션을 참조 하는 속성이 있습니다. 
-- 지원 되지 않는 제품을 판매 하는 응용 프로그램은 사용자가 기존 구매를 검색할 수 있도록 지 수 키트의 **복원** 기능을 구현 해야 합니다. 
+- 지원 되지 않는 제품을 판매 하는 응용 프로그램은 사용자가 기존 구매를 검색할 수 있도록 지 수 키트의  **복원** 기능을 구현 해야 합니다.

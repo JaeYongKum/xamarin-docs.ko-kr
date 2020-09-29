@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2e8dde87456c6e33eda6846967ceea13eb412b93
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bd048239c404c0eb3309fdc74b26bcb94db4740
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934305"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434126"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Xamarin.ios의 탭 모음 및 탭 모음 컨트롤러
 
-탭 응용 프로그램은 iOS에서 여러 화면에 특정 순서로 액세스할 수 있는 사용자 인터페이스를 지 원하는 데 사용 됩니다. `UITabBarController`응용 프로그램은 클래스를 통해 이러한 다중 화면 시나리오에 대 한 지원을 쉽게 포함할 수 있습니다. `UITabBarController`응용 프로그램 개발자가 각 화면에 대 한 세부 정보에 집중할 수 있도록 하는 다중 화면 관리를 처리 합니다.
+탭 응용 프로그램은 iOS에서 여러 화면에 특정 순서로 액세스할 수 있는 사용자 인터페이스를 지 원하는 데 사용 됩니다. `UITabBarController`응용 프로그램은 클래스를 통해 이러한 다중 화면 시나리오에 대 한 지원을 쉽게 포함할 수 있습니다. `UITabBarController` 응용 프로그램 개발자가 각 화면에 대 한 세부 정보에 집중할 수 있도록 하는 다중 화면 관리를 처리 합니다.
 
 일반적으로 탭 응용 프로그램은 `UITabBarController` 주 창의로 빌드됩니다 `RootViewController` . 그러나 약간의 추가 코드를 사용 하면 응용 프로그램에서 먼저 로그인 화면을 표시 한 다음 탭 인터페이스를 사용 하는 시나리오와 같은 다른 초기 화면에도 탭 응용 프로그램을 연속 해 서 사용할 수 있습니다.
 
@@ -63,9 +63,9 @@ Mac용 Visual Studio에서 **파일 > 새 > 솔루션** 메뉴 항목을 선택 
 
 을 구현 하려면 `UITabBarController` 다음을 수행 해야 합니다.
 
-1. 의 기본 클래스 `TabController` 를로 설정 `UITabBarController` 합니다.
-1. 에 `UIViewController` 추가할 인스턴스를 만듭니다 `TabController` .
-1. 인스턴스를 `UIViewController` 의 속성에 할당 된 배열에 추가 `ViewControllers` `TabController` 합니다.
+1. 의 기본 클래스  `TabController` 를로 설정  `UITabBarController` 합니다.
+1. 에  `UIViewController` 추가할 인스턴스를 만듭니다  `TabController` .
+1. 인스턴스를  `UIViewController` 의 속성에 할당 된 배열에 추가  `ViewControllers`  `TabController` 합니다.
 
 클래스에 다음 코드를 추가 `TabController` 하 여 이러한 단계를 수행 합니다.
 
@@ -221,7 +221,7 @@ tab3.TabBarItem.BadgeValue = null;
 
 [![프로젝트에 Mainstoryboard.storyboard 파일 추가](creating-tabbed-applications-images/new-file-dialog.png)](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
-스토리 보드 [소개](~/ios/user-interface/storyboards/index.md) 가이드에 설명 되어 있는 이전 비 storyboard 파일에 스토리 보드를 추가할 때 유의 해야 하는 몇 가지 중요 한 단계가 있습니다. 이러한 항목은 다음과 같습니다.
+스토리 보드 [소개](~/ios/user-interface/storyboards/index.md) 가이드에 설명 되어 있는 이전 비 storyboard 파일에 스토리 보드를 추가할 때 유의 해야 하는 몇 가지 중요 한 단계가 있습니다. 해당 경고는 다음과 같습니다.
 
 1. 스토리 보드 이름을의 **주 인터페이스** 섹션에 추가 합니다 `Info.plist` .
 
@@ -332,6 +332,6 @@ public override void ViewDidLoad ()
 
 ## <a name="related-links"></a>관련 링크
 
-- [탭 응용 프로그램 만들기 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/creatingtabbedapplications)
+- [탭 응용 프로그램 만들기 (샘플)](/samples/xamarin/ios-samples/creatingtabbedapplications)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [UITabBarController 클래스 참조](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 90d3a3b6a1e3a3c20ba8cf2ed1f12f234e3af33b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c50d02b4fc806a9ce466da450cfeb6afaa68df93
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031479"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433700"
 ---
 # <a name="sirikit-in-xamarinios"></a>Xamarin.ios의 SiriKit
 
@@ -31,17 +31,17 @@ Siri는 **도메인**개념과 관련 태스크에 대 한 알고 있는 작업 
 
 사용자가 앱 확장의 서비스 중 하나를 포함 하는 Siri를 요청 하면 SiriKit에서 해당 확장을 지원 데이터와 함께 사용자 요청을 설명 하는 **의도** 개체에 보냅니다. 그러면 앱 확장이 지정 된 **의도**에 대 한 적절 한 **응답** 개체를 생성 하 여 확장에서 요청을 처리할 수 있는 방법을 자세히 설명 합니다.
 
-## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[SiriKit 개념 이해하기](~/ios/platform/sirikit/understanding-sirikit.md)
+## <a name="understanding-sirikit-concepts"></a>[SiriKit 개념 이해하기](~/ios/platform/sirikit/understanding-sirikit.md)
 
 이 문서에서는 Xamarin.ios 앱에서 SiriKit를 사용 하는 데 필요한 핵심 개념을 설명 합니다. 새 의도 및 의도 UI 확장 지점과 앱 및 사용자 어휘를 사용 하 여 앱을 Siri로 여는 방법에 대해 설명 합니다.
 
-## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[SiriKit 구현](~/ios/platform/sirikit/implementing-sirikit.md)
+## <a name="implementing-sirikit"></a>[SiriKit 구현](~/ios/platform/sirikit/implementing-sirikit.md)
 
 이 문서에서는 Xamarin.ios 앱에서 SiriKit 지원을 구현 하는 데 필요한 단계를 설명 합니다. 개발자는 성공적인 구현에 필요한 주요 개념에 대해 설명 하는 대로 앱에 SiriKit 지원을 추가 하기 전에 위의 SiriKit 개념 이해 가이드를 읽어야 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ElizaChat 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [ElizaChat 샘플](/samples/xamarin/ios-samples/ios10-elizachat)
 - [SiriKit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [의도 프레임 워크 참조](https://developer.apple.com/reference/intents)
 - [의도 UI 프레임 워크 참조](https://developer.apple.com/reference/intentsui)

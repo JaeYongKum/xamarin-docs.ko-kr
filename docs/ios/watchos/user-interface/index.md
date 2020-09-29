@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2016
-ms.openlocfilehash: c878416e98b8c530bbf90a621cfcc0d128aa55c7
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 3d47b8d524d8f798ab9c0a654fde8246b9fbcc36
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997061"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437154"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Xamarin의 watchOS 사용자 인터페이스 컨트롤
 
@@ -24,7 +24,7 @@ ms.locfileid: "86997061"
 
 |제어|설명|스크린샷|
 |---|---|---|
-|레이블|`SetText`및 기타 속성을 사용 하 여 레이블 컨트롤의 텍스트 모양을 제어 합니다. `NSAttributedString`도 지원 됩니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![레이블 스크린 샷](Images/label.png)|
+|레이블|`SetText`및 기타 속성을 사용 하 여 레이블 컨트롤의 텍스트 모양을 제어 합니다. `NSAttributedString` 도 지원 됩니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![레이블 스크린 샷](Images/label.png)|
 |단추|스토리 보드에서 속성을 만들고 설정 합니다. 를 클릭 하 여를 `Action` 클릭 하면 처리기를 구현할를 추가 하려면 Ctrl + 끌어서를 추가 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs)|![Button 스크린 샷](Images/button.png)|
 |스위치|`SetOn`스위치 상태를 제어 하는 데 사용 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SwitchDetailController.cs)|![스크린샷 전환](Images/switch.png)|
 |슬라이더|여러 가지 스타일을 사용할 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SliderDetailController.cs)|![슬라이더 스크린샷](Images/slider.png)|
@@ -32,9 +32,9 @@ ms.locfileid: "86997061"
 |구분 기호|구분 기호를 사용 하 여 멋진 조사식 Ui를 만들 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![구분 기호 스크린샷](Images/separator.png)|
 |맵|지도 이미지가 조사식에 정적으로 표시 되지만 핀 추가를 포함 하 여 모양의 여러 측면을 제어할 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![지도 스크린샷](Images/map.png)|
 |영화 & InlineMove|동영상은 자체적으로 또는 인라인으로 열 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![동영상 스크린샷](Images/movie.png)|
-|그룹화|그룹을 사용 하 여 멋진 조사식 Ui를 만들 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![그룹 스크린샷](Images/group.png)|
-|테이블|IOS에 있는 테이블의 간소화 된 버전입니다. `DidSelectRow`사용자 선택에 응답 하거나 segue를 사용 하 여를 구현 합니다.<br />[테이블 컨트롤 설명서](~/ios/watchos/user-interface/table.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![테이블 스크린샷](Images/table.png)|
-|디바이스|`WKInterfaceDevice.CurrentDevice`, 및와 같은 속성 `ScreenBounds` 을 포함 `ScreenScale` `PreferredContentSizeCategory` 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![장치 스크린샷](Images/device.png)|
+|그룹|그룹을 사용 하 여 멋진 조사식 Ui를 만들 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![그룹 스크린샷](Images/group.png)|
+|표|IOS에 있는 테이블의 간소화 된 버전입니다. `DidSelectRow`사용자 선택에 응답 하거나 segue를 사용 하 여를 구현 합니다.<br />[테이블 컨트롤 설명서](~/ios/watchos/user-interface/table.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![테이블 스크린샷](Images/table.png)|
+|디바이스|`WKInterfaceDevice.CurrentDevice` , 및와 같은 속성 `ScreenBounds` 을 포함 `ScreenScale` `PreferredContentSizeCategory` 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![장치 스크린샷](Images/device.png)|
 |[메뉴](~/ios/watchos/user-interface/menu.md)|스토리 보드에서 강제 누르기 메뉴를 정의 하 고 코드의 각 단추에 대 한 동작을 구현 합니다.<br />[메뉴 컨트롤 (Force Touch) 설명서](~/ios/watchos/user-interface/menu.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![메뉴 스크린샷](Images/controller.png)|
 |텍스트 입력|`PresentTextInputController`및 열거형을 사용 `WKTextInputMode` 합니다.<br />[텍스트 입력 설명서](~/ios/watchos/user-interface/text-input.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![텍스트 입력 스크린 샷](Images/textinput.png)|
 |Digital Crown|Digital Crown를 사용 하 여 선택기를 구동 하거나 코드에서 회전을 추적할 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![Digital ccs (crown 스크린 샷](Images/digital-crown.png)|
@@ -42,5 +42,5 @@ ms.locfileid: "86997061"
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [감시 키트 API 참조](xref:WatchKit)

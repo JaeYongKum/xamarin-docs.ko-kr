@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: cfb694faff68e0762b93dd3bdf7c2e073108e77b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ed31e0262fecccf8974961d45d02388aeb8e85ea
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935164"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434421"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.ios에서 SiriKit 구현
 
@@ -43,7 +43,7 @@ MonkeyChat는 각각 화면 이름 (예: Bobo)과 연결 된 사용자의 친구
 
 [![SiriKit 다이어그램으로 앱 확장](implementing-sirikit-images/elements01.png)](implementing-sirikit-images/elements01.png#lightbox)
 
-여기에는 다음이 포함됩니다.
+내용은 다음과 같습니다.
 
 1. 인 텐트 **확장** -사용자 응답을 확인 하 고, 앱에서 요청을 처리할 수 있는지 확인 하 고 실제로 사용자의 요청을 처리 하는 작업을 수행 합니다.
 2. 인 텐트 **UI 확장**  -  *선택 사항*으로 Siri 환경의 응답에 사용자 지정 ui를 제공 하 고, 앱 UI 및 브랜딩을 siri로 가져와서 사용자 환경을 보강 할 수 있습니다.
@@ -298,7 +298,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 ### <a name="localization-and-siri"></a>지역화 및 Siri
 
-IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 클래스의 메서드를 사용 하 여 `SiriLanguageCode` `INPreferences` siri에서 언어 코드를 가져와야 합니다. 예를 들면 다음과 같습니다.
+IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 클래스의 메서드를 사용 하 여 `SiriLanguageCode` `INPreferences` siri에서 언어 코드를 가져와야 합니다. 다음은 그 예입니다.
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -322,7 +322,7 @@ if (language == "en-US") {
 
 사용자 지정 어휘로 등록 하는 용어를 선택 하는 경우 앱에 익숙하지 않은 사람이 잘못 해석 될 수 있는 용어를 선택 합니다. "내 체력" 또는 "내 앨범"과 같은 일반적인 용어를 등록 하지 마십시오. 예를 들어 MonkeyChat 앱은 사용자 주소록의 각 연락처와 연결 된 애칭을 등록 합니다.
 
-앱은 `SetVocabularyStrings` 클래스의 메서드를 호출 `INVocabulary` 하 고 `NSOrderedSet` 주 앱에서 컬렉션을 전달 하 여 사용자별 어휘를 제공 합니다. `RemoveAllVocabularyStrings`새 용어를 추가 하기 전에 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예를 들면 다음과 같습니다.
+앱은 `SetVocabularyStrings` 클래스의 메서드를 호출 `INVocabulary` 하 고 `NSOrderedSet` 주 앱에서 컬렉션을 전달 하 여 사용자별 어휘를 제공 합니다. `RemoveAllVocabularyStrings`새 용어를 추가 하기 전에 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -686,7 +686,7 @@ namespace MonkeyChat
 
 ### <a name="configuring-the-main-class"></a>주 클래스 구성
 
-다음으로 개발자는 내재 된 확장의 기본 진입점 역할을 하는 주 클래스를 Siri로 구성 해야 합니다. 이는 대리자를 준수 하는의 서브 클래스 여야 합니다 `INExtension` `IINIntentHandler` . 예를 들면 다음과 같습니다.
+다음으로 개발자는 내재 된 확장의 기본 진입점 역할을 하는 주 클래스를 Siri로 구성 해야 합니다. 이는 대리자를 준수 하는의 서브 클래스 여야 합니다 `INExtension` `IINIntentHandler` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -930,7 +930,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 ### <a name="configuring-the-main-class"></a>주 클래스 구성
 
-내재 된 UI 확장의 기본 진입점 역할을 하는 주 클래스를 Siri에 구성 합니다. 인터페이스를 준수 하는의 서브 클래스 여야 합니다 `UIViewController` `IINUIHostedViewController` . 예를 들면 다음과 같습니다.
+내재 된 UI 확장의 기본 진입점 역할을 하는 주 클래스를 Siri에 구성 합니다. 인터페이스를 준수 하는의 서브 클래스 여야 합니다 `UIViewController` `IINUIHostedViewController` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -1062,7 +1062,7 @@ Apple은 의도 UI 확장을 디자인 하 고 구현할 때 개발자가 다음
 
 ## <a name="related-links"></a>관련 링크
 
-- [ElizaChat 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [ElizaChat 샘플](/samples/xamarin/ios-samples/ios10-elizachat)
 - [SiriKit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [의도 프레임 워크 참조](https://developer.apple.com/reference/intents)
 - [의도 UI 프레임 워크 참조](https://developer.apple.com/reference/intentsui)

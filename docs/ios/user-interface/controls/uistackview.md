@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: f38aee099cd2551ab2bdbaa94a8a3f9c0e1cf869
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a926ae3aa91b7c1dbe13ba78c28f4df63228e151
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939557"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436492"
 ---
 # <a name="stack-views-in-xamarinios"></a>Xamarin.ios의 스택 뷰
 
@@ -50,7 +50,7 @@ Xamarin.ios 앱에서를 사용 하는 경우 `UIStackView` 개발자는 IOS 디
 
 [![스택 뷰 옵션 설정](uistackview-images/quick02.png)](uistackview-images/quick02.png#lightbox)
 
-여기서
+위치:
 
 - **축** – 스택 뷰에서 하위 뷰를 **가로** 또는 **세로로**정렬 하는지 결정 합니다.
 - **Alignment** – 스택 뷰 내에서 하위 뷰를 정렬 하는 방법을 제어 합니다.
@@ -62,7 +62,7 @@ Xamarin.ios 앱에서를 사용 하는 경우 `UIStackView` 개발자는 IOS 디
 스택 뷰를 사용 하는 경우에는 **맞춤** 을 하위 뷰의 **X** 및 **Y** 위치로 생각 하 고 **높이** 와 **너비**를 **배분** 합니다.
 
 > [!IMPORTANT]
-> `UIStackView`는 비 렌더링 컨테이너 뷰로 설계 되었으므로의 다른 서브 클래스와 같이 캔버스로 그려지지 않습니다 `UIView` . 따라서 또는를 재정의 하는 등의 속성 `BackgroundColor` `DrawRect` 을 설정 하면 시각적 효과가 없습니다.
+> `UIStackView` 는 비 렌더링 컨테이너 뷰로 설계 되었으므로의 다른 서브 클래스와 같이 캔버스로 그려지지 않습니다 `UIView` . 따라서 또는를 재정의 하는 등의 속성 `BackgroundColor` `DrawRect` 을 설정 하면 시각적 효과가 없습니다.
 
 레이블, ImageView, 두 단추 및 가로 스택 뷰를 추가 하 여 다음과 같이 응용 프로그램의 인터페이스를 계속 레이아웃 합니다.
 
@@ -273,7 +273,7 @@ UIView.Animate(0.25, ()=>{
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0의 새로운 기능](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [UIStackView 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)

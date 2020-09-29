@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 0de7fcd5af9e0338679893b3d7fde073c5274365
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 30709b9b75c18f954135e950b95094f9ee2d71ac
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567726"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435265"
 ---
 # <a name="threading-in-xamarinios"></a>Xamarin.ios의 스레딩
 
 Xamarin.ios 런타임에서는 개발자에 게 스레드를 사용 하는 경우 명시적으로 ( `System.Threading.Thread, System.Threading.ThreadPool` ) 및 비동기 대리자 패턴이 나 BeginXXX 메서드를 사용 하는 경우 암시적으로 또는 작업 병렬 라이브러리를 지 원하는 api의 전체 범위를 사용 하 여 .net 스레딩 api에 대 한 액세스를 제공 합니다.
 
-Xamarin은 몇 가지 이유로 응용 프로그램을 빌드하기 위해 TPL ( [작업 병렬 라이브러리](https://msdn.microsoft.com/library/dd460717.aspx) )을 사용 하는 것이 좋습니다.
+Xamarin은 몇 가지 이유로 응용 프로그램을 빌드하기 위해 TPL ( [작업 병렬 라이브러리](/dotnet/standard/parallel-programming/task-parallel-library-tpl) )을 사용 하는 것이 좋습니다.
 
 - 기본 TPL 스케줄러는 스레드 풀에 작업 실행을 위임 합니다. 그러면 프로세스가 수행 될 때까지 필요한 스레드 수가 동적으로 증가 하 고 CPU 시간에 대해 경쟁 하는 스레드가 너무 많이 발생 하는 시나리오는 피할 수 있습니다. 
 - TPL 작업 측면에서 작업에 대해 생각 하는 것이 더 쉽습니다. 쉽게 조작 하 고, 일정을 예약 하 고, 실행을 직렬화 하거나, 다양 한 Api를 사용 하 여 여러 가지를 병렬로 실행할 수 있습니다. 

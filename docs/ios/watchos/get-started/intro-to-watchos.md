@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 1b71ff60ea0e23ce9d631286aec624a84f163ce5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9cbf6e58586a223de51f1294aa1b4235b3b631f8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937508"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436282"
 ---
 # <a name="introduction-to-watchos"></a>watchOS 소개
 
@@ -69,7 +69,7 @@ WatchOS 2 이상에서 감시 연결 프레임 워크는 클래스를 사용 하
 ### <a name="normal-interaction"></a>정상적인 상호 작용
 
 대부분의 감시 앱/확장 상호 작용은 `WKInterfaceController` 시청 앱의 **인터페이스. storyboard**에서 장면에 해당 하는 사용자가 작성 하는의 하위 클래스를 사용 합니다. 이 내용은 [설치](~/ios/watchos/get-started/installation.md) 및 [시작](~/ios/watchos/get-started/index.md) 문서에 자세히 설명 되어 있습니다.
-다음 이미지는 [감시 키트 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플의 스토리 보드 중 일부를 보여줍니다. 여기에 표시 된 각 장면에는 `WKInterfaceController` `LabelDetailController` `ButtonDetailController` 확장 프로젝트에 해당 하는 사용자 지정 (,, 등)이 있습니다 `SwitchDetailController` .
+다음 이미지는 [감시 키트 카탈로그](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플의 스토리 보드 중 일부를 보여줍니다. 여기에 표시 된 각 장면에는 `WKInterfaceController` `LabelDetailController` `ButtonDetailController` 확장 프로젝트에 해당 하는 사용자 지정 (,, 등)이 있습니다 `SwitchDetailController` .
 
 ![일반적인 상호 작용 예제](intro-to-watchos-images/scenes.png)
 
@@ -130,8 +130,8 @@ Apple에서 설명서를 확인 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 3 카탈로그 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [watchOS 1 카탈로그 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 3 카탈로그 (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 카탈로그 (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
 - [첫 번째 시청 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple의 감시 키트 개발 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

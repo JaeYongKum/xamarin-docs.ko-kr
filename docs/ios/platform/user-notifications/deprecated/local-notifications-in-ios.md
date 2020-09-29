@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 04631993d47a1d51858ab24948ab61170d37bb6e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f99776a0e6a84c193362d0e5a4efb68e70717ad0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939887"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436116"
 ---
 # <a name="notifications-in-xamarinios"></a>Xamarin.iOS의 알림
 
@@ -32,7 +32,7 @@ iOS는 로컬 및 원격 모든 알림을 사용자에 게 표시 하는 *알림
 ## <a name="creating-local-notifications-in-ios"></a>IOS에서 로컬 알림 만들기
 
 iOS를 사용 하면 매우 간단 하 게 로컬 알림을 만들고 처리할 수 있습니다.
-먼저 iOS 8에서는 응용 프로그램이 사용자에 게 알림을 표시 하는 권한을 요청 해야 합니다. 로컬 알림을 보내기 전에 응용 프로그램에 다음 코드를 추가 합니다. [연결 된 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) 은이를 **AppDelegate**의 **시작 된 edstarted** 메서드에 배치 합니다.
+먼저 iOS 8에서는 응용 프로그램이 사용자에 게 알림을 표시 하는 권한을 요청 해야 합니다. 로컬 알림을 보내기 전에 응용 프로그램에 다음 코드를 추가 합니다. [연결 된 샘플](/samples/xamarin/ios-samples/localnotifications) 은이를 **AppDelegate**의 **시작 된 edstarted** 메서드에 배치 합니다.
 
 ```csharp
 var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
@@ -135,8 +135,8 @@ if(remoteNotification != null)
 
 ## <a name="related-links"></a>관련 링크
 
-- [로컬 알림 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [로컬 알림 (샘플)](/samples/xamarin/ios-samples/localnotifications)
 - [개발자를 위한 로컬 및 푸시 알림](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [이상](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [이상](/dotnet/api/uikit.UILocalNotification)

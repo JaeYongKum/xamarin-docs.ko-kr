@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 6ade57c60332f736e04b991bf83a7b12afa4cf54
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0e05c243d2cebe641f77ada013b04198ee754acc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939466"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433203"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Xamarin.ios의 앱 검색 향상 기능
 
@@ -64,7 +64,7 @@ IOS 10 Apple은 사용자가 스포트라이트 나 Safari에서 검색을 시�
 
 -----
 
-사용자에 게 응답 하 여 검색 결과를 계속 하려면 ( `NSUserActivity` ) 파일을 편집 `AppDelegate.cs` 하 고 `ContinueUserActivity` 메서드를 재정의 합니다. 예를 들어:
+사용자에 게 응답 하 여 검색 결과를 계속 하려면 ( `NSUserActivity` ) 파일을 편집 `AppDelegate.cs` 하 고 `ContinueUserActivity` 메서드를 재정의 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -118,4 +118,4 @@ Xamarin.ios 앱에서 검색을 사용 하는 방법에 대 한 자세한 내용
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

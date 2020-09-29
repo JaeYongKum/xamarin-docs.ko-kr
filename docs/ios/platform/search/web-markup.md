@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: cd9e5e3fc604fc6e6993b10424a209aa6c382a10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b578d1d171c6b8e91e76758f4c979fbc8a1b6eaa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935059"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437001"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.ios에서 웹 태그를 사용 하 여 검색
 
@@ -63,7 +63,7 @@ IOS 9를 처음 접하는 경우에는 다음을 제공 하 여 범용 링크를
 
 ## <a name="using-twitter-cards"></a>Twitter 카드 사용
 
-Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들어:
+Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 다음은 그 예입니다.
 
 ```html
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -75,7 +75,7 @@ Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공�
 
 ## <a name="using-facebook-app-links"></a>Facebook 앱 링크 사용
 
-Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들어:
+Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 다음은 그 예입니다.
 
 ```html
 <meta property="al:ios:app_name" content="AppName">
@@ -87,7 +87,7 @@ Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제
 
 ## <a name="opening-deep-links"></a>딥 링크 열기
 
-Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `OpenURL` 하 여 사용자 지정 URL 형식을 처리 합니다. 예를 들어:
+Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `OpenURL` 하 여 사용자 지정 URL 형식을 처리 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -121,7 +121,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다양 한 결과를 활용 하 여 더 많은 사용자가 상호 작용 하도록 enticing 하 여 클라우드 기반 검색 인덱스에서 순위를 향상할 수 있습니다.
 
-구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 예를 들어:
+구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 다음은 그 예입니다.
 
 ```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -131,7 +131,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 자세한 내용은 Graph 웹 사이트 [열기](https://ogp.me) 를 참조 하세요.
 
-구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 예를 들어:
+구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 다음은 그 예입니다.
 
 ```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -205,7 +205,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [앱 검색 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

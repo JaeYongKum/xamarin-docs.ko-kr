@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7f1ae2ecfa7d6dbed56b8009593fc172615fd051
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c5120fead9084b50912fb4ea1e8cfa100f4b3bbe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928798"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436326"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Xamarin.ios의 개요 보기
 
@@ -97,7 +97,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 - **마지막으로 표시 되는 줄을 자릅니다** .-인 경우 `true` 데이터에서 잘린 셀은 해당 범위 내에 맞지 않을 수 있습니다.
 
 > [!IMPORTANT]
-> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 기반 `NSView` 개요 보기를 기반으로 하는 테이블 뷰를 사용 해야 합니다 `NSCell` . `NSCell`는 레거시로 간주 되며 향후 지원 되지 않을 수 있습니다.
+> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 기반 `NSView` 개요 보기를 기반으로 하는 테이블 뷰를 사용 해야 합니다 `NSCell` . `NSCell` 는 레거시로 간주 되며 향후 지원 되지 않을 수 있습니다.
 
 **인터페이스 계층 구조** 에서 테이블 열을 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
@@ -602,7 +602,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 ## <a name="using-images-in-outline-views"></a>개요 뷰에서 이미지 사용
 
-에서 셀의 일부로 이미지를 포함 하려면 `NSOutlineView` 개요 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 `NSTableViewDelegate's` `GetView` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들면 다음과 같습니다.
+에서 셀의 일부로 이미지를 포함 하려면 `NSOutlineView` 개요 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 `NSTableViewDelegate's` `GetView` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -686,8 +686,8 @@ KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacOutlines (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
-- [MacImages(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacOutlines (샘플)](/samples/xamarin/mac-samples/macoutlines)
+- [MacImages(샘플)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [원본 목록](~/mac/user-interface/source-list.md)

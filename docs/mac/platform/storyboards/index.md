@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b911be4b1bf547a9a1ad5d6b795894ddba3c26d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 24a1e1af5b56a3cd10557658a0cad0c4e73ebac8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939063"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433366"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -102,7 +102,7 @@ Presentation Segue를 사용 하는 경우 `PrepareForSegue` 프레젠테이션 
 
 ## <a name="complex-storyboard-example"></a>복잡 한 Storyboard 예
 
-Xamarin.ios 앱에서 Storyboard를 사용 하는 복잡 한 예제에 대 한 예제는 [Sourcewriter 샘플 앱](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
+Xamarin.ios 앱에서 Storyboard를 사용 하는 복잡 한 예제에 대 한 예제는 [Sourcewriter 샘플 앱](/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
 
 SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 지침 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 
@@ -114,7 +114,7 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, Mac(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac(샘플)](/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows 작업](~/mac/user-interface/window.md)
 - [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

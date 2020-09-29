@@ -1,5 +1,5 @@
 ---
-title: IOS 확장에서 Xamarin.ios 페이지 다시 사용
+title: iOS 확장에서 Xamarin.Forms 페이지 재사용
 description: 이 문서에서는 iOS 확장에 대해 설명 하 고이 확장에서 Xamarin.ios 페이지를 사용 하는 방법을 설명 합니다. 확장을 만들고, Xamarin.ios를 통합 하 고, 간단한 ContentPage를 iOS 확장 프로젝트에 기본적으로 렌더링 하는 방법에 대 한 연습이 포함 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 50076FFD-3EF6-41CC-BC7E-210DE3958F5B
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 05/13/2020
-ms.openlocfilehash: 4006bb3ef82264b5a7a6d764719bee81a8ce78a1
-ms.sourcegitcommit: 5bc37b384706bfbf5bf8e5b1288a34ddd0f3303b
+ms.openlocfilehash: b9bbbc784fa9932d087e1f1c2a575eb7848d5a80
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83418075"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437115"
 ---
-# <a name="reuse-xamarinforms-pages-in-an-ios-extension"></a>IOS 확장에서 Xamarin.ios 페이지 다시 사용
+# <a name="reuse-xamarinforms-pages-in-an-ios-extension"></a>iOS 확장에서 Xamarin.Forms 페이지 재사용
 
-iOS 확장을 사용 하면 [ios 및 macOS 확장 지점이](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2)나 사용자 지정 컨텍스트 작업, 암호 자동 채우기, 들어오는 통화 필터, 알림 콘텐츠 한정자 등의 추가 기능을 추가 하 여 기존 시스템 동작을 사용자 지정할 수 있습니다. Xamarin.ios는 확장을 지원 하 고 [이 가이드](https://docs.microsoft.com/xamarin/ios/platform/extensions) 에서는 xamarin 도구를 사용 하 여 iOS 확장을 만드는 과정을 안내 합니다.
+iOS 확장을 사용 하면 [ios 및 macOS 확장 지점이](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2)나 사용자 지정 컨텍스트 작업, 암호 자동 채우기, 들어오는 통화 필터, 알림 콘텐츠 한정자 등의 추가 기능을 추가 하 여 기존 시스템 동작을 사용자 지정할 수 있습니다. Xamarin.ios는 확장을 지원 하 고 [이 가이드](./extensions.md) 에서는 xamarin 도구를 사용 하 여 iOS 확장을 만드는 과정을 안내 합니다.
 
 확장은 컨테이너 앱의 일부로 배포 되 고 호스트 앱의 특정 확장 지점에서 활성화 됩니다. 컨테이너 앱은 일반적으로 사용자에 게 확장에 대 한 정보를 제공 하 고, 활성화 하 고 사용 하는 방법을 제공 하는 간단한 iOS 응용 프로그램입니다. 확장 및 컨테이너 앱 간에 코드를 공유 하는 세 가지 주요 방법이 있습니다.
 
@@ -37,7 +37,7 @@ iOS 확장을 사용 하면 [ios 및 macOS 확장 지점이](https://developer.a
 네이티브 프로젝트에서 Xamarin.ios를 사용 하는 기능은 [네이티브 폼](~/xamarin-forms/platform/native-forms.md)을 통해 제공 됩니다. `ContentPage`파생 된 페이지를 네이티브 xamarin.ios 프로젝트에 직접 추가할 수 있습니다. `CreateViewController`확장 메서드는 xamarin.ios 페이지의 인스턴스를 `UIViewController` 일반 컨트롤러로 사용 하거나 수정할 수 있는 네이티브로 변환 합니다. IOS 확장은 특수 한 종류의 네이티브 iOS 프로젝트 이므로 여기에서 **네이티브 폼** 을 사용할 수도 있습니다.
 
 > [!IMPORTANT]
-> IOS 확장에 대 한 [알려진 제한 사항은](https://docs.microsoft.com/xamarin/ios/platform/extensions#limitations) 많이 있습니다. IOS 확장에서 Xamarin.ios를 사용할 수 있지만 메모리 사용 및 시작 시간을 매우 신중 하 게 모니터링 해야 합니다. 그렇지 않으면이를 정상적으로 처리할 수 없는 방식으로 확장을 iOS에서 종료할 수 있습니다.
+> IOS 확장에 대 한 [알려진 제한 사항은](./extensions.md#limitations) 많이 있습니다. IOS 확장에서 Xamarin.ios를 사용할 수 있지만 메모리 사용 및 시작 시간을 매우 신중 하 게 모니터링 해야 합니다. 그렇지 않으면이를 정상적으로 처리할 수 없는 방식으로 확장을 iOS에서 종료할 수 있습니다.
 
 ## <a name="walkthrough"></a>연습
 
@@ -139,7 +139,7 @@ iOS 확장을 사용 하면 [ios 및 macOS 확장 지점이](https://developer.a
 
     - IOS 확장을 마우스 오른쪽 단추로 클릭 하 > 참조를 선택 하 고, **양식 shareextension > 참조 > 프로젝트를 추가** 하 고 **확인**을 누릅니다.
 
-    - IOS 확장을 마우스 오른쪽 단추로 클릭 하 고 **패키지 > NuGet 패키지 관리 ...** 를 선택 하 > xamarin.ios를 선택 하 고 **패키지 추가**를 누릅니다.
+    - IOS 확장을 마우스 오른쪽 단추로 클릭 하 고 **패키지 > NuGet 패키지 관리 ...**  를 선택 하 > xamarin.ios를 선택 하 고 **패키지 추가**를 누릅니다.
 
 1. 확장 프로젝트를 확장 하 고 진입점을 수정 하 여 Xamarin.ios를 초기화 하 고 페이지를 만듭니다. IOS 요구 사항에 따라 확장은 **info.plist** 에서 또는로 진입점을 정의 해야 합니다 `NSExtensionMainStoryboard` . `NSExtensionPrincipalClass` 진입점이 활성화 되 면이 경우에는 `ActionViewController.ViewDidLoad` xamarin.ios 페이지의 인스턴스를 만들고 사용자에 게 표시할 수 있습니다. 따라서 진입점을 열고 `ViewDidLoad` 메서드를 다음 구현으로 바꿉니다.
 
@@ -165,7 +165,7 @@ iOS 확장을 사용 하면 [ios 및 macOS 확장 지점이](https://developer.a
 
     는 `MainPage` 표준 생성자를 사용 하 여 인스턴스화되고 확장에서 사용 하기 전에 확장 메서드를 사용 하 여 네이티브로 변환 합니다 `UIViewController` `CreateViewController` . 
     
-    응용 프로그램을 빌드하고 실행 합니다.
+    다음과 같이 애플리케이션을 빌드하고 실행합니다.
 
     ![확장 만들기](extensions-xf-images/3.walkthrough-runapp.png)
 

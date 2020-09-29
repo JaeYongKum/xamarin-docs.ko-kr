@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: e61aaa6a2071797f905bf7398576f2045a46faea
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a001cabae5e137cda4b31e15d3e75401575b96a7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030694"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435037"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Xamarin의 tvOS 소개
 
@@ -50,31 +50,31 @@ TvOS에 대 한 자세한 내용은 [시작](~/ios/tvos/get-started/index.md) �
 
 Xamarin을 사용 하 여 빌드된 샘플 tvOS 앱:
 
-- [Hello, tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-hello-tvos) –이 샘플은 tvOS에서 간단한 "Hello World" 앱을 구현 하 고 tvOS 사용에 대 한 기본 사항을 제공 합니다.
-- [Tvalerts](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvalerts) –이 샘플에서는 tvOS 앱에서 경고로 작업 하는 방법을 보여 줍니다.
-- [Tvbuttons](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvbuttons) –이 샘플은 단추를 사용 하 여 작업 하는 방법을 보여 줍니다. tvOS 앱입니다.
-- [Tvremote](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvremote) –이 샘플에서는 tvOS 앱이 Siri 원격과 상호 작용 하 여 사용자 인터페이스를 탐색할 수 있는 여러 가지 방법을 제공 합니다.
-- [Tvcollection](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvcollection) –이 샘플에서는 tvOS 앱에서 컬렉션 뷰 컨트롤러를 사용 하는 방법을 보여 줍니다.
-- [tvNavBars](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvnavbars) –이 샘플에서는 tvOS 앱에서 탐색 모음을 사용 하는 방법을 보여 줍니다.
-- [Tvpages](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvpages) –이 샘플에서는 tvOS 앱에서 페이지 컨트롤을 사용 하는 방법을 보여 줍니다.
-- [Tvprogress](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvprogress) –이 샘플에서는 tvOS 앱에서 진행률 표시기를 사용 하는 방법을 보여 줍니다.
-- [Tvsplit](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvsplit) –이 샘플에서는 tvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 방법을 보여 줍니다.
-- [tvStackView](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvstackview) -이 샘플에서는 tvOS 앱에서 스택 뷰를 사용 하는 방법을 보여 줍니다.
-- [UICatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog) – TvOS의 uikit 프레임 워크에서 다양 한 뷰 및 컨트롤을 사용 하는 방법을 보여 줍니다. 시스템에서 제공 하는 특정 컨트롤이 나 뷰를 찾으려는 경우이 샘플을 참조 하세요.
+- [Hello, tvOS](/samples/xamarin/ios-samples/tvos-hello-tvos) –이 샘플은 tvOS에서 간단한 "Hello World" 앱을 구현 하 고 tvOS 사용에 대 한 기본 사항을 제공 합니다.
+- [Tvalerts](/samples/xamarin/ios-samples/tvos-tvalerts) –이 샘플에서는 tvOS 앱에서 경고로 작업 하는 방법을 보여 줍니다.
+- [Tvbuttons](/samples/xamarin/ios-samples/tvos-tvbuttons) –이 샘플은 단추를 사용 하 여 작업 하는 방법을 보여 줍니다. tvOS 앱입니다.
+- [Tvremote](/samples/xamarin/ios-samples/tvos-tvremote) –이 샘플에서는 tvOS 앱이 Siri 원격과 상호 작용 하 여 사용자 인터페이스를 탐색할 수 있는 여러 가지 방법을 제공 합니다.
+- [Tvcollection](/samples/xamarin/ios-samples/tvos-tvcollection) –이 샘플에서는 tvOS 앱에서 컬렉션 뷰 컨트롤러를 사용 하는 방법을 보여 줍니다.
+- [tvNavBars](/samples/xamarin/ios-samples/tvos-tvnavbars) –이 샘플에서는 tvOS 앱에서 탐색 모음을 사용 하는 방법을 보여 줍니다.
+- [Tvpages](/samples/xamarin/ios-samples/tvos-tvpages) –이 샘플에서는 tvOS 앱에서 페이지 컨트롤을 사용 하는 방법을 보여 줍니다.
+- [Tvprogress](/samples/xamarin/ios-samples/tvos-tvprogress) –이 샘플에서는 tvOS 앱에서 진행률 표시기를 사용 하는 방법을 보여 줍니다.
+- [Tvsplit](/samples/xamarin/ios-samples/tvos-tvsplit) –이 샘플에서는 tvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 방법을 보여 줍니다.
+- [tvStackView](/samples/xamarin/ios-samples/tvos-tvstackview) -이 샘플에서는 tvOS 앱에서 스택 뷰를 사용 하는 방법을 보여 줍니다.
+- [UICatalog](/samples/xamarin/ios-samples/tvos-uicatalog) – TvOS의 uikit 프레임 워크에서 다양 한 뷰 및 컨트롤을 사용 하는 방법을 보여 줍니다. 시스템에서 제공 하는 특정 컨트롤이 나 뷰를 찾으려는 경우이 샘플을 참조 하세요.
 
-또한 Apple은 tvOS apps에 대 한 Xamarin의 지원으로 작업 C# 하기 위해로 트랜스 코딩 될 수 있는 다음과 같은 샘플 앱을 제공 합니다.
+또한 Apple은 c #으로 트랜스 코딩 될 수 있는 다음과 같은 샘플 앱을 제공 하 여 Xamarin의 tvOS apps 지원 기능을 사용할 수 있습니다.
 
 - [DemoBots: SpriteKit 및 GameplayKit를 사용 하 여 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>알려진 문제 및 문제 해결
 
-Xamarin을 사용 하 여 tvOS를 빌드하는 데 문제가 발생 하면 [릴리스 정보](https://docs.microsoft.com/xamarin/ios/release-notes/), [Xamarin.ios 포럼](https://forums.xamarin.com/categories/ios), [xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS)및 [GitHub](https://github.com/xamarin/xamarin-macios/issues) 에서 기존 문제를 확인 하세요.
+Xamarin을 사용 하 여 tvOS를 빌드하는 데 문제가 발생 하면 [릴리스 정보](/xamarin/ios/release-notes/), [Xamarin.ios 포럼](https://forums.xamarin.com/categories/ios), [xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS)및 [GitHub](https://github.com/xamarin/xamarin-macios/issues) 에서 기존 문제를 확인 하세요.
 
 [GitHub에서](https://github.com/xamarin/xamarin-macios/issues)새로운 문제 및 제안 사항을 보고 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

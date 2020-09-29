@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 0c733789883c9752d63824d0bca7356a88d05659
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d5bdfd78658803dcbb159101050aea48008b69e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929664"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435232"
 ---
 # <a name="healthkit-in-xamarinios"></a>Xamarin.ios의 HealthKit
 
@@ -139,15 +139,15 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 상태 키트 데이터는 Apple 지정 형식으로 제한 됩니다. 이러한 형식은 엄격 하 게 정의 되어 있습니다. 예를 들어 블러드 형식과 같은 일부는 Apple에서 제공 하는 열거형의 특정 값으로 제한 되 고 다른 값은 크기를 측정 단위 (예: 그램, calories, 리터)와 결합 합니다. 호환 되는 측정 단위를 공유 하는 데이터도에 의해 구분 됩니다 `HKObjectType` . 예를 들어 형식 시스템은 `HKQuantityTypeIdentifier.NumberOfTimesFallen` `HKQuantityTypeIdentifier.FlightsClimbed` 두 가지 모두 `HKUnit.Count` 측정 단위를 사용 하는 경우에도가 필요한 필드에 값을 저장 하려는 잘못 된 시도를 catch 합니다.
 
-상태 키트 데이터 저장소의 저장할 형식은의 모든 서브 클래스입니다 `HKObjectType` . `HKCharacteristicType`개체는 생물학적 성, 혈압 유형 및 생년월일을 저장 합니다. 보다 일반적으로는 `HKSampleType` 특정 시간 또는 일정 기간 동안 샘플링 되는 데이터를 나타내는 개체입니다. 
+상태 키트 데이터 저장소의 저장할 형식은의 모든 서브 클래스입니다 `HKObjectType` . `HKCharacteristicType` 개체는 생물학적 성, 혈압 유형 및 생년월일을 저장 합니다. 보다 일반적으로는 `HKSampleType` 특정 시간 또는 일정 기간 동안 샘플링 되는 데이터를 나타내는 개체입니다. 
 
 [![HKSampleType 개체 차트](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
-`HKSampleType`는 추상적 이며 4 개의 구체적 하위 클래스를 포함 합니다. 현재 `HKCategoryType` 절전 모드 분석 인 데이터 유형은 하나 뿐입니다. 상태 키트의 대부분의 데이터는 형식이 `HKQuantityType` 며 `HKQuantitySample` , 친숙 한 팩터리 디자인 패턴을 사용 하 여 만든 개체에 데이터를 저장 합니다.
+`HKSampleType` 는 추상적 이며 4 개의 구체적 하위 클래스를 포함 합니다. 현재 `HKCategoryType` 절전 모드 분석 인 데이터 유형은 하나 뿐입니다. 상태 키트의 대부분의 데이터는 형식이 `HKQuantityType` 며 `HKQuantitySample` , 친숙 한 팩터리 디자인 패턴을 사용 하 여 만든 개체에 데이터를 저장 합니다.
 
 [![상태 키트에 있는 대부분의 데이터는 HKQuantityType 형식이 며 데이터를 HKQuantitySample 개체에 저장 합니다.](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType`형식은에서 사이 `HKQuantityTypeIdentifier.ActiveEnergyBurned` `HKQuantityTypeIdentifier.StepCount` 입니다. 
+`HKQuantityType` 형식은에서 사이 `HKQuantityTypeIdentifier.ActiveEnergyBurned` `HKQuantityTypeIdentifier.StepCount` 입니다. 
 
 <a name="requesting-permission"></a>
 
@@ -331,19 +331,19 @@ namespace HKWork
 
 그런 다음은 `HeartRateModel` 3 개의 이벤트를 노출 합니다. 
 
-- `EnabledChanged`-하트 비트 저장소를 사용 하거나 사용 하지 않도록 설정 했음을 나타냅니다 (저장소는 처음에 사용 하지 않도록 설정 됨). 
-- `ErrorMessageChanged`-이 샘플 앱의 경우 매우 간단한 오류 처리 모델 (마지막 오류가 있는 문자열)이 있습니다. 
-- `HeartRateStored`-하트 비율이 상태 키트 데이터베이스에 저장 될 때 발생 합니다.
+- `EnabledChanged` -하트 비트 저장소를 사용 하거나 사용 하지 않도록 설정 했음을 나타냅니다 (저장소는 처음에 사용 하지 않도록 설정 됨). 
+- `ErrorMessageChanged` -이 샘플 앱의 경우 매우 간단한 오류 처리 모델 (마지막 오류가 있는 문자열)이 있습니다. 
+- `HeartRateStored` -하트 비율이 상태 키트 데이터베이스에 저장 될 때 발생 합니다.
 
 이러한 이벤트가 발생 될 때마다 `NSObject.InvokeOnMainThread()` 구독자가 UI를 업데이트할 수 있도록 하는를 통해 수행 됩니다. 또는 이벤트를 백그라운드 스레드에서 발생 하는 것으로 문서화 하 고, 호환성을 유지 하는 책임은 해당 처리기로 유지할 수 있습니다. 스레드 고려 사항은 권한 요청 등의 많은 함수가 비동기 이며 주가 아닌 스레드에서 콜백을 실행 하기 때문에 상태 키트 응용 프로그램에서 중요 합니다.
 
 에서 Heath Kit 관련 코드는 `HeartRateModel` 두 개의 함수 및에 `HeartRateInBeatsPerMinute()` `StoreHeartRate()` 있습니다. 
 
-`HeartRateInBeatsPerMinute()`해당 인수를 강력한 형식의 상태 키트로 변환 `HKQuantity` 합니다. Quantity의 형식은에 의해 지정 되 `HKQuantityTypeIdentifierKey.HeartRate` 고 수량 단위는 `HKUnit.Count` 로 구분 됩니다 `HKUnit.Minute` . 즉, 단위는 *분당 비트*단위입니다. 
+`HeartRateInBeatsPerMinute()` 해당 인수를 강력한 형식의 상태 키트로 변환 `HKQuantity` 합니다. Quantity의 형식은에 의해 지정 되 `HKQuantityTypeIdentifierKey.HeartRate` 고 수량 단위는 `HKUnit.Count` 로 구분 됩니다 `HKUnit.Minute` . 즉, 단위는 *분당 비트*단위입니다. 
 
 함수는를 `StoreHeartRate()` 사용 `HKQuantity` 합니다 (샘플 앱에서는에 의해 만들어짐 `HeartRateInBeatsPerMinute()` ). 해당 데이터의 유효성을 검사 하기 위해 `HKQuantity.IsCompatible()` 메서드를 사용 합니다 .이 메서드는 `true` 개체의 단위를 인수의 단위로 변환할 수 있는지 여부를 반환 합니다. 이를 사용 하 여 수량이 생성 된 경우 `HeartRateInBeatsPerMinute()` 반환 되는 것은 물론, `true` `true` 수량이 생성 된 경우 (예를 들어 *시간당 비트*수)도 반환 됩니다. 보다 일반적으로를 `HKQuantity.IsCompatible()` 사용 하 여 사용자 또는 장치가 하나의 측정 시스템 (예: 왕정 단위)에서 입력 하거나 표시할 수 있지만 다른 시스템 (예: 메트릭 단위)에 저장 될 수 있는 대용량, 거리 및 에너지를 확인할 수 있습니다. 
 
-Quantity의 호환성을 확인 한 후에는 `HKQuantitySample.FromType()` 팩터리 메서드를 사용 하 여 강력한 형식의 개체를 만듭니다 `heartRateSample` . `HKSample`개체에는 시작 날짜와 종료 날짜가 있습니다. 즉각적인 판독값의 경우 이러한 값은 예제와 같이 동일 해야 합니다. 이 샘플은 또한 인수에 키-값 데이터를 설정 하지 `HKMetadata` 않지만 다음 코드와 같은 코드를 사용 하 여 센서 위치를 지정할 수 있습니다.
+Quantity의 호환성을 확인 한 후에는 `HKQuantitySample.FromType()` 팩터리 메서드를 사용 하 여 강력한 형식의 개체를 만듭니다 `heartRateSample` . `HKSample` 개체에는 시작 날짜와 종료 날짜가 있습니다. 즉각적인 판독값의 경우 이러한 값은 예제와 같이 동일 해야 합니다. 이 샘플은 또한 인수에 키-값 데이터를 설정 하지 `HKMetadata` 않지만 다음 코드와 같은 코드를 사용 하 여 센서 위치를 지정할 수 있습니다.
 
 ```csharp
 var hkm = new HKMetadata();
@@ -436,5 +436,5 @@ IOS 시뮬레이터는 상태 키트를 지원 하지 않습니다. 디버그는
 
 ## <a name="related-links"></a>관련 링크
 
-- [HKWork (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-introtohealthkit)
+- [HKWork (샘플)](/samples/xamarin/ios-samples/ios8-introtohealthkit)
 - [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)

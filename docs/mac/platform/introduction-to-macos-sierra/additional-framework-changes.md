@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 03840e127ba53ee63623252585e51e51e6890eb5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9bee1cb5108053dac74fcde4f4f5171c24c7ce1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571599"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437217"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
@@ -39,11 +39,11 @@ MacOS Sierra AppKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 - 지연 된 뷰 레이아웃 패스가 최적화 되 고 확장 되었습니다.
 - 이제 끌어서 놓기 API에는 `NSFilePromiseProvider` `NSFilePromiseReceiver` 끌기 flocking 지원 하기 위한 새로운 및 클래스가 포함 되어 있습니다.
 - 기존 컨트롤에 몇 가지 편리한 생성자를 추가 했습니다.
-  - `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-  - `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
-  - `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-  - `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-  - `NSImageView`지정 된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 `NSImage` 합니다.
+  - `NSButton` 에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSTextField` 줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
+  - `NSSegmentedControl` 에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSSlider` 에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSImageView` 지정 된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 `NSImage` 합니다.
 - 동적으로 `NSGridView` 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 그리드에 하위 뷰의 컬렉션을 자동으로 레이아웃 하기 위해 새가 추가 되었습니다.
 
 <a name="AVFoundation-Framework-Enhancements"></a>
@@ -103,7 +103,7 @@ MacOS Sierra에 대 한 GameKit 프레임 워크에 대 한 다음과 같은 기
 
 - **Game Center 앱** 은 macos에서 더 이상 사용 되지 않고 제거 되었습니다. 앱에서 GameKit를 사용 하는 경우 순위표 등과 같은 GameKit 기능을 표시 하는 고유한 인터페이스를 제공 _해야 합니다_ .
 - 새 iCloud 전용 계정 유형은 [Gkcloudplayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) 클래스에 의해 구현 되었습니다.
-- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
+- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession` 플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
 
 <a name="GamePlayKit-Framework-Enhancements"></a>
 
@@ -201,5 +201,5 @@ MacOS Sierra에 다음 프레임 워크가 추가 되었습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mac 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Mac 샘플](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [OS X 10.12의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: fd1bf68e45fa163588d91640147d9e9dbf8ff237
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2adc161742e7891fcce65cf2025a1b7c531c7a39
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939492"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435242"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Xamarin에서 tvOS Collection 뷰 작업
 
@@ -56,10 +56,10 @@ TvOS에서 컬렉션 뷰를 사용 하는 경우 응용 프로그램은 데이�
 
 컬렉션 뷰는 많은 항목 컬렉션을 처리 하도록 디자인 되었으므로 개별 셀을 큐에서 제거 하 고 다시 사용 하 여 overrunning 메모리 제한을 유지할 수 있습니다. 큐를 제거 하는 두 가지 방법이 있습니다.
 
-- `DequeueReusableCell`-지정 된 형식의 셀을 만들거나 반환 합니다 (앱의 스토리 보드에 지정 된 대로).
-- `DequeueReusableSupplementaryView`-지정 된 형식의 보충 뷰 (앱의 스토리 보드에 지정 된)를 만들거나 반환 합니다.
+- `DequeueReusableCell` -지정 된 형식의 셀을 만들거나 반환 합니다 (앱의 스토리 보드에 지정 된 대로).
+- `DequeueReusableSupplementaryView` -지정 된 형식의 보충 뷰 (앱의 스토리 보드에 지정 된)를 만들거나 반환 합니다.
 
-이러한 메서드 중 하나를 호출 하기 전에 `.xib` 컬렉션 뷰를 사용 하 여 셀의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예를 들어:
+이러한 메서드 중 하나를 호출 하기 전에 `.xib` 컬렉션 뷰를 사용 하 여 셀의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -101,7 +101,7 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
 
     [![샘플 레이아웃](collection-views-images/collection02.png)](collection-views-images/collection02.png#lightbox)
-1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예를 들어: 
+1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 다음은 그 예입니다. 
 
     [![이름 설정](collection-views-images/collection03.png)](collection-views-images/collection03.png#lightbox)
 1. 다음으로, 컬렉션 뷰 컨트롤러를 Storyboard로 끌어 옵니다. 
@@ -139,7 +139,7 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
 
     [![레이아웃 구성](collection-views-images/collection02vs.png)](collection-views-images/collection02vs.png#lightbox)
-1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예를 들어: 
+1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 다음은 그 예입니다. 
 
     [![속성 탐색기](collection-views-images/collection03vs.png)](collection-views-images/collection03vs.png#lightbox)
 1. 다음으로, 컬렉션 뷰 컨트롤러를 Storyboard로 끌어 옵니다. 
@@ -825,7 +825,7 @@ public override void ViewWillAppear (bool animated)
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2018
-ms.openlocfilehash: d5a4a78341f66ec754d9161e201023c0ebb478d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: edbdf656774026eab66ada748bedb61cead3a31a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939193"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435330"
 ---
 # <a name="passkit-in-xamarinios"></a>Xamarin.ios의 PassKit
 
@@ -56,7 +56,7 @@ PassKit는 CocoaTouch 내에서 API가 아니라 바코드 및 기타 데이터�
 - **전자/** 반자 – Apple의 기본 제공 iOS 앱은 패스를 저장 하 고 표시 합니다. 이 유일한 장소는 실제 환경에서 사용할 수 있도록 렌더링 됩니다 (ie는 해당 패스의 모든 지역화 된 데이터와 함께 바코드를 표시 합니다).
 - **동반 앱** – 저장소 카드에 값을 추가 하 여 탑재 된 패스 또는 다른 비즈니스 관련 함수에서 사용자를 변경 하는 것과 같이 통과 하는 패스의 기능을 확장 하기 위해 pass 공급자가 작성 한 iOS 6 앱입니다. 도우미 앱은 전달에 유용 하 게 사용할 필요가 없습니다.
 - **서버** – 통과를 생성 하 고 배포용으로 서명할 수 있는 보안 서버입니다. 도우미 앱은 새 패스를 생성 하거나 기존 패스에 대 한 업데이트를 요청 하기 위해 서버에 연결할 수 있습니다. 필요에 따라 작은 사용자가 업데이트 통과를 위해 호출 하는 웹 서비스 API를 구현할 수 있습니다.
-- **Apns 서버** – 서버에는 apns를 사용 하 여 지정 된 장치에 대 한 업데이트를 전자 지갑에 알릴 수 있는 기능이 있습니다. 변경 내용에 대 한 세부 정보를 확인 하려면 전자 메일에 전자 메일을 보낼 수 있습니다. 도우미 앱은이 기능에 대해 APNS를 구현할 필요가 없습니다 (를 수신할 수 있음 `PKPassLibraryDidChangeNotification` ).
+- **Apns 서버** – 서버에는 apns를 사용 하 여 지정 된 장치에 대 한 업데이트를 전자 지갑에 알릴 수 있는 기능이 있습니다. 변경 내용에 대 한 세부 정보를 확인 하려면 전자 메일에 전자 메일을 보낼 수 있습니다. 도우미 앱은이 기능에 대해 APNS를 구현할 필요가 없습니다 (를 수신할 수 있음  `PKPassLibraryDidChangeNotification` ).
 - **응용 프로그램** (예: 좋아요 앱)을 직접 조작 하지 않는 응용 프로그램은 패스를 인식 하 고 작은 사람에 게 추가할 수 있도록 허용 하 여 유틸리티를 개선할 수 있는 응용 프로그램입니다. 메일 클라이언트, 소셜 네트워크 브라우저 및 기타 데이터 집계 앱은 모두 첨부 파일이 나 패스에 대 한 링크를 만날 수 있습니다.
 
 전체 에코 시스템은 복잡 하므로 일부 구성 요소는 선택 사항이 며 훨씬 더 간단한 PassKit 구현도 가능 합니다.
@@ -65,7 +65,7 @@ PassKit는 CocoaTouch 내에서 API가 아니라 바코드 및 기타 데이터�
 
 Pass는 티켓, 쿠폰 또는 카드를 나타내는 데이터의 컬렉션입니다. 개인의 단일 사용을 위한 것일 수 있습니다. 따라서 항공편 번호 및 사용자 할당과 같은 세부 정보를 포함 하거나 할인 쿠폰과 같은 여러 사용자가 공유할 수 있는 여러 사용 토큰이 있을 수 있습니다. 자세한 설명은 Apple의 [파일 전달 정보](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Bundle/Chapters/Introduction.html) 문서에 나와 있습니다.
 
-### <a name="types"></a>형식
+### <a name="types"></a>유형
 
 현재 5 개의 지원 되는 형식으로,이는 패스의 레이아웃 및 위쪽 가장자리를 통해 전자 지갑 앱에서 구분할 수 있습니다.
 
@@ -101,7 +101,7 @@ JSON은 일반적으로 패스가 서버에서 만들어지기 때문에 형식�
 
 - **Teamidentifier** – 앱 스토어 계정에 생성 하는 모든 패스를 연결 합니다. 이 값은 iOS 프로 비전 포털에 표시 됩니다.
 - **passTypeIdentifier** – 프로 비전 포털에 등록 하 여 두 개 이상의 유형을 생성 하는 경우 함께 전달 합니다. 예를 들어 커피숍은 고객이 충성도 크레딧을 획득 하 고 할인 쿠폰을 만들고 배포 하기 위한 별도의 쿠폰 전달 유형을 얻을 수 있도록 매장 카드 패스 유형을 만들 수 있습니다. 동일한 커피숍에서 라이브 음악 이벤트를 보유 하 고 해당 이벤트에 대 한 이벤트 티켓이 전달 될 수도 있습니다.
-- **일련** 의 고유 문자열 `passTypeidentifier` 입니다. 값은 작은 값으로 불투명 하지만 서버와 통신할 때 특정 패스를 추적 하는 데 중요 합니다.
+- **일련** 의 고유 문자열  `passTypeidentifier` 입니다. 값은 작은 값으로 불투명 하지만 서버와 통신할 때 특정 패스를 추적 하는 데 중요 합니다.
 
 각 패스에는 다음과 같은 여러 가지 다른 JSON 키가 있습니다.
 
@@ -198,9 +198,9 @@ ISO-8859-1 인코딩은 가장 일반적 이며, 패스를 읽을 검색 시스�
 
 패스는 iOS 프로 비전 포털에서 생성 하는 개인 인증서를 사용 하 여 서명 됩니다. 패스에 서명 하는 단계는 다음과 같습니다.
 
-1. Pass 디렉터리의 각 파일에 대 한 SHA1 해시를 계산 `manifest.json` 합니다. 또는 파일은 포함 하지 마세요 `signature` .이 단계에서는 존재 하지 않습니다.
+1. Pass 디렉터리의 각 파일에 대 한 SHA1 해시를 계산  `manifest.json` 합니다. 또는 파일은 포함 하지 마세요  `signature` .이 단계에서는 존재 하지 않습니다.
 1. `manifest.json`해시를 사용 하 여 각 파일 이름의 JSON 키/값 목록으로 작성 합니다.
-1. 인증서를 사용 하 여 파일에 서명 하 `manifest.json` 고 결과를 라는 파일에 기록 합니다 `signature` .
+1. 인증서를 사용 하 여 파일에 서명 하  `manifest.json` 고 결과를 라는 파일에 기록 합니다  `signature` .
 1. 모든 파일을 압축 하 고 결과 파일에 파일 확장명을 제공 합니다 `.pkpass` .
 
 Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사용자가 제어 하는 보안 서버 에서만 수행 해야 합니다. 응용 프로그램에서 패스를 시도 하 고 생성 하기 위해 키를 배포 하지 마십시오.
@@ -259,7 +259,7 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 - 다운로드 한 인증서. 12 파일을 사용 하 여 manifest.js에 서명 합니다.
 - 디렉터리의 내용을 압축 하 고. pkpass 확장으로 이름을 바꿉니다.
 
-이 문서의 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 에는 패스를 생성 하는 데 사용할 수 있는 몇 가지 소스 파일이 있습니다. `CouponBanana.raw`CreateAPassManually 디렉터리의 디렉터리에 있는 파일을 사용 합니다. 다음 파일이 표시 됩니다.
+이 문서의 [샘플 코드](/samples/xamarin/ios-samples/passkit) 에는 패스를 생성 하는 데 사용할 수 있는 몇 가지 소스 파일이 있습니다. `CouponBanana.raw`CreateAPassManually 디렉터리의 디렉터리에 있는 파일을 사용 합니다. 다음 파일이 표시 됩니다.
 
  [![이러한 파일이 있음](passkit-images/image18.png)](passkit-images/image18.png#lightbox)
 
@@ -416,7 +416,7 @@ Installation failed: Your code signing/provisioning profiles are not correctly c
 
 ## <a name="example"></a>예제
 
-이 문서에 대 한 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 의 PassLibrary 프로젝트를 참조 하세요. 다음은 작은 공격자 응용 프로그램에 필요한 다음과 같은 일반적인 함수를 보여 줍니다.
+이 문서에 대 한 [샘플 코드](/samples/xamarin/ios-samples/passkit) 의 PassLibrary 프로젝트를 참조 하세요. 다음은 작은 공격자 응용 프로그램에 필요한 다음과 같은 일반적인 함수를 보여 줍니다.
 
 ### <a name="check-that-wallet-is-available"></a>전자 지갑 사용 가능 여부 확인
 
@@ -447,7 +447,7 @@ if (PKPassLibrary.IsAvailable) {
 var passes = library.GetPasses ();  // returns PKPass[]
 ```
 
-시뮬레이터는 반환 되는 패스 목록을 필터링 하지 않으므로이 메서드는 항상 실제 장치에서 테스트 되어야 합니다. 이 목록은 UITableView에 표시 될 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 은 두 개의 쿠폰이 추가 된 후 다음과 같이 표시 됩니다.
+시뮬레이터는 반환 되는 패스 목록을 필터링 하지 않으므로이 메서드는 항상 실제 장치에서 테스트 되어야 합니다. 이 목록은 UITableView에 표시 될 수 있습니다. [샘플 앱](/samples/xamarin/ios-samples/passkit) 은 두 개의 쿠폰이 추가 된 후 다음과 같이 표시 됩니다.
 
  [![두 개의 쿠폰이 추가 된 후 샘플 앱이 다음과 같이 보입니다.](passkit-images/image29.png)](passkit-images/image29.png#lightbox)
 
@@ -468,7 +468,7 @@ string passInfo =
                 + "\nPassUrl:" + pass.PassUrl;
 ```
 
-이 문자열은 [샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)에서 경고로 표시 됩니다.
+이 문자열은 [샘플](/samples/xamarin/ios-samples/passkit)에서 경고로 표시 됩니다.
 
  [![샘플에서 선택한 쿠폰 경고](passkit-images/image30.png)](passkit-images/image30.png#lightbox)
 
@@ -556,7 +556,7 @@ PassKit을 지원 하기 위해 서버 응용 프로그램을 빌드하는 방�
 ## <a name="related-links"></a>관련 링크
 
 - [개발자 용 전자 지갑](https://developer.apple.com/wallet/)
-- [PassKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)
+- [PassKit 샘플](/samples/xamarin/ios-samples/passkit)
 - [전자 지갑 개발자 가이드](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/PassKit_PG/index.html#//apple_ref/doc/uid/TP40012195-CH1-SW1)
 - [프레임 워크 – Apple Pay 및 작은 (WWDC 비디오)](https://developer.apple.com/videos/frameworks/apple-pay-and-wallet)
 - [PassKit Framework 참조](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Framework/_index.html)

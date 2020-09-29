@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: d95261a3b884507d3fc4a68018d57c5d3e3a2c84
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 63daa2f449685b39cb7d622790fd3bccd7590f62
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939414"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433212"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.ios에서 Api 검색
 
@@ -78,7 +78,7 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 - 앱 전환기
 - 잠금 화면
 - CarPlay
-- Maps
+- 지도
 - Siri 상호 작용
 - QuickType 제안 
 
@@ -92,7 +92,7 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [앱 검색 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

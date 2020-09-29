@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 4235e6049b9700edbb3974f1e4cbaf7c405f6e83
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 246757ddc43c5480b26ab4c1360a036fd111dcfa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937477"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435349"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Xamarin의 사전 예방적 제안 watchOS
 
@@ -44,7 +44,7 @@ Xamarin.ios 앱에 사전 제안 지원을 추가 하는 것은 일반적으로 
 
 사전 권장 사항은 다음과 같은 세 가지 주요 방법으로 앱과 함께 작동 합니다.
 
-- **`NSUserActivity`**-시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움이 됩니다.
+- **`NSUserActivity`** -시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움이 됩니다.
 - **위치 제안** -앱에서 위치 기반 정보를 제공 하거나 사용 하는 경우 이러한 API 확장을 통해 앱 간에이 정보를 공유할 수 있는 새로운 방법을 제공 합니다.
 
 및은 다음을 구현 하 여 앱에서 지원 됩니다.
@@ -57,7 +57,7 @@ Xamarin.ios 앱에 사전 제안 지원을 추가 하는 것은 일반적으로 
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-위에서 설명한 것 처럼 `NSUserActivity` 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움을 줍니다. `NSUserActivity`는 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
+위에서 설명한 것 처럼 `NSUserActivity` 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움을 줍니다. `NSUserActivity` 는 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
 
 [![식당 앱](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
@@ -130,7 +130,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>활동 복원
 
-앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 예를 들면 다음과 같습니다.
+앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -153,7 +153,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 앱은 위에 표시 된 최소한의 코드를 사용 하 여 다음과 같은 세 가지 새로운 iOS 10 기능을 활용할 수 있습니다.
 
-- **전달**
+- **Handoff**
 - **스포트라이트 검색**
 - **상황별 Siri 미리 알림**
 
@@ -175,7 +175,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 watchOS 3은 몇 가지 작은 수정과 기존 프레임 워크에 대 한 추가 기능을 통해 앱에서이 기능을 사용할 수 있도록 향상 되었습니다.
 
-- `NSUserActivity`에는 앱 내에서 볼 수 있는 위치 정보를 캡처하기 위한 추가 필드가 있습니다.
+- `NSUserActivity` 에는 앱 내에서 볼 수 있는 위치 정보를 캡처하기 위한 추가 필드가 있습니다.
 - MapKit 및 CoreSpotlight location에 대 한 몇 가지 추가 기능이 추가 되었습니다.
 - 위치 인식 기능이 시스템 내의 Siri, Maps, 멀티태스킹 및 기타 앱에 추가 되었습니다.
 
@@ -296,7 +296,7 @@ Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안
 - MapKit 개체를 사용 하 여 앱을 시작 하는 것을 처리 `MKDirectionsRequest` 합니다.
 - 사용자 참여를 기준으로 앱을 제안 하는 방법에 대 한 watchOS을 제공 합니다.
 
-MapKit 개체를 사용 하 여 앱을 시작 하는 경우 `MKDirectionsRequest` 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들면 다음과 같습니다.
+MapKit 개체를 사용 하 여 앱을 시작 하는 경우 `MKDirectionsRequest` 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -362,5 +362,5 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [watchOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [SiriKit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

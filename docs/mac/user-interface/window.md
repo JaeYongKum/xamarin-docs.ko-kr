@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 65ebefef0f03e2b4abd8c36fc1e0a68812e48218
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2cacbf5640da60a7d084bf4ab113ef62fad097d8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939518"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436388"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.ios의 Windows
 
@@ -104,7 +104,7 @@ Apple에서는 다음 지침을 제안 합니다.
 
 [![예제 검사자](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
-자세한 내용은 Xamarin.ios 앱에서 **검사기 인터페이스** 의 전체 구현을 위한 Apple [macos 디자인 테마](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) 및 [Macos](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) 샘플 앱의 [패널](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) 섹션을 참조 하세요.
+자세한 내용은 Xamarin.ios 앱에서 **검사기 인터페이스** 의 전체 구현을 위한 Apple [macos 디자인 테마](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) 및 [Macos](/samples/xamarin/mac-samples/macinspector) 샘플 앱의 [패널](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) 섹션을 참조 하세요.
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Xcode에서 windows 만들기 및 유지 관리
 
@@ -252,7 +252,7 @@ public override void ViewWillAppear ()
 
 응용 프로그램에서의 이벤트를 구현 하는 경우 `NSWindow` `WillClose` 창이 닫힐 때까지 발생 합니다. 이벤트가 반환 되 면 `false` 창이 닫히지 않습니다. 창에 **닫기** 단추가 없거나 어떤 이유로 든 닫을 수 없는 경우 OS가 경고 소리를 내보냅니다.
 
-예를 들어:
+다음은 그 예입니다.
 
 ```csharp
 MyWindow.PerformClose(this);
@@ -271,7 +271,7 @@ MyWindow.PerformClose(this);
 1. 이벤트를 발생 시 키 지 않습니다 `WillClose` .
 2. 사용자가 단추를 일시적으로 강조 표시 하 여 **닫기** 단추를 클릭 하는 것을 시뮬레이션 하지 않습니다.
 
-예를 들어:
+다음은 그 예입니다.
 
 ```csharp
 MyWindow.Close();
@@ -307,7 +307,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>창을 닫기 전에 변경 내용 저장
 
-사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면의 서브 클래스를 만들고 해당 메서드를 재정의 해야 합니다 `NSWindowDelegate` `WindowShouldClose` . 예를 들어:
+사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면의 서브 클래스를 만들고 해당 메서드를 재정의 해야 합니다 `NSWindowDelegate` `WindowShouldClose` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -475,7 +475,7 @@ var window = NSApplication.SharedApplication.KeyWindow;
 
 Xamarin.ios 앱이 현재 열려 있는 모든 창에 액세스 해야 하는 경우가 있을 수 있습니다. 예를 들어 사용자가 열려는 파일이 종료 창에 이미 열려 있는지 여부를 확인 합니다.
 
-는 `NSApplication.SharedApplication` `Windows` 앱에서 열려 있는 모든 창의 배열을 포함 하는 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 예를 들어:
+는 `NSApplication.SharedApplication` `Windows` 앱에서 열려 있는 모든 창의 배열을 포함 하는 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Is the file already open?
@@ -521,7 +521,7 @@ Xamarin.ios 앱 내에서 창의 크기 변경을 모니터링 해야 하는 경
 
 [![Identity Inspector](window-images/resize01.png)](window-images/resize01.png#lightbox)
 
-다음으로, 사용자 지정 창 컨트롤러 클래스를 편집 하 고 `DidResize` 컨트롤러 창의 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 예를 들어:
+다음으로, 사용자 지정 창 컨트롤러 클래스를 편집 하 고 `DidResize` 컨트롤러 창의 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override void WindowDidLoad ()
@@ -750,7 +750,7 @@ public override void DidFinishLaunching (NSNotification notification)
 [![실행 중인 앱의 패널](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> 패널 창은 Apple에서 더 이상 사용 되지 않으므로 **검사기 인터페이스로**바꾸어야 합니다. Xamarin.ios 앱에서 **검사기** 를 만드는 전체 예제는 [macinspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) 샘플 앱을 참조 하세요.
+> 패널 창은 Apple에서 더 이상 사용 되지 않으므로 **검사기 인터페이스로**바꾸어야 합니다. Xamarin.ios 앱에서 **검사기** 를 만드는 전체 예제는 [macinspector](/samples/xamarin/mac-samples/macinspector) 샘플 앱을 참조 하세요.
 
 ## <a name="summary"></a>요약
 
@@ -758,8 +758,8 @@ public override void DidFinishLaunching (NSNotification notification)
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacWindows (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
-- [MacInspector (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector)
+- [MacWindows (샘플)](/samples/xamarin/mac-samples/macwindows)
+- [MacInspector (샘플)](/samples/xamarin/mac-samples/macinspector)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [메뉴 작업](~/mac/user-interface/menu.md)
 - [macOS 디자인 테마 (Apple)](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

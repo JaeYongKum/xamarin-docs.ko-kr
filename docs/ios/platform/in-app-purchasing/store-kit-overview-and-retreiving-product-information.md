@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: f05bc534b1220e6659f123a17dc57e02185fdea4
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: b7bfa98f84210c921790989c60a7bda21b7c6bcd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996346"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435545"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Xamarin.ios에서 제품 정보를 보관 하 고 검색 합니다.
 
@@ -80,11 +80,11 @@ ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 
 
 앱에서 판매 하는 제품 유형 (사용할 수 있는 제품 또는 구독 유형)에 관계 없이 표시를 위한 제품 정보를 검색 하는 프로세스는 동일 합니다. 이 문서와 함께 제공 되는 InAppPurchaseSample 코드에는 표시를 위해 프로덕션 정보를 검색 하는 방법을 보여 주는 *소모품* 이라는 프로젝트가 포함 되어 있습니다. 다음 작업을 수행 하는 방법을 보여 줍니다.
 
-- 의 구현을 만들고 `SKProductsRequestDelegate` 추상 메서드를 구현 `ReceivedResponse` 합니다. 예제 코드는이 클래스를 호출 합니다 `InAppPurchaseManager` .
-- 을 사용 하 여 지불이 허용 되는지 (사용) 확인 `SKPaymentQueue.CanMakePayments` 합니다.
-- `SKProductsRequest`ITunes Connect에 정의 된 제품 id를 사용 하 여를 인스턴스화합니다. 예제의 메서드에서이 작업을 수행 `InAppPurchaseManager.RequestProductData` 합니다.
-- 에서 Start 메서드를 호출 합니다 `SKProductsRequest` . 그러면 앱 저장소 서버에 대 한 비동기 호출이 트리거됩니다. 대리자 ( `InAppPurchaseManager` )는 결과를 사용 하 여 다시 호출 됩니다.
-- 대리자의 ( `InAppPurchaseManager` ) `ReceivedResponse` 메서드는 앱 스토어에서 반환 된 데이터 (제품 가격 & 설명 또는 잘못 된 제품에 대 한 메시지)로 UI를 업데이트 합니다.
+- 의 구현을 만들고  `SKProductsRequestDelegate` 추상 메서드를 구현  `ReceivedResponse` 합니다. 예제 코드는이 클래스를 호출 합니다  `InAppPurchaseManager` .
+- 을 사용 하 여 지불이 허용 되는지 (사용) 확인  `SKPaymentQueue.CanMakePayments` 합니다.
+- `SKProductsRequest`ITunes Connect에 정의 된 제품 id를 사용 하 여를 인스턴스화합니다. 예제의 메서드에서이 작업을 수행  `InAppPurchaseManager.RequestProductData` 합니다.
+- 에서 Start 메서드를 호출 합니다  `SKProductsRequest` . 그러면 앱 저장소 서버에 대 한 비동기 호출이 트리거됩니다. 대리자 ( `InAppPurchaseManager` )는 결과를 사용 하 여 다시 호출 됩니다.
+- 대리자의 ( `InAppPurchaseManager` )  `ReceivedResponse` 메서드는 앱 스토어에서 반환 된 데이터 (제품 가격 & 설명 또는 잘못 된 제품에 대 한 메시지)로 UI를 업데이트 합니다.
 
 전반적인 상호 작용은 다음과 같이 표시 됩니다. 즉, 저장소 **키트가** iOS에 기본 제공 되 고 **앱 스토어** 는 Apple의 서버를 나타냅니다.
 
@@ -92,7 +92,7 @@ ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 
 
 ### <a name="displaying-product-information-example"></a>제품 정보 표시 예
 
-[InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) *소모품* 샘플 코드는 제품 정보를 검색 하는 방법을 보여 줍니다. 샘플의 주 화면은 앱 스토어에서 검색 된 두 제품에 대 한 정보를 표시 합니다.   
+[InAppPurchaseSample](/samples/xamarin/ios-samples/storekit) *소모품* 샘플 코드는 제품 정보를 검색 하는 방법을 보여 줍니다. 샘플의 주 화면은 앱 스토어에서 검색 된 두 제품에 대 한 정보를 표시 합니다.   
 
  [![주 화면은 앱 스토어에서 검색 된 정보 제품을 표시 합니다.](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
 

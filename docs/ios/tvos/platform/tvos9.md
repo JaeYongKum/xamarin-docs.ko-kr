@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 2a883c85eede7f7600e5716dded71f3c90f49026
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 552a163636c85b13be64a0613b1523263deb5e92
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939752"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437033"
 ---
 # <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
@@ -50,7 +50,7 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 - HomeKit
 - 내부 앱 오디오
 - 지도
-- 개인 VPN
+- Personal VPN(개인 VPN)
 - 푸시 알림
 - 전자지갑
 - 무선 액세서리 구성
@@ -178,7 +178,7 @@ Top 선반 이미지는 단일 정적 또는 파일로 제공 될 수도 있고 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b547d21b19d223aebb345f7c4a1dc8dc126fb0d6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d296c36febfb5671c816372aa97661494179b83
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928785"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433898"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -24,7 +24,7 @@ ms.locfileid: "86928785"
 
 각 섹션에는 코드를 처음부터 작성 하는 지침이 포함 되어 있습니다.
 
-아래 지침에 따라 스토리 보드에 코드를 추가 하 고 iOS에서 제공 되는 다양 한 유형의 터치 이벤트에 대해 알아보세요. 또는 [완성 된 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) 을 열어 모든 것이 작동 하는지 확인 합니다.
+아래 지침에 따라 스토리 보드에 코드를 추가 하 고 iOS에서 제공 되는 다양 한 유형의 터치 이벤트에 대해 알아보세요. 또는 [완성 된 샘플](/samples/xamarin/ios-samples/applicationfundamentals-touch-final) 을 열어 모든 것이 작동 하는지 확인 합니다.
 
 <a name="Touch_Samples"></a>
 
@@ -159,7 +159,7 @@ ms.locfileid: "86928785"
     }
     ```
 
-    이러한 두 메서드는 플래그를 false로 다시 설정 합니다 `touchStartedInside` . `TouchesEnded`화면에도 표시 됩니다 `TouchesEnded` .
+    이러한 두 메서드는 플래그를 false로 다시 설정 합니다 `touchStartedInside` . `TouchesEnded` 화면에도 표시 됩니다 `TouchesEnded` .
 
 1. 이제 터치 샘플 화면이 종료 되었습니다. 다음 스크린샷에 표시 된 것 처럼 각 이미지와 상호 작용할 때 화면이 어떻게 달라 지는 지 확인 합니다.
 
@@ -484,4 +484,4 @@ ms.locfileid: "86928785"
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS Touch Final (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [iOS Touch Final (샘플)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

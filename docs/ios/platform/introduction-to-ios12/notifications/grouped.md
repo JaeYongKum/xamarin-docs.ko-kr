@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 8c4ad31d91e6f9e4415309eee6c3da8a095dc097
-ms.sourcegitcommit: 80bd4d74812d2c086a164323b72a14662276d302
+ms.openlocfilehash: 8c440d61a41fc26aa7537dc169be08c2bf413c68
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608609"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435223"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Xamarin.ios의 그룹화 된 알림
 
@@ -22,7 +22,7 @@ ms.locfileid: "88608609"
 
 ## <a name="sample-app-groupednotifications"></a>샘플 앱: GroupedNotifications
 
-Xamarin.ios를 사용 하 여 그룹화 된 알림을 사용 하는 방법에 대 한 자세한 내용은 [Groupednotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications) 샘플 앱을 참조 하세요.
+Xamarin.ios를 사용 하 여 그룹화 된 알림을 사용 하는 방법에 대 한 자세한 내용은 [Groupednotifications](/samples/xamarin/ios-samples/ios12-groupednotifications) 샘플 앱을 참조 하세요.
 
 이 샘플 앱은 다양 한 친구와의 대화를 시뮬레이션 하 여 각 메시지에 대 한 알림을 보내고 스레드별로 그룹화 합니다. 또한 응용 프로그램 수준 그룹에서 스레드 알림이 발생 하지 않도록 하는 방법도 보여 줍니다.
 
@@ -139,7 +139,7 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱 – GroupedNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-groupednotifications)
+- [샘플 앱 – GroupedNotifications](/samples/xamarin/ios-samples/ios12-groupednotifications)
 - [Xamarin.ios의 사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md)
 - [사용자 알림의 새로운 기능 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
 - [그룹화 된 알림 사용 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/711/)

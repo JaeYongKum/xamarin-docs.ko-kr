@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: b6681832ce83bbc2783ba874c5902c30013c8c94
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 53a3b43347e51cfbc99b2b798f0ad5c787f04847
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572565"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435549"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.ios의 이미지
 
@@ -43,7 +43,7 @@ Xamarin.ios 응용 프로그램에서 사용할 이미지를 추가 하는 경�
 
 - **주 프로젝트 트리 [사용 되지 않음]** -프로젝트 트리에 직접 이미지를 추가할 수 있습니다. 코드에서 주 프로젝트 트리에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예: `NSImage image = NSImage.ImageNamed("tags.png");` 
 - **리소스 폴더 [사용 되지 않음]** -특수 **리소스** 폴더는 아이콘, 시작 화면 또는 일반 이미지 (또는 개발자가 추가 하려는 다른 이미지 또는 파일)와 같은 응용 프로그램 번들의 일부가 될 파일에 대 한 것입니다. 주 프로젝트 트리에 저장 된 이미지와 마찬가지로 코드에서 **Resources** 폴더에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예: `NSImage.ImageNamed("tags.png")`
-- **사용자 지정 폴더 또는 하위 폴더 [사용 되지 않음]** -개발자가 프로젝트 소스 트리에 사용자 지정 폴더를 추가 하 고 여기에 이미지를 저장할 수 있습니다. 프로젝트를 구성 하는 데 도움이 되도록 파일이 추가 된 위치를 하위 폴더에 중첩 시킬 수 있습니다. 예를 들어 개발자가 프로젝트에 폴더를 추가 하 `Card` 고 해당 폴더에 하위 폴더를 추가한 경우 `Hearts` 이미지에 **.png** 이미지를 저장 하 여 `Hearts` `NSImage.ImageNamed("Card/Hearts/Jack.png")` 런타임에 이미지를 로드 합니다.
+- **사용자 지정 폴더 또는 하위 폴더 [사용 되지 않음]** -개발자가 프로젝트 소스 트리에 사용자 지정 폴더를 추가 하 고 여기에 이미지를 저장할 수 있습니다. 프로젝트를 구성 하는 데 도움이 되도록 파일이 추가 된 위치를 하위 폴더에 중첩 시킬 수 있습니다. 예를 들어 개발자가 프로젝트에 폴더를 추가 하 `Card` 고 해당 폴더에 하위 폴더를 추가한 경우 `Hearts` 이미지 **Jack.png** 폴더에 저장 `Hearts` 하 여 `NSImage.ImageNamed("Card/Hearts/Jack.png")` 런타임에 이미지를 로드 합니다.
 - **Asset Catalog 이미지 집합 [기본 설정]** -OS X El Capitan에 추가 됨, **자산 카탈로그 이미지 집합** 은 응용 프로그램에 대 한 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 이미지의 모든 버전 또는 표현을 포함 합니다. 이미지 자산 파일 이름 (,)에 의존 **@1x** 하지 **@2x** 않습니다.
 
 <a name="asset-catalogs"></a>
@@ -72,9 +72,9 @@ Xamarin.ios 응용 프로그램에서 사용할 이미지를 추가 하는 경�
 
 예를 들어 `MonkeyIcon.pdf` 150px x 150px의 해상도를 사용 하 여 자산 카탈로그의 벡터로 파일을 포함 하는 경우 컴파일할 때 다음 비트맵 자산이 최종 앱 번들에 포함 됩니다.
 
-1. **MonkeyIcon@1x.png**-150px x 150px resolution.
-2. **MonkeyIcon@2x.png**-300px x 300px 해상도입니다.
-3. **MonkeyIcon@3x.png**-450px x 450px resolution.
+1. **MonkeyIcon@1x.png** -150px x 150px resolution.
+2. **MonkeyIcon@2x.png** -300px x 300px 해상도입니다.
+3. **MonkeyIcon@3x.png** -450px x 450px resolution.
 
 자산 카탈로그에서 PDF 벡터 이미지를 사용 하는 경우 다음 사항을 고려해 야 합니다.
 
@@ -137,14 +137,14 @@ Xamarin.ios 응용 프로그램 (아이콘, 사용자 지정 컨트롤, 사용�
 
 표준 및 고해상도 버전의 이미지를 만들 때 Xamarin.ios 프로젝트에 포함할 때 이미지 쌍에 대해이 명명 규칙을 따릅니다.
 
-- **표준 해상도**   -  **ImageName. 파일 이름-확장명** (예: **tags .png**)
+- **표준 해상도**   -  **ImageName. 파일 이름-확장명** (예: **tags.png**)
 - **High-Resolution**   -  고해상도 **ImageName@2x.filename-extension** (예: **tags@2x.png** )
 
 프로젝트에 추가 되 면 다음과 같이 표시 됩니다.
 
 ![Solution Pad의 이미지 파일](image-images/add03.png "Solution Pad의 이미지 파일")
 
-이미지가 Interface Builder의 UI 요소에 할당 되 면 _ImageName_에서 파일을 선택 하기만 하면 됩니다 **.** _파일 이름-확장명_ 형식 (예: **tags .png**) C # 코드에서 이미지를 사용 하는 경우와 동일 하 게 _ImageName_에서 파일을 선택 합니다 **.** _파일 이름-확장명_ 형식입니다.
+이미지가 Interface Builder의 UI 요소에 할당 되 면 _ImageName_에서 파일을 선택 하기만 하면 됩니다 **.** _파일 이름-확장명_ 형식입니다 (예: **tags.png**). C # 코드에서 이미지를 사용 하는 경우와 동일 하 게 _ImageName_에서 파일을 선택 합니다 **.** _파일 이름-확장명_ 형식입니다.
 
 Xamarin.ios 응용 프로그램이 Mac에서 실행 되는 경우 _ImageName_**.** _파일 이름-확장_ 형식 이미지는 표준 해상도 디스플레이에서 사용 되며, **ImageName@2x.filename-extension** 레 티 나 디스플레이 기반 mac에서 이미지가 자동으로 선택 됩니다.
 
@@ -243,7 +243,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>테이블 뷰에서 이미지 사용
 
-에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들면 다음과 같습니다.
+에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -341,7 +341,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>개요 보기가 포함 된 이미지 사용
 
-에서 셀의 일부로 이미지를 포함 하려면 `NSOutlineView` 개요 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 `NSTableViewDelegate's` `GetView` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들면 다음과 같습니다.
+에서 셀의 일부로 이미지를 포함 하려면 `NSOutlineView` 개요 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 `NSTableViewDelegate's` `GetView` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -446,7 +446,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacImages(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages(샘플)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)

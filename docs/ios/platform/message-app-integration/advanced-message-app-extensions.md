@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c303125ac02c8e7c47fb16928df1432c66a8e8d2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a1f386209ccc1f2cb33348930f29bf5ac65ce4f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937152"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435616"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Xamarin.ios의 고급 메시지 앱 확장
 
@@ -30,14 +30,14 @@ IOS 10의 새로운 기능으로, 메시지 앱 확장은 **메시지** 앱과 �
 메시지 앱 확장은 세 가지 주요 내용 유형을 제공 합니다.
 
 - **대화형 메시지** -앱이 생성 하는 사용자 지정 메시지 콘텐츠의 형식으로, 사용자가 메시지를 탭 하면 응용 프로그램이 포그라운드에서 시작 됩니다.
-- **스티커** -사용자 간에 전송 된 메시지에 포함할 수 있는 앱에 의해 생성 된 이미지입니다. 스티커 팩 앱을 구현 하는 예제는 [Ice (Ice) 빌더](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) 샘플 앱을 참조 하세요.
+- **스티커** -사용자 간에 전송 된 메시지에 포함할 수 있는 앱에 의해 생성 된 이미지입니다. 스티커 팩 앱을 구현 하는 예제는 [Ice (Ice) 빌더](/samples/xamarin/ios-samples/ios10-icecreambuilder) 샘플 앱을 참조 하세요.
 - **기타 지원 되는 콘텐츠** -앱은 메시지 앱에서 항상 지원 되는 형식의 사진, 비디오, 텍스트 또는 링크와 같은 콘텐츠를 제공할 수 있습니다.
 
 IOS 10의 새로운 기능으로, 이제 메시지 앱은 자체의 전용 기본 제공 앱 스토어를 포함 합니다. 메시지 앱 확장을 포함 하는 모든 앱이이 저장소에 표시 되 고 승격 됩니다. 새 메시지 앱 서랍에는 사용자에 게 신속 하 게 액세스할 수 있도록 메시지 앱 스토어에서 다운로드 한 앱이 표시 됩니다.
 
 IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색할 수 있도록 하는 인라인 앱 특성이 추가 되었습니다. 예를 들어 한 사용자가 두 번째 사용자가 설치 하지 않은 앱에서 다른 사용자에 게 콘텐츠를 전송 하는 경우 (예: 스티커) 보내는 앱의 이름이 메시지 기록의 내용에 나열 됩니다. 사용자가 앱의 이름을 탭 하면 메시지 앱 스토어가 열리고 앱이 스토어에서 선택 됩니다.
 
-메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예를 들어:
+메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 다음은 그 예입니다.
 
 - 앱 내 구매에 액세스할 수 있습니다.
 - Apple Pay에 대 한 액세스 권한이 있습니다.
@@ -71,8 +71,8 @@ IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색
 1. `MSMessageAppViewController`메시지 앱 확장의 개체는 확장의 뷰가 사용자에 게 표시 될 때 호출 되는 주 클래스입니다.
 2. 대화는 사용자에 게 개체 인스턴스로 제공 됩니다 `MSConversation` .
 3. `MSMessage`클래스는 대화의 지정 된 메시지 거품형을 나타냅니다.
-4. `MSSession`메시지를 보내는 방법을 제어 합니다.
-5. `MSMessageTemplateLayout`메시지가 표시 되는 방식을 제어 합니다.
+4. `MSSession` 메시지를 보내는 방법을 제어 합니다.
+5. `MSMessageTemplateLayout` 메시지가 표시 되는 방식을 제어 합니다.
 
 ## <a name="the-extension-lifecycle"></a>확장 수명 주기
 
@@ -417,7 +417,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 두 경우 모두 사용자가 메시지 앱 확장에 속하는 메시지 거품형을 탭 할 때 `MSMessage` 의 속성을 사용 하 여 탭 한에 대 한 액세스 권한을 얻어야 합니다 `SelectedMessage` `MSConversation` .
 
-예를 들어:
+다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -503,9 +503,9 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 
 먼저 `MSMessagesAppViewController` 클래스에 대화에 대 한 보다 심층적인 액세스를 제공 하는 몇 가지 다른 재정의 메서드가 있습니다.
 
-- `DidStartSendingMessage`-사용자가 보내기 단추를 누를 때 호출 됩니다. 이는 메시지가 실제로 받는 사람에 게 배달 되었다는 것을 의미 하는 것이 아니라 송신 프로세스가 시작 된 것입니다.
-- `DidCancelSendingMessage`-사용자가 대화 내용에서 메시지 거품형의 오른쪽 위 모퉁이에 있는 *X* 단추를 누르면 발생 합니다.
-- `DidReceiveMessage`-이 메서드는 메시지 앱 확장이 활성화 된 상태에서 대화의 참가자 중 하나 로부터 새 메시지를 받은 경우 호출 됩니다.
+- `DidStartSendingMessage` -사용자가 보내기 단추를 누를 때 호출 됩니다. 이는 메시지가 실제로 받는 사람에 게 배달 되었다는 것을 의미 하는 것이 아니라 송신 프로세스가 시작 된 것입니다.
+- `DidCancelSendingMessage` -사용자가 대화 내용에서 메시지 거품형의 오른쪽 위 모퉁이에 있는 *X* 단추를 누르면 발생 합니다.
+- `DidReceiveMessage` -이 메서드는 메시지 앱 확장이 활성화 된 상태에서 대화의 참가자 중 하나 로부터 새 메시지를 받은 경우 호출 됩니다.
 
 ### <a name="group-conversations"></a>그룹 대화
 
@@ -544,7 +544,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 - 확장은 사용자 로부터 메시지를 받으면 보낸 사람 식별자를 추적할 수 있습니다. 동일한 보낸 사람 식별자를 가진 다른 메시지를 수신 하는 경우 확장은 동일한 사용자의 것임을 인식 합니다.
 - 대화의 특정 사용자를 식별 하는 데 사용할 수 있습니다.
 
-보낸 사람 식별자는의 텍스트 필드에 `MSMessageTemplateLayout` 달러 기호 ()를 접두사로 사용 하 여 사용할 수 있습니다 `$` . 예를 들어:
+보낸 사람 식별자는의 텍스트 필드에 `MSMessageTemplateLayout` 달러 기호 ()를 접두사로 사용 하 여 사용할 수 있습니다 `$` . 다음은 그 예입니다.
 
 ```csharp
 // Pass along the sender identifier
@@ -605,6 +605,6 @@ WatchOS에서 메시지 앱은 사용자가 회신을 작성할 수 있는 첨�
 
 ## <a name="related-links"></a>관련 링크
 
-- [아이스크림 빌더 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [아이스크림 빌더 (샘플)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [메시지 참조](https://developer.apple.com/reference/messages)
 - [앱 확장 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

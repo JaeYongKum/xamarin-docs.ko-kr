@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 32f145d791a40bd90e848f1124ce150cbd9c7575
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 900a4bf3407b4a3d37f6102ff4b10292edf4bd25
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937768"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434045"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Xamarin.ios를 사용 하 여 이미지 표시
 
@@ -83,4 +83,4 @@ imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: d5830fcc4eab2feb5002253a519d72099d6bcdde
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d72a9722a9d48ea52932e4fd6516c0712dbd693c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929989"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436260"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Xamarin.ios에서 ADO.NET 사용
 
@@ -149,7 +149,7 @@ public static string DoSomeDataAccess ()
 SQLite는 임의의 SQL 명령을 데이터에 대해 실행할 수 있으므로 원하는 모든 CREATE, INSERT, UPDATE, DELETE 또는 SELECT 문을 수행할 수 있습니다. Sqlite 웹 사이트의 SQLite에서 지원 되는 SQL 명령에 대해 알아볼 수 있습니다. SqliteCommand 개체의 세 가지 메서드 중 하나를 사용 하 여 SQL 문을 실행 합니다.
 
 - **ExecuteNonQuery** – 일반적으로 테이블을 만들거나 데이터를 삽입 하는 데 사용 됩니다. 일부 작업의 반환 값은 영향을 받는 행의 수입니다. 그렇지 않으면-1입니다.
-- **ExecuteReader** – 행 컬렉션을로 반환 해야 할 때 사용 됩니다 `SqlDataReader` .
+- **ExecuteReader** – 행 컬렉션을로 반환 해야 할 때 사용 됩니다  `SqlDataReader` .
 - **ExecuteScalar** – 단일 값 (예: 집계)을 검색 합니다.
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
@@ -214,7 +214,7 @@ using (var contents = connection.CreateCommand ()) {
 
 NuGet에서 설치할 수 있는 다른 라이브러리가 있으며,이 라이브러리는 동일한 유형의 쿼리를 허용 하는 것 `Microsoft.Data.Sqlite` 과 기능적으로 동일 합니다 [installed from NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite) `Mono.Data.Sqlite` .
 
-[두 라이브러리](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) 와 일부 [Xamarin 관련 세부 정보](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin)를 비교 합니다. Xamarin.ios 앱에 가장 중요 한 것은 초기화 호출을 포함 해야 합니다.
+[두 라이브러리](/dotnet/standard/data/sqlite/compare) 와 일부 [Xamarin 관련 세부 정보](/dotnet/standard/data/sqlite/xamarin)를 비교 합니다. Xamarin.ios 앱에 가장 중요 한 것은 초기화 호출을 포함 해야 합니다.
 
 ```csharp
 // required for Xamarin.iOS

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 65e42e824a888934fd0f0a01093a6549dcf3d99d
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 8bf0df03419d3705d72b679cfbfca427b0ac1a93
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997464"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435648"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.ios의 응용 프로그램 아이콘
 
@@ -28,13 +28,13 @@ ms.locfileid: "86997464"
 
 Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사용할 수 있는 것과 동일한 방식으로 이미지 자산을 사용 하 여 응용 프로그램 아이콘을 제공할 수 있습니다. IPad의 다음 스크린샷은 iOS에서 아이콘의 세 가지 사용을 보여 줍니다.
 
-- **응용 프로그램 아이콘** -모든 iOS 앱은 응용 프로그램 아이콘을 정의 해야 합니다. 사용자가 앱을 시작 하기 위해 iOS 홈 화면에서 탭 하는 아이콘입니다. 또한이 아이콘은 Game Center에서 사용 됩니다 (해당 하는 경우). 예:
+- **응용 프로그램 아이콘** -모든 iOS 앱은 응용 프로그램 아이콘을 정의 해야 합니다. 사용자가 앱을 시작 하기 위해 iOS 홈 화면에서 탭 하는 아이콘입니다. 또한이 아이콘은 Game Center에서 사용 됩니다 (해당 하는 경우). 예제:
 
     [![응용 프로그램 아이콘](app-icons-images/000.png)](app-icons-images/000-full.png#lightbox)
-- **스포트라이트 아이콘** -사용자가 스포트라이트 검색에서 앱 이름을 입력할 때마다이 아이콘이 표시 됩니다. 예:
+- **스포트라이트 아이콘** -사용자가 스포트라이트 검색에서 앱 이름을 입력할 때마다이 아이콘이 표시 됩니다. 예제:
 
     [![스포트라이트 아이콘](app-icons-images/000a.png)](app-icons-images/000a-full.png#lightbox)
-- **설정 아이콘** -사용자가 iOS 장치에서 **설정** 앱을 입력 하면 앱에 대 한 **설정** 목록 끝에이 아이콘이 표시 됩니다. 예:
+- **설정 아이콘** -사용자가 iOS 장치에서 **설정** 앱을 입력 하면 앱에 대 한 **설정** 목록 끝에이 아이콘이 표시 됩니다. 예제:
 
     [![설정 아이콘](app-icons-images/000b.png)](app-icons-images/000b-full.png#lightbox)
 
@@ -189,6 +189,6 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [이미지 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
+- [이미지 작업 (샘플)](/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [사용자 지정 아이콘 및 이미지 생성 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

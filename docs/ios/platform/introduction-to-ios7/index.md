@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bd57232b183d5940a22915a0277a016cab36af8a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9f27fa550bb21f4261288e8a9a3d809a0ccc7de2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931614"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436500"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -26,10 +26,10 @@ iOS 7은 UIKit에서 애니메이션 지원을 보강 하 여 응용 프로그�
 
 ### <a name="spring-animations"></a>스프링 애니메이션
 
- `UIView`에서는 이제 스프링 효과를 사용 하 여 속성 변경에 애니메이션 효과를 지원 합니다. 이를 추가 하려면 아래에서 설명 하는 `AnimateNotify` 것 처럼 또는 메서드를 호출 하 여 `AnimateNotifyAsync` 스프링 댐핑 비율 및 초기 스프링 속도에 대 한 값을 전달 합니다.
+ `UIView` 에서는 이제 스프링 효과를 사용 하 여 속성 변경에 애니메이션 효과를 지원 합니다. 이를 추가 하려면 아래에서 설명 하는 `AnimateNotify` 것 처럼 또는 메서드를 호출 하 여 `AnimateNotifyAsync` 스프링 댐핑 비율 및 초기 스프링 속도에 대 한 값을 전달 합니다.
 
-- `springWithDampingRatio`– 진동 범위가가 더 작은 값에 대해 늘리는 0에서 1 사이의 값입니다.
-- `initialSpringVelocity`– 초기 스프링 속도는 초당 총 애니메이션 거리의 백분율로 나타낸 것입니다.
+- `springWithDampingRatio` – 진동 범위가가 더 작은 값에 대해 늘리는 0에서 1 사이의 값입니다.
+- `initialSpringVelocity` – 초기 스프링 속도는 초당 총 애니메이션 거리의 백분율로 나타낸 것입니다.
 
 다음 코드는 이미지 뷰의 중심이 변경 될 때 스프링 효과를 생성 합니다.
 
@@ -96,12 +96,12 @@ API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물�
 
 다음을 포함 하 여 복잡 한 상호 작용을 트리거하는 데 사용할 수 있는 여러 가지 기본 동작이 있습니다.
 
-- `UIAttachmentBehavior`– 함께 이동 하거나 동적 항목을 첨부 지점에 연결 하는 두 개의 동적 항목을 연결 합니다.
-- `UICollisionBehavior`– 동적 항목이 충돌에 참여할 수 있도록 허용 합니다.
-- `UIDynamicItemBehavior`– 탄력성, 밀도, 마찰 등의 동적 항목에 적용할 일반적인 속성 집합을 지정 합니다.
-- `UIGravityBehavior`-동적 항목에 무게를 적용 하 여 gravitational 방향으로 항목을 가속 시킵니다.
-- `UIPushBehavior`– Force를 동적 항목에 적용 합니다.
-- `UISnapBehavior`– 스프링 효과를 사용 하 여 동적 항목을 위치에 맞출 수 있습니다.
+- `UIAttachmentBehavior` – 함께 이동 하거나 동적 항목을 첨부 지점에 연결 하는 두 개의 동적 항목을 연결 합니다.
+- `UICollisionBehavior` – 동적 항목이 충돌에 참여할 수 있도록 허용 합니다.
+- `UIDynamicItemBehavior` – 탄력성, 밀도, 마찰 등의 동적 항목에 적용할 일반적인 속성 집합을 지정 합니다.
+- `UIGravityBehavior` -동적 항목에 무게를 적용 하 여 gravitational 방향으로 항목을 가속 시킵니다.
+- `UIPushBehavior` – Force를 동적 항목에 적용 합니다.
+- `UISnapBehavior` – 스프링 효과를 사용 하 여 동적 항목을 위치에 맞출 수 있습니다.
 
 여러 가지 기본 형식이 있지만 UIKit Dynamics를 사용 하 여 보기에 물리학 기반 상호 작용을 추가 하는 일반적인 프로세스는 동작 간에 일관 됩니다.
 
@@ -239,6 +239,6 @@ iOS 7은 백그라운드 작업 수행 시와 방법을 변경 합니다. 작업
 
 ## <a name="related-links"></a>관련 링크
 
-- [IOS 7 소개 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
+- [IOS 7 소개 (샘플)](/samples/xamarin/ios-samples/introtoios7)
 - [iOS 7 사용자 인터페이스 개요](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)

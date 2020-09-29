@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c2d00051d1e51db4523a484a0c187016ea9061f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f665d2de767721cd2f5eedd45653e36c01395569
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567829"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435282"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 기능
 
@@ -51,9 +51,9 @@ IOS 10 이상에서 실행 되는 앱은 info.plist 파일에 하나 이상의 �
 - **개인 정보-상태 업데이트 사용 설명** ( `NSHealthUpdateUsageDescription` )-개발자가 앱에서 사용자의 상태 데이터를 편집 하려는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
 - **HomeKit 사용 설명** ( `NSHomeKitUsageDescription` )-개발자는 앱이 사용자의 HomeKit 구성 데이터에 액세스 하려는 이유를 설명할 수 있습니다.
 - **개인 정보-위치 항상 사용 설명** ( `NSLocationAlwaysUsageDescription` )-개발자가 앱에서 항상 사용자의 위치에 액세스할 수 있는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-위치 사용 설명** ( `NSLocationUsageDescription` )-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSLocationAlwaysUsageDescription`대신 또는를 사용 `NSLocationWhenInUseUsageDescription` 합니다.*
+- Mapi **개인 정보-위치 사용 설명** ( `NSLocationUsageDescription` )-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSLocationAlwaysUsageDescription` 대신 또는를 사용 `NSLocationWhenInUseUsageDescription` 합니다.*
 - **개인 정보-위치 사용 시 사용 설명** ( `NSLocationWhenInUseUsageDescription` )-개발자는 앱이 실행 되는 동안 사용자의 위치에 액세스 하려는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSAppleMusicUsageDescription`대신를 사용 합니다.*
+- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSAppleMusicUsageDescription` 대신를 사용 합니다.*
 - **개인 정보-마이크 사용 설명** ( `NSMicrophoneUsageDescription` )-개발자는 앱이 장치 마이크에 액세스 하는 이유를 설명할 수 있습니다.
 - **개인 정보-동작 사용 설명** ( `NSMotionUsageDescription` )-개발자는 앱이 장치의가 속도계에 액세스 하려는 이유를 설명할 수 있습니다.
 - **개인 정보-사진 라이브러리 사용 설명** ( `NSPhotoLibraryUsageDescription` )-개발자가 앱에서 사용자의 사진 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.
@@ -88,7 +88,7 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
 6. 앱이 지정 된 기능 또는 사용자 정보에 액세스 하려는 이유에 대 한 설명을 값 열에 입력 합니다. 
 
     ![설명 입력](security-privacy-images/InfoPListSetValue.png "설명 입력")
-7. 파일의 변경 내용을 저장합니다.
+7. 변경 내용을 파일에 저장합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -103,7 +103,7 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
 5. 앱이 지정 된 기능 또는 사용자 정보에 액세스 하려는 이유에 대 한 설명을 입력 합니다. 
 
     ![설명 입력](security-privacy-images/info03.png "설명 입력")
-6. 파일의 변경 내용을 저장합니다.
+6. 변경 내용을 파일에 저장합니다.
 
 -----
 
@@ -118,4 +118,4 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

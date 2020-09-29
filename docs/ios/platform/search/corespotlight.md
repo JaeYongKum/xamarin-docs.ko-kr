@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 285243c832d080d93e557deada5bb824e03f8d89
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 684e2b8ad5098dd9cecb14eb9c5e265e3ea53035
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939427"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436131"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.ios에서 핵심 스포트라이트를 사용 하 여 검색
 
@@ -51,7 +51,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 ## <a name="restoring-an-item"></a>항목 복원
 
-사용자가 앱에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목을 탭 하면 `AppDelegate` 메서드가 `ContinueUserActivity` 호출 됩니다 (이 메서드는에도 사용 됨 `NSUserActivity` ). 예를 들면 다음과 같습니다.
+사용자가 앱에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목을 탭 하면 `AppDelegate` 메서드가 `ContinueUserActivity` 호출 됩니다 (이 메서드는에도 사용 됨 `NSUserActivity` ). 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예를 들면 다음과 같습니다.
+다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Delete by Domain Name
@@ -135,7 +135,7 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [앱 검색 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

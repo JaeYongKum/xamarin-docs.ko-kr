@@ -6,18 +6,18 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 8ffb62c8715ff60e9b0ea3b2bc536f3441fb8765
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: bdbce0b001d5baf5ef751e092a2083efdf3ca992
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724676"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436276"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame를 사용한 게임 개발 소개
 
 _이 다중 파트 연습에서는 MonoGame를 사용 하 여 간단한 2D 응용 프로그램을 만드는 방법을 보여 줍니다.  그래픽, 입력, 게임 엔터티 및 물리학 같은 일반적인 게임 프로그래밍 개념을 다룹니다._
 
-이 문서에서는 플랫폼 간 게임을 만들기 위한 MonoGame API 기술에 대해 설명 합니다. 플랫폼의 전체 목록은 [MonoGame 웹 사이트](http://www.monogame.net/)를 참조 하세요. 이 자습서에서는 MonoGame C# 완벽 하 게 작동 F# 하는 경우에도 코드 샘플에 대해를 사용 합니다.
+이 문서에서는 플랫폼 간 게임을 만들기 위한 MonoGame API 기술에 대해 설명 합니다. 플랫폼의 전체 목록은 [MonoGame 웹 사이트](http://www.monogame.net/)를 참조 하세요. MonoGame가 F #과 완벽 하 게 작동 하지만이 자습서에서는 코드 샘플에 c #을 사용 합니다.
 
 MonoGame는 그래픽, 오디오, 게임 상태 관리, 입력 및 자산 가져오기를 위한 콘텐츠 파이프라인을 제공 하는 플랫폼 간 하드웨어 가속 API입니다. 대부분의 게임 엔진과 달리 MonoGame는 패턴 또는 프로젝트 구조를 제공 하거나 적용 하지 않습니다.  이는 개발자가 코드를 원하는 대로 구성할 수 있다는 것을 의미 하는 반면, 새 프로젝트를 처음 시작할 때 약간의 설정 코드가 필요 함을 의미 하기도 합니다.
 
@@ -42,7 +42,7 @@ XNA에 익숙한 개발자는 이미 MonoGame의 구문에 익숙하고 MonoGame
 
 ## <a name="related-links"></a>관련 링크
 
-- [WalkingGame MonoGame 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
+- [WalkingGame MonoGame 프로젝트 (샘플)](/samples/xamarin/mobile-samples/walkinggamemg/)
 - [NuGet의 MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [NuGet의 MonoGame iOS](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [MonoGame API 설명서](http://www.monogame.net/documentation/?page=main)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: a74996c0390191a4fef8d20ba3f46d0e2578d17a
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: c8cffc9593b6de059a877654994e6747204ce34d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997178"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435394"
 ---
 # <a name="document-picker-in-xamarinios"></a>Xamarin.ios의 문서 선택기
 
@@ -68,9 +68,9 @@ Xamarin과 함께 문서 선택기를 사용 하는 데 필요한 코드를 살�
 
 ### <a name="using-uidocument"></a>UIDocument 사용
 
- `UIDocument`개발자를 위한 모든 작업을 수행 하 여 간단 하 게 (또는 `NSDocument` macOS) 작업을 수행 합니다. 응용 프로그램의 UI를 차단 하지 않도록 백그라운드 큐와 기본 제공 파일 조정을 제공 합니다.
+ `UIDocument` 개발자를 위한 모든 작업을 수행 하 여 간단 하 게 (또는 `NSDocument` macOS) 작업을 수행 합니다. 응용 프로그램의 UI를 차단 하지 않도록 백그라운드 큐와 기본 제공 파일 조정을 제공 합니다.
 
- `UIDocument`는 개발자가 필요로 하는 모든 목적을 위해 Xamarin 응용 프로그램의 개발 노력을 용이 하 게 하는 여러 개의 상위 수준 Api를 노출 합니다.
+ `UIDocument` 는 개발자가 필요로 하는 모든 목적을 위해 Xamarin 응용 프로그램의 개발 노력을 용이 하 게 하는 여러 개의 상위 수준 Api를 노출 합니다.
 
 다음 코드에서는의 서브 클래스를 만들어 `UIDocument` iCloud에서 텍스트를 저장 하 고 검색 하는 데 사용할 수 있는 일반 텍스트 기반 문서를 구현 합니다.
 
@@ -198,9 +198,9 @@ IOS 8 이전에는 `NSMetadataQuery` 삭제, 생성 및 이름 변경 등의 픽
 
 위의 다이어그램:
 
-1. 응용 프로그램 컨테이너에 이미 있는 파일의 경우에는 `NSMetadataQuery` `NSMetadata` 응용 프로그램에서 즉시 사용할 수 있도록 기존 레코드를 미리 만들고 스풀링 합니다.
+1. 응용 프로그램 컨테이너에 이미 있는 파일의 경우에는  `NSMetadataQuery`  `NSMetadata` 응용 프로그램에서 즉시 사용할 수 있도록 기존 레코드를 미리 만들고 스풀링 합니다.
 1. 응용 프로그램은 응용 프로그램 컨테이너에 새 파일을 만듭니다.
-1. 이전에는 `NSMetadataQuery` 응용 프로그램 컨테이너에 대 한 수정 내용을 확인 하 고 필요한 레코드를 만들기 전에 지연이 발생 합니다 `NSMetadata` .
+1. 이전에는  `NSMetadataQuery` 응용 프로그램 컨테이너에 대 한 수정 내용을 확인 하 고 필요한 레코드를 만들기 전에 지연이 발생 합니다  `NSMetadata` .
 
 레코드 생성의 지연으로 인해 `NSMetadata` 응용 프로그램에는 로컬 파일 변경과 클라우드 기반 변경에 대 한 두 개의 데이터 원본이 열려 있어야 했습니다.
 
@@ -212,9 +212,9 @@ IOS 8에서는 `NSMetadataQuery` 중철 이라는 새 기능을 사용 하 여 �
 
 위의 다이어그램에서 중철 사용:
 
-1. 이전 처럼 응용 프로그램 컨테이너에 이미 있는 파일의 경우에는 `NSMetadataQuery` 기존 `NSMetadata` 레코드를 미리 만들고 스풀링 합니다.
+1. 이전 처럼 응용 프로그램 컨테이너에 이미 있는 파일의 경우에는  `NSMetadataQuery` 기존  `NSMetadata` 레코드를 미리 만들고 스풀링 합니다.
 1. 응용 프로그램은 파일 조정을 사용 하 여 응용 프로그램 컨테이너에 새 파일을 만듭니다.
-1. 응용 프로그램 컨테이너의 후크가 수정 사항을 확인 하 고 `NSMetadataQuery` 필요한 레코드를 만들기 위한 호출을 확인 합니다 `NSMetadata` .
+1. 응용 프로그램 컨테이너의 후크가 수정 사항을 확인 하 고  `NSMetadataQuery` 필요한 레코드를 만들기 위한 호출을 확인 합니다  `NSMetadata` .
 1. `NSMetadata`레코드는 파일 바로 뒤에 생성 되며 응용 프로그램에서 사용할 수 있게 됩니다.
 
 중철를 사용 하 여 응용 프로그램은 더 이상 로컬 및 클라우드 기반 파일 변경 내용을 모니터링 하기 위해 데이터 원본을 열 필요가 없습니다. 이제 응용 프로그램에서 직접를 사용할 수 있습니다 `NSMetadataQuery` .
@@ -226,10 +226,10 @@ IOS 8에서는 `NSMetadataQuery` 중철 이라는 새 기능을 사용 하 여 �
 
 IOS 8의에는 다음과 같은 새로운 기능이 추가 되었습니다 `NSMetadataQuery` .
 
-- `NSMetatadataQuery`이제 클라우드에 저장 된 로컬이 아닌 문서를 나열할 수 있습니다.
+- `NSMetatadataQuery` 이제 클라우드에 저장 된 로컬이 아닌 문서를 나열할 수 있습니다.
 - 클라우드 기반 문서에서 메타 데이터 정보에 액세스 하기 위해 새 Api가 추가 되었습니다.
 - `NSUrl_PromisedItems`로컬에서 사용 가능한 콘텐츠를 사용 하거나 사용 하지 않을 수 있는 파일의 파일 특성에 액세스 하는 새로운 API가 있습니다.
-- 메서드를 사용 `GetPromisedItemResourceValue` 하 여 지정 된 파일에 대 한 정보를 가져오거나 메서드를 사용 하 여 `GetPromisedItemResourceValues` 한 번에 두 개 이상의 파일에 대 한 정보를 가져옵니다.
+- 메서드를 사용  `GetPromisedItemResourceValue` 하 여 지정 된 파일에 대 한 정보를 가져오거나 메서드를 사용 하 여  `GetPromisedItemResourceValues` 한 번에 두 개 이상의 파일에 대 한 정보를 가져옵니다.
 
 메타 데이터를 처리 하기 위해 두 개의 새로운 파일 조정 플래그가 추가 되었습니다.
 
@@ -818,7 +818,7 @@ IOS 8 이전에는 앱 내에서 응용 프로그램 외부의 문서를 검색�
 IOS 8 이전의 외부 문서에 액세스 하는 방법을 살펴보겠습니다.
 
 1. 먼저 사용자는 처음에 문서를 만든 응용 프로그램을 열어야 합니다.
-1. 문서를 선택 하 고를 `UIDocumentInteractionController` 사용 하 여 문서를 새 응용 프로그램으로 보냅니다.
+1. 문서를 선택 하 고를  `UIDocumentInteractionController` 사용 하 여 문서를 새 응용 프로그램으로 보냅니다.
 1. 마지막으로, 원래 문서의 복사본이 새 응용 프로그램의 컨테이너에 배치 됩니다.
 
 이 문서에서 두 번째 응용 프로그램을 열고 편집할 수 있습니다.
@@ -1024,11 +1024,11 @@ if (Bookmark != null) {
 
 1. 먼저 로컬 또는 임시 위치에 새 문서를 만듭니다.
 1. `NSUrl`새 문서를 가리키는를 만듭니다.
-1. 새 문서 선택기 뷰 컨트롤러를 열고의 모드를 사용 하 여이를 전달 합니다 `NSUrl` `MoveToService` .
+1. 새 문서 선택기 뷰 컨트롤러를 열고의 모드를 사용 하 여이를 전달 합니다  `NSUrl` `MoveToService` .
 1. 사용자가 새 위치를 선택 하면 문서가 현재 위치에서 새 위치로 이동 됩니다.
 1. 응용 프로그램을 만드는 중에도 파일에 액세스할 수 있도록 참조 문서는 앱의 응용 프로그램 컨테이너에 기록 됩니다.
 
-다음 코드를 사용 하 여 문서를 외부 위치로 이동할 수 있습니다.`var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
+다음 코드를 사용 하 여 문서를 외부 위치로 이동할 수 있습니다. `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
 
 위의 프로세스에서 반환 된 참조 문서는 문서 선택기의 열기 모드로 만든 참조 문서와 동일 합니다. 그러나 응용 프로그램에서 문서에 대 한 참조를 유지 하지 않고 문서를 이동 하려는 경우가 있습니다.
 
@@ -1048,7 +1048,7 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 
 이는 두 가지 확장을 사용 하 여 구현 됩니다.
 
-- **문서 선택기 확장** – `UIViewController` 사용자가 대체 저장소 위치에서 문서를 선택할 수 있는 그래픽 인터페이스를 제공 하는 하위 클래스를 제공 합니다. 이 하위 클래스는 문서 선택기 보기 컨트롤러의 일부로 표시 됩니다.
+- **문서 선택기 확장** –  `UIViewController` 사용자가 대체 저장소 위치에서 문서를 선택할 수 있는 그래픽 인터페이스를 제공 하는 하위 클래스를 제공 합니다. 이 하위 클래스는 문서 선택기 보기 컨트롤러의 일부로 표시 됩니다.
 - **파일 제공 확장명** – 실제로 파일 내용을 제공 하는 것을 처리 하는 비 UI 확장입니다. 이러한 확장은 파일 조정 ()을 통해 제공 됩니다 `NSFileCoordinator` . 이는 파일 조정이 필요한 또 다른 중요 한 사례입니다.
 
 다음 다이어그램에서는 문서 공급자 확장을 사용 하는 경우 일반적인 데이터 흐름을 보여 줍니다.
@@ -1058,7 +1058,7 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 다음 프로세스가 발생 합니다.
 
 1. 응용 프로그램은 사용자가 사용할 파일을 선택할 수 있는 문서 선택기 컨트롤러를 제공 합니다.
-1. 사용자는 대체 파일 위치를 선택 하 고 사용자 지정 확장 프로그램을 `UIViewController` 호출 하 여 사용자 인터페이스를 표시 합니다.
+1. 사용자는 대체 파일 위치를 선택 하 고 사용자 지정 확장 프로그램을  `UIViewController` 호출 하 여 사용자 인터페이스를 표시 합니다.
 1. 사용자가이 위치에서 파일을 선택 하면 URL이 문서 선택기로 다시 전달 됩니다.
 1. 문서 선택기는 파일의 URL을 선택 하 고 사용자가 작업할 수 있도록 응용 프로그램에 반환 합니다.
 1. URL은 파일의 콘텐츠를 응용 프로그램에 반환 하기 위해 파일 코디네이터로 전달 됩니다.
@@ -1083,11 +1083,11 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 다음 프로세스가 발생 합니다.
 
 1. 응용 프로그램이 백그라운드에서 시작 하 여 상태를 유지 해야 하는 경우 을 호출 `NSUrl` 하 여 대체 저장소에 파일에 대 한 책갈피를 만듭니다.
-1. `NSUrl`파일 공급자 확장명을 호출 하 여 문서에 대 한 영구 URL을 가져옵니다.
+1. `NSUrl` 파일 공급자 확장명을 호출 하 여 문서에 대 한 영구 URL을 가져옵니다.
 1. 파일 공급자 확장은 URL을에 문자열로 반환 합니다 `NSUrl` .
 1. 는 `NSUrl` URL을 책갈피로 묶어 응용 프로그램에 반환 합니다.
 1. 응용 프로그램이 백그라운드에서 시작 하 여 상태를 복원 해야 하는 경우 책갈피를에 전달 `NSUrl` 합니다.
-1. `NSUrl`파일의 URL을 사용 하 여 파일 공급자 확장명을 호출 합니다.
+1. `NSUrl` 파일의 URL을 사용 하 여 파일 공급자 확장명을 호출 합니다.
 1. 파일 확장명 공급자는 파일에 액세스 하 고 파일의 위치를로 반환 합니다 `NSUrl` .
 1. 파일 위치는 보안 정보와 함께 제공 되며 응용 프로그램으로 반환 됩니다.
 
@@ -1126,6 +1126,6 @@ Mac OS X Yosemite에서 Apple은 이전 버전과의 호환성을 제공 하지 
 
 ## <a name="related-links"></a>관련 링크
 
-- [DocPicker (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-docpicker)
+- [DocPicker (샘플)](/samples/xamarin/ios-samples/ios8-docpicker)
 - [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [앱 확장 소개](~/ios/platform/extensions.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b1ba548135cedd951d7f0a349f273b29182839d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: deda3a96272db42af17221e613822b858d57abb1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928681"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436335"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Xamarin.ios의 멀티 터치 핑거 추적
 
@@ -22,7 +22,7 @@ _이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 �
 
 손가락이 화면을 처음 터치 하면 iOS [`UITouch`](xref:UIKit.UITouch) 는 해당 손가락에 대 한 개체를 만듭니다. 이 개체는 손가락 화면에서 손가락을 이동한 후 화면에서 리프트 하는 것과 동일 하 게 유지 됩니다. 이때 개체가 삭제 됩니다. 손가락을 추적 하려면 프로그램에서이 개체를 직접 저장 하지 않아야 합니다 `UITouch` . 대신 [`Handle`](xref:Foundation.NSObject.Handle) 형식의 속성을 사용 하 여 이러한 개체를 고유 하 게 식별할 수 있습니다 `IntPtr` `UITouch` .
 
-거의 항상 개별 손가락을 추적 하는 프로그램은 터치 추적을 위한 사전을 유지 관리 합니다. IOS 프로그램의 경우 사전 키는 `Handle` 특정 손가락을 식별 하는 값입니다. 사전 값은 응용 프로그램에 따라 달라 집니다. [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) 프로그램에서 터치와 릴리스 사이에 있는 각 손가락 스트로크가 해당 손가락으로 그린 선을 렌더링 하는 데 필요한 모든 정보를 포함 하는 개체와 연결 됩니다. 프로그램은 이러한 용도로 작은 클래스를 정의 합니다 `FingerPaintPolyline` .
+거의 항상 개별 손가락을 추적 하는 프로그램은 터치 추적을 위한 사전을 유지 관리 합니다. IOS 프로그램의 경우 사전 키는 `Handle` 특정 손가락을 식별 하는 값입니다. 사전 값은 응용 프로그램에 따라 달라 집니다. [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) 프로그램에서 터치와 릴리스 사이에 있는 각 손가락 스트로크가 해당 손가락으로 그린 선을 렌더링 하는 데 필요한 모든 정보를 포함 하는 개체와 연결 됩니다. 프로그램은 이러한 용도로 작은 클래스를 정의 합니다 `FingerPaintPolyline` .
 
 ```csharp
 class FingerPaintPolyline
@@ -58,7 +58,7 @@ List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 
 이 개체는 `List` 그려지는 순서와 동일 합니다.
 
-`FingerPaintCanvasView`는로 정의 된 5 개의 메서드를 재정의 합니다 `View` .
+`FingerPaintCanvasView` 는로 정의 된 5 개의 메서드를 재정의 합니다 `View` .
 
 - [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
 - [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
@@ -181,7 +181,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 }
 ```
 
-이러한 처리를 통해 [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) 프로그램은 개별 손가락을 추적 하 고 결과를 화면에 그릴 수 있습니다.
+이러한 처리를 통해 [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) 프로그램은 개별 손가락을 추적 하 고 결과를 화면에 그릴 수 있습니다.
 
 [![개별 손가락 추적 및 화면에 결과 그리기](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
@@ -190,4 +190,4 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 ## <a name="related-links"></a>관련 링크
 
 - [동급 Xamarin Android 가이드](~/android/app-fundamentals/touch/touch-tracking.md)
-- [FingerPaint (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [FingerPaint (샘플)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 69ea9b0786170345109f0845f3af6e5fd01d2b7c
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 26d4d5ef5f21d16e0de79579c4552e48975a4e2b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997113"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437137"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Xamarin에서 tvOS 아이콘 및 이미지 작업
 
@@ -38,7 +38,7 @@ Captivating 아이콘과 이미지를 만드는 것은 Apple TV 앱에 대 한 �
 
 시작 이미지는 광고 또는 미술 식의 기회가 아니므로 앱이 신속 하 게 시작 되 고 사용할 준비가 되었다는 느낌을 제공 하기 위해 존재 합니다.
 
-|시작 이미지 크기|참고|
+|시작 이미지 크기|메모|
 |---|---|
 |1920x1080px|계층화 되지 않은 .png 파일만|
 
@@ -187,7 +187,7 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 Top 선반 이미지는 단일 정적 또는 파일로 제공 될 수 있습니다 `.png` `.lsr` ( [계층화 된 이미지 만들기](#Creating-Layered-Images)참조). 또는 런타임 시 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수 있습니다 (아래의 [동적 상위 선반 콘텐츠](#Dynamic-Top-Shelf-Content) 참조).
 
-|상위 선반 이미지 크기|참고|
+|상위 선반 이미지 크기|메모|
 |---|---|
 |1920x720px|정적 .png 또는 계층화 된 .lsr 파일|
 
@@ -231,7 +231,7 @@ TvOS 프로젝트에 필요한 최상위 선반 이미지를 설정 하려면 �
 
 필요한 콘텐츠 크기는 다음과 같습니다.
 
-|Size|포스터 (2:3)|제곱 (1:1)|HDTV (16:9)|
+|크기|포스터 (2:3)|제곱 (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |실제 크기|404x608px|608x608px|908x512px|
 |안전한 영역 크기|380x570px|570x570px|852x479px|
@@ -253,7 +253,7 @@ Apple은 단면화 된 콘텐츠 행에 대해 다음과 같은 제안 사항을
 
 **배너 이미지 (추가 너비)**
 
-| Size | 해결 방법 |
+| 크기 | 해결 방법 |
 |---|---|
 |실제 크기|1940x624px|
 |안전한 영역 크기|1740x620px|
@@ -279,7 +279,7 @@ TvOS 앱이 게임 이며 지원 Game Center 포함 된 경우 몇 가지 추가
 - **대시보드 아트 워크** -Game Center 내에서 앱 대시보드의 맨 위에 표시 되는 선택적 이미지를 제공할 수 있습니다. 이러한 이미지는 포커스를 받을 수 없습니다.
 - **순위표 아트 워크** -앱에서 지 원하는 각 순위표에 대해 1 ~ 3 개의 16:9 가로 세로 비율 이미지를 제공 해야 합니다. 이러한 파일은 정적 파일 이거나 계층화 된 파일 일 수 있습니다 `.png` `.lsr` . 순위표 아트 워크는 포커스를 받을 수 있습니다.
 
-|Size|성과 아이콘|대시보드 아트 워크|순위표 아트 워크|
+|크기|성과 아이콘|대시보드 아트 워크|순위표 아트 워크|
 |---|---|---|---|
 |표시 크기|200x200px|923x150px|해당 없음|
 |실제 크기|320x320px|해당 없음|659x371px|
@@ -320,7 +320,7 @@ TvOS 9는 iOS 9의 하위 집합 이므로 Xamarin.ios 앱에 이미지를 포�
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e57b6df0f0137d5a8a8f2c0ba68793008986ba18
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0252626cb58ff334e3cff2cc60e6544e4eba18c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932186"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435381"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -115,12 +115,12 @@ WatchOS 3의 새로운 기능으로 개발자는 회전 값에 응답 하는 자
 
 Digital Crown 액세스는 다음 요소에 의해 제공 됩니다.
 
-- `WKCrownSequencer`-초당 회전에 대 한 액세스를 제공 합니다.
-- `WKCrownDelegate`-회전 델타 이벤트에 대 한 액세스를 제공 합니다.
+- `WKCrownSequencer` -초당 회전에 대 한 액세스를 제공 합니다.
+- `WKCrownDelegate` -회전 델타 이벤트에 대 한 액세스를 제공 합니다.
 
 #### <a name="rotations-per-second"></a>초당 회전
 
-Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 `CrownSequencer` 조사식 확장의의 속성을 사용 합니다 `WKInterfaceController` . 예를 들어:
+Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 `CrownSequencer` 조사식 확장의의 속성을 사용 합니다 `WKInterfaceController` . 다음은 그 예입니다.
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +128,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>회전 델타
 
-Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. `CrownDidRotate`의 override 메서드를 사용 `WKCrownDelegate` 하 여 회전 델타에 액세스 합니다. 예를 들어:
+Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. `CrownDidRotate`의 override 메서드를 사용 `WKCrownDelegate` 하 여 회전 델타에 액세스 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -252,8 +252,8 @@ WatchOS 3의 새로운 기능으로 개발자는 이제 앱의 사용자 인터�
 
 이 기능을 지원 하기 위해 새 인터페이스 클래스 두 개가 추가 되었습니다.
 
-- `WKInterfaceSKScene`-SpriteKit 2D 그래픽을 사용 하는 데 사용 됩니다.
-- `WKInterfaceSCNScene`-SceneKit 3D 그래픽을 사용 하는 데 사용 됩니다.
+- `WKInterfaceSKScene` -SpriteKit 2D 그래픽을 사용 하는 데 사용 됩니다.
+- `WKInterfaceSCNScene` -SceneKit 3D 그래픽을 사용 하는 데 사용 됩니다.
 
 이러한 개체를 사용 하려면 Xcode의 Interface Builder에서 watch 앱의 스토리 보드 안쪽에 있는 디자인 화면으로 끌고 **특성 검사자** 를 사용 하 여 구성 하면 됩니다.
 
@@ -354,4 +354,4 @@ Apple은 다음을 제안 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [watchOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2cc27b18bdb58ee633cae2d61e8cc6a8064df581
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0a2ca9fea8135e0188829b8651e9ec15303b933d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937131"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436517"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Xamarin.ios의 메시지 앱 확장 기본 사항
 
@@ -37,7 +37,7 @@ IOS 10의 새로운 기능으로, 이제 메시지 앱은 자체의 전용 기�
 
 IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색할 수 있도록 하는 인라인 앱 특성이 추가 되었습니다. 예를 들어 한 사용자가 두 번째 사용자가 설치 하지 않은 앱에서 다른 사용자에 게 콘텐츠를 전송 하는 경우 (예: 스티커) 보내는 앱의 이름이 메시지 기록의 내용에 나열 됩니다. 사용자가 앱의 이름을 탭 하면 메시지 앱 스토어가 열리고 앱이 스토어에서 선택 됩니다.
 
-메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예를 들어:
+메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 다음은 그 예입니다.
 
 - 앱 내 구매에 액세스할 수 있습니다.
 - Apple Pay에 대 한 액세스 권한이 있습니다.
@@ -99,7 +99,7 @@ Apple은 다양 한 색이 지정 된 배경 (흰색, 검정, 빨강, 노랑, �
 
 Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기를 설정 하 고 요청 된 크기와 일치 하는 이미지 자산만 제공 하 여 메시지 앱 내부의 스티커 브라우저에서 최상의 결과를 얻을 수 있습니다.
 
-자세한 내용은 [아이스크림 작성기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) 앱 및 Apple의 [메시지 참조](https://developer.apple.com/reference/messages)를 참조 하세요.
+자세한 내용은 [아이스크림 작성기](/samples/xamarin/ios-samples/ios10-icecreambuilder) 앱 및 Apple의 [메시지 참조](https://developer.apple.com/reference/messages)를 참조 하세요.
 
 ## <a name="creating-a-custom-sticker-experience"></a>사용자 지정 스티커 환경 만들기
 
@@ -147,9 +147,9 @@ Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기�
 
 메시지 프레임 워크는 사용자에 게 사용 가능한 스티커를 제공 하기 위한 클래스를 제공 합니다.
 
-- `MSStickerBrowserViewController`-스티커가 표시 될 뷰를 제어 합니다. 또한 인터페이스를 준수 하 여 `IMSStickerBrowserViewDataSource` 지정 된 브라우저 인덱스의 스티커 개수와 스티커를 반환 합니다.
-- `MSStickerBrowserView`-사용 가능한 스티커가 표시 되는 뷰입니다.
-- `MSStickerSize`-브라우저 보기에 표시 되는 스티커 표의 개별 셀 크기를 결정 합니다.
+- `MSStickerBrowserViewController` -스티커가 표시 될 뷰를 제어 합니다. 또한 인터페이스를 준수 하 여 `IMSStickerBrowserViewDataSource` 지정 된 브라우저 인덱스의 스티커 개수와 스티커를 반환 합니다.
+- `MSStickerBrowserView` -사용 가능한 스티커가 표시 되는 뷰입니다.
+- `MSStickerSize` -브라우저 보기에 표시 되는 스티커 표의 개별 셀 크기를 결정 합니다.
 
 ### <a name="creating-a-custom-sticker-browser"></a>사용자 지정 스티커 브라우저 만들기
 
@@ -711,6 +711,6 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 ## <a name="related-links"></a>관련 링크
 
-- [아이스크림 빌더 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [아이스크림 빌더 (샘플)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [메시지 참조](https://developer.apple.com/reference/messages)
 - [앱 확장 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

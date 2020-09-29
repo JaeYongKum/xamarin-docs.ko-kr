@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 342558908c5f42941c9e6e7ef5c7f75d8e0fa9d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 82367d63d1cc7b52d69de52ee635e380cd68c382
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937984"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435656"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
 
@@ -51,7 +51,7 @@ Xamarin.ios에서이 특정 목표-C API를 사용 하는 데 필요한 모든 �
 - **Xcode 및 IOS SDK** -Apple의 Xcode와 최신 ios API는 개발자의 컴퓨터에 설치 하 고 구성 해야 합니다.
 - **[Xcode 명령줄 도구](#Installing_the_Xcode_Command_Line_Tools)** -현재 설치 된 Xcode 버전에 대해 Xcode 명령줄 도구를 설치 해야 합니다 (설치 정보는 아래 참조).
 - **Mac용 Visual Studio 또는 Visual studio** -개발 컴퓨터에서 최신 버전의 Mac용 Visual Studio 또는 visual studio를 설치 하 고 구성 해야 합니다. Xamarin.ios 응용 프로그램을 개발 하려면 Apple Mac이 필요 하 고, Visual Studio를 사용 하는 경우 [xamarin.ios 빌드 호스트](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 에 연결 해야 합니다.
-- **최신 버전의 목표 Sharpie** - [여기](~/cross-platform/macios/binding/objective-sharpie/get-started.md)에서 다운로드 한 목표 Sharpie 도구의 현재 복사본입니다. 이미 목표 Sharpie이 설치 되어 있는 경우 다음을 사용 하 여 최신 버전으로 업데이트할 수 있습니다.`sharpie update`
+- **최신 버전의 목표 Sharpie** - [여기](~/cross-platform/macios/binding/objective-sharpie/get-started.md)에서 다운로드 한 목표 Sharpie 도구의 현재 복사본입니다. 이미 목표 Sharpie이 설치 되어 있는 경우 다음을 사용 하 여 최신 버전으로 업데이트할 수 있습니다. `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"></a>
 
@@ -491,7 +491,7 @@ Europa:Resources kmullins$
 
 다음으로 파일의 내용으로 동일한 작업을 수행 하 고 `InfColorPicker.enums.cs` 파일에 복사 하 여 붙여 넣는 방식으로 `StructsAndEnums.cs` `using` 문을 그대로 둡니다.
 
-[![StructsAndEnums.cs 파일의 내용입니다.](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
+[![StructsAndEnums.cs 파일의 내용입니다. ](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 또한 목표 Sharpie 특성을 사용 하 여 바인딩에 주석이 추가 되었음을 알 수 있습니다 `[Verify]` . 이러한 특성은 바인딩을 원래 C/목표값-C 선언과 비교 하 여 (바인딩된 선언 위의 설명에 제공 됨) 목표 Sharpie이 올바른 것을 확인 해야 함을 의미 합니다. 바인딩을 확인 한 후에는 verify 특성을 제거 해야 합니다. 자세한 내용은 [확인](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) 가이드를 참조 하세요.
 
@@ -673,7 +673,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 [![응용 프로그램 실행](walkthrough-images/run01.png)](walkthrough-images/run01.png#lightbox)
 
-지금까지 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
+축하합니다! 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
 
 ### <a name="implementing-a-weak-delegate"></a>약한 대리자 구현
 
@@ -726,4 +726,4 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 형식 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 - [목적-C 개발자를 위한 Xamarin](~/ios/get-started/objective-c-developers/index.md)
-- [프레임 워크 디자인 지침](https://msdn.microsoft.com/library/ms229042.aspx)
+- [프레임 워크 디자인 지침](/dotnet/standard/design-guidelines/)

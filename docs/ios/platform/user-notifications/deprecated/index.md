@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2016
-ms.openlocfilehash: a97885518c0646d2d8315b5da5eb12c71d693cf6
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0822f630d74563f5e6e0dcefa456cf5f5c07a8f5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574082"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436942"
 ---
 # <a name="deprecated-notification-technologies-in-xamarinios"></a>Xamarin.ios에서 사용 되지 않는 알림 기술
 
@@ -43,4 +43,4 @@ ms.locfileid: "84574082"
 
 ## <a name="related-links"></a>관련 링크
 
-- [알림 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
+- [알림 (샘플)](/samples/xamarin/ios-samples/notifications)

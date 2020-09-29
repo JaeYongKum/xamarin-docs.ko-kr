@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: c65a06b8f2a04eda669b2d741135538fa8a583f2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 587ce48f3d40bb4f16634409920b01d150d628ef
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571729"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436315"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Xamarin.ios의 사용자 기본값 작업
 
@@ -77,16 +77,16 @@ var plist = new NSUserDefaults ("group.com.xamarin.todaysharing", NSUserDefaults
 
 원하는 사용자 기본 데이터베이스에 액세스 한 후에는 키/값 쌍을 사용 하 여 기본값에서 값을 읽을 수 있으며 읽고 있는 데이터의 형식에 따라 여러 가지 편리한 메서드를 사용할 수 있습니다.
 
-- `ArrayForKey`- `NSObjects` 지정 된 키 값에 대 한의 배열을 반환 합니다.
-- `BoolForKey`-지정 된 키에 대 한 부울 값을 반환 합니다.
-- `DataForKey`-지정 된 `NSData` 키에 대 한 개체를 반환 합니다.
-- `DictionaryForKey`-지정 된 `NSDictionary` 키에 대 한를 반환 합니다.
-- `DoubleForKey`-지정 된 키에 대 한 double 값을 반환 합니다.
-- `FloatForKey`-지정 된 키에 대 한 부동 소수점 값을 반환 합니다.
-- `IntForKey`-지정 된 키에 대 한 정수 값을 반환 합니다.
-- `StringArrayForKey`- `String` 지정 된 키 값에서 개체의 배열을 반환 합니다.
-- `StringForKey`-지정 된 키에 대 한 문자열 값을 반환 합니다.
-- `URLForKey`-지정 된 `NSUrl` 키에 대 한 값을 반환 합니다.
+- `ArrayForKey` - `NSObjects` 지정 된 키 값에 대 한의 배열을 반환 합니다.
+- `BoolForKey` -지정 된 키에 대 한 부울 값을 반환 합니다.
+- `DataForKey` -지정 된 `NSData` 키에 대 한 개체를 반환 합니다.
+- `DictionaryForKey` -지정 된 `NSDictionary` 키에 대 한를 반환 합니다.
+- `DoubleForKey` -지정 된 키에 대 한 double 값을 반환 합니다.
+- `FloatForKey` -지정 된 키에 대 한 부동 소수점 값을 반환 합니다.
+- `IntForKey` -지정 된 키에 대 한 정수 값을 반환 합니다.
+- `StringArrayForKey` - `String` 지정 된 키 값에서 개체의 배열을 반환 합니다.
+- `StringForKey` -지정 된 키에 대 한 문자열 값을 반환 합니다.
+- `URLForKey` -지정 된 `NSUrl` 키에 대 한 값을 반환 합니다.
 
 예를 들어 다음 코드는 사용자 기본값에서 부울 값을 읽습니다.
 
@@ -106,11 +106,11 @@ var useHeader = plist.BoolForKey("UseHeader");
 
 위의 값을 읽는 것과 마찬가지로 원하는 사용자 기본 데이터베이스에 액세스 한 후에는 키/값 쌍을 사용 하 여 기본값에 값을 쓰고 작성 되는 데이터의 형식에 따라 몇 가지 편리한 메서드를 만들 수 있습니다.
 
-- `SetBool`-지정 된 키에 지정 된 부울 값을 씁니다.
-- `SetDouble`-지정 된 키에 지정 된 double 값을 씁니다.
-- `SetFloat`-지정 된 키에 지정 된 float 값을 씁니다.
-- `SetString`-지정 된 키에 지정 된 문자열 값을 씁니다.
-- `SetURL`-지정 된 URL ( `NSUrl` ) 값을 지정 된 키에 씁니다.
+- `SetBool` -지정 된 키에 지정 된 부울 값을 씁니다.
+- `SetDouble` -지정 된 키에 지정 된 double 값을 씁니다.
+- `SetFloat` -지정 된 키에 지정 된 float 값을 씁니다.
+- `SetString` -지정 된 키에 지정 된 문자열 값을 씁니다.
+- `SetURL` -지정 된 URL ( `NSUrl` ) 값을 지정 된 키에 씁니다.
 
 예를 들어 다음 코드는 사용자 기본값에 부울 값을 기록 합니다.
 
@@ -136,6 +136,6 @@ plist.SetBool(useHeader, "UseHeader");
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [기본 설정 및 설정 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)
 - [NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/doc/constant_group/NSUserDefaults_Domains)

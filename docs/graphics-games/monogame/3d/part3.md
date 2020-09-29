@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 54a4c6e32059b6ff32b3a93abf5fd30c65f16b5f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 06309c2d746d1349a672d947e27503018b80ae40
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936632"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436955"
 ---
 # <a name="3d-coordinates-in-monogame"></a>MonoGame의 3D 좌표
 
@@ -36,7 +36,7 @@ _3d 좌표 시스템을 이해 하는 것은 3D 게임 개발의 중요 한 단�
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-이 연습에서는 3D 공간에서 개체를 이동 하는 방법을 집중적으로 설명 합니다. [여기에서 찾을 수 있는](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)모델 및 꼭 짓 점 배열의 렌더링을 위한 프로젝트를 시작 합니다. 다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하는지 확인 하 고 다음을 확인 해야 합니다.
+이 연습에서는 3D 공간에서 개체를 이동 하는 방법을 집중적으로 설명 합니다. [여기에서 찾을 수 있는](/samples/xamarin/mobile-samples/modelsandvertsmg/)모델 및 꼭 짓 점 배열의 렌더링을 위한 프로젝트를 시작 합니다. 다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하는지 확인 하 고 다음을 확인 해야 합니다.
 
 ![다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하 고이 보기를 표시 해야 합니다.](part3-images/image2.png)
 
@@ -374,7 +374,7 @@ Matrix combined = rotationMatrix * translationMatrix;
 
 `Camera`엔터티에는 입력 기반 이동을 수행 하 고 클래스에서 속성을 할당 하기 위한 속성을 제공 하는 데 필요한 모든 논리가 포함 됩니다 `BasicEffect` .
 
-먼저 정적 카메라 (입력 기반 이동 없음)를 구현 하 고 기존 프로젝트에 통합 합니다. **MonoGame3D** 이식 가능한 클래스 라이브러리 (와 동일한 프로젝트)에 새 클래스를 추가 `Robot.cs` 하 고 이름을 **Camera**로 바꿉니다. 파일 내용을 다음 코드로 바꿉니다.
+먼저 정적 카메라 (입력 기반 이동 없음)를 구현 하 고 기존 프로젝트에 통합 합니다. **MonoGame3D** 이식 가능한 클래스 라이브러리 (와 동일한 프로젝트)에 새 클래스를 추가 `Robot.cs` 하 고 이름을 **Camera**로 바꿉니다. 파일의 내용을 다음 코드로 바꿉니다.
 
 ```csharp
 using System;
@@ -572,9 +572,9 @@ namespace MonoGame3D
 
 이전 버전의에 대 한 수정 `Game1` (로 식별 됨)은 `// New camera code` 다음과 같습니다.
 
-- `Camera`필드의`Game1`
-- `Camera`인스턴스화`Game1.Initialize`
-- `Camera.Update`에서 호출`Game1.Update`
+- `Camera` 필드의 `Game1`
+- `Camera` 인스턴스화 `Game1.Initialize`
+- `Camera.Update` 에서 호출 `Game1.Update`
 - `Robot.Draw`이제 매개 변수를 사용 합니다. `Camera`
 - `Game1.Draw`이제 및를 사용 합니다. `Camera.ViewMatrix``Camera.ProjectionMatrix`
 
@@ -728,4 +728,4 @@ Update 메서드는 `TouchPanel.GetState` 접촉 컬렉션을 반환 하는를 �
 ## <a name="related-links"></a>관련 링크
 
 - [MonoGame API 링크](http://www.monogame.net/documentation/?page=api)
-- [완료 된 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
+- [완료 된 프로젝트 (샘플)](/samples/xamarin/monodroid-samples/monogame3dcamera)

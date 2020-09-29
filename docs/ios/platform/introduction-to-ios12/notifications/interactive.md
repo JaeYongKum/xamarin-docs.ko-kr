@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: e629cd8f481558991d02c7fb879502ebd54753bd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af06aa4dc7ea836887edcc0416cfd15ce3aa1446
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031935"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433774"
 ---
 # <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Xamarin.ios의 대화형 알림 사용자 인터페이스
 
@@ -20,7 +20,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
 
 ## <a name="sample-app-redgreennotifications"></a>샘플 앱: RedGreenNotifications
 
-[RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱에는 대화형 사용자 인터페이스를 사용 하는 알림 콘텐츠 확장이 포함 되어 있습니다.
+[RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱에는 대화형 사용자 인터페이스를 사용 하는 알림 콘텐츠 확장이 포함 되어 있습니다.
 
 이 가이드의 코드 조각은이 샘플에서 제공 됩니다.
 
@@ -58,15 +58,15 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
 
 다음 기능에 유의 하십시오.
 
-- `UNNotificationExtensionCategory` 배열은 콘텐츠 확장에서 처리 하는 알림 범주의 유형을 지정 합니다.
-- 대화형 콘텐츠를 지원 하기 위해 알림 콘텐츠 확장 프로그램은 `UNNotificationExtensionUserInteractionEnabled` 키를 `true`으로 설정 합니다.
-- `UNNotificationExtensionInitialContentSizeRatio` 키는 콘텐츠 확장의 인터페이스에 대 한 초기 높이/너비 비율을 지정 합니다.
+- `UNNotificationExtensionCategory`배열은 콘텐츠 확장에서 처리 하는 알림 범주의 유형을 지정 합니다.
+- 대화형 콘텐츠를 지원 하기 위해 알림 콘텐츠 확장은 `UNNotificationExtensionUserInteractionEnabled` 키를로 설정 합니다 `true` .
+- `UNNotificationExtensionInitialContentSizeRatio`키는 콘텐츠 확장의 인터페이스에 대 한 초기 높이/너비 비율을 지정 합니다.
 
 ## <a name="interactive-interface"></a>대화형 인터페이스
 
-알림 콘텐츠 확장에 대 한 인터페이스를 정의 하는 **Maininterface**는 단일 뷰 컨트롤러를 포함 하는 표준 스토리 보드입니다. 샘플 앱에서 뷰 컨트롤러는 `NotificationViewController`유형이 며 이미지 뷰, 3 개의 단추 및 슬라이더를 포함 합니다. 스토리 보드는 **NotificationViewController.cs**에 정의 된 처리기와 이러한 컨트롤을 연결 합니다.
+알림 콘텐츠 확장에 대 한 인터페이스를 정의 하는 **Maininterface**는 단일 뷰 컨트롤러를 포함 하는 표준 스토리 보드입니다. 샘플 앱에서 뷰 컨트롤러는 형식이 `NotificationViewController` 며 이미지 뷰, 3 개의 단추 및 슬라이더를 포함 합니다. 스토리 보드는 **NotificationViewController.cs**에 정의 된 처리기와 이러한 컨트롤을 연결 합니다.
 
-- **앱 시작** 단추 처리기는 `ExtensionContext`에서 `PerformNotificationDefaultAction` 작업 메서드를 호출 하 여 앱을 시작 합니다.
+- **앱 시작** 단추 처리기는 앱을 `PerformNotificationDefaultAction` 시작 하는에 대 한 작업 메서드를 호출 합니다 `ExtensionContext` .
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
     }
     ```
 
-    앱에서 사용자 알림 센터의 `Delegate` (샘플 앱에서는 `AppDelegate`)가 `DidReceiveNotificationResponse` 메서드에서 상호 작용에 응답할 수 있습니다.
+    앱에서 사용자 알림 센터 `Delegate` (샘플 앱 `AppDelegate` )는 메서드의 상호 작용에 응답할 수 있습니다   `DidReceiveNotificationResponse` .
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
             // ...
     ```
 
-- 알림 **해제** 단추 처리기는 `ExtensionContext`에서 `DismissNotificationContentExtension`를 호출 하 여 알림을 닫습니다.
+- 알림 **해제** 단추 처리기는 `DismissNotificationContentExtension` 알림을 닫는에 대해를 호출 합니다 `ExtensionContext` .
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)
@@ -117,7 +117,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [샘플 앱-RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [Xamarin.ios의 사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [사용자 알림의 새로운 기능 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

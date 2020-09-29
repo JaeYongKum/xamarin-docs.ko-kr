@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: cb38d222cecd1a6c5bb65b0fb376888770dd0e49
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 88eb3dec0c72acd6984b226eae5acee4feb3eaac
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031970"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433822"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Xamarin.ios의 동적 알림 작업 단추
 
@@ -20,7 +20,7 @@ IOS 12에서 알림은 연결 된 작업 단추를 동적으로 추가, 제거 �
 
 ## <a name="sample-app-redgreennotifications"></a>샘플 앱: RedGreenNotifications
 
-이 가이드의 코드 조각은 [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱에서 제공 됩니다 .이 샘플 앱에서는 ios 12에서 xamarin.ios를 사용 하 여 알림 작업 단추를 사용 하는 방법을 보여 줍니다.
+이 가이드의 코드 조각은 [RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱에서 제공 됩니다 .이 샘플 앱에서는 ios 12에서 xamarin.ios를 사용 하 여 알림 작업 단추를 사용 하는 방법을 보여 줍니다.
 
 이 샘플 앱은 두 가지 유형의 로컬 알림 (빨간색 및 녹색)을 보냅니다.
 앱에서 알림을 보낸 후 3D 터치를 사용 하 여 사용자 지정 사용자 인터페이스를 확인 합니다. 그런 다음 알림의 작업 단추를 사용 하 여 표시 되는 이미지를 회전 합니다. 이미지가 회전 하면 필요에 따라 **회전 다시 설정** 단추가 표시 되 고 사라집니다.
@@ -32,12 +32,12 @@ IOS 12에서 알림은 연결 된 작업 단추를 동적으로 추가, 제거 �
 알림의 범주가 기본 작업 단추를 결정 합니다.
 
 응용 프로그램이 시작 되는 동안 알림 범주를 만들고 등록 합니다.
-예를 들어 [샘플 앱](#sample-app-redgreennotifications)에서 `AppDelegate`의 `FinishedLaunching` 메서드는 다음을 수행 합니다.
+예를 들어 [샘플 앱](#sample-app-redgreennotifications)에서 `FinishedLaunching` 의 메서드는 `AppDelegate` 다음을 수행 합니다.
 
 - 빨간색 알림에 대 한 범주 하나를 정의 하 고 다른 범주를 녹색 알림으로 정의 합니다.
-- [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*) 를 호출 하 여 이러한 범주를 등록 합니다.
-`UNUserNotificationCenter`의 메서드
-- 단일 [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction) 연결
+- 다음을 호출 하 여 이러한 범주를 등록 합니다. [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
+메서드 `UNUserNotificationCenter`
+- 단일를 연결 합니다. [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 각 범주에
 
 다음 샘플 코드에서는이 작업을 수행 하는 방법을 보여 줍니다.
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-이 코드를 기반으로 [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier) 의 모든 알림
+해당 코드를 기반으로 하는 모든 알림 [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 는 "빨간색-범주" 또는 "녹색 범주"는 기본적으로 **20 ° 회전** 동작 단추를 표시 합니다.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>알림 작업 단추의 앱 내 처리
 
-`UNUserNotificationCenter`에는 [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate)형식의 `Delegate` 속성이 있습니다.
+`UNUserNotificationCenter` 에는 `Delegate` 형식의 속성이 [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate) 있습니다.
 
-샘플 앱에서 `AppDelegate`은 `FinishedLaunching`에서 사용자 알림 센터의 대리자로 설정 됩니다.
+샘플 앱에서는 `AppDelegate` 자체를 사용자 알림 센터의 대리자로 설정 합니다 `FinishedLaunching` .
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-그런 다음 `AppDelegate`를 구현 [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+그런 다음을 구현 합니다. `AppDelegate`[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 작업 단추 탭을 처리 하려면 다음을 수행 합니다.
 
 ```csharp
@@ -119,21 +119,21 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
         }
 ```
 
-이 `DidReceiveNotificationResponse` 구현에서는 알림의 **20 ° 회전** 작업 단추를 처리 하지 않습니다. 대신 알림의 콘텐츠 확장은이 단추의 탭을 처리 합니다. 다음 섹션에서는 알림 작업 단추 처리에 대해 자세히 설명 합니다.
+이 구현 `DidReceiveNotificationResponse` 에서는 알림의 **20 ° 회전** 동작 단추가 처리 되지 않습니다. 대신 알림의 콘텐츠 확장은이 단추의 탭을 처리 합니다. 다음 섹션에서는 알림 작업 단추 처리에 대해 자세히 설명 합니다.
 
 ## <a name="action-buttons-in-the-notification-content-extension"></a>알림 콘텐츠 확장의 작업 단추
 
 알림 콘텐츠 확장은 알림에 대 한 사용자 지정 인터페이스를 정의 하는 보기 컨트롤러를 포함 합니다.
 
-이 뷰 컨트롤러는 `GetNotificationActions` 및 `SetNotificationActions` 메서드를 사용할 수 있습니다 [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+이 뷰 컨트롤러는의 `GetNotificationActions` 및 `SetNotificationActions` 메서드를 사용할 수 있습니다. [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 알림 작업 단추를 액세스 하 고 수정 하는 속성입니다.
 
 샘플 앱에서 알림 콘텐츠 확장의 뷰 컨트롤러는 이미 존재 하는 작업 단추를 탭 하 여 응답 하는 경우에만 작업 단추를 수정 합니다.
 
 > [!NOTE]
-> 알림 콘텐츠 확장 프로그램은 해당 뷰 컨트롤러의 [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) 메서드에서 [Iunnotificationcontentextension](xref:UserNotificationsUI.IUNNotificationContentExtension)의 일부로 선언 된 작업 단추 탭에 응답할 수 있습니다.
+> 알림 콘텐츠 확장 프로그램은 [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) [Iunnotificationcontentextension](xref:UserNotificationsUI.IUNNotificationContentExtension)의 일부로 선언 된 해당 뷰 컨트롤러의 메서드에 있는 작업 단추 탭에 응답할 수 있습니다.
 >
-> [위에서 설명한](#in-app-handling-of-notification-action-buttons)`DidReceiveNotificationResponse` 메서드와 이름을 공유 하지만이는 다른 메서드입니다.
+> `DidReceiveNotificationResponse` [위에서 설명한](#in-app-handling-of-notification-action-buttons)메서드와 이름을 공유 하지만이는 다른 메서드입니다.
 >
 > 알림 콘텐츠 확장 프로그램이 단추 탭 처리를 완료 한 후에는 주 응용 프로그램이 동일한 단추 탭을 처리 하도록 지시할 지 여부를 선택할 수 있습니다. 이렇게 하려면 [Unnotificationcontentextensionresponseoption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) 의 적절 한 값을 완료 처리기에 전달 해야 합니다.
 >
@@ -184,11 +184,11 @@ public void DidReceiveNotificationResponse(UNNotificationResponse response, Acti
 }
 ```
 
-이 경우 메서드는 완료 처리기에 `UNNotificationContentExtensionResponseOption.DoNotDismiss`를 전달 합니다. 이는 알림의 인터페이스가 열린 상태를 유지 하는 것을 의미 합니다.
+이 경우 메서드는 `UNNotificationContentExtensionResponseOption.DoNotDismiss` 완료 처리기에 전달 됩니다. 이는 알림의 인터페이스가 열린 상태를 유지 하는 것을 의미 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [샘플 앱-RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [Xamarin.ios의 사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md)
 - [조치 가능한 알림 유형 선언](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 745bfbc56dec12b7d46003a1d488e5638dc6c110
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031881"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435174"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Xamarin.ios의 Provisional 알림
 
@@ -22,12 +22,12 @@ Provisional 알림을 사용 하면 앱에서 사용자의 명시적인 사전 �
 
 ## <a name="sample-app-redgreennotifications"></a>샘플 앱: RedGreenNotifications
 
-Provisional 알림을 보내는 [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱을 살펴보세요.
+Provisional 알림을 보내는 [RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications) 샘플 앱을 살펴보세요.
 
 ## <a name="sending-provisional-notifications"></a>Provisional 알림 보내기
 
-Provisional 알림을 보내려면 [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*) 에 옵션으로 `UNAuthorizationOptions.Provisional`를 제공 합니다.
-`UNUserNotificationCenter`의 메서드:
+Provisional 알림을 전송 하려면을 `UNAuthorizationOptions.Provisional` 옵션으로 제공 합니다. [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+메서드 `UNUserNotificationCenter` :
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -41,11 +41,11 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-사용자가 provisional 알림을 중요 한 배달으로 승격 하는 경우 `RequestAuthorization`에 전달 된 `UNAuthorizationOptions` 값이 새 알림 배달 설정 (위 코드에서는 `UNAuthorizationOptions.Alert` 및 `UNAuthorizationOptions.Sound`)을 결정 합니다.
+사용자가 provisional 알림을 중요 한 배달으로 승격 하는 경우 `UNAuthorizationOptions` 에 전달 된 값 `RequestAuthorization` 이 새 알림 배달 설정 (위 코드에서는 및)을 결정 합니다 `UNAuthorizationOptions.Alert` `UNAuthorizationOptions.Sound` .
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [샘플 앱-RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [Xamarin.ios의 사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [사용자 알림의 새로운 기능 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

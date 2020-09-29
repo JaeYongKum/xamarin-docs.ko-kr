@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 4da0bd1c47c37430b278bed46f658b935a502e2d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fdfdd385563ee425f0e8767aed13304ae9541b94
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937880"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435356"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.ios의 통합 스토리 보드
 
@@ -28,7 +28,7 @@ IOS 8 이전에는 개발자가 및를 사용 `UIInterfaceOrientation` `UIInterf
 
 장치는 수직 축과 수평 축 모두에서 크기 클래스로 정의 되며 iOS 8에는 두 가지 유형의 크기 클래스가 있습니다.
 
-- **Regular** – 큰 화면 크기 (예: iPad) 또는 큰 크기의 느낌을 제공 하는 가젯 (예:`UIScrollView`
+- **Regular** – 큰 화면 크기 (예: iPad) 또는 큰 크기의 느낌을 제공 하는 가젯 (예: `UIScrollView`
 - **Compact** – 작은 장치 (예: iPhone)에 대 한 것입니다. 이 크기는 장치의 방향을 고려 합니다.
 
 두 가지 개념을 함께 사용 하는 경우 결과는 다음 다이어그램에 표시 된 것 처럼 서로 다른 방향으로 사용할 수 있는 다양 한 크기를 정의 하는 2 x 2 그리드입니다.
@@ -116,7 +116,7 @@ IOS 8의 새로운 기능은 개발자가 `.xib` 자동 레이아웃 및 크기 
 |--- |--- |
 |`HorizontalSizeClass`|컴팩트|
 |`VerticalSizeClass`|주기적|
-|`UserInterfaceIdom`|Phone|
+|`UserInterfaceIdom`|전화|
 |`DisplayScale`|2.0|
 
 위의 집합은 모든 특성 속성에 대 한 값을 가지 며 정규화 된 특성 컬렉션을 나타냅니다.
@@ -214,9 +214,9 @@ Size 클래스가 양쪽 방향으로 압축 되는 iPhone에서 분할 뷰 컨�
 
 iOS 8은 다음 표와 같이 개발자가 특성 변경에 참여 하는 데 사용할 수 있는 몇 가지 콜백을 제공 합니다.
 
-|상|콜백|설명|
+|단계|콜백|설명|
 |--- |--- |--- |
-|설정|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>이 메서드는 특성 변경의 시작 부분에서 특성 컬렉션이 새 값으로 설정 되기 전에 호출 됩니다.</li><li>메서드는 특성 컬렉션의 값이 변경 되 고 애니메이션이 발생 하기 전에 호출 됩니다.</li></ul>|
+|설치 프로그램|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>이 메서드는 특성 변경의 시작 부분에서 특성 컬렉션이 새 값으로 설정 되기 전에 호출 됩니다.</li><li>메서드는 특성 컬렉션의 값이 변경 되 고 애니메이션이 발생 하기 전에 호출 됩니다.</li></ul>|
 |애니메이션|`WillTransitionToTraitCollection`|이 메서드에 전달 되는 전환 코디네이터에는 개발자가 `AnimateAlongside` 기본 애니메이션과 함께 실행 되는 애니메이션을 추가 하는 데 사용할 수 있는 속성이 있습니다.|
 |정리|`WillTransitionToTraitCollection`|전환이 발생 한 후 개발자가 자체 정리 코드를 포함 하도록 하는 메서드를 제공 합니다.|
 
@@ -228,17 +228,17 @@ iOS 8은 다음 표와 같이 개발자가 특성 변경에 참여 하는 데 �
 
 이제 분할 뷰 컨트롤러가 두 열에서 하나의 열 뷰로 축소 될 때 발생 하는 상황에 대해 자세히 살펴보겠습니다. 이러한 변경의 일환으로 다음 두 가지 프로세스를 수행 해야 합니다.
 
-- 기본적으로 분할 뷰 컨트롤러는 축소 발생 후 기본 뷰 컨트롤러를 뷰로 사용 합니다. 개발자는의 메서드를 재정의 하 `GetPrimaryViewControllerForCollapsingSplitViewController` `UISplitViewControllerDelegate` 고 축소 된 상태로 표시 하려는 뷰 컨트롤러를 제공 하 여이 동작을 재정의할 수 있습니다.
+- 기본적으로 분할 뷰 컨트롤러는 축소 발생 후 기본 뷰 컨트롤러를 뷰로 사용 합니다. 개발자는의 메서드를 재정의 하  `GetPrimaryViewControllerForCollapsingSplitViewController`  `UISplitViewControllerDelegate` 고 축소 된 상태로 표시 하려는 뷰 컨트롤러를 제공 하 여이 동작을 재정의할 수 있습니다.
 - 보조 뷰 컨트롤러를 기본 뷰 컨트롤러에 병합 해야 합니다. 일반적으로 개발자는이 단계에서 어떤 작업도 수행할 필요가 없습니다. 분할 뷰 컨트롤러에는 하드웨어 장치에 따라이 단계를 자동으로 처리 하는 작업이 포함 됩니다. 그러나 개발자가이 변경과 상호 작용 하는 특별 한 경우가 있을 수 있습니다. `CollapseSecondViewController`의 메서드를 호출 `UISplitViewControllerDelegate` 하면 축소가 수행 될 때 자세히 보기 대신 마스터 뷰 컨트롤러를 표시할 수 있습니다.
 
 ### <a name="expanding-the-split-view-controller"></a>분할 뷰 컨트롤러 확장
 
 이제 분할 뷰 컨트롤러가 축소 된 상태에서 확장 될 때 발생 하는 상황을 자세히 살펴보겠습니다. 다시 한 번 수행 해야 하는 두 단계가 있습니다.
 
-- 먼저 새 기본 뷰 컨트롤러를 정의 합니다. 기본적으로 분할 뷰 컨트롤러는 축소 된 보기에서 기본 뷰 컨트롤러를 자동으로 사용 합니다. 또한 개발자는의 메서드를 사용 하 여이 동작을 재정의할 수 있습니다 `GetPrimaryViewControllerForExpandingSplitViewController` `UISplitViewControllerDelegate` .
-- 기본 뷰 컨트롤러를 선택한 후에는 보조 뷰 컨트롤러를 다시 만들어야 합니다. 다시, 분할 보기 컨트롤러에는 하드웨어 장치에 따라이 단계를 자동으로 처리 하는 작업이 포함 됩니다. 개발자는의 메서드를 호출 하 여이 동작을 재정의할 수 있습니다 `SeparateSecondaryViewController` `UISplitViewControllerDelegate` .
+- 먼저 새 기본 뷰 컨트롤러를 정의 합니다. 기본적으로 분할 뷰 컨트롤러는 축소 된 보기에서 기본 뷰 컨트롤러를 자동으로 사용 합니다. 또한 개발자는의 메서드를 사용 하 여이 동작을 재정의할 수 있습니다  `GetPrimaryViewControllerForExpandingSplitViewController`  `UISplitViewControllerDelegate` .
+- 기본 뷰 컨트롤러를 선택한 후에는 보조 뷰 컨트롤러를 다시 만들어야 합니다. 다시, 분할 보기 컨트롤러에는 하드웨어 장치에 따라이 단계를 자동으로 처리 하는 작업이 포함 됩니다. 개발자는의 메서드를 호출 하 여이 동작을 재정의할 수 있습니다  `SeparateSecondaryViewController`  `UISplitViewControllerDelegate` .
 
-분할 뷰 컨트롤러에서 기본 뷰 컨트롤러는 `CollapseSecondViewController` 의 및 메서드를 구현 하 여 뷰의 확장 및 축소 둘 다에서 파트를 재생 합니다 `SeparateSecondaryViewController` `UISplitViewControllerDelegate` . `UINavigationController`는 이러한 메서드를 구현 하 여 보조 뷰 컨트롤러를 자동으로 푸시 및 팝 합니다.
+분할 뷰 컨트롤러에서 기본 뷰 컨트롤러는 `CollapseSecondViewController` 의 및 메서드를 구현 하 여 뷰의 확장 및 축소 둘 다에서 파트를 재생 합니다 `SeparateSecondaryViewController` `UISplitViewControllerDelegate` . `UINavigationController` 는 이러한 메서드를 구현 하 여 보조 뷰 컨트롤러를 자동으로 푸시 및 팝 합니다.
 
 ### <a name="showing-view-controllers"></a>뷰 컨트롤러 표시
 
@@ -246,20 +246,20 @@ Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보�
 
 그러면 탐색 컨트롤러와 탐색 컨트롤러를 실행 하는 환경 간에 매우 긴밀 하 게 결합 됩니다. IOS 8에서 Apple은 다음과 같은 두 가지 새로운 메서드를 제공 하 여이를 분리 했습니다.
 
-- `ShowViewController`– 환경을 기반으로 새 뷰 컨트롤러를 표시 하도록 조정 합니다. 예를 들어,에서는 `UINavigationController` 단순히 새 뷰를 스택에 푸시합니다. 분할 뷰 컨트롤러에서 새 뷰 컨트롤러는 새 기본 뷰 컨트롤러로 왼쪽에 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
-- `ShowDetailViewController`–와 비슷한 방식으로 작동 `ShowViewController` 하지만, 분할 뷰 컨트롤러에서 구현 되어 세부 정보 보기를 전달 되는 새 뷰 컨트롤러로 바꿉니다. IPhone 응용 프로그램에서 볼 수 있는 것 처럼 분할 뷰 컨트롤러를 축소 하면 호출이 `ShowViewController` 메서드로 리디렉션되고 새 뷰가 기본 뷰 컨트롤러로 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우에도 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
+- `ShowViewController` – 환경을 기반으로 새 뷰 컨트롤러를 표시 하도록 조정 합니다. 예를 들어,에서는  `UINavigationController` 단순히 새 뷰를 스택에 푸시합니다. 분할 뷰 컨트롤러에서 새 뷰 컨트롤러는 새 기본 뷰 컨트롤러로 왼쪽에 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
+- `ShowDetailViewController` –와 비슷한 방식으로 작동  `ShowViewController` 하지만, 분할 뷰 컨트롤러에서 구현 되어 세부 정보 보기를 전달 되는 새 뷰 컨트롤러로 바꿉니다. IPhone 응용 프로그램에서 볼 수 있는 것 처럼 분할 뷰 컨트롤러를 축소 하면 호출이  `ShowViewController` 메서드로 리디렉션되고 새 뷰가 기본 뷰 컨트롤러로 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우에도 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
 
 이러한 메서드는 리프 뷰 컨트롤러에서 시작 하 고 새 뷰의 표시를 처리할 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 뷰 계층 구조를 탐색 하는 방식으로 작동 합니다.
 
 개발자 `ShowViewController` `ShowDetailViewController` 는 자체 사용자 지정 뷰 컨트롤러에서 및을 구현 하 여 및에서 제공 하는 것과 동일한 자동화 된 기능을 얻을 수 있습니다 `UINavigationController` `UISplitViewController` .
 
-### <a name="how-it-works"></a>작동 방법
+### <a name="how-it-works"></a>작동 방식
 
 이 섹션에서는 이러한 메서드를 iOS 8에서 실제로 구현 하는 방법을 살펴보겠습니다. 먼저 새 메서드를 살펴보겠습니다 `GetTargetForAction` .
 
  [![새 GetTargetForAction 메서드](unified-storyboards-images/gettargetforaction.png)](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-이 메서드는 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 예를 들어:
+이 메서드는 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 다음은 그 예입니다.
 
 1. `ShowViewController`메서드가 호출 되 면이 메서드를 구현 하는 체인의 첫 번째 뷰 컨트롤러가 탐색 컨트롤러 이므로 새 뷰의 부모로 사용 됩니다.
 1. `ShowDetailViewController`대신 메서드를 호출한 경우 분할 뷰 컨트롤러는이를 구현 하기 위한 첫 번째 뷰 컨트롤러 이므로 부모로 사용 됩니다.
@@ -294,7 +294,7 @@ IPhone에서 적응 사진 응용 프로그램을 실행 하는 경우 사용자
 
  [![분할 뷰 컨트롤러는 여기에 표시 된 대로 마스터 및 세부 정보 보기를 표시 합니다.](unified-storyboards-images/rotation.png)](unified-storyboards-images/rotation.png#lightbox)
 
-이렇게 `UpdateConstraintsForTraitCollection` 하려면 뷰 컨트롤러의 메서드를 재정의 하 고의 값을 기반으로 제약 조건을 조정 합니다 `VerticalSizeClass` . 예를 들어:
+이렇게 `UpdateConstraintsForTraitCollection` 하려면 뷰 컨트롤러의 메서드를 재정의 하 고의 값을 기반으로 제약 조건을 조정 합니다 `VerticalSizeClass` . 다음은 그 예입니다.
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -350,7 +350,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>전환 애니메이션 추가
 
-적응 사진 응용 프로그램의 분할 보기 컨트롤러가 축소 된 상태에서 확장 된 상태로 전환 되 면 `WillTransitionToTraitCollection` 뷰 컨트롤러의 메서드를 재정의 하 여 애니메이션이 기본 애니메이션에 추가 됩니다. 예를 들어:
+적응 사진 응용 프로그램의 분할 보기 컨트롤러가 축소 된 상태에서 확장 된 상태로 전환 되 면 `WillTransitionToTraitCollection` 뷰 컨트롤러의 메서드를 재정의 하 여 애니메이션이 기본 애니메이션에 추가 됩니다. 다음은 그 예입니다.
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -749,7 +749,7 @@ Mac용 Visual Studio로 돌아가서 응용 프로그램이 실행 되는 것을
 
 이전 버전인 iOS 7과의 호환성을 유지 하려면 `Default.png` ios 8 응용 프로그램에서 일반적인 이미지 자산을 일반적인 방식으로 포함 합니다. ios는 이전 동작으로 돌아가서 iOS 7 장치에서 실행 될 때 해당 파일을 시작 화면으로 사용 합니다.
 
-Xamarin에서 동적 실행 화면의 구현을 보려면이 문서에 연결 된 [동적 시작](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) 화면 샘플 iOS 8 응용 프로그램을 확인 하세요.
+Xamarin에서 동적 실행 화면의 구현을 보려면이 문서에 연결 된 [동적 시작](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) 화면 샘플 iOS 8 응용 프로그램을 확인 하세요.
 
 ## <a name="summary"></a>요약
 
@@ -759,8 +759,8 @@ Xamarin에서 동적 실행 화면의 구현을 보려면이 문서에 연결 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [적응 사진 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
-- [동적 실행 화면 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [적응 사진 (샘플)](/samples/xamarin/ios-samples/ios8-adaptivephotos)
+- [동적 실행 화면 (샘플)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [IOS8의 동적 레이아웃-2014 (비디오)](https://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)

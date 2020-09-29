@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: e89b24572d1581c83868b90a4da438f8fd7f91e4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f9ef6e833fe48bb2b124f02d741a39e4141e56e6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936940"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436360"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 
@@ -80,7 +80,7 @@ Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을
 
 12. 개발 프로 비전 프로필을 만들려면 프로 **비전 프로필** 섹션으로 이동 하 고 단계에 따라 방금 만든 앱 Id를 사용 합니다.
 
-13. 프로 비전 프로필을 만들었으면 **Xcode Organizer** 를 열고 새로 고칩니다. 만든 프로 비전 프로필이 표시 되지 않으면 iOS 프로 비전 포털에서 프로필을 다운로드 하 고 수동으로 가져와야 할 수 있습니다. 다음 스크린샷은 프로 비전 프로필이 추가 된 이끌이의 예를 보여 줍니다.  
+13. 프로 비전 프로필을 만들었으면  **Xcode Organizer** 를 열고 새로 고칩니다. 만든 프로 비전 프로필이 표시 되지 않으면 iOS 프로 비전 포털에서 프로필을 다운로드 하 고 수동으로 가져와야 할 수 있습니다. 다음 스크린샷은 프로 비전 프로필이 추가 된 이끌이의 예를 보여 줍니다.  
     [![이 스크린샷은 프로 비전 프로필이 추가 된 이끌이의 예를 보여 줍니다.](remote-notifications-in-ios-images/image13new.png)](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 14. 이 시점에서 새로 만든 프로 비전 프로필을 사용 하도록 Xamarin.ios 프로젝트를 구성 해야 합니다. 다음 스크린샷에 표시 된 것 처럼 **IOS 번들 서명** 탭의 **프로젝트 옵션** 대화 상자에서이 작업을 수행할 수 있습니다.  
@@ -88,9 +88,9 @@ Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을
 
 이 시점에서 응용 프로그램은 푸시 알림과 함께 작동 하도록 구성 됩니다. 그러나 인증서에는 여전히 몇 가지 단계가 필요 합니다. 이 인증서는 PKCS12 (개인 정보 교환) 인증서가 필요한 PushSharp와 호환 되지 않는 DER 형식입니다. PushSharp에서 사용할 수 있도록 인증서를 변환 하려면 다음 최종 단계를 수행 합니다.
 
-1. **인증서 파일** -로그인을 IOS 프로 비전 포털에 다운로드 하 고 인증서 탭을 선택한 후 올바른 프로 비전 프로필과 연결 된 인증서를 선택 하 고 **다운로드** 를 선택 합니다.
+1. **인증서 파일** -로그인을 IOS 프로 비전 포털에 다운로드 하 고 인증서 탭을 선택한 후 올바른 프로 비전 프로필과 연결 된 인증서를 선택 하 고  **다운로드** 를 선택 합니다.
 1. 키 **집합 액세스 열기** -응용 프로그램은 OS X의 암호 관리 시스템에 대 한 GUI 인터페이스입니다.
-1. **인증서 가져오기** -인증서이 아직 설치 되지 않은 경우 **파일 ... **키 집합 액세스 메뉴에서 항목을 가져옵니다. 위에서 내보낸 인증서로 이동 하 여 선택 합니다.
+1. **인증서 가져오기** -인증서이 아직 설치 되지 않은 경우  **파일 ... ** 키 집합 액세스 메뉴에서 항목을 가져옵니다. 위에서 내보낸 인증서로 이동 하 여 선택 합니다.
 1. **인증서 내보내기** -연결 된 개인 키가 표시 되도록 인증서를 확장 하 고 키를 마우스 오른쪽 단추로 클릭 한 다음 내보내기를 선택 합니다. 내보낸 파일의 파일 이름 및 암호를 입력 하 라는 메시지가 표시 됩니다.
 
 이 시점에서 인증서를 사용 하 여 작업을 수행 합니다. IOS 응용 프로그램에 서명 하 고 해당 인증서를 서버 응용 프로그램의 PushSharp에서 사용할 수 있는 형식으로 변환 하는 데 사용 되는 인증서를 만들었습니다. 다음으로 iOS 응용 프로그램이 APNS와 상호 작용 하는 방식을 살펴보겠습니다.
@@ -176,7 +176,7 @@ public override void FailedToRegisterForRemoteNotifications (UIApplication appli
 
 ## <a name="related-links"></a>관련 링크
 
-- [알림-로컬 및 원격 알림 시연 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
+- [알림-로컬 및 원격 알림 시연 (샘플)](/samples/xamarin/ios-samples/notifications)
 - [개발자를 위한 로컬 및 푸시 알림](https://developer.apple.com/notifications/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](/dotnet/api/uikit.UIRemoteNotificationType)

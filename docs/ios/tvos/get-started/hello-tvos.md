@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 55e41c01421e2cd5a0bb5c3a0a9fe2d025c8a223
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: beaa26e0d028fb614baf76ff52d05b80584f14d4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938049"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435260"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>tvOS 빠른 시작 가이드 시작
 
@@ -38,7 +38,7 @@ TvOS를 사용 하면 *Swift* (또는 *객관적인 c*) 및 *Xcode*에서 개발
 
 다음 개념을 다룹니다.
 
-- **Mac용 Visual Studio** – Mac용 Visual Studio를 소개 하 고이를 사용 하 여 tvOS 응용 프로그램을 만드는 방법을 소개 합니다.
+- **Mac용 Visual Studio**  – Mac용 Visual Studio를 소개 하 고이를 사용 하 여 tvOS 응용 프로그램을 만드는 방법을 소개 합니다.
 - **TvOS 앱의 분석** – tvOS 앱이 구성 되는 항목입니다.
 - **사용자 인터페이스 만들기** –를 사용 하 여 사용자 인터페이스를 만드는 방법 Xamarin Designer for iOS 합니다.
 - **배포 및 테스트** – tvOS 시뮬레이터 및 실제 tvOS 하드웨어에서 앱을 실행 하 고 테스트 하는 방법을 설명 합니다.
@@ -78,11 +78,11 @@ IOS 프로그래밍에 익숙한 경우 여기에서 많은 유사성을 확인�
 프로젝트의 파일을 살펴보겠습니다.
 
 - `Main.cs` - 앱의 진입점을 포함합니다. 앱이 실행되면 첫 번째 클래스와 실행되는 메서드를 포함합니다.
-- `AppDelegate.cs`–이 파일에는 운영 체제의 이벤트를 수신 하는 기본 응용 프로그램 클래스가 포함 됩니다.
-- `Info.plist`–이 파일에는 응용 프로그램 이름, 아이콘 등의 응용 프로그램 속성이 포함 되어 있습니다.
-- `ViewController.cs`– 주 창을 나타내며이 클래스의 수명 주기를 제어 하는 클래스입니다.
-- `ViewController.designer.cs`–이 파일은 주 화면의 사용자 인터페이스와 통합 하는 데 도움이 되는 배관 코드를 포함 합니다.
-- `Main.storyboard`– 주 창에 대 한 UI입니다. 이 파일은 Xamarin Designer for iOS에서 만들고 유지 관리할 수 있습니다.
+- `AppDelegate.cs` –이 파일에는 운영 체제의 이벤트를 수신 하는 기본 응용 프로그램 클래스가 포함 됩니다.
+- `Info.plist` –이 파일에는 응용 프로그램 이름, 아이콘 등의 응용 프로그램 속성이 포함 되어 있습니다.
+- `ViewController.cs` – 주 창을 나타내며이 클래스의 수명 주기를 제어 하는 클래스입니다.
+- `ViewController.designer.cs` –이 파일은 주 화면의 사용자 인터페이스와 통합 하는 데 도움이 되는 배관 코드를 포함 합니다.
+- `Main.storyboard` – 주 창에 대 한 UI입니다. 이 파일은 Xamarin Designer for iOS에서 만들고 유지 관리할 수 있습니다.
 
 다음 섹션에서는 이러한 파일 중 일부를 간략히 살펴보겠습니다. 나중에 더 자세히 살펴볼 것 이지만, 이제 기본 사항을 이해 하는 것이 좋습니다.
 
@@ -452,7 +452,7 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 응용 프로그램을 실행 하려면 다음 세 가지 옵션을 사용할 수 있습니다.
 
-- **⌘ + Enter**키를 누릅니다.
+- **⌘ + Enter**를 누릅니다.
 - **실행** 메뉴에서 **디버그**를 선택합니다.
 - Mac용 Visual Studio 도구 모음에서 **재생** 단추를 클릭합니다(**솔루션 탐색기** 바로 위에 있음).
 
@@ -492,7 +492,7 @@ TvOS와 관련 된 문제가 발생 하는 경우 문제 및 해결 방법에 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 30501600e0b86498ae967340e2201a135b22d7ad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a4b1b5ed3089cb7044850cf19629fa063e43703
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939124"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436350"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -74,8 +74,8 @@ Apple에는 iOS 9의 Foundation framework에 대 한 다음과 같은 변경 내
 
 IOS 9에 대 한 [Nsbundle](xref:Foundation.NSBundle) 클래스가 다음과 같이 변경 되었습니다.
 
-- `GetPreservationPriorityForTag (NSString tag)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 가져옵니다. 유효한 값의 범위에는 `0.0` `1.0` 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
-- `SetPreservationPriorityForTag (double priority, NSSet tags)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 설정 합니다. 유효한 값의 범위에는 `0.0` `1.0` 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
+- `GetPreservationPriorityForTag (NSString tag)` -지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 가져옵니다. 유효한 값의 범위에는 `0.0` `1.0` 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)` -지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 설정 합니다. 유효한 값의 범위에는 `0.0` `1.0` 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
 
 자세한 내용은 Apple의 [Nsbundle 참조](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)를 참조 하세요.
 
@@ -100,7 +100,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>낮은 전원 모드로 응답
 
-`LowPowerModeEnabled` [Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 속성을 사용 하 여 앱이 실행 되 고 있는 IOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 예를 들면 다음과 같습니다.
+`LowPowerModeEnabled` [Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 속성을 사용 하 여 앱이 실행 되 고 있는 IOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Is the device in low power mode?
@@ -260,7 +260,7 @@ IOS 9에서는 이러한 자동 크기 조정이 더 이상 발생 하지 않으
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0의 새로운 기능](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

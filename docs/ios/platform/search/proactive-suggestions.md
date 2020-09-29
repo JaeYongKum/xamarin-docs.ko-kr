@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 363427a410a2e4bc40348c6f50e2920e552f31fe
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 85879026639dbf92e1c85881e57124e802803bb3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939440"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436980"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.ios의 사전 권장 사항 소개
 
@@ -93,7 +93,7 @@ Xamarin.ios 앱에 사전 제안 지원을 추가 하는 것은 일반적으로 
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-위에서 설명한 것 처럼 `NSUserActivity` 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움을 줍니다. `NSUserActivity`는 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
+위에서 설명한 것 처럼 `NSUserActivity` 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움을 줍니다. `NSUserActivity` 는 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
 
 [![NSUserActivity 경량 상태 캐싱 메커니즘](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
@@ -166,7 +166,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>활동 복원
 
-앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 예를 들어:
+앱에 대 한 검색 결과 ()를 누르는 사용자에 게 응답 하려면 `NSUserActivity` **AppDelegate.cs** 파일을 편집 하 고 메서드를 재정의 `ContinueUserActivity` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -189,7 +189,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 앱은 위에 표시 된 최소한의 코드를 사용 하 여 다음과 같은 세 가지 새로운 iOS 10 기능을 활용할 수 있습니다.
 
-- **전달**
+- **Handoff**
 - **스포트라이트 검색**
 - **상황별 Siri 미리 알림**
 
@@ -213,7 +213,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 iOS 10은 몇 가지 작은 수정과 기존 프레임 워크에 대 한 추가 기능을 통해 앱에서이 기능을 사용할 수 있도록 향상 되었습니다.
 
-- `NSUserActivity`에는 앱 내에서 볼 수 있는 위치 정보를 캡처하기 위한 추가 필드가 있습니다.
+- `NSUserActivity` 에는 앱 내에서 볼 수 있는 위치 정보를 캡처하기 위한 추가 필드가 있습니다.
 - MapKit 및 CoreSpotlight location에 대 한 몇 가지 추가 기능이 추가 되었습니다.
 - 위치 인식 기능이 시스템 내의 Siri, 지도, 키보드, 멀티태스킹 및 기타 앱에 추가 되었습니다.
 
@@ -326,7 +326,7 @@ IOS 10의 새로운 기능은 통신 앱이 연락처 카드에서 연락처 앱
 
 [![기증 상호 작용 개요](proactive-suggestions-images/activity04.png)](proactive-suggestions-images/activity04.png#lightbox)
 
-앱은 `INInteraction` **의도** ( `INIntent` ), **참가자** 및 **메타 데이터**를 포함 하는 개체를 만듭니다. **의도** 는 비디오 통화 또는 문자 메시지 전송과 같은 사용자 작업을 나타냅니다. **참가자** 에 게는 통신을 받는 사람이 포함 됩니다. **메타 데이터** 는 메시지를 성공적으로 보낸 등의 추가 정보를 정의 합니다.
+앱은 `INInteraction`  **의도** ( `INIntent` ), **참가자** 및 **메타 데이터**를 포함 하는 개체를 만듭니다. **의도** 는 비디오 통화 또는 문자 메시지 전송과 같은 사용자 작업을 나타냅니다. **참가자** 에 게는 통신을 받는 사람이 포함 됩니다. **메타 데이터** 는 메시지를 성공적으로 보낸 등의 추가 정보를 정의 합니다.
 
 개발자는 또는의 인스턴스를 직접 만들지 `INIntent` 않습니다 `INIntentResponse` . 이러한 부모 클래스에서 상속 되는 특정 자식 클래스 (앱이 사용자를 대신 하 여 수행 하는 작업을 기반으로 함) 중 하나를 사용 합니다. 예를 들어 `INSendMessageIntent` `INSendMessageIntentResponse` 문자 메시지를 보내기 위한 및입니다. 
 
@@ -503,7 +503,7 @@ Safari는 웹 페이지에서 다음 스키마 속성을 따르는 모든 항목
 - 앱은 앱에서 사전 제안을 받을 수 있습니다.
 - 앱은 향상 된 자동 고침의 이점을 누릴 수 있습니다.
 
-`TextContentType`IOS 10에 있는 텍스트 필드 컨트롤의 새 속성을 사용 하면 개발자는 지정 된 필드에 사용자가 입력 하는 값에 대 한 의미 체계 의도를 정의할 수 있습니다. 예를 들어:
+`TextContentType`IOS 10에 있는 텍스트 필드 컨트롤의 새 속성을 사용 하면 개발자는 지정 된 필드에 사용자가 입력 하는 값에 대 한 의미 체계 의도를 정의할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var textField = new UITextField();
@@ -532,7 +532,7 @@ textField.TextContentType = UITextContentType.FullStreetAddress;
 - MapKit 개체를 사용 하 여 앱을 시작 하는 것을 처리 `MKDirectionsRequest` 합니다.
 - IOS에 게 사용자 참여를 기준으로 적절 한 시간에 앱을 제안 하는 방법을 배울 수 있는 기능을 제공 합니다.
 
-MapKit 개체를 사용 하 여 앱을 시작 하는 경우 `MKDirectionsRequest` 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들어:
+MapKit 개체를 사용 하 여 앱을 시작 하는 경우 `MKDirectionsRequest` 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -683,5 +683,5 @@ namespace MonkeyPlayer
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [SiriKit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 002b6ced319bf7e7b1c5b9b7cc472c43eefcc450
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e85a273c75fd09672c6c75738adcdc576705af09
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574292"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433988"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
 
@@ -541,7 +541,7 @@ void PasteImage (NSObject sender)
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-여기에서 `ImageDocument` 해당 창의 클래스 인스턴스를 호출 하 여 복사 및 붙여넣기 작업을 처리 합니다. 예를 들면 다음과 같습니다. 
+여기에서 `ImageDocument` 해당 창의 클래스 인스턴스를 호출 하 여 복사 및 붙여넣기 작업을 처리 합니다. 다음은 그 예입니다. 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -659,11 +659,11 @@ Less 명백한 대지의 경우에는 찾기, 끌기, 끌어서 놓기 및 응�
 
 대/는 공개 또는 비공개 일 수 있으며, 응용 프로그램 내에서 또는 여러 앱에서 다양 한 용도로 사용할 수 있습니다. macOS는 다음과 같이 잘 정의 된 특정 사용을 포함 하는 몇 가지 표준 pasteboards를 제공 합니다.
 
-- `NSGeneralPboard`- **잘라내기**, **복사** 및 **붙여넣기** 작업의 기본 기능입니다.
+- `NSGeneralPboard` - **잘라내기**, **복사** 및 **붙여넣기** 작업의 기본 기능입니다.
 - `NSRulerPboard`- **눈금자**에서 **잘라내기**, **복사** 및 **붙여넣기** 작업을 지원 합니다.
-- `NSFontPboard`-개체에 대 한 **잘라내기**, **복사** 및 **붙여넣기** 작업을 지원 `NSFont` 합니다.
-- `NSFindPboard`-검색 텍스트를 공유할 수 있는 응용 프로그램별 찾기 패널을 지원 합니다.
-- `NSDragPboard`- **끌기 & Drop** 작업을 지원 합니다.
+- `NSFontPboard` -개체에 대 한 **잘라내기**, **복사** 및 **붙여넣기** 작업을 지원 `NSFont` 합니다.
+- `NSFindPboard` -검색 텍스트를 공유할 수 있는 응용 프로그램별 찾기 패널을 지원 합니다.
+- `NSDragPboard` - **끌기 & Drop** 작업을 지원 합니다.
 
 대부분의 경우 시스템 정의 pasteboards 중 하나를 사용 합니다. 그러나 사용자 고유의 pasteboards를 만들어야 하는 경우가 있을 수 있습니다. 이러한 경우 `FromName (string name)` 클래스의 메서드를 사용 하 여 지정 된 `NSPasteboard` 이름의 사용자 지정 대지의 이름을 만들 수 있습니다.
 
@@ -703,7 +703,7 @@ Less 명백한 대지의 경우에는 찾기, 끌기, 끌어서 놓기 및 응�
 
 처음에는 대/소문자에 액세스 하 고, 기존 콘텐츠를 지우고, 대지의에 필요한 만큼의 데이터 표현을 작성 하 여 복사 작업을 수행 합니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```csharp
 // Get the standard pasteboard
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-또한 클래스는 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 `Register` 사용 하 여 필요한 속성이 나 메서드를 노출 해야 합니다 `Export` . 예를 들면 다음과 같습니다.
+또한 클래스는 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 `Register` 사용 하 여 필요한 속성이 나 메서드를 노출 해야 합니다 `Export` . 다음은 그 예입니다.
 
 ```csharp
 [Export("name")]
@@ -1278,7 +1278,7 @@ if (ok) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacCopyPaste (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
+- [MacCopyPaste (샘플)](/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [대지의 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

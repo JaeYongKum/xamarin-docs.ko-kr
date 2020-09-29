@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 410b66e91168ed07da6f102d96b965f9e6a184f7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4eb81a074adb6d2b828bb74edfde9916d69960b1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571638"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434972"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경 내용
 
@@ -66,7 +66,7 @@ tvOS 10은 핵심 이미지 프레임 워크에 대해 다음과 같은 향상 �
 - `ImageWithExtent` [Cifilter](https://developer.apple.com/reference/coreimage/cifilter) 클래스의 메서드를 사용 하 여 사용자 지정 처리를 필터 작업에 삽입할 수 있습니다. 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
 - 이제 앱은 처리 전후에 색 공간을 변환 하 여 핵심 이미지 컨텍스트의 작업 색 공간 외부에 있는 색 공간에서 이미지를 처리할 수 있습니다.
 - `UIImage`개체에서 렌더링 (핵심 이미지 이미지 저장소에서 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다 `UIImageView` .
-- `UIImage`넓은 색으로 태그가 지정 된 개체는 `UIImageView` 넓은 색을 지 원하는 iOS 장치에서 개체의 넓은 색 영역 색으로 렌더링 됩니다.
+- `UIImage` 넓은 색으로 태그가 지정 된 개체는 `UIImageView` 넓은 색을 지 원하는 iOS 장치에서 개체의 넓은 색 영역 색으로 렌더링 됩니다.
 - 핵심 이미지 커널 코드는 이제 특정 픽셀 출력 형식을 요청할 수 있습니다.
 
 또한 다음과 같은 새로운 핵심 이미지 필터가 추가 되었습니다.
@@ -96,7 +96,7 @@ TvOS 10 용 Foundation framework에 대 한 다음과 같은 기능이 향상 �
 TvOS 10에서 GameKit 프레임 워크에 대해 다음과 같은 기능이 향상 되었습니다.
 
 - 새 iCloud 전용 계정 유형은 [Gkcloudplayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) 클래스에 의해 구현 되었습니다.
-- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
+- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession` 플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
 
 <a name="GameplayKit-Enhancements"></a>
 
@@ -197,5 +197,5 @@ TvOS 10에서 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [TvOS 10의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

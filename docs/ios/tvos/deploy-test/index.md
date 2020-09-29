@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 022e458fd398366a79970635c1d064cfc2981375
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 50049115407c8d0f4bd1ecddc138185af4716cac
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030739"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435137"
 ---
 # <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>Xamarin에서 tvOS Apps 배포 및 테스트
 
-## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[앱 배포](~/ios/tvos/deploy-test/app-distribution/index.md)
+## <a name="app-distribution"></a>[앱 배포](~/ios/tvos/deploy-test/app-distribution/index.md)
 
 이 문서에서는 다음과 같은 다양 한 방법을 통해 배포용 tvOS 앱을 구성, 빌드 및 게시 하는 방법을 보여 줍니다.
 
@@ -28,7 +28,7 @@ Apple TV 앱 스토어에 tvOS 앱을 제출 하는 데 문제가 있는 경우 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

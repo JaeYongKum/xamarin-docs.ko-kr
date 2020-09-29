@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2018
-ms.openlocfilehash: cbed65ce39e9298d397051740737aa164fadbc0b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5f37bc10a545dc0b364621be6b78dc300a222a75
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031844"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434024"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Xamarin을 사용한 iOS 12 개발 문제 해결
 
@@ -23,9 +23,9 @@ ms.locfileid: "73031844"
 알려진 문제에 대 한 다음 리소스를 확인 합니다.
 
 - 릴리스 정보
-  - Xamarin의 [릴리스 정보](https://docs.microsoft.com/xamarin/ios/release-notes/) 보관
-  - Mac용 Visual Studio ([안정화](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [미리 보기](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
-  - Visual Studio 2017 ([기병 양성소](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
+  - Xamarin의 [릴리스 정보](/xamarin/ios/release-notes/) 보관
+  - Mac용 Visual Studio ([안정화](/visualstudio/releasenotes/vs2017-mac-relnotes), [미리 보기](/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
+  - Visual Studio 2017 ([기병 양성소](/visualstudio/releasenotes/vs2017-relnotes), [preview](/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [개발자 커뮤니티](https://developercommunity.visualstudio.com/search.html)
 - [GitHub](https://github.com/xamarin/xamarin-macios/issues)
 - [Xamarin Bugzilla](https://bugzilla.xamarin.com/query.cgi?product=iOS)
@@ -33,7 +33,7 @@ ms.locfileid: "73031844"
 
 ## <a name="report-a-new-issue"></a>새 문제 보고
 
-[Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/report-a-problem)에서 **문제 보고** 옵션을 선택 하 여 [개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/8/index.html) 에서 새로운 문제를 보고 합니다.
+[Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Mac용 Visual Studio](/visualstudio/mac/report-a-problem)에서 **문제 보고** 옵션을 선택 하 여 [개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/8/index.html) 에서 새로운 문제를 보고 합니다.
 
 ## <a name="xamarin-forums-and-stack-overflow"></a>Xamarin 포럼 및 Stack Overflow
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 00e5b2a2238763822172a1b7d7a7c3090634ed17
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55c4d4e6154ef75f15b2e75edc020b7cb4c96e38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938088"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435304"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.ios의 경고
 
@@ -232,7 +232,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-여기에서 키 줄은 `var input = new NSTextField (new CGRect (0, 0, 300, 20));` 경고를 추가할 새 **텍스트 필드** 를 만듭니다. `alert.AccessoryView = input;`이는 **텍스트 필드** 를 경고에 연결 하 고 메서드를 호출 하 여 `Layout()` 새 하위 뷰의 크기를 조정 하는 데 필요 합니다.
+여기에서 키 줄은 `var input = new NSTextField (new CGRect (0, 0, 300, 20));` 경고를 추가할 새 **텍스트 필드** 를 만듭니다. `alert.AccessoryView = input;` 이는 **텍스트 필드** 를 경고에 연결 하 고 메서드를 호출 하 여 `Layout()` 새 하위 뷰의 크기를 조정 하는 데 필요 합니다.
 
 코드를 실행 하는 경우 다음이 표시 됩니다.
 
@@ -271,7 +271,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacWindows (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (샘플)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows 작업](~/mac/user-interface/window.md)
 - [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

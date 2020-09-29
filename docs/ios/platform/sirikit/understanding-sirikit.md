@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2ba5d6b99a32684fd53572e0db00b19a6841ed64
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 74c45a4e8880e1b9c98d11dd4874a4ecf569f0c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996463"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433796"
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해하기
 
@@ -402,7 +402,7 @@ Siri에는 앱을 대신 하 여 사용자와 대화가 있음을 항상 명심 
 
 앱에 해당 하는 단일 값이 표시 되 면이를 처리 하는 기본 방법은 Siri에서 사용자에 게 확인을 요청 하는 것입니다. 예를 들어 *"Bobo?"* 라는 간단한 예를 사용 하 여 회신할 수 있습니다.
 
-단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예를 들어:
+단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 Who do you want to send the message to?
@@ -463,7 +463,7 @@ Siri를 사용 하 여 대화 (앱 대신)를 사용 하도록 하는 것은 유
 
 ## <a name="related-links"></a>관련 링크
 
-- [ElizaChat 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [ElizaChat 샘플](/samples/xamarin/ios-samples/ios10-elizachat)
 - [SiriKit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [의도 프레임 워크 참조](https://developer.apple.com/reference/intents)
 - [의도 UI 프레임 워크 참조](https://developer.apple.com/reference/intentsui)

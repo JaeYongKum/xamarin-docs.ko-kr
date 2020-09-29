@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/15/2018
-ms.openlocfilehash: e2dcd5ea0f099ea84d7824eda4170df8efb22cb6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7ba6eca8f74c10254ae93b95725bc73ae100be70
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937217"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433855"
 ---
 # <a name="appearance-api-in-xamarinios"></a>Xamarin.ios의 모양 API
 
@@ -35,7 +35,7 @@ iOS를 사용 하면 다양 한 UIKit 컨트롤의 모양을 사용자 지정 �
 [![모양새 샘플 응용 프로그램은 세 가지 메서드를 모두 보여 줍니다.](introduction-to-the-appearance-api-images/appearance01-sml.png)](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 IOS 8에서 모양 프록시는 TraitCollections로 확장 되었습니다.
- `AppearanceForTraitCollection`를 사용 하 여 특정 특성 컬렉션의 기본 모양을 설정할 수 있습니다. [스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드에서이에 대해 자세히 알아볼 수 있습니다.
+ `AppearanceForTraitCollection` 를 사용 하 여 특정 특성 컬렉션의 기본 모양을 설정할 수 있습니다. [스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드에서이에 대해 자세히 알아볼 수 있습니다.
 
 ## <a name="setting-appearance-properties"></a>모양 속성 설정
 
@@ -101,12 +101,12 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 [![모양 컨트롤 색조 설정](introduction-to-the-appearance-api-images/image54.png)](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
-`Appearance`속성은 AppDelegate의 `FinishedLaunching` 이벤트 또는 영향을 받는 컨트롤이 표시 되기 전에 ViewController와 같은 응용 프로그램 수명 주기의 초기에 설정 되어야 합니다.
+`Appearance` 속성은 AppDelegate의 `FinishedLaunching` 이벤트 또는 영향을 받는 컨트롤이 표시 되기 전에 ViewController와 같은 응용 프로그램 수명 주기의 초기에 설정 되어야 합니다.
 
 자세한 내용은 [모양 API 소개](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) 를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [모양 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
+- [모양 (샘플)](/samples/xamarin/ios-samples/appearance)
 - [UIAppearance 프로토콜 참조](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
 - [Xamarin.ios의 모양](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)

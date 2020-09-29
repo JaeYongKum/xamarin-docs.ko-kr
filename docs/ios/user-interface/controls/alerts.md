@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 1264b28b2ee56ec5de610350a199668c67d5c33c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7dae8afbb5db378687f9ecb9469236dc68831ae
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022096"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435492"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Xamarin.ios에서 경고 표시
 
@@ -20,7 +20,7 @@ IOS 8부터 UIAlertController는 이제 더 이상 사용 되지 않는 Uialertc
 
 UIView의 서브 클래스인 대체 된 클래스와 달리 UIAlertController는 UIViewController의 서브 클래스입니다.
 
-`UIAlertControllerStyle`를 사용 하 여 표시할 경고 유형을 나타냅니다. 이러한 경고 유형은 다음과 같습니다.
+`UIAlertControllerStyle`표시할 경고 유형을 나타내는 데 사용 합니다. 이러한 경고 유형은 다음과 같습니다.
 
 - **UIAlertControllerStyleActionSheet**
   - IOS 이전 8이이는 UIActionSheet.
@@ -30,7 +30,7 @@ UIView의 서브 클래스인 대체 된 클래스와 달리 UIAlertController�
 경고 컨트롤러를 만들 때 수행 해야 하는 세 가지 단계가 있습니다.
 
 - 다음을 사용 하 여 경고를 만들고 구성 합니다.
-  - 제목
+  - title
   - message
   - preferredStyle
 
@@ -81,7 +81,7 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 
  ![작업 시트 경고](alerts-images/alert3.png)
 
-`AddAction` 메서드를 사용 하 여 경고에 단추가 추가 됩니다.
+다음 메서드를 사용 하 여 경고에 단추가 추가 됩니다 `AddAction` .
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -111,5 +111,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)
 - [경고 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: edd49cc891a86d3323bab319ab811e85f9148640
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7b6852485fed6cc14c9f9b2e1a303b7c2e576da9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997100"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433579"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.ios의 코드에서 iOS 사용자 인터페이스 만들기
 
-IOS 앱의 사용자 인터페이스는 storefront와 같습니다. 응용 프로그램은 일반적으로 하나의 창을 가져오지만 필요한 만큼의 개체를 사용 하 여 창을 채울 수 있으며, 응용 프로그램에서 표시 하려는 내용에 따라 개체와 정렬을 변경할 수 있습니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 애플리케이션에서 단일 화면을 빌드하려면 뷰가 콘텐츠 뷰 계층 구조에 쌓이고 계층 구조는 단일 뷰 컨트롤러에서 관리됩니다. 여러 화면이 있는 애플리케이션은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 애플리케이션은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
+IOS 앱의 사용자 인터페이스는 storefront와 같습니다. 응용 프로그램은 일반적으로 하나의 창을 가져오지만 필요한 만큼의 개체를 사용 하 여 창을 채울 수 있으며, 응용 프로그램에서 표시 하려는 내용에 따라 개체와 정렬을 변경할 수 있습니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 작성 하기 위해 뷰는 콘텐츠 뷰 계층 구조에서 서로 위에 누적 되며 계층은 단일 뷰 컨트롤러에 의해 관리 됩니다. 여러 화면이 있는 애플리케이션은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 애플리케이션은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -54,8 +54,8 @@ IOS 앱의 사용자 인터페이스는 storefront와 같습니다. 응용 프�
 
 [![프로젝트 파일](ios-code-only-images/empty-project.w157-sml.png "프로젝트 파일")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-1. **AppDelegate.cs** - `UIApplicationDelegate` `AppDelegate` iOS의 응용 프로그램 이벤트를 처리 하는 데 사용 되는 하위 클래스를 포함 합니다. 응용 프로그램 창은 `AppDelegate` 의 `FinishedLaunching` 메서드에 만들어집니다.
-1. **Main.cs** -에 대 한 클래스를 지정 하는 응용 프로그램에 대 한 진입점을 포함 합니다 `AppDelegate` .
+1. **AppDelegate.cs** -  `UIApplicationDelegate`  `AppDelegate` iOS의 응용 프로그램 이벤트를 처리 하는 데 사용 되는 하위 클래스를 포함 합니다. 응용 프로그램 창은 `AppDelegate` 의  `FinishedLaunching` 메서드에 만들어집니다.
+1. **Main.cs** -에 대 한 클래스를 지정 하는 응용 프로그램에 대 한 진입점을 포함 합니다  `AppDelegate` .
 1. **Info.plist** -응용 프로그램 구성 정보를 포함 하는 속성 목록 파일입니다.
 1. **Info.plist** – 응용 프로그램의 기능 및 사용 권한에 대 한 정보를 포함 하는 속성 목록 파일입니다.
 
@@ -498,7 +498,7 @@ namespace CodeOnlyDemo
 
 ### <a name="drawing-in-a-uiview"></a>UIView 그리기
 
-모든 `UIView` 에는 `Draw` 그려야 할 때 시스템에서 호출 하는 메서드가 있습니다. `Draw`직접 호출 하면 안 됩니다. 루프 처리를 실행 하는 동안 시스템에서 호출 됩니다. 뷰가 뷰 계층 구조에 추가 된 후 실행 루프를 처음으로 실행 하면 해당 `Draw` 메서드가 호출 됩니다. 뷰에서 또는를 `Draw` 호출 하 여 뷰가 그려야 하는 것으로 표시 되는 경우에 대 한 후속 호출이 발생 `SetNeedsDisplay` `SetNeedsDisplayInRect` 합니다.
+모든 `UIView` 에는 `Draw` 그려야 할 때 시스템에서 호출 하는 메서드가 있습니다. `Draw` 직접 호출 하면 안 됩니다. 루프 처리를 실행 하는 동안 시스템에서 호출 됩니다. 뷰가 뷰 계층 구조에 추가 된 후 실행 루프를 처음으로 실행 하면 해당 `Draw` 메서드가 호출 됩니다. 뷰에서 또는를 `Draw` 호출 하 여 뷰가 그려야 하는 것으로 표시 되는 경우에 대 한 후속 호출이 발생 `SetNeedsDisplay` `SetNeedsDisplayInRect` 합니다.
 
 아래와 같이 재정의 된 메서드 내에 해당 코드를 추가 하 여 뷰에 그리기 코드를 추가할 수 있습니다 `Draw` .
 
@@ -539,7 +539,7 @@ public CircleView()
 
 ### <a name="loading-a-view"></a>뷰 로드
 
- `UIViewController`에는 `LoadView` 컨트롤러에서 뷰를 만들기 위해 호출 하는 라는 메서드가 있습니다. 뷰를 만들어 컨트롤러의 속성에 할당 하는 것이 적절 한 장소입니다 `View` .
+ `UIViewController` 에는 `LoadView` 컨트롤러에서 뷰를 만들기 위해 호출 하는 라는 메서드가 있습니다. 뷰를 만들어 컨트롤러의 속성에 할당 하는 것이 적절 한 장소입니다 `View` .
 
 먼저 컨트롤러가 필요 하므로 라는 새 빈 클래스를 만들어야 `CircleController` 합니다.
 
@@ -629,4 +629,4 @@ Apple은 iOS 8 이상을 대상으로 하는 응용 프로그램에 xib 또는 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [SimpleLogin (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)
+- [SimpleLogin (샘플)](/samples/xamarin/ios-samples/simplelogin)

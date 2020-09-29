@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 75da06af3444cdb83f00c1089d43ca4d34f2177e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939089"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436816"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
@@ -105,7 +105,7 @@ IOS 8에 도입 된 [HomeKit](xref:HomeKit) 프레임 워크는 xamarin.ios 앱�
 
 IOS 9에서 Apple은 더 쉽게 설정 하 고, 지원 되는 액세서리 유형을 확장 하 고, 더 많은 액세서리 상호 작용 (예: iCloud를 통해 원격으로 액세서리 제어)을 제공 했습니다.
 
-자세한 내용은 HomeKit, [HomeKitIntro IOS 샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/homekit-homekitintro) 및 Apple의 [HomeKit](https://developer.apple.com/homekit/) 설명서 [소개](~/ios/platform/homekit.md)를 참조 하세요.
+자세한 내용은 HomeKit, [HomeKitIntro IOS 샘플 앱](/samples/xamarin/ios-samples/homekit-homekitintro) 및 Apple의 [HomeKit](https://developer.apple.com/homekit/) 설명서 [소개](~/ios/platform/homekit.md)를 참조 하세요.
 
 ## <a name="handoff-framework-changes"></a>핸드 프레임 워크 변경
 
@@ -145,7 +145,7 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 
 ## <a name="right-to-left-language-support"></a>오른쪽에서 왼쪽으로 쓰기 언어 지원
 
-IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음이 포함됩니다.
+IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음과 같은 사항이 포함됩니다.
 
 - 표준 [Uikit](xref:UIKit) 컨트롤은 iOS 장치 로캘 및 언어 설정에 따라 오른쪽에서 왼쪽으로 자동 전환 됩니다.
 - [Uiview](xref:UIKit.UIView) 클래스는 오른쪽에서 왼쪽으로 대칭 이동 하는 경우 지정 된 뷰가 표시 되는 방법을 정의할 수 있는 특성을 제공 합니다.
@@ -185,14 +185,14 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 
 ## <a name="ios-9-sample-apps"></a>iOS 9 샘플 앱
 
-시작 하기 위한 몇 가지 [iOS 9 관련 샘플이](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) 있습니다.
+시작 하기 위한 몇 가지 [iOS 9 관련 샘플이](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) 있습니다.
 
 - [AstroLayout](https://github.com/xamarin/monotouch-samples/tree/master/ios9/AstroLayout)
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
-- [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
-- [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [사진 진행](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
-- [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
+- [MetalPerformanceShadersHelloWorld](/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
+- [MusicMotion](/samples/xamarin/ios-samples/ios9-musicmotion)
+- [사진 진행](/samples/xamarin/ios-samples/ios9-photoprogress)
+- [SegueCatalog](/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [System.windows.forms.toolstrip.stackview](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
@@ -203,7 +203,7 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [3D 터치 소개](~/ios/platform/3d-touch.md)
 - [앱 전송 보안](~/ios/app-fundamentals/ats.md)
 - [iPad용 멀티태스킹](~/ios/platform/multitasking.md)

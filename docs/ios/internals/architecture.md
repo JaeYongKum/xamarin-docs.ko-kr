@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 832071023bfe2ea9d947946ff2b70428d93fc866
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2a0d9ebabe2a1f5d6570559f018e6419712b42fc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937547"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433333"
 ---
 # <a name="ios-app-architecture"></a>iOS 앱 아키텍처
 
@@ -24,13 +24,13 @@ Xamarin.ios 응용 프로그램은 Mono 실행 환경에서 실행 되며 AOT (�
 
 ## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 코드: 설명
 
-Xamarin 용으로 개발 하는 경우 *네이티브 코드와 관리* 코드를 사용 하는 경우가 많습니다. [관리 코드](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) 는 [.NET Framework 공용 언어 런타임에서](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)실행 되는 코드 또는 Xamarin의 경우 Mono 런타임입니다. 중간 언어 라고 하는 것입니다.
+Xamarin 용으로 개발 하는 경우 *네이티브 코드와 관리* 코드를 사용 하는 경우가 많습니다. [관리 코드](/archive/blogs/brada/what-is-managed-code) 는 [.NET Framework 공용 언어 런타임에서](/dotnet/standard/clr)실행 되는 코드 또는 Xamarin의 경우 Mono 런타임입니다. 중간 언어 라고 하는 것입니다.
 
 네이티브 코드는 특정 플랫폼에서 기본적으로 실행 되는 코드입니다 (예: AOT 또는 ARM 칩에서 컴파일된 코드). 이 가이드에서는 AOT이 관리 코드를 네이티브 코드로 컴파일하는 방법에 대해 설명 하 고, Xamarin.ios 응용 프로그램이 작동 하는 방식에 대해 설명 하 고 바인딩을 사용 하 여 Apple iOS Api를 완전히 활용 하는 동시에에도 액세스할 수 있도록 합니다. NET의 BCL 및 c #과 같은 고급 언어입니다.
 
 ## <a name="aot"></a>AOT
 
-Xamarin platform 응용 프로그램을 컴파일할 때 Mono c # (또는 F #) 컴파일러가 실행 되며 c # 및 F # 코드를 MSIL (Microsoft 중간 언어)로 컴파일합니다. Xamarin Android, Xamarin.ios 응용 프로그램 또는 시뮬레이터에서 Xamarin.ios 응용 프로그램을 실행 하는 경우 [.NET CLR (공용 언어 런타임)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) 은 JIT (just-in-time) 컴파일러를 사용 하 여 MSIL을 컴파일합니다. 런타임에는 응용 프로그램에 대 한 올바른 아키텍처에서 실행 될 수 있는 네이티브 코드로 컴파일됩니다.
+Xamarin platform 응용 프로그램을 컴파일할 때 Mono c # (또는 F #) 컴파일러가 실행 되며 c # 및 F # 코드를 MSIL (Microsoft 중간 언어)로 컴파일합니다. Xamarin Android, Xamarin.ios 응용 프로그램 또는 시뮬레이터에서 Xamarin.ios 응용 프로그램을 실행 하는 경우 [.NET CLR (공용 언어 런타임)](/dotnet/standard/clr) 은 JIT (just-in-time) 컴파일러를 사용 하 여 MSIL을 컴파일합니다. 런타임에는 응용 프로그램에 대 한 올바른 아키텍처에서 실행 될 수 있는 네이티브 코드로 컴파일됩니다.
 
 그러나 Apple에 의해 설정 된 iOS에는 장치에서 동적으로 생성 된 코드를 실행할 수 없도록 하는 보안 제한 사항이 있습니다.
 이러한 안전 프로토콜을 준수 하도록 하기 위해 Xamarin.ios는 대신 AOT (사전) 컴파일러를 사용 하 여 관리 코드를 컴파일합니다. 이렇게 하면 Apple의 ARM 기반 프로세서에 배포할 수 있는 기본 iOS 이진 파일이 생성 되 고, 선택적으로 LLVM을 사용 하 여 장치에 최적화 됩니다. 이에 대 한 대략적인 다이어그램은 아래에 나와 있습니다.
@@ -114,7 +114,7 @@ Xamarin.ios에서 사용 하는 iOS 유형 등록 시스템의 세부 정보에 
 
 앱이 시작 되 고 Mono가 실행 되 고 있으며,이 시점에서 관리 코드를 실행 하 고 네이티브 코드를 호출 하 고 다시 호출 하는 방법을 알고 있습니다. 다음으로 수행 해야 하는 작업은 실제로 컨트롤 추가를 시작 하 고 앱을 대화형으로 만드는 것입니다.
 
-## <a name="generator"></a>생성기
+## <a name="generator"></a>Generator
 
 Xamarin.ios에는 모든 단일 iOS API에 대 한 정의가 포함 되어 있습니다. [Macios github](https://github.com/xamarin/xamarin-macios/tree/master/src)리포지토리에서 이러한 중 하나를 탐색할 수 있습니다. 이러한 정의에는 특성이 포함 된 인터페이스 뿐만 아니라 필요한 메서드 및 속성도 포함 됩니다. 예를 들어 다음 코드는 UIKit [네임 스페이스](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)에서 UIToolbar를 정의 하는 데 사용 됩니다. 이 인터페이스는 여러 메서드 및 속성을 포함 하는 인터페이스입니다.
 

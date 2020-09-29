@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: edf5f1c82857930a2647f306195a4c82f4338db6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: db3e66920beb355e0b05df2118cd2645c602f0d5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724631"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433919"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Xamarin.ios 앱에서 터치 처리
 
 다른 모바일 플랫폼과 마찬가지로 iOS에는 터치를 처리 하는 다양 한 방법이 있습니다. 멀티 터치를 지원할 수 있습니다. 즉, 화면에서 많은 연락처 지점과 복잡 한 제스처가 있습니다. 이 가이드에서는 몇 가지 개념을 소개 하 고 iOS에서 터치 및 제스처를 구현 하는 particularities 합니다.
 
-iOS는 일련의 `UIResponder` 메서드를 통해 응용 프로그램에서 사용할 수 있는 `UITouch` 클래스의 터치 데이터를 캡슐화 합니다. 응용 프로그램은 `UIView` 및 `UIViewController`의 서브 클래스에서 이러한 메서드를 재정의할 수 있으며, 둘 다 `UIResponder`에서 상속 됩니다.
+iOS는 `UITouch` 일련의 메서드를 통해 응용 프로그램에서 사용할 수 있도록 하는 클래스의 터치 데이터를 캡슐화 `UIResponder` 합니다. 응용 프로그램은 및의 서브 클래스에서 이러한 메서드를 재정의할 수 있으며 `UIView` `UIViewController` 둘 다에서 상속 `UIResponder` 됩니다.
 
 IOS는 터치 데이터를 캡처할 뿐만 아니라 터치의 패턴을 제스처로 해석 하는 수단을 제공 합니다. 이러한 제스처 인식기를 사용 하 여 이미지 회전 또는 페이지 전환 같은 응용 프로그램 관련 명령을 해석할 수 있습니다. iOS는 최소한의 추가 코드를 사용 하 여 일반적인 제스처를 처리 하는 다양 한 클래스 컬렉션을 제공 합니다.
 
@@ -34,10 +34,10 @@ IOS는 터치 데이터를 캡처할 뿐만 아니라 터치의 패턴을 제스
 
 이 가이드는 iOS의 터치에 대 한 소개를 제공 합니다. Ios에서 3D 터치 및 햅 피드백을 사용 하는 방법에 대 한 자세한 내용은 각각 iOS 9 및 10에 소개 되어 있습니다. 아래 특정 가이드를 참조 하세요.
 
-- [3D Touch](~/ios/platform/3d-touch.md)
+- [3D 터치](~/ios/platform/3d-touch.md)
 - [햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS Touch Final (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
-- [FingerPaint (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [iOS Touch Final (샘플)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (샘플)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

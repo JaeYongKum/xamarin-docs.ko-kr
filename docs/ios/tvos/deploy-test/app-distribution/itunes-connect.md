@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b316e0629bce66e295241be9d67dc4eb37ce1972
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 43692bf2180887e7983cf35fb1812a91222dbc7a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939570"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435148"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>iTunes Connect에서 tvOS 앱 구성
 
@@ -34,7 +34,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 필요에 따라 다음을 요구할 수도 있습니다.
 
 - [Game Center 정보 유지 관리](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
-- [인앱 구매 정보 유지 관리](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
+- [앱 내 구매 정보 유지 관리](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
 
 위의 모든 단계가 완료 되 면 앱의 iTunes Connect 레코드를 열고 왼쪽 세로 막대를 사용 하 여 tvOS 지원을 추가 하도록 선택 합니다.
 
@@ -80,7 +80,7 @@ TvOS 앱을 검토를 위해 Apple TV 앱 스토어에 제출할 준비가 되 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

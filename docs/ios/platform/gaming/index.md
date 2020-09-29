@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b21e72cc072b614c2e900d7c7b3aa04c9f0812cb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 20efcf1af10b7c1d3d36e570bc838e396241ffee
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939778"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436241"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>Xamarin.ios의 iOS 게임 Api
 
@@ -469,6 +469,6 @@ GameplayKit 및 모델 i/o를 소개 했습니다. 금속의 주요 개선 사�
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

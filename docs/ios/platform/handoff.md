@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: b6080807bab17700a741462700182fa66267296e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 955fa049e88b74796d5949518f6149f1e2a9527c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939999"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435200"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.ios의 핸드 오프
 
@@ -82,7 +82,7 @@ Apple은 iOS 8 및 OS X Yosemite (10.10)에 전달 하 여 사용자가 장치 �
 
 OS X에서는 `NSUserActivity` `AppKit` 문서 창이 주 창이 될 때 응답자와 관련 하 여 관리 되는 및가 자동으로 현재 활동이 됩니다. IOS에서는에서 관리 하는 개체에 대해 `NSUserActivity` `UIKit` 메서드를 `BecomeCurrent` 명시적으로 호출 하거나 `UserActivity` 앱이 `UIViewController` 포그라운드로 들어올 때에 문서의 속성을 설정 해야 합니다.
 
-`AppKit`는 `UserActivity` OS X에서 이런 방식으로 만들어진 모든 속성을 자동으로 복원 합니다. 이는 메서드가를 `ContinueUserActivity` 반환 `false` 하거나 구현 되지 않은 경우에 발생 합니다. 이 경우의 메서드를 사용 하 여 문서를 열고 `OpenDocument` `NSDocumentController` `RestoreUserActivityState` 메서드 호출을 받습니다.
+`AppKit` 는 `UserActivity` OS X에서 이런 방식으로 만들어진 모든 속성을 자동으로 복원 합니다. 이는 메서드가를 `ContinueUserActivity` 반환 `false` 하거나 구현 되지 않은 경우에 발생 합니다. 이 경우의 메서드를 사용 하 여 문서를 열고 `OpenDocument` `NSDocumentController` `RestoreUserActivityState` 메서드 호출을 받습니다.
 
 자세한 내용은 아래의 [문서 기반 앱에서 전달 지원](#supporting-handoff-in-document-based-apps) 섹션을 참조 하세요.
 
@@ -152,7 +152,7 @@ _활동 유형 식별자_ 는 `NSUserActivityTypes` 지정 된 사용자 활동 
 
 활동 유형 식별자는 `NSUserActivity` 활동 유형을 식별 하는 인스턴스를 만들 때 사용 됩니다. 활동이 다른 장치에서 계속 되 면 활동 유형 (앱의 팀 ID와 함께)은 활동을 계속 하기 위해 시작할 앱을 결정 합니다.
 
-예를 들어 **Monkeybrowser** 라는 샘플 앱을 만들어 보겠습니다 ([여기에서 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)). 이 앱에는 웹 브라우저 보기에서 각각 다른 URL이 열려 있는 4 개의 탭이 표시 됩니다. 사용자는 앱을 실행 하는 다른 iOS 장치에서 탭을 계속 사용할 수 있습니다.
+예를 들어 **Monkeybrowser** 라는 샘플 앱을 만들어 보겠습니다 ([여기에서 다운로드](/samples/xamarin/ios-samples/ios8-monkeybrowser)). 이 앱에는 웹 브라우저 보기에서 각각 다른 URL이 열려 있는 4 개의 탭이 표시 됩니다. 사용자는 앱을 실행 하는 다른 iOS 장치에서 탭을 계속 사용할 수 있습니다.
 
 이 동작을 지원 하기 위해 필요한 활동 형식 식별자를 만들려면 **info.plist** 파일을 편집 하 고 **원본** 뷰로 전환 합니다. 키를 추가 `NSUserActivityTypes` 하 고 다음 식별자를 만듭니다.
 
@@ -235,9 +235,9 @@ UserActivity.BecomeCurrent ();
 
 ### <a name="populating-the-userinfo-dictionary"></a>UserInfo 사전 채우기
 
-위에서 설명한 것 처럼 `UserInfo` 클래스의 속성은 지정 된 `NSUserActivity` `NSDictionary` 작업의 상태를 정의 하는 데 사용 되는 키-값 쌍의입니다. 에 저장 된 값은,,,,,,, `UserInfo` `NSArray` `NSData` `NSDate` `NSDictionary` `NSNull` `NSNumber` `NSSet` `NSString` 또는 `NSURL` 형식 중 하나 여야 합니다. `NSURL`iCloud 문서를 가리키는 데이터 값은 수신 장치에서 동일한 문서를 가리키도록 자동으로 조정 됩니다.
+위에서 설명한 것 처럼 `UserInfo` 클래스의 속성은 지정 된 `NSUserActivity` `NSDictionary` 작업의 상태를 정의 하는 데 사용 되는 키-값 쌍의입니다. 에 저장 된 값은,,,,,,, `UserInfo` `NSArray` `NSData` `NSDate` `NSDictionary` `NSNull` `NSNumber` `NSSet` `NSString` 또는 `NSURL` 형식 중 하나 여야 합니다. `NSURL` iCloud 문서를 가리키는 데이터 값은 수신 장치에서 동일한 문서를 가리키도록 자동으로 조정 됩니다.
 
-위의 예제에서는 개체를 만들고 `NSMutableDictionary` 사용자가 지정 된 탭에서 현재 보고 있는 URL을 제공 하는 단일 키로 채웁니다. `AddUserInfoEntries`사용자 활동의 메서드는 수신 장치에서 활동을 복원 하는 데 사용 되는 데이터로 활동을 업데이트 하는 데 사용 됩니다.
+위의 예제에서는 개체를 만들고 `NSMutableDictionary`  사용자가 지정 된 탭에서 현재 보고 있는 URL을 제공 하는 단일 키로 채웁니다. `AddUserInfoEntries` 사용자 활동의 메서드는 수신 장치에서 활동을 복원 하는 데 사용 되는 데이터로 활동을 업데이트 하는 데 사용 됩니다.
 
 ```csharp
 // Update the activity when the tab's URL changes
@@ -297,7 +297,7 @@ public override bool WillContinueUserActivity (UIApplication application, string
 }
 ```
 
-위의 예제에서 각 뷰 컨트롤러는에 등록 하 `AppDelegate` 고 활동 `PreparingToHandoff` 표시기를 표시 하는 공용 메서드와 활동을 현재 장치에 전달 하려고 한다는 사실을 사용자에 게 알리는 메시지를 포함 합니다. 예:
+위의 예제에서 각 뷰 컨트롤러는에 등록 하 `AppDelegate` 고 활동 `PreparingToHandoff` 표시기를 표시 하는 공용 메서드와 활동을 현재 장치에 전달 하려고 한다는 사실을 사용자에 게 알리는 메시지를 포함 합니다. 예제:
 
 ```csharp
 private void ShowBusy(string reason) {
@@ -366,7 +366,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-`PerformHandoff`각 뷰 컨트롤러의 공용 메서드는 실제로 전달를 미리 형성 하 고 현재 장치에서 활동을 복원 합니다. 예제의 경우 지정 된 탭에서 사용자가 다른 장치에서 검색 한 것과 동일한 URL을 표시 합니다. 예:
+`PerformHandoff`각 뷰 컨트롤러의 공용 메서드는 실제로 전달를 미리 형성 하 고 현재 장치에서 활동을 복원 합니다. 예제의 경우 지정 된 탭에서 사용자가 다른 장치에서 검색 한 것과 동일한 URL을 표시 합니다. 예제:
 
 ```csharp
 private void HideBusy() {
@@ -403,13 +403,13 @@ public void PerformHandoff(NSUserActivity activity) {
 }
 ```
 
-`ContinueUserActivity`메서드에는 `UIApplicationRestorationHandler` 문서 또는 응답자 기반 활동 다시 시작에 대해 호출할 수 있는가 포함 되어 있습니다. `NSArray`호출 될 때 복원 처리기에 또는 복원 가능한 개체를 전달 해야 합니다. 예를 들어:
+`ContinueUserActivity`메서드에는 `UIApplicationRestorationHandler` 문서 또는 응답자 기반 활동 다시 시작에 대해 호출할 수 있는가 포함 되어 있습니다. `NSArray`호출 될 때 복원 처리기에 또는 복원 가능한 개체를 전달 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 completionHandler (new NSObject[]{Tab4});
 ```
 
-전달 된 각 개체에 대해 `RestoreUserActivityState` 메서드가 호출 됩니다. 그런 다음 각 개체는 사전의 데이터를 사용 `UserInfo` 하 여 자체 상태를 복원할 수 있습니다. 예를 들어:
+전달 된 각 개체에 대해 `RestoreUserActivityState` 메서드가 호출 됩니다. 그런 다음 각 개체는 사전의 데이터를 사용 `UserInfo` 하 여 자체 상태를 복원할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -427,7 +427,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 
 전달은 느슨하게 연결 된 iOS 및 OS X 장치 컬렉션 간에 정보를 전송 하기 때문에 경우에 따라 전송 프로세스가 실패할 수 있습니다. 이러한 오류를 정상적으로 처리 하 고 발생 하는 상황을 사용자에 게 알리려면 앱을 디자인 해야 합니다.
 
-오류가 발생할 경우 `DidFailToContinueUserActivitiy` 의 메서드가 `AppDelegate` 호출 됩니다. 예를 들어:
+오류가 발생할 경우 `DidFailToContinueUserActivitiy` 의 메서드가 `AppDelegate` 호출 됩니다. 다음은 그 예입니다.
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -453,7 +453,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 
 지정 된 도메인이 `WebpageURL` 속성의 값과 일치 하면 핸드 오프는 해당 도메인의 웹 사이트에서 승인 된 앱 id 목록을 다운로드 합니다. 웹 사이트는 **apple 앱 사이트-연결** (예:) 이라는 서명 된 JSON 파일에 승인 된 id 목록을 제공 해야 합니다 `https://company.com/apple-app-site-association` .
 
-이 JSON 파일에는 형식의 앱 Id 목록을 지정 하는 사전이 포함 되어 있습니다 `<team identifier>.<bundle identifier>` . 예를 들어:
+이 JSON 파일에는 형식의 앱 Id 목록을 지정 하는 사전이 포함 되어 있습니다 `<team identifier>.<bundle identifier>` . 다음은 그 예입니다.
 
 ```csharp
 {
@@ -464,7 +464,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 }
 ```
 
-의 올바른를 갖도록 JSON 파일에 서명 하려면 `Content-Type` `application/pkcs7-mime` **터미널** 앱 및 `openssl` iOS에서 신뢰 하는 인증 기관에서 발급 한 키 (목록 참조)를 사용 하 여 명령을 사용 [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) 합니다. 예를 들어:
+의 올바른를 갖도록 JSON 파일에 서명 하려면 `Content-Type` `application/pkcs7-mime` **터미널** 앱 및 `openssl` iOS에서 신뢰 하는 인증 기관에서 발급 한 키 (목록 참조)를 사용 하 여 명령을 사용 [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) 합니다. 다음은 그 예입니다.
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -477,7 +477,7 @@ cat json.txt | openssl smime -sign -inkey company.com.key
 -outform DER > apple-app-site-association
 ```
 
-이 `openssl` 명령은 웹 사이트에 입력 한 서명 된 JSON 파일을 **apple 앱 사이트-연결** URL에 출력 합니다. 예를 들어:
+이 `openssl` 명령은 웹 사이트에 입력 한 서명 된 JSON 파일을 **apple 앱 사이트-연결** URL에 출력 합니다. 다음은 그 예입니다.
 
 ```csharp
 https://example.com/apple-app-site-association.
@@ -487,7 +487,7 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>문서 기반 앱에서 핸드 오프 지원
 
-위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에 `CFBundleDocumentTypes` 의 키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 `NSUbiquitousDocumentUserActivityType` 합니다. 예를 들어:
+위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에 `CFBundleDocumentTypes` 의 키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 `NSUbiquitousDocumentUserActivityType` 합니다. 다음은 그 예입니다.
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -517,13 +517,13 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-responders"></a>응답기에서 전달 지원
 
-`UIResponder` `NSResponder` 속성을 설정 하 여 응답자 (IOS 또는 OS X에서 상속 됨)를 활동에 연결할 수 있습니다 `UserActivity` . 시스템은 `UserActivity` 적절 한 시간에 속성을 자동으로 저장 하 고, `UpdateUserActivityState` 메서드를 사용 하 여 현재 데이터를 사용자 동작 개체에 추가 하는 응답자의 메서드를 호출 합니다 `AddUserInfoEntriesFromDictionary` .
+`UIResponder` `NSResponder` 속성을 설정 하 여 응답자 (IOS 또는 OS X에서 상속 됨)를 활동에 연결할 수 있습니다 `UserActivity` . 시스템은 `UserActivity` 적절 한 시간에 속성을 자동으로 저장 하 고, `UpdateUserActivityState` 메서드를 사용 하 여 현재 데이터를 사용자 동작 개체에 추가 하는 응답자의 메서드를 호출 합니다  `AddUserInfoEntriesFromDictionary` .
 
 ## <a name="supporting-continuation-streams"></a>연속 스트림 지원
 
 는 작업을 계속 하는 데 필요한 정보의 양이 초기 전달 페이로드에 의해 효율적으로 전송 되지 않는 경우가 있을 수 있습니다. 이러한 상황에서 수신 앱은 데이터를 전송 하기 위해 자신과 원래 앱 간에 하나 이상의 스트림을 설정할 수 있습니다.
 
-원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 설정 합니다 `true` . 예를 들어:
+원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 설정 합니다 `true` . 다음은 그 예입니다.
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -542,7 +542,7 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-그러면 받는 앱에서의 메서드를 호출 `GetContinuationStreams` 하 여 `NSUserActivity` `AppDelegate` 스트림을 설정할 수 있습니다. 예를 들어:
+그러면 받는 앱에서의 메서드를 호출 `GetContinuationStreams` 하 여 `NSUserActivity` `AppDelegate` 스트림을 설정할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -607,7 +607,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 ## <a name="example-handoff-app"></a>핸드 오프 앱 예제
 
-Xamarin.ios 앱에서 핸드 오프를 사용 하는 예로이 가이드에 [**Monkeybrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) 샘플 앱이 포함 되어 있습니다. 앱에는 사용자가 웹을 탐색 하는 데 사용할 수 있는 4 개의 탭이 있습니다. 각 탭에는 지정 된 작업 형식 (날씨, 즐겨찾기, 커피 나누기 및 작업)이 있습니다.
+Xamarin.ios 앱에서 핸드 오프를 사용 하는 예로이 가이드에 [**Monkeybrowser**](/samples/xamarin/ios-samples/ios8-monkeybrowser) 샘플 앱이 포함 되어 있습니다. 앱에는 사용자가 웹을 탐색 하는 데 사용할 수 있는 4 개의 탭이 있습니다. 각 탭에는 지정 된 작업 형식 (날씨, 즐겨찾기, 커피 나누기 및 작업)이 있습니다.
 
 모든 탭에서 사용자가 새 URL을 입력 하 고 **이동** 단추를 누르면 `NSUserActivity` 사용자가 현재 검색 중인 url을 포함 하는 해당 탭에 대 한 새가 만들어집니다.
 
@@ -629,8 +629,8 @@ Xamarin.ios 앱에서 핸드 오프를 사용 하는 예로이 가이드에 [**M
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [MonkeyBrowser 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [MonkeyBrowser 샘플](/samples/xamarin/ios-samples/ios8-monkeybrowser)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0의 새로운 기능](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper 가이드](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

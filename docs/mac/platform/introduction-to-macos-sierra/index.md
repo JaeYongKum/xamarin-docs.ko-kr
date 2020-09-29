@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 4dde8941b09ac7b235b94e73e86dc60167fb6bd4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8715559db3f551773f41659a0c7c36adb29f0d1e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574459"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437232"
 ---
 # <a name="introduction-to-macos-sierra"></a>macOS Sierra 소개
 
@@ -127,7 +127,7 @@ macOS Sierra는 핵심 그래픽, 핵심 이미지, 금속 및 AVFoundation과 �
 
 Apple은 넓은 색으로 작업할 때 다음과 같은 모범 사례를 제공 합니다.
 
-- `NSColor`이제는 sRGB 색 공간을 사용 하며이 값은 더 이상 to 범위로 값을 클램프 하지 않습니다 `0.0` `1.0` . 앱이 이전 클램프 동작에 의존 하는 경우 macOS Sierra에 대해 수정 해야 합니다.
+- `NSColor` 이제는 sRGB 색 공간을 사용 하며이 값은 더 이상 to 범위로 값을 클램프 하지 않습니다 `0.0` `1.0` . 앱이 이전 클램프 동작에 의존 하는 경우 macOS Sierra에 대해 수정 해야 합니다.
 - 핵심 그래픽 또는 금속과 같은 하위 수준 API를 사용 하 여 이미지 처리를 제공 하는 경우 앱은 16 비트 부동 소수점 값을 지 원하는 확장 된 범위 색 공간과 픽셀 형식을 사용 해야 합니다. 필요한 경우 앱은 색 구성 요소 값을 수동으로 클램프 해야 합니다.
 - 핵심 그래픽, 핵심 이미지 및 금속 성능 셰이더는 모두 두 색상 공간 간을 변환 하기 위한 새로운 방법을 제공 합니다.
 
@@ -153,5 +153,5 @@ Apple은 위에 나열 된 주요 프레임 워크 변경 및 추가 기능 외�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mac 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Mac 샘플](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [MacOS 10.12의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

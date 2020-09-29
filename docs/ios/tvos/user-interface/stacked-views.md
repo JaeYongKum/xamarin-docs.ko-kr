@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1e1a9f3cd601a9d469bb53cce412daf08a8140f6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b318f11e866c94ab1f5aa8f6b4f351ac88475ac3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938894"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437051"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -147,7 +147,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
-이 예제의 경우 세그먼트 컨트롤에 대 한 유출 및 작업과 각 "플레이어 카드"에 대 한 콘센트가 제공 됩니다. 코드에서 현재 세그먼트를 기준으로 플레이어를 숨기고 표시 합니다. 예를 들어:
+이 예제의 경우 세그먼트 컨트롤에 대 한 유출 및 작업과 각 "플레이어 카드"에 대 한 콘센트가 제공 됩니다. 코드에서 현재 세그먼트를 기준으로 플레이어를 숨기고 표시 합니다. 다음은 그 예입니다.
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -309,7 +309,7 @@ UIView.Animate(0.25, ()=>{
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b0a45207ba036f73c2d1066ea292a02ebcc45064
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 915b5cb11aed96598e0460125734b15757f45466
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934630"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436142"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
@@ -120,5 +120,5 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 
 ## <a name="related-links"></a>관련 링크
 
-- [로컬 알림 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
+- [로컬 알림 (샘플)](/samples/xamarin/ios-samples/localnotifications)
 - [로컬 및 푸시 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)

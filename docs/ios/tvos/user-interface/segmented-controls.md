@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f9f1b09c5cbd5660018e8e8d346aa1d25e51dab2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 47530b27fb754bf2efd50615fef9dfc558d9c7d2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937386"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436194"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
@@ -65,7 +65,7 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
     [![위젯 탭](segmented-controls-images/segment03.png)](segmented-controls-images/segment03.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들어: 
+1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 다음은 그 예입니다. 
 
     [![이름 할당](segmented-controls-images/segment04.png)](segmented-controls-images/segment04.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -81,7 +81,7 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
     [![위젯 탭](segmented-controls-images/segment03-vs.png)](segmented-controls-images/segment03-vs.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 예를 들어: 
+1. 마지막으로 c # 코드에서이에 응답할 수 있도록 컨트롤에 **이름을** 할당 합니다. 다음은 그 예입니다. 
 
     [![이름 할당](segmented-controls-images/segment04-vs.png)](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -209,7 +209,7 @@ SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIContr
 - 보통
 - 강조 표시됨
 - 사용 안 함
-- 선택됨
+- 선택함
 - 포커스 있음
 
 그리고 `UIBarMetrics` 다음과 같이 사용할 메트릭을 지정 합니다.
@@ -235,7 +235,7 @@ SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlStat
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

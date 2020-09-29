@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 6f2a188617b00a008dafa20012c0997bc399045d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 87b828221582db37ded66d075bdc933b0743b793
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930964"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436161"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 
@@ -101,7 +101,7 @@ Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통�
 
 문서 선택기에 대해 자세히 알아보고 문서 선택기를 Xamarin.ios 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 [문서 선택기 소개](~/ios/platform/document-picker.md) 가이드를 참조 하세요.
 
-### <a name="handoff"></a>전달
+### <a name="handoff"></a>Handoff
 
 더 큰 연속성 기능에 포함 된 핸드 오프는 OS X와 iOS의 통합에 대 한 단계를 추가로 수행 합니다. 여기에는 플랫폼 간 이동, iPhone 호출 기능, iPad 및 Mac에서의 SMS, iPhone에서 테더 링의 향상 기능 등이 포함 됩니다.
 
@@ -166,7 +166,7 @@ IOS 8에서 향상 된 기능을 사용 하는 경우 다양 한 Api가 사용 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [UIKitEnhancements (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
+- [UIKitEnhancements (샘플)](/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [앱 확장 소개](~/ios/platform/extensions.md)
 - [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md)
 - [문서 선택기 소개](~/ios/platform/document-picker.md)

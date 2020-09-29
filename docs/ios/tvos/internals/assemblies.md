@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 2fde84441eeb9342d1a86e4dc565faf51d08c57b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 138b65d51c7069f04433f5b4aee6f8d2b743ccdb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573562"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435020"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Xamarin for tvOS에서 지 원하는 어셈블리
 
@@ -26,22 +26,22 @@ Xamarin에서 tvOS 앱에 대해 지 원하는 어셈블리의 목록입니다. 
 |Mono.Data.Sqlite.dll|1.2|SQLite 용 ADO.NET 공급자 [제한 사항](~/ios/data-cloud/system.data.md)을 참조 하세요.|
 |Mono.Data.Tds.dll|1.2|TDS 프로토콜 지원 [system.object](~/ios/data-cloud/system.data.md)내의 [system.object](xref:System.Data.SqlClient) 지원에 사용 됩니다.|
 |Mono.Security.dll|1.0|암호화 Api.|
-|monotouch.dll|1.0|이 어셈블리에는 [COCOATOUCH API에 대 한 c # 바인딩이](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8)포함 되어 있습니다.|
-|mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|monotouch.dll|1.0|이 어셈블리에는 [COCOATOUCH API에 대 한 c # 바인딩이](/dotnet/api/?view=xamarinios-10.8)포함 되어 있습니다.|
+|mscorlib.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
 |OpenTK.dll|1.0|[IPhone 장치 지원을 제공 하도록 확장](xref:OpenGLES)된 OpenGL/openal 개체 지향 api입니다.|
-|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)및 다음 네임 스페이스의 형식: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.componentmodel</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>시스템 .Net 캐시</li> <li>System.Net.Mail</li> <li>시스템 .Net Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>시스템 타이머</li></ul>|
-|System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.Net 3.5](https://msdn.microsoft.com/library/ms229335.aspx). [일부 기능이 제거](~/ios/data-cloud/system.data.md)되었습니다.|
-|System.object..|3.x|전체 oData 클라이언트.|
+|System.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))및 다음 네임 스페이스의 형식: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.componentmodel</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>시스템 .Net 캐시</li> <li>System.Net.Mail</li> <li>시스템 .Net Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>시스템 타이머</li></ul>|
+|System.Core.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Data.dll|1.2|[.Net 3.5](/previous-versions/ms229335(v=vs.100)). [일부 기능이 제거](~/ios/data-cloud/system.data.md)되었습니다.|
+|System.Data.Service.Client.dll|3.x|전체 oData 클라이언트.|
 |System.Drawing|1.0|System.object-Classic API 그리기<br />_System.object는 Xamarin.ios .NET 4.5 또는 모바일 프레임 워크에 대 한 Unified API에서 지원 되지 않습니다._|
-|System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx) 에 있는 [WCF](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) stack|
-|System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)및 다음 네임 스페이스의 형식: <ul><li>시스템</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.Net 3.5](https://msdn.microsoft.com/library/ms229335.aspx); [시스템 데이터](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) 지원의 일부입니다.|
-|System.Web.Services|1.1|서버 기능이 제거 된 .NET 3.5 프로필의 [기본 웹 서비스](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) 입니다.|
-|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Json.dll|1.1|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Runtime.Serialization.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.ServiceModel.dll|1.1|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95)) 에 있는 [WCF](../../../cross-platform/data-cloud/web-services/index.md) stack|
+|System.ServiceModel.Web.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))및 다음 네임 스페이스의 형식: <ul><li>시스템</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.Net 3.5](/previous-versions/ms229335(v=vs.100)); [시스템 데이터](../../data-cloud/system.data.md) 지원의 일부입니다.|
+|System.Web.Services|1.1|서버 기능이 제거 된 .NET 3.5 프로필의 [기본 웹 서비스](../../../cross-platform/data-cloud/web-services/index.md) 입니다.|
+|System.Xml.dll|1.0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
 
 <a name="Summary"></a>
 
