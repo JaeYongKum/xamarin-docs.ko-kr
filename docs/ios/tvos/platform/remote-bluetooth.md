@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 743bdf4d843d9e427e2343bf58cc29b98ec07e2b
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 1c1a51fe5999ac5556f2d27e98603b966fdd7f56
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997048"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437077"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Xamarin에서 tvOS 용 siri 원격 및 Bluetooth 컨트롤러
 
@@ -38,11 +38,11 @@ Siri 원격은 tvOS 앱 내에서 다음과 같은 기능 및 예상 된 사용�
 
 |기능|일반 앱 사용|게임 앱 사용|
 |---|---|---|
-|**터치 표면**<br />탐색을 클릭 하 여 선택 하 고 선택 하 여 상황에 맞는 메뉴를 선택 합니다.|**탭 하거나 살짝 밀기**<br />포커스를 받을 항목 간의 UI 탐색<br /><br />**클릭할**<br />선택한 (포커스 내) 항목을 활성화 합니다.|**탭 하거나 살짝 밀기**<br />게임 디자인에 따라 달라 지 며 가장자리를 눌러 D-패드로 사용할 수 있습니다.<br /><br />**클릭할**<br />기본 단추 함수를 수행 합니다.|
+|**터치 표면**<br />탐색을 클릭 하 여 선택 하 고 선택 하 여 상황에 맞는 메뉴를 선택 합니다.|**탭 하거나 살짝 밀기**<br />포커스를 받을 항목 간의 UI 탐색<br /><br />**클릭**<br />선택한 (포커스 내) 항목을 활성화 합니다.|**탭 하거나 살짝 밀기**<br />게임 디자인에 따라 달라 지 며 가장자리를 눌러 D-패드로 사용할 수 있습니다.<br /><br />**클릭**<br />기본 단추 함수를 수행 합니다.|
 |**메뉴**<br />키를 눌러 이전 화면 또는 메뉴로 돌아갑니다.|이전 화면으로 돌아갑니다. 주 앱 화면에서 Apple TV 홈 화면을 종료 합니다.|게임을 일시 중지 했다가 다시 시작 하 고 이전 화면으로 돌아갑니다. 주 앱 화면에서 Apple TV 홈 화면으로 돌아갑니다.|
 |**Siri/검색**<br />Siri를 사용 하는 국가에서 음성 제어를 길게 누르고 다른 모든 국가에서는 검색 화면을 표시 합니다.|해당 없음|해당 없음|
 |**재생/일시 중지**<br />미디어를 재생 및 일시 중지 하거나 앱에서 보조 기능을 제공 합니다.|미디어 재생을 시작 하 고 재생을 일시 중지/다시 시작 합니다.|보조 단추 함수를 수행 하거나 소개 비디오 (있는 경우)를 건너뜁니다.|
-|**Home**<br />키를 눌러 홈 화면으로 돌아간 다음, 두 번 클릭 하 여 실행 중인 앱을 표시 하 고,를 두 번 클릭 하 여 장치를 대기 합니다.|해당 없음|해당 없음|
+|**홈**<br />키를 눌러 홈 화면으로 돌아간 다음, 두 번 클릭 하 여 실행 중인 앱을 표시 하 고,를 두 번 클릭 하 여 장치를 대기 합니다.|해당 없음|해당 없음|
 |**볼륨**<br />연결 된 오디오/비디오 장비 볼륨을 제어 합니다.|해당 없음|해당 없음|
 
 <a name="Touch-Surface-Gestures"></a>
@@ -51,7 +51,7 @@ Siri 원격은 tvOS 앱 내에서 다음과 같은 기능 및 예상 된 사용�
 
 Siri 원격의 터치 표면은 tvOS 앱에서 응답할 수 있는 여러 단일 손가락 제스처를 검색할 수 있습니다.
 
-|살짝 밀기|클릭 대상|탭|
+|살짝 밀기|클릭|탭|
 |---|---|---|
 |![선택 영역 이동](remote-bluetooth-images/Gesture01.png)|![선택한 항목 근무 중인](remote-bluetooth-images/Gesture02.png)|![방향 단추](remote-bluetooth-images/Gesture03.png)|
 |화면에 있는 UI 요소 (위쪽, 왼쪽, 오른쪽) 사이에서 선택 (포커스)을 이동 합니다. 살짝 밀기는 관성을 사용 하 여 많은 콘텐츠 목록을 빠르게 스크롤 하는 데 사용할 수 있습니다.|선택한 (포커스 내) 항목을 활성화 하거나 게임의 기본 단추 처럼 동작 합니다. 클릭 및 유지는 상황에 맞는 메뉴 또는 보조 함수를 활성화할 수 있습니다.|가장자리에 대 한 터치 표면을 가볍게 누르면 D-패드의 방향 단추 처럼 동작 하 고 탭 영역에 따라 포커스를 위쪽, 아래쪽, 왼쪽 또는 오른쪽으로 이동 합니다. 앱에 따라를 사용 하 여 숨겨진 컨트롤을 표시할 수 있습니다.|
@@ -188,7 +188,7 @@ namespace tvRemote
 
 TvOS 앱에서를 기반으로 사용자 지정 형식을 만드는 경우 `UIKit` (예: `UIView` ) 이벤트를 통한 단추 누르기의 하위 수준 처리 기능을 제공할 수도 있습니다 `UIPress` .
 
-`UIPress`이벤트는 `UITouch` `UIPress` siri 원격 또는 기타 연결 된 Bluetooth 장치 (예: 게임 컨트롤러)에서 단추를 누르는 방법에 대 한 정보를 반환 하는 것을 제외 하 고 TvOS 이벤트를 iOS에 게 제공 하는 것입니다. `UIPress`이벤트는 누른 단추와 해당 상태 (시작 됨, 취소 됨, 변경 됨 또는 종료 됨)를 설명 합니다.
+`UIPress`이벤트는 `UITouch` `UIPress` siri 원격 또는 기타 연결 된 Bluetooth 장치 (예: 게임 컨트롤러)에서 단추를 누르는 방법에 대 한 정보를 반환 하는 것을 제외 하 고 TvOS 이벤트를 iOS에 게 제공 하는 것입니다. `UIPress` 이벤트는 누른 단추와 해당 상태 (시작 됨, 취소 됨, 변경 됨 또는 종료 됨)를 설명 합니다.
 
 Bluetooth 게임 컨트롤러와 같은 장치에서 아날로그 단추를 사용할 경우 `UIPress` 단추에 적용 되는 힘의 양도 반환 됩니다. `Type`이벤트의 속성은 `UIPress` 상태를 변경 하는 실제 단추를 정의 하는 반면, 나머지 속성은 발생 한 변경 사항을 설명 합니다.
 
@@ -367,7 +367,7 @@ TvOS에서 게임 컨트롤러 입력을 직접 처리 하려면 `GCEventViewCon
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

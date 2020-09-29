@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
-ms.openlocfilehash: 4cc321f44238a7b738e40c02656b42f1eda1155a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 89d074e14f2a66d472f06acecf42127a7ff44c4c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938764"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437376"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Xamarin에서 watchOS 설치 및 사용
 
@@ -33,7 +33,7 @@ Watch 앱은 다음과 같은 세 가지 프로젝트로 구성 됩니다.
 
 - **Watch 앱 프로젝트** -여기에는 watch 앱에 대 한 모든 UI 리소스를 포함 하는 사용자 인터페이스 스토리 보드 파일이 포함 됩니다.
 
-[시청 키트 카탈로그 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 솔루션은 xamarin.ios에서 다음과 같이 표시 됩니다.
+[시청 키트 카탈로그 샘플](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 솔루션은 xamarin.ios에서 다음과 같이 표시 됩니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -45,7 +45,7 @@ Watch 앱은 다음과 같은 세 가지 프로젝트로 구성 됩니다.
 
 -----
 
-[WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플을 다운로드 하 고 실행 하 여 시작 하세요.
+[WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플을 다운로드 하 고 실행 하 여 시작 하세요.
 샘플의 화면은 [컨트롤](~/ios/watchos/user-interface/index.md) 페이지에서 찾을 수 있습니다.
 
 ## <a name="creating-a-new-project"></a>새 프로젝트 만들기
@@ -216,6 +216,6 @@ WatchOS 템플릿 파일 (예: `InterfaceController` ,, `ExtensionDelegate` 및)
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [첫 번째 시청 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple의 WatchKit 팁](https://developer.apple.com/watchkit/tips/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: bddab35044c2b85b69146a03babd9884784baceb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8ccafec971a97a05dbf16488974d7a8e8e349708
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574589"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437341"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>IOS 11의 MapKit의 새로운 기능
 
@@ -29,7 +29,7 @@ iOS 11은 다음과 같은 새 기능을 MapKit에 추가 합니다.
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>확대/축소 하는 동안 자동으로 표식 그룹화
 
-샘플 [Mapkit 샘플 "Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) 에서는 새 iOS 11 주석 클러스터링 기능을 구현 하는 방법을 보여 줍니다.
+샘플 [Mapkit 샘플 "Tandm"](/samples/xamarin/ios-samples/ios11-mapkitsample) 에서는 새 iOS 11 주석 클러스터링 기능을 구현 하는 방법을 보여 줍니다.
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1. `MKPointAnnotation` 하위 클래스 만들기
 
@@ -108,7 +108,7 @@ public class BikeView : MKMarkerAnnotationView
 
 표식의 클러스터를 나타내는 주석 보기는 간단한 이미지인 반면, 사용자는 앱이 그룹화 된 _표식의 수에_ 대 한 시각적 표시를 제공 하는 것으로 간주 합니다.
 
-이 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) 에서는 CoreGraphics를 사용 하 여 클러스터의 마커 수와 각 표식 유형 비율의 원 그래프 표현을 렌더링 합니다.
+이 [샘플 코드](/samples/xamarin/ios-samples/ios11-mapkitsample) 에서는 CoreGraphics를 사용 하 여 클러스터의 마커 수와 각 표식 유형 비율의 원 그래프 표현을 렌더링 합니다.
 
 또한 다음과 같이 설정 해야 합니다.
 
@@ -200,7 +200,7 @@ MapKit를 사용 하 여 데이터를 표시 하는 방법에 대 한 자세한 
 
 ## <a name="compass-button"></a>나침반 단추
 
-iOS 11은 지도에서 나침반을 팝 하 고 뷰의 다른 위치에 렌더링 하는 기능을 추가 합니다. 예는 [Tandm 샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) 을 참조 하세요.
+iOS 11은 지도에서 나침반을 팝 하 고 뷰의 다른 위치에 렌더링 하는 기능을 추가 합니다. 예는 [Tandm 샘플 앱](/samples/xamarin/ios-samples/ios11-mapkitsample) 을 참조 하세요.
 
 나침반 (지도 방향이 변경 될 때 라이브 애니메이션 포함) 처럼 보이는 단추를 만들고 다른 컨트롤에 렌더링 합니다.
 
@@ -255,6 +255,6 @@ View.AddSubview(button); // constraints omitted for simplicity
 
 ## <a name="related-links"></a>관련 링크
 
-- [MapKit 샘플 ' Tandm '](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [MapKit 샘플 ' Tandm '](/samples/xamarin/ios-samples/ios11-mapkitsample)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
 - [MapKit (WWDC)의 새로운 기능 (비디오)](https://developer.apple.com/videos/play/wwdc2017/237/)

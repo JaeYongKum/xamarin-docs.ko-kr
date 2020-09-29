@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 56b9f82fcc15afc8c75012b204588b4da65a32c4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9cd19cfccac03ea1edb59c0422f197e33873abc6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939739"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436890"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Xamarin에서 tvOS 분할 뷰 컨트롤러 작업
 
@@ -100,7 +100,7 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 
 ### <a name="accessing-master-and-detail"></a>마스터 및 세부 정보 액세스
 
-마스터 및 세부 뷰 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 `ViewControllers` 분할 뷰 컨트롤러의 속성을 사용 합니다. 예를 들어:
+마스터 및 세부 뷰 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 `ViewControllers` 분할 뷰 컨트롤러의 속성을 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -122,7 +122,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-분할 뷰 컨트롤러에서 메서드를 재정의 `ViewDidLoad` 하 고 두 뷰를 함께 연결 합니다. 예를 들어:
+분할 뷰 컨트롤러에서 메서드를 재정의 `ViewDidLoad` 하 고 두 뷰를 함께 연결 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -146,7 +146,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>마스터 표시 및 숨기기
 
-필요에 따라 `PreferredDisplayMode` 분할 뷰 컨트롤러의 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예를 들어:
+필요에 따라 `PreferredDisplayMode` 분할 뷰 컨트롤러의 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Show hide split view
@@ -174,7 +174,7 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

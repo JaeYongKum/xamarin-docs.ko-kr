@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 59ad6a11eecf629fc2a815e21a29493f4a1a1397
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 56306b04b57295a3625804bdbbb6a9810675be2b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932225"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436763"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Xamarin.ios의 주석 및 오버레이
 
@@ -20,7 +20,7 @@ ms.locfileid: "86932225"
 
  [![MapKit 앱 예제](ios-maps-walkthrough-images/00-map-overlay.png)](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
-[맵 연습 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough)에서 완성 된 코드를 찾을 수 있습니다.
+[맵 연습 샘플](/samples/xamarin/ios-samples/mapswalkthrough)에서 완성 된 코드를 찾을 수 있습니다.
 
 먼저 새 **IOS 빈 프로젝트**를 만들고 관련 이름을 지정 합니다. 먼저 뷰 컨트롤러에 MapView를 표시 하는 코드를 추가 하 고 Mapview 및 사용자 지정 주석에 대 한 새 클래스를 만듭니다. 이렇게 하려면 아래 단계를 수행합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "86932225"
 
     ```
 
-1. 의 새 인스턴스를 만들어의에 `MapDelegate` 할당 합니다 `Delegate` `MKMapView` . 잠시 후 다음을 구현 합니다 `MapDelegate` .
+1. 의 새 인스턴스를 만들어의에  `MapDelegate` 할당 합니다 `Delegate` `MKMapView` . 잠시 후 다음을 구현 합니다 `MapDelegate` .
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -286,6 +286,6 @@ ms.locfileid: "86932225"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 연습 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough)
-- [지도 데모 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)
+- [Maps 연습 샘플](/samples/xamarin/ios-samples/mapswalkthrough)
+- [지도 데모 샘플](/samples/xamarin/ios-samples/mapdemo)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)

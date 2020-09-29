@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b61d851e793d3fb0ae5e97718b151dd87f37da61
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b70a4693f356fdf83ca2f7fee9615855a5569712
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937048"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437028"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -66,10 +66,10 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 
 전환 유형에는 여러 가지가 있으며, 각각은 새 뷰 컨트롤러를 사용자에 게 표시 하는 방법과 Storyboard의 다른 뷰 컨트롤러와 상호 작용 하는 방식을 제어 합니다. 이러한 사항은 아래에 설명 되어 있습니다. Segue 개체를 하위 클래스로 지정 하 여 사용자 지정 전환을 구현할 수도 있습니다.
 
-- **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는와 동일한 작업 `pushViewController` 을 수행 하며, 일반적으로 화면에 있는 데이터 간의 관계가 있는 경우에 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
-- **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue을 사용 하는 경우 `DismissViewController` 이전 뷰 컨트롤러에 반환 하기 위해 사용 해야 합니다.
+- **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는와 동일한 작업  `pushViewController` 을 수행 하며, 일반적으로 화면에 있는 데이터 간의 관계가 있는 경우에 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
+- **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue을 사용 하는 경우  `DismissViewController` 이전 뷰 컨트롤러에 반환 하기 위해 사용 해야 합니다.
 - **사용자 지정** -사용자 지정 segue을의 하위 클래스로 만들 수 있습니다 `UIStoryboardSegue` .
-- **해제** – 해제 segue를 사용 하 여 push 또는 modal segue를 통해 다시 탐색할 수 있습니다. 예를 들어, 모달로 제공 된 뷰 컨트롤러를 해제할 수 있습니다. 이 외에도 한 번만 사용 하 고 일련의 푸시 및 모달 segue을 해제 하 고 단일 해제 작업으로 탐색 계층 구조에서 여러 단계를 되돌릴 수 있습니다. IOS에서 해제 segue를 사용 하는 방법을 이해 하려면 [해제 Segue 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 조리법을 읽어 보세요.
+- **해제** – 해제 segue를 사용 하 여 push 또는 modal segue를 통해 다시 탐색할 수 있습니다. 예를 들어, 모달로 제공 된 뷰 컨트롤러를 해제할 수 있습니다. 이 외에도 한 번만 사용 하 고 일련의 푸시 및 모달 segue을 해제 하 고 단일 해제 작업으로 탐색 계층 구조에서 여러 단계를 되돌릴 수 있습니다. IOS에서 해제 segue를 사용 하는 방법을 이해 하려면  [해제 Segue 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 조리법을 읽어 보세요.
 - **원본 없는** – A 원본 없는 segue는 초기 뷰 컨트롤러를 포함 하는 장면을 나타내며 사용자에 게 먼저 표시 되는 보기입니다. 이는 아래에 표시 된 segue 나타냅니다.  
 
     [![원본 없는 segue](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
@@ -91,7 +91,7 @@ Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응
 
 ### <a name="transferring-data-with-segues"></a>Segue를 사용 하 여 데이터 전송
 
-Segue의 이점은 전환으로 끝나지 않습니다. 또한 뷰 컨트롤러 간의 데이터 전송을 관리 하는 데 사용할 수 있습니다. 이는 `PrepareForSegue` 초기 뷰 컨트롤러에서 메서드를 재정의 하 고 데이터를 처리 하 여 수행 됩니다. 예를 들어 단추 누르기를 사용 하 여 segue를 트리거할 때 응용 프로그램은이 메서드를 호출 하 여 탐색이 발생 *하기 전에* 새 뷰 컨트롤러를 준비할 수 있는 기회를 제공 합니다. [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) 샘플에서 아래 코드는이를 보여 줍니다.
+Segue의 이점은 전환으로 끝나지 않습니다. 또한 뷰 컨트롤러 간의 데이터 전송을 관리 하는 데 사용할 수 있습니다. 이는 `PrepareForSegue` 초기 뷰 컨트롤러에서 메서드를 재정의 하 고 데이터를 처리 하 여 수행 됩니다. 예를 들어 단추 누르기를 사용 하 여 segue를 트리거할 때 응용 프로그램은이 메서드를 호출 하 여 탐색이 발생 *하기 전에* 새 뷰 컨트롤러를 준비할 수 있는 기회를 제공 합니다. [Phoneword](/samples/xamarin/ios-samples/hello-ios) 샘플에서 아래 코드는이를 보여 줍니다.
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue,
@@ -196,7 +196,7 @@ Mac용 Visual Studio를 사용 하 여 개발한 iOS 앱에서 사용 하기 위
 
     [![라이브러리에서 NavigationController 추가](images/add-navigation-controller.png)](images/add-navigation-controller.png#lightbox)
 
-4. 이 뷰 컨트롤러는 자체 사용자 지정 클래스를 포함 하며 고유한 Storyboard ID도 필요 합니다. 이 새로 추가 된 보기 위에 있는 상자를 클릭 하면 세 개의 아이콘이 표시 되 고 맨 왼쪽에는 뷰의 뷰 컨트롤러를 나타냅니다. 이 아이콘을 선택 하면 오른쪽 창의 id 탭에서 클래스 및 ID 값을 설정할 수 있습니다. 이러한 값을로 설정 하 `MainViewController` 고 확인 `Use Storyboard ID` 해야 합니다.
+4. 이 뷰 컨트롤러는 자체 사용자 지정 클래스를 포함 하며 고유한 Storyboard ID도 필요 합니다. 이 새로 추가 된 보기 위에 있는 상자를 클릭 하면 세 개의 아이콘이 표시 되 고 맨 왼쪽에는 뷰의 뷰 컨트롤러를 나타냅니다. 이 아이콘을 선택 하면 오른쪽 창의 id 탭에서 클래스 및 ID 값을 설정할 수 있습니다. 이러한 값을로 설정 하 `MainViewController` 고 확인 해야 `Use Storyboard ID` 합니다.
 
     [![Id 패널에서 MainViewController 설정](images/identity-panel.png)](images/identity-panel.png#lightbox)
 
@@ -262,7 +262,7 @@ public partial class MainViewController : UIViewController
 }
 ```
 
-클래스 및 메서드를 등록 하는 방법에 대 한 자세한 내용은 [등록자 형식](https://docs.microsoft.com/xamarin/ios/internals/registrar) 설명서를 참조 하세요.
+클래스 및 메서드를 등록 하는 방법에 대 한 자세한 내용은 [등록자 형식](../../internals/registrar.md) 설명서를 참조 하세요.
 
 이 클래스의 마지막 단계는 단추를 연결 하 고 분홍색 보기 컨트롤러에 전환 하는 것입니다. `PinkViewController`스토리 보드에서을 (를) 인스턴스화하면 아래 예제 코드에 표시 된 대로를 사용 하 여 push segue를 프로그래밍 합니다 `PushViewController` .
 
@@ -356,7 +356,7 @@ public partial class MainViewController : UIViewController
 
 SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 컨트롤러의 모든 Segue에이 방법을 적용할 수 있습니다. 이 경우 하나의 Segue identifier만 `SegueToPink` 있습니다.
 
-작업 예제를 보려면 [수동 storyboard 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) 에서 Storyboard. 조건부 솔루션을 참조 하십시오.
+작업 예제를 보려면 [수동 storyboard 샘플](/samples/xamarin/ios-samples/manualstoryboard) 에서 Storyboard. 조건부 솔루션을 참조 하십시오.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -426,7 +426,7 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 
 6. **속성 탐색기**의 **위젯** 탭에서, **스토리 보드** 의 이름과 위에서 만든 장면의 **참조 ID** (storyboard id)를 선택 합니다.
 
-    [![위젯 탭](images/ref09.png)](images/ref09.png#lightbox)
+    [![위젯 탭 ](images/ref09.png)](images/ref09.png#lightbox)
 
 7. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다.
 
@@ -482,7 +482,7 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 
 ## <a name="related-links"></a>관련 링크
 
-- [수동 Storyboard (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [수동 Storyboard (샘플)](/samples/xamarin/ios-samples/manualstoryboard/)
 - [IOS Designer 소개](~/ios/user-interface/designer/introduction.md)
 - [Storyboard로 변환](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [UIStoryboard 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

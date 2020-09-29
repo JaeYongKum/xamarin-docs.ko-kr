@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 345c05a439423474644ac64ef86f9adc580ab0b1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1fdb7a10bd767085ba8758fa2e026cc36c93639a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937724"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436926"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Xamarin에서 watchOS 레이아웃 작업
 
@@ -54,9 +54,9 @@ Watch 키트에는 멋진 조사식 앱 레이아웃을 작성 하는 데 도움
 
 ![비례 값 및 오프셋 조정 제공](layout-images/button-attributes.png)
 
-### <a name="group"></a>그룹화
+### <a name="group"></a>그룹
 
-`WKInterfaceGroup`는 컨트롤을 가로 또는 세로로 쌓기 위해 구성할 수 있는 간단한 레이아웃 컨테이너입니다. 기본적으로 각 컨트롤 간의 간격을 포함 하지만 **특성** 검사자에서 간격 (및 인세트)을 수정할 수 있습니다.
+`WKInterfaceGroup` 는 컨트롤을 가로 또는 세로로 쌓기 위해 구성할 수 있는 간단한 레이아웃 컨테이너입니다. 기본적으로 각 컨트롤 간의 간격을 포함 하지만 **특성** 검사자에서 간격 (및 인세트)을 수정할 수 있습니다.
 
 ![특성 검사자에서 간격 및 인세트 수정](layout-images/group-attributes.png)
 
@@ -79,6 +79,6 @@ Watch 키트에는 멋진 조사식 앱 레이아웃을 작성 하는 데 도움
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple의 레이아웃 참조](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
 - [Apple 색 & 입력 체계 참조](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

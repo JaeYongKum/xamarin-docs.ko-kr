@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: bdbff7760e7680173c57e5fc83cecb80967c0a51
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 2eef38791f420fd49b87b46fd131f1e6ce501892
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996099"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436578"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -27,8 +27,8 @@ MT입니다. D 리플렉션 API를 사용 하면 클래스를 MT 인 특성으�
 리플렉션 API를 사용 하는 것은 다음과 같이 간단 합니다.
 
 1. MT로 데코레이팅된 클래스 만들기 D 특성.
-1. 인스턴스를 만들고 `BindingContext` 위의 클래스의 인스턴스를 전달 합니다.
-1. 를 만들고를 `DialogViewController` 전달 `BindingContext’s` `RootElement` 합니다.
+1. 인스턴스를 만들고  `BindingContext` 위의 클래스의 인스턴스를 전달 합니다.
+1. 를 만들고를  `DialogViewController` 전달  `BindingContext’s` `RootElement` 합니다.
 
 리플렉션 API를 사용 하는 방법을 보여 주는 예를 살펴보겠습니다. 이 예에서는 아래와 같이 간단한 데이터 입력 화면을 작성 합니다.
 
@@ -143,7 +143,7 @@ public class Expense
 
 ## <a name="related-links"></a>관련 링크
 
-- [MTDReflectionWalkthrough (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
+- [MTDReflectionWalkthrough (샘플)](/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
 - [Monotouch.dialog 대화 상자 소개](~/ios/user-interface/monotouch.dialog/index.md)
 - [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [JSON 요소 연습](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)

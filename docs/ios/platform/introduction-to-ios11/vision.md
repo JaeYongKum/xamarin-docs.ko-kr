@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 89a21eec369691e5c6e1ec8ce2430d679b6b309d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9a31cd31f7cbfb4748991d45204ca867b5d62c8c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572145"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436623"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Xamarin.ios의 비전 프레임 워크
 
@@ -35,7 +35,7 @@ ms.locfileid: "84572145"
 
 ## <a name="rectangle-detection"></a>사각형 감지
 
-[VisionRects 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) 에서는 이미지를 처리 하 고 검색 된 사각형을 그리는 방법을 보여 줍니다.
+[VisionRects 샘플](/samples/xamarin/ios-samples/ios11-visionrectangles) 에서는 이미지를 처리 하 고 검색 된 사각형을 그리는 방법을 보여 줍니다.
 
 ### <a name="1-initialize-the-vision-request"></a>1. 비전 요청 초기화
 
@@ -94,7 +94,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 - 각 항목을 검색 한 위치를 나타내는 사각형 그리기
 - CoreGraphics를 사용 하 여 각 사각형에 대 한 텍스트 레이블 추가
 
-정확한 CoreGraphics 메서드에 대 한 [샘플 소스](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) 를 봅니다.
+정확한 CoreGraphics 메서드에 대 한 [샘플 소스](/samples/xamarin/ios-samples/ios11-visionrectangles) 를 봅니다.
 
 ![세 개의 사각형이 검색 된 사진](vision-images/found-rectangles-phone-sml.png)
 
@@ -106,7 +106,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ## <a name="face-detection"></a>얼굴 감지
 
-[VisionFaces 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) 은 다른 시각 요청 클래스를 사용 하 여 **VisionRectangles** 샘플과 비슷한 방식으로 작동 합니다.
+[VisionFaces 샘플](/samples/xamarin/ios-samples/ios11-visionfaces) 은 다른 시각 요청 클래스를 사용 하 여 **VisionRectangles** 샘플과 비슷한 방식으로 작동 합니다.
 
 ### <a name="1-initialize-the-vision-request"></a>1. 비전 요청 초기화
 
@@ -167,7 +167,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 - 검색 된 각 면에 대 한 사각형 그리기
 - CoreGraphics를 사용 하 여 각 면에 대 한 텍스트 레이블 추가
 
-정확한 CoreGraphics 메서드에 대 한 [샘플 소스](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) 를 봅니다.
+정확한 CoreGraphics 메서드에 대 한 [샘플 소스](/samples/xamarin/ios-samples/ios11-visionfaces) 를 봅니다.
 
 ![두 얼굴 검색 된 사진](vision-images/found-faces-phone-sml.png)
 
@@ -177,6 +177,6 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ## <a name="related-links"></a>관련 링크
 
-- [시각 사각형 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles)
-- [시력 얼굴 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [시각 사각형 (샘플)](/samples/xamarin/ios-samples/ios11-visionrectangles)
+- [시력 얼굴 (샘플)](/samples/xamarin/ios-samples/ios11-visionfaces)
 - [핵심 이미지의 고급 기능-필터, 금속, 비전 및 기타 (WWDC) (비디오)](https://developer.apple.com/videos/play/wwdc2017/510/)

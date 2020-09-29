@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2017
-ms.openlocfilehash: 48ea94b62ba01f32699bf595bc004de133371468
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7bc102069d673b9459c863282b0423952c8fa59d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574572"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437318"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>IOS 11의 SiriKit 업데이트
 
@@ -45,11 +45,11 @@ IOS 11의 SiriKit은 다음과 같이 새로운 및 업데이트 된 의도 도�
 - 제목 및 완료 상태를 포함 합니다.
 - 필요에 따라 마감일 및 위치를 포함 합니다.
 
-**참고 사항**
+**참고**
 
 - 제목과 내용 필드가 있습니다.
 
-작업과 메모는 모두 그룹으로 구성할 수 있습니다. 이 섹션의 나머지 부분에서는 [sirikit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)를 사용 하 여이 새 도메인을 구현 하는 방법에 대해 설명 합니다.
+작업과 메모는 모두 그룹으로 구성할 수 있습니다. 이 섹션의 나머지 부분에서는 [sirikit](/samples/xamarin/ios-samples/ios11-sirikitsample)를 사용 하 여이 새 도메인을 구현 하는 방법에 대해 설명 합니다.
 
 ### <a name="how-to-process-a-sirikit-request"></a>SiriKit 요청을 처리 하는 방법
 
@@ -68,10 +68,10 @@ IOS 11의 SiriKit은 다음과 같이 새로운 및 업데이트 된 의도 도�
 
 예를 들어, 인터페이스의 경우 `IINCreateTaskListIntent` 필수 메서드는 `HandleCreateTaskList` 입니다. Siri 상호 작용에 대 한 제어를 강화 하는 네 가지 선택적 메서드가 있습니다.
 
-- `ResolveTitle`– 제목의 유효성을 검사 하거나, 기본 제목 (해당 하는 경우)을 설정 하거나, 데이터가 필요 하지 않다는 신호를 보냅니다.
-- `ResolveTaskTitles`– 사용자가 말한 작업 목록의 유효성을 검사 합니다.
-- `ResolveGroupName`– 그룹 이름의 유효성을 검사 하 고 기본 그룹을 선택 하거나 데이터가 필요 하지 않다는 신호를 보냅니다.
-- `ConfirmCreateTaskList`– 코드에서 요청 된 작업을 수행할 수 있지만 해당 작업을 수행 하지 않는지 확인 `Handle*` 합니다. (메서드만 데이터를 수정 해야 함)
+- `ResolveTitle` – 제목의 유효성을 검사 하거나, 기본 제목 (해당 하는 경우)을 설정 하거나, 데이터가 필요 하지 않다는 신호를 보냅니다.
+- `ResolveTaskTitles` – 사용자가 말한 작업 목록의 유효성을 검사 합니다.
+- `ResolveGroupName` – 그룹 이름의 유효성을 검사 하 고 기본 그룹을 선택 하거나 데이터가 필요 하지 않다는 신호를 보냅니다.
+- `ConfirmCreateTaskList` – 코드에서 요청 된 작업을 수행할 수 있지만 해당 작업을 수행 하지 않는지 확인 `Handle*` 합니다. (메서드만 데이터를 수정 해야 함)
 
 ### <a name="handle-the-intent"></a>의도를 처리 합니다.
 
@@ -94,18 +94,18 @@ IOS 11의 SiriKit은 다음과 같이 새로운 및 업데이트 된 의도 도�
 
 필수 `Handle*` 및 선택적 `Confirm*` 메서드는 완료 처리기에 전달 되는 개체의 값을 설정 하 여 응답 코드를 표시 합니다. 응답은 열거에서 제공 됩니다 `INCreateTaskListIntentResponseCode` .
 
-- `Ready`– 확인 단계를 수행 하는 동안 반환 됩니다 (즉, 메서드에서는 그렇지 않고 메서드에서는 `Confirm*` `Handle*` ).
-- `InProgress`– 장기 실행 작업 (예: 네트워크/서버 작업)에 사용 됩니다.
-- `Success`– 정상적으로 작동 하는 작업의 세부 정보를 사용 하 여 응답 `Handle*` 합니다 (메서드 에서만).
-- `Failure`– 오류가 발생 하 여 작업을 완료할 수 없음을 의미 합니다.
-- `RequiringAppLaunch`– 의도에 따라 처리할 수 없지만 응용 프로그램에서 작업을 수행할 수 있습니다.
-- `Unspecified`– 사용 안 함: 사용자에 게 오류 메시지가 표시 됩니다.
+- `Ready` – 확인 단계를 수행 하는 동안 반환 됩니다 (즉, 메서드에서는 그렇지 않고 메서드에서는 `Confirm*` `Handle*` ).
+- `InProgress` – 장기 실행 작업 (예: 네트워크/서버 작업)에 사용 됩니다.
+- `Success` – 정상적으로 작동 하는 작업의 세부 정보를 사용 하 여 응답 `Handle*` 합니다 (메서드 에서만).
+- `Failure` – 오류가 발생 하 여 작업을 완료할 수 없음을 의미 합니다.
+- `RequiringAppLaunch` – 의도에 따라 처리할 수 없지만 응용 프로그램에서 작업을 수행할 수 있습니다.
+- `Unspecified` – 사용 안 함: 사용자에 게 오류 메시지가 표시 됩니다.
 
 이러한 방법 및 응답에 대 한 자세한 내용은 Apple의 [Sirikit 목록 및 참고 문서](https://developer.apple.com/documentation/sirikit/lists_and_notes)를 참조 하세요.
 
 ### <a name="implementing-lists-and-notes"></a>목록 및 메모 구현
 
-작업 [노트 Sirikit 예](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample) 는 새 iOS 앱에 sirikit 지원을 추가 하는 다음 단계를 사용 하 여 만들어졌습니다.
+작업 [노트 Sirikit 예](/samples/xamarin/ios-samples/ios11-sirikitsample) 는 새 iOS 앱에 sirikit 지원을 추가 하는 다음 단계를 사용 하 여 만들어졌습니다.
 
 먼저 SiriKit 지원을 추가 하려면 iOS 앱에 대해 다음 단계를 수행 합니다.
 
@@ -229,5 +229,5 @@ _목표-C 예외가 throw 되었습니다.  이름: NSInternalInconsistencyExcep
 ## <a name="related-links"></a>관련 링크
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
-- [에 대 한 정보 SiriKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [에 대 한 정보 SiriKit 샘플](/samples/xamarin/ios-samples/ios11-sirikitsample)
 - [SiriKit (WWDC)의 새로운 기능 (비디오)](https://developer.apple.com/videos/play/wwdc2017/214/)

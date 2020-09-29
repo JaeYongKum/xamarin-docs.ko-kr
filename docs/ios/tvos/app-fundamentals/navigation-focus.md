@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: d9e8d91b03a5a82373012da215bd29a747e67d3e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 844da10aaf5882ce8c381ee2407dbf91e0bc6c89
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939453"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437104"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스 사용
 
@@ -80,7 +80,7 @@ Apple에는 포커스 및 선택 작업에 대 한 다음과 같은 제안이 �
 
 ### <a name="working-with-focus"></a>포커스 작업
 
-포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 재정의 `CanBecomeFocused` 하 고 `true` 를 반환 합니다. 그렇지 않으면을 반환 `false` 합니다. 예를 들어:
+포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 재정의 `CanBecomeFocused` 하 고 `true` 를 반환 합니다. 그렇지 않으면을 반환 `false` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-언제 든 지 `Focused` 컨트롤의 속성을 사용 하 여 `UIKit` 현재 항목 인지 확인할 수 있습니다. `true`현재 UI 항목에 포커스가 있는 경우에는 그렇지 않습니다. 예를 들어:
+언제 든 지 `Focused` 컨트롤의 속성을 사용 하 여 `UIKit` 현재 항목 인지 확인할 수 있습니다. `true`현재 UI 항목에 포커스가 있는 경우에는 그렇지 않습니다. 다음은 그 예입니다.
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만 해당 속성을로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다 `PreferredFocusedView` `true` . 예를 들어:
+코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만 해당 속성을로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다 `PreferredFocusedView` `true` . 다음은 그 예입니다.
 
 ```csharp
 // Make the play button the starting focus item
@@ -204,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 첫째,이 코드는 `NextFocusedView` `UIFocusUpdateContext` ()에 전달 된의을 가져옵니다 `context` . 이 뷰가 이면 `null` 처리가 필요 하지 않으며 메서드가 종료 됩니다.
 
-그런 다음 `nextFocusableItem` 이 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 속성을 사용 하 여 반대 단추에 포커스를 보냅니다 `PreferredFocusedView` . 예를 들어:
+그런 다음 `nextFocusableItem` 이 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 속성을 사용 하 여 반대 단추에 포커스를 보냅니다 `PreferredFocusedView` . 다음은 그 예입니다.
 
 ```csharp
 // Move from the More Info to Buy button
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>컬렉션에서 포커스 사용
 
-개별 항목을 또는에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionView` `UITableView` 또는의 메서드를 `UICollectionViewDelegate` 각각 재정의 `UITableViewDelegate` 합니다. 예를 들어:
+개별 항목을 또는에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionView` `UITableView` 또는의 메서드를 `UICollectionViewDelegate` 각각 재정의 `UITableViewDelegate` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -276,7 +276,7 @@ myImageView.AdjustsImageWhenAncestorFocused = true;
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

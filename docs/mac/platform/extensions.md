@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ac4c8d7bbd28946b6089e7f22a36727d2d73ec18
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: abb14f2074a2f519037ef2a9e85f2bf66613b836
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939206"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436792"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
@@ -44,7 +44,7 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
 
     [![시스템 로그](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - 위에서 설명한 것 처럼 확장 호스트 응용 프로그램을 실행 하면 시스템에 등록 됩니다. 응용 프로그램 번들을 삭제 하 고 등록을 취소 합니다. 
-- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다.`plugin kit -mv`
+- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다. `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App"></a>
 
@@ -52,7 +52,7 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
 
 개발자는 xamarin.ios 확장과 동일한 방식으로 Xamarin.ios 확장을 만들고 작업 하므로 자세한 내용은 [확장 소개](~/ios/platform/extensions.md) 설명서를 참조 하세요.
 
-각 확장 형식의 작은 작업 샘플을 포함 하는 Xamarin.ios 프로젝트 예제는 [여기](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)에서 찾을 수 있습니다.
+각 확장 형식의 작은 작업 샘플을 포함 하는 Xamarin.ios 프로젝트 예제는 [여기](/samples/xamarin/mac-samples/extensionsamples)에서 찾을 수 있습니다.
 
 <a name="Summary"></a>
 
@@ -63,5 +63,5 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
 ## <a name="related-links"></a>관련 링크
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)
+- [ExtensionSamples](/samples/xamarin/mac-samples/extensionsamples)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

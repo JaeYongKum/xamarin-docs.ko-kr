@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8619fa73a4dbaabe1e161c634b6a794b701d5135
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b7d85af558f5665ae46d9a7d05d26badc313a993
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570863"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437069"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Xamarin에서 리소스 및 데이터 저장소 tvOS
 
@@ -80,7 +80,7 @@ Xcode를 사용 하 여 리소스 태그 부여와 관련 된 관련 콘텐츠 (
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

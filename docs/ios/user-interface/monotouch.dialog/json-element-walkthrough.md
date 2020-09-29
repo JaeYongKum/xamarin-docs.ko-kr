@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 8ad1bf746c129cfb5cfbc8b3e04b871224df486d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c19cf373a89798703224574fe13724dfbade33bb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936580"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436680"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>IOS에서 JSON을 사용 하 여 사용자 인터페이스 만들기
 
@@ -167,7 +167,7 @@ _rootElement = new RootElement ("Json Example") {
 
 ## <a name="related-links"></a>관련 링크
 
-- [MTDJsonDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdjsondemo)
+- [MTDJsonDemo (샘플)](/samples/xamarin/ios-samples/mtdjsondemo)
 - [Monotouch.dialog 소개. 대화 상자](~/ios/user-interface/monotouch.dialog/index.md)
 - [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [리플렉션 API 연습](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)

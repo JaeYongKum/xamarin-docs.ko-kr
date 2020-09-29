@@ -1,22 +1,22 @@
 ---
 title: Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
-description: 이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 MT로 응용 프로그램을 빠르게 빌드할 수 있습니다. 2.
+description: 이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 빠르게 응용 프로그램 빌드를 시작할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 3e1e7a9c5fb01f73cddb4cab3a95aa421bd8c3fb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b95066379e7b6845bf1265b43681aec83b130aa4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933369"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436748"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
-_이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 MT로 응용 프로그램을 빠르게 빌드할 수 있습니다. 2._
+_이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 빠르게 응용 프로그램 빌드를 시작할 수 있습니다._
 
 이 연습에서는 MT를 사용 합니다. D Elements API를 통해 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들 수 있습니다. 사용자가 **+** 탐색 모음에서 단추를 선택 하면 태스크에 대 한 테이블에 새 행이 추가 됩니다. 행을 선택 하면 아래 그림과 같이 작업 설명과 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 합니다.
 
@@ -28,7 +28,7 @@ _이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기
 
 ## <a name="elements-api-walkthrough"></a>요소 API 연습
 
-[Monotouch.dialog 소개 대화 상자](~/ios/user-interface/monotouch.dialog/index.md) 에서 MT의 여러 부분에 대 한 확실 한 이해를 얻었습니다. 2. Elements API를 사용 하 여 응용 프로그램에 모두 함께 배치 해 보겠습니다.
+[Monotouch.dialog 소개 대화 상자](~/ios/user-interface/monotouch.dialog/index.md) 에는 MT. D의 여러 부분에 대 한 확실 한 이해를 얻었습니다. Elements API를 사용 하 여 응용 프로그램에 모두 함께 배치 해 보겠습니다.
 
 ## <a name="setting-up-the-multi-screen-application"></a>다중 화면 응용 프로그램 설정
 
@@ -39,8 +39,8 @@ Monotouch.dialog를 사용 하 여 다중 화면 응용 프로그램을 만들�
 1. 인증 요청을 처리하는 데 사용하는 `UINavigationController.`
 1. 인증 요청을 처리하는 데 사용하는 `DialogViewController.`
 1. 을의 루트로 추가 합니다. `DialogViewController``UINavigationController.` 
-1. 에를 추가 `RootElement` 합니다.`DialogViewController.`
-1. 에 `Sections` 및 `Elements` 을 추가 합니다.`RootElement.` 
+1. 에를 추가 `RootElement` 합니다.  `DialogViewController.`
+1. 에 `Sections` 및  `Elements` 을 추가 합니다.  `RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>UINavigationController 사용
 
@@ -143,7 +143,7 @@ Monotouch.dialog를 사용 `RootElement` 하 여 각 작업의 세부 정보에 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mtd 연습 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [Mtd 연습 (샘플)](/samples/xamarin/ios-samples/mtdwalkthrough)
 - [Monotouch.dialog 소개. 대화 상자](~/ios/user-interface/monotouch.dialog/index.md)
 - [리플렉션 API 연습](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON 요소 연습](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

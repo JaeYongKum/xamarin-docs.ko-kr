@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: dcfa727499859164d950ca9abc24fb935b3d76f9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 04c33b59e2a1bab7fb401ffdc49d120bcfd679d0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937009"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436828"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Xamarin.ios의 수동 카메라 컨트롤
 
@@ -308,16 +308,16 @@ IOS 장치에서 렌즈는 가까운 자석 및 스프링에서 센서에 가깝
 
 iOS 7 및 이전 버전에서는 기존 포커스가 다음과 같이 속성을 통해 제어 됩니다 `FocusMode` .
 
-- `AVCaptureFocusModeLocked`– 포커스는 단일 포커스 지점에서 잠깁니다.
-- `AVCaptureFocusModeAutoFocus`– 카메라는 선명 하 게 포커스를 찾은 다음 해당 위치에 유지 될 때까지 모든 초점을 통해 렌즈를 스윕 합니다.
-- `AVCaptureFocusModeContinuousAutoFocus`– 카메라가 포커스를 벗어난 상태를 감지할 때마다 refocuses.
+- `AVCaptureFocusModeLocked` – 포커스는 단일 포커스 지점에서 잠깁니다.
+- `AVCaptureFocusModeAutoFocus` – 카메라는 선명 하 게 포커스를 찾은 다음 해당 위치에 유지 될 때까지 모든 초점을 통해 렌즈를 스윕 합니다.
+- `AVCaptureFocusModeContinuousAutoFocus` – 카메라가 포커스를 벗어난 상태를 감지할 때마다 refocuses.
 
 또한 기존 컨트롤은 `FocusPointOfInterest` 사용자가 특정 영역에 초점을 맞출 수 있도록 속성을 통해 설정 가능한 관심 지점을 제공 합니다. 응용 프로그램은 속성을 모니터링 하 여 렌즈 움직임을 추적할 수도 있습니다 `IsAdjustingFocus` .
 
 또한 속성에서 범위 제한이 다음과 같이 제공 되었습니다 `AutoFocusRangeRestriction` .
 
-- `AVCaptureAutoFocusRangeRestrictionNear`– 자동 포커스를 주변 깊이에 제한 합니다. QR 코드 또는 바코드를 스캔 하는 경우에 유용 합니다.
-- `AVCaptureAutoFocusRangeRestrictionFar`– Autofocus를 원거리 수준으로 제한 합니다. 관련이 없는 것으로 알려진 개체가 뷰 필드 (예를 들어 창 프레임)에 있는 경우에 유용 합니다.
+- `AVCaptureAutoFocusRangeRestrictionNear` – 자동 포커스를 주변 깊이에 제한 합니다. QR 코드 또는 바코드를 스캔 하는 경우에 유용 합니다.
+- `AVCaptureAutoFocusRangeRestrictionFar` – Autofocus를 원거리 수준으로 제한 합니다. 관련이 없는 것으로 알려진 개체가 뷰 필드 (예를 들어 창 프레임)에 있는 경우에 유용 합니다.
 
 마지막으로 `SmoothAutoFocus` 자동 포커스 알고리즘의 속도를 높이는 속성을 사용 하 고 비디오를 녹화할 때 아티팩트 이동을 방지 하기 위해 더 작은 증분으로 단계를 수행 합니다.
 
@@ -330,11 +330,11 @@ IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사
 
 위의 기능을 구현 하기 위해 `AVCaptureDevice` 클래스는 `LensPosition` 카메라 렌즈의 현재 위치를 가져오는 데 사용 되는 읽기 전용 속성을 포함 하도록 수정 되었습니다.
 
-렌즈 위치를 수동으로 제어 하려면 캡처 장치가 잠긴 포커스 모드에 있어야 합니다. 예:
+렌즈 위치를 수동으로 제어 하려면 캡처 장치가 잠긴 포커스 모드에 있어야 합니다. 예제:
 
  `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
 
-`SetFocusModeLocked`캡처 장치의 메서드는 카메라 렌즈의 위치를 조정 하는 데 사용 됩니다. 변경 내용이 적용 될 때 알림을 받으려면 선택적 콜백 루틴을 제공할 수 있습니다. 예:
+`SetFocusModeLocked`캡처 장치의 메서드는 카메라 렌즈의 위치를 조정 하는 데 사용 됩니다. 변경 내용이 적용 될 때 알림을 받으려면 선택적 콜백 루틴을 제공할 수 있습니다. 예제:
 
 ```csharp
 ThisApp.CaptureDevice.LockForConfiguration(out Error);
@@ -529,8 +529,8 @@ IOS 8 응용 프로그램에서 노출을 제어 하는 방법에 대 한 자세
 
 iOS 7 이상에서는 속성을 통해 다음과 같은 기존 노출 컨트롤을 제공 합니다 `ExposureMode` .
 
-- `AVCaptureExposureModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에서 해당 값을 사용 합니다.
-- `AVCaptureExposureModeContinuousAutoExposure`– 장면을 연속 해 서 샘플링 하 여 제대로 작동 하는지 확인 합니다.
+- `AVCaptureExposureModeLocked` – 장면을 한 번 샘플링 하 고 장면 전체에서 해당 값을 사용 합니다.
+- `AVCaptureExposureModeContinuousAutoExposure` – 장면을 연속 해 서 샘플링 하 여 제대로 작동 하는지 확인 합니다.
 
 을 `ExposurePointOfInterest` (를) 사용 하 여 노출할 대상 개체를 선택 하 여 장면을 노출 하 고, 응용 프로그램에서 속성을 모니터링 하 여 `AdjustingExposure` 노출이 조정 될 때 볼 수 있습니다.
 
@@ -817,8 +817,8 @@ iOS 장치는 이와 반대 되는 색 획득을 통해 색 캐스트를 보정 
 
 iOS 7 이상에서는 속성을 통해 다음과 같은 기존 흰색 잔액 컨트롤을 제공 `WhiteBalanceMode` 했습니다.
 
-- `AVCapture WhiteBalance ModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에 해당 값을 사용 합니다.
-- `AVCapture WhiteBalance ModeContinuousAutoExposure`– 적절 한 균형을 유지 하기 위해 장면을 지속적으로 샘플링 합니다.
+- `AVCapture WhiteBalance ModeLocked` – 장면을 한 번 샘플링 하 고 장면 전체에 해당 값을 사용 합니다.
+- `AVCapture WhiteBalance ModeContinuousAutoExposure` – 적절 한 균형을 유지 하기 위해 장면을 지속적으로 샘플링 합니다.
 
 그리고 응용 프로그램은 속성을 모니터링 `AdjustingWhiteBalance` 하 여 노출이 조정 될 때를 확인할 수 있습니다.
 
@@ -845,13 +845,13 @@ IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사
 
 변환 루틴은 장치 독립적 색 공간으로 변환 하는 데 도움이 되도록 iOS 8에 추가 되었습니다. 변환 루틴을 구현 하기 위해 `AVCaptureWhiteBalanceChromaticityValues` 구조가 다음과 같은 멤버와 함께 추가 되었습니다.
 
-- `X`-0에서 1 사이의 값입니다.
-- `Y`-0에서 1 사이의 값입니다.
+- `X` -0에서 1 사이의 값입니다.
+- `Y` -0에서 1 사이의 값입니다.
 
 `AVCaptureWhiteBalanceTemperatureAndTintValues`또한 다음과 같은 멤버를 사용 하 여 구조체를 추가 했습니다.
 
-- `Temperature`-절대 온도 단위의 부동 소수점 값입니다.
-- `Tint`-0에서 150 사이의 오프셋으로, 양수 값은 녹색 방향으로, 자홍에서는 음수입니다.
+- `Temperature` -절대 온도 단위의 부동 소수점 값입니다.
+- `Tint` -0에서 150 사이의 오프셋으로, 양수 값은 녹색 방향으로, 자홍에서는 음수입니다.
 
 `CaptureDevice.GetTemperatureAndTintValues`및 메서드를 사용 `CaptureDevice.GetDeviceWhiteBalanceGains` 하 여 온도와 색조, CHROMATICITY 및 RGB 게인 색 공간 간을 변환 합니다.
 
@@ -1116,8 +1116,8 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 설정을 처리 하기 위해 두 개의 새로운 클래스가 구현 되었습니다.
 
-- `AVCaptureAutoExposureBracketedStillImageSettings`- `ExposureTargetBias` 자동 노출 괄호에 대 한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다.
-- `AVCaptureManual`  `ExposureBracketedStillImageSettings`- `ExposureDuration` `ISO` 수동 노출 괄호에 대해 셔터 속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다.
+- `AVCaptureAutoExposureBracketedStillImageSettings` -  `ExposureTargetBias` 자동 노출 괄호에 대 한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다.
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings` -  `ExposureDuration`  `ISO` 수동 노출 괄호에 대해 셔터 속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>대괄호로 묶인 캡처 컨트롤의 및 일과
 
@@ -1125,9 +1125,9 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 다음은 iOS 8에서 대괄호로 묶인 캡처 컨트롤을 사용할 때 수행 해야 하는 작업 목록입니다.
 
-- 메서드를 호출 하 여 최악의 캡처 상황을 대비해 앱을 준비 합니다 `PrepareToCaptureStillImageBracket` .
+- 메서드를 호출 하 여 최악의 캡처 상황을 대비해 앱을 준비 합니다  `PrepareToCaptureStillImageBracket` .
 - 샘플 버퍼가 동일한 공유 풀에서 제공 되는 것으로 가정 합니다.
-- 이전 준비 호출에 의해 할당 된 메모리를 해제 하려면를 다시 호출 하 `PrepareToCaptureStillImageBracket` 고 하나의 개체 배열을 보냅니다.
+- 이전 준비 호출에 의해 할당 된 메모리를 해제 하려면를 다시 호출 하  `PrepareToCaptureStillImageBracket` 고 하나의 개체 배열을 보냅니다.
 
 #### <a name="donts"></a>일과
 
@@ -1140,7 +1140,7 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 고려해 야 합니다.
 
-- 대괄호로 묶인 설정은 설정을 일시적으로 재정의 `AVCaptureDevice` 합니다.
+- 대괄호로 묶인 설정은 설정을 일시적으로 재정의  `AVCaptureDevice` 합니다.
 - Flash 및 여전히 이미지 안정화 설정은 무시 됩니다.
 - 모든 이미지는 동일한 출력 형식 (jpeg, png 등)을 사용 해야 합니다.
 - 비디오 미리 보기는 프레임을 삭제할 수 있습니다.
@@ -1321,5 +1321,5 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
 
 ## <a name="related-links"></a>관련 링크
 
-- [ManualCameraControls (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualcameracontrols)
+- [ManualCameraControls (샘플)](/samples/xamarin/ios-samples/manualcameracontrols)
 - [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)

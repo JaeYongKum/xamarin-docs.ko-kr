@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 91db8ad0008afa29c732429c3304c24f4ab030a6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9468c7d00ec23743eb7772d2d5eeb252a44a957c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935384"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437306"
 ---
 # <a name="textkit-in-xamarinios"></a>Xamarin.ios의 TextKit
 
@@ -28,9 +28,9 @@ TextKit의 기능을 표준 컨트롤에서 사용할 수 있도록 하기 위�
 
 TextKit는 다음 클래스를 비롯 하 여 레이아웃과 표시에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
 
-- `NSTextContainer`– 텍스트를 레이아웃 하는 데 사용 되는 좌표계 및 기 하 도형을 제공 합니다.
-- `NSLayoutManager`– 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다.
-- `NSTextStorage`– 텍스트 데이터를 포함 하며 일괄 처리 텍스트 속성 업데이트를 처리 합니다. 일괄 처리 업데이트는 레이아웃을 다시 계산 하 고 텍스트를 다시 그리는 등의 실제 변경 내용 처리를 위해 레이아웃 관리자에 전달 됩니다.
+- `NSTextContainer` – 텍스트를 레이아웃 하는 데 사용 되는 좌표계 및 기 하 도형을 제공 합니다.
+- `NSLayoutManager` – 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다.
+- `NSTextStorage` – 텍스트 데이터를 포함 하며 일괄 처리 텍스트 속성 업데이트를 처리 합니다. 일괄 처리 업데이트는 레이아웃을 다시 계산 하 고 텍스트를 다시 그리는 등의 실제 변경 내용 처리를 위해 레이아웃 관리자에 전달 됩니다.
 
 이러한 세 클래스는 텍스트를 렌더링 하는 뷰에 적용 됩니다. , 및와 같은 기본 제공 텍스트 처리 뷰는 `UITextView` `UITextField` `UILabel` 이미 설정 되어 있지만 모든 인스턴스에 만들고 적용할 수 있습니다 `UIView` .
 
@@ -40,7 +40,7 @@ TextKit는 다음 클래스를 비롯 하 여 레이아웃과 표시에서 텍�
 
 ## <a name="text-storage-and-attributes"></a>텍스트 저장소 및 특성
 
-클래스에는 `NSTextStorage` 뷰에 표시 되는 텍스트가 포함 됩니다. 또한 텍스트에 대 한 변경 내용 (예: 문자 또는 특성의 변경)을 레이아웃 관리자에 게 표시 하기 위해 전달 합니다. `NSTextStorage`문자열에서 상속 `MSMutableAttributed` 되므로 및 호출 사이의 일괄 처리에서 텍스트 특성을 변경할 수 `BeginEditing` `EndEditing` 있습니다.
+클래스에는 `NSTextStorage` 뷰에 표시 되는 텍스트가 포함 됩니다. 또한 텍스트에 대 한 변경 내용 (예: 문자 또는 특성의 변경)을 레이아웃 관리자에 게 표시 하기 위해 전달 합니다. `NSTextStorage` 문자열에서 상속 `MSMutableAttributed` 되므로 및 호출 사이의 일괄 처리에서 텍스트 특성을 변경할 수 `BeginEditing` `EndEditing` 있습니다.
 
 예를 들어, 다음 코드 조각에서는 전경색과 배경색을 각각 변경 하 고 특정 범위를 대상으로 지정 합니다.
 
@@ -164,6 +164,6 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 ## <a name="related-links"></a>관련 링크
 
-- [IOS 7 소개 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
+- [IOS 7 소개 (샘플)](/samples/xamarin/ios-samples/introtoios7)
 - [iOS 7 사용자 인터페이스 개요](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)

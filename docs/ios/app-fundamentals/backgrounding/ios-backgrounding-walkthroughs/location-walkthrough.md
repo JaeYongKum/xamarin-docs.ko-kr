@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: bbb0dfbc9a6bf1396c8d517cc2c3289e2857a836
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2350db2e8d4f43a33b0ce394e06ffd2c16b6b7ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938400"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436558"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>연습-Xamarin.ios의 백그라운드 위치
 
@@ -73,9 +73,9 @@ ms.locfileid: "86938400"
 
     위의 코드는 [Cllocationmanager](xref:CoreLocation.CLLocationManager) 클래스에서 다양 한 속성 및 사용 권한을 설정 합니다.
 
-    - `PausesLocationUpdatesAutomatically`– 시스템이 위치 업데이트를 일시 중지할 수 있는지 여부에 따라 설정할 수 있는 부울입니다. 일부 장치에서는 기본적으로로 설정 되어 있으며,이로 `true` 인해 장치에서 15 분 후에 백그라운드 위치 업데이트 가져오기를 중지할 수 있습니다.
-    - `RequestAlwaysAuthorization`-백그라운드에서 위치에 액세스할 수 있도록 허용 하는 옵션을 앱 사용자에 게 제공 하려면이 메서드를 전달 해야 합니다. `RequestWhenInUseAuthorization`앱이 전경에 있는 경우에만 위치에 액세스할 수 있는 옵션을 사용자에 게 제공 하려는 경우에도를 전달할 수 있습니다.
-    - `AllowsBackgroundLocationUpdates`– 일시 중단 될 때 앱이 위치 업데이트를 받을 수 있도록 설정할 수 있는 iOS 9에 도입 된 부울 속성입니다.
+    - `PausesLocationUpdatesAutomatically` – 시스템이 위치 업데이트를 일시 중지할 수 있는지 여부에 따라 설정할 수 있는 부울입니다. 일부 장치에서는 기본적으로로 설정 되어 있으며,이로 `true` 인해 장치에서 15 분 후에 백그라운드 위치 업데이트 가져오기를 중지할 수 있습니다.
+    - `RequestAlwaysAuthorization` -백그라운드에서 위치에 액세스할 수 있도록 허용 하는 옵션을 앱 사용자에 게 제공 하려면이 메서드를 전달 해야 합니다. `RequestWhenInUseAuthorization` 앱이 전경에 있는 경우에만 위치에 액세스할 수 있는 옵션을 사용자에 게 제공 하려는 경우에도를 전달할 수 있습니다.
+    - `AllowsBackgroundLocationUpdates` – 일시 중단 될 때 앱이 위치 업데이트를 받을 수 있도록 설정할 수 있는 iOS 9에 도입 된 부울 속성입니다.
 
     > [!IMPORTANT]
     > iOS 8 (및 이상)에는 사용자를 권한 부여 요청의 일부로 표시 하기 위해 **info.plist** 파일에 항목이 있어야 합니다.
@@ -84,7 +84,7 @@ ms.locfileid: "86938400"
 
 1. iOS 9에서는 info.plist를 사용 하는 경우 `AllowsBackgroundLocationUpdates` 값이 포함 된 키를 포함 해야 **합니다.** `UIBackgroundModes` `location` 이 연습의 2 단계를 완료 한 경우 info.plist 파일에 이미 포함 되어 있어야 합니다.
 
-1. 클래스 내 `LocationManager` 에서 `StartLocationUpdates` 다음 코드를 사용 하 여 라는 메서드를 만듭니다. 이 코드는에서 위치 업데이트 수신을 시작 하는 방법을 보여 줍니다 `CLLocationManager` .
+1. 클래스 내 `LocationManager` 에서 `StartLocationUpdates` 다음 코드를 사용 하 여 라는 메서드를 만듭니다. 이 코드는에서 위치 업데이트 수신을 시작 하는 방법을 보여 줍니다   `CLLocationManager` .
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -101,7 +101,7 @@ ms.locfileid: "86938400"
 
     이 방법에서는 몇 가지 중요 한 사항이 있습니다. 첫째, 응용 프로그램이 장치의 위치 데이터에 액세스할 수 있는지 확인 하는 검사를 수행 합니다. 에서를 호출 하 여이를 확인 `LocationServicesEnabled` `CLLocationManager` 합니다. 사용자가 위치 정보에 대 한 응용 프로그램 액세스를 거부 한 경우이 메서드는 **false** 를 반환 합니다.
 
-1. 그런 다음 위치 관리자에 업데이트 빈도를 알려 줍니다. `CLLocationManager`에서는 업데이트 빈도를 비롯 하 여 위치 데이터를 필터링 하 고 구성 하는 다양 한 옵션을 제공 합니다. 이 예제에서는 `DesiredAccuracy` 위치가 미터에 의해 변경 될 때마다를 업데이트 하도록 설정 합니다. 위치 업데이트 빈도 및 기타 기본 설정 구성에 대 한 자세한 내용은 Apple 설명서의 [Cllocationmanager 클래스 참조](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) 를 참조 하세요.
+1. 그런 다음 위치 관리자에 업데이트 빈도를 알려 줍니다. `CLLocationManager` 에서는 업데이트 빈도를 비롯 하 여 위치 데이터를 필터링 하 고 구성 하는 다양 한 옵션을 제공 합니다. 이 예제에서는 `DesiredAccuracy` 위치가 미터에 의해 변경 될 때마다를 업데이트 하도록 설정 합니다. 위치 업데이트 빈도 및 기타 기본 설정 구성에 대 한 자세한 내용은 Apple 설명서의 [Cllocationmanager 클래스 참조](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) 를 참조 하세요.
 
 1. 마지막으로 `StartUpdatingLocation` 인스턴스에서를 호출 `CLLocationManager` 합니다. 그러면 위치 관리자가 현재 위치에 대 한 초기 수정을 받고 업데이트 보내기를 시작 하도록 지시 합니다.
 
@@ -278,5 +278,5 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [위치 (4 부) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [위치 (4 부) (샘플)](/samples/xamarin/ios-samples/location)
 - [핵심 위치 프레임 워크 참조](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

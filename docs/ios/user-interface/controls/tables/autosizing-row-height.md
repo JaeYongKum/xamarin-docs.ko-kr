@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 03e6a513f367be4c19f925427c8a896b1fc87107
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: eedf76a4ecc566a18f4d4b7d5c4f1b63642b8e25
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996333"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437198"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Xamarin.ios의 행 높이 자동 크기 조정
 
@@ -22,7 +22,7 @@ iOS 11에는 행이 자동으로 확장 될 수 있는 기능이 추가 되었�
 
 ## <a name="cell-layout-in-the-ios-designer"></a>IOS 디자이너의 셀 레이아웃
 
-IOS 디자이너에서 행의 자동 크기 조정을 사용할 테이블 뷰에 대 한 스토리 보드를 열고 셀의 *프로토타입을* 선택한 다음 셀의 레이아웃을 디자인 합니다. 예를 들어:
+IOS 디자이너에서 행의 자동 크기 조정을 사용할 테이블 뷰에 대 한 스토리 보드를 열고 셀의 *프로토타입을* 선택한 다음 셀의 레이아웃을 디자인 합니다. 다음은 그 예입니다.
 
 [![셀의 프로토타입 디자인](autosizing-row-height-images/table01.png)](autosizing-row-height-images/table01.png#lightbox)
 
@@ -49,11 +49,11 @@ IOS 디자이너에서 행의 자동 크기 조정을 사용할 테이블 뷰에
 > [!IMPORTANT]
 > 테이블에 두 개 이상의 셀 형식 (**프로토타입**)이 포함 된 경우 각 형식에 `Identifier` 자동 행 크기 조정 작업을 수행 하는 고유한 고유한가 있는지 확인 해야 합니다.
 
-셀 프로토타입의 각 요소에 대해 **이름을** 할당 하 여 c # 코드에 노출 합니다. 예를 들어:
+셀 프로토타입의 각 요소에 대해 **이름을** 할당 하 여 c # 코드에 노출 합니다. 다음은 그 예입니다.
 
 [![C # 코드에 노출 하는 이름 할당](autosizing-row-height-images/table05.png)](autosizing-row-height-images/table05.png#lightbox)
 
-그런 다음 `UITableViewController` , `UITableView` 및 (프로토타입)의 사용자 지정 클래스를 추가 `UITableCell` 합니다. 예를 들어:
+그런 다음 `UITableViewController` , `UITableView` 및 (프로토타입)의 사용자 지정 클래스를 추가 `UITableCell` 합니다. 다음은 그 예입니다.
 
 [![UITableViewController, UITableView 및 UITableCell에 대 한 사용자 지정 클래스 추가](autosizing-row-height-images/table06.png)](autosizing-row-height-images/table06.png#lightbox)
 
@@ -65,7 +65,7 @@ UI를 정의한 상태에서 자동 행 높이 크기 조정을 사용 하도록
 
 ## <a name="enabling-auto-resizing-height"></a>자동 크기 조정 높이 사용
 
-테이블 뷰의 Datasource ( `UITableViewDatasource` ) 또는 Source ()에서 셀을 큐에서 제거 하는 `UITableViewSource` 경우 디자이너에서 정의한를 사용 해야 합니다 `Identifier` . 예를 들어:
+테이블 뷰의 Datasource ( `UITableViewDatasource` ) 또는 Source ()에서 셀을 큐에서 제거 하는 `UITableViewSource` 경우 디자이너에서 정의한를 사용 해야 합니다 `Identifier` . 다음은 그 예입니다.
 
 ```csharp
 public string CellID {
@@ -87,7 +87,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-기본적으로 테이블 뷰는 행 높이 자동 크기 조정에 대해 설정 됩니다. 이를 확인 하려면 `RowHeight` 속성을로 설정 해야 합니다 `UITableView.AutomaticDimension` . 또한에서 속성을 설정 해야 `EstimatedRowHeight` `UITableViewController` 합니다. 예를 들어:
+기본적으로 테이블 뷰는 행 높이 자동 크기 조정에 대해 설정 됩니다. 이를 확인 하려면 `RowHeight` 속성을로 설정 해야 합니다 `UITableView.AutomaticDimension` . 또한에서 속성을 설정 해야 `EstimatedRowHeight` `UITableViewController` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -105,10 +105,10 @@ public override void ViewWillAppear (bool animated)
 
 이 예상 값은 정확 하지 않아도 되며, 테이블 뷰에서 각 행의 평균 높이를 대략적으로 예측 한 것입니다.
 
-이 코드를 사용 하면 앱이 실행 될 때 각 행이 셀 프로토타입에서 마지막 레이블의 높이를 기준으로 축소 되 고 증가 합니다. 예를 들어:
+이 코드를 사용 하면 앱이 실행 될 때 각 행이 셀 프로토타입에서 마지막 레이블의 높이를 기준으로 축소 되 고 증가 합니다. 다음은 그 예입니다.
 
 [![예제 테이블 실행](autosizing-row-height-images/table07.png)](autosizing-row-height-images/table07.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 
-- [GrowRowTable (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)
+- [GrowRowTable (샘플)](/samples/xamarin/ios-samples/growrowtable)

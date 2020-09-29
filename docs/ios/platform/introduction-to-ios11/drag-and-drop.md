@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2017
-ms.openlocfilehash: 2a59040efde59210152ca20b44df2a097904c9f9
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bbdfe9682474352fab7c0ae3b1cd7d949cbca0b4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573757"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437163"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Xamarin.ios에서 끌어서 놓기
 
@@ -35,20 +35,20 @@ iOS 11에는 iPad의 응용 프로그램 간에 데이터를 복사 하기 위�
 
 ## <a name="drag-and-drop-with-text-controls"></a>텍스트 컨트롤을 사용 하 여 끌어서 놓기
 
-`UITextView`및 `UITextField` 는에서 선택한 텍스트 끌기를 자동으로 지원 하 고에서 텍스트 콘텐츠를 삭제 하도록 지원 합니다.
+`UITextView` 및 `UITextField` 는에서 선택한 텍스트 끌기를 자동으로 지원 하 고에서 텍스트 콘텐츠를 삭제 하도록 지원 합니다.
 
 <a name="uitableview"></a>
 
 ## <a name="drag-and-drop-with-uitableview"></a>UITableView를 사용 하 여 끌어서 놓기
 
-`UITableView`에는 테이블 행과의 끌어서 놓기 상호 작용에 대 한 기본 제공 기능이 있으며,이를 통해 기본 동작을 사용 하도록 설정 하는 몇 가지 메서드만 필요 합니다.
+`UITableView` 에는 테이블 행과의 끌어서 놓기 상호 작용에 대 한 기본 제공 기능이 있으며,이를 통해 기본 동작을 사용 하도록 설정 하는 몇 가지 메서드만 필요 합니다.
 
 관련 된 두 가지 인터페이스가 있습니다.
 
-- `IUITableViewDragDelegate`– 테이블 뷰에서 끌기를 시작할 때 정보를 패키지 합니다.
-- `IUITableViewDropDelegate`– 놓기를 시도 하 고 완료할 때 정보를 처리 합니다.
+- `IUITableViewDragDelegate` – 테이블 뷰에서 끌기를 시작할 때 정보를 패키지 합니다.
+- `IUITableViewDropDelegate` – 놓기를 시도 하 고 완료할 때 정보를 처리 합니다.
 
-[DragAndDropTableView 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) 에서 이러한 두 인터페이스는 모두 클래스에서 구현 `UITableViewController` 되며 대리자 및 데이터 소스와 함께 구현 됩니다. 메서드에 할당 됩니다 `ViewDidLoad` .
+[DragAndDropTableView 샘플](/samples/xamarin/ios-samples/ios11-draganddroptableview) 에서 이러한 두 인터페이스는 모두 클래스에서 구현 `UITableViewController` 되며 대리자 및 데이터 소스와 함께 구현 됩니다. 메서드에 할당 됩니다 `ViewDidLoad` .
 
 ```csharp
 this.TableView.DragDelegate = this;
@@ -91,13 +91,13 @@ public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
 
 Drop 대리자의 메서드는 테이블 뷰에서 끌기 작업이 발생 하거나 위에서 완료 될 때 호출 됩니다. 필요한 메서드는 데이터를 삭제할 수 있는지 여부와 삭제가 완료 된 경우 수행할 작업을 결정 합니다.
 
-- `CanHandleDropSession`– 끌기가 진행 중이 고 잠재적으로 응용 프로그램에서 삭제 되는 동안이 메서드는 끌고 있는 데이터를 삭제할 수 있는지 여부를 확인 합니다.
-- `DropSessionDidUpdate`– 끌기를 진행 하는 동안이 메서드를 호출 하 여 의도 한 작업을 결정 합니다. 끌기 세션 및 가능한 인덱스 경로를 통해 끌고 있는 테이블 뷰의 정보는 사용자에 게 제공 되는 동작과 시각적 피드백을 확인 하는 데 모두 사용할 수 있습니다.
-- `PerformDrop`– 사용자가 손가락을 떼는 방법으로 삭제를 완료 하면이 메서드는 끌고 있는 데이터를 추출 하 고 테이블 뷰를 수정 하 여 새 행 (또는 행)에 데이터를 추가 합니다.
+- `CanHandleDropSession` – 끌기가 진행 중이 고 잠재적으로 응용 프로그램에서 삭제 되는 동안이 메서드는 끌고 있는 데이터를 삭제할 수 있는지 여부를 확인 합니다.
+- `DropSessionDidUpdate` – 끌기를 진행 하는 동안이 메서드를 호출 하 여 의도 한 작업을 결정 합니다. 끌기 세션 및 가능한 인덱스 경로를 통해 끌고 있는 테이블 뷰의 정보는 사용자에 게 제공 되는 동작과 시각적 피드백을 확인 하는 데 모두 사용할 수 있습니다.
+- `PerformDrop` – 사용자가 손가락을 떼는 방법으로 삭제를 완료 하면이 메서드는 끌고 있는 데이터를 추출 하 고 테이블 뷰를 수정 하 여 새 행 (또는 행)에 데이터를 추가 합니다.
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession`테이블 뷰에서 끌고 있는 데이터를 허용할 수 있는지 여부를 나타냅니다. 이 코드 조각에서를 `CanLoadObjects` 사용 하 여이 테이블 뷰에 문자열 데이터가 허용 되는지 확인 합니다.
+`CanHandleDropSession` 테이블 뷰에서 끌고 있는 데이터를 허용할 수 있는지 여부를 나타냅니다. 이 코드 조각에서를 `CanLoadObjects` 사용 하 여이 테이블 뷰에 문자열 데이터가 허용 되는지 확인 합니다.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -180,7 +180,7 @@ public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coord
 
 ### <a name="testing-drag-and-drop"></a>끌어서 놓기 테스트
 
-[예제](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)를 테스트 하려면 iPad를 사용 해야 합니다.
+[예제](/samples/xamarin/ios-samples/ios11-draganddroptableview)를 테스트 하려면 iPad를 사용 해야 합니다.
 다른 앱 (예: 메모)과 함께 샘플을 열고 행과 텍스트를 서로 끌어 옵니다.
 
 ![진행 중인 끌기 작업 스크린샷](drag-and-drop-images/01-sml.png)
@@ -188,7 +188,7 @@ public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coord
 ## <a name="related-links"></a>관련 링크
 
 - [Apple (인간 인터페이스 지침) 끌어서 놓기](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
-- [테이블 뷰 끌어서 놓기 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
-- [컬렉션 뷰 끌어서 놓기 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [테이블 뷰 끌어서 놓기 샘플](/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [컬렉션 뷰 끌어서 놓기 샘플](/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
 - [끌어서 놓기 소개 (WWDC) (비디오)](https://developer.apple.com/videos/play/wwdc2017/203/)
 - [컬렉션 및 테이블 뷰 (WWDC)를 사용 하 여 끌어서 놓기 (비디오)](https://developer.apple.com/videos/play/wwdc2017/223/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 4652497aa6a7819afe7224617a429b2852566255
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ad07d6e7381c646273eae8fe6aaecb2d487027f7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934695"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436803"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>iOS 디자이너에서 사용자 지정 컨트롤 사용
 
@@ -168,7 +168,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
 1. **이미지 뷰** 를 선택 하 고 **이미지** 속성을로 변경 `Monkey.png` 합니다.
 
-    [![이미지 뷰 이미지 속성을 Monkey.png로 설정](ios-designable-controls-walkthrough-images/05new.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
+    [![이미지 뷰 이미지 속성을 Monkey.png로 설정 ](ios-designable-controls-walkthrough-images/05new.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
 1. Size 클래스를 사용할 때이 이미지 뷰를 제한 해야 합니다. 이미지를 두 번 클릭 하 여 제약 조건 모드로 전환 합니다. 중심 고정 핸들을 클릭 하 여 가운데로 제한 하 고 가로 및 세로로 정렬 합니다.
 
@@ -266,5 +266,5 @@ public override void Draw(CGRect rect)
 
 ## <a name="related-links"></a>관련 링크
 
-- [ScratchTicket (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/scratchticket)
+- [ScratchTicket (샘플)](/samples/xamarin/ios-samples/scratchticket)
 - [필수 이미지 (샘플)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

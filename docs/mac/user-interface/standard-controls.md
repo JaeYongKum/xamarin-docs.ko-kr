@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b9e32fecab7fc5048de319d35ed1a1e55f32b96c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d9ea7a822b8b841df682a20a70d9231996a17d3d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929807"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436700"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.ios의 표준 컨트롤
 
@@ -93,7 +93,7 @@ Interface Builder에서 사용자 인터페이스를 만드는 방법에 대 한
 
 [![제약 조건 설정](standard-controls-images/edit04.png)](standard-controls-images/edit04.png#lightbox)
 
-**Autoresizing** 상자 외부의 **빨간색 빔** _을 사용 하 여_ 지정 된 (x, y) 위치에 컨트롤을 고정 합니다. 예를 들어: 
+**Autoresizing** 상자 외부의 **빨간색 빔** _을 사용 하 여_ 지정 된 (x, y) 위치에 컨트롤을 고정 합니다. 다음은 그 예입니다. 
 
 [![제약 조건 편집](standard-controls-images/edit05.png)](standard-controls-images/edit05.png#lightbox)
 
@@ -279,7 +279,7 @@ ButtonOutlet.Activated += (sender, e) => {
 };
 ```
 
-**작업**을 통해 노출 된 단추의 경우 `public partial` Xcode에서 사용자가 선택한 이름을 사용 하 여 자동으로 메서드가 생성 됩니다. **작업**에 응답 하려면 **동작이** 정의 된 클래스에서 부분 메서드를 완료 합니다. 예를 들어:
+**작업**을 통해 노출 된 단추의 경우 `public partial` Xcode에서 사용자가 선택한 이름을 사용 하 여 자동으로 메서드가 생성 됩니다. **작업**에 응답 하려면 **동작이** 정의 된 클래스에서 부분 메서드를 완료 합니다. 다음은 그 예입니다.
 
 ```csharp
 partial void ButtonAction (Foundation.NSObject sender) {
@@ -288,7 +288,7 @@ partial void ButtonAction (Foundation.NSObject sender) {
 }
 ```
 
-상태 (예: **켜기** 및 **끄기**)를 사용 하는 단추의 경우 상태를 확인 하거나 열거형에 대해 속성을 사용 하 여 설정할 수 있습니다 `State` `NSCellStateValue` . 예를 들어:
+상태 (예: **켜기** 및 **끄기**)를 사용 하는 단추의 경우 상태를 확인 하거나 열거형에 대해 속성을 사용 하 여 설정할 수 있습니다 `State` `NSCellStateValue` . 다음은 그 예입니다.
 
 ```csharp
 DisclosureButton.Activated += (sender, e) => {
@@ -324,7 +324,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 유
 
 [![사용 가능한 checkbox 형식의 예](standard-controls-images/buttons02.png)](standard-controls-images/buttons02.png#lightbox)
 
-확인란 및 라디오 단추 ( **콘센트**를 통해 노출 됨)의 상태 (예: **설정** 및 **해제**)를 사용 하 여 상태를 확인 하거나 `State` 열거형에 대해 속성을 사용 하 여 설정할 수 있습니다 `NSCellStateValue` . 예를 들어:
+확인란 및 라디오 단추 ( **콘센트**를 통해 노출 됨)의 상태 (예: **설정** 및 **해제**)를 사용 하 여 상태를 확인 하거나 `State` 열거형에 대해 속성을 사용 하 여 설정할 수 있습니다 `NSCellStateValue` . 다음은 그 예입니다.
 
 ```csharp
 AdjustTime.Activated += (sender, e) => {
@@ -387,14 +387,14 @@ MacOS에서 사용할 수 있는 메뉴 컨트롤은 내부 목록 (Interface Bu
 
 메뉴 컨트롤 (예:)은 Interface Builder 항목을 정의 하는 것 외에도 `NSComboBox` 유지 관리 하는 내부 목록에서 항목을 추가, 편집 또는 삭제할 수 있는 전체 메서드 집합을 제공 합니다.
 
-- `Add`-목록의 끝에 새 항목을 추가 합니다.
-- `GetItem`-지정 된 인덱스에 있는 항목을 반환 합니다.
-- `Insert`-목록에서 지정 된 위치의 새 항목을 삽입 합니다.
-- `IndexOf`-지정 된 항목의 인덱스를 반환 합니다.
-- `Remove`-목록에서 지정 된 항목을 제거 합니다.
-- `RemoveAll`-목록에서 모든 항목을 제거 합니다.
-- `RemoveAt`-지정 된 인덱스에서 항목을 제거 합니다.
-- `Count`-목록의 항목 수를 반환 합니다.
+- `Add` -목록의 끝에 새 항목을 추가 합니다.
+- `GetItem` -지정 된 인덱스에 있는 항목을 반환 합니다.
+- `Insert` -목록에서 지정 된 위치의 새 항목을 삽입 합니다.
+- `IndexOf` -지정 된 항목의 인덱스를 반환 합니다.
+- `Remove` -목록에서 지정 된 항목을 제거 합니다.
+- `RemoveAll` -목록에서 모든 항목을 제거 합니다.
+- `RemoveAt` -지정 된 인덱스에서 항목을 제거 합니다.
+- `Count` -목록의 항목 수를 반환 합니다.
 
 > [!IMPORTANT]
 > Extern 데이터 소스 ()를 사용 하는 경우 `UsesDataSource = true` 위의 메서드를 호출 하면 예외가 throw 됩니다.
@@ -407,10 +407,10 @@ MacOS에서 사용할 수 있는 메뉴 컨트롤은 내부 목록 (Interface Bu
 
 외부 데이터 원본으로 작업 하려면 메뉴 컨트롤의 데이터 소스 인스턴스를 만들고 ( `NSComboBoxDataSource` 예:), 필요한 데이터를 제공 하는 여러 메서드를 재정의 합니다.
 
-- `ItemCount`-목록의 항목 수를 반환 합니다.
-- `ObjectValueForItem`-지정 된 인덱스에 대 한 항목의 값을 반환 합니다.
-- `IndexOfItem`-항목 값 제공에 대 한 인덱스를 반환 합니다.
-- `CompletedString`-부분적으로 형식화 된 항목 값에 대해 일치 하는 첫 번째 항목 값을 반환 합니다. 이 메서드는 자동 완성 기능을 사용 하도록 설정한 경우에만 호출 됩니다 ( `Completes = true` ).
+- `ItemCount` -목록의 항목 수를 반환 합니다.
+- `ObjectValueForItem` -지정 된 인덱스에 대 한 항목의 값을 반환 합니다.
+- `IndexOfItem` -항목 값 제공에 대 한 인덱스를 반환 합니다.
+- `CompletedString` -부분적으로 형식화 된 항목 값에 대해 일치 하는 첫 번째 항목 값을 반환 합니다. 이 메서드는 자동 완성 기능을 사용 하도록 설정한 경우에만 호출 됩니다 ( `Completes = true` ).
 
 자세한 내용은 [데이터베이스 작업](~/mac/app-fundamentals/databases.md) 문서의 [데이터베이스 및 ComboBoxes](~/mac/app-fundamentals/databases.md#Databases-and-ComboBoxes) 섹션을 참조 하세요.
 
@@ -420,10 +420,10 @@ MacOS에서 사용할 수 있는 메뉴 컨트롤은 내부 목록 (Interface Bu
 
 다음 메서드를 사용 하 여 메뉴 컨트롤의 모양을 조정할 수 있습니다.
 
-- `HasVerticalScroller`-이면 `true` 컨트롤에 세로 스크롤 막대가 표시 됩니다. 
-- `VisibleItems`-컨트롤을 열 때 표시 되는 항목 수를 조정 합니다. 기본값은 5입니다.
-- `IntercellSpacing`-가 `NSSize` `Width` 왼쪽 및 오른쪽 여백을 지정 하 고에서 `Height` 항목 앞뒤의 공백을 지정 하는을 제공 하 여 지정 된 항목 주위의 공간 크기를 조정 합니다.
-- `ItemHeight`-목록에 있는 각 항목의 높이를 지정 합니다.
+- `HasVerticalScroller` -이면 `true` 컨트롤에 세로 스크롤 막대가 표시 됩니다. 
+- `VisibleItems` -컨트롤을 열 때 표시 되는 항목 수를 조정 합니다. 기본값은 5입니다.
+- `IntercellSpacing` -가 `NSSize` `Width` 왼쪽 및 오른쪽 여백을 지정 하 고에서 `Height` 항목 앞뒤의 공백을 지정 하는을 제공 하 여 지정 된 항목 주위의 공간 크기를 조정 합니다.
+- `ItemHeight` -목록에 있는 각 항목의 높이를 지정 합니다.
 
 드롭다운 형식의 경우 `NSPopupButtons` 첫 번째 메뉴 항목이 컨트롤의 제목을 제공 합니다. 예를 들면 다음과 같습니다. 
 
@@ -441,11 +441,11 @@ DropDownSelected.Title = "Item 1";
 
 다음 메서드 및 속성을 사용 하 여 메뉴 컨트롤의 목록에서 선택한 항목을 조작할 수 있습니다.
 
-- `SelectItem`-지정 된 인덱스에서 항목을 선택 합니다.
-- `Select`-지정 된 항목 값을 선택 합니다.
-- `DeselectItem`-지정 된 인덱스에서 항목을 선택 취소 합니다.
-- `SelectedIndex`-현재 선택 된 항목의 인덱스를 반환 합니다.
-- `SelectedValue`-현재 선택 된 항목의 값을 반환 합니다.
+- `SelectItem` -지정 된 인덱스에서 항목을 선택 합니다.
+- `Select` -지정 된 항목 값을 선택 합니다.
+- `DeselectItem` -지정 된 인덱스에서 항목을 선택 취소 합니다.
+- `SelectedIndex` -현재 선택 된 항목의 인덱스를 반환 합니다.
+- `SelectedValue` -현재 선택 된 항목의 값을 반환 합니다.
 
 를 사용 `ScrollItemAtIndexToTop` 하 여 목록의 맨 위에 있는 지정 된 인덱스에 항목을 표시 하 고,를 사용 하 여 `ScrollItemAtIndexToVisible` 지정 된 인덱스의 항목이 표시 될 때까지 목록으로 스크롤합니다.
 
@@ -455,10 +455,10 @@ DropDownSelected.Title = "Item 1";
 
 메뉴 컨트롤은 사용자 상호 작용에 응답 하는 다음과 같은 이벤트를 제공 합니다.
 
-- `SelectionChanged`-사용자가 목록에서 값을 선택 하면 호출 됩니다.
-- `SelectionIsChanging`-새 사용자가 선택한 항목이 활성 선택이 되기 전에 호출 됩니다.
-- `WillPopup`-항목의 드롭다운 목록이 표시 되기 전에 호출 됩니다.
-- `WillDismiss`-항목의 드롭다운 목록이 종결 되기 전에 호출 됩니다.
+- `SelectionChanged` -사용자가 목록에서 값을 선택 하면 호출 됩니다.
+- `SelectionIsChanging` -새 사용자가 선택한 항목이 활성 선택이 되기 전에 호출 됩니다.
+- `WillPopup` -항목의 드롭다운 목록이 표시 되기 전에 호출 됩니다.
+- `WillDismiss` -항목의 드롭다운 목록이 종결 되기 전에 호출 됩니다.
 
 컨트롤의 경우 `NSComboBox` `NSTextField` `Changed` 사용자가 콤보 상자의 텍스트 값을 편집할 때마다 호출 되는 이벤트와 같은 이벤트를 모두 포함 합니다.
 
@@ -481,7 +481,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 가
 
 [![예제 선택 컨트롤](standard-controls-images/select01.png)](standard-controls-images/select01.png#lightbox)
 
-선택 컨트롤에 사용자 상호 작용이 있는 경우를 **동작**으로 노출 하 여이를 추적 하는 방법에는 두 가지가 있습니다. 예를 들어:
+선택 컨트롤에 사용자 상호 작용이 있는 경우를 **동작**으로 노출 하 여이를 추적 하는 방법에는 두 가지가 있습니다. 다음은 그 예입니다.
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -489,7 +489,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-또는 **대리자** 를 이벤트에 연결 `Activated` 합니다. 예를 들어:
+또는 **대리자** 를 이벤트에 연결 `Activated` 합니다. 다음은 그 예입니다.
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -497,7 +497,7 @@ TickedSlider.Activated += (sender, e) => {
 };
 ```
 
-선택 컨트롤의 값을 설정 하거나 읽으려면 속성을 사용 `IntValue` 합니다. 예를 들어:
+선택 컨트롤의 값을 설정 하거나 읽으려면 속성을 사용 `IntValue` 합니다. 다음은 그 예입니다.
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
@@ -526,7 +526,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 유
 
 [![예제 지표 컨트롤](standard-controls-images/level01.png)](standard-controls-images/level01.png#lightbox)
 
-표시기 컨트롤이 사용자 상호 작용을 **수행** 하는 **시기를 추적** 하는 방법에는 두 가지가 있습니다 **Delegate** `Activated` . 예를 들어:
+표시기 컨트롤이 사용자 상호 작용을 **수행** 하는 **시기를 추적** 하는 방법에는 두 가지가 있습니다 **Delegate** `Activated` . 다음은 그 예입니다.
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -534,13 +534,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-표시기 컨트롤의 값을 읽거나 설정 하려면 속성을 사용 `DoubleValue` 합니다. 예를 들어:
+표시기 컨트롤의 값을 읽거나 설정 하려면 속성을 사용 `DoubleValue` 합니다. 다음은 그 예입니다.
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 `StartAnimation` 표시할 때 애니메이션을 시작 하려면 메서드를 사용 합니다. 예를 들어:
+표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 `StartAnimation` 표시할 때 애니메이션을 시작 하려면 메서드를 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -563,13 +563,13 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 형
 - **EditingBegan** -사용자가 편집할 필드를 선택 하면 발생 합니다.
 - **EditingEnded** -사용자가 필드에서 Enter 키를 누르거나 필드를 벗어날 때
 
-`StringValue`필드의 값을 읽거나 설정 하려면 속성을 사용 합니다. 예를 들어:
+`StringValue`필드의 값을 읽거나 설정 하려면 속성을 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
 ```
 
-숫자 값을 표시 하거나 편집 하는 필드의 경우 속성을 사용할 수 있습니다 `IntValue` . 예를 들어:
+숫자 값을 표시 하거나 편집 하는 필드의 경우 속성을 사용할 수 있습니다 `IntValue` . 다음은 그 예입니다.
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
@@ -577,7 +577,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 는 `NSTextView` 기본 제공 서식 지정을 사용 하 여 완전 한 기능을 갖춘 텍스트 편집 및 표시 영역을 제공 합니다. 와 마찬가지로 `NSTextField` 속성을 사용 `StringValue` 하 여 영역의 값을 읽거나 설정 합니다.
 
-Xamarin.ios 앱에서 텍스트 보기를 사용 하는 복잡 한 예제에 대 한 예제는 [Sourcewriter 샘플 앱](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
+Xamarin.ios 앱에서 텍스트 보기를 사용 하는 복잡 한 예제에 대 한 예제는 [Sourcewriter 샘플 앱](/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
 
 SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 지침 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 
@@ -644,7 +644,7 @@ KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacControls (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
+- [MacControls (샘플)](/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1274fc409cd20b974c44fecd87b6d1b175591710
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 83831b71ebb349873b2a77bbd77ba08e08002d4a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930171"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436611"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-`AddTextField`메서드는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들어:
+`AddTextField`메서드는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Initialize field
@@ -192,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 하 게 표시 되기 때문에 `UIAlertViewController` 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들어:
+를 사용 하는 일반적인 유형의 경고는 간단 하 게 표시 되기 때문에 `UIAlertViewController` 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -369,7 +369,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [tvOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

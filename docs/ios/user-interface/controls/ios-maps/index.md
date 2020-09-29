@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 177701b8b50edea965e97da225265912f1f0c198
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78c5d639ef75891c037529f270bfb36f776a12e7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932329"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436646"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.ios의 Maps
 
@@ -28,13 +28,13 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
-`MKMapView`는 `UIView` 맵을 표시 하는 하위 클래스입니다. 위의 코드를 사용 하 여 지도를 추가 하기만 하면 대화형 지도가 생성 됩니다.
+`MKMapView` 는 `UIView` 맵을 표시 하는 하위 클래스입니다. 위의 코드를 사용 하 여 지도를 추가 하기만 하면 대화형 지도가 생성 됩니다.
 
 ![샘플 맵](images/00-map.png)
 
 ## <a name="map-style"></a>지도 스타일
 
-`MKMapView`3 가지 지도 스타일을 지원 합니다. 지도 스타일을 적용 하려면 `MapType` 속성을 열거형의 값으로 설정 하면 됩니다 `MKMapType` .
+`MKMapView` 3 가지 지도 스타일을 지원 합니다. 지도 스타일을 적용 하려면 `MapType` 속성을 열거형의 값으로 설정 하면 됩니다 `MKMapType` .
 
 ```csharp
 map.MapType = MKMapType.Standard; //road map
@@ -48,7 +48,7 @@ map.MapType = MKMapType.Hybrid;
 
 ## <a name="panning-and-zooming"></a>패닝 및 확대/축소
 
-`MKMapView`에는 다음과 같은 지도 상호 작용 기능에 대 한 지원이 포함 되어 있습니다.
+`MKMapView` 에는 다음과 같은 지도 상호 작용 기능에 대 한 지원이 포함 되어 있습니다.
 
 - 손가락을 사용한 확대/축소 제스처
 - 이동 제스처를 통해 패닝
@@ -89,7 +89,7 @@ map.ShowsUserLocation = true;
 
 ## <a name="annotations"></a>주석
 
- `MKMapView`는 지도에서 주석 이라고 하는 이미지 표시도 지원 합니다. 사용자 지정 이미지 또는 다양 한 색의 시스템 정의 핀 중 하나일 수 있습니다. 예를 들어 다음 스크린샷은 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.
+ `MKMapView` 는 지도에서 주석 이라고 하는 이미지 표시도 지원 합니다. 사용자 지정 이미지 또는 다양 한 색의 시스템 정의 핀 중 하나일 수 있습니다. 예를 들어 다음 스크린샷은 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.
 
  ![이 스크린샷에서는 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.](images/03-annotations.png)
 
@@ -97,8 +97,8 @@ map.ShowsUserLocation = true;
 
 주석 자체는 다음과 같은 두 부분으로 구성 됩니다.
 
-- 주석의 `MKAnnotation` 제목 및 위치와 같은 주석에 대 한 모델 데이터를 포함 하는 개체입니다.
-- 표시할 이미지를 포함 하는와 `MKAnnotationView` 사용자가 주석을 누를 때 표시 되는 선택적 설명선입니다.
+- 주석의  `MKAnnotation` 제목 및 위치와 같은 주석에 대 한 모델 데이터를 포함 하는 개체입니다.
+- 표시할 이미지를 포함 하는와  `MKAnnotationView` 사용자가 주석을 누를 때 표시 되는 선택적 설명선입니다.
 
 지도 키트는 iOS 위임 패턴을 사용 하 여 맵에 주석을 추가 합니다. 여기서 `Delegate` 의 속성은 `MKMapView` 의 인스턴스로 설정 됩니다 `MKMapViewDelegate` . 주석에 대 한를 반환 하는이 대리자의 구현입니다 `MKAnnotationView` .
 
@@ -187,8 +187,8 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 주석과 유사 하 게 오버레이를 추가 하는 과정은 다음 두 부분으로 구성 됩니다.
 
-- 오버레이의 모델 개체를 만들어에 추가 `MKMapView` 합니다.
-- 에서 오버레이의 보기를 만듭니다 `MKMapViewDelegate` .
+- 오버레이의 모델 개체를 만들어에 추가  `MKMapView` 합니다.
+- 에서 오버레이의 보기를 만듭니다  `MKMapViewDelegate` .
 
 오버레이에 대 한 모델은 모든 하위 클래스일 수 있습니다 `MKShape` . Xamarin.ios에 `MKShape` 는 `MKPolygon` , 및 클래스를 통해 다각형, 폴리라인 및 원의 서브 클래스가 포함 됩니다 `MKPolyline` `MKCircle` .
 
@@ -396,7 +396,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
  ![결과에서 항목을 선택할 때 맵에 추가 되는 주석입니다.](images/08-search-results.png)
 
 > [!IMPORTANT]
-> `UISearchController`는 iOS 8에서 구현 되었습니다. 이전 장치를 지원 하려는 경우를 사용 해야 `UISearchDisplayController` 합니다.
+> `UISearchController` 는 iOS 8에서 구현 되었습니다. 이전 장치를 지원 하려는 경우를 사용 해야 `UISearchDisplayController` 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -405,4 +405,4 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 ## <a name="related-links"></a>관련 링크
 
 - [SearchController](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)
-- [MapDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)
+- [MapDemo (샘플)](/samples/xamarin/ios-samples/mapdemo)
