@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 7af2f84ee744303df61435c6f54511664b76786f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 22549bc7410b62e04cdb34c5c102a2fed18b0cf9
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568180"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457096"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -54,7 +54,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 ### <a name="theming-an-application"></a>응용 프로그램 테마
 
-재질 테마 버전을 사용 하도록 전체 응용 프로그램을 구성 하려면 `android:theme` **Androidmanifest .xml** 의 응용 프로그램 노드 특성을 다음 중 하나로 설정 합니다.
+재질 테마 버전을 사용 하도록 전체 응용 프로그램을 구성 하려면AndroidManifest.xml의 `android:theme` 응용 프로그램 노드 특성을 다음 **AndroidManifest.xml** 중 하나로 설정 합니다.
 
 - `@android:style/Theme.Material`&ndash;어두운 테마입니다.
 
@@ -70,7 +70,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </application>
 ```
 
-`Theme`또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 특성을 설정할 수 있습니다. 예를 들면 다음과 같습니다.
+`Theme`또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 특성을 설정할 수 있습니다. 다음은 그 예입니다.
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -121,7 +121,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 앱 프로젝트의 **리소스** 폴더에서 파일을 만들고 수정 하 여 사용자 지정 앱 테마를 만들 수 있습니다. 사용자 지정 테마를 사용 하 여 앱 스타일을 지정 하려면 다음 단계를 사용 합니다.
 
-- **리소스/값** 에서 **색 .xml** 파일을 만듭니다 &mdash; .이 파일을 사용 하 여 사용자 지정 테마 색을 정의 합니다. 예를 들어 다음 코드를 **색 .xml** 에 붙여넣어 시작 하는 데 도움이 될 수 있습니다.
+- 이 파일을 사용 하 여 **리소스/값** 에 **colors.xml** 파일을 만듭니다 .이 파일을 사용 하 여 &mdash; 사용자 지정 테마 색을 정의 합니다. 예를 들어 다음 코드를 시작 하는 데 도움이 되는 **colors.xml** 에 붙여 넣을 수 있습니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -135,13 +135,13 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 - 사용자 지정 테마에서 사용할 색 리소스의 이름 및 색 코드를 정의 하려면이 예제 파일을 수정 합니다.
 
-- **리소스/값-v21** 폴더를 만듭니다. 이 폴더에서 **스타일 .xml** 파일을 만듭니다.
+- **리소스/값-v21** 폴더를 만듭니다. 이 폴더에서 **styles.xml** 파일을 만듭니다.
 
-    [![Resources/values-21 폴더에서 스타일 .xml의 위치](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
+    [![Resources/values-21.xml 폴더의 styles.xml 위치](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     **리소스/값-v21** 은 android 5.0에만 해당 되며 &ndash; 이전 버전의 android는이 폴더의 파일을 읽지 않습니다.
 
-- `resources` **스타일 .xml** 에 노드를 추가 하 고 `style` 사용자 지정 테마 이름으로 노드를 정의 합니다. 예를 들어 다음은 *Mycustomtheme* (기본 제공 테마 스타일에서 파생 됨)을 정의 하는 **스타일 .xml** 파일입니다 `Theme.Material.Light` .
+- `resources` **styles.xml** 에 노드를 추가 하 고 `style` 사용자 지정 테마 이름으로 노드를 정의 합니다. 예를 들어 다음은 *Mycustomtheme* (기본 제공 테마 스타일에서 파생 됨)을 정의 하는 **styles.xml** 파일입니다 `Theme.Material.Light` .
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -157,7 +157,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
     [![사용자 지정 전에 사용자 지정 테마 모양](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
-- 변경 하려는 레이아웃 특성의 색을 정의 하 여 **스타일 .xml** 에 색 사용자 지정을 추가 합니다. 예를 들어 앱 바 색을로 변경 하 `my_blue` 고 UI 컨트롤의 색을로 변경 하려면 색 `my_purple` **xml**에 구성 된 색 리소스를 참조 하는 **스타일 .xml** 에 색 재정의를 추가 합니다.
+- 변경 하려는 레이아웃 특성의 색을 정의 하 여 **styles.xml** 에 색 사용자 지정을 추가 합니다. 예를 들어, 앱 바 색을로 변경 하 `my_blue` 고 UI 컨트롤의 색을로 변경 하려면 `my_purple` **colors.xml**에서 구성 된 색 리소스를 참조 하는 **styles.xml** 에 색 재정의를 추가 합니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -182,10 +182,10 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 ### <a name="creating-a-custom-view-style"></a>사용자 지정 보기 스타일 만들기
 
-또한 Android 5.0을 사용 하면 개별 보기의 스타일을 지정할 수 있습니다. 이전 섹션에서 설명한 대로 **색 .xml** 및 **스타일 .xml** 을 만든 후에는 **스타일 .xml**에 보기 스타일을 추가할 수 있습니다.
+또한 Android 5.0을 사용 하면 개별 보기의 스타일을 지정할 수 있습니다. 이전 섹션에서 설명한 대로 **colors.xml** 및 **styles.xml** 를 만든 후에는 **styles.xml**에 보기 스타일을 추가할 수 있습니다.
 개별 보기의 스타일을 만들려면 다음 단계를 사용 합니다.
 
-- **Resources/values-v21/styles** 를 편집 하 고 `style` 사용자 지정 보기 스타일의 이름이 있는 노드를 추가 합니다. 이 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 `style` 합니다. 예를 들어 더 많은 모퉁이를 사용 하 고을 카드 배경색으로 사용 하는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들려면 노드 `my_blue` 내에서 `style` **스타일 .xml** 에 노드를 추가 하 `resources` 고 배경색과 모퉁이 반경을 구성 합니다.
+- **리소스/값-v21/styles.xml** 를 편집 하 고 `style` 사용자 지정 보기 스타일의 이름이 있는 노드를 추가 합니다. 이 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 `style` 합니다. 예를 들어 모퉁이가 더 둥글고를 카드 배경색으로 사용 하는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들려면 노드 `my_blue` 를 `style` **styles.xml** 에 추가 하 `resources` 고 배경색 및 모퉁이 반경을 구성 합니다.
 
 ```xml
 <!-- Theme an individual view: -->
@@ -199,7 +199,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </style>
 ```
 
-- 레이아웃에서 `style` 해당 보기에 대 한 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들면 다음과 같습니다.
+- 레이아웃에서 `style` 해당 보기에 대 한 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 다음은 그 예입니다.
 
 ```xml
 <android.support.v7.widget.CardView
@@ -219,7 +219,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 하향 호환 스타일로 자동으로 전환 하도록 앱의 스타일을 설정 하려면 다음 단계를 사용 합니다.
 
-- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
+- 재질 테마 스타일에서 파생 되는 **v21/styles.xml리소스/값 ** 에 사용자 지정 테마를 정의 합니다. 다음은 그 예입니다.
 
 ```xml
 <resources>
@@ -229,7 +229,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
-- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
+- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/styles.xml** 에서 사용자 지정 테마를 정의 합니다. 다음은 그 예입니다.
 
 ```xml
 <resources>
@@ -239,8 +239,8 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
-- **Androidmanifest**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
-    예를 들면 다음과 같습니다.
+- **AndroidManifest.xml**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
+    다음은 그 예입니다.
 
 ```xml
 <application android:label="MyApp" 
@@ -254,9 +254,9 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 [Activity(Label = "MyActivity", Theme = "@style/MyCustomTheme")]
 ```
 
-테마에서 **색 .xml** 파일에 정의 된 색을 사용 하는 경우 사용자 지정 테마의 두 버전이 색 정의에 액세스할 수 있도록이 파일을 리소스/값 **-V21**이 아닌 **리소스/값** 에 저장 해야 합니다.
+테마가 **colors.xml** 파일에 정의 된 색을 사용 하는 경우 사용자 지정 테마의 두 버전이 색 정의에 액세스할 수 있도록이 파일을 리소스/값 **-V21**이 아닌 **리소스/값** 에 저장 해야 합니다.
 
-앱이 Android 5.0 장치에서 실행 되는 경우 **Resources/values-v21/styles**에 지정 된 테마 정의를 사용 합니다. 이전 Android 장치에서이 앱을 실행 하면 **리소스/값/스타일 .xml**에 지정 된 테마 정의로 자동으로 대체 됩니다.
+앱이 Android 5.0 장치에서 실행 되는 경우 **리소스/값-v21/styles.xml**에 지정 된 테마 정의를 사용 합니다. 이전 Android 장치에서이 앱을 실행 하면 **리소스/값/styles.xml**에 지정 된 테마 정의로 자동으로 대체 됩니다.
 
 이전 Android 버전과의 테마 호환성에 대 한 자세한 내용은 [대체 리소스](~/android/app-fundamentals/resources-in-android/alternate-resources.md)를 참조 하세요.
 
@@ -266,7 +266,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 
 ## <a name="related-links"></a>관련 링크
 
-- [ThemeSwitcher (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-themeswitcher)
+- [ThemeSwitcher (샘플)](/samples/xamarin/monodroid-samples/android50-themeswitcher)
 - [롤리팝 소개](../platform/lollipop.md)
 - [CardView](controls/card-view.md)
 - [대체 리소스](../app-fundamentals/resources-in-android/alternate-resources.md)

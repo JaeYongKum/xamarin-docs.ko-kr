@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 96f5dd638de17569d105e95c44a539e652b35986
-ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
+ms.openlocfilehash: 803b42cfcc27dc86b0d4bc78fc4745af5565e8cb
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91248128"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457551"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -103,7 +103,7 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
  <a name="References"></a>
 
-### <a name="references"></a>참조
+### <a name="references"></a>참고 자료
 
 이식 가능한 클래스 라이브러리는 플랫폼 및 프레임 워크 기능에 대해 다양 한 수준의 지원을 제공 하는 여러 플랫폼에서 사용할 수 있어야 합니다. 따라서 사용할 수 있는 패키지 및 프레임 워크 라이브러리에 대 한 제한 사항이 있습니다. 예를 들어 Xamarin.ios는 c # 키워드를 지원 하지 않으므로 `dynamic` 이식 가능한 클래스 라이브러리는 Android에서 작동 하는 경우에도 동적 코드에 종속 된 패키지를 사용할 수 없습니다. Mac용 Visual Studio를 사용 하면 호환 되지 않는 패키지 및 참조를 추가할 수 없지만 나중에 발생 하는 것을 방지 하기 위해 제한을 염두에 두어야 합니다.
 
@@ -164,7 +164,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### <a name="locking-to-prevent-concurrent-access"></a>동시 액세스를 방지 하기 위한 잠금
 
-데이터베이스에 대한 동시 액세스를 방지하기 위해 `TaskItemDatabase` 클래스 내에서 [잠금](https://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx)이 구현됩니다. 이는 다른 스레드의 동시 액세스가 serialize 되도록 하기 위한 것입니다. 그렇지 않으면 UI 구성 요소에서 백그라운드 스레드가 업데이트 하는 동시에 데이터베이스를 읽으려고 시도할 수 있습니다. 잠금이 구현 되는 방법의 예는 다음과 같습니다.
+데이터베이스에 대한 동시 액세스를 방지하기 위해 `TaskItemDatabase` 클래스 내에서 [잠금](/previous-versions/visualstudio/visual-studio-2010/c5kehkcz(v=vs.100))이 구현됩니다. 이는 다른 스레드의 동시 액세스가 serialize 되도록 하기 위한 것입니다. 그렇지 않으면 UI 구성 요소에서 백그라운드 스레드가 업데이트 하는 동시에 데이터베이스를 읽으려고 시도할 수 있습니다. 잠금이 구현 되는 방법의 예는 다음과 같습니다.
 
 ```csharp
 static object locker = new object ();
@@ -263,7 +263,7 @@ Tasky에서 모델은 `TaskItem` 클래스 이며,을 `TaskItemManager` 관리 �
 
  <a name="References"></a>
 
-### <a name="references"></a>참조
+### <a name="references"></a>참고 자료
 
 IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.ios 및 Monotouch.dialog-1.
 
@@ -367,7 +367,7 @@ Tasky는 `MonoTouch.Dialog` 의 리플렉션 API를 사용 하 여 화면을 표
 
  <a name="References"></a>
 
-### <a name="references"></a>참조
+### <a name="references"></a>참고 자료
 
 Android 앱 프로젝트는 Android SDK의 클래스에 액세스 하기 위해 플랫폼별 Xamarin Android 어셈블리를 참조 해야 합니다.
 
@@ -426,7 +426,7 @@ PCL 라이브러리에 대 한 모든 참조는 클래스를 통해 진행 됩�
 
  <a name="References"></a>
 
-### <a name="references"></a>참조
+### <a name="references"></a>참고 자료
 
 플랫폼별 프로젝트는 `Microsoft.Phone` `System.Windows` 유효한 Windows Phone 응용 프로그램을 만들기 위해 필요한 플랫폼별 라이브러리 (예: 및)를 참조 해야 합니다.
 

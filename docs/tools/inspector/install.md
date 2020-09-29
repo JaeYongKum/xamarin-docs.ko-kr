@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 1545af984c0a409244c323048b448ec44e9be6a8
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: 70bc0f90b2802587dba8e2da19430164fccfe861
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186189"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457343"
 ---
 # <a name="inspector-installation-and-requirements"></a>검사기 설치 및 요구 사항
 
@@ -20,13 +20,13 @@ ms.locfileid: "88186189"
 # <a name="windows"></a>[Windows](#tab/windows)
 
 1. [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) 를 다운로드 하 여 설치 하 고 .net 워크 로드 **를 사용 하 여 모바일 개발** 을 선택 합니다.
-1. [로그인](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
+1. [로그인](/visualstudio/ide/signing-in-to-visual-studio) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
 1. 응용 프로그램을 [검사](~/tools/inspector/inspect.md) 합니다.
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
 1. [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/)를 다운로드 하 고 설치 합니다.
-1. [로그인](https://docs.microsoft.com/visualstudio/mac/activation) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
+1. [로그인](/visualstudio/mac/activation) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
 1. 응용 프로그램을 [검사](~/tools/inspector/inspect.md) 합니다.
 
 -----
@@ -49,7 +49,7 @@ ms.locfileid: "88186189"
 
 ### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
-|앱 플랫폼|IDE 지원|참고|
+|앱 플랫폼|IDE 지원|메모|
 |--- |--- |--- |
 |Mac|에서만 지원 Mac용 Visual Studio|
 |iOS|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨| 링커 동작을 [**연결 안 함**](~/ios/deploy-test/linker.md) 으로 설정 해야 합니다 ( **iOS 빌드** 프로젝트 옵션 아래). |

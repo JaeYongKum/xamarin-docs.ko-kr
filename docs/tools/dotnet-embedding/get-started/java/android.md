@@ -6,12 +6,12 @@ ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: davidortinau
 ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: bcda03d41cb3bafcfb3ee4b92046014cc5b0c119
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 813fb08835f30d0fc24f0c04e1f26b1f4e7f83e0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029778"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456551"
 ---
 # <a name="getting-started-with-android"></a>Android 시작
 
@@ -22,7 +22,7 @@ ms.locfileid: "73029778"
 
 개요로 다음 작업을 수행 합니다.
 
-- C# Android 라이브러리 프로젝트 만들기
+- C # Android 라이브러리 프로젝트 만들기
 - NuGet을 통해 .NET 포함 설치
 - Android 라이브러리 어셈블리에 .NET 포함을 실행 합니다.
 - Android Studio의 Java 프로젝트에서 생성 된 AAR 파일을 사용 합니다.
@@ -33,7 +33,7 @@ Windows 또는 Mac 용 Visual Studio를 열고, 새 Android 클래스 라이브�
 
 **HelloActivity.cs**라는 새 android 작업을 추가 하 고, **리소스/레이아웃/hello. Axml**에 android 레이아웃을 추가 합니다.
 
-레이아웃에 새 `TextView`를 추가 하 고 텍스트를 원하는 대로 변경 합니다.
+레이아웃에 새를 추가 하 고 텍스트를 원하는 대로 `TextView` 변경 합니다.
 
 레이아웃 소스는 다음과 같이 표시 됩니다.
 
@@ -53,7 +53,7 @@ Windows 또는 Mac 용 Visual Studio를 열고, 새 Android 클래스 라이브�
 </LinearLayout>
 ```
 
-활동에서 새 레이아웃을 사용 하 여 `SetContentView`를 호출 하 고 있는지 확인 합니다.
+활동에서 `SetContentView` 새 레이아웃을 사용 하 여를 호출 하 고 있는지 확인 합니다.
 
 ```csharp
 [Activity(Label = "HelloActivity"),
@@ -70,9 +70,9 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> `[Register]` 특성을 잊지 마세요. 자세한 내용은 [제한 사항](#current-limitations-on-android)을 참조 하세요.
+> 특성을 잊지 마세요 `[Register]` . 자세한 내용은 [제한 사항](#current-limitations-on-android)을 참조 하세요.
 
-프로젝트를 빌드합니다. 결과 어셈블리는 `bin/Debug/hello-from-csharp.dll`에 저장 됩니다.
+프로젝트를 빌드합니다. 결과 어셈블리는에 저장 됩니다 `bin/Debug/hello-from-csharp.dll` .
 
 ## <a name="installing-net-embedding-from-nuget"></a>NuGet에서 .NET 포함 설치
 
@@ -80,7 +80,7 @@ public class HelloActivity : Activity
 
 구성 해야 하는 명령 호출은 다음과 같습니다.
 
-### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 ```shell
 mono '${SolutionDir}/packages/Embeddinator-4000.0.4.0.0/tools/Embeddinator-4000.exe' '${TargetPath}' --gen=Java --platform=Android --outdir='${SolutionDir}/output' -c
@@ -99,7 +99,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 1. Android Studio를 열고 **빈 작업**을 사용 하 여 새 프로젝트를 만듭니다.
 2. **앱** 모듈을 마우스 오른쪽 단추로 클릭 하 고 **새 > 모듈**을 선택 합니다.
 3. **가져오기를 선택 합니다. JAR/. AAR 패키지**.
-4. 디렉터리 브라우저를 사용 하 여 **~/Projects/hello-from-csharp/output/hello_from_csharp.aar** 를 찾고 **마침**을 클릭 합니다.
+4. 디렉터리 브라우저를 사용 하 여 **~/projects/hello-from-csharp/output/hello_from_csharp aar** 를 찾고 **마침**을 클릭 합니다.
 
 ![Android Studio로 AAR 가져오기](android-images/androidstudioimport.png)
 
@@ -111,7 +111,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 
 ![Android Studio 종속성](android-images/androidstudiodependencies.png)
 
-활동에서 새 `onResume` 메서드를 추가 하 고 다음 코드를 사용 하 여 C# 활동을 시작 합니다.
+활동에서 새 메서드를 추가 하 `onResume` 고 다음 코드를 사용 하 여 c # 활동을 시작 합니다.
 
 ```java
 import hello_from_csharp.*;
@@ -155,11 +155,11 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 앱을 시작할 때:
 
-![에뮬레이터에서 C# 실행 되는 샘플의 Hello](android-images/hello-from-csharp-android.png)
+![에뮬레이터에서 실행 되는 c # 샘플의 Hello](android-images/hello-from-csharp-android.png)
 
 여기에서 무슨 일이 발생 했는지 확인 합니다.
 
-- Java를 서브클래싱하 C# 는 클래스`HelloActivity`있습니다.
+- Java를 포함 하는 c # 클래스가 있습니다. `HelloActivity`
 - Android 리소스 파일이 있습니다.
 - Android Studio의 Java에서이를 사용 했습니다.
 
@@ -167,13 +167,13 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 - 응용 프로그램 시작 시 Xamarin Android 구성
 - **자산/어셈블리** 에 포함 된 .net 어셈블리
-- C# 활동에 대해 **Androidmanifest** 을 수정 합니다.
+- C # 작업 등에 대 한 수정 사항을 **AndroidManifest.xml** 합니다.
 - .NET 라이브러리의 Android 리소스 및 자산
-- 모든 `Java.Lang.Object` 하위 클래스에 대 한 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)
+- 모든 하위 클래스에 대 한 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md) `Java.Lang.Object`
 
-추가 연습을 찾고 있는 경우 Android Studio 프로젝트에 Charles Petzold의 [FingerPaint demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) 를 포함 하는 다음 비디오를 확인 하세요.
+추가 연습을 찾고 있는 경우 Android Studio 프로젝트에 Charles Petzold의 [FingerPaint demo](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) 를 포함 하는 다음 비디오를 확인 하세요.
 
-[Android 용![Embeddinator-4000](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
+[![Embeddinator-Android 용 4000](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
 ## <a name="using-java-18"></a>Java 1.8 사용
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Android의 현재 제한 사항
 
-현재, `Java.Lang.Object`서브 클래스 하는 경우 Xamarin.ios는 .NET 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 이로 인해 Xamarin.ios로 Java로 내보내기 C# 와 동일한 규칙을 따라야 합니다. 예를 들면,
+현재 하위 클래스를 사용할 경우 `Java.Lang.Object` Xamarin은 .Net 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 따라서 c #을 Java로 내보내는 경우와 동일한 규칙을 Xamarin.ios로 수행 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,10 +223,10 @@ public class ViewSubclass : TextView
 }
 ```
 
-- 원하는 Java 패키지 이름에 매핑하려면 `[Register]` 필요 합니다.
-- 메서드가 Java에 표시 되도록 하려면 `[Export]` 필요 합니다.
+- `[Register]` 필요한 Java 패키지 이름에 매핑해야 합니다.
+- `[Export]` 메서드가 Java에 표시 되도록 하려면 필요 합니다.
 
-Java에서 다음과 같이 `ViewSubclass`를 사용할 수 있습니다.
+`ViewSubclass`Java에서 다음과 같이를 사용할 수 있습니다.
 
 ```java
 import mono.embeddinator.android.ViewSubclass;
@@ -239,7 +239,7 @@ v.apply("Hello");
 
 ## <a name="multiple-assemblies"></a>여러 어셈블리
 
-단일 어셈블리를 포함 하는 것은 간단 합니다. 그러나 둘 이상의 C# 어셈블리를 사용할 가능성이 훨씬 높습니다. Android 지원 라이브러리와 같은 NuGet 패키지에 대 한 종속성이 있는 경우 나 더 복잡 한 작업을 수행할 수 있는 Google Play 서비스.
+단일 어셈블리를 포함 하는 것은 간단 합니다. 그러나 두 개 이상의 c # 어셈블리를 사용할 가능성이 훨씬 높습니다. Android 지원 라이브러리와 같은 NuGet 패키지에 대 한 종속성이 있는 경우 나 더 복잡 한 작업을 수행할 수 있는 Google Play 서비스.
 
 .NET 포함에는 다음과 같은 여러 형식의 파일을 최종 AAR에 포함 해야 하기 때문에 딜레마이 발생 합니다.
 

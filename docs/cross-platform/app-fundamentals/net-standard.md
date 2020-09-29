@@ -7,22 +7,22 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: cae59053374f673a56d02e86cd59fb85f313c41b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6c2f0ef1d34b60e712dd713d4fff3fe5f9856926
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016807"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458041"
 ---
 # <a name="net-standard-library-code-sharing"></a>.NET Standard 라이브러리 코드 공유
 
-.NET Standard 라이브러리에는 Xamarin 및 .NET Core를 비롯 한 모든 .NET 플랫폼에 대해 일관 된 API가 있습니다. 단일 .NET Standard 라이브러리를 만들어 .NET Standard 플랫폼을 지 원하는 모든 런타임에서 사용 합니다. 지원 되는 플랫폼에 대 한 자세한 내용은 [이 차트](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) 를 참조 하세요.
+.NET Standard 라이브러리에는 Xamarin 및 .NET Core를 비롯 한 모든 .NET 플랫폼에 대해 일관 된 API가 있습니다. 단일 .NET Standard 라이브러리를 만들어 .NET Standard 플랫폼을 지 원하는 모든 런타임에서 사용 합니다. 지원 되는 플랫폼에 대 한 자세한 내용은 [이 차트](/dotnet/standard/net-standard#net-implementation-support) 를 참조 하세요.
 
-1\.0 ~ 1.6 .NET Standard 버전은 .NET Framework의 증분 하위 집합을 제공 하지만, .NET Standard 2.0는 Xamarin 응용 프로그램에 대 한 최상의 지원과 기존 이식 가능한 클래스 라이브러리를 이식할 수 있습니다.
+1.0 ~ 1.6 .NET Standard 버전은 .NET Framework의 증분 하위 집합을 제공 하지만, .NET Standard 2.0는 Xamarin 응용 프로그램에 대 한 최상의 지원과 기존 이식 가능한 클래스 라이브러리를 이식할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 이 섹션에서는 Mac용 Visual Studio를 사용 하 여 .NET Standard 라이브러리를 만들고 사용 하는 방법을 안내 합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "73016807"
 
 2. 다음 화면에서 대상 프레임 워크를 선택 합니다.- **.NET Standard 2.0** 를 권장 합니다.
 
-    [![.NET Standard 2.0를 선택 합니다.](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
+    [![.NET Standard 2.0 선택](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
 
 3. 최종 화면에서 프로젝트 이름을 입력 하 고 **만들기**를 클릭 합니다.
 
@@ -46,15 +46,15 @@ ms.locfileid: "73016807"
 
 #### <a name="editing-net-standard-library-settings"></a>.NET Standard 라이브러리 설정 편집
 
-.NET Standard 라이브러리 설정은 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 다음 스크린샷에 표시 된 것 처럼 `Options`를 선택 하 여 보고 변경할 수 있습니다.
+프로젝트를 마우스 오른쪽 단추로 클릭 하 고이 스크린샷에 표시 된 대로를 선택 하 여 .NET Standard 라이브러리 설정을 보고 변경할 수 있습니다 `Options` .
 
 ![프로젝트 옵션에서 .NET Standard 대상 프레임 워크 편집](net-standard-images/vsm03-m157.png "프로젝트 옵션에서 .NET Standard 대상 프레임 워크의 버전을 편집 합니다.")
 
-내에서 `Target Framework` 드롭다운 값을 변경 하 여 `netstandard` 버전을 변경할 수 있습니다.
+내에서 `netstandard` 드롭다운 값을 변경 하 여 버전을 변경할 수 있습니다 `Target Framework` .
 
-**또한 다음을 수행 합니다.** `.csproj`를 직접 편집 하 여이 값을 변경할 수 있습니다.
+**또한 다음을 수행 합니다.** 을 `.csproj` 직접 편집 하 여이 값을 변경할 수 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
@@ -78,7 +78,7 @@ ms.locfileid: "73016807"
 
 ![프로젝트 속성에서 .NET 표준 대상 프레임 워크 편집](net-standard-images/vs03-w157.png "다른 프로젝트와 동일한 방식으로 .NET Standard 라이브러리를 참조 합니다.")
 
-**또한 다음을 수행 합니다.** `.csproj`를 직접 편집 하 여 `TargetFramework` 요소를 편집 하 고 대상 버전을 변경할 수 있습니다 (예: `<TargetFramework>netstandard2.0</TargetFramework>`).
+**또한 다음을 수행 합니다.** 을 `.csproj` 직접 편집 하 여 요소를 편집 하 `TargetFramework` 고 대상 버전을 변경할 수 있습니다 (예: `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>.NET Standard 라이브러리 프로젝트 사용
 
@@ -94,4 +94,4 @@ ms.locfileid: "73016807"
 
 ## <a name="related-links"></a>관련 링크
 
-* [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) -자세한 정보 및 PCL 비교
+* [.NET Standard](/dotnet/standard/net-standard) -자세한 정보 및 PCL 비교

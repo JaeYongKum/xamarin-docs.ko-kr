@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 83c4ba8cbdc360682a4e06a885be15dd20d0f249
-ms.sourcegitcommit: f4b26c5b8cc84f79123951e80c15061eb859452d
+ms.openlocfilehash: 3263bfd9cea184a7bfbb29099abe2f1b3deb4126
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720307"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458058"
 ---
 # <a name="packaging-wear-apps"></a>패키지 마모 앱
 
@@ -24,7 +24,7 @@ Android 마모 1.0 앱은 Google Play에 배포할 수 있도록 전체 Android 
 
 Android 마모 2.0 앱은 Google Play에 [독립 실행형 응용 프로그램][standalone]으로 제출할 수 있습니다.
 
-[xa-11.1]: https://docs.microsoft.com/xamarin/android/release-notes/11/11.1
+[xa-11.1]: /xamarin/android/release-notes/11/11.1
 [standalone]: https://developer.android.com/training/wearables/apps/standalone-apps
 
 ## <a name="automatic-packaging"></a>자동 패키징
@@ -57,7 +57,7 @@ Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 
 
 -----
 
-마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들면 다음과 같습니다.
+마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 다음은 그 예입니다.
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -72,7 +72,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 - 패키지 이름이 일치 하는지 확인 합니다. 
 
-- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들면 다음과 같습니다. 
+- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 다음은 그 예입니다. 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->

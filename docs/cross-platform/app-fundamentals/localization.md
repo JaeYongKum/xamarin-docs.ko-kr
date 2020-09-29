@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 38bee7e2c4c0b3cdf5107842e47feeeb1445d626
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934864"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457733"
 ---
 # <a name="localization"></a>지역화
 
@@ -108,7 +108,7 @@ double.Parse("1,999.99", CultureInfo.InvariantCulture);
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-자세한 내용은 [숫자 문자열 구문 분석](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) 및 [날짜 및 시간 문자열 구문 분석](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) MSDN 문서를 참조 하세요.
+자세한 내용은 [숫자 문자열 구문 분석](/dotnet/standard/base-types/parsing-numeric) 및 [날짜 및 시간 문자열 구문 분석](/dotnet/standard/base-types/parsing-datetime) MSDN 문서를 참조 하세요.
 
 <a name="rtl"></a>
 
@@ -128,7 +128,7 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 
 언어 마다 동일한 문자 집합을 사용 하는 경우에도 해당 알파벳의 정렬 순서를 다르게 정의 합니다.
 
-언어 (CultureInfo)가 정렬 순서에 영향을 주는 예제에 대 한 [.NET Framework 문자열 사용에 대 한 모범 사례](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) 에서 [문자열 비교의 세부 정보](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) 를 참조 하세요.
+언어 (CultureInfo)가 정렬 순서에 영향을 주는 예제에 대 한 [.NET Framework 문자열 사용에 대 한 모범 사례](/dotnet/standard/base-types/best-practices-strings) 에서 [문자열 비교의 세부 정보](/dotnet/standard/base-types/best-practices-strings#the_details_of_string_comparison) 를 참조 하세요.
 
 모바일 플랫폼의 기본 제공 데이터베이스 기능이 언어별 정렬 순서를 지원 하므로 비즈니스 논리에서 추가 코드를 구현 해야 할 수도 있습니다.
 
@@ -297,4 +297,4 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 
 - [Apple의 지역화 개요](https://developer.apple.com/internationalization/)
 - [Android의 지역화 검사 목록](https://developer.android.com/distribute/tools/localization-checklist.html)
-- [세계 시장 대응성 응용 프로그램 개발을 위한 최선의 구현 방법 (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [세계 시장 대응성 응용 프로그램 개발을 위한 최선의 구현 방법 (MSDN)](/previous-versions/visualstudio/visual-studio-2008/w7x1y988(v=vs.90))

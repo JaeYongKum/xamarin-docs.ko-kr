@@ -5,12 +5,12 @@ description: 기존 Windows Forms 또는 WPF 앱을 분리 하 여 macOS, iOS, A
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 181034a4936b2da010a2fcd280ded1a3419d43ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0bb5a7b851a80cb92881968729e561caeaf48d12
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016445"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456849"
 ---
 # <a name="desktop-app-porting-guidance"></a>데스크톱 앱 포팅 지침
 
@@ -22,11 +22,11 @@ ms.locfileid: "73016445"
 - 로컬 데이터 저장소 및 액세스
 - 웹 서비스 및 원격 데이터 액세스
 
-(또는 Visual Basic.NET)로 C# 작성 된 WINDOWS FORMS 및 WPF 응용 프로그램의 경우 많은 비즈니스 논리, 로컬 데이터 액세스 및 웹 서비스 코드를 플랫폼 간에 공유할 수 있습니다.
+C # (또는 Visual Basic.NET)로 작성 된 Windows Forms 및 WPF 응용 프로그램의 경우 많은 비즈니스 논리, 로컬 데이터 액세스 및 웹 서비스 코드를 플랫폼 간에 공유할 수 있습니다.
 
 ## <a name="net-portability-analyzer"></a>.NET 이식성 분석기
 
-Visual Studio 2017 이상에서는 기존 응용 프로그램을 검사 하 고 다른 플랫폼에 "있는 그대로" 이식할 수 있는 코드의 양을 알 수 있는 [.Net 이식성 분석기](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([Windows 용 다운로드](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer))를 지원 합니다. 이 [채널 9 비디오](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)에서 자세히 알아볼 수 있습니다.
+Visual Studio 2017 이상에서는 기존 응용 프로그램을 검사 하 고 다른 플랫폼에 "있는 그대로" 이식할 수 있는 코드의 양을 알 수 있는 [.Net 이식성 분석기](/dotnet/articles/standard/portability-analyzer) ([Windows 용 다운로드](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer))를 지원 합니다. 이 [채널 9 비디오](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)에서 자세히 알아볼 수 있습니다.
 
 또한 [GitHub의 이식성 분석기](https://github.com/Microsoft/dotnet-apiport) 에서 명령줄 도구를 다운로드 하 여 동일한 보고서를 제공 하는 데 사용할 수 있습니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fd0e48c8f954ba926c5e1b5dc3a1c9bf6aab8c54
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d10917471c37d91fa02db2585895f5694a5a4a60
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571196"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457447"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 
@@ -90,7 +90,7 @@ SQLite-NET은 SQLite에 클래스를 저장 하 고 검색할 수 있는 간단�
 SQLite의 기능:
 
 - 테이블은 모델 클래스에 특성을 추가 하 여 정의 됩니다.
-- 데이터베이스 인스턴스는 SQLite 라이브러리의 기본 클래스인의 서브 클래스로 표현 됩니다 `SQLiteConnection` .
+- 데이터베이스 인스턴스는 SQLite 라이브러리의 기본 클래스인의 서브 클래스로 표현 됩니다  `SQLiteConnection` .
 - 개체를 사용 하 여 데이터를 삽입, 쿼리 및 삭제할 수 있습니다. 필요한 경우 sql 문을 작성할 수 있지만 SQL 문은 필요 하지 않습니다.
 - SQLite-NET에서 반환 된 컬렉션에 대해 기본 Linq 쿼리를 수행할 수 있습니다.
 
@@ -140,7 +140,7 @@ Xamarin.ios와 Xamarin.ios는 모두 네임 스페이스의 클래스를 사용 
 
 각 플랫폼에는 고려해 야 할 다른 액세스 제한이 있습니다.
 
-- iOS 응용 프로그램은 파일 시스템 액세스가 매우 제한 된 샌드박스에서 실행 됩니다. Apple은 백업 된 특정 위치 (및 기타 다른 위치)를 지정 하 여 파일 시스템을 사용 하는 방법을 추가로 지정 합니다. 자세한 내용은 [xamarin.ios에서 파일 시스템 사용](~/ios/app-fundamentals/file-system.md) 가이드를 참조 하세요.
+- iOS 응용 프로그램은 파일 시스템 액세스가 매우 제한 된 샌드박스에서 실행 됩니다. Apple은 백업 된 특정 위치 (및 기타 다른 위치)를 지정 하 여 파일 시스템을 사용 하는 방법을 추가로 지정 합니다. 자세한 내용은  [xamarin.ios에서 파일 시스템 사용](~/ios/app-fundamentals/file-system.md) 가이드를 참조 하세요.
 - 또한 Android는 응용 프로그램과 관련 된 특정 디렉터리에 대 한 액세스를 제한 하지만 외부 미디어도 지원 합니다 (예: SD 카드)를 만들고 공유 데이터에 액세스 합니다.
 - Windows Phone 8 (Silverlight)는 직접 파일 액세스를 허용 하지 않습니다. 파일은를 사용 하는 경우에만 조작할 수 있습니다 `IsolatedStorage` .
 - Windows 8.1 WinRT 및 Windows 10 UWP 프로젝트는 `Windows.Storage` 다른 플랫폼과 다른 api를 통해서만 비동기 파일 작업을 제공 합니다.
@@ -184,7 +184,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 공용 파일 액세스 코드를 작성할 수 있도록 Xamarin.ios 및 Xamarin.ios에서 구현 된 Windows Phone (Silverlight)의 파일 액세스에 대 한 기본 메커니즘입니다. 이 `System.IO.IsolatedStorage` 클래스는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)의 세 플랫폼에서 모두 참조할 수 있습니다.
 
-자세한 내용은 [격리 된 저장소 Windows Phone 개요](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) 를 참조 하세요.
+자세한 내용은 [격리 된 저장소 Windows Phone 개요](/previous-versions/windows/apps/ff402541(v=vs.105)) 를 참조 하세요.
 
 격리 된 저장소 Api는 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)에서 사용할 수 없습니다. PCL의 한 가지 대안은 [Pclstorage NuGet](https://pclstorage.codeplex.com/) 입니다.
 
@@ -232,13 +232,13 @@ webClient.Encoding = System.Text.Encoding.UTF8;
 webClient.DownloadStringAsync (new Uri ("http://some-server.com/file.xml"));
 ```
 
- `WebClient`또한에 `DownloadFileCompleted` 는 `DownloadFileAsync` 이진 데이터를 검색 하기 위한 및가 있습니다.
+ `WebClient` 또한에 `DownloadFileCompleted` 는 `DownloadFileAsync` 이진 데이터를 검색 하기 위한 및가 있습니다.
 
 <a name="HttpWebRequest"></a>
 
 ### <a name="httpwebrequest"></a>HttpWebRequest
 
-`HttpWebRequest`에는 보다 많은 사용자 지정이 제공 되므로 더 많은 `WebClient` 코드를 사용 해야 합니다.
+`HttpWebRequest` 에는 보다 많은 사용자 지정이 제공 되므로 더 많은 `WebClient` 코드를 사용 해야 합니다.
 
 간단한 동기 작업의 코드는 `HttpWebRequest` 다음과 같습니다.
 
@@ -345,10 +345,10 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 병렬 작업 라이브러리를 사용 하지 않는 코드의 경우 각 플랫폼에는 UI 스레드로 다시 마샬링 작업을 위한 자체 구문이 있습니다.
 
-- **iOS** –`owner.BeginInvokeOnMainThread(new NSAction(action))`
-- **Android** –`owner.RunOnUiThread(action)`
-- **Xamarin.ios** –`Device.BeginInvokeOnMainThread(action)`
-- **Windows** –`Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **iOS** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
+- **Android** – `owner.RunOnUiThread(action)`
+- **Xamarin.ios** – `Device.BeginInvokeOnMainThread(action)`
+- **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 IOS와 Android 구문을 모두 사용 하려면 ' context ' 클래스를 사용 해야 합니다 .이는 코드에서이 개체를 UI 스레드에서 콜백이 필요한 메서드에 전달 해야 함을 의미 합니다.
 

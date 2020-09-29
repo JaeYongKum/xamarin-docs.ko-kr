@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 55830c21c178a13fd58b73b6920c21cfa3e9c945
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0ce1d4d0b74330b623b6d933e385222a71a38ec4
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458162"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin에서 Jenkins 사용
 
@@ -44,7 +44,7 @@ Xamarin mobile apps 용 빌드 서버는 개발자의 워크스테이션과 매�
 
 iOS 응용 프로그램은 macOS를 실행 하는 컴퓨터 에서만 빌드하고 서명할 수 있습니다. Mac 미니는 적절 한 저렴 한 옵션 이지만 OS X 10.10 (Yosemite) 이상을 실행할 수 있는 모든 컴퓨터에는 충분 합니다.
 
-소스 코드 제어에 TFS를 사용 하는 경우 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/)를 설치 하는 것이 좋습니다. Team Explorer Everywhere은 macOS의 터미널에서 TFS에 대 한 플랫폼 간 액세스를 제공 합니다.
+소스 코드 제어에 TFS를 사용 하는 경우 [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/)를 설치 하는 것이 좋습니다. Team Explorer Everywhere은 macOS의 터미널에서 TFS에 대 한 플랫폼 간 액세스를 제공 합니다.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -114,7 +114,7 @@ Jenkins 설치 관리자가 완료 되 면 아래 스크린샷에 표시 된 것
 모든 600 플러그 인을 통해 몇 가지를 검색 하면 지루한 오류가 발생할 수 있습니다. Jenkins는 인터페이스의 오른쪽 위 모서리에 필터 검색 필드를 제공 합니다. 검색에이 필터 필드를 사용 하면 다음 플러그 인의 하나 또는 전부를 찾고 설치 하는 작업이 간단해 집니다.
 
 - **Jenkins MSBuild 플러그 인** –이 플러그 인을 사용 하면 Visual Studio 및 Mac용 Visual Studio 솔루션 (.sln) 및 프로젝트 (.csproj)를 빌드할 수 있습니다.
-- **Environment 인젝터 plugin** – 작업 및 빌드 수준에서 환경 변수를 설정할 수 있도록 하는 선택적 이지만 유용한 플러그 인입니다. 또한 응용 프로그램에 코드 서명 하는 데 사용 되는 암호와 같은 변수에 대 한 추가 보호 기능을 제공 합니다. 때로는 *EnvInject 플러그 인* 으로 축약 됩니다.
+- **Environment 인젝터 plugin** – 작업 및 빌드 수준에서 환경 변수를 설정할 수 있도록 하는 선택적 이지만 유용한 플러그 인입니다. 또한 응용 프로그램에 코드 서명 하는 데 사용 되는 암호와 같은 변수에 대 한 추가 보호 기능을 제공 합니다. 때로는  *EnvInject 플러그 인* 으로 축약 됩니다.
 - **Team Foundation Server 플러그 인** -소스 코드 제어에 Team Foundation Server 또는 Team Foundation Services를 사용 하는 경우에만 필요한 선택적 플러그 인입니다.
 
 Jenkins는 추가 플러그 인 없이 Git를 지원 합니다.
@@ -139,7 +139,7 @@ Jenkins는 추가 플러그 인 없이 Git를 지원 합니다.
 
 소스 코드 제어에 TFS를 사용 하려는 경우이 섹션은 필수입니다.
 
-MacOS 워크스테이션이 TFS 서버와 상호 작용 하도록 하려면 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) 워크스테이션에 설치 되어 있어야 합니다. Team Explorer Everywhere는 TFS 액세스를 위한 플랫폼 간 명령줄 클라이언트가 포함 된 Microsoft의 도구 집합입니다. Team Explorer Everywhere Microsoft에서 다운로드 하 여 세 단계로 설치할 수 있습니다.
+MacOS 워크스테이션이 TFS 서버와 상호 작용 하도록 하려면 [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) 워크스테이션에 설치 되어 있어야 합니다. Team Explorer Everywhere는 TFS 액세스를 위한 플랫폼 간 명령줄 클라이언트가 포함 된 Microsoft의 도구 집합입니다. Team Explorer Everywhere Microsoft에서 다운로드 하 여 세 단계로 설치할 수 있습니다.
 
 1. 사용자 계정에 액세스할 수 있는 디렉터리에 보관 파일의 압축을 풉니다. 예를 들어 **~/tee**로 파일의 압축을 풀 수 있습니다.
 2. 위의 1 단계에서 압축을 푼 파일을 보관 하는 폴더를 포함 하도록 셸 또는 시스템 경로를 구성 합니다. 예를 들면 다음과 같습니다.
@@ -396,4 +396,4 @@ zipalign -f -v 4 $SIGNED_APK $FINAL_APK
 ## <a name="related-links"></a>관련 링크
 
 - [연속 통합](~/tools/ci/index.md)
-- [App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud/)
+- [App Center 테스트](/appcenter/test-cloud/)

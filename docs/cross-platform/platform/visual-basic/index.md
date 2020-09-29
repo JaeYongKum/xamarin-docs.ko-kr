@@ -6,12 +6,12 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 594f7584e914b7bd8f4d7b72b3c82c42bb2fb73e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8ccf96e266f9d5eae69a178cfcad3d1e48fb6962
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014581"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457534"
 ---
 # <a name="visual-basic-and-net-standard"></a>Visual Basic 및 .NET Standard
 
@@ -39,11 +39,11 @@ Visual Studio에서 Visual Basic .NET Standard 라이브러리를 추가 하는 
 
 2. **Visual Basic 라이브러리** 를 입력 하 여 프로젝트 옵션을 필터링 하 고 Visual Basic 아이콘을 사용 하 여 **클래스 라이브러리 (.NET Standard)** 옵션을 선택 합니다.
 
-    [Visual Basic 라이브러리의![필터](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
+    [![Visual Basic 라이브러리에 대 한 필터](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
 3. 다음 화면에서 프로젝트의 이름을 입력 하 고 **만들기**를 누릅니다.
 
-4. Visual Basic 프로젝트는 다음과 같이 **솔루션 탐색기** 표시 된 것 처럼 표시 됩니다.
+4. Visual Basic 프로젝트는 다음과 같이  **솔루션 탐색기** 표시 된 것 처럼 표시 됩니다.
 
     [![빈 Visual Basic 프로젝트](images/new-library-sml.png)](images/new-library.png#lightbox)
 
@@ -60,7 +60,7 @@ Visual Studio에서 Visual Basic .NET Standard 라이브러리를 추가 하는 
 
 ## <a name="related-links"></a>관련 링크
 
-- [TaskyVB (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
-- [XamarinFormsVB (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [TaskyVB (샘플)](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+- [XamarinFormsVB (샘플)](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [.NET Standard 및 Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
-- [.NET 표준](/dotnet/standard/net-standard/)
+- [.NET Standard](/dotnet/standard/net-standard/)

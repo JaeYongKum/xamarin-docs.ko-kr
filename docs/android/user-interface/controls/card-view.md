@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2684866d04f2b085c70c70a04ff2c828205f0f32
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d378b48741b6640f342d51e6eaa16aaf1a2f74a5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571900"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457460"
 ---
 # <a name="xamarinandroid-cardview"></a>Xamarin Android CardView
 
@@ -20,7 +20,7 @@ _Cardview 위젯은 카드와 유사한 보기에서 텍스트 및 이미지 콘
 
 ## <a name="overview"></a>개요
 
-`Cardview`Android 5.0 (롤리팝)에 도입 된 위젯은 카드와 유사한 보기에서 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. `CardView`는 `FrameLayout` 모퉁이 및 그림자가 둥근 위젯에 구현 됩니다. 일반적으로는 `CardView` `ListView` 또는 뷰 그룹에 단일 행 항목을 표시 하는 데 사용 됩니다 `GridView` . 예를 들어 다음 스크린샷은 스크롤할 수 있는 `CardView` 여행 대상 카드를 스크롤 가능으로 구현 하는 여행 예약 앱의 예입니다 `ListView` .
+`Cardview`Android 5.0 (롤리팝)에 도입 된 위젯은 카드와 유사한 보기에서 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. `CardView` 는 `FrameLayout` 모퉁이 및 그림자가 둥근 위젯에 구현 됩니다. 일반적으로는 `CardView` `ListView` 또는 뷰 그룹에 단일 행 항목을 표시 하는 데 사용 됩니다 `GridView` . 예를 들어 다음 스크린샷은 스크롤할 수 있는 `CardView` 여행 대상 카드를 스크롤 가능으로 구현 하는 여행 예약 앱의 예입니다 `ListView` .
 
 ![각 여행 대상에 대해 CardView를 사용 하는 예제 앱](card-view-images/01-cardview-example.png)
 
@@ -55,7 +55,7 @@ _Cardview 위젯은 카드와 유사한 보기에서 텍스트 및 이미지 콘
 3. **Xamarin Support Library V7 CardView** 가 표시 되 면 **설치**를 클릭 합니다.
 
 Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android 5.0 프로젝트 설정](~/android/platform/lollipop.md)을 참조 하세요.
-NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 프로젝트에 Nuget 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)을 참조 하세요.
+NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 프로젝트에 Nuget 포함](/visualstudio/mac/nuget-walkthrough)을 참조 하세요.
 
 ## <a name="introducing-cardview"></a>CardView 소개
 
@@ -155,22 +155,22 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 
 
 [![이미지 및 이미지가 아래에 있는 CardView](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
-이 스크린샷은 위젯을 사용 하 여 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) `RecyclerView` `CardView` 사진을 보기 위한 이미지의 스크롤 목록을 제공 하는 RecyclerViewer 샘플 앱에서 가져옵니다. 에 대 한 자세한 내용은 `RecyclerView` [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) guide를 참조 하세요.
+이 스크린샷은 위젯을 사용 하 여 [RecyclerViewer](/samples/xamarin/monodroid-samples/android50-recyclerviewer) `RecyclerView` `CardView` 사진을 보기 위한 이미지의 스크롤 목록을 제공 하는 RecyclerViewer 샘플 앱에서 가져옵니다. 에 대 한 자세한 내용은 `RecyclerView` [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) guide를 참조 하세요.
 
 는 `CardView` 콘텐츠 영역에 둘 이상의 자식 뷰를 표시할 수 있습니다. 예를 들어 위의 사진 보기 앱 예제에서 콘텐츠 영역은 `ListView` 및를 포함 하는로 구성 됩니다 `ImageView` `TextView` . `CardView`인스턴스가 일반적으로 수직으로 정렬 되기는 하지만이를 가로로 정렬할 수도 있습니다 (예제 스크린샷에 대 한 [사용자 지정 보기 스타일 만들기](~/android/user-interface/material-theme.md#customview) 참조).
 
 ### <a name="cardview-layout-options"></a>CardView 레이아웃 옵션
 
-`CardView`안쪽 여백, 높이, 모퉁이 반경 및 배경색에 영향을 주는 특성을 하나 이상 설정 하 여 레이아웃을 사용자 지정할 수 있습니다.
+`CardView` 안쪽 여백, 높이, 모퉁이 반경 및 배경색에 영향을 주는 특성을 하나 이상 설정 하 여 레이아웃을 사용자 지정할 수 있습니다.
 
 [![CardView 특성 다이어그램](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 각 특성은 대응 하는 메서드를 호출 하 여 동적으로 변경할 수도 있습니다 `CardView` . 메서드에 대 한 자세한 내용은 `CardView` [CardView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/CardView.html)를 참조 하세요.
 이러한 특성 (배경색 제외)은 치수 값을 허용 하며,이 값은 10 진수이 고 그 뒤에 단위가 옵니다. 예를 들어는 `11.5dp` 11.5 밀도 독립적 픽셀을 지정 합니다.
 
-#### <a name="padding"></a>여백
+#### <a name="padding"></a>안쪽 여백
 
-`CardView`는 카드 내에서 콘텐츠를 배치할 수 있는 5 가지 패딩 특성을 제공 합니다. 레이아웃 XML에서 설정 하거나 코드에서 유사한 메서드를 호출할 수 있습니다.
+`CardView` 는 카드 내에서 콘텐츠를 배치할 수 있는 5 가지 패딩 특성을 제공 합니다. 레이아웃 XML에서 설정 하거나 코드에서 유사한 메서드를 호출할 수 있습니다.
 
 [![CardView 패딩 특성 다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
@@ -191,7 +191,7 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 
 
 #### <a name="elevation"></a>상승
 
-`CardView`는 권한 상승을 제어 하는 두 가지 권한 상승 특성을 제공 하며, 그에 따라 해당 그림자의 크기를 제공 합니다.
+`CardView` 는 권한 상승을 제어 하는 두 가지 권한 상승 특성을 제공 하며, 그에 따라 해당 그림자의 크기를 제공 합니다.
 
 [![CardView 권한 상승 특성 다이어그램](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
@@ -206,7 +206,7 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 
 
 #### <a name="corner-radius-and-background-color"></a>모퉁이 반경 및 배경색
 
-`CardView`는 모퉁이 반지름과 배경색을 제어 하는 데 사용할 수 있는 특성을 제공 합니다. 이러한 두 가지 속성을 통해의 전체 스타일을 변경할 수 있습니다 `CardView` .
+`CardView` 는 모퉁이 반지름과 배경색을 제어 하는 데 사용할 수 있는 특성을 제공 합니다. 이러한 두 가지 속성을 통해의 전체 스타일을 변경할 수 있습니다 `CardView` .
 
 [![CardView 모퉁이 radious 및 배경색 특성 다이어그램](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
@@ -223,11 +223,11 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 
 Android `CardView` 5.0 롤리팝 이전 버전의 android에서 사용할 수 있습니다. `CardView`는 android v7 지원 라이브러리의 일부 이기 때문에 `CardView` android 2.1 (API 수준 7) 이상에서 사용할 수 있습니다.
 그러나 `Xamarin.Android.Support.v7.CardView` 위의 [요구 사항](#requirements)에 설명 된 대로 패키지를 설치 해야 합니다.
 
-`CardView`는 롤리팝 (API 레벨 21) 이전 장치에서 약간 다른 동작을 보여 주는 것입니다.
+`CardView` 는 롤리팝 (API 레벨 21) 이전 장치에서 약간 다른 동작을 보여 주는 것입니다.
 
-- `CardView`는 추가 안쪽 여백을 추가 하는 프로그래밍 그림자 구현을 사용 합니다.
+- `CardView` 는 추가 안쪽 여백을 추가 하는 프로그래밍 그림자 구현을 사용 합니다.
 
-- `CardView`는 모퉁이가 둥근 모퉁이와 교차 하는 자식 뷰를 클리핑 하지 않습니다 `CardView` .
+- `CardView` 는 모퉁이가 둥근 모퉁이와 교차 하는 자식 뷰를 클리핑 하지 않습니다  `CardView` .
 
 이러한 호환성 차이를 관리 하는 데 도움이 되도록에서는 `CardView` 레이아웃에서 구성할 수 있는 몇 가지 추가 특성을 제공 합니다.
 
@@ -243,6 +243,6 @@ Android `CardView` 5.0 롤리팝 이전 버전의 android에서 사용할 수 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [RecyclerView (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+- [RecyclerView (샘플)](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [롤리팝 소개](~/android/platform/lollipop.md)
 - [CardView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

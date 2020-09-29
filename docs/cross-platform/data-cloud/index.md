@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: davidortinau
 ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 441ac213531c84aa3b7edfd6dfabab3f2c37d15d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9439b33c0e2c8458fd1308003aa9cd93148b6eac
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934786"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457317"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
@@ -21,7 +21,7 @@ ms.locfileid: "86934786"
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 연결된 서비스
 
-개발자는 Mac용 Visual Studio의 새로운 [연결된 서비스](connected-services.md) 기능을 사용 하 여 IDE 내에서 모바일 응용 프로그램에 Azure 기능을 빠르고 쉽게 추가할 수 있습니다. 현재 알파 채널에서 테스트에 사용할 수 있습니다.
+개발자는 Mac용 Visual Studio의 새로운 [연결된 서비스](/visualstudio/mac/connected-services) 기능을 사용 하 여 IDE 내에서 모바일 응용 프로그램에 Azure 기능을 빠르고 쉽게 추가할 수 있습니다. 현재 알파 채널에서 테스트에 사용할 수 있습니다.
 
 ## <a name="azure-app-services"></a>Azure App Services
 

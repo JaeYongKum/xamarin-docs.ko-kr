@@ -6,12 +6,12 @@ ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: davidortinau
 ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: 2f7d09405f90ac9fc4c3ce80181baafa447df637
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f725fe06a5438e4dbdca2773d93befc13bc8ff95
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571244"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457499"
 ---
 # <a name="building-cross-platform-applications"></a>플랫폼 간 애플리케이션 빌드
 
@@ -64,6 +64,6 @@ Xamarin을 사용 하 여 플랫폼 간 응용 프로그램을 만들고 로컬 
 
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
 - [사례 연구: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
-- [Tasky 샘플 앱 (github)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+- [Tasky 샘플 앱 (github)](/samples/xamarin/mobile-samples/taskyportable/)
 - [Xamarin 모바일 응용 프로그램 개발: 플랫폼 간 c # 및 Xamarin. 양식 기본 사항 (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Greg Shackles (O'Reilly)로 c #을 사용한 모바일 개발](https://shop.oreilly.com/product/0636920024002.do)

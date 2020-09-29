@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: davidortinau
 ms.author: daortin
 ms.date: 04/07/2016
-ms.openlocfilehash: c86a00f325f9799b16f6244d3d1cb68de31be005
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4819f8fc88a8a2c730fc25215e862d68cc5bd643
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015533"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457291"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
@@ -23,9 +23,9 @@ _이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치와
 
 ## <a name="when-to-use-the-native-types"></a>네이티브 형식을 사용 하는 경우
 
-Xamarin.ios 및 Xamarin.ios 통합 Api에는 `RectangleF`, `SizeF` 및 `PointF` 형식 뿐만 아니라 `int`, `uint` 및 `float` 데이터 형식도 포함 되어 있습니다. 이러한 기존 데이터 형식은 공유 플랫폼 간 코드에서 계속 사용 해야 합니다. 아키텍처 인식 형식에 대 한 지원이 필요한 Mac 또는 iOS API를 호출할 때에만 새 네이티브 데이터 형식을 사용 해야 합니다.
+Xamarin.ios 및 Xamarin.ios 통합 Api에는, 및 형식 뿐만 아니라 `int` , `uint` 및 `float` 데이터 형식도 포함 되어 `RectangleF` `SizeF` `PointF` 있습니다. 이러한 기존 데이터 형식은 공유 플랫폼 간 코드에서 계속 사용 해야 합니다. 아키텍처 인식 형식에 대 한 지원이 필요한 Mac 또는 iOS API를 호출할 때에만 새 네이티브 데이터 형식을 사용 해야 합니다.
 
-공유 되는 코드의 특성에 따라 플랫폼 간 코드가 `nint`, `nuint` 및 `nfloat` 데이터 형식을 처리 해야 하는 경우가 있을 수 있습니다. 예를 들어 이전에 `System.Drawing.RectangleF`를 사용 하 여 Xamarin.ios 및 Xamarin Android 버전의 앱 간에 기능을 공유 하는 사각형 데이터의 변환을 처리 하는 라이브러리는 iOS에서 네이티브 형식을 처리 하도록 업데이트 해야 합니다.
+공유 되는 코드의 특성에 따라 플랫폼 간 코드가 `nint` , `nuint` 및 데이터 형식을 처리 해야 하는 경우가 있을 수 있습니다 `nfloat` . 예: 이전에 Xamarin.ios와 Xamarin Android 버전의 앱 간 기능을 공유 하는 데 사용 했던 사각형 데이터의 변환을 처리 하는 라이브러리는 `System.Drawing.RectangleF` iOS에서 네이티브 형식을 처리 하도록 업데이트 해야 합니다.
 
 이러한 변경을 처리 하는 방법은 다음 섹션에서 볼 수 있듯이 응용 프로그램의 크기와 복잡성과 사용 된 코드 공유의 형식에 따라 달라 집니다.
 
@@ -37,7 +37,7 @@ Xamarin.ios 및 Xamarin.ios 통합 Api에는 `RectangleF`, `SizeF` 및 `PointF` 
 
 PCL (이식 가능한 클래스 라이브러리)을 사용 하면 지원 하려는 플랫폼을 대상으로 지정 하 고 인터페이스를 사용 하 여 플랫폼별 기능을 제공할 수 있습니다.
 
-PCL 프로젝트 형식이 `.DLL`로 컴파일되고 Unified API에 적합 하지 않으므로 PCL 소스 코드에서 기존 데이터 형식 (`int`, `uint`, `float`)을 계속 사용 하 고, pcl의 클래스에 대 한 호출을 형식으로 캐스팅 해야 합니다. 프런트 엔드 응용 프로그램의 및 메서드. 예를 들면,
+Pcl 프로젝트 형식이로 컴파일되고 Unified API 의미가 없기 때문에 `.DLL` pcl 소스 코드에서 기존 데이터 형식 (,,)을 계속 사용 하 `int` `uint` `float` 고 프런트 엔드 응용 프로그램의 pcl 클래스 및 메서드에 대 한 호출을 형식으로 캐스팅 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 using NativePCL;
@@ -49,15 +49,15 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ### <a name="shared-projects"></a>공유 프로젝트
 
-공유 자산 프로젝트 형식을 사용 하면 별도의 프로젝트에서 소스 코드를 구성 하 고, 개별 플랫폼별 프런트 엔드 앱에 포함 하 고 컴파일한 다음, 플랫폼별를 관리 하는 데 필요한 `#if` 컴파일러 지시문을 사용할 수 있습니다. 사항이.
+공유 자산 프로젝트 형식을 사용 하면 개별 프로젝트에서 소스 코드를 구성 하 고, 개별 플랫폼별 프런트 엔드 앱에 포함 하 고 컴파일하고, `#if` 플랫폼별 요구 사항을 관리 하는 데 필요한 대로 컴파일러 지시문을 사용할 수 있습니다.
 
-공유 되는 코드의 크기 및 복잡성과 함께 공유 코드를 사용 하는 프런트 엔드 모바일 응용 프로그램의 크기와 복잡성은 플랫폼 간 네이티브 데이터 형식에 대 한 지원 방법을 선택할 때 고려해 야 합니다. 공유 자산 프로젝트.
+공유 되는 코드의 크기 및 복잡성과 함께 공유 코드를 사용 하는 프런트 엔드 모바일 응용 프로그램의 크기와 복잡성은 플랫폼 간 공유 자산 프로젝트에서 네이티브 데이터 형식에 대 한 지원 방법을 선택할 때 고려해 야 합니다.
 
-이러한 요소에 따라 `if __UNIFIED__ ... #endif` 컴파일러 지시문을 사용 하 여 코드에 대 한 Unified API 특정 변경을 처리 하는 다음 유형의 솔루션을 구현할 수 있습니다.
+이러한 요소에 따라 다음과 같은 유형의 솔루션을 컴파일러 지시문을 사용 하 여 구현 하 여 `if __UNIFIED__ ... #endif` 코드에 대 한 Unified API 특정 변경 내용을 처리할 수 있습니다.
 
 #### <a name="using-duplicate-methods"></a>중복 메서드 사용
 
-위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 예를 들면,
+위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -98,11 +98,11 @@ namespace NativeShared
 }
 ```
 
-위의 코드에서 `CalculateArea` 루틴은 매우 간단 하므로 조건부 컴파일을 사용 하 고 별도의 Unified API 버전의 메서드를 만들었습니다. 반면, 라이브러리에 여러 루틴 또는 복잡 한 루틴이 포함 된 경우이 솔루션은 수정 또는 버그 수정을 위해 모든 메서드를 동기화 상태로 유지 하는 문제를 제공 하기 때문에 불가능 합니다.
+위의 코드에서 `CalculateArea` 루틴은 매우 간단 하므로 조건부 컴파일을 사용 하 고 메서드의 별도 Unified API 버전을 만들었습니다. 반면, 라이브러리에 여러 루틴 또는 복잡 한 루틴이 포함 된 경우이 솔루션은 수정 또는 버그 수정을 위해 모든 메서드를 동기화 상태로 유지 하는 문제를 제공 하기 때문에 불가능 합니다.
 
 #### <a name="using-method-overloads"></a>메서드 오버 로드 사용
 
-이 경우 솔루션은 32 비트 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 이제 `CGRect` 매개 변수 및/또는 반환 값으로 사용 하도록 할 수 있습니다 .이 값을 `RectangleF` (`nfloat`에서로 변환 하는 것을 알고 `float` 는 손실 변환) 이며 원래 버전의 루틴을 호출 하 여 실제 작업을 수행 합니다. 예를 들면,
+이 경우 솔루션은 32 비트 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 이제 `CGRect` 매개 변수 및/또는 반환 값으로 사용 하 고, 해당 값을으로 변환 하 `RectangleF` 고 (에서로 변환 하는 작업을 수행 하는 경우 `nfloat` ), `float` 루틴의 원래 버전을 호출 하 여 실제 작업을 수행 하는 것이 될 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -149,7 +149,7 @@ namespace NativeShared
 
 #### <a name="using-alias-directives"></a>별칭 지시문 사용
 
-정밀도 손실이 문제가 되는 영역에 대 한 가능한 또 다른 해결 방법은 `using` 지시문을 사용 하 여 공유 소스 코드 파일의 맨 위에 다음 코드를 포함 하 고 필요한 것을 변환 하 여 네이티브 및 CoreGraphics 데이터 형식에 대 한 별칭을 만드는 것입니다 @no_ _t_1_, `uint` 또는 `float` 값 `nint`, `nuint` 또는 `nfloat`:
+정밀도 손실이 문제가 되는 영역에 대 한 가능한 또 다른 해결 방법은 지시문을 사용 하 여 `using` 공유 소스 코드 파일의 맨 위에 다음 코드를 포함 하 고 필요한 `int` `uint` 값 이나 값을로 변환 하 여 네이티브 및 CoreGraphics 데이터 형식에 대 한 별칭을 만드는 것입니다 `float` `nint` `nuint` `nfloat` .
 
 ```csharp
 #if __UNIFIED__
@@ -206,13 +206,13 @@ namespace NativeShared
 }
 ```
 
-여기서는 표준 `float`대신 `nfloat`을 반환 하도록 `CalculateArea` 메서드를 변경 했습니다. 이렇게 하면 계산의 `nfloat` 결과를 _암시적_ 으로 변환 하는 컴파일 오류가 발생 하지 않습니다. (두 값 모두 `nfloat`형식) `float` 반환 값으로 변환 됩니다.
+여기서는 `CalculateArea` 표준 대신를 반환 하도록 메서드를 변경 했습니다 `nfloat` `float` . 이렇게 하면 계산 결과를 _암시적_ 으로 변환 하는 컴파일 오류가 발생 하지 않습니다 `nfloat` . (두 값이 모두 형식이 기 때문에 `nfloat` ) 반환 값으로 변환 됩니다 `float` .
 
-코드가 컴파일되고 Unified API 되지 않은 장치에서 실행 되는 경우 `using nfloat = global::System.Single;`는 `nfloat`를 `Single`에 매핑합니다. 그러면 사용 중인 프런트 엔드 응용 프로그램에서 수정 하지 않고 `float` 메서드를 호출할 수 있습니다.
+코드가 컴파일되고 Unified API 되지 않은 장치에서 실행 되는 경우는를 사용 하는 `using nfloat = global::System.Single;` `nfloat` `Single` `float` 프런트 엔드 응용 프로그램에서 `CalculateArea` 수정 없이 메서드를 호출할 수 있도록 암시적으로 변환 되는에 매핑합니다.
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>프런트 엔드 앱에서 형식 변환 사용
 
-프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예를 들면,
+프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 다음은 그 예입니다.
 
 ```csharp
 using NativeShared;
@@ -246,4 +246,4 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 - [Unified API](~/cross-platform/macios/unified/index.md)
 - [네이티브 형식](~/cross-platform/macios/nativetypes.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
-- [코드 공유 샘플](https://docs.microsoft.com/samples/xamarin/mobile-samples/sharingcode/)
+- [코드 공유 샘플](/samples/xamarin/mobile-samples/sharingcode/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8b640e867e3f7adb6960ecda557ac1e410ec5799
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456963"
 ---
 # <a name="hello-wear"></a>Hello, Wear
 
@@ -30,13 +30,13 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[새 프로젝트 대화 상자에서 새 Android 마모 응용 프로그램을 만드는![](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![새 프로젝트 대화 상자에서 새 Android 마모 응용 프로그램 만들기](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-[새 솔루션 대화 상자에서 새 Android 마모 응용 프로그램을 만드는![](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![새 솔루션 대화 상자에서 새 Android 마모 응용 프로그램 만들기](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -44,17 +44,17 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. 올바른 **대상 프레임 워크** 를 선택 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 **최소 android 대상** 이 **Android 5.0 (롤리팝)** 이상으로 설정 되어 있는지 확인 합니다. 
 
-[Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정![](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 대상 프레임 워크가 **Android 5.0 (롤리팝)** 이상으로 설정 되어 있는지 확인 합니다.
 
-[Mac용 Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정![](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Mac용 Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -62,7 +62,7 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 
 ### <a name="3-edit-the-mainaxml-layout"></a>3. **기본 xml** 레이아웃 편집
 
-예제에 대 한 `TextView` 및 `Button`를 포함 하도록 레이아웃을 구성 합니다. 
+`TextView`샘플에 대 한 및를 포함 하도록 레이아웃을 구성 합니다 `Button` . 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -141,13 +141,13 @@ Android 마모 Smartwatch 같은 Android 장치를 사용 하는 경우 에뮬�
 
 Android 마모 장치가 장치 풀 다운 메뉴에 표시 됩니다. 디버깅을 시작 하기 전에 올바른 Android 마모 장치 또는 AVD를 선택 해야 합니다. 장치를 선택한 후 재생 단추를 클릭 하 여 에뮬레이터 또는 장치에 앱을 배포 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[Visual Studio 장치 메뉴에서 마모 된 AVD를 선택![](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Visual Studio 장치 메뉴에서 마모 된 AVD 선택](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-[Mac용 Visual Studio 장치 메뉴에서 마모 된 AVD![선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Mac용 Visual Studio 장치 메뉴에서 마모 된 AVD 선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,18 +159,18 @@ Watch 에뮬레이터를 사용 하는 경우 앱을 시작 하는 데 시간이
 
 앱이 성공적으로 배포 되 면 마모 된 장치의 화면에 다음과 같은 화면이 표시 됩니다.
 
-[마모 된 앱의 초기 화면![](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![마모 된 앱의 초기 화면](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 클릭 하세요 **.** 단추를 클릭 하 고 각 탭에서 카운트 증분을 확인 합니다.
 
-[3 번 클릭 후에 앱의![스크린샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![3 번 클릭 후 착용 앱의 스크린샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>다음 단계
 
-Android 용 앱을 포함 한 [마모 된 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) 을 확인 하세요.
+Android 용 앱을 포함 한 [마모 된 샘플](/samples/browse/?products=xamarin&term=Xamarin.Android%2bwear) 을 확인 하세요.
 
 앱을 배포할 준비가 되 면 [패키징을 사용한 작업](~/android/wear/deploy-test/packaging.md)을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Me 앱 (샘플)을 클릭 합니다.](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-weartest)
+- [Me 앱 (샘플)을 클릭 합니다.](/samples/xamarin/monodroid-samples/wear-weartest)

@@ -5,12 +5,12 @@ description: 이 문서에서는 Xamarin을 사용 하 여 플랫폼 간 앱으�
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 2797237fed9dab1b7e101b63b17e04281bc5de1d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 11b92ecb29dd2a558aba8aa47551e6ed2a54883b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016413"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456836"
 ---
 # <a name="cross-platform-desktop-samples"></a>플랫폼 간 데스크톱 샘플
 
@@ -30,7 +30,7 @@ ms.locfileid: "73016413"
 
 * Android
 * iOS
-* UWP
+* 범용 Windows 플랫폼
 
 ## <a name="architecture-guidance"></a>아키텍처 지침
 
@@ -46,4 +46,4 @@ ms.locfileid: "73016413"
 
 ## <a name="mobile-app-samples"></a>모바일 앱 샘플
 
-* 기타 [Xamarin 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin)
+* 기타 [Xamarin 샘플](/samples/browse/?products=xamarin)

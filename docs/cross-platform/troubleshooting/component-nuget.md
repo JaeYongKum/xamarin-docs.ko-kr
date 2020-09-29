@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: b9b771efe338fbcc250aa6e7a83b73f35269d3bf
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 08713afa4e781f0712ffccbbcf80533dda8e4bfc
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996814"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457226"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -21,7 +21,7 @@ ms.locfileid: "86996814"
 >
 > Xamarin 구성 요소는 Visual Studio에서 더 이상 지원 되지 않으며 NuGet 패키지로 대체 되어야 합니다. 프로젝트에서 구성 요소 참조를 수동으로 제거 하려면 아래 지침을 따르세요.
 
-[Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)에서 NuGet 패키지를 추가 하는 방법은 다음 지침을 참조 하세요.
+[Windows](/nuget/quickstart/use-a-package) 또는 [Mac](/visualstudio/mac/nuget-walkthrough)에서 NuGet 패키지를 추가 하는 방법은 다음 지침을 참조 하세요.
 
 NuGet 패키지로 사용할 수 없는 구성 요소에 대 한 대안을 찾는 데 도움이 되는 인기 있는 Xamarin [플러그 인 및 라이브러리](https://github.com/xamarin/XamarinComponents/blob/master/README.md) 목록이 제공 됩니다.
 
@@ -95,7 +95,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
     </ItemGroup>
     ```
 
-3. 에 대 한 참조를 제거 `XamarinComponentReference` 하 고 파일을 저장 합니다. 위의 예제에서 전체를 제거 하는 것이 안전 합니다.`ItemGroup`
+3. 에 대 한 참조를 제거 `XamarinComponentReference` 하 고 파일을 저장 합니다. 위의 예제에서 전체를 제거 하는 것이 안전 합니다. `ItemGroup`
 
 4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
 
@@ -159,8 +159,8 @@ _NuGet 종속성을 포함할 수 있지만 무시할 수 있습니다._
 
 예를 들어 다음을 검색 하 여 인기 있는 **sqlite-net-pcl** 패키지를 찾을 수 있습니다.
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl)– 제품 이름입니다.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum)– 작성자의 프로필입니다.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – 제품 이름입니다.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – 작성자의 프로필입니다.
 
 ### <a name="updating-the-solution"></a>솔루션 업데이트
 
@@ -204,5 +204,5 @@ NuGet 패키지는 종속성과 함께 프로젝트에 추가 됩니다.
 ## <a name="related-links"></a>관련 링크
 
 - [인기 있는 Xamarin 플러그 인 및 라이브러리 목록](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
-- [NuGet 패키지 설치 및 사용 (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
-- [NuGet 패키지 포함 (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [NuGet 패키지 설치 및 사용 (Windows)](/nuget/quickstart/use-a-package)
+- [NuGet 패키지 포함 (Mac)](/visualstudio/mac/nuget-walkthrough)

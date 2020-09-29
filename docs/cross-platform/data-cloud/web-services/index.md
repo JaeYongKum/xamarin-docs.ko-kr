@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 164c059b60c1b5b2aadb2cb348c6b5407da63928
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2131dd7611d802b8e1b1a22d1fbab42b5ac64746
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934708"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457967"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -27,7 +27,7 @@ Xamarin.ios를 사용 하는 고객의 경우 [Xamarin.ios 웹 서비스](~/xama
 
 프로토콜을 사용 하 여 `HTTPS` 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 이는 앱의 **info.plist** 파일을 업데이트 하 여 수행할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md)을 참조 하세요.
 
-## <a name="rest"></a>REST (영문)
+## <a name="rest"></a>REST
 
 REST (Representational State Transfer)는 웹 서비스를 빌드하기 위한 아키텍처 스타일입니다. REST 요청은 웹 브라우저에서 웹 페이지를 검색 하 고 서버에 데이터를 보내는 데 사용 하는 것과 동일한 HTTP 동사를 사용 하 여 HTTP를 통해 수행 됩니다. 동사는 다음과 같습니다.
 
@@ -113,7 +113,7 @@ if(string.IsNullOrWhiteSpace(response.Content) || response.StatusCode != System.
 rxTerm = DeserializeRxTerm(response.Content);
 ```
 
-`DeserializeRxTerm`는 속성에서 원시 JSON 문자열을 사용 하 여 `RestSharp.RestResponse.Content` c # 개체로 변환 하는 메서드입니다. 웹 서비스에서 반환 된 데이터를 deserialize 하는 방법은이 문서의 뒷부분에 설명 되어 있습니다.
+`DeserializeRxTerm` 는 속성에서 원시 JSON 문자열을 사용 하 여 `RestSharp.RestResponse.Content` c # 개체로 변환 하는 메서드입니다. 웹 서비스에서 반환 된 데이터를 deserialize 하는 방법은이 문서의 뒷부분에 설명 되어 있습니다.
 
 <a name="Using_NSUrlconnection"></a>
 
@@ -326,7 +326,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 TPL (작업 병렬 라이브러리)은 동일한 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다 `Task` . 이 캡슐화는 메서드의 여러 오버 로드에서 제공 됩니다 `Task.Factory.FromAsync` . 이 메서드는 메서드가 `Task` `TodoService.EndGetTodoItems` 완료 된 후 `TodoService.BeginGetTodoItems` 대리자에 전달 되 `null` 는 데이터가 없음을 나타내는 매개 변수를 사용 하 여 메서드를 실행 하는을 만듭니다 `BeginGetTodoItems` . 마지막으로, 열거형의 값은 `TaskCreationOptions` 작업의 생성 및 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
 
-APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) 을 참조 하세요.
+APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming) 을 참조 하세요.
 
 ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 [asmx (ASP.NET Web service) 사용](~/xamarin-forms/data-cloud/web-services/asmx.md)을 참조 하세요.
 
@@ -352,7 +352,7 @@ ASP.NET 웹 서비스 (ASMX)와 WCF 간에는 차이점이 있지만, WCF는 ASM
 
 응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다.
 
-Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)를 참조 하세요.
+Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)를 참조 하세요.
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security"></a>
 
@@ -404,7 +404,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 TPL (작업 병렬 라이브러리)은 동일한 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다 `Task` . 이 캡슐화는 메서드의 여러 오버 로드에서 제공 됩니다 `Task.Factory.FromAsync` . 이 메서드는 메서드가 `Task` `TodoServiceClient.EndGetTodoItems` 완료 된 후 `TodoServiceClient.BeginGetTodoItems` 대리자에 전달 되 `null` 는 데이터가 없음을 나타내는 매개 변수를 사용 하 여 메서드를 실행 하는을 만듭니다 `BeginGetTodoItems` . 마지막으로, 열거형의 값은 `TaskCreationOptions` 작업의 생성 및 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
 
-APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) 을 참조 하세요.
+APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming) 을 참조 하세요.
 
 WCF 서비스를 사용 하는 방법에 대 한 자세한 내용은 [wcf (Windows Communication Foundation) 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/wcf.md)을 참조 하세요.
 
@@ -443,5 +443,5 @@ REST 웹 서비스의 컨텍스트에서 HTTP 기본 인증에 대 한 자세한
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.ios의 웹 서비스](~/xamarin-forms/data-cloud/index.yml)
-- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [BasicHttpBinding](/dotnet/api/system.servicemodel.basichttpbinding)

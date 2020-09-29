@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: davidortinau
 ms.author: daortin
 ms.date: 07/19/2017
-ms.openlocfilehash: 21c8cba39031e133d96ed6a5ebeeab87f945af51
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98606173913b57b7cf55f24c2581acbf82a587e3
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938276"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457863"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin을 사용한 연속 통합 소개
 
@@ -36,7 +36,7 @@ CI (연속 통합)는 일반적으로 개발자가 프로젝트의 공유 코드
 
 Mobile apps는 연속 통합에 대 한 고유한 문제를 소개 합니다. 앱은 실제 장치 에서만 사용할 수 있는 GPS 또는 카메라와 같은 센서를 요구할 수 있습니다. 또한 시뮬레이터 또는 에뮬레이터는 하드웨어의 근사값 이며 문제를 숨기 거 나 숨길 수 있습니다. 결과적으로 실제 하드웨어에서 모바일 앱을 테스트 하 여 고객에 게는 진정한 준비가 되었다는 것을 확신 하는 것이 필요 합니다.
 
-[App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud) 는 수백 대의 물리적 장치에서 앱을 직접 테스트 하 여이 특정 문제를 해결 합니다. 개발자는 강력한 UI 테스트를 허용 하는 자동화 된 승인 테스트를 작성 합니다. 이러한 테스트를 App Center 업로드 하면 CI 서버는 다음 다이어그램에 표시 된 것 처럼 CI 프로세스의 일부로 자동으로 실행할 수 있습니다.
+[App Center 테스트](/appcenter/test-cloud) 는 수백 대의 물리적 장치에서 앱을 직접 테스트 하 여이 특정 문제를 해결 합니다. 개발자는 강력한 UI 테스트를 허용 하는 자동화 된 승인 테스트를 작성 합니다. 이러한 테스트를 App Center 업로드 하면 CI 서버는 다음 다이어그램에 표시 된 것 처럼 CI 프로세스의 일부로 자동으로 실행할 수 있습니다.
 
 [![이러한 테스트가 App Center으로 업로드 되 면이 다이어그램에 표시 된 대로 ci 서버는 CI 프로세스의 일부로 자동으로 실행할 수 있습니다.](intro-to-ci-images/intro02-small.png)](intro-to-ci-images/intro02.png#lightbox)
 
@@ -55,13 +55,13 @@ CI를 지원 하도록 설계 된 상용 및 오픈 소스 도구의 광범위 �
 
 TFS와 Azure DevOps는 모두 Visual Studio와 긴밀 하 게 통합 되며 개발자는 단일 IDE에서 많은 버전 제어 및 CI 작업을 수행할 수 있습니다. Eclipse 용 Team Explorer Everywhere 플러그 인 (아래 참조)도 사용할 수 있습니다. Mac용 Visual Studio에는 [사용할 수 있는 TFVC의 미리 보기가](/visualstudio/mac/tf-version-control/)있습니다.
 
-[Azure DevOps 파이프라인](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) 은 대상으로 하려는 각 플랫폼에 대 한 빌드 정의를 만드는 Xamarin 프로젝트를 직접 지원 합니다 (Android, IOS 및 Windows). 각 빌드 정의에 적절 한 Xamarin 라이선스가 필요 합니다. 이 목적을 위해 로컬 Xamarin 지원 TFS 빌드 서버를 Azure DevOps에 연결할 수도 있습니다. 이 설정을 사용 하면 Azure DevOps에 큐에 대기 중인 빌드가 로컬 서버에 위임 됩니다. 자세한 내용은 [빌드 및 릴리스 에이전트](https://docs.microsoft.com/azure/devops/pipelines/agents/agents)를 참조 하세요. 또는 Jenkins 또는 팀 도시와 같은 다른 빌드 도구를 사용할 수 있습니다.
+[Azure DevOps 파이프라인](/azure/devops/pipelines/languages/xamarin/) 은 대상으로 하려는 각 플랫폼에 대 한 빌드 정의를 만드는 Xamarin 프로젝트를 직접 지원 합니다 (Android, IOS 및 Windows). 각 빌드 정의에 적절 한 Xamarin 라이선스가 필요 합니다. 이 목적을 위해 로컬 Xamarin 지원 TFS 빌드 서버를 Azure DevOps에 연결할 수도 있습니다. 이 설정을 사용 하면 Azure DevOps에 큐에 대기 중인 빌드가 로컬 서버에 위임 됩니다. 자세한 내용은 [빌드 및 릴리스 에이전트](/azure/devops/pipelines/agents/agents)를 참조 하세요. 또는 Jenkins 또는 팀 도시와 같은 다른 빌드 도구를 사용할 수 있습니다.
 
-Visual Studio, Azure DevOps 및 Team Foundation Server의 모든 ALM (응용 프로그램 수명 주기 관리) 기능에 대 한 전체 요약은 [Xamarin 앱을 사용 하는 Devops](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps)를 참조 하세요.
+Visual Studio, Azure DevOps 및 Team Foundation Server의 모든 ALM (응용 프로그램 수명 주기 관리) 기능에 대 한 전체 요약은 [Xamarin 앱을 사용 하는 Devops](/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps)를 참조 하세요.
 
 #### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
-[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) 는 Visual Studio 외부에서 개발 하는 팀에 Team Foundation Server 및 Azure devops의 기능을 제공 합니다. 이를 통해 개발자는 Eclipse 또는 OS X 및 Linux 용 플랫폼 간 명령줄 클라이언트에서 온-프레미스 또는 클라우드의 팀 프로젝트에 연결할 수 있습니다. Team Explorer Everywhere는 Windows 이외의 플랫폼에 대 한 버전 제어 (Git 포함), 작업 항목 및 빌드 기능에 대 한 모든 권한을 제공 합니다.
+[Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) 는 Visual Studio 외부에서 개발 하는 팀에 Team Foundation Server 및 Azure devops의 기능을 제공 합니다. 이를 통해 개발자는 Eclipse 또는 OS X 및 Linux 용 플랫폼 간 명령줄 클라이언트에서 온-프레미스 또는 클라우드의 팀 프로젝트에 연결할 수 있습니다. Team Explorer Everywhere는 Windows 이외의 플랫폼에 대 한 버전 제어 (Git 포함), 작업 항목 및 빌드 기능에 대 한 모든 권한을 제공 합니다.
 
 #### <a name="git"></a>Git
 
@@ -79,7 +79,7 @@ Git은 웹 브라우저나 Linux, Mac OSX 및 Windows에서 실행 되는 [GUI �
 
 연속 통합 환경을 설정 하는 것은 버전 제어 시스템을 빌드 서비스와 결합 하는 것을 의미 합니다.  후자의 경우 가장 일반적인 두 가지는 다음과 같습니다.
 
-- [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) 는 Azure devops 및 TFS의 빌드 시스템입니다. Visual Studio와 긴밀 하 게 통합 되므로 개발자가 빌드를 트리거하고 자동으로 테스트를 실행 하 고 결과를 볼 수 있습니다.
+- [Azure Pipelines](/azure/devops/pipelines/) 는 Azure devops 및 TFS의 빌드 시스템입니다. Visual Studio와 긴밀 하 게 통합 되므로 개발자가 빌드를 트리거하고 자동으로 테스트를 실행 하 고 결과를 볼 수 있습니다.
 - Jenkins는 모든 종류의 소프트웨어 개발을 지원 하기 위한 다양 한 플러그인 에코 시스템이 있는 오픈 소스 CI 서버입니다. Windows 및 Mac OS X에서 실행 됩니다. Jenkins은 특정 IDE와 통합 되지 않습니다. 대신 웹 인터페이스를 통해 구성 및 관리 됩니다. 또한 Jenkins CI를 설치 하 고 구성 하 여 소규모 팀에 편리 하 게 사용할 수 있습니다.
 
 TFS/Azure DevOps를 단독으로 사용 하거나, 다음 섹션에 설명 된 대로 TFS/Azure DevOps 또는 Git와 함께 Jenkins를 사용할 수 있습니다.
@@ -88,22 +88,22 @@ TFS/Azure DevOps를 단독으로 사용 하거나, 다음 섹션에 설명 된 �
 
 설명 된 대로 Azure DevOps 및 Team Foundation Server는 버전 제어와 빌드 서비스를 모두 제공 합니다. 빌드 서비스에는 각 대상 플랫폼에 대 한 Xamarin Business 또는 Enterprise 라이선스가 항상 필요 합니다.
 
-Azure DevOps를 사용 하 여 각 대상 플랫폼에 대 한 별도의 빌드 정의를 만들고 여기에 적절 한 라이선스를 입력 합니다. 구성 되 면 Azure DevOps는 클라우드에서 빌드 및 테스트를 실행 합니다. 자세한 내용은 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) 를 참조 하세요.
+Azure DevOps를 사용 하 여 각 대상 플랫폼에 대 한 별도의 빌드 정의를 만들고 여기에 적절 한 라이선스를 입력 합니다. 구성 되 면 Azure DevOps는 클라우드에서 빌드 및 테스트를 실행 합니다. 자세한 내용은 [Azure Pipelines](/azure/devops/pipelines/) 를 참조 하세요.
 
 Team Foundation Server를 사용 하 여 특정 대상 플랫폼에 대해 빌드 컴퓨터를 다음과 같이 구성 합니다.
 
-- **Android 및 Windows:** Visual Studio 및 Xamarin 도구 (Android 및 Windows 모두)를 설치 하 고 Xamarin 라이선스를 사용 하 여 구성 합니다. 또한 Android SDK를 TFS 빌드 에이전트에서 찾을 수 있는 서버에서 공유 위치로 이동 해야 합니다. 자세한 내용은 [TFVC 구성](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)을 참조 하세요.
+- **Android 및 Windows:** Visual Studio 및 Xamarin 도구 (Android 및 Windows 모두)를 설치 하 고 Xamarin 라이선스를 사용 하 여 구성 합니다. 또한 Android SDK를 TFS 빌드 에이전트에서 찾을 수 있는 서버에서 공유 위치로 이동 해야 합니다. 자세한 내용은 [TFVC 구성](/azure/devops/repos/tfvc/overview)을 참조 하세요.
 - **iOS 및 Xamarin:** 적절 한 라이선스를 사용 하 여 Windows server에 Visual Studio 및 Xamarin 도구를 설치 합니다. 그런 다음, 네트워크에서 액세스할 수 있는 Mac OS X 컴퓨터에 Mac용 Visual Studio를 설치 합니다 .이 컴퓨터는 빌드 호스트로 사용 되며 최종 앱 패키지 (iOS 용 IPA, OS X 용 앱)를 만듭니다.
 
 다음 다이어그램은이 토폴로지를 보여 줍니다.
 
 [![이 다이어그램은이 토폴로지를 보여 줍니다.](intro-to-ci-images/intro03-small.png)](intro-to-ci-images/intro03.png#lightbox)
 
-Azure DevOps 빌드를 로컬 서버에 위임할 수 있도록 로컬 TFS 서버를 Azure DevOps 프로젝트에 연결할 수도 있습니다. 자세한 내용은 [빌드 및 릴리스 에이전트](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/)를 참조 하세요.
+Azure DevOps 빌드를 로컬 서버에 위임할 수 있도록 로컬 TFS 서버를 Azure DevOps 프로젝트에 연결할 수도 있습니다. 자세한 내용은 [빌드 및 릴리스 에이전트](/azure/devops/pipelines/agents/agents/)를 참조 하세요.
 
 #### <a name="azure-devops-and-jenkins"></a>Azure DevOps 및 Jenkins
 
-Jenkins를 사용 하 여 앱을 빌드하는 경우 Azure DevOps 또는 Team Foundation Server에 코드를 저장 하 고 CI 빌드에 Jenkins을 계속 사용할 수 있습니다. 팀 프로젝트의 Git 리포지토리로 코드를 푸시 하거나 TFVC에 코드를 체크 인할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 [Azure DevOps를 사용 하 여 Jenkins](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins)를 참조 하세요.
+Jenkins를 사용 하 여 앱을 빌드하는 경우 Azure DevOps 또는 Team Foundation Server에 코드를 저장 하 고 CI 빌드에 Jenkins을 계속 사용할 수 있습니다. 팀 프로젝트의 Git 리포지토리로 코드를 푸시 하거나 TFVC에 코드를 체크 인할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 [Azure DevOps를 사용 하 여 Jenkins](/azure/devops/service-hooks/services/jenkins)를 참조 하세요.
 
 [![Jenkins를 사용 하 여 앱을 빌드하는 경우 Azure DevOps 또는 Team Foundation Server에 코드를 저장 하 고 CI 빌드에 Jenkins을 계속 사용할 수 있습니다.](intro-to-ci-images/intro04-small.png)](intro-to-ci-images/intro04.png#lightbox)
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/30/2018
-ms.openlocfilehash: 6093c983a80c53b4900bb26c3a7020724a59c06d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d4a775d1e96fd6650623c2a151ae74b8b68ce0ac
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571310"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457083"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
-일반적인 응용 프로그램에서 작동 하는 방식을 이해 하기 위해 `RecyclerView` 이 항목에서는를 사용 하 여 많은 사진 컬렉션을 표시 하는 간단한 코드 예제 인 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱에 대해 살펴봅니다 `RecyclerView` . 
+일반적인 응용 프로그램에서 작동 하는 방식을 이해 하기 위해 `RecyclerView` 이 항목에서는를 사용 하 여 많은 사진 컬렉션을 표시 하는 간단한 코드 예제 인 [RecyclerViewer](/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱에 대해 살펴봅니다 `RecyclerView` . 
 
 [![사진 표시를 위해 RecyclerView 보기를 사용 하는 두 가지 스크린샷](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
@@ -25,7 +25,7 @@ ms.locfileid: "84571310"
 ### <a name="an-example-data-source"></a>예제 데이터 원본
 
 이 예제 앱에서 "사진 앨범" 데이터 원본 ( `PhotoAlbum` 클래스로 나타냄)은 `RecyclerView` 항목 콘텐츠와 함께 제공 됩니다.
-`PhotoAlbum`는 캡션이 있는 사진 컬렉션입니다. 이를 인스턴스화하면 미리 만들어진 32 사진 컬렉션을 얻게 됩니다.
+`PhotoAlbum` 는 캡션이 있는 사진 컬렉션입니다. 이를 인스턴스화하면 미리 만들어진 32 사진 컬렉션을 얻게 됩니다.
 
 ```csharp
 PhotoAlbum mPhotoAlbum = new PhotoAlbum ();
@@ -38,13 +38,13 @@ int imageId = mPhotoAlbum[9].ImageId;
 string caption = mPhotoAlbum[9].Caption;
 ```
 
-`PhotoAlbum`는 컬렉션의 `RandomSwap` 첫 번째 사진을 컬렉션의 다른 위치에서 무작위로 선택 된 사진과 교환 하기 위해 호출할 수 있는 메서드를 제공 합니다.
+`PhotoAlbum` 는 컬렉션의 `RandomSwap` 첫 번째 사진을 컬렉션의 다른 위치에서 무작위로 선택 된 사진과 교환 하기 위해 호출할 수 있는 메서드를 제공 합니다.
 
 ```csharp
 mPhotoAlbum.RandomSwap ();
 ```
 
-의 구현 세부 정보는 `PhotoAlbum` 이해와 관련이 없으므로 `RecyclerView` `PhotoAlbum` 소스 코드는 여기에 표시 되지 않습니다. 소스 코드는 `PhotoAlbum` [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱의 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) 에서 사용할 수 있습니다.
+의 구현 세부 정보는 `PhotoAlbum` 이해와 관련이 없으므로 `RecyclerView` `PhotoAlbum` 소스 코드는 여기에 표시 되지 않습니다. 소스 코드는 `PhotoAlbum` [RecyclerViewer](/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱의 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) 에서 사용할 수 있습니다.
 
 ### <a name="layout-and-initialization"></a>레이아웃 및 초기화
 
@@ -126,8 +126,8 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 [![ImageView 및 TextView를 포함 하는 CardView의 다이어그램](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
 
-`PhotoViewHolder`에서 파생 되며, `RecyclerView.ViewHolder` `ImageView` `TextView` 위의 레이아웃에 표시 된 및에 대 한 참조를 저장 하는 속성을 포함 합니다.
-`PhotoViewHolder`는 다음과 같은 두 개의 속성과 하나의 생성자로 구성 됩니다.
+`PhotoViewHolder` 에서 파생 되며, `RecyclerView.ViewHolder` `ImageView` `TextView` 위의 레이아웃에 표시 된 및에 대 한 참조를 저장 하는 속성을 포함 합니다.
+`PhotoViewHolder` 는 다음과 같은 두 개의 속성과 하나의 생성자로 구성 됩니다.
 
 ```csharp
 public class PhotoViewHolder : RecyclerView.ViewHolder
@@ -179,7 +179,7 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 #### <a name="oncreateviewholder"></a>OnCreateViewHolder
 
-레이아웃 관리자는 `OnCreateViewHolder` 에서 `RecyclerView` 항목을 나타내기 위해 새 뷰 소유자가 필요한 경우를 호출 합니다. `OnCreateViewHolder`보기의 레이아웃 파일에서 항목 보기를 늘어납니다 새 인스턴스에서 뷰를 래핑합니다 `PhotoViewHolder` . `PhotoViewHolder`생성자는 이전에 [뷰 보유자](#view-holder)에서 설명한 대로 레이아웃의 자식 뷰에 대 한 참조를 찾아 저장 합니다.
+레이아웃 관리자는 `OnCreateViewHolder` 에서 `RecyclerView` 항목을 나타내기 위해 새 뷰 소유자가 필요한 경우를 호출 합니다. `OnCreateViewHolder` 보기의 레이아웃 파일에서 항목 보기를 늘어납니다 새 인스턴스에서 뷰를 래핑합니다 `PhotoViewHolder` . `PhotoViewHolder`생성자는 이전에 [뷰 보유자](#view-holder)에서 설명한 대로 레이아웃의 자식 뷰에 대 한 참조를 찾아 저장 합니다.
 
 각 행 항목은 `CardView` `ImageView` (사진의 경우) 및 (캡션의)를 포함 하는로 표시 됩니다 `TextView` . 이 레이아웃은 PhotoCardView 파일에 **있습니다.**
 
@@ -220,7 +220,7 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 ```
 
 이 레이아웃은의 단일 행 항목을 나타냅니다 `RecyclerView` . `OnBindViewHolder`아래에서 설명 하는 메서드는 데이터 원본의 데이터를 `ImageView` `TextView` 이 레이아웃의 및로 복사 합니다.
-`OnCreateViewHolder`에서 지정 된 사진 위치에 대해이 레이아웃을 늘어납니다 하 `RecyclerView` 고, 새 인스턴스를 인스턴스화합니다 `PhotoViewHolder` .이는 연결 된 `ImageView` `TextView` 레이아웃의 및 자식 뷰에 대 한 참조를 찾고 캐시 합니다 `CardView` .
+`OnCreateViewHolder` 에서 지정 된 사진 위치에 대해이 레이아웃을 늘어납니다 하 `RecyclerView` 고, 새 인스턴스를 인스턴스화합니다 `PhotoViewHolder` .이는 연결 된 `ImageView` `TextView` 레이아웃의 및 자식 뷰에 대 한 참조를 찾고 캐시 합니다 `CardView` .
 
 ```csharp
 public override RecyclerView.ViewHolder
@@ -241,7 +241,7 @@ public override RecyclerView.ViewHolder
 
 #### <a name="onbindviewholder"></a>OnBindViewHolder
 
-레이아웃 관리자가 화면에 표시 되는 화면 영역에 특정 뷰를 표시할 준비가 되 면 `RecyclerView` 어댑터의 메서드를 호출 `OnBindViewHolder` 하 여 지정 된 행 위치의 항목을 데이터 소스의 콘텐츠로 채웁니다. `OnBindViewHolder`지정 된 행 위치 (사진의 이미지 리소스 및 사진의 캡션에 대 한 문자열)에 대 한 사진 정보를 가져오고이 데이터를 연결 된 보기에 복사 합니다. 뷰는 매개 변수를 통해 전달 되는 뷰 보유자 개체에 저장 된 참조를 통해 찾을 수 있습니다 `holder` .
+레이아웃 관리자가 화면에 표시 되는 화면 영역에 특정 뷰를 표시할 준비가 되 면 `RecyclerView` 어댑터의 메서드를 호출 `OnBindViewHolder` 하 여 지정 된 행 위치의 항목을 데이터 소스의 콘텐츠로 채웁니다. `OnBindViewHolder` 지정 된 행 위치 (사진의 이미지 리소스 및 사진의 캡션에 대 한 문자열)에 대 한 사진 정보를 가져오고이 데이터를 연결 된 보기에 복사 합니다. 뷰는 매개 변수를 통해 전달 되는 뷰 보유자 개체에 저장 된 참조를 통해 찾을 수 있습니다 `holder` .
 
 ```csharp
 public override void
@@ -277,7 +277,7 @@ public override int ItemCount
 
 ### <a name="putting-it-all-together"></a>모두 함께 배치
 
-`RecyclerView`예제 사진 앱에 대 한 결과 구현은 `MainActivity` 데이터 원본, 레이아웃 관리자 및 어댑터를 만드는 코드로 구성 됩니다. `MainActivity`인스턴스를 만들고 `mRecyclerView` , 데이터 원본 및 어댑터를 인스턴스화하고, 레이아웃 관리자와 어댑터를 연결 합니다.
+`RecyclerView`예제 사진 앱에 대 한 결과 구현은 `MainActivity` 데이터 원본, 레이아웃 관리자 및 어댑터를 만드는 코드로 구성 됩니다. `MainActivity` 인스턴스를 만들고 `mRecyclerView` , 데이터 원본 및 어댑터를 인스턴스화하고, 레이아웃 관리자와 어댑터를 연결 합니다.
 
 ```csharp
 public class MainActivity : Activity
@@ -306,7 +306,7 @@ public class MainActivity : Activity
 
 ```
 
-`PhotoViewHolder`뷰 참조를 찾아서 캐시 합니다.
+`PhotoViewHolder` 뷰 참조를 찾아서 캐시 합니다.
 
 ```csharp
 public class PhotoViewHolder : RecyclerView.ViewHolder
@@ -323,7 +323,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
 }
 ```
 
-`PhotoAlbumAdapter`세 가지 필수 메서드 재정의를 구현 합니다.
+`PhotoAlbumAdapter` 세 가지 필수 메서드 재정의를 구현 합니다.
 
 ```csharp
 public class PhotoAlbumAdapter : RecyclerView.Adapter
@@ -362,7 +362,7 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 [![사진 카드를 세로로 스크롤 하는 사진 보기 앱의 두 스크린샷](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
-위의 스크린샷에 표시 된 것 처럼 그림자를 그리지 않는 경우에는 **Properties/AndroidManifest .xml** 을 편집 하 고 요소에 다음 특성 설정을 추가 합니다 `<application>` .
+위의 스크린샷에 표시 된 대로 그림자를 그리지 않는 경우 **속성/AndroidManifest.xml** 를 편집 하 고 요소에 다음 특성 설정을 추가 합니다 `<application>` .
 
 ```xml
 android:hardwareAccelerated="true"
@@ -389,7 +389,7 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 
 ## <a name="related-links"></a>관련 링크
 
-- [RecyclerViewer (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
+- [RecyclerViewer (샘플)](/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
 - [RecyclerView 파트 및 기능](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
 - [RecyclerView 예제 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md)

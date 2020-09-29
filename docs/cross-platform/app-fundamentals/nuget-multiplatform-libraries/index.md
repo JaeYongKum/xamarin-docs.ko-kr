@@ -6,12 +6,12 @@ ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: ac8e4b2eef0905ba50cb24b9eb035d50a05dd84a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f0d1195d9159623ec865b1ea1fec26d9969925ca
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932247"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456602"
 ---
 # <a name="nuget-multiplatform-library-projects-nugetizer-3000"></a>NuGet 다중 플랫폼 라이브러리 프로젝트 (Nugetizer 3000)
 
@@ -53,9 +53,9 @@ NuGet 패키지에 추가 해야 하는 필수 및 선택적 메타 데이터에
 
 ## <a name="further-nuget-information"></a>추가 NuGet 정보
 
-[Xamarin에 대 한 nuget 수동 만들기](~/cross-platform/app-fundamentals/nuget-manual.md) 및 [응용 프로그램에 NuGet 패키지를 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)하는 방법에 대해 자세히 알아보세요.
+[Xamarin에 대 한 nuget 수동 만들기](~/cross-platform/app-fundamentals/nuget-manual.md) 및 [응용 프로그램에 NuGet 패키지를 포함](/visualstudio/mac/nuget-walkthrough)하는 방법에 대해 자세히 알아보세요.
 
-Microsoft의 [Nuget 설명서](https://docs.microsoft.com/nuget/) 에는 **Nupkg** 형식 및 Visual Studio의 nuget 패키지 사용에 대 한 자세한 내용이 포함 되어 있습니다.
+Microsoft의 [Nuget 설명서](/nuget/) 에는 **Nupkg** 형식 및 Visual Studio의 nuget 패키지 사용에 대 한 자세한 내용이 포함 되어 있습니다.
 
 NuGet 패키지 프로젝트에 대 한 디자인 토론 ( NuGetizer 3000)는 [NuGet GitHub 리포지토리에서](https://github.com/NuGet/Home/wiki/NuGetizer-3000)사용할 수 있습니다.
 
@@ -63,4 +63,4 @@ NuGet 패키지 프로젝트에 대 한 디자인 토론 ( NuGetizer 3000)는 [N
 
 - [NuGetizer-3000 사용 사례](https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios)
 - [Xamarin에 대 한 NuGet 패키지 수동 만들기](~/cross-platform/app-fundamentals/nuget-manual.md)
-- [NuGet 설명서](https://docs.microsoft.com/nuget/)
+- [NuGet 설명서](/nuget/)

@@ -6,16 +6,16 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d5f3fb2a793f658334555aae3328e69134b2666a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8c5e470c1a0bd029fedabb1bd1e228cb2a62f84d
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029668"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457382"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.ios에 대 한 Xamarin Live Player
 
-소스 코드가 해석 되므로 일정 시간 후에 [제한](limitations.md) 에 도달 하 여 장치 또는 에뮬레이터에 대해 앱을 완전히 컴파일해야 할 수 있습니다.
+소스 코드가 해석 되므로 일정 시간 후에 [제한](./troubleshooting.md) 에 도달 하 여 장치 또는 에뮬레이터에 대해 앱을 완전히 컴파일해야 할 수 있습니다.
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
@@ -33,10 +33,10 @@ ms.locfileid: "73029668"
 2. 라이브 플레이어 장치를 관리 하 여 QR 코드를 스캔 하 여 장치를 Visual Studio에 페어링 합니다.
 3. 휴대폰 또는 태블릿에서 앱이 실행 됩니다.
 
-## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 앱](player.md)
+## <a name="xamarin-live-player-app"></a>[Xamarin Live Player 앱](player.md)
 
 Xamarin Live Player 앱 사용
 
-## <a name="troubleshootingtroubleshootingmd"></a>[문제 해결](troubleshooting.md)
+## <a name="troubleshooting"></a>[문제 해결](troubleshooting.md)
 
 문제가 발생 하는 경우 도움말을 찾습니다.

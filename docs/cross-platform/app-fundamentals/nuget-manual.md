@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 3e67d2c329e5ea0ad91eebcc4301965682d647aa
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458006"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지 수동 만들기
 
@@ -26,7 +26,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 현재 사용 중인 기본 Xamarin 대상 프레임 워크는 다음과 같습니다.
 
-- **MonoAndroid** - Xamarin.Android
+- **MonoAndroid**
 - **Xamarin.ios** -xamarin.ios [Unified API](~/cross-platform/macios/unified/index.md) (64 비트 지원)
 - **Xamarin.ios 및** xamarin.ios의 모바일 프로필. Xamarin.ios 및 xamarin.ios API 화면에 해당 합니다.
 
@@ -51,7 +51,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 소수점이 하를 사용 하지 않고 숫자 집합을 사용 하 여 버전을 지정 하거나 소수점을 사용 하 여 지정할 수 있습니다. 소수점이 없는 경우 NuGet은 각 숫자 사이에 '. '를 삽입 하 여 각 숫자를 가져와 버전으로 변환 합니다.
 
-위의 "MonoAndroid10"은 "Android 1.0"을 의미 합니다. 즉, 프로젝트의 [대상 프레임 워크](~/android/app-fundamentals/android-api-levels.md) 를 MonoAndroid 버전 1.0 이상으로 만들어야 합니다. 버전은 프로젝트 파일의 `<TargetFrameworkVersion>` 요소에 지정 됩니다.
+위의 "MonoAndroid10"은 "Android 1.0"을 의미 합니다. 즉, 프로젝트의 [대상 프레임 워크](~/android/app-fundamentals/android-api-levels.md) 를 MonoAndroid 버전 1.0 이상으로 만들어야 합니다. 버전은 `<TargetFrameworkVersion>` 프로젝트 파일의 요소에 지정 됩니다.
 
 명확히 하기:
 
@@ -80,4 +80,4 @@ PCL 프로필은 액세스할 수 있는 .NET framework Api에서 제한적 이�
 ## <a name="related-links"></a>관련 링크
 
 - [Nugetizer-3000 자동화 된 NuGet 만들기](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
-- [프로젝트에 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [프로젝트에 NuGet 포함](/visualstudio/mac/nuget-walkthrough)

@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 04/01/2020
-ms.openlocfilehash: 480ee0526fa707f46827fe764811dc33f5b5b243
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a7118cc3ce9c0a5c4254bb5921800fe38acd85a0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930028"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458227"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
 
@@ -41,7 +41,7 @@ TeamCity를 설정 하는 데는 몇 가지 단계가 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-[App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud/) 에 대 한 경험이 필요 합니다.
+[App Center 테스트](/appcenter/test-cloud/) 에 대 한 경험이 필요 합니다.
 
 TeamCity 8.1에 대 한 지식이 필요 합니다. TeamCity의 설치는이 문서의 범위를 벗어났습니다. TeamCity가 OS X Mavericks에 설치 되어 있고 루트 계정이 아닌 일반 사용자 계정으로 실행 되 고 있다고 가정 합니다.
 

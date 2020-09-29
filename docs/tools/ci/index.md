@@ -6,12 +6,12 @@ ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: davidortinau
 ms.author: daortin
 ms.date: 10/23/2018
-ms.openlocfilehash: 9c87a65481ca58b2861c40a420459d629852f6b6
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 357bf2c6e137aacd471b517852f3a7b424af3f7d
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997425"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456576"
 ---
 # <a name="continuous-integration-with-xamarin"></a>Xamarin과의 연속 통합
 
@@ -27,11 +27,11 @@ ms.locfileid: "86997425"
 
 ## <a name="working-with-continuous-integration-environments"></a>연속 통합 환경 사용
 
-### <a name="build-xamarin-apps-with-azure-pipelines"></a>[Azure Pipelines를 사용 하 여 Xamarin 앱 빌드](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
+### <a name="build-xamarin-apps-with-azure-pipelines"></a>[Azure Pipelines를 사용 하 여 Xamarin 앱 빌드](/azure/devops/pipelines/languages/xamarin/)
 
 Azure Pipelines를 사용 하 여 Android 및 iOS 용 Xamarin 앱을 자동으로 빌드합니다.
 
-### <a name="build-xamarin-apps-using-app-center"></a>[App Center를 사용 하 여 Xamarin 앱 빌드](https://docs.microsoft.com/appcenter/build/xamarin/)
+### <a name="build-xamarin-apps-using-app-center"></a>[App Center를 사용 하 여 Xamarin 앱 빌드](/appcenter/build/xamarin/)
 
 App Center를 사용 하 여 GitHub, Azure DevOps 또는 Bitbucket를 사용 하 여 Xamarin.ios 및 Xamarin Android 솔루션을 빌드합니다.
 

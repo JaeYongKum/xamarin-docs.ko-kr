@@ -6,12 +6,12 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: 63ef7045051f21259e01c36fc5f702585b04a57b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a1672937b8c7c0ce429b82aee34ecf45aa59d4c8
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934380"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457421"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
@@ -54,7 +54,7 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 - Windows Phone 8
 - UWP 앱
 
-[Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 에서 다양 한 프로필 기능에 대 한 자세한 내용을 읽고 지원 되는 프레임 워크 정보 및 기타 메모를 포함 하는 다른 커뮤니티 구성원의 [PCL 프로필 요약](https://portablelibraryprofiles.stephencleary.com/) 을 확인할 수 있습니다.
+[Microsoft 웹 사이트](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library) 에서 다양 한 프로필 기능에 대 한 자세한 내용을 읽고 지원 되는 프레임 워크 정보 및 기타 메모를 포함 하는 다른 커뮤니티 구성원의 [PCL 프로필 요약](https://portablelibraryprofiles.stephencleary.com/) 을 확인할 수 있습니다.
 
 **이점**
 
@@ -198,7 +198,7 @@ PCL의 출력 (즉, 결과 어셈블리 DLL)을 대부분의 프로젝트에 대
 
 ## <a name="pcl-example"></a>PCL 예
 
-[Taskyportable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) 샘플 응용 프로그램은 Xamarin에서 이식 가능한 클래스 라이브러리를 사용할 수 있는 방법을 보여 줍니다.
+[Taskyportable](/samples/xamarin/mobile-samples/taskyportable/) 샘플 응용 프로그램은 Xamarin에서 이식 가능한 클래스 라이브러리를 사용할 수 있는 방법을 보여 줍니다.
 IOS 및 Android에서 실행 되는 응용 프로그램의 몇 가지 스크린샷:
 
 [![IOS, Android 및 Windows Phone에서 실행 되는 응용 프로그램의 몇 가지 스크린샷은 다음과 같습니다.](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
@@ -272,9 +272,9 @@ public static extern Result Close(IntPtr db);
 
 ## <a name="related-links"></a>관련 링크
 
-- [TaskyPortable (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+- [TaskyPortable (샘플)](/samples/xamarin/mobile-samples/taskyportable/)
 - [플랫폼 간 애플리케이션 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [이식 가능한 Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
-- [.NET Framework를 사용한 크로스 플랫폼 개발 (Microsoft)](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
+- [.NET Framework를 사용한 크로스 플랫폼 개발 (Microsoft)](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
