@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fbd6e4a3b1c5cdb45a057f1ed664a0d5e71e224d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7f600593d7a3bb180ef8daca6639dbbea4bf07aa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937893"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430069"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Xamarin.ios의 OpenTK 소개
 
@@ -315,7 +315,7 @@ Xamarin.ios 응용 프로그램에서 OpenTk 작업을 수행 하는 기본 사�
 
 더 많은 예제는 [OpenTK 샘플 GitHub](https://github.com/opentk/opentk/tree/master/Source/Examples) 리포지토리를 참조 하세요. OpenTK 사용의 공식 예제 목록이 포함 되어 있습니다. OpenTK의 Xamarin.ios 버전과 함께를 사용 하기 위해 이러한 예제를 조정 해야 합니다.
 
-OpenTK 구현에 대 한 보다 복잡 한 Xamarin.ios 예제는 [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) 샘플을 참조 하세요.
+OpenTK 구현에 대 한 보다 복잡 한 Xamarin.ios 예제는 [MonoMacGameView](/samples/xamarin/mac-samples/monomacgamewindow) 샘플을 참조 하세요.
 
 <a name="Summary"></a>
 
@@ -325,8 +325,8 @@ OpenTK 구현에 대 한 보다 복잡 한 Xamarin.ios 예제는 [MonoMacGameVie
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacOpenTK (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macopentk)
-- [MonoMacGameView (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
+- [MacOpenTK (샘플)](/samples/xamarin/mac-samples/macopentk)
+- [MonoMacGameView (샘플)](/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows 작업](~/mac/user-interface/window.md)
 - [Open Toolkit](https://opentk.net)

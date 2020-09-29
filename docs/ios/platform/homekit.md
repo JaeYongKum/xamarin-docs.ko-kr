@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 7319cc50a147da93018bdd1c2036d70cf01e9b80
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7d5c5a6543da701b70532134d8ae901564e5c0b8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936684"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430179"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.ios의 HomeKit
 
@@ -38,11 +38,11 @@ HomeKit는 지정 된 위치의 모든 자동화 장치를 홈 컬렉션으로 �
 
 홈 컬렉션은 모든 사용자의 iOS 장치에서 자동으로 백업 및 동기화 되는 홈 구성 데이터베이스에 저장 됩니다. HomeKit에서는 홈 구성 데이터베이스를 사용 하기 위한 다음 클래스를 제공 합니다.
 
-- `HMHome`-이 컨테이너는 모든 홈 automation 장치에 대 한 모든 정보와 구성을 단일 물리적 위치 (예: 단일 패밀리 거주지). 사용자에 게 기본 집 및 휴가 집과 같은 둘 이상의 거주지가 있을 수 있습니다. 또는 본사와 같은 속성에 서로 다른 "집"이 있을 수 있습니다. 어느 쪽이 든, 하나 이상의 `HMHome` 개체를 설정 하 고 저장 _해야_ 다른 HomeKit 정보를 입력할 수 있습니다.
-- `HMRoom`-선택적으로,를 `HMRoom` 사용 하면 사용자가 `HMHome` 부엌, 욕실, 중고품, 거실 등의 홈 () 내에서 특정 방을 정의할 수 있습니다. 사용자는 사내에 있는 특정 위치에 있는 모든 홈 automation 장치를로 그룹화 하 고 하나의 단위로 작업을 수행할 수 있습니다 `HMRoom` . 예를 들어 Siri에 게 중고품 조명을 끄도록 요청 합니다.
-- `HMAccessory`-사용자의 거주지 (예: 스마트 자동 온도 조절기)에 설치 된 개별 물리적 HomeKit 사용 가능 자동화 장치를 나타냅니다. 각 `HMAccessory` 은에 할당 됩니다 `HMRoom` . 사용자가 대화방을 구성 하지 않은 경우 HomeKit는 특수 한 기본 방에 액세서리를 할당 합니다.
-- `HMService`-지정 된에서 제공 하는 서비스를 나타냅니다 `HMAccessory` (예: 조명의 설정/해제 상태, 색 변경이 지원 되는 경우). 각에는 두 개 이상의 `HMAccessory` 서비스 (예: 열기 포함 하는 중고품 도어)가 있을 수 있습니다. 또한 지정 된에는 `HMAccessory` 사용자 제어 외부에 있는 펌웨어 업데이트와 같은 서비스가 있을 수 있습니다.
-- `HMZone`-사용자가 개체의 컬렉션을 `HMRoom` 논리 영역 (예: Upstairs, Downstairs 또는 지하실)으로 그룹화 할 수 있습니다. 선택 사항 이지만,이를 통해 Siri와 같은 상호 작용을 통해 모든 라이트 downstairs을 끌 수 있습니다.
+- `HMHome` -이 컨테이너는 모든 홈 automation 장치에 대 한 모든 정보와 구성을 단일 물리적 위치 (예: 단일 패밀리 거주지). 사용자에 게 기본 집 및 휴가 집과 같은 둘 이상의 거주지가 있을 수 있습니다. 또는 본사와 같은 속성에 서로 다른 "집"이 있을 수 있습니다. 어느 쪽이 든, 하나 이상의 `HMHome` 개체를 설정 하 고 저장 _해야_ 다른 HomeKit 정보를 입력할 수 있습니다.
+- `HMRoom` -선택적으로,를 `HMRoom` 사용 하면 사용자가 `HMHome` 부엌, 욕실, 중고품, 거실 등의 홈 () 내에서 특정 방을 정의할 수 있습니다. 사용자는 사내에 있는 특정 위치에 있는 모든 홈 automation 장치를로 그룹화 하 고 하나의 단위로 작업을 수행할 수 있습니다 `HMRoom` . 예를 들어 Siri에 게 중고품 조명을 끄도록 요청 합니다.
+- `HMAccessory` -사용자의 거주지 (예: 스마트 자동 온도 조절기)에 설치 된 개별 물리적 HomeKit 사용 가능 자동화 장치를 나타냅니다. 각 `HMAccessory` 은에 할당 됩니다 `HMRoom` . 사용자가 대화방을 구성 하지 않은 경우 HomeKit는 특수 한 기본 방에 액세서리를 할당 합니다.
+- `HMService` -지정 된에서 제공 하는 서비스를 나타냅니다 `HMAccessory` (예: 조명의 설정/해제 상태, 색 변경이 지원 되는 경우). 각에는 두 개 이상의 `HMAccessory` 서비스 (예: 열기 포함 하는 중고품 도어)가 있을 수 있습니다. 또한 지정 된에는 `HMAccessory` 사용자 제어 외부에 있는 펌웨어 업데이트와 같은 서비스가 있을 수 있습니다.
+- `HMZone` -사용자가 개체의 컬렉션을 `HMRoom` 논리 영역 (예: Upstairs, Downstairs 또는 지하실)으로 그룹화 할 수 있습니다. 선택 사항 이지만,이를 통해 Siri와 같은 상호 작용을 통해 모든 라이트 downstairs을 끌 수 있습니다.
 
 <a name="Provisioning-a-HomeKit-App"></a>
 
@@ -68,7 +68,7 @@ HomeKit에 의해 적용 되는 보안 요구 사항으로 인해 HomeKit 프레
     [![프로 비전 프로필을 지금 만듦을 선택 합니다.](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
 9. 그런 다음 **info.plist** 파일을 편집 하 고 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인 합니다. 
 
-    [![앱 ID 설정](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
+    [![앱 ID 설정 ](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
 10. 마지막으로 **info.plist** 파일을 편집 하 고 **HomeKit** 자격을 선택 했는지 확인 합니다. 
 
     [![HomeKit 자격 사용](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)
@@ -274,17 +274,17 @@ Home Manager에서 기본 홈을 정의 하거나 로드 한 후 Xamarin.ios 앱
 메서드를 호출 `StartSearchingForNewAccessories` 하 여 완료 될 때 새 액세서리 및 메서드를 검색 하기 시작 `StopSearchingForNewAccessories` 합니다.
 
 > [!IMPORTANT]
-> `StartSearchingForNewAccessories`배터리 수명 및 iOS 장치의 성능에 부정적인 영향을 주기 때문에 오랜 시간 동안 실행 하면 안 됩니다. Apple은 `StopSearchingForNewAccessories` 1 분 후에 호출 하거나, 사용자에 게 액세서리 UI 찾기가 표시 될 때만 검색을 제안 합니다.
+> `StartSearchingForNewAccessories` 배터리 수명 및 iOS 장치의 성능에 부정적인 영향을 주기 때문에 오랜 시간 동안 실행 하면 안 됩니다. Apple은 `StopSearchingForNewAccessories` 1 분 후에 호출 하거나, 사용자에 게 액세서리 UI 찾기가 표시 될 때만 검색을 제안 합니다.
 
 이 `DidFindNewAccessory` 이벤트는 새 액세서리를 검색 하면 호출 되며 `DiscoveredAccessories` 액세서리 브라우저의 목록에 추가 됩니다.
 
 `DiscoveredAccessories`이 목록에는 `HMAccessory` HomeKit 사용 홈 자동화 장치와 조명 또는 중고품 도어 제어와 같은 사용 가능한 서비스를 정의 하는 개체의 컬렉션이 포함 됩니다.
 
-새 액세서리를 찾았으면 사용자에 게 표시 되 고이를 선택 하 여 홈에 추가할 수 있습니다. 예:
+새 액세서리를 찾았으면 사용자에 게 표시 되 고이를 선택 하 여 홈에 추가할 수 있습니다. 예제:
 
 [![새 액세서리 찾기](homekit-images/accessory01.png)](homekit-images/accessory01.png#lightbox)
 
-메서드를 호출 `AddAccessory` 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 예를 들어:
+메서드를 호출 `AddAccessory` 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Add the requested accessory to the home
@@ -317,7 +317,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 이 예에서는 작업을 간단 하 게 유지 하 고 홈의 액세서리로 직접 작업 하는 것이 좋습니다.
 
-`HMHome`개체는 해당 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다 `Accessories` . 예를 들어:
+`HMHome`개체는 해당 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다 `Accessories` . 다음은 그 예입니다.
 
 [![예제 액세서리](homekit-images/accessory04.png)](homekit-images/accessory04.png#lightbox)
 
@@ -379,7 +379,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 각 `HMService` 개체에는 `HMCharacteristic` 서비스의 상태에 대 한 정보를 제공 하거나 (예: 문 열림 또는 닫힘) 사용자가 상태를 조정할 수 있도록 허용 하는 개체의 컬렉션을 포함할 수 있습니다 (예: 광원 색 설정).
 
-`HMCharacteristic`는 특성 및 해당 상태에 대 한 정보를 제공할 뿐 아니라 _특성 메타 데이터_ ()를 통해 상태를 사용 하는 메서드도 제공 `HMCharacteristisMetadata` 합니다. 이 메타 데이터는 사용자에 게 정보를 표시 하거나 상태를 수정할 수 있도록 허용 하는 속성 (예: 최소 및 최대 값 범위)을 제공할 수 있습니다.
+`HMCharacteristic` 는 특성 및 해당 상태에 대 한 정보를 제공할 뿐 아니라 _특성 메타 데이터_ ()를 통해 상태를 사용 하는 메서드도 제공 `HMCharacteristisMetadata` 합니다. 이 메타 데이터는 사용자에 게 정보를 표시 하거나 상태를 수정할 수 있도록 허용 하는 속성 (예: 최소 및 최대 값 범위)을 제공할 수 있습니다.
 
 `HMCharacteristicType`열거형은 다음과 같이 정의 하거나 수정할 수 있는 특성 메타 데이터 값 집합을 제공 합니다.
 
@@ -425,7 +425,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 - 제조업체
 - 모델
 - MotionDetected 됨
-- Name
+- 속성
 - ObstructionDetected
 - OccupancyDetected
 - OutletInUse
@@ -707,7 +707,7 @@ IOS 9에서 HomeKit의 새로운 기능에 대 한 자세한 내용은 Apple의 
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0의 새로운 기능](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [HomeKitDeveloper 가이드](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

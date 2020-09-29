@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: c022c1af78a5a3800cd61096c3f142c1ed0235e7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3a33c2191f39ea72113a1d7eab660e1a172f752f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930938"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430880"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Xamarin.ios를 사용 하 여 테이블 편집
 
@@ -27,9 +27,9 @@ ms.locfileid: "86930938"
 
 셀에 **삭제** 단추를 표시 하는 살짝 밀기 제스처에 영향을 주는 세 가지 메서드 재정의가 있습니다.
 
-- **CommitEditingStyle** –이 메서드가 재정의 되는 경우 테이블 소스에서 검색 하 고 자동으로 살짝 밀기-삭제 제스처를 사용 하도록 설정 합니다. 메서드의 구현은에서를 호출 `DeleteRows` `UITableView` 하 여 셀이 사라지게 하 고 모델에서 기본 데이터 (예: 배열, 사전 또는 데이터베이스)도 제거 해야 합니다. 
+- **CommitEditingStyle** –이 메서드가 재정의 되는 경우 테이블 소스에서 검색 하 고 자동으로 살짝 밀기-삭제 제스처를 사용 하도록 설정 합니다. 메서드의 구현은에서를 호출  `DeleteRows`  `UITableView` 하 여 셀이 사라지게 하 고 모델에서 기본 데이터 (예: 배열, 사전 또는 데이터베이스)도 제거 해야 합니다. 
 - **Caneditrow** – CommitEditingStyle를 재정의 하면 모든 행을 편집할 수 있는 것으로 간주 됩니다. 이 메서드를 구현 하 고 특정 행 또는 모든 행에 대해 false를 반환 하는 경우에는 해당 셀에서 삭제 후 제스처를 사용할 수 없습니다. 
-- **TitleForDeleteConfirmation** – 필요에 따라 **삭제** 단추의 텍스트를 지정 합니다. 이 메서드가 구현 되지 않은 경우 단추 텍스트가 "삭제" 됩니다. 
+- **TitleForDeleteConfirmation** – 필요에 따라  **삭제** 단추의 텍스트를 지정 합니다. 이 메서드가 구현 되지 않은 경우 단추 텍스트가 "삭제" 됩니다. 
 
 이러한 메서드는 클래스에서 구현 됩니다 `TableSource` .
 
@@ -133,14 +133,14 @@ table.SetEditing (false, true);
 
 에는 `UITableViewSource` 테이블의 편집 모드 동작에 영향을 주는 여러 가지 방법이 있습니다. 이러한 메서드는 예제 코드에서 다음과 같이 구현 되었습니다.
 
-- **EditingStyleForRow** – `UITableViewCellEditingStyle.Delete` 데이터를 포함 하는 행에 대해를 반환 하 고, `UITableViewCellEditingStyle.Insert` 마지막 행 (삽입 단추로 동작 하도록 특별히 추가 됨)에 대해를 반환 합니다. 
-- **CustomizeMoveTarget** – 사용자가 셀을 이동 하는 동안이 선택적 메서드의 반환 값은 해당 위치 선택을 재정의할 수 있습니다. 즉, 특정 위치에 있는 셀을 ' 삭제 ' 하는 것을 방지할 수 있습니다 .이 예는 **(새 추가)** 행 뒤에 행이 이동 되지 않도록 방지 하는 예입니다. 
+- **EditingStyleForRow** –  `UITableViewCellEditingStyle.Delete` 데이터를 포함 하는 행에 대해를 반환 하 고,  `UITableViewCellEditingStyle.Insert` 마지막 행 (삽입 단추로 동작 하도록 특별히 추가 됨)에 대해를 반환 합니다. 
+- **CustomizeMoveTarget** – 사용자가 셀을 이동 하는 동안이 선택적 메서드의 반환 값은 해당 위치 선택을 재정의할 수 있습니다. 즉, 특정 위치에 있는 셀을 ' 삭제 ' 하는 것을 방지할 수 있습니다 .이 예는  **(새 추가)** 행 뒤에 행이 이동 되지 않도록 방지 하는 예입니다. 
 - **CanMoveRow** – 이동 하지 않도록 하려면 true를 반환 하 고, 이동 하지 않으려면 false를 반환 합니다. 예제에서 마지막 행은 삽입 단추로만 서버를 사용 하기 때문에 ' 핸들 ' 이동이 숨겨집니다. 
 
 또한 ' 삽입 ' 행을 추가 하는 두 개의 사용자 지정 메서드를 추가 하 고 더 이상 필요 하지 않은 경우 다시 제거 합니다. 이러한 작업은 **편집** 및 **완료** 단추에서 호출 됩니다.
 
-- **WillBeginTableEditing** – **편집** 단추가 있는 경우를 호출 하 여 `SetEditing` 테이블을 편집 모드로 전환 합니다. 그러면 테이블의 끝에 있는 **(새 추가)** 행을 ' 삽입 단추 ' 역할을 수행 하는 WillBeginTableEditing 메서드가 트리거됩니다. 
-- **DidFinishTableEditing** – 완료 단추를 `SetEditing` 다시 호출 하 여 편집 모드를 해제 합니다. 예제 코드는 편집이 더 이상 필요 하지 않을 때 테이블에서 **(새 추가)** 행을 제거 합니다. 
+- **WillBeginTableEditing** –  **편집** 단추가 있는 경우를 호출 하 여  `SetEditing` 테이블을 편집 모드로 전환 합니다. 그러면 테이블의 끝에 있는  **(새 추가)** 행을 ' 삽입 단추 ' 역할을 수행 하는 WillBeginTableEditing 메서드가 트리거됩니다. 
+- **DidFinishTableEditing** – 완료 단추를  `SetEditing` 다시 호출 하 여 편집 모드를 해제 합니다. 예제 코드는 편집이 더 이상 필요 하지 않을 때 테이블에서  **(새 추가)** 행을 제거 합니다. 
 
 이러한 메서드 재정의는 샘플 파일 **Tableeditmodeadd/Code/Tableource. cs**에서 구현 됩니다.
 
@@ -216,4 +216,4 @@ edit = new UIBarButtonItem(UIBarButtonSystemItem.Edit, (s,e)=>{
 
 ## <a name="related-links"></a>관련 링크
 
-- [WorkingWithTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (샘플)](/samples/xamarin/ios-samples/workingwithtables)

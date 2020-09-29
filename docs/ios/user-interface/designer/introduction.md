@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: e5cbbc10f189abb6d0d0b2ef99b50ae53d1103c2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7c6b5a4dd2f6f5d4992d84d5d8690a6dda3d20e3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572288"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432759"
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 
@@ -84,13 +84,13 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-**Solution Pad**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**Solution Pad**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-**솔루션 탐색기**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**솔루션 탐색기**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
@@ -173,7 +173,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 2. **제약 조건 도구 모음** – 사용자 인터페이스에서 요소를 배치 하는 두 가지 다른 방법으로 프레임 편집 모드와 제약 조건 편집 모드 간을 전환할 수 있습니다.
 3. **도구 상자** – 디자인 화면으로 끌어 오고 사용자 인터페이스에 추가할 수 있는 컨트롤러, 개체, 컨트롤, 데이터 뷰, 제스처 인식기, 창 및 막대를 표시 합니다.
 4. **Properties Pad** – id, 비주얼 스타일, 접근성, 레이아웃 및 동작을 포함 하 여 선택한 컨트롤의 속성을 표시 합니다.
-5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고 **Properties Pad**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
+5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **Properties Pad**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
 6. **아래쪽 도구 모음** – iOS Designer에서 장치, 방향 및 확대/축소를 포함 하 여 storyboard 또는. xib 파일을 표시 하는 방법을 변경 하는 옵션을 포함 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -184,7 +184,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 2. **제약 조건 도구 모음** – 사용자 인터페이스에서 요소를 배치 하는 두 가지 다른 방법으로 프레임 편집 모드와 제약 조건 편집 모드 간을 전환할 수 있습니다.
 3. **도구 상자** – 디자인 화면으로 끌어 오고 사용자 인터페이스에 추가할 수 있는 컨트롤러, 개체, 컨트롤, 데이터 뷰, 제스처 인식기, 창 및 막대를 표시 합니다.
 4. **속성 창** -id, 비주얼 스타일, 접근성, 레이아웃 및 동작을 포함 하 여 선택한 컨트롤의 속성을 표시 합니다.
-5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고 **속성 창**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
+5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **속성 창**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
 6. **아래쪽 도구 모음** – iOS Designer에서 장치, 방향 및 확대/축소를 포함 하 여 storyboard 또는. xib 파일을 표시 하는 방법을 변경 하는 옵션을 포함 합니다.
 
 -----
@@ -499,6 +499,6 @@ Xib 파일을 사용 하는 방법에 대 한 자세한 내용은 다음 조리�
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Hello, iOS 멀티스크린](~/ios/get-started/hello-ios-multiscreen/index.md)
 - [Android Designer 개요](~/android/user-interface/android-designer/index.md)
-- [Partial 클래스 및 메서드](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
+- [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
 - [Xamarin Designer for iOS 살펴보기-2014 (비디오)](https://www.youtube.com/watch?v=W4H9uLjoEjM)
 - [IOS Designer를 사용 하 여 시작 화면 만들기 (비디오)](https://university.xamarin.com/lightninglectures/using-the-ios-designer-to-create-a-launch-screen)

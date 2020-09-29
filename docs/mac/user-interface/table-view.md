@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d768be516b67ed23bdb851d87286a856a7269de4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d8c5cc10b4bce507f7a1d7896a41730745b08cbd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935553"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431643"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.ios의 테이블 뷰
 
@@ -93,7 +93,7 @@ Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *�
 - **마지막으로 표시 되는 줄을 자릅니다** .-인 경우 `true` 데이터에서 잘린 셀은 해당 범위 내에 맞지 않을 수 있습니다.
 
 > [!IMPORTANT]
-> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 기반 테이블 뷰를 기반으로 테이블 뷰를 `NSView` 사용 해야 합니다 `NSCell` . `NSCell`는 레거시로 간주 되며 향후 지원 되지 않을 수 있습니다.
+> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 기반 테이블 뷰를 기반으로 테이블 뷰를 `NSView` 사용 해야 합니다 `NSCell` . `NSCell` 는 레거시로 간주 되며 향후 지원 되지 않을 수 있습니다.
 
 **인터페이스 계층 구조** 에서 테이블 열을 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
@@ -420,10 +420,10 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 테이블 뷰 ()에는 `NSTableView` 행 선택 작업을 위한 다음 메서드가 포함 되어 있습니다.
 
-- `DeselectRow(nint)`-테이블에서 지정 된 행을 선택 취소 합니다.
-- `SelectRow(nint,bool)`-지정 된 행을 선택 합니다. `false`두 번째 매개 변수에 대해를 전달 하 여 한 번에 하나의 행만 선택 합니다.
-- `SelectedRow`-테이블에서 선택한 현재 행을 반환 합니다.
-- `IsRowSelected(nint)`- `true` 지정 된 행이 선택 된 경우을 반환 합니다.
+- `DeselectRow(nint)` -테이블에서 지정 된 행을 선택 취소 합니다.
+- `SelectRow(nint,bool)` -지정 된 행을 선택 합니다. `false`두 번째 매개 변수에 대해를 전달 하 여 한 번에 하나의 행만 선택 합니다.
+- `SelectedRow` -테이블에서 선택한 현재 행을 반환 합니다.
+- `IsRowSelected(nint)` - `true` 지정 된 행이 선택 된 경우을 반환 합니다.
 
 <a name="Multiple_Row_Selection"></a>
 
@@ -448,15 +448,15 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 테이블 뷰 ()에는 `NSTableView` 행 선택 작업을 위한 다음 메서드가 포함 되어 있습니다.
 
-- `DeselectAll(NSObject)`-테이블의 모든 행을 선택 취소 합니다. `this`첫 번째 매개 변수를 사용 하 여를 선택 하는 개체에서 보냅니다. 
-- `DeselectRow(nint)`-테이블에서 지정 된 행을 선택 취소 합니다.
-- `SelectAll(NSobject)`-테이블의 모든 행을 선택 합니다. `this`첫 번째 매개 변수를 사용 하 여를 선택 하는 개체에서 보냅니다.
-- `SelectRow(nint,bool)`-지정 된 행을 선택 합니다. `false`두 번째 매개 변수를 전달 하 여 선택 영역을 지우고 단일 행만 선택 하 `true` 여 선택 영역을 확장 하 고이 행을 포함 합니다.
-- `SelectRows(NSIndexSet,bool)`-지정 된 행 집합을 선택 합니다. 두 번째 매개 변수를 전달 하 여 선택을 `false` 취소 하 고 이러한 행만 선택 하 여 선택 `true` 영역을 확장 하 고 이러한 행을 포함 합니다.
-- `SelectedRow`-테이블에서 선택한 현재 행을 반환 합니다.
-- `SelectedRows`- `NSIndexSet` 선택한 행의 인덱스를 포함 하는을 반환 합니다.
-- `SelectedRowCount`-선택한 행의 수를 반환 합니다.
-- `IsRowSelected(nint)`- `true` 지정 된 행이 선택 된 경우을 반환 합니다.
+- `DeselectAll(NSObject)` -테이블의 모든 행을 선택 취소 합니다. `this`첫 번째 매개 변수를 사용 하 여를 선택 하는 개체에서 보냅니다. 
+- `DeselectRow(nint)` -테이블에서 지정 된 행을 선택 취소 합니다.
+- `SelectAll(NSobject)` -테이블의 모든 행을 선택 합니다. `this`첫 번째 매개 변수를 사용 하 여를 선택 하는 개체에서 보냅니다.
+- `SelectRow(nint,bool)` -지정 된 행을 선택 합니다. `false`두 번째 매개 변수를 전달 하 여 선택 영역을 지우고 단일 행만 선택 하 `true` 여 선택 영역을 확장 하 고이 행을 포함 합니다.
+- `SelectRows(NSIndexSet,bool)` -지정 된 행 집합을 선택 합니다. 두 번째 매개 변수를 전달 하 여 선택을 `false` 취소 하 고 이러한 행만 선택 하 여 선택 `true` 영역을 확장 하 고 이러한 행을 포함 합니다.
+- `SelectedRow` -테이블에서 선택한 현재 행을 반환 합니다.
+- `SelectedRows` - `NSIndexSet` 선택한 행의 인덱스를 포함 하는을 반환 합니다.
+- `SelectedRowCount` -선택한 행의 수를 반환 합니다.
+- `IsRowSelected(nint)` - `true` 지정 된 행이 선택 된 경우을 반환 합니다.
 
 <a name="Type_to_Select_Row"></a>
 
@@ -579,7 +579,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 ## <a name="using-images-in-table-views"></a>테이블 뷰에서 이미지 사용
 
-에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들어:
+에 있는 셀의 일부로 이미지를 포함 하려면 `NSTableView` 테이블 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 `NSTableViewDelegate's` `GetViewForItem` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -923,8 +923,8 @@ KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacTables (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
-- [MacImages(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacTables (샘플)](/samples/xamarin/mac-samples/mactables)
+- [MacImages(샘플)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)
 - [원본 목록](~/mac/user-interface/source-list.md)

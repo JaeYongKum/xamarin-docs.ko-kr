@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d50f104b8b6e3e82fb7e9d6dbea45757742a5739
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6e76821033276ed3bb756cecd10e801fa615fb1e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937035"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431832"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.ios의 3D 터치 소개
 
@@ -102,7 +102,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
 
 ### <a name="handling-peek-and-pop"></a>피킹 (Peeking) 및 Pop 처리
 
-3D 터치를 처리할 수 있는 iOS 장치에서는 클래스의 인스턴스를 사용 `UIViewControllerPreviewingDelegate` 하 여 **Peek** 및 **Pop** 항목 세부 정보의 표시를 처리할 수 있습니다. 예를 들어 라는 테이블 뷰 컨트롤러를 사용 하는 경우 `MasterViewController` 다음 코드를 사용 하 여 **Peek** 및 **Pop**를 지원할 수 있습니다.
+3D 터치를 처리할 수 있는 iOS 장치에서는 클래스의 인스턴스를 사용  `UIViewControllerPreviewingDelegate` 하 여 **Peek** 및 **Pop** 항목 세부 정보의 표시를 처리할 수 있습니다. 예를 들어 라는 테이블 뷰 컨트롤러를 사용 하는 경우 `MasterViewController` 다음 코드를 사용 하 여 **Peek** 및 **Pop**를 지원할 수 있습니다.
 
 ```csharp
 using System;
@@ -195,7 +195,7 @@ public override void ViewDidLoad ()
 
 여기서는 `RegisterForPreviewingWithDelegate` 위에서 만든의 인스턴스를 사용 하 여 메서드를 호출 합니다 `PreviewingDelegate` . 3D 터치를 지 원하는 iOS 장치에서 사용자는 항목을 사용 하 여 미리 볼 수 있습니다. 좀 더 어렵게 누르면 항목이 표준 표시 보기로 팝업 됩니다.
 
-자세한 내용은 [iOS 9 ApplicationShortcuts 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) 및 Apple의 [viewcontrollerpreviews: Uiviewcontroller 미리 보기 api](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) 샘플 앱, [UIPreviewAction 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [UIPreviewActionGroup 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) 및 [UIPreviewActionItem 프로토콜 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/)를 참조 하세요.
+자세한 내용은 [iOS 9 ApplicationShortcuts 샘플](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) 및 Apple의 [viewcontrollerpreviews: Uiviewcontroller 미리 보기 api](https://developer.apple.com/library/prerelease/ios/samplecode/ViewControllerPreviews/Introduction/Intro.html) 샘플 앱, [UIPreviewAction 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewAction_Class/), [UIPreviewActionGroup 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionGroup_Class/) 및 [UIPreviewActionItem 프로토콜 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPreviewActionItem_Protocol/)를 참조 하세요.
 
 <a name="Quick-Actions"></a>
 
@@ -239,7 +239,7 @@ public override void ViewDidLoad ()
 
 다음 키를 사용 하 여 두 개의 정적 빠른 작업 항목을 정의 합니다.
 
-- `UIApplicationShortcutItemIconType`-다음과 같은 값 중 하나로 빠른 작업 항목에 표시 되는 아이콘을 정의 합니다.
+- `UIApplicationShortcutItemIconType` -다음과 같은 값 중 하나로 빠른 작업 항목에 표시 되는 아이콘을 정의 합니다.
   - `UIApplicationShortcutIconTypeAdd`
   - `UIApplicationShortcutIconTypeAlarm`
   - `UIApplicationShortcutIconTypeAudio`
@@ -272,9 +272,9 @@ public override void ViewDidLoad ()
 
   ![UIApplicationShortcutIconType 이미지](3d-touch-images/uiapplicationshortcuticontype.png)
 
-- `UIApplicationShortcutItemSubtitle`-항목에 대 한 부제목을 정의 합니다.
-- `UIApplicationShortcutItemTitle`-항목의 제목을 정의 합니다.
-- `UIApplicationShortcutItemType`-앱에서 항목을 식별 하는 데 사용 하는 문자열 값입니다. 자세한 내용은 다음 단원을 참조하세요.
+- `UIApplicationShortcutItemSubtitle` -항목에 대 한 부제목을 정의 합니다.
+- `UIApplicationShortcutItemTitle` -항목의 제목을 정의 합니다.
+- `UIApplicationShortcutItemType` -앱에서 항목을 식별 하는 데 사용 하는 문자열 값입니다. 자세한 내용은 다음 단원을 참조하세요.
 
 > [!IMPORTANT]
 > 파일에 설정 된 빠른 작업 바로 가기 항목은 `Info.plist` 속성을 사용 하 여 액세스할 수 없습니다 `Application.ShortcutItems` . 이벤트 처리기에만 전달 됩니다 `HandleShortcutItem` .
@@ -420,7 +420,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 정적 및 동적 빠른 작업 항목을 혼합 하 여 만들 수 있습니다 (여기에서 수행 하는 것 처럼).
 
-자세한 내용은 [iOS 9 ViewControllerPreview 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) 을 참조 하 고 Apple의 [applicationshortcuts UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) 샘플 앱, [UIApplicationShortcutItem 클래스](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/)참조, [UIMutableApplicationShortcutItem 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) 및 [UIApplicationShortcutIcon 클래스](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/)참조 사용을 참조 하세요.
+자세한 내용은 [iOS 9 ViewControllerPreview 샘플](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview) 을 참조 하 고 Apple의 [applicationshortcuts UIApplicationShortcutItem](https://developer.apple.com/library/prerelease/ios/samplecode/ApplicationShortcuts/) 샘플 앱, [UIApplicationShortcutItem 클래스](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutItem_class/)참조, [UIMutableApplicationShortcutItem 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIMutableApplicationShortcutItem_class/) 및 [UIApplicationShortcutIcon 클래스](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationShortcutIcon_Class/)참조 사용을 참조 하세요.
 
 <a name="Testing-3D-Touch-in-the-Simulator"></a>
 
@@ -440,8 +440,8 @@ Xcode 및 트랙 패드를 사용 하 Force Touch 여 호환 가능한 Mac에서
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 ViewControllerPreview 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
-- [iOS 9 ApplicationShortcuts 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-applicationshortcuts)
+- [iOS 9 ViewControllerPreview 샘플](/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
+- [iOS 9 ApplicationShortcuts 샘플](/samples/xamarin/ios-samples/ios9-applicationshortcuts)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [3D 터치를 위해 iPhone 앱 준비](https://developer.apple.com/ios/3d-touch/)

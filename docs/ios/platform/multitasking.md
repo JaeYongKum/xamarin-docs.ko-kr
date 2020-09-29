@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b86f3a159a144f02ea13663bfddb41ed0100f740
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e32042c4b7e7d67e219611014d3a06ad9ed17b9d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931406"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432456"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.ios의 iPad 용 멀티태스킹
 
@@ -100,7 +100,7 @@ iOS 9는 _슬라이드 반복_, _분할 보기_ (ipad Air 2, iPad 미니 4 및 i
 
 앱이 사용자의 요청에 PIP 비디오를 표시 하려면 _Avkit_ 또는 _AV 기반 api_를 사용 해야 합니다. Media Player 프레임 워크는 iOS 9에서 사용 PIP를 지원 하지 않습니다.
 
-그림의 그림은 iPad Pro, iPad Air, iPad Air 2, iPad 미니 2, iPad 미니 3 또는 iPad 미니 4 에서만 사용할 수 있습니다. 자세한 내용은 [그림 빠른 시작 설명서의 그림](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) [샘플 앱](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) 및 Apple의 그림을 참조 하세요.
+그림의 그림은 iPad Pro, iPad Air, iPad Air 2, iPad 미니 2, iPad 미니 3 또는 iPad 미니 4 에서만 사용할 수 있습니다. 자세한 내용은 [그림 빠른 시작 설명서의 그림](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) [샘플 앱](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) 및 Apple의 그림을 참조 하세요.
 
 <a name="Supporting-Multitasking-in-your-App"></a>
 
@@ -124,13 +124,13 @@ IPad에서 전체 화면 앱에는 일반 가로 및 세로 크기 클래스가 
 
 슬라이드 오버 및 분할 보기를 지 원하는 Ipad에서 다음과 같은 조합을 사용할 수 있습니다.
 
-| **방향인** | **기본 앱** | **보조 앱** |
+| **방향** | **기본 앱** | **보조 앱** |
 |--- |--- |--- |
 | **세로** |화면 75%<br />수평 압축<br />일반 세로|화면 25%<br />수평 압축<br />일반 세로|
 | **가로** |화면 75%<br />일반 가로<br />일반 세로|화면 25%<br />수평 압축<br />일반 세로|
 | **가로** |화면 50%<br />수평 압축<br />일반 세로|화면 50%<br />수평 압축<br />일반 세로|
 
-예제 [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) 앱에서 가로 모드의 iPad에서 전체 화면을 실행 하는 경우 목록 및 세부 정보 보기를 동시에 표시 합니다.
+예제 [MuliTask](/samples/xamarin/ios-samples/ios9-multitask) 앱에서 가로 모드의 iPad에서 전체 화면을 실행 하는 경우 목록 및 세부 정보 보기를 동시에 표시 합니다.
 
 [![목록 및 세부 정보 뷰가 동시에 표시 됩니다.](multitasking-images/sizeclasses03.png)](multitasking-images/sizeclasses03.png#lightbox)
 
@@ -196,7 +196,7 @@ public void NewEntry() {
 
 [![바로 가기 키 팝업](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
-예제 구현은 샘플 [멀티태스킹을 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) 을 참조 하세요.
+예제 구현은 샘플 [멀티태스킹을 앱](/samples/xamarin/ios-samples/ios9-multitask) 을 참조 하세요.
 
 <a name="Resource-Management-Considerations"></a>
 
@@ -253,8 +253,8 @@ PIP 비디오 재생을 옵트아웃 하려면 앱에서 다음을 수행 합니
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 9 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [멀티태스킹을 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
+- [iOS 9 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [멀티태스킹을 (샘플)](/samples/xamarin/ios-samples/ios9-multitask)
 - [통합 Storyboard 소개](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 7e061f12e45e6d60c1772fc8699ffdb1f1b1d730
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725424"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430393"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Xamarin.ios의 앱 내 구매
 
@@ -32,7 +32,7 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 앱 내 구매를 지원 하려면 Xcode 7 이상에서 Xamarin.ios 5.0 이상 버전을 사용 해야 합니다.
 
-## <a name="contents"></a>목차
+## <a name="contents"></a>콘텐츠
 
 - [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
@@ -58,11 +58,11 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit/)
+- [InAppPurchaseSample](/samples/xamarin/ios-samples/storekit/)
 - [앱 구매 프로그래밍 가이드](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [iTunes Connect 개발자 가이드](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
 - [스토어 키트 프레임 워크 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
-- [앱 내 구매 제품 식별자 Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
+- [앱 내 구매 제품 식별자 Q&A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [앱에서 구매 기술 참고 사항](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [첫 번째 앱 스토어 제출](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 - [앱 스토어 제출 팁](https://developer.apple.com/appstore/resources/submission/tips.html)

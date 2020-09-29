@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 40640f903ad82c5f154dbb74307c0003d7271561
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2cb453996a43d1e70f4fb818c86f6215c213b988
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936606"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429743"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -22,7 +22,7 @@ _이 가이드에서는 UISwipeActionsConfiguration 또는 UITableViewRowAction�
 
 iOS에서는 테이블에 대 한 작업을 수행 하는 두 가지 방법인 및를 제공 `UISwipeActionsConfiguration` `UITableViewRowAction` 합니다.
 
-`UISwipeActionsConfiguration`는 iOS 11에서 도입 되었으며 사용자가 테이블 뷰의 행에 대해 _어느 방향으로_ swipes 때 발생 해야 하는 작업 집합을 정의 하는 데 사용 됩니다. 이 동작은 네이티브 메일 앱과 유사 합니다.
+`UISwipeActionsConfiguration` 는 iOS 11에서 도입 되었으며 사용자가 테이블 뷰의 행에 대해 _어느 방향으로_ swipes 때 발생 해야 하는 작업 집합을 정의 하는 데 사용 됩니다. 이 동작은 네이티브 메일 앱과 유사 합니다.
 
 `UITableViewRowAction`클래스는 사용자가 테이블 뷰의 행에서 가로로 swipes 때 발생 하는 동작을 정의 하는 데 사용 됩니다.
 예를 들어 테이블을 편집 하는 경우 행을 왼쪽으로 살짝 밀어 놓으면 **삭제** 단추가 기본적으로 표시 됩니다. 클래스의 여러 인스턴스를에 연결 하 여 `UITableViewRowAction` `UITableView` 각각 고유한 텍스트, 서식 지정 및 동작을 포함 하는 여러 사용자 지정 작업을 정의할 수 있습니다.
@@ -33,15 +33,15 @@ iOS에서는 테이블에 대 한 작업을 수행 하는 두 가지 방법인 �
 
 1. `GetLeadingSwipeActionsConfiguration`및/또는 메서드를 재정의 `GetTrailingSwipeActionsConfiguration` 합니다. 이러한 메서드는을 반환 `UISwipeActionsConfiguration` 합니다.
 2. `UISwipeActionsConfiguration`반환 될를 인스턴스화합니다. 이 클래스는 배열을 사용 `UIContextualAction` 합니다.
-3. `UIContextualAction`을 만듭니다.
+3. `UIContextualAction`를 만듭니다.
 
 이러한 내용은 다음 섹션에서 더 자세히 설명 합니다.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. SwipeActionsConfigurations 메서드 구현
 
-`UITableViewController`(및)에는 `UITableViewSource` `UITableViewDelegate` 및 라는 두 가지 메서드가 포함 되어 있습니다 .이 메서드 `GetLeadingSwipeActionsConfiguration` `GetTrailingSwipeActionsConfiguration` 는 테이블 뷰 행에 대해 살짝 밀기 동작 집합을 구현 하는 데 사용 됩니다. 선행 살짝 밀기 동작은 화면 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 진행 되는 언어의 화면 오른쪽에서 살짝 밀기를 나타냅니다.
+`UITableViewController` (및)에는 `UITableViewSource` `UITableViewDelegate` 및 라는 두 가지 메서드가 포함 되어 있습니다 .이 메서드 `GetLeadingSwipeActionsConfiguration` `GetTrailingSwipeActionsConfiguration` 는 테이블 뷰 행에 대해 살짝 밀기 동작 집합을 구현 하는 데 사용 됩니다. 선행 살짝 밀기 동작은 화면 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 진행 되는 언어의 화면 오른쪽에서 살짝 밀기를 나타냅니다.
 
-다음 예제에서는 ( [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) 샘플에서) 선행 살짝 밀기 구성을 구현 하는 방법을 보여 줍니다. 두 작업은 [아래](#create-uicontextualaction)에서 설명 하는 상황별 동작에서 만들어집니다. 이러한 작업은 [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) 반환 값으로 사용 되는 새로 초기화 된에 전달 됩니다.
+다음 예제에서는 ( [TableSwipeActions](/samples/xamarin/ios-samples/tableswipeactions) 샘플에서) 선행 살짝 밀기 구성을 구현 하는 방법을 보여 줍니다. 두 작업은 [아래](#create-uicontextualaction)에서 설명 하는 상황별 동작에서 만들어집니다. 이러한 작업은 [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations) 반환 값으로 사용 되는 새로 초기화 된에 전달 됩니다.
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -61,7 +61,7 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
 <a name="create-uiswipeactionsconfigurations"></a>
 
-### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. 다음을 인스턴스화합니다.`UISwipeActionsConfiguration`
+### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. 다음을 인스턴스화합니다. `UISwipeActionsConfiguration`
 
 `UISwipeActionsConfiguration`다음 코드 조각과 같이 메서드를 사용 하 여 `FromActions` 의 새 배열을 추가 하 여를 인스턴스화합니다 `UIContextualAction` .
 
@@ -117,7 +117,7 @@ public UIContextualAction ContextualFlagAction(int row)
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableView` 클래스의 인스턴스를 만들고 메서드를 재정의 해야 합니다 `UITableViewDelegate` `EditActionsForRow` . 예를 들어:
+에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableView` 클래스의 인스턴스를 만들고 메서드를 재정의 해야 합니다 `UITableViewDelegate` `EditActionsForRow` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 메서드는 `UITableViewRowAction` 사용자가 테이블의 행에 가로 방향으로 swipes **Hi** 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 새 인스턴스가 `TableDelegate` 만들어져에 연결 됩니다 `UITableView` . 예를 들어:
+정적 `UITableViewRowAction.Create` 메서드는 `UITableViewRowAction` 사용자가 테이블의 행에 가로 방향으로 swipes **Hi** 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 새 인스턴스가 `TableDelegate` 만들어져에 연결 됩니다 `UITableView` . 다음은 그 예입니다.
 
 ```csharp
 TableDelegate tableDelegate;
@@ -181,5 +181,5 @@ table.Delegate = tableDelegate;
 
 ## <a name="related-links"></a>관련 링크
 
-- [TableSwipeActions (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions)
-- [WorkingWithTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [TableSwipeActions (샘플)](/samples/xamarin/ios-samples/tableswipeactions)
+- [WorkingWithTables (샘플)](/samples/xamarin/ios-samples/workingwithtables)

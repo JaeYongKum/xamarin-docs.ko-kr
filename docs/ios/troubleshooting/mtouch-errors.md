@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 98d2ef76974e63df7c1b0596d59c638590339fa3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4064b5561569124ab15f77b9614eea5b91eadad4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570870"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429975"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -28,7 +28,7 @@ ms.locfileid: "84570870"
 
 <a name="MT0000"></a>
 
-### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: 예기치 않은 오류입니다 .에서 버그 보고서를 작성해 주세요.https://github.com/xamarin/xamarin-macios/issues/new
+### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: 예기치 않은 오류입니다 .에서 버그 보고서를 작성해 주세요. https://github.com/xamarin/xamarin-macios/issues/new
 
 예기치 않은 오류 조건이 발생 했습니다. 다음과 같이 최대한 많은 정보를 사용 하 여 [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) 에서 새 문제를 해결 하세요.
 
@@ -48,7 +48,7 @@ ms.locfileid: "84570870"
 
 ### <a name="mt0002-could-not-parse-the-environment-variable-"></a>MT0002: 환경 변수 *을 (를) 구문 분석할 수 없습니다.
 
-이 오류는 잘못 된 환경 키 = 값 변수 쌍을 설정 하려고 할 때 발생 합니다. 올바른 형식은 다음과 같습니다.`mtouch --setenv=VARIABLE=VALUE`
+이 오류는 잘못 된 환경 키 = 값 변수 쌍을 설정 하려고 할 때 발생 합니다. 올바른 형식은 다음과 같습니다. `mtouch --setenv=VARIABLE=VALUE`
 
 <a name="MT0003"></a>
 
@@ -204,7 +204,7 @@ Mtouch는 오류 메시지에 언급 된 명령줄 인수를 인식 하지 못�
 
 <a name="MT0026"></a>
 
-### <a name="mt0026-could-not-parse-the-command-line-argument--"></a>MT0026: 명령줄 인수 ' '을 (를) 구문 분석할 수 없습니다 \* .\*
+### <a name="mt0026-could-not-parse-the-command-line-argument--"></a>MT0026: 명령줄 인수 ' '을 (를) 구문 분석할 수 없습니다 \* . \*
 
 <a name="MT0027"></a>
 
@@ -238,11 +238,11 @@ Xcode symbolicates (메모리 주소를 함수 이름 및 파일/줄 번호)로 
 
 <a name="MT0033"></a>
 
-### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: Xamarin.ios 프로젝트는 monotouch.dialog 또는 Xamarin.ios .dll을 참조 해야 합니다.
+### <a name="mt0033-a-xamarinios-project-must-reference-either-monotouchdll-or-xamariniosdll"></a>MT0033: Xamarin.ios 프로젝트는 monotouch.dll 또는 Xamarin.iOS.dll를 참조 해야 합니다.
 
 <a name="MT0034"></a>
 
-### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: 동일한 Xamarin.ios 프로젝트에 ' monotouch.dialog '과 ' Xamarin.ios '를 모두 포함할 수 없습니다. ' '은 (는) 명시적으로 \* 참조 되지만 ' \* '은 ' * '에서 참조 됩니다.
+### <a name="mt0034-cannot-include-both-monotouchdll-and-xamariniosdll-in-the-same-xamarinios-project----is-referenced-explicitly-while--is-referenced-by-"></a>MT0034: 동일한 Xamarin.ios 프로젝트에 ' monotouch.dll ' 및 ' Xamarin.iOS.dll '를 모두 포함할 수 없습니다. ' '은 (는) 명시적으로 참조 되지만 ' \* \* '은 ' * '에서 참조 됩니다.
 
 <!-- MT0035 unused -->
 
@@ -252,15 +252,15 @@ Xcode symbolicates (메모리 주소를 함수 이름 및 파일/줄 번호)로 
 
 <a name="MT0037"></a>
 
-### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: monotouch.dialog는 64 비트와 호환 되지 않습니다. Xamarin.ios를 참조 하거나 64 비트 아키텍처 (ARM64 및/또는 x86_64)에 대해 빌드하지 않습니다.
+### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: monotouch.dll는 64 비트와 호환 되지 않습니다. Xamarin.iOS.dll 참조 하거나 64 비트 아키텍처에 대해 빌드하지 않습니다 (ARM64 및/또는 x86_64).
 
 <a name="MT0038"></a>
 
-### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: Xamarin.ios를 참조할 때 이전 등록 기관 (--등록자: oldstatic | oldstatic)은 지원 되지 않습니다.
+### <a name="mt0038-the-old-registrars---registraroldstaticolddynamic-are-not-supported-when-referencing-xamariniosdll"></a>MT0038: Xamarin.iOS.dll 참조 하는 경우 이전 등록 기관 (--등록자: oldstatic | oldstatic)은 지원 되지 않습니다.
 
 <a name="MT0039"></a>
 
-### <a name="mt0039-applications-targeting-armv6-cannot-reference-xamariniosdll"></a>MT0039: ARMv6를 대상으로 하는 응용 프로그램은 Xamarin.ios를 참조할 수 없습니다.
+### <a name="mt0039-applications-targeting-armv6-cannot-reference-xamariniosdll"></a>MT0039: ARMv6를 대상으로 하는 응용 프로그램은 Xamarin.iOS.dll를 참조할 수 없습니다.
 
 <a name="MT0040"></a>
 
@@ -268,15 +268,15 @@ Xcode symbolicates (메모리 주소를 함수 이름 및 파일/줄 번호)로 
 
 <a name="MT0041"></a>
 
-### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: ' monotouch.dialog ' 및 ' Xamarin.ios '를 모두 참조할 수 없습니다.
+### <a name="mt0041-cannot-reference-both-monotouchdll-and-xamariniosdll"></a>MT0041: ' monotouch.dll ' 및 ' Xamarin.iOS.dll '를 모두 참조할 수 없습니다.
 
 <a name="MT0042"></a>
 
-### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: monotouch.dialog 또는 Xamarin.ios .dll에 대 한 참조를 찾을 수 없습니다. Monotouch.dialog에 대 한 참조가 추가 됩니다.
+### <a name="mt0042-no-reference-to-either-monotouchdll-or-xamariniosdll-was-found-a-reference-to-monotouchdll-will-be-added"></a>MT0042: monotouch.dll 또는 Xamarin.iOS.dll에 대 한 참조를 찾을 수 없습니다. monotouch.dll에 대 한 참조가 추가 됩니다.
 
 <a name="MT0043"></a>
 
-### <a name="mt0043-the-boehm-garbage-collector-is-currently-not-supported-when-referencing-xamariniosdll-the-sgen-garbage-collector-has-been-selected-instead"></a>MT0043: Boehm 가비지 수집기는 현재 ' Xamarin.ios '를 참조할 때 지원 되지 않습니다. 대신 SGen 가비지 수집기를 선택 했습니다.
+### <a name="mt0043-the-boehm-garbage-collector-is-currently-not-supported-when-referencing-xamariniosdll-the-sgen-garbage-collector-has-been-selected-instead"></a>MT0043: Boehm 가비지 수집기는 현재 ' Xamarin.iOS.dll '를 참조할 때 지원 되지 않습니다. 대신 SGen 가비지 수집기를 선택 했습니다.
 
 SGen 가비지 수집기만 통합 프로젝트에서 지원 됩니다. Boehm를 가비지 수집기로 지정 하는 추가 mtouch 플래그가 없는지 확인 합니다.
 
@@ -300,7 +300,7 @@ SGen 가비지 수집기만 통합 프로젝트에서 지원 됩니다. Boehm를
 
 <a name="MT0049"></a>
 
-### <a name="mt0049-framework-is-supported-only-if-deployment-target-is-80-or-later--features-might-not-work-correctly"></a>MT0049: \* . framework는 배포 대상이 8.0 이상인 경우에만 지원 됩니다. \*기능이 제대로 작동 하지 않을 수 있습니다.
+### <a name="mt0049-framework-is-supported-only-if-deployment-target-is-80-or-later--features-might-not-work-correctly"></a>MT0049: \* . framework는 배포 대상이 8.0 이상인 경우에만 지원 됩니다. \* 기능이 제대로 작동 하지 않을 수 있습니다.
 
 지정 된 프레임 워크는 배포 대상에서 참조 하는 iOS 버전에서 지원 되지 않습니다. 배포 대상을 최신 iOS 버전으로 업데이트 하거나 앱에서 지정 된 프레임 워크의 사용을 제거 합니다.
 
@@ -322,7 +322,7 @@ Mtouch에 대 한 작업이 지정 되지 않았습니다.
 
 <a name="MT0054"></a>
 
-### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: ' ' 경로를 정규화 할 수 없습니다 \* .\*
+### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: ' ' 경로를 정규화 할 수 없습니다 \* . \*
 
 이것은 내부 오류입니다. 이 오류가 표시 되 면 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -420,7 +420,7 @@ Xamarin.ios는 배포 대상이 8.0 이상인 경우에만 포함 된 프레임 
 
 <a name="MT0071"></a>
 
-### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. http://bugzilla.xamarin.com테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
+### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. http://bugzilla.xamarin.com 테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
 
 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 테스트 사례를 사용 하 여 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에서 새 문제를 해결 하세요.
 
@@ -448,7 +448,7 @@ Xamarin.ios는이 특정 버전의 Xamarin.ios가 빌드된 버전 보다 높은
 
 <a name="MT0075"></a>
 
-### <a name="mt0075-invalid-architecture--for--projects-valid-architectures-are-"></a>MT0075: \* 프로젝트에 대 한 ' ' 아키텍처가 잘못 되었습니다 \* . 유효한 아키텍처는 다음과 같습니다.\*
+### <a name="mt0075-invalid-architecture--for--projects-valid-architectures-are-"></a>MT0075: \* 프로젝트에 대 한 ' ' 아키텍처가 잘못 되었습니다 \* . 유효한 아키텍처는 다음과 같습니다. \*
 
 잘못 된 아키텍처가 지정 되었습니다. 아키텍처가 올바른지 확인 하세요.
 
@@ -550,7 +550,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 <a name="MT0096"></a>
 
-### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: Xamarin.ios에 대 한 참조를 찾을 수 없습니다.
+### <a name="mt0096-no-reference-to-xamariniosdll-was-found"></a>MT0096: Xamarin.iOS.dll에 대 한 참조를 찾을 수 없습니다.
 
 <!-- MT0097: used by mmp -->
 <!-- MT0098: used by mmp -->
@@ -583,7 +583,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리에 충돌 하는 빌드 대상이 있습니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```
   --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
@@ -597,7 +597,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리는 모두 단일 정적 개체로 컴파일됩니다. 이는 허용 되지 않습니다. 모든 어셈블리는 다른 정적 개체로 컴파일해야 합니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```
 --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
@@ -785,7 +785,7 @@ iOS 11에는 32 비트 응용 프로그램에 대 한 지원이 포함 되어 �
 
 ### <a name="mt0123-the-executable-assembly--does-not-reference-"></a>MT0123: 실행 가능한 어셈블리가 \* 참조 하지 않습니다 \* .
 
-실행 어셈블리의 플랫폼 어셈블리 (Xamarin.ios/TVOS/WatchOS)에 대 한 참조를 찾을 수 없습니다.
+실행 어셈블리의 플랫폼 어셈블리 (Xamarin.iOS.dll/Xamarin.TVOS.dll/Xamarin.WatchOS.dll)에 대 한 참조를 찾을 수 없습니다.
 
 이는 일반적으로 실행 프로젝트에 플랫폼 어셈블리의 모든 항목을 사용 하는 코드가 없는 경우에 발생 합니다. 예를 들어, 빈 Main 메서드 (및 다른 코드 없음)는 다음 오류를 표시 합니다.
 
@@ -840,7 +840,7 @@ class Program {
 
 <a name="MT0128"></a>
 
-### <a name="mt0128-could-not-touch-the-file--"></a>MT0128: ' ' 파일을 터치 하지 못했습니다 \* .\*
+### <a name="mt0128-could-not-touch-the-file--"></a>MT0128: ' ' 파일을 터치 하지 못했습니다 \* . \*
 
 파일을 터치 하는 동안 오류가 발생 했습니다 (부분 빌드가 제대로 수행 되었는지 확인 하기 위해 수행 됨).
 
@@ -854,7 +854,7 @@ class Program {
 
 이 오류를 해결 하는 권장 방법은 Xcode를 업그레이드 하 여 필요한 SDK를 가져오는 것입니다. 여러 버전의 Xcode가 설치 되어 있거나 기본이 아닌 위치에서 Xcode를 사용 하려는 경우에는 IDE의 기본 설정에서 올바른 Xcode 위치를 설정 해야 합니다.
 
-또는 관리 되는 [링커가](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
+또는 관리 되는 [링커가](../deploy-test/linker.md) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
 
 Straw 솔루션으로, 빌드 프로세스 중에 이러한 새 Sdk를 제공 하지 않아도 되는 이전 버전의 Xamarin.ios를 사용 합니다.
 
@@ -925,7 +925,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1010"></a>
 
-### <a name="mt1010-could-not-load-the-assembly--"></a>MT1010: ' ' 어셈블리를 로드할 수 없습니다 \* .\*
+### <a name="mt1010-could-not-load-the-assembly--"></a>MT1010: ' ' 어셈블리를 로드할 수 없습니다 \* . \*
 
 <a name="MT1011"></a>
 
@@ -933,7 +933,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1012"></a>
 
-### <a name="mt1012-failed-to-list-the-apps-on-the-device--"></a>MT1012: ' ' 장치에서 앱을 나열 하지 못했습니다 \* .\*
+### <a name="mt1012-failed-to-list-the-apps-on-the-device--"></a>MT1012: ' ' 장치에서 앱을 나열 하지 못했습니다 \* . \*
 
 <a name="MT1013"></a>
 
@@ -947,11 +947,11 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1015"></a>
 
-### <a name="mt1015-failed-to-create-the-executable--"></a>MT1015: ' ' 실행 파일을 만들지 못했습니다 \* .\*
+### <a name="mt1015-failed-to-create-the-executable--"></a>MT1015: ' ' 실행 파일을 만들지 못했습니다 \* . \*
 
 <a name="MT1015"></a>
 
-### <a name="mt1015-failed-to-create-the-executable--"></a>MT1015: ' ' 실행 파일을 만들지 못했습니다 \* .\*
+### <a name="mt1015-failed-to-create-the-executable--"></a>MT1015: ' ' 실행 파일을 만들지 못했습니다 \* . \*
 
 <a name="MT1016"></a>
 
@@ -990,19 +990,19 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1021"></a>
 
-### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: ' ' 파일 \* 을 ' '에 복사할 수 없습니다 \* .{2}
+### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: ' ' 파일 \* 을 ' '에 복사할 수 없습니다 \* . {2}
 
 파일을 복사할 수 없습니다. 복사 작업의 오류 메시지에 오류에 대 한 자세한 정보가 있습니다.
 
 <a name="MT1022"></a>
 
-### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: ' ' 디렉터리를 \* ' '에 복사할 수 없습니다 \* .{2}
+### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: ' ' 디렉터리를 \* ' '에 복사할 수 없습니다 \* . {2}
 
 디렉터리를 복사할 수 없습니다. 복사 작업의 오류 메시지에 오류에 대 한 자세한 정보가 있습니다.
 
 <a name="MT1023"></a>
 
-### <a name="mt1023-could-not-communicate-with-the-device-to-find-the-application---"></a>MT1023: ' ' 응용 프로그램을 찾기 위해 장치와 통신할 수 없습니다 \* .\*
+### <a name="mt1023-could-not-communicate-with-the-device-to-find-the-application---"></a>MT1023: ' ' 응용 프로그램을 찾기 위해 장치와 통신할 수 없습니다 \* . \*
 
 장치에서 응용 프로그램을 조회 하는 동안 오류가 발생 했습니다.
 
@@ -1345,7 +1345,7 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 <a name="MT1402"></a>
 
-### <a name="mt1402-could-not-read-file-info-for--afcfileinfoopen-returned-"></a>MT1402: \* afcfileinfoopen이 반환 된 파일 정보를 읽을 수 없습니다.\*
+### <a name="mt1402-could-not-read-file-info-for--afcfileinfoopen-returned-"></a>MT1402: \* afcfileinfoopen이 반환 된 파일 정보를 읽을 수 없습니다. \*
 
 장치에서 충돌 보고서에 액세스 하는 동안 오류가 발생 했습니다.
 
@@ -1359,7 +1359,7 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 <a name="MT1403"></a>
 
-### <a name="mt1403-could-not-read-crash-report-afcdirectoryopen--returned-"></a>MT1403: 충돌 보고서를 읽을 수 없습니다. AFCDirectoryOpen ( \* )이 반환 되었습니다.\*
+### <a name="mt1403-could-not-read-crash-report-afcdirectoryopen--returned-"></a>MT1403: 충돌 보고서를 읽을 수 없습니다. AFCDirectoryOpen ( \* )이 반환 되었습니다. \*
 
 장치에서 충돌 보고서에 액세스 하는 동안 오류가 발생 했습니다.
 
@@ -1373,7 +1373,7 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 <a name="MT1404"></a>
 
-### <a name="mt1404-could-not-read-crash-report-afcfilerefopen--returned-"></a>MT1404: 충돌 보고서를 읽을 수 없습니다. AFCFileRefOpen ( \* ) 반환 됨:\*
+### <a name="mt1404-could-not-read-crash-report-afcfilerefopen--returned-"></a>MT1404: 충돌 보고서를 읽을 수 없습니다. AFCFileRefOpen ( \* ) 반환 됨: \*
 
 장치에서 충돌 보고서에 액세스 하는 동안 오류가 발생 했습니다.
 
@@ -1387,7 +1387,7 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 <a name="MT1405"></a>
 
-### <a name="mt1405-could-not-read-crash-report-afcfilerefread--returned-"></a>MT1405: 충돌 보고서를 읽을 수 없습니다. AFCFileRefRead ( \* ) 반환 됨:\*
+### <a name="mt1405-could-not-read-crash-report-afcfilerefread--returned-"></a>MT1405: 충돌 보고서를 읽을 수 없습니다. AFCFileRefRead ( \* ) 반환 됨: \*
 
 장치에서 충돌 보고서에 액세스 하는 동안 오류가 발생 했습니다.
 
@@ -1401,7 +1401,7 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 <a name="MT1406"></a>
 
-### <a name="mt1406-could-not-list-crash-reports-afcdirectoryopen--returned-"></a>MT1406: 충돌 보고서를 나열할 수 없습니다. AFCDirectoryOpen ( \* )이 반환 되었습니다.\*
+### <a name="mt1406-could-not-list-crash-reports-afcdirectoryopen--returned-"></a>MT1406: 충돌 보고서를 나열할 수 없습니다. AFCDirectoryOpen ( \* )이 반환 되었습니다. \*
 
 장치에서 충돌 보고서에 액세스 하는 동안 오류가 발생 했습니다.
 
@@ -1532,7 +1532,7 @@ Parameter name: instruction
 
 <a name="MT2006"></a>
 
-### <a name="mt2006-can-not-load-mscorlibdll-from--please-reinstall-xamarinios"></a>MT2006: *에서 mscorlib.dll을 로드할 수 없습니다. Xamarin.ios를 다시 설치 하세요.
+### <a name="mt2006-can-not-load-mscorlibdll-from--please-reinstall-xamarinios"></a>MT2006: *에서 mscorlib.dll를 로드할 수 없습니다. Xamarin.ios를 다시 설치 하세요.
 
 이는 일반적으로 Xamarin.ios 설치에 문제가 있음을 나타냅니다. Xamarin.ios를 다시 설치 해 보세요.
 
@@ -1599,9 +1599,9 @@ Parameter name: instruction
 
 마지막 숫자는 `x` 다음과 같습니다.
 
-- `0`어셈블리 이름
-- `1`형식 이름
-- `3`메서드 이름
+- `0` 어셈블리 이름
+- `1` 형식 이름
+- `3` 메서드 이름
 
 <a name="MT2030"></a>
 
@@ -1609,9 +1609,9 @@ Parameter name: instruction
 
 사용자 리소스를 제거 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( [github](https://github.com/xamarin/xamarin-macios/issues/new) 즉, `-v -v -v -v` **추가 mtouch 인수**)와 함께 github에서 새 문제에 어셈블리를 제공 해야 합니다.
 
-사용자 리소스는 빌드 시 응용 프로그램 번들을 만들기 위해 추출 해야 하는 어셈블리 (리소스) 내에 포함 된 파일입니다. 여기에는 다음이 포함됩니다.
+사용자 리소스는 빌드 시 응용 프로그램 번들을 만들기 위해 추출 해야 하는 어셈블리 (리소스) 내에 포함 된 파일입니다. 다음 내용이 포함됩니다.
 
-- `__monotouch_content_*`및 `__monotouch_pages_*` 리소스
+- `__monotouch_content_*` 및 `__monotouch_pages_*` 리소스
 - 바인딩 어셈블리 내에 포함 된 네이티브 라이브러리
 
 <a name="MT2040"></a>
@@ -1727,15 +1727,15 @@ LLVM를 사용 하는 경우 디버깅이 지원 되지 않습니다. 앱을 디
 
 ### <a name="mt3005-the-dependency--of-the-assembly--was-not-found-please-review-the-projects-references"></a>MT3005: ' ' \* 어셈블리의 ' ' 종속성을 \* 찾을 수 없습니다. 프로젝트의 참조를 검토 하십시오.
 
-이는 일반적으로 어셈블리가 다른 버전의 플랫폼 어셈블리 (일반적으로 .NET 4 버전의 mscorlib.dll)를 참조 하는 경우에 발생 합니다.
+이는 일반적으로 어셈블리가 다른 버전의 플랫폼 어셈블리 (일반적으로 mscorlib.dll의 .NET 4 버전)를 참조 하는 경우에 발생 합니다.
 
-이는 지원 되지 않으며 제대로 빌드 또는 실행 되지 않을 수 있습니다. 어셈블리는 Xamarin.ios 버전에 없는 mscorlib.dll의 .NET 4 버전의 API를 사용할 수 있습니다.
+이는 지원 되지 않으며 제대로 빌드 또는 실행 되지 않을 수 있습니다. 어셈블리는 Xamarin.ios 버전이 없는 mscorlib.dll .NET 4 버전의 API를 사용할 수 있습니다.
 
 <a name="MT3006"></a>
 
 ### <a name="mt3006-could-not-compute-a-complete-dependency-map-for-the-project-this-will-result-in-slower-build-times-because-xamarinios-cant-properly-detect-what-needs-to-be-rebuilt-and-what-does-not-need-to-be-rebuilt-please-review-previous-warnings-for-more-details"></a>MT3006: 프로젝트에 대 한 완전 한 종속성 맵을 계산할 수 없습니다. 이렇게 하면 Xamarin.ios가 다시 작성 해야 하는 항목 (및 다시 빌드할 필요가 없는 항목)을 제대로 검색할 수 없기 때문에 빌드 시간이 느려집니다. 자세한 내용은 이전 경고를 검토 하세요.
 
- 제대로 빌드 또는 실행 (어셈블리는 Xamarin.ios 버전이 없는 mscorlib.dll의 .NET 4 버전의 API를 사용할 수 있음)
+ 제대로 빌드 또는 실행 (어셈블리는 Xamarin.ios 버전이 없는 mscorlib.dll .NET 4 버전의 API를 사용할 수 있습니다.
 
 <a name="MT3007"></a>
 
@@ -1769,7 +1769,7 @@ Bitcode 지원을 사용 하지 않도록 설정 하거나 LLVM를 사용 하도
 
 <a name="MT4002"></a>
 
-### <a name="mt4002-failed-to-compile-the-generated-code-for-pinvoke-methods-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4002: P/Invoke 메서드에 대해 생성 된 코드를 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4002-failed-to-compile-the-generated-code-for-pinvoke-methods-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4002: P/Invoke 메서드에 대해 생성 된 코드를 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 P/Invoke 메서드에 대해 생성 된 코드를 컴파일하지 못했습니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -1839,7 +1839,7 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 
 <a name="MT4109"></a>
 
-### <a name="mt4109-failed-to-compile-the-generated-registrar-code-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4109: 생성 된 등록자 코드를 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4109-failed-to-compile-the-generated-registrar-code-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4109: 생성 된 등록자 코드를 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 등록자에 대해 생성 된 코드를 컴파일하지 못했습니다. 빌드 로그에는 코드가 컴파일되지 않는 이유를 설명 하는 네이티브 컴파일러의 출력이 포함 됩니다.
 
@@ -1863,11 +1863,11 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 
 <a name="MT4114"></a>
 
-### <a name="mt4114-unexpected-error-in-the-registrar-for-the-method----please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4114: '. ' 메서드의 등록자에서 예기치 않은 오류가 발생 했습니다 \* . \* 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4114-unexpected-error-in-the-registrar-for-the-method----please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4114: '. ' 메서드의 등록자에서 예기치 않은 오류가 발생 했습니다 \* . \* 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 <a name="MT4116"></a>
 
-### <a name="mt4116-could-not-register-the-assembly--"></a>MT4116: ' ' 어셈블리를 등록할 수 없습니다 \* .\*
+### <a name="mt4116-could-not-register-the-assembly--"></a>MT4116: ' ' 어셈블리를 등록할 수 없습니다 \* . \*
 
 <a name="MT4117"></a>
 
@@ -1883,7 +1883,7 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 
 <a name="MT4120"></a>
 
-### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: 등록자의 \* '. * ' 필드에 알 수 없는 필드 형식 ' '이 (가) 있습니다 \* . 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: 등록자의 \* '. * ' 필드에 알 수 없는 필드 형식 ' '이 (가) 있습니다 \* . 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 이 오류는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -1901,7 +1901,7 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 
 <a name="MT4124"></a>
 
-### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: \* ' '에 잘못 된이 (가) 있습니다 \* . 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: \* ' '에 잘못 된이 (가) 있습니다 \* . 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 이 오류는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -2109,7 +2109,7 @@ Xcode를 업그레이드 하세요.
 
 <a name="MT4163"></a>
 
-### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: 등록자 (*)에서 내부 오류가 발생 했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: 등록자 (*)에서 내부 오류가 발생 했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 이 오류는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -2191,11 +2191,11 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 <a name="MT5102"></a>
 
-### <a name="mt5102-failed-to-assemble-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5102: ' * ' 파일을 조합 하지 못했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt5102-failed-to-assemble-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5102: ' * ' 파일을 조합 하지 못했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 <a name="MT5103"></a>
 
-### <a name="mt5103-failed-to-compile-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5103: ' * ' 파일을 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt5103-failed-to-compile-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5103: ' * ' 파일을 컴파일하지 못했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 <a name="MT5104"></a>
 
@@ -2205,7 +2205,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 <a name="MT5106"></a>
 
-### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: 파일 ' * '을 (를) 컴파일할 수 없습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: 파일 ' * '을 (를) 컴파일할 수 없습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -2350,7 +2350,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: 네이티브 링크 실패, 정의 되지 않은 기호: *. 이 기호는 관리 되는 멤버 *를 참조 했습니다. 필요한 모든 프레임 워크가 참조 되었으며 네이티브 라이브러리가 연결 되어 있는지 확인 하세요.
 
-이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 예를 들면 다음과 같습니다.
+이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 다음은 그 예입니다.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -2363,7 +2363,7 @@ class MyImports {
 몇 가지 가능한 해결 방법이 있습니다.
 
 - 소스 코드에서 질문의 P/Invoke를 제거 합니다.
-- 모든 어셈블리에 대해 관리 되는 링커를 사용 하도록 설정 합니다 .이 작업은 프로젝트의 iOS 빌드 옵션에서 "링커 동작"을 "모든 어셈블리"로 설정 하 여 수행 합니다. 이렇게 하면 앱에서 사용 하지 않는 P/Invoke를 모두 효과적으로 제거 합니다 (이전 지점과는 달리 자동으로). 단점은이로 인해 시뮬레이터 빌드 속도가 다소 느려지고 앱이 중단 될 수 있다는 것입니다. [여기](~/ios/deploy-test/linker.md) 에는 링커에 대 한 자세한 정보를 찾을 수 있습니다.
+- 모든 어셈블리에 대해 관리 되는 링커를 사용 하도록 설정 합니다 .이 작업은 프로젝트의 iOS 빌드 옵션에서 "링커 동작"을 "모든 어셈블리"로 설정 하 여 수행 합니다. 이렇게 하면 앱에서 사용 하지 않는 P/Invoke를 모두 효과적으로 제거 합니다 (이전 지점과는 달리 자동으로). 단점은이로 인해 시뮬레이터 빌드 속도가 다소 느려지고 앱이 중단 될 수 있다는 것입니다.  [여기](~/ios/deploy-test/linker.md) 에는 링커에 대 한 자세한 정보를 찾을 수 있습니다.
 - 누락 된 네이티브 기호가 포함 된 두 번째 네이티브 라이브러리를 만듭니다. 이것은 단지 해결 방법입니다. 해당 함수를 호출 하려고 하면 앱이 충돌 합니다.
 
 <a name="MT5215"></a>
@@ -2374,7 +2374,7 @@ class MyImports {
 
 <a name="MT5216"></a>
 
-### <a name="mt5216-native-linking-failed-for--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5216: *에 대 한 네이티브 연결에 실패 했습니다. 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+### <a name="mt5216-native-linking-failed-for--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5216: *에 대 한 네이티브 연결에 실패 했습니다. 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 이 오류는 AOT 컴파일러의 출력을 연결할 때 보고 됩니다.
 
@@ -2780,8 +2780,8 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 - dict
 - bool
 - real
-- integer
-- date
+- 정수
+- 날짜
 - 데이터
 
 <a name="MT7046"></a>
@@ -2925,7 +2925,7 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 
 <a name="MT8001"></a>
 
-### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: 네이티브 Xamarin.ios 런타임과 monotouch.dialog 간의 버전이 일치 하지 않습니다. Xamarin.ios를 다시 설치 하세요.
+### <a name="mt8001-version-mismatch-between-the-native-xamarinios-runtime-and-monotouchdll-please-reinstall-xamarinios"></a>MT8001: 네이티브 Xamarin.ios 런타임과 monotouch.dll 간의 버전이 일치 하지 않습니다. Xamarin.ios를 다시 설치 하세요.
 
 <a name="MT8002"></a>
 
@@ -2953,7 +2953,7 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 
 <a name="MT8008"></a>
 
-### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: 로드 된 버전의 Xamarin.ios는 bits에 대해 컴파일되고 프로세스는 \* \* 비트입니다. 에서 버그를 파일로 신고 하세요 http://bugzilla.xamarin.com .
+### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: 로드 된 버전의 Xamarin.iOS.dll bits에 대해 컴파일 되었지만 \* 프로세스가 \* 비트입니다. 에서 버그를 파일로 신고 하세요 http://bugzilla.xamarin.com .
 
 이는 빌드 프로세스에서 문제가 발생 했음을 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 

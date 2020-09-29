@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/22/2016
-ms.openlocfilehash: e7bc6fa12ab6720842ab264678cbf8124353fc40
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d3ec300cbda5d22a285c3f63d3281bde29b94024
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574420"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430052"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.ios-macOS Sierra 문제 해결
 
@@ -32,7 +32,7 @@ _이 문서에서는 Xamarin.ios 앱의 macOS Sierra을 사용 하기 위한 몇
 
 <a name="App-Store"></a>
 
-## <a name="app-store"></a>앱 스토어
+## <a name="app-store"></a>App Store
 
 알려진 문제:
 
@@ -66,13 +66,13 @@ Apple Pay에 새 지불 카드를 추가할 때 잘못 된 만료 날짜 또는 
 
 ## <a name="cloudkit"></a>CloudKit
 
-장기 실행 작업은 _"파일을 저장할 수 있는 권한이 없습니다."를 반환 합니다._ 오류가 표시됩니다.
+장기 실행 작업은 _"파일을 저장할 수 있는 권한이 없습니다."를 반환 합니다._ error.
 
 <a name="CoreImage"></a>
 
 ## <a name="core-image"></a>핵심 이미지
 
-`CIImageProcessor`이제 API는 임의의 입력 이미지 수를 지원 합니다. `CIImageProcessor`MacOS Sierra beta 1에 포함 된 API가 제거 됩니다.
+`CIImageProcessor`이제 API는 임의의 입력 이미지 수를 지원 합니다. `CIImageProcessor` MacOS Sierra beta 1에 포함 된 API가 제거 됩니다.
 
 <a name="Notifications"></a>
 
@@ -94,5 +94,5 @@ WebGeolocation 위치에는 `https://` 악의적인 위치 데이터 사용을 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mac 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Mac 샘플](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [MacOS 10.12의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

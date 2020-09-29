@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/01/2016
-ms.openlocfilehash: fc3a0ace7760b89ad9b2679243c9b6d562191554
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dec3d9a218fa2148f4740c5af2c94c24a1436a21
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489078"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430267"
 ---
 # <a name="user-notifications-framework-in-xamarinios"></a>Xamarin.ios의 사용자 알림 프레임 워크
 
@@ -22,17 +22,17 @@ IOS 10의 새로운 기능으로, 사용자 알림 프레임 워크를 사용 �
 
 새 사용자 알림 UI 프레임 워크를 사용 하면 앱 또는 앱 확장이 사용자에 게 표시 될 때 로컬 및 원격 알림의 모양을 사용자 지정할 수 있습니다.
 
-## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[향상된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md)
+## <a name="enhanced-user-notifications"></a>[향상된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
 이 문서에서는 iOS 10에 대해 사용자 알림이 향상 되 고 새로운 사용자 알림 프레임 워크를 사용 하 여 구현 하는 방법에 대 한 간략 한 소개를 제공 하는 모든 방법을 소개 합니다.
 
-## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[고급 사용자 알림](~/ios/platform/user-notifications/advanced-user-notifications.md)
+## <a name="advanced-user-notifications"></a>[고급 사용자 알림](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
 이 문서에서는 새로운 사용자 알림 프레임 워크와 Xamarin.ios 앱에서이를 최대한 활용 하는 방법을 자세히 살펴봅니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [UserNotifications 프레임 워크 참조](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: aa9d946f295b46a3aa2d9559d28907d9a30f184b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9a45fcccd693a51230a51600964acd75704e1b93
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938972"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429712"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>IOS 10에서 향상 된 검색 및 홈 화면 위젯
 
@@ -50,14 +50,14 @@ Apple은 위젯 시스템에 몇 가지 향상 된 기능을 도입 하 여 새 
 
 ## <a name="working-with-vibrancy"></a>Vibrancy 사용
 
-Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예를 들면 다음과 같습니다.
+Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 예를 들면 다음과 같습니다.
+이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Get Primary Widget Vibrancy Effect
@@ -194,7 +194,7 @@ public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayM
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [확장 소개](~/ios/platform/extensions.md)
 - [3D 터치 소개](~/ios/platform/3d-touch.md)
 - [앱 확장 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html)

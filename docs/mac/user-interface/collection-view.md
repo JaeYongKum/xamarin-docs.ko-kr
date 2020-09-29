@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: f6e9a9338c0bce628cfd62d1106601ddc7a11490
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0d95ecb1997ba70a2994d74bacdedd334f2b4c61
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568635"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429737"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -769,7 +769,7 @@ var flowLayout = new NSCollectionViewFlowLayout()
 };
 ```
 
-`ItemSize`속성은 컬렉션에 있는 각 개별 셀의 크기를 정의 합니다. `SectionInset`속성은 셀이 배치 될 컬렉션의 가장자리에서 음각을 정의 합니다. `MinimumInteritemSpacing`항목 사이의 최소 간격을 정의 하 고 `MinimumLineSpacing` 컬렉션의 줄 사이의 최소 간격을 정의 합니다.
+`ItemSize`속성은 컬렉션에 있는 각 개별 셀의 크기를 정의 합니다. `SectionInset`속성은 셀이 배치 될 컬렉션의 가장자리에서 음각을 정의 합니다. `MinimumInteritemSpacing` 항목 사이의 최소 간격을 정의 하 고 `MinimumLineSpacing` 컬렉션의 줄 사이의 최소 간격을 정의 합니다.
 
 레이아웃은 컬렉션 뷰에 할당 되 고 인스턴스는 `CollectionViewDelegate` 핸들 항목 선택 항목에 연결 됩니다.
 
@@ -817,7 +817,7 @@ public override void ViewDidLoad()
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacCollectionNew (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccollectionnew)
+- [MacCollectionNew (샘플)](/samples/xamarin/mac-samples/maccollectionnew)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)

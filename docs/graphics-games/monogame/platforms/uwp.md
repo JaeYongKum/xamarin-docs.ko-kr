@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 59bfad17e4c3a4720360f007ddf3e85835f972fd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5d970c596d403c7d55ccc23bb5e9ba7e5fbd623a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931081"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431961"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
@@ -31,15 +31,15 @@ MonoGame UWP 앱을 개발 하려면 다음이 필요 합니다.
 - 장치를 개발자 모드로 설정
 - [MonoGame 3.7.1 For Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) 이상
 
-자세한 내용은 [Windows 10 UWP 개발에 대 한 설정에서이 페이지](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up)를 참조 하세요.
+자세한 내용은 [Windows 10 UWP 개발에 대 한 설정에서이 페이지](/windows/uwp/get-started/get-set-up)를 참조 하세요.
 
-Xbox one 게임은 소매 Xbox one 하드웨어에서 개발할 수 있습니다. 개발 PC와 Xbox one 모두에 추가 소프트웨어가 필요 합니다. 게임 개발용 Xbox one을 구성 하는 방법에 대 한 자세한 내용은 [xbox one 설정](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)페이지를 참조 하세요.
+Xbox one 게임은 소매 Xbox one 하드웨어에서 개발할 수 있습니다. 개발 PC와 Xbox one 모두에 추가 소프트웨어가 필요 합니다. 게임 개발용 Xbox one을 구성 하는 방법에 대 한 자세한 내용은 [xbox one 설정](/windows/uwp/xbox-apps/)페이지를 참조 하세요.
 
 ## <a name="creating-an-empty-template"></a>빈 템플릿 만들기
 
 모든 필수 리소스를 설치 하 고 Windows 10 컴퓨터에서 개발자 모드를 사용 하도록 설정한 후에는 다음 단계에 따라 Visual Studio를 사용 하 여 새 MonoGame 프로젝트를 만들 수 있습니다.
 
-1. **파일**  >  **새로 만들기**  >  **프로젝트** ...를 선택 합니다.
+1. **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 1. **설치 된**  >  **템플릿**  >  **Visual c #**  >  **MonoGame** 범주를 선택 합니다.
 
     ![MonoGame 범주](uwp-images/image1.png)

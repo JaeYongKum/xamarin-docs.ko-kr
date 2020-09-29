@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8586157dc9a803c3502ae2ffed9fed4fc285bfda
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c90a51d8d849dc95ca9465dd55910bcd5b50e43e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574407"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430147"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Xamarin.ios에서 Storyboard 사용
 
@@ -61,14 +61,14 @@ controller.ShowWindow(this);
 
 `NSViewController`MacOS에서 storyboard를 지원 하기 위해 여러 가지 새로운 메서드가 클래스에 추가 되었습니다. 가장 중요 한 것은 다음 메서드가 지정 된 뷰 컨트롤러에서 제어 하는 뷰의 수명 주기에 응답 하는 데 사용 하는 것입니다.
 
-- `ViewDidLoad`-이 메서드는 뷰가 Storyboard 파일에서 로드 될 때 호출 됩니다.
-- `ViewWillAppear`-이 메서드는 뷰가 화면에 표시 되기 직전에 호출 됩니다.
-- `ViewDidAppear`-이 메서드는 뷰가 화면에 표시 된 후 바로 호출 됩니다.
-- `ViewWillDisappear`-이 메서드는 뷰가 화면에서 제거 되기 직전에 호출 됩니다.
-- `ViewDidDisappear`-이 메서드는 뷰가 화면에서 제거 된 후 바로 호출 됩니다.
-- `UpdateViewConstraints`-이 메서드는 뷰 자동 레이아웃 위치 및 크기를 정의 하는 제약 조건을 업데이트 해야 할 때 호출 됩니다.
-- `ViewWillLayout`-이 메서드는이 뷰의 하위 뷰 화면에 배치 되기 직전에 호출 됩니다.
-- `ViewDidLayout`-이 메서드는 하위 뷰 뷰가 화면에 배치 된 후 바로 호출 됩니다.
+- `ViewDidLoad` -이 메서드는 뷰가 Storyboard 파일에서 로드 될 때 호출 됩니다.
+- `ViewWillAppear` -이 메서드는 뷰가 화면에 표시 되기 직전에 호출 됩니다.
+- `ViewDidAppear` -이 메서드는 뷰가 화면에 표시 된 후 바로 호출 됩니다.
+- `ViewWillDisappear` -이 메서드는 뷰가 화면에서 제거 되기 직전에 호출 됩니다.
+- `ViewDidDisappear` -이 메서드는 뷰가 화면에서 제거 된 후 바로 호출 됩니다.
+- `UpdateViewConstraints` -이 메서드는 뷰 자동 레이아웃 위치 및 크기를 정의 하는 제약 조건을 업데이트 해야 할 때 호출 됩니다.
+- `ViewWillLayout` -이 메서드는이 뷰의 하위 뷰 화면에 배치 되기 직전에 호출 됩니다.
+- `ViewDidLayout` -이 메서드는 하위 뷰 뷰가 화면에 배치 된 후 바로 호출 됩니다.
 
 <a name="The-Responder-Chain"></a>
 
@@ -249,11 +249,11 @@ MacOS에 대 한 제스처 인식기는 iOS의 해당 항목과 거의 같으며
 
 MacOS에서 사용할 수 있는 제스처 인식기는 다음과 같습니다.
 
-- `NSClickGestureRecognizer`-마우스 아래로 이벤트를 등록 합니다.
-- `NSPanGestureRecognizer`-마우스 단추를 아래로 등록 하 고 이벤트를 끌어서 놓습니다.
-- `NSPressGestureRecognizer`-지정 된 시간 이벤트에 대해 마우스 단추를 누른 상태로 등록 합니다.
-- `NSMagnificationGestureRecognizer`-트랙 패드 하드웨어에서 확대 이벤트를 등록 합니다.
-- `NSRotationGestureRecognizer`-트랙 패드 하드웨어에서 회전 이벤트를 등록 합니다.
+- `NSClickGestureRecognizer` -마우스 아래로 이벤트를 등록 합니다.
+- `NSPanGestureRecognizer` -마우스 단추를 아래로 등록 하 고 이벤트를 끌어서 놓습니다.
+- `NSPressGestureRecognizer` -지정 된 시간 이벤트에 대해 마우스 단추를 누른 상태로 등록 합니다.
+- `NSMagnificationGestureRecognizer` -트랙 패드 하드웨어에서 확대 이벤트를 등록 합니다.
+- `NSRotationGestureRecognizer` -트랙 패드 하드웨어에서 회전 이벤트를 등록 합니다.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -350,7 +350,7 @@ MacOS에서 사용할 수 있는 제스처 인식기는 다음과 같습니다.
 
 ## <a name="complex-storyboard-example"></a>복잡 한 Storyboard 예
 
-Xamarin.ios 앱에서 Storyboard를 사용 하는 복잡 한 예는 [Sourcewriter 샘플 앱](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
+Xamarin.ios 앱에서 Storyboard를 사용 하는 복잡 한 예는 [Sourcewriter 샘플 앱](/samples/xamarin/mac-samples/sourcewriter)을 참조 하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
 
 SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 지침 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b1bd4a07f9df13bff517db28715d985fc33e322
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937256"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430251"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 
-Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "프레임 워크"로 그룹화 합니다. `UIKit`는 iOS의 모든 사용자 인터페이스 컨트롤을 포함 하는 네임 스페이스입니다.
+Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "프레임 워크"로 그룹화 합니다. `UIKit` 는 iOS의 모든 사용자 인터페이스 컨트롤을 포함 하는 네임 스페이스입니다.
 
 코드에서 레이블이나 단추와 같은 사용자 인터페이스 컨트롤을 참조 해야 할 때마다 다음 using 문을 포함 해야 합니다.
 
@@ -171,4 +171,4 @@ Partial 클래스의 이러한 요소를 사용 하면 코드에서 컨트롤을
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)

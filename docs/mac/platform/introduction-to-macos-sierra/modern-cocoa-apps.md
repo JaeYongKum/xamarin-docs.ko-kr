@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 5d10f1def56d73c6837587bbbd47299d208a345a
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: d2a3181360abd7ee7a5124602d0c4186b0a8ec38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997477"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430155"
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -419,10 +419,10 @@ public override void GetNewWindowForTab (NSObject sender)
 
 `CALayer`개체는 개발자가 사용자에 게 화면에 표시 되는 내용을 제어할 수 있는 여러 가지 속성을 제공 합니다.
 
-- `Content`- `NSImage` `CGImage` 계층의 콘텐츠를 제공 하는 또는 일 수 있습니다.
-- `BackgroundColor`-계층의 배경색을로 설정 합니다.`CGColor`
-- `BorderWidth`-테두리 두께를 설정 합니다.
-- `BorderColor`-테두리 색을 설정 합니다.
+- `Content` - `NSImage` `CGImage` 계층의 콘텐츠를 제공 하는 또는 일 수 있습니다.
+- `BackgroundColor` -계층의 배경색을로 설정 합니다. `CGColor`
+- `BorderWidth` -테두리 두께를 설정 합니다.
+- `BorderColor` -테두리 색을 설정 합니다.
 
 앱의 UI에서 핵심 그래픽을 활용 하려면 _계층 지원_ 뷰를 사용 해야 합니다 .이 뷰는 Apple에서 개발자가 항상 창의 콘텐츠 보기에서 사용 하도록 설정 해야 한다는 것을 제안 합니다. 이러한 방식으로 모든 자식 보기는 계층 백업도 자동으로 상속 합니다.
 
@@ -436,7 +436,7 @@ public override void GetNewWindowForTab (NSObject sender)
 
 #### <a name="redrawing-views-with-layers"></a>레이어를 사용 하 여 뷰 다시 그리기
 
-Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서의 `NSView` 를로 설정 하는 것입니다 `OnSetNeedsDisplay` `NSViewController` . 예를 들어:
+Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서의 `NSView` 를로 설정 하는 것입니다 `OnSetNeedsDisplay` `NSViewController` . 다음은 그 예입니다.
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +637,7 @@ macOS Sierra는 이전 버전의 OS에서 사용할 수 있는 기존 컨테이�
 
 ## <a name="table-view-enhancements"></a>테이블 뷰 향상
 
-개발자는 항상 `NSView` 와 같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다 `NSTableView` . 예를 들어:
+개발자는 항상 `NSView` 와 같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다 `NSTableView` . 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -728,8 +728,8 @@ namespace MacModern
 
 Static은 `NSTableViewRowAction.FromStyle` 다음 스타일의 새 테이블 행 작업을 만드는 데 사용 됩니다.
 
-- `Regular`-행의 내용 편집과 같은 표준 비 소거식 작업을 수행 합니다.
-- `Destructive`-테이블에서 행을 삭제 하는 등의 파괴적인 작업을 수행 합니다. 이러한 작업은 빨간색 배경으로 렌더링 됩니다.
+- `Regular` -행의 내용 편집과 같은 표준 비 소거식 작업을 수행 합니다.
+- `Destructive` -테이블에서 행을 삭제 하는 등의 파괴적인 작업을 수행 합니다. 이러한 작업은 빨간색 배경으로 렌더링 됩니다.
 
 <a name="Scroll-View-Enhancements"></a>
 
@@ -741,8 +741,8 @@ Static은 `NSTableViewRowAction.FromStyle` 다음 스타일의 새 테이블 행
 
 이 문제를 해결 하기 위해 Apple은 클래스에 새 속성 두 개를 추가 했습니다 `NSScrollView` .
 
-- `ContentInsets`-개발자가 `NSEdgeInsets` 스크롤 뷰의 위쪽에 적용 될 오프셋을 정의 하는 개체를 제공할 수 있습니다.
-- `AutomaticallyAdjustsContentInsets`- `true` 스크롤 뷰가 개발자에 대 한를 자동으로 처리 하는 경우 `ContentInsets` 입니다.
+- `ContentInsets` -개발자가 `NSEdgeInsets` 스크롤 뷰의 위쪽에 적용 될 오프셋을 정의 하는 개체를 제공할 수 있습니다.
+- `AutomaticallyAdjustsContentInsets` - `true` 스크롤 뷰가 개발자에 대 한를 자동으로 처리 하는 경우 `ContentInsets` 입니다.
 
 를 사용 하 여 `ContentInsets` 개발자는 스크롤 뷰의 시작을 조정 하 여 다음과 같은 액세서리를 포함할 수 있습니다.
 
@@ -780,7 +780,7 @@ Apple에서는 다음을 수행 하는 것이 좋습니다.
 
 - **고정 폭 제약 조건 제거** -모든 텍스트 기반 보기는 내용에 따라 크기를 조정할 수 있어야 합니다. 고정 폭 보기가 특정 언어로 콘텐츠를 자를 수 있습니다.
 - **내장 콘텐츠 크기 사용** -기본적으로 텍스트 기반 보기는 내용에 맞게 자동으로 크기가 조정 됩니다. 크기를 올바르게 조정 하지 않는 텍스트 기반 보기의 경우 Xcode의 Interface Builder에서 선택한 다음 **Edit**  >  **내용에 맞게 크기 편집을**선택 합니다.
-- **선행 및 후행 특성 적용** -텍스트의 방향이 사용자의 언어에 따라 변경 될 수 있으므로 `Leading` `Trailing` 기존 및 특성과 달리 new 및 constraint 특성을 사용 `Right` `Left` 합니다. `Leading`및 `Trailing` 는 언어 방향에 따라 자동으로 조정 됩니다.
+- **선행 및 후행 특성 적용** -텍스트의 방향이 사용자의 언어에 따라 변경 될 수 있으므로 `Leading` `Trailing` 기존 및 특성과 달리 new 및 constraint 특성을 사용 `Right` `Left` 합니다. `Leading` 및 `Trailing` 는 언어 방향에 따라 자동으로 조정 됩니다.
 - **인접 뷰에 뷰 고정** -선택한 언어에 대 한 응답으로 뷰를 변경 하 고 크기를 조정할 수 있습니다.
 - **Windows 최소 및/또는 최대 크기를 설정 하지 마세요** . 선택한 언어가 콘텐츠 영역의 크기를 조정 하므로 windows에서 크기를 변경할 수 있습니다.
 - **레이아웃 변경 내용을 지속적으로 테스트** -앱에서 개발 하는 동안 다른 언어로 지속적으로 테스트 해야 합니다. 자세한 내용은 Apple의 [국제화 앱 테스트](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) 설명서를 참조 하세요.
@@ -836,7 +836,7 @@ public override void ViewDidLoad ()
 
 `Alignment` `ImagePosition` 컨트롤의을 기반으로 및를 설정 하는입니다 `UserInterfaceLayoutDirection` .
 
-macOS Sierra `CreateButton` 는 여러 가지 매개 변수 (예: 제목, 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 예를 들어:
+macOS Sierra `CreateButton` 는 여러 가지 매개 변수 (예: 제목, 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 다음은 그 예입니다.
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -853,7 +853,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 [![어두운 Mac 창 UI의 예](modern-cocoa-apps-images/content11.png)](modern-cocoa-apps-images/content11.png#lightbox)
 
-이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 예를 들어:
+이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 using System;
@@ -908,7 +908,7 @@ Apple에는 시스템 모양새 사용에 대 한 다음과 같은 제안이 있
 - Ui 구조적 dependancies을 사용 하지 마십시오 .이는 UI 유연성이 제한 되기 때문입니다.
 - C # 인터페이스를 사용 하 여 제네릭 데이터 dependancies을 제공 합니다.
 
-Segue의 소스로 작동 하는 뷰 컨트롤러는 `PrepareForSegue` Segue를 실행 하 여 대상 뷰 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 예를 들어:
+Segue의 소스로 작동 하는 뷰 컨트롤러는 `PrepareForSegue` Segue를 실행 하 여 대상 뷰 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -941,10 +941,10 @@ MacOS 앱의 디자인에 따라 ui 컨트롤에 대 한 작업에 대 한 최�
 
 Apple은 개발자가 다음과 같은 대부분의 Mac 플랫폼을 만들 수 있도록 하는 macOS Sierra에 몇 가지 사용자 측 기능을 포함 하 고 있습니다.
 
-- **NSUserActivity** -앱에서 사용자가 현재 관련 된 작업을 설명할 수 있습니다. `NSUserActivity`처음에는 사용자의 장치 중 하나에서 시작 된 활동을 선택 하 고 다른 장치에서 계속 진행할 수 있는 전달을 지원 하기 위해 처음으로 만들었습니다. `NSUserActivity`는 iOS에서와 마찬가지로 macOS에서 동일 하 게 작동 하므로 자세한 내용은 ios [소개 문서를](~/ios/platform/handoff.md) 참조 하세요.
+- **NSUserActivity** -앱에서 사용자가 현재 관련 된 작업을 설명할 수 있습니다. `NSUserActivity` 처음에는 사용자의 장치 중 하나에서 시작 된 활동을 선택 하 고 다른 장치에서 계속 진행할 수 있는 전달을 지원 하기 위해 처음으로 만들었습니다. `NSUserActivity` 는 iOS에서와 마찬가지로 macOS에서 동일 하 게 작동 하므로 자세한 내용은 ios [소개 문서를](~/ios/platform/handoff.md) 참조 하세요.
 - **Mac의 siri** -Siri는 현재 활동 ()을 사용 하 여 `NSUserActivity` 사용자가 발급할 수 있는 명령에 컨텍스트를 제공 합니다.
 - **상태 복원** -사용자가 macos에서 앱을 종료 한 다음 나중에 relaunches 앱이 이전 상태로 자동으로 돌아갑니다. 개발자는 사용자 인터페이스가 사용자에 게 표시 되기 전에 상태 복원 API를 사용 하 여 임시 UI 상태를 인코딩 및 복원할 수 있습니다. 응용 프로그램의 기반이 되는 경우 `NSDocument` 상태 복원이 자동으로 처리 됩니다. 기반이 아닌 앱에 대해 상태 복원을 사용 하도록 `NSDocument` 설정 하려면 `Restorable` 클래스의를 `NSWindow` 로 설정 `true` 합니다.
-- **클라우드의 문서** -macOS Sierra 하기 전에 앱은 사용자의 iCloud 드라이브에서 문서를 사용 하도록 명시적으로 옵트인 (opt in) 해야 했습니다. MacOS Sierra 사용자의 **데스크톱** 및 **문서** 폴더가 시스템에 의해 자동으로 iCloud 드라이브와 동기화 될 수 있습니다. 따라서 문서의 로컬 복사본을 삭제 하 여 사용자 컴퓨터의 공간을 확보할 수 있습니다. `NSDocument`기반 앱은이 변경 내용을 자동으로 처리 합니다. 다른 모든 앱 형식은를 사용 하 여 `NSFileCoordinator` 문서 읽기 및 쓰기를 동기화 해야 합니다.
+- **클라우드의 문서** -macOS Sierra 하기 전에 앱은 사용자의 iCloud 드라이브에서 문서를 사용 하도록 명시적으로 옵트인 (opt in) 해야 했습니다. MacOS Sierra 사용자의 **데스크톱** 및 **문서** 폴더가 시스템에 의해 자동으로 iCloud 드라이브와 동기화 될 수 있습니다. 따라서 문서의 로컬 복사본을 삭제 하 여 사용자 컴퓨터의 공간을 확보할 수 있습니다. `NSDocument` 기반 앱은이 변경 내용을 자동으로 처리 합니다. 다른 모든 앱 형식은를 사용 하 여 `NSFileCoordinator` 문서 읽기 및 쓰기를 동기화 해야 합니다.
 
 <a name="Summary"></a>
 
@@ -954,4 +954,4 @@ Apple은 개발자가 다음과 같은 대부분의 Mac 플랫폼을 만들 수 
 
 ## <a name="related-links"></a>관련 링크
 
-- [macOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [macOS 샘플](/samples/browse/?products=xamarin&term=Xamarin.Mac)

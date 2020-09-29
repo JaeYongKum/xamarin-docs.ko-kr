@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: f65b4f8f97059858067df8c847bc9ed181c8cc4c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dd79c2059d53702d947a966327bf22b2043d36c5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429941"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Xamarin.ios에서 테이블 모양 사용자 지정
 
@@ -123,7 +123,7 @@ CellCustomTable 예제는 `UITableViewCell` 및의 사용자 지정 레이아웃
 사용자 지정 셀 클래스는 다음의 세 가지 방법으로 구성 됩니다.
 
 - **생성자** – UI 컨트롤을 만들고 사용자 지정 스타일 속성을 설정 합니다 (예: 글꼴, 크기 및 색)이 있습니다.
-- **UpdateCell** –에서 `UITableView.GetCell` 셀의 속성을 설정 하는 데 사용할 메서드입니다.
+- **UpdateCell** –에서  `UITableView.GetCell` 셀의 속성을 설정 하는 데 사용할 메서드입니다.
 - **LayoutSubviews** – UI 컨트롤의 위치를 설정 합니다. 예제에서 모든 셀의 레이아웃은 동일 하지만 보다 복잡 한 셀 (특히 크기를 변경 하는 셀)은 표시 되는 콘텐츠에 따라 다른 레이아웃 위치를 필요로 할 수 있습니다.
 
 **Cellcustomtable > CustomVegeCell.cs** 의 전체 샘플 코드는 다음과 같습니다.
@@ -184,4 +184,4 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 
 ## <a name="related-links"></a>관련 링크
 
-- [WorkingWithTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (샘플)](/samples/xamarin/ios-samples/workingwithtables)

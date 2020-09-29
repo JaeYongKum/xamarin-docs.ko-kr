@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: dc3def5d5c709515574a72cf9f61d71d67690d87
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017039"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429706"
 ---
 # <a name="introduction-to-macos-mojave"></a>macOS Mojave 소개
 
@@ -38,14 +38,14 @@ Xamarin을 사용 하 여 macOS Mojave 앱 빌드를 시작 하려면 [xamarin.i
 
 ## <a name="network-framework"></a>네트워크 프레임 워크
 
-IOS 응용 프로그램에서 일반적으로 사용 되는 `URLSession` Api를 기반으로 하는 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
+`URLSession`IOS 응용 프로그램에서 일반적으로 사용 되는 api의 기본 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
 
-## <a name="deprecations"></a>결함
+## <a name="deprecations"></a>지원 중단
 
 MacOS Mojave를 사용 하는 경우 Apple은 OpenGL ES 및 OpenCL를 사용 하지 않으므로 개발자가 금속 및 금속 성능 셰이더를 채택 하도록 [장려](https://developer.apple.com/macos/whats-new/) 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.ios 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Xamarin.ios 샘플](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – Apple Developer](https://developer.apple.com/macos/)
-- [Xamarin.ios 5.0 릴리스 정보](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Xamarin.ios 5.0 릴리스 정보](/xamarin/mac/release-notes/5/5.0/)

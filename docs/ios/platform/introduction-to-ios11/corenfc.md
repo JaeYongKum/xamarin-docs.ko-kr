@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 556ea205e9894a2553224da0dc71c00d9bb55a9b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 17f5caa7849b076fd8ac2b7a22459fbf8fed1c9d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564743"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432796"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Xamarin.ios의 핵심 NFC
 
@@ -29,7 +29,7 @@ IOS 장치의 NFC 태그 판독기는 NDEF ( _Nfc Data Exchange Format_ ) 정보
 - 앱은 검색을 위해 포그라운드에서 표시 되어야 합니다.
 - CoreNFC는 시뮬레이터가 아닌 실제 장치 에서만 테스트할 수 있습니다.
 
-이 페이지에서는 CoreNFC를 사용 하는 데 필요한 구성에 대해 설명 하 고 ["NFCTagReader" 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)를 사용 하 여 API를 사용 하는 방법을 보여 줍니다.
+이 페이지에서는 CoreNFC를 사용 하는 데 필요한 구성에 대해 설명 하 고 ["NFCTagReader" 샘플 코드](/samples/xamarin/ios-samples/ios11-nfctagreader)를 사용 하 여 API를 사용 하는 방법을 보여 줍니다.
 
 ## <a name="configuration"></a>구성
 
@@ -71,12 +71,12 @@ CoreNFC를 사용 하도록 설정 하려면 프로젝트에서 다음 세 가�
 
 프로젝트가 구성 되 면 `using CoreNFC;` 파일의 맨 위에를 추가 하 고 다음 세 단계를 수행 하 여 NFC 태그 읽기 기능을 구현 합니다.
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. 구현`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. 구현 `INFCNdefReaderSessionDelegate`
 
 인터페이스에는 다음과 같은 두 가지 메서드를 구현할 수 있습니다.
 
-- `DidDetect`– 태그를 성공적으로 읽으면 호출 됩니다.
-- `DidInvalidate`– 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
+- `DidDetect` – 태그를 성공적으로 읽으면 호출 됩니다.
+- `DidInvalidate` – 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -125,7 +125,7 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 <a name="step2"></a>
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. 시작`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. 시작 `NFCNdefReaderSession`
 
 검색은 단추 누름과 같은 사용자 요청으로 시작 해야 합니다.
 다음 코드는 검색 세션을 만들고 시작 합니다.
@@ -137,9 +137,9 @@ Session?.BeginSession();
 
 생성자에 대 한 매개 변수는 다음과 같습니다 `NFCNdefReaderSession` .
 
-- `delegate`–의 구현 `INFCNdefReaderSessionDelegate` 입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
-- `queue`– 콜백이 처리 되는 큐입니다. 이 `null` 경우 `DispatchQueue.MainQueue` 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 때를 사용 해야 합니다.
-- `invalidateAfterFirstRead`– 인 경우 검색을 처음 성공한 후 검색을 중지 하 고, 검색을 `true` `false` 취소 하거나 60 초 시간 제한에 도달할 때까지 검색을 계속 하 고 여러 결과를 반환 합니다.
+- `delegate` –의 구현 `INFCNdefReaderSessionDelegate` 입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
+- `queue` – 콜백이 처리 되는 큐입니다. 이 `null` 경우 `DispatchQueue.MainQueue` 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 때를 사용 해야 합니다.
+- `invalidateAfterFirstRead` – 인 경우 검색을 처음 성공한 후 검색을 중지 하 고, 검색을 `true` `false` 취소 하거나 60 초 시간 제한에 도달할 때까지 검색을 계속 하 고 여러 결과를 반환 합니다.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. 검색 세션을 취소 합니다.
 
@@ -161,5 +161,5 @@ CoreNFC를 사용 하면 앱에서 NFC 태그의 데이터를 읽을 수 있습�
 
 ## <a name="related-links"></a>관련 링크
 
-- [NFCTagReader (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [NFCTagReader (샘플)](/samples/xamarin/ios-samples/ios11-nfctagreader)
 - [코어 NFC (WWDC) 소개 (비디오)](https://developer.apple.com/videos/play/wwdc2017/718/)

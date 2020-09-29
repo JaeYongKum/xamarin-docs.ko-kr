@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fe4927384470a37581f556f06e71d489ef90ecbb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 47025f48b1f3455f70a077f2ca55da2cdeeba761
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574520"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430894"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
@@ -294,7 +294,7 @@ Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에 UI 요소 추가
 
-코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예를 들면 다음과 같습니다.
+코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -359,7 +359,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacXibless (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macxibless)
+- [MacXibless (샘플)](/samples/xamarin/mac-samples/macxibless)
 - [Windows](~/mac/user-interface/window.md)
 - [메뉴](~/mac/user-interface/menu.md)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

@@ -6,18 +6,18 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 2c290ac7d66147342087342bda5e5a19b4e6e6f7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 835beca6866f5d3f82ae48d1c99557ceafe360ba
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763628"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429776"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>2 부-WalkingGame 구현
 
 _이 연습에서는 빈 MonoGame 프로젝트에 게임 논리 및 콘텐츠를 추가 하 여 터치 입력으로 이동 하는 애니메이션 스프라이트의 데모를 만드는 방법을 보여 줍니다._
 
-이 연습의 이전 부분에서는 빈 MonoGame 프로젝트를 만드는 방법을 살펴보았습니다. 간단한 게임 데모를 수행 하 여 이러한 이전 부분을 빌드할 예정입니다. 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.
+이 연습의 이전 부분에서는 빈 MonoGame 프로젝트를 만드는 방법을 살펴보았습니다. 간단한 게임 데모를 수행 하 여 이러한 이전 부분을 빌드할 예정입니다. 이 자료에는 다음과 같은 섹션이 포함되어 있습니다.
 
 - 게임 콘텐츠 압축 풀기
 - MonoGame 클래스 개요
@@ -39,12 +39,12 @@ _이 연습에서는 빈 MonoGame 프로젝트에 게임 논리 및 콘텐츠를
 
 초보자를 위해 기본 렌더링에 사용 되는 MonoGame 클래스를 살펴보겠습니다.
 
-- `SpriteBatch`– 화면에 2D 그래픽을 그리는 데 사용 됩니다. *스프라이트* 는 화면에 이미지를 표시 하는 데 사용 되는 2d 시각적 요소입니다. 개체 `SpriteBatch` `Begin` 는 및 메서드사이에서한번에하나의스프라이트를그리거나여러스프라이트를함께그룹화하거나일괄처리할수있습니다.`End`
-- `Texture2D`– 런타임에 이미지 개체를 나타냅니다. `Texture2D`인스턴스는 런타임에 동적으로 만들어질 수도 있지만 .png 또는 .bmp와 같은 파일 형식에서 생성 되는 경우가 많습니다. `Texture2D`인스턴스는 인스턴스를 사용 하 `SpriteBatch` 여 렌더링할 때 사용 됩니다.
-- `Vector2`– 시각적 개체의 위치를 지정 하는 데 자주 사용 되는 2D 좌표 시스템의 위치를 나타냅니다. MonoGame에도 `Vector3` 포함 `Vector4` 되어 있지만이 연습에서는 `Vector2` 만 사용 합니다.
-- `Rectangle`– 위치, 너비 및 높이가 있는 4 면 영역입니다. 이를 사용 하 여 애니메이션 작업을 시작할 때 렌더링할 `Texture2D` 의 부분을 정의 합니다.
+- `SpriteBatch` – 화면에 2D 그래픽을 그리는 데 사용 됩니다. *스프라이트* 는 화면에 이미지를 표시 하는 데 사용 되는 2d 시각적 요소입니다. `SpriteBatch`개체는 및 메서드 사이에서 한 번에 하나의 스프라이트를 `Begin` 그리거나 `End` 여러 스프라이트를 함께 그룹화 하거나 *일괄 처리할*수 있습니다.
+- `Texture2D` – 런타임에 이미지 개체를 나타냅니다. `Texture2D` 인스턴스는 런타임에 동적으로 만들어질 수도 있지만 .png 또는 .bmp와 같은 파일 형식에서 생성 되는 경우가 많습니다. `Texture2D` 인스턴스는 인스턴스를 사용 하 여 렌더링할 때 사용 됩니다 `SpriteBatch` .
+- `Vector2` – 시각적 개체의 위치를 지정 하는 데 자주 사용 되는 2D 좌표 시스템의 위치를 나타냅니다. MonoGame에도 포함 되어 `Vector3` `Vector4` 있지만이 연습에서는만 사용 `Vector2` 합니다.
+- `Rectangle` – 위치, 너비 및 높이가 있는 4 면 영역입니다. 이를 사용 하 여 `Texture2D` 애니메이션 작업을 시작할 때 렌더링할의 부분을 정의 합니다.
 
-또한 네임 스페이스에도 불구 하 고 MonoGame은 Microsoft에서 유지 관리 되지 않습니다. `Microsoft.Xna` 네임 스페이스는 기존 XNA 프로젝트를 MonoGame로 쉽게 마이그레이션할 수 있도록 MonoGame에 사용 됩니다.
+또한 네임 스페이스에도 불구 하 고 MonoGame은 Microsoft에서 유지 관리 되지 않습니다. `Microsoft.Xna`네임 스페이스는 기존 XNA 프로젝트를 MonoGame로 쉽게 마이그레이션할 수 있도록 MonoGame에 사용 됩니다.
 
 ## <a name="rendering-our-first-sprite"></a>첫 번째 스프라이트 렌더링
 
@@ -52,23 +52,23 @@ _이 연습에서는 빈 MonoGame 프로젝트에 게임 논리 및 콘텐츠를
 
 ### <a name="creating-a-texture2d"></a>Texture2D 만들기
 
-스프라이트를 렌더링할 때 사용할 `Texture2D` 인스턴스를 만들어야 합니다. 모든 게임 콘텐츠는 플랫폼별 프로젝트에 있는 **content** 라는 폴더에 궁극적으로 포함 됩니다. MonoGame 공유 프로젝트는 콘텐츠를 포함할 수 없습니다. 콘텐츠는 해당 플랫폼과 관련 된 빌드 작업을 사용 해야 하기 때문입니다. 콘텐츠 폴더는 iOS 프로젝트에서, Android 프로젝트의 자산 폴더 내에서 찾을 수 있습니다.
+`Texture2D`스프라이트를 렌더링할 때 사용할 인스턴스를 만들어야 합니다. 모든 게임 콘텐츠는 플랫폼별 프로젝트에 있는 **content** 라는 폴더에 궁극적으로 포함 됩니다. MonoGame 공유 프로젝트는 콘텐츠를 포함할 수 없습니다. 콘텐츠는 해당 플랫폼과 관련 된 빌드 작업을 사용 해야 하기 때문입니다. 콘텐츠 폴더는 iOS 프로젝트에서, Android 프로젝트의 자산 폴더 내에서 찾을 수 있습니다.
 
-게임 콘텐츠를 추가 하려면 **콘텐츠** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 파일 추가** ...를 선택 합니다. .Zip 파일이 추출 된 위치로 이동 하 여 **charactersheet** 파일을 선택 합니다. 폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 **복사** 옵션을 선택 해야 합니다.
+게임 콘텐츠를 추가 하려면 **콘텐츠** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 파일 추가** ...를 선택 합니다. content.zip 파일이 추출 된 위치로 이동 하 여 **charactersheet.png** 파일을 선택 합니다. 폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 **복사** 옵션을 선택 해야 합니다.
 
 ![폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 복사 옵션을 선택 합니다.](part2-images/image1.png)
 
-이제 콘텐츠 폴더에 charactersheet 파일이 포함 됩니다.
+이제 콘텐츠 폴더에 charactersheet.png 파일이 포함 됩니다.
 
-![이제 콘텐츠 폴더에 charactersheet 파일이 포함 되어 있습니다.](part2-images/image2.png)
+![이제 콘텐츠 폴더에 charactersheet.png 파일이 포함 되어 있습니다.](part2-images/image2.png)
 
-다음에는 charactersheet 파일을 로드 하 고를 `Texture2D`만드는 코드를 추가 합니다. 이렇게 하려면 `Game1.cs` 파일을 열고 Game1.cs 클래스에 다음 필드를 추가 합니다.
+다음으로 charactersheet.png 파일을 로드 하 고를 만드는 코드를 추가 `Texture2D` 합니다. 이렇게 하려면 파일을 열고 `Game1.cs` Game1.cs 클래스에 다음 필드를 추가 합니다.
 
 ```csharp
 Texture2D characterSheetTexture;
 ```
 
-다음으로 `characterSheetTexture` `LoadContent` 메서드에서을 만듭니다. 수정 `LoadContent` 메서드는 다음과 같습니다.
+다음으로 메서드에서을 만듭니다 `characterSheetTexture` `LoadContent` . 수정 메서드는 `LoadContent` 다음과 같습니다.
 
 ```csharp
 protected override void LoadContent()
@@ -79,7 +79,7 @@ protected override void LoadContent()
 }
 ```
 
-기본 프로젝트는 이미 인스턴스를 `spriteBatch` 인스턴스화 하 고 있음을 확인 해야 합니다. 나중에이를 사용 하지만, 사용을 준비 하기 위해 추가 코드를 추가 하지 `spriteBatch` 는 않습니다. 반면에는 초기화가 필요 하므로를 만든 `spriteBatch` 후 초기화 합니다. `spriteSheetTexture`
+기본 프로젝트는 이미 인스턴스를 인스턴스화 하 고 있음을 확인 해야 합니다 `spriteBatch` . 나중에이를 사용 하지만, 사용을 준비 하기 위해 추가 코드를 추가 하지는 않습니다 `spriteBatch` . 반면에는 `spriteSheetTexture` 초기화가 필요 하므로를 만든 후 초기화 합니다 `spriteBatch` .
 
 ```csharp
 protected override void LoadContent()
@@ -94,7 +94,7 @@ protected override void LoadContent()
 }
 ```
 
-이제 `SpriteBatch` `Game1.Draw` 인스턴스와 `Texture2D` 인스턴스가 있으므로 메서드에 렌더링 코드를 추가할 수 있습니다.
+이제 `SpriteBatch` 인스턴스와 `Texture2D` 인스턴스가 있으므로 메서드에 렌더링 코드를 추가할 수 있습니다 `Game1.Draw` .
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -114,9 +114,9 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-게임을 실행 하면 charactersheet에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.
+게임을 실행 하면 charactersheet.png에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.
 
-![게임을 실행 하면 charactersheet에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.](part2-images/image3.png)
+![게임을 실행 하면에서 만든 질감을 표시 하는 단일 스프라이트가 표시 됩니다 charactersheet.png](part2-images/image3.png)
 
 ## <a name="creating-the-characterentity"></a>CharacterEntity 만들기
 
@@ -134,16 +134,16 @@ protected override void Draw(GameTime gameTime)
 
 ### <a name="defining-the-characterentity"></a>CharacterEntity 정의
 
-이 엔터티는를 호출할 `CharacterEntity`때 다음과 같은 특징이 있습니다.
+이 엔터티는를 호출할 `CharacterEntity` 때 다음과 같은 특징이 있습니다.
 
-- 자체를 로드 하는 기능`Texture2D`
+- 자체를 로드 하는 기능 `Texture2D`
 - 호출 메서드를 포함 하 여 탐색 애니메이션을 업데이트 하는 것을 포함 하 여 자신을 렌더링할 수 있습니다.
-- `X`및 Y 속성을 통해 문자 위치를 제어할 수 있습니다.
+- `X` 및 Y 속성을 통해 문자 위치를 제어할 수 있습니다.
 - 자신을 업데이트 하 고, 터치 스크린에서 값을 읽고 위치를 적절 하 게 조정할 수 있습니다.
 
-게임 `CharacterEntity` 에를 추가 하려면 **WalkingGame** 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 합니다. **빈 클래스** 옵션을 선택 하 고 새 파일의 이름을 **CharacterEntity**로 지정한 다음 **새로 만들기**를 클릭 합니다.
+게임에를 추가 하려면 `CharacterEntity` **WalkingGame** 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 합니다. **빈 클래스** 옵션을 선택 하 고 새 파일의 이름을 **CharacterEntity**로 지정한 다음 **새로 만들기**를 클릭 합니다.
 
-먼저를 `CharacterEntity` `Texture2D` 로드 하 고 자체를 그리기 위해를 로드 하는 기능을 추가 합니다. 새로 추가 `CharacterEntity.cs` 된 파일을 다음과 같이 수정 합니다.
+먼저를 로드 하 고 자체를 그리기 위해를 로드 하는 기능을 추가 `CharacterEntity` `Texture2D` 합니다. 새로 추가 된 `CharacterEntity.cs` 파일을 다음과 같이 수정 합니다.
 
 ```csharp
 using System;
@@ -190,31 +190,31 @@ namespace WalkingGame
 }
 ```
 
-위의 코드는 콘텐츠를의 `CharacterEntity`위치 지정, 렌더링 및 로드 하는 책임을 추가 합니다. 위의 코드에서 수행 하는 몇 가지 고려 사항을 살펴보겠습니다.
+위의 코드는 콘텐츠를의 위치 지정, 렌더링 및 로드 하는 책임을 추가 합니다 `CharacterEntity` . 위의 코드에서 수행 하는 몇 가지 고려 사항을 살펴보겠습니다.
 
 ### <a name="why-are-x-and-y-floats"></a>X 및 Y Float는 무엇 인가요?
 
-게임 프로그래밍을 처음 접하는 개발자는 `float` 형식이 `int` 또는 `double`와 반대로 사용 되는 이유를 궁금할 수 있습니다. 그 이유는 32 비트 값은 하위 수준 렌더링 코드에서 위치를 지정 하는 데 가장 일반적입니다. Double 형식은 정밀도에 64 비트를 차지 하며,이는 개체의 위치를 지정 하는 데 거의 필요 하지 않습니다. 32 비트 차이가 중요 하지 않을 수 있지만, 대부분의 최신 게임에는 각 프레임 (초당 30 개나 60 번)의 위치 값을 처리 해야 하는 그래픽이 포함 됩니다. 그래픽 파이프라인을 절반으로 이동 해야 하는 메모리 양을 잘라내면 게임의 성능에 상당한 영향을 줄 수 있습니다.
+게임 프로그래밍을 처음 접하는 개발자는 `float` 형식이 또는와 반대로 사용 되는 이유를 궁금할 수 `int` 있습니다 `double` . 그 이유는 32 비트 값은 하위 수준 렌더링 코드에서 위치를 지정 하는 데 가장 일반적입니다. Double 형식은 정밀도에 64 비트를 차지 하며,이는 개체의 위치를 지정 하는 데 거의 필요 하지 않습니다. 32 비트 차이가 중요 하지 않을 수 있지만, 대부분의 최신 게임에는 각 프레임 (초당 30 개나 60 번)의 위치 값을 처리 해야 하는 그래픽이 포함 됩니다. 그래픽 파이프라인을 절반으로 이동 해야 하는 메모리 양을 잘라내면 게임의 성능에 상당한 영향을 줄 수 있습니다.
 
-`int` 데이터 형식은 위치를 지정 하는 데 적절 한 측정 단위가 될 수 있지만, 엔터티가 배치 되는 방식에 대 한 제한 사항이 있을 수 있습니다. 예를 들어 정수 값을 사용 하면 확대/축소 또는 3D 카메라 (에서 `SpriteBatch`허용 됨)를 지 원하는 게임의 부드러운 움직임을 구현 하기가 더 어려워집니다.
+`int`데이터 형식은 위치를 지정 하는 데 적절 한 측정 단위가 될 수 있지만, 엔터티가 배치 되는 방식에 대 한 제한 사항이 있을 수 있습니다. 예를 들어 정수 값을 사용 하면 확대/축소 또는 3D 카메라 (에서 허용 됨)를 지 원하는 게임의 부드러운 움직임을 구현 하기가 더 어려워집니다 `SpriteBatch` .
 
-마지막으로, 화면 주위에서 문자를 이동 하는 논리가 게임의 타이밍 값을 사용 하 여이 작업을 수행 하는 것을 확인할 수 있습니다. 지정 된 프레임에 전달 된 시간에 대 한 속도를 곱한 결과에는 대개 정수가 발생 하므로 및 `float` `Y`에 대해 `X` 를 사용 해야 합니다.
+마지막으로, 화면 주위에서 문자를 이동 하는 논리가 게임의 타이밍 값을 사용 하 여이 작업을 수행 하는 것을 확인할 수 있습니다. 지정 된 프레임에 전달 된 시간에 대 한 속도를 곱한 결과에는 대개 정수가 발생 하므로 `float` 및에 대해를 사용 해야 `X` `Y` 합니다.
 
 ### <a name="why-is-charactersheettexture-static"></a>CharacterSheetTexture 정적 인가요?
 
-`characterSheetTexture` 인스턴스는charactersheet파일`Texture2D` 의 런타임 표현입니다. 즉, 원본 **charactersheet** 파일에서 추출 된 각 픽셀의 색 값이 포함 됩니다. 두 개의 `CharacterEntity` 인스턴스를 만든 경우 각 인스턴스는 charactersheet의 정보에 액세스할 수 있어야 합니다. 이 상황에서는 charactersheet를 두 번 로드 하는 성능 비용을 초래 하지 않으며 ram에 중복 된 텍스처 메모리를 저장 하려고 합니다. 필드를 `static` 사용 하면 모든 `CharacterEntity` 인스턴스에서 동일 `Texture2D` 하 게 공유할 수 있습니다.
+`characterSheetTexture` `Texture2D` 인스턴스는 charactersheet.png 파일의 런타임 표현입니다. 즉, 원본 **charactersheet.png** 파일에서 추출 된 각 픽셀의 색 값이 포함 됩니다. 두 개의 `CharacterEntity` 인스턴스를 만든 경우 각 인스턴스는 charactersheet.png 정보에 대 한 액세스 권한이 필요 합니다. 이 경우 charactersheet.png를 두 번 로드 하는 성능 비용이 발생 하지 않으며, ram에 중복 된 텍스처 메모리를 저장 하려고 합니다. 필드를 사용 `static` 하면 모든 인스턴스에서 동일 하 게 공유할 수 있습니다 `Texture2D` `CharacterEntity` .
 
-콘텐츠의 `static` 런타임 표현에 대 한 멤버를 사용 하는 것은 단순화 된 솔루션 이며 한 수준에서 다른 수준으로 이동할 때 콘텐츠 언로드와 같은 큰 게임에서 발생 하는 문제를 해결 하지 않습니다. 이 연습에서 다루지 않는 보다 정교한 솔루션에는 MonoGame의 콘텐츠 파이프라인을 사용 하거나 사용자 지정 콘텐츠 관리 시스템을 만드는 작업이 포함 됩니다.
+`static`콘텐츠의 런타임 표현에 대 한 멤버를 사용 하는 것은 단순화 된 솔루션 이며 한 수준에서 다른 수준으로 이동할 때 콘텐츠 언로드와 같은 큰 게임에서 발생 하는 문제를 해결 하지 않습니다. 이 연습에서 다루지 않는 보다 정교한 솔루션에는 MonoGame의 콘텐츠 파이프라인을 사용 하거나 사용자 지정 콘텐츠 관리 시스템을 만드는 작업이 포함 됩니다.
 
 ### <a name="why-is-spritebatch-passed-as-an-argument-instead-of-instantiated-by-the-entity"></a>SpriteBatch가 엔터티에 의해 인스턴스화되지 않고 인수로 전달 되는 이유는 무엇 인가요?
 
-위에서 `Draw` 구현 된 메서드는 `SpriteBatch` 인수를 사용 `characterSheetTexture` 하지만와는 달리는에 의해 `CharacterEntity`인스턴스화됩니다.
+`Draw`위에서 구현 된 메서드는 인수를 사용 하지만와는 달리는에 `SpriteBatch` `characterSheetTexture` 의해 인스턴스화됩니다 `CharacterEntity` .
 
-`SpriteBatch` 그 이유는 동일한 인스턴스가 모든 `Draw` 호출에 사용 될 때 그리고 단일 집합과 `Begin` `End` 호출 사이에 모든 `Draw` 호출이 수행 될 때 가장 효율적인 렌더링이 가능 하기 때문입니다. 물론,이 게임에는 단일 엔터티 인스턴스만 포함 되지만 여러 엔터티가 동일한 `SpriteBatch` 인스턴스를 사용할 수 있도록 하는 패턴을 사용 하면 더 복잡 한 게임의 이점을 누릴 수 있습니다.
+그 이유는 동일한 `SpriteBatch` 인스턴스가 모든 호출에 사용 될 때 `Draw` 그리고 `Draw` 단일 집합과 호출 사이에 모든 호출이 수행 될 `Begin` 때 가장 효율적인 렌더링이 가능 하기 때문입니다 `End` . 물론,이 게임에는 단일 엔터티 인스턴스만 포함 되지만 여러 엔터티가 동일한 인스턴스를 사용할 수 있도록 하는 패턴을 사용 하면 더 복잡 한 게임의 이점을 누릴 수 있습니다 `SpriteBatch` .
 
 ## <a name="adding-characterentity-to-the-game"></a>게임에 CharacterEntity 추가
 
-자신을 렌더링 하는 코드 `CharacterEntity` 와 함께를 추가 했으므로 이제이 새 엔터티의 인스턴스를 사용 `Game1.cs` 하도록의 코드를 바꿀 수 있습니다. 이렇게 하려면 `Texture2D` 필드 `CharacterEntity` 를의 `Game1`필드로 바꿉니다.
+자신을 렌더링 하는 코드와 함께를 추가 했으므로 이제 `CharacterEntity` `Game1.cs` 이 새 엔터티의 인스턴스를 사용 하도록의 코드를 바꿀 수 있습니다. 이렇게 하려면 `Texture2D` 필드를 `CharacterEntity` 의 필드로 바꿉니다 `Game1` .
 
 ```csharp
 public class Game1 : Game
@@ -229,7 +229,7 @@ public class Game1 : Game
     ...
 ```
 
-다음으로에서 `Game1.Initialize`이 엔터티의 인스턴스화를 추가 합니다.
+다음으로에서이 엔터티의 인스턴스화를 추가 합니다 `Game1.Initialize` .
 
 ```csharp
 protected override void Initialize()
@@ -240,7 +240,7 @@ protected override void Initialize()
 }
 ```
 
-또한 `Texture2D` 이제내`LoadContent` 에서 처리 되므로에서 만들기를 제거 해야 합니다.`CharacterEntity` `Game1.LoadContent`다음과 같이 표시 됩니다.
+또한 `Texture2D` 이제 내에서 처리 되므로에서 만들기를 제거 해야 `LoadContent` `CharacterEntity` 합니다. `Game1.LoadContent` 다음과 같이 표시 됩니다.
 
 ```csharp
 protected override void LoadContent()
@@ -250,7 +250,7 @@ protected override void LoadContent()
 }
 ```
 
-이름에도 불구 하 고, 메서드는 `LoadContent` 콘텐츠를 로드할 수 있는 유일한 장소가 아닙니다. 많은 게임은 Initialize 메서드에서 콘텐츠 로드를 구현 하거나, 업데이트 코드 에서도 콘텐츠를 구현 합니다. 플레이어가 게임의 특정 지점입니다.
+이름에도 불구 하 고, 메서드는 `LoadContent` 콘텐츠를 로드할 수 있는 유일한 장소가 아닙니다. 대부분의 게임은 Initialize 메서드에서 콘텐츠 로드를 구현 하거나 업데이트 코드 에서도 콘텐츠를 구현 합니다. 플레이어가 특정 게임 지점에 도달할 때까지 필요 하지 않을 수 있습니다.
 
 마지막으로 그리기 메서드를 다음과 같이 수정할 수 있습니다.
 
@@ -277,13 +277,13 @@ protected override void Draw(GameTime gameTime)
 
 ## <a name="creating-the-animation-class"></a>애니메이션 클래스 만들기
 
-현재에는 전체 **charactersheet** 파일이 표시됩니다.`CharacterEntity` 한 파일에서 여러 이미지를 정렬 하는 것을 *sprite 시트*라고 합니다. 일반적으로 스프라이트는 스프라이트 시트의 일부만 렌더링 합니다. 이 charactersheet의 일부 `CharacterEntity` 를 렌더링 하도록를 수정 합니다.이 부분은 탐색 애니메이션을 표시 하기 위해 시간이 지남에 따라 변경 됩니다.
+현재 `CharacterEntity` 는 전체 **charactersheet.png** 파일을 표시 합니다. 한 파일에서 여러 이미지를 정렬 하는 것을 *sprite 시트*라고 합니다. 일반적으로 스프라이트는 스프라이트 시트의 일부만 렌더링 합니다. `CharacterEntity`이 **charactersheet.png**의 일부를 렌더링 하도록를 수정 합니다 .이 부분은 탐색 애니메이션을 표시 하기 위해 시간이 지남에 따라 변경 됩니다.
 
-CharacterEntity 애니메이션의 논리 `Animation` 와 상태를 제어 하는 클래스를 만듭니다. 애니메이션 클래스는 애니메이션 뿐만 `CharacterEntity` 아니라 모든 엔터티에 사용할 수 있는 일반 클래스가 됩니다. Ultimate 클래스는가 자신을 `Rectangle` 그릴 때 `CharacterEntity` 사용할를 제공 합니다. `Animation` 또한 애니메이션을 정의 하 `AnimationFrame` 는 데 사용 되는 클래스를 만듭니다.
+`Animation`CharacterEntity 애니메이션의 논리와 상태를 제어 하는 클래스를 만듭니다. 애니메이션 클래스는 애니메이션 뿐만 아니라 모든 엔터티에 사용할 수 있는 일반 클래스가 됩니다 `CharacterEntity` . Ultimate 클래스는가 `Animation` 자신을 `Rectangle` `CharacterEntity` 그릴 때 사용할를 제공 합니다. 또한 `AnimationFrame` 애니메이션을 정의 하는 데 사용 되는 클래스를 만듭니다.
 
 ### <a name="defining-animationframe"></a>애니메이션 프레임 정의
 
-`AnimationFrame`애니메이션에 관련 된 논리를 포함 하지 않습니다. 데이터를 저장 하는 데에만 사용 됩니다. `AnimationFrame` 클래스를 추가 하려면 **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가** ...를 선택 합니다. 이름 **애니메이션 프레임** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 다음 코드를 포함 `AnimationFrame.cs` 하도록 파일을 수정 합니다.
+`AnimationFrame` 애니메이션에 관련 된 논리를 포함 하지 않습니다. 데이터를 저장 하는 데에만 사용 됩니다. 클래스를 추가 하려면 `AnimationFrame` **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가** ...를 선택 합니다. 이름 **애니메이션 프레임** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. `AnimationFrame.cs`다음 코드를 포함 하도록 파일을 수정 합니다.
 
 ```csharp
 using System;
@@ -299,16 +299,16 @@ namespace WalkingGame
 }
 ```
 
-클래스 `AnimationFrame` 에는 다음 두 가지 정보가 포함 되어 있습니다.
+클래스에는 `AnimationFrame` 다음 두 가지 정보가 포함 되어 있습니다.
 
-- `SourceRectangle`–에 `Texture2D` `AnimationFrame`의해 표시 되는의 영역을 정의 합니다. 이 값은 픽셀 단위로 측정 되며 왼쪽 위는 (0, 0)입니다.
-- `Duration``AnimationFrame` –`Animation`에서 사용 될 때가 표시 되는 기간을 정의 합니다.
+- `SourceRectangle` –에 의해 표시 되는의 영역을 정의 합니다 `Texture2D` `AnimationFrame` . 이 값은 픽셀 단위로 측정 되며 왼쪽 위는 (0, 0)입니다.
+- `Duration` – `AnimationFrame` 에서 사용 될 때가 표시 되는 기간을 정의 `Animation` 합니다.
 
 ### <a name="defining-animation"></a>애니메이션 정의
 
-클래스 `Animation` 에는 `List<AnimationFrame>` 전달 된 시간에 따라 현재 표시 되는 프레임을 전환 하는 논리가 포함 됩니다.
+`Animation`클래스에는 전달 된 `List<AnimationFrame>` 시간에 따라 현재 표시 되는 프레임을 전환 하는 논리가 포함 됩니다.
 
-`Animation` 클래스를 추가 하려면 **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 합니다. 이름 **애니메이션** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 다음 코드를 포함 `Animation.cs` 하도록 파일을 수정 합니다.
+클래스를 추가 하려면 `Animation` **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 합니다. 이름 **애니메이션** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. `Animation.cs`다음 코드를 포함 하도록 파일을 수정 합니다.
 
 ```csharp
 using System;
@@ -361,25 +361,25 @@ namespace WalkingGame
 }
 ```
 
-`Animation` 클래스의 세부 정보 중 일부를 살펴보겠습니다.
+클래스의 세부 정보 중 일부를 살펴보겠습니다 `Animation` .
 
 ### <a name="frames-list"></a>프레임 목록
 
-멤버 `frames` 는 애니메이션에 대 한 데이터를 저장 하는 것입니다. 애니메이션을 인스턴스화하는 코드는 메서드를 `AnimationFrame` `AddFrame` 통해 `frames` 목록에 인스턴스를 추가 합니다. 보다 완전 한 구현은 수정 `public` `frames`에 대 한 메서드 또는 속성을 제공할 수 있지만이 연습에서 프레임을 추가 하는 기능을 제한 합니다.
+`frames`멤버는 애니메이션에 대 한 데이터를 저장 하는 것입니다. 애니메이션을 인스턴스화하는 코드는 `AnimationFrame` `frames` 메서드를 통해 목록에 인스턴스를 추가 합니다 `AddFrame` . 보다 완전 `public` 한 구현은 수정에 대 한 메서드 또는 속성을 제공할 수 `frames` 있지만이 연습에서 프레임을 추가 하는 기능을 제한 합니다.
 
-### <a name="duration"></a>Duration
+### <a name="duration"></a>기간
 
-Duration은 포함 `AnimationFrame` 된 모든 인스턴스의 기간 `Animation,` 을 추가 하 여 가져온의 총 기간을 반환 합니다. 이 값은 변경할 수 없는 `AnimationFrame` 개체 였던 경우에 캐시 될 수 있지만 애니메이션에 추가 된 후 변경할 수 있는 클래스로 프레임을 구현 했으므로 속성에 액세스할 때마다이 값을 계산 해야 합니다.
+Duration은 `Animation,` 포함 된 모든 인스턴스의 기간을 추가 하 여 가져온의 총 기간을 반환 합니다 `AnimationFrame` . 이 값은 변경할 수 없는 개체 였던 경우에 캐시 될 수 `AnimationFrame` 있지만 애니메이션에 추가 된 후 변경할 수 있는 클래스로 프레임을 구현 했으므로 속성에 액세스할 때마다이 값을 계산 해야 합니다.
 
 ### <a name="update"></a>업데이트
 
-메서드 `Update` 는 모든 프레임을 호출 해야 합니다. 즉, 전체 게임이 업데이트 될 때마다이 메서드를 호출 해야 합니다. 이는 현재 표시 된 프레임 `timeIntoAnimation` 을 반환 하는 데 사용 되는 멤버를 늘리기 위한 것입니다. 의 `Update` 논리는가 전체 `timeIntoAnimation` 애니메이션 기간 보다 크지 않도록 방지 합니다.
+`Update`메서드는 모든 프레임을 호출 해야 합니다. 즉, 전체 게임이 업데이트 될 때마다이 메서드를 호출 해야 합니다. 이는 `timeIntoAnimation` 현재 표시 된 프레임을 반환 하는 데 사용 되는 멤버를 늘리기 위한 것입니다. 의 논리는가 `Update` `timeIntoAnimation` 전체 애니메이션 기간 보다 크지 않도록 방지 합니다.
 
-클래스를 `Animation` 사용 하 여 탐색 애니메이션을 표시 하므로 끝에 도달 했을 때이 애니메이션을 반복 하려고 합니다. 이는이 `timeIntoAnimation` `Duration` 값 보다 큰지 여부를 확인 하 여 수행할 수 있습니다. 이 경우 시작 부분으로 다시 이동 하 여 나머지를 유지 하므로 반복 애니메이션이 생성 됩니다.
+클래스를 사용 하 여 `Animation` 탐색 애니메이션을 표시 하므로 끝에 도달 했을 때이 애니메이션을 반복 하려고 합니다. 이는이 값 보다 큰지 여부를 확인 하 여 수행할 수 있습니다 `timeIntoAnimation` `Duration` . 이 경우 시작 부분으로 다시 이동 하 여 나머지를 유지 하므로 반복 애니메이션이 생성 됩니다.
 
 ### <a name="obtaining-the-current-frames-rectangle"></a>현재 프레임의 사각형 가져오기
 
-`Animation` 클래스의 용도는 궁극적으로 스프라이트를 그릴 때 `Rectangle` 사용할 수 있는를 제공 합니다. 현재 클래스 `Animation` 에는 `timeIntoAnimation` 멤버를 변경 하는 논리가 포함 되어 있으며이는 표시 되어야 `Rectangle` 하는을 가져오는 데 사용 됩니다. 클래스에서 속성을 `CurrentRectangle` 만들어이 작업을 수행 합니다. `Animation` 이 속성을 클래스에 `Animation` 복사 합니다.
+클래스의 용도는 `Animation` 궁극적으로 `Rectangle` 스프라이트를 그릴 때 사용할 수 있는를 제공 합니다. 현재 클래스에는 `Animation` 멤버를 변경 하는 논리가 포함 되어 있으며이는 표시 되어야 하 `timeIntoAnimation` 는을 가져오는 데 사용 됩니다 `Rectangle` . 클래스에서 속성을 만들어이 작업을 수행 `CurrentRectangle` `Animation` 합니다. 이 속성을 클래스에 복사 합니다 `Animation` .
 
 ```csharp
 public Rectangle CurrentRectangle
@@ -426,16 +426,16 @@ public Rectangle CurrentRectangle
 
 ## <a name="adding-the-first-animation-to-characterentity"></a>CharacterEntity에 첫 번째 애니메이션 추가
 
-에 `CharacterEntity` 는 현재 `Animation` 표시 되는에 대 한 참조 뿐만 아니라 탐색 및 발생에 대 한 애니메이션도 포함 됩니다.
+에는 `CharacterEntity` 현재 표시 되는에 대 한 참조 뿐만 아니라 탐색 및 발생에 대 한 애니메이션도 포함 됩니다 `Animation` .
 
-먼저 지금까지 작성 된 기능을 `Animation,` 테스트 하는 데 사용 하는 첫 번째를 추가 합니다. CharacterEntity 클래스에 다음 멤버를 추가 해 보겠습니다.
+먼저 `Animation,` 지금까지 작성 된 기능을 테스트 하는 데 사용 하는 첫 번째를 추가 합니다. CharacterEntity 클래스에 다음 멤버를 추가 해 보겠습니다.
 
 ```csharp
 Animation walkDown;
 Animation currentAnimation;
 ```
 
-다음으로 `walkDown` 애니메이션을 정의 하겠습니다. 이렇게 하려면 생성자를 다음과 `CharacterEntity` 같이 수정 합니다.
+다음으로 애니메이션을 정의 하겠습니다 `walkDown` . 이렇게 하려면 `CharacterEntity` 생성자를 다음과 같이 수정 합니다.
 
 ```csharp
 public CharacterEntity (GraphicsDevice graphicsDevice)
@@ -456,7 +456,7 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 }
 ```
 
-앞서 언급 했 듯이 시간 기반 애니메이션을 `Animation.Update` 재생 하려면를 호출 해야 합니다. 또한도 할당 `currentAnimation`해야 합니다. 지금은 `currentAnimation` 를에 `walkDown`할당 하지만 이동 논리를 구현할 때 나중에이 코드를 바꿀 예정입니다. 다음과 같이에 `CharacterEntity` 메서드 `Update` 를 추가 합니다.
+앞서 언급 했 듯이 `Animation.Update` 시간 기반 애니메이션을 재생 하려면를 호출 해야 합니다. 또한도 할당 해야 `currentAnimation` 합니다. 지금은 `currentAnimation` 를에 할당 `walkDown` 하지만 이동 논리를 구현할 때 나중에이 코드를 바꿀 예정입니다. 다음과 `Update` 같이에 메서드를 추가 합니다 `CharacterEntity` .
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -469,7 +469,7 @@ public void Update(GameTime gameTime)
 }
 ```
 
-이제를 `currentAnimation` 할당 하 고 업데이트 했으므로 그리기를 수행 하는 데 사용할 수 있습니다. 다음과 같이 수정 `CharacterEntity.Draw` 합니다.
+이제를 `currentAnimation` 할당 하 고 업데이트 했으므로 그리기를 수행 하는 데 사용할 수 있습니다. 다음과 같이 수정 합니다 `CharacterEntity.Draw` .
 
 ```csharp
 public void Draw(SpriteBatch spriteBatch)
@@ -482,7 +482,7 @@ public void Draw(SpriteBatch spriteBatch)
 }
 ```
 
-`CharacterEntity` 애니메이션을 얻기 위한 마지막 단계는에서 `Game1`새로 추가 `Update` 된 메서드를 호출 하는 것입니다. 다음과 `Game1.Update` 같이 수정 합니다.
+애니메이션을 얻기 위한 마지막 단계는 `CharacterEntity` 에서 새로 추가 된 메서드를 호출 하는 것입니다 `Update` `Game1` . 다음과 `Game1.Update` 같이 수정 합니다.
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -492,7 +492,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-이제는 `CharacterEntity` `walkDown` 애니메이션을 재생 합니다.
+이제는 `CharacterEntity` 애니메이션을 재생 합니다 `walkDown` .
 
 ![이제 CharacterEntity가 walkDown 애니메이션을 재생 합니다.](part2-images/image5.gif)
 
@@ -502,7 +502,7 @@ protected override void Update(GameTime gameTime)
 
 ### <a name="defining-getdesiredvelocityfrominput"></a>GetDesiredVelocityFromInput 정의
 
-터치 스크린의 현재 상태에 `TouchPanel` 대 한 정보를 제공 하는 MonoGame의 클래스를 사용 합니다. 를 `TouchPanel` 확인 하 고 문자의 원하는 속도를 반환 하는 메서드를 추가 해 보겠습니다.
+`TouchPanel`터치 스크린의 현재 상태에 대 한 정보를 제공 하는 MonoGame의 클래스를 사용 합니다. 를 확인 `TouchPanel` 하 고 문자의 원하는 속도를 반환 하는 메서드를 추가 해 보겠습니다.
 
 ```csharp
 Vector2 GetDesiredVelocityFromInput()
@@ -528,7 +528,7 @@ Vector2 GetDesiredVelocityFromInput()
 }
 ```
 
-메서드 `TouchPanel.GetState` 는 사용자가 `TouchCollection` 화면에 접촉 하는 위치에 대 한 정보를 포함 하는을 반환 합니다. 사용자가 화면을 건드리지 않는 경우는 비어 있습니다. `TouchCollection` 이 경우에는 문자를 이동 하지 않아야 합니다.
+`TouchPanel.GetState`메서드는 `TouchCollection` 사용자가 화면에 접촉 하는 위치에 대 한 정보를 포함 하는을 반환 합니다. 사용자가 화면을 건드리지 않는 경우는 `TouchCollection` 비어 있습니다 .이 경우에는 문자를 이동 하지 않아야 합니다.
 
 사용자가 화면을 터치 하는 경우 첫 번째 터치로 문자를 이동 합니다. 즉, `TouchLocation` 인덱스 0에서로 이동 합니다. 처음에는 문자 위치와 첫 번째 터치 위치의 차이와 같도록 원하는 속도를 설정 합니다.
 
@@ -537,13 +537,13 @@ Vector2 GetDesiredVelocityFromInput()
         desiredVelocity.Y = touchCollection [0].Position.Y - this.Y;
 ```
 
-다음은 문자를 동일한 속도로 이동 하는 수치 연산입니다. 이 점이 중요 한 이유를 설명 하기 위해 사용자가 문자가 위치한 위치에서 500 픽셀을 벗어나 화면을 접촉 하는 상황을 살펴보겠습니다. `desiredVelocity.X` 가 설정 된 첫 번째 줄은 500 값을 할당 합니다. 그러나 사용자가 문자에서 100 단위 까지만 화면에 접촉 하는 경우는 `desiredVelocity.X` 100으로 설정 됩니다. 결과적으로 문자 이동 속도가 문자에서 접촉 하는 거리에 응답 하 게 됩니다. 문자를 항상 동일한 속도로 이동 하려면 desiredVelocity을 수정 해야 합니다.
+다음은 문자를 동일한 속도로 이동 하는 수치 연산입니다. 이 점이 중요 한 이유를 설명 하기 위해 사용자가 문자가 위치한 위치에서 500 픽셀을 벗어나 화면을 접촉 하는 상황을 살펴보겠습니다. 가 설정 된 첫 번째 줄은 `desiredVelocity.X` 500 값을 할당 합니다. 그러나 사용자가 문자에서 100 단위 까지만 화면에 접촉 하는 경우는 `desiredVelocity.X` 100으로 설정 됩니다. 결과적으로 문자 이동 속도가 문자에서 접촉 하는 거리에 응답 하 게 됩니다. 문자를 항상 동일한 속도로 이동 하려면 desiredVelocity을 수정 해야 합니다.
 
-`if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` 문은 속도가 0이 아닌지 여부를 확인 합니다. 즉, 사용자가 문자의 현재 위치와 동일한 위치에 접촉 하 고 있지 않은지 확인 합니다. 그렇지 않으면 터치의 거리에 관계 없이 문자의 속도를 상수로 설정 해야 합니다. 이는 속도 벡터를 정규화 하 여 길이가 1 인 속도 벡터를 표준화 하 여 수행 합니다. 속도 벡터 1은 문자가 1 픽셀에서 초당 이동 한다는 것을 의미 합니다. 값을 원하는 속도의 200에 곱하여 속도를 높이는 것이 좋습니다.
+`if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)`문은 속도가 0이 아닌지 여부를 확인 합니다. 즉, 사용자가 문자의 현재 위치와 동일한 위치에 접촉 하 고 있지 않은지 확인 합니다. 그렇지 않으면 터치의 거리에 관계 없이 문자의 속도를 상수로 설정 해야 합니다. 이는 속도 벡터를 정규화 하 여 길이가 1 인 속도 벡터를 표준화 하 여 수행 합니다. 속도 벡터 1은 문자가 1 픽셀에서 초당 이동 한다는 것을 의미 합니다. 값을 원하는 속도의 200에 곱하여 속도를 높이는 것이 좋습니다.
 
 ### <a name="applying-velocity-to-position"></a>위치에 속도 적용
 
-에서 `GetDesiredVelocityFromInput` 반환 된 속도는 런타임에 적용 되는 `X` 문자 및 `Y` 값에 적용 해야 합니다. 메서드를 다음과 같이 `Update` 수정 합니다.
+에서 반환 된 속도는 `GetDesiredVelocityFromInput` 런타임에 적용 되는 문자 및 값에 적용 해야 합니다 `X` `Y` . 메서드를 다음과 같이 수정 합니다 `Update` .
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -562,7 +562,7 @@ public void Update(GameTime gameTime)
 }
 ```
 
-여기에서 구현 된 기능을 *시간 기반* 이동 이라고 합니다 ( *프레임 기반* 이동과 반대). 시간 기반 이동은에 `velocity` `gameTime.ElapsedGameTime.TotalSeconds`저장 된 마지막 업데이트 이후 경과 된 시간을 기준으로 속도 값 (이 경우 변수에 저장 된 값)을 곱합니다. 게임에서 초당 프레임 수가 더 적으면 프레임 간에 경과 된 시간이 발생 합니다. 즉, 시간 기반 이동을 사용 하는 개체가 프레임 속도에 관계 없이 항상 동일한 속도로 이동 합니다.
+여기에서 구현 된 기능을 *시간 기반* 이동 이라고 합니다 ( *프레임 기반* 이동과 반대). 시간 기반 이동은 `velocity` 에 저장 된 마지막 업데이트 이후 경과 된 시간을 기준으로 속도 값 (이 경우 변수에 저장 된 값)을 곱합니다 `gameTime.ElapsedGameTime.TotalSeconds` . 게임에서 초당 프레임 수가 더 적으면 프레임 간에 경과 된 시간이 발생 합니다. 즉, 시간 기반 이동을 사용 하는 개체가 프레임 속도에 관계 없이 항상 동일한 속도로 이동 합니다.
 
 지금 게임을 실행 하는 경우 문자가 터치 위치로 이동 하는 것을 알 수 있습니다.
 
@@ -577,7 +577,7 @@ public void Update(GameTime gameTime)
 
 ### <a name="defining-the-rest-of-the-animations"></a>나머지 애니메이션 정의
 
-먼저가 추가 `Animation` `CharacterEntity` 된것과동일한위치에있는모든애니메이션에대한인스턴스를클래스`walkDown`에 추가 합니다. 이 작업을 수행 하면에 `CharacterEntity` 는 다음 `Animation` 멤버가 포함 됩니다.
+먼저가 `Animation` `CharacterEntity` 추가 된 것과 동일한 위치에 있는 모든 애니메이션에 대 한 인스턴스를 클래스에 추가 `walkDown` 합니다. 이 작업을 수행 하면에는 `CharacterEntity` 다음 멤버가 포함 됩니다 `Animation` .
 
 ```csharp
 Animation walkDown;
@@ -593,7 +593,7 @@ Animation standRight;
 Animation currentAnimation;
 ```
 
-이제 다음과 같이 `CharacterEntity` 생성자에서 애니메이션을 정의 합니다.
+이제 다음과 같이 생성자에서 애니메이션을 정의 합니다 `CharacterEntity` .
 
 ```csharp
 public CharacterEntity (GraphicsDevice graphicsDevice)
@@ -645,7 +645,7 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 }
 ```
 
-이 연습을 더 짧게 유지 하기 위해 위의 코드가 `CharacterEntity` 생성자에 추가 되었다는 점에 유의 해야 합니다. 게임은 일반적으로 문자 애니메이션의 정의를 고유한 클래스로 구분 하거나 XML 또는 JSON과 같은 데이터 형식에서이 정보를 로드 합니다.
+`CharacterEntity`이 연습을 더 짧게 유지 하기 위해 위의 코드가 생성자에 추가 되었다는 점에 유의 해야 합니다. 게임은 일반적으로 문자 애니메이션의 정의를 고유한 클래스로 구분 하거나 XML 또는 JSON과 같은 데이터 형식에서이 정보를 로드 합니다.
 
 다음으로, 문자가 이동 하는 방향에 따라 또는 문자가 방금 중지 된 경우 마지막 애니메이션에 따라 애니메이션을 사용 하도록 논리를 조정 합니다. 이렇게 하려면 메서드를 수정 합니다 `Update` .
 
@@ -716,9 +716,9 @@ public void Update(GameTime gameTime)
 }
 ```
 
-애니메이션을 전환 하는 코드는 두 개의 블록으로 분할 됩니다. 첫 번째는 속도가와 같지 `Vector2.Zero` 않은지 여부를 확인 합니다 .이는 문자 이동 여부를 알려 줍니다. 문자를 이동 하는 경우 `velocity.X` 및 `velocity.Y` 값을 확인 하 여 재생할 탐색 애니메이션을 결정할 수 있습니다.
+애니메이션을 전환 하는 코드는 두 개의 블록으로 분할 됩니다. 첫 번째는 속도가와 같지 않은지 여부를 확인 합니다 `Vector2.Zero` .이는 문자 이동 여부를 알려 줍니다. 문자를 이동 하는 경우 및 값을 확인 하 여 `velocity.X` `velocity.Y` 재생할 탐색 애니메이션을 결정할 수 있습니다.
 
-문자가 이동 하지 않는 경우에는 문자 `currentAnimation` 를 단일 애니메이션으로 설정 해야 합니다 `currentAnimation` . 그러나가 탐색 애니메이션 이거나 애니메이션이 설정 되지 않은 경우에만이를 수행 합니다. 가 4 개의 탐색 애니메이션 중 하나가 아닌 경우 문자는 이미 존재 하므로 변경할 `currentAnimation`필요가 없습니다. `currentAnimation`
+문자가 이동 하지 않는 경우에는 문자를 `currentAnimation` 단일 애니메이션으로 설정 해야 합니다 `currentAnimation` . 그러나가 탐색 애니메이션 이거나 애니메이션이 설정 되지 않은 경우에만이를 수행 합니다. `currentAnimation`가 4 개의 탐색 애니메이션 중 하나가 아닌 경우 문자는 이미 존재 하므로 변경할 필요가 없습니다 `currentAnimation` .
 
 이 코드의 결과는 문자를 탐색 하는 동안 적절 하 게 애니메이션 효과를 적용 한 다음 중지 될 때 이동한 마지막 방향을 face 하는 것입니다.
 
@@ -731,4 +731,4 @@ public void Update(GameTime gameTime)
 ## <a name="related-links"></a>관련 링크
 
 - [CharacterSheet Image 리소스 (샘플)](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true)
-- [탐색 게임 완료 (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
+- [탐색 게임 완료 (샘플)](/samples/xamarin/mobile-samples/walkinggamemg/)

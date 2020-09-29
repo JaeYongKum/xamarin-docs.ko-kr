@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8ed83ee8f0bded6258b695f7a6383cda1929f542
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: db4cab313b1c1f2fc1aaa969735f7f136feb7015
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997087"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429694"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.ios에서 사용자 지정 컨트롤 만들기
 
@@ -183,7 +183,7 @@ private void Initialize() {
 }
 ```
 
-이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 예를 들어:
+이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 다음은 그 예입니다.
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)
@@ -389,7 +389,7 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacCustomControl (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccustomcontrol)
+- [MacCustomControl (샘플)](/samples/xamarin/mac-samples/maccustomcontrol)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
 - [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

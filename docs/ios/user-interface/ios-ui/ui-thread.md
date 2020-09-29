@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 01f95641a0cf65341479c51b2f6314a0ef3ea2de
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e91b7fdf99e8eb69cca240253f169ba16b0b11c4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939076"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432001"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.ios에서 UI 스레드 사용
 
@@ -93,5 +93,5 @@ async partial void button2_TouchUpInside (UIButton sender)
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [컨트롤 (샘플)](/samples/xamarin/ios-samples/controls)
 - [스레딩](~/ios/app-fundamentals/threading.md)

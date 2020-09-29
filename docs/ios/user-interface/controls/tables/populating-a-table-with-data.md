@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 48aeaf8e3036c9b4e1ed548208b7daa822a00913
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 819e4f89b1443b2e1154aedfb51007ca38fdca02
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933421"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429913"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.ios의 데이터로 테이블 채우기
 
@@ -33,8 +33,8 @@ ms.locfileid: "86933421"
 
 테이블에 데이터를 표시 하는 데 필요한 두 가지 필수 메서드는 다음과 같습니다.
 
-- **Rowsinsection** – [`nint`](~/cross-platform/macios/nativetypes.md) 테이블에 표시 해야 하는 총 데이터 행 수를 반환 합니다.
-- **Getcell** – `UITableViewCell` 메서드에 전달 된 해당 행 인덱스의 데이터로 채워진을 반환 합니다.
+- **Rowsinsection** –  [`nint`](~/cross-platform/macios/nativetypes.md) 테이블에 표시 해야 하는 총 데이터 행 수를 반환 합니다.
+- **Getcell** –  `UITableViewCell` 메서드에 전달 된 해당 행 인덱스의 데이터로 채워진을 반환 합니다.
 
 BasicTable 샘플 파일 **TableSource.cs** 에는의 가장 간단한 구현이 `UITableViewSource` 있습니다. 아래 코드 조각에서 확인할 수 있습니다. 아래 코드 조각에서는 테이블에 표시 되는 문자열의 배열을 허용 하 고 각 문자열이 포함 된 기본 셀 스타일을 반환 합니다.
 
@@ -292,4 +292,4 @@ public override string TitleForFooter (UITableView tableView, nint section)
 
 ## <a name="related-links"></a>관련 링크
 
-- [WorkingWithTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (샘플)](/samples/xamarin/ios-samples/workingwithtables)

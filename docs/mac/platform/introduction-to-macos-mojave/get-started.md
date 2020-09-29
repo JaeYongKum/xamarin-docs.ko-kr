@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: a7aba55f0470ad44dcce3de56ed15308439785e2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6461c1d571afb29f6ac3c0615165d8d0380a66d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029848"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429664"
 ---
 # <a name="get-started-with-macos-mojave"></a>MacOS Mojave 시작
 
@@ -38,4 +38,4 @@ ms.locfileid: "73029848"
 ## <a name="related-links"></a>관련 링크
 
 - [Xcode 10 다운로드](https://developer.apple.com/download/)
-- [Xamarin.ios 5.0 릴리스 정보](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Xamarin.ios 5.0 릴리스 정보](/xamarin/mac/release-notes/5/5.0/)

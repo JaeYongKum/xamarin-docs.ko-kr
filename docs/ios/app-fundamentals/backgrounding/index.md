@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: e51b6c7ffe0b0ae027e527d959979e558afa6325
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3d50bf91502e7a3b7331348a61af50a5c789f838
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005061"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432425"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Xamarin.ios의 Backgrounding
 
@@ -20,11 +20,11 @@ _백그라운드 처리 또는 backgrounding 다른 응용 프로그램이 포�
 
 모바일 응용 프로그램의 Backgrounding는 데스크톱의 일반적인 멀티태스킹 개념과 근본적으로 다릅니다. 데스크톱 컴퓨터에는 화면 부동산, 전원 및 메모리를 포함 하 여 응용 프로그램에 사용할 수 있는 다양 한 리소스가 있습니다. 응용 프로그램은 동시에 실행 될 수 있으며 성능이 뛰어나고 사용할 수 있습니다. 모바일 장치에서 리소스는 훨씬 더 제한적입니다. 작은 화면에는 응용 프로그램을 두 개 이상 표시 하는 것이 어렵고 여러 응용 프로그램을 최대 속도로 실행 하면 배터리가 방전 됩니다. Backgrounding는 응용 프로그램에 필요한 백그라운드 작업을 실행 하는 데 필요한 리소스를 응용 프로그램에 제공 하는 것과 포그라운드 응용 프로그램 및 장치 응답성을 유지 하는 것 사이의 일관 된 절충입니다. IOS와 Android 모두 backgrounding에 대 한 규정이 있지만 매우 다양 한 방식으로 처리 합니다.
 
-IOS에서 backgrounding는 응용 프로그램 상태로 인식 되며 앱과 사용자의 동작에 따라 백그라운드 상태에서 앱이 이동 합니다. 또한 iOS는 중요 한 작업을 완료 하 고, 알려진 백그라운드 필수 응용 프로그램의 형식으로 작동 하 고, 지정 된 응용 프로그램의 콘텐츠를 새로 고칠 수 있도록 OS에 요청을 포함 하 여 백그라운드에서 실행 되도록 앱을 연결 하는 몇 가지 옵션을 제공 합니다. 구간.
+IOS에서 backgrounding는 응용 프로그램 상태로 인식 되며 앱과 사용자의 동작에 따라 백그라운드 상태에서 앱이 이동 합니다. 또한 iOS는 중요 한 작업을 완료 하 고, 알려진 백그라운드 필수 응용 프로그램의 형식으로 작동 하 고, 지정 된 간격으로 응용 프로그램의 콘텐츠를 새로 고칠 수 있도록 OS에 요청 하는 작업을 포함 하 여 백그라운드에서 실행 되도록 앱을 연결 하는 몇 가지 옵션을 제공 합니다.
 
 이 가이드와 함께 제공 되는 연습에서는 백그라운드에서 응용 프로그램 작업을 수행 하는 방법을 배울 예정입니다. 주요 개념 및 모범 사례를 살펴본 다음 백그라운드에서 위치 업데이트를 수신 하는 실제 앱을 만드는 과정을 단계별로 안내 합니다.
 
-## <a name="contents"></a>목차
+## <a name="contents"></a>콘텐츠
 
 1. [iOS의 Backgrounding 소개](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
 1. [애플리케이션 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
@@ -39,7 +39,7 @@ IOS에서 backgrounding는 응용 프로그램 상태로 인식 되며 앱과 �
 ## <a name="related-links"></a>관련 링크
 
 - [Android의 Backgrounding](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
-- [Location (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
-- [간단한 백그라운드 전송 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
+- [LifecycleDemo (샘플)](/samples/xamarin/ios-samples/lifecycledemo)
+- [Location (샘플)](/samples/xamarin/ios-samples/location)
+- [간단한 백그라운드 전송 (샘플)](/samples/xamarin/ios-samples/simplebackgroundtransfer)
 - [iOS 백그라운드 실행](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

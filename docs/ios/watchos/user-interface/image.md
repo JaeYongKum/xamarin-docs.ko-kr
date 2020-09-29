@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 3fd119828a953c002c7d66f248bf26b413018ae4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f1c21d64c8e1e271043e7d0b918f6033e21daac7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939700"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432994"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Xamarin의 watchOS 이미지 컨트롤
 
@@ -36,7 +36,7 @@ Asset catalog 이미지를 사용 하 여 시청 키트 앱에 이미지를 추�
 
 이미지를 표시 하는 가장 효율적인 방법은 *조사식 앱 프로젝트에* 이미지를 포함 하 고 메서드를 사용 하 여 표시 하는 것입니다 `SetImage(string imageName)` .
 
-예를 들어, [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.
+예를 들어, [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog/) 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.
 
 ![WatchKitCatalog 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.](image-images/asset-whale-sml.png)
 
@@ -57,7 +57,7 @@ Watch 앱 자체에 저장 된 이미지를 로드 하는 것 외에도 확장 �
 
 조사식 확장에서 이미지를 로드 하려면 인스턴스를 만든 `UIImage` 다음 개체를 `SetImage` 사용 하 여를 호출 `UIImage` 합니다.
 
-예를 들어 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 조사식 확장 프로젝트에 **Bumblebee** 라는 이미지가 있습니다.
+예를 들어 [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 조사식 확장 프로젝트에 **Bumblebee** 라는 이미지가 있습니다.
 
 ![WatchKitCatalog 샘플에는 조사식 확장 프로젝트에 Bumblebee 라는 이미지가 있습니다.](image-images/asset-bumblebee-sml.png)
 
@@ -76,7 +76,7 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 이미지 집합에 애니메이션 효과를 주려면 모두 동일한 접두사로 시작 하 고 숫자 접미사가 있어야 합니다.
 
-[WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 **버스** 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.
+[WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 **버스** 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.
 
 ![WatchKitCatalog 샘플에는 버스 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.](image-images/asset-bus-animation-sml.png)
 
@@ -124,5 +124,5 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple의 이미지 문서](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)

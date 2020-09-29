@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0358e1570a5e38e008894a7eb9b6ca1985a0fed0
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 21154ee5ed83d9d6af2c5d5f70bb64759de43137
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997256"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431515"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Xamarin의 watchOS Table 컨트롤
 
@@ -41,7 +41,7 @@ WatchOS `WKInterfaceTable` 컨트롤은 해당 iOS에 해당 하는 것 보다 �
 
 ## <a name="create-and-populate-rows"></a>행 만들기 및 채우기
 
-`SetNumberOfRows`는를 사용 하 여 올바른 항목을 선택 하 여 각 행에 대 한 행 컨트롤러 클래스를 만듭니다 `Identifier` . 행 컨트롤러에 사용자 지정을 지정한 경우 `Identifier` 아래 코드 조각의 **기본값** 을 사용한 식별자로 변경 합니다. `RowController`가 호출 되 고 테이블이 표시 될 때 *모든 행에 대 한* 가 만들어집니다 `SetNumberOfRows` .
+`SetNumberOfRows` 는를 사용 하 여 올바른 항목을 선택 하 여 각 행에 대 한 행 컨트롤러 클래스를 만듭니다 `Identifier` . 행 컨트롤러에 사용자 지정을 지정한 경우 `Identifier` 아래 코드 조각의 **기본값** 을 사용한 식별자로 변경 합니다. `RowController`가 호출 되 고 테이블이 표시 될 때 *모든 행에 대 한* 가 만들어집니다 `SetNumberOfRows` .
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -51,7 +51,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 > [!IMPORTANT]
 > 테이블 행은 iOS에 있는 것 처럼 가상화 되지 않습니다. 행 수를 제한 하십시오 (Apple에서 20 개 미만 권장).
 
-행을 만든 후에는 각 셀을 채워야 합니다 (예: `GetCell` iOS에서 수행). [WatchTables 예제의](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) 이 코드 조각은 각 행의 레이블을 업데이트 합니다.
+행을 만든 후에는 각 셀을 채워야 합니다 (예: `GetCell` iOS에서 수행). [WatchTables 예제의](/samples/xamarin/ios-samples/watchos-watchtables) 이 코드 조각은 각 행의 레이블을 업데이트 합니다.
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -208,6 +208,6 @@ namespace WatchTables.OnWatchExtension
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (샘플)](/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (샘플)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple의 테이블 문서](https://developer.apple.com/reference/watchkit/wkinterfacetable)

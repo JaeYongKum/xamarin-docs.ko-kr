@@ -7,36 +7,36 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 3bc6f0a95bdd01991ccea69d7917f5fabcb9f51b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853156"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430962"
 ---
 # <a name="walkthrough-bind-an-ios-swift-library"></a>연습: iOS Swift 라이브러리 바인딩
 
 > [!IMPORTANT]
-> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사 하 고 있습니다. 향후 개발 노력을 알리기 위해 [**이 설문 조사**](https://www.surveymonkey.com/r/KKBHNLT) 를 수행 하세요.
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 Xamarin을 사용 하면 모바일 개발자가 Visual Studio 및 c #을 사용 하 여 플랫폼 간 네이티브 모바일 환경을 만들 수 있습니다. IOS platform SDK 구성 요소를 즉시 사용할 수 있습니다. 그러나 대부분의 경우에는 해당 플랫폼용으로 개발 된 타사 Sdk를 사용 하 여 바인딩을 통해 수행할 수 있도록 하는 것이 좋습니다. 타사 목표-C 프레임 워크를 Xamarin.ios 응용 프로그램에 통합 하려면 응용 프로그램에서 사용할 수 있으려면 먼저 해당 응용 프로그램에 대 한 Xamarin.ios 바인딩을 만들어야 합니다.
 
 IOS 플랫폼은 해당 네이티브 언어 및 도구와 함께 지속적으로 진화 하 고 있으며 Swift는 현재 iOS 개발 분야에서 가장 많은 동적 영역 중 하나입니다. 여러 타사 Sdk가 이미 목표-C에서 Swift로 마이그레이션 되었으며 새로운 과제가 제공 됩니다. Swift 바인딩 프로세스는 객관적인 C와 유사 하지만 AppStore에 허용 되는 Xamarin.ios 응용 프로그램을 성공적으로 빌드하고 실행 하려면 추가 단계와 구성 설정이 필요 합니다.
 
-이 문서의 목표는이 시나리오를 해결 하기 위한 개략적인 접근 방식을 간략하게 설명 하 고 간단한 예제를 사용 하 여 자세한 단계별 가이드를 제공 하는 것입니다.
+이 문서의 목표는 이 시나리오를 해결하기 위한 개략적인 방법을 간략하게 설명하고 간단한 예제를 통해 자세한 단계별 가이드를 제공하는 것입니다.
 
 ## <a name="background"></a>배경
 
 Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 프레임 워크의 채택을 빠르게 성장 하는 버전 5.1에 있습니다. Swift 프레임 워크 바인딩에 대 한 몇 가지 옵션을 사용할 수 있으며이 문서는 목표-C 생성 된 인터페이스 헤더를 사용 하는 방법을 간략하게 설명 합니다. 헤더는 프레임 워크가 생성 될 때 Xcode 도구에 의해 자동으로 생성 되며, 관리 되는 지역에서 Swift 세계로 통신 하는 방법으로 사용 됩니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 요건
 
 이 연습을 완료 하려면 다음이 필요 합니다.
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Mac용 Visual Studio](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started#installing-objective-sharpie)
-- [Appcenter CLI](https://docs.microsoft.com/appcenter/test-cloud/) (선택 사항)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md#installing-objective-sharpie)
+- [Appcenter CLI](/appcenter/test-cloud/) (선택 사항)
 
 ## <a name="build-a-native-library"></a>네이티브 라이브러리 빌드
 
@@ -201,11 +201,11 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
     > [!TIP]
     > [도우미 스크립트](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) 를 사용 하 여 위의 모든 단계를 자동화 하는 fat 프레임 워크를 만들 수도 있습니다.
 
-## <a name="prepare-metadata"></a>메타 데이터 준비
+## <a name="prepare-metadata"></a>메타데이터 준비
 
-이번에는 Xamarin.ios 바인딩에서 사용할 준비가 된 목표로 생성 된 인터페이스 헤더가 있는 프레임 워크를 사용 해야 합니다.  다음 단계는 c # 클래스를 생성 하기 위해 바인딩 프로젝트에서 사용 되는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구 및 생성 된 헤더 파일에서 수동으로 또는 자동으로 만들 수 있습니다. Sharpie를 사용 하 여 메타 데이터를 생성 합니다.
+이번에는 Xamarin.ios 바인딩에서 사용할 준비가 된 목표로 생성 된 인터페이스 헤더가 있는 프레임 워크를 사용 해야 합니다.  다음 단계는 c # 클래스를 생성 하기 위해 바인딩 프로젝트에서 사용 되는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) 도구 및 생성 된 헤더 파일에서 수동으로 또는 자동으로 만들 수 있습니다. Sharpie를 사용 하 여 메타 데이터를 생성 합니다.
 
-1. 공식 다운로드 웹 사이트에서 최신 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구를 다운로드 하 고 마법사에 따라 설치 합니다. 설치가 완료 되 면 sharpie 명령을 실행 하 여 확인할 수 있습니다.
+1. 공식 다운로드 웹 사이트에서 최신 [목표 Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md) 도구를 다운로드 하 고 마법사에 따라 설치 합니다. 설치가 완료 되 면 sharpie 명령을 실행 하 여 확인할 수 있습니다.
 
     ```bash
     sharpie -v
@@ -299,7 +299,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
         처음 두 가지 옵션 (이 옵션  `-L ...`   )은 네이티브 컴파일러에 swift 라이브러리를 찾을 위치를 알려 줍니다. 네이티브 컴파일러는 올바른 아키텍처가 없는 라이브러리를 무시 합니다. 즉, 시뮬레이터 라이브러리와 장치 라이브러리의 위치를 동시에 전달 하 여 시뮬레이터 및 장치 빌드 모두에 대해 작동 하도록 할 수 있습니다. 이러한 경로는 iOS에만 정확 하 고 tvOS 및 watchOS는 업데이트 해야 합니다. 한 가지 단점은이 접근 방식을 사용 하는 경우에는 Xcode의 올바른 작업이 필요 합니다. 바인딩 라이브러리의 소비자가 다른 위치에 Xcode 경우에는 작동 하지 않습니다. 대체 솔루션은 실행 프로젝트의 iOS 빌드 옵션 ()에서 추가 mtouch 인수에 이러한 옵션을 추가 하는 것입니다 `--gcc_flags -L... -L...` . 세 번째 옵션은 OS가 찾을 수 있도록 네이티브 링커가 실행 파일에 swift 라이브러리의 위치를 저장 하도록 합니다.
 
-1. 최종 작업은 라이브러리를 빌드하고 컴파일 오류가 없는지 확인 하는 것입니다. 일반적으로 목표 Sharpie에서 생성 된 바인딩 메타 데이터는 특성으로 주석이 추가 됩니다  `[Verify]`   . 이러한 특성은 바인딩을 원래 목표-C 선언 (바인딩된 선언 위의 설명에 제공 됨)과 비교 하 여 목표 Sharpie이 올바른 사물 인지 확인 해야 함을 의미 합니다. [다음 링크](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)를 사용 하 여 특성으로 표시 된 멤버에 대해 자세히 알아볼 수 있습니다. 프로젝트가 빌드되면 Xamarin.ios 응용 프로그램에서 사용 될 수 있습니다.
+1. 최종 작업은 라이브러리를 빌드하고 컴파일 오류가 없는지 확인 하는 것입니다. 일반적으로 목표 Sharpie에서 생성 된 바인딩 메타 데이터는 특성으로 주석이 추가 됩니다  `[Verify]`   . 이러한 특성은 바인딩을 원래 목표-C 선언 (바인딩된 선언 위의 설명에 제공 됨)과 비교 하 여 목표 Sharpie이 올바른 사물 인지 확인 해야 함을 의미 합니다. [다음 링크](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)를 사용 하 여 특성으로 표시 된 멤버에 대해 자세히 알아볼 수 있습니다. 프로젝트가 빌드되면 Xamarin.ios 응용 프로그램에서 사용 될 수 있습니다.
 
 ## <a name="consume-the-binding-library"></a>바인딩 라이브러리 사용
 
@@ -341,7 +341,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
     [![swift 프록시 결과](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
-지금까지 Swift 프레임 워크를 사용 하는 Xamarin.ios 앱 및 바인딩 라이브러리를 성공적으로 만들었습니다. 위의 응용 프로그램은 iOS 12.2 이상에서 시작 되므로 iOS 12.2 이상에서 실행 됩니다 .이 iOS 버전에서 시작 하는 ABI에는 [ABI 안정성](https://swift.org/blog/swift-5-1-released/) 및 모든 IOS 시작 Swift 런타임 라이브러리가 포함 되어 Swift 5.1 +로 컴파일된 응용 프로그램을 실행 하는 데 사용할 수 있습니다. 이전 iOS 버전에 대 한 지원을 추가 해야 하는 경우 몇 가지 단계를 더 수행 해야 합니다.
+축하합니다! Swift 프레임 워크를 사용 하는 Xamarin.ios 앱 및 바인딩 라이브러리를 성공적으로 만들었습니다. 위의 응용 프로그램은 iOS 12.2 이상에서 시작 되므로 iOS 12.2 이상에서 실행 됩니다 .이 iOS 버전에서 시작 하는 ABI에는 [ABI 안정성](https://swift.org/blog/swift-5-1-released/) 및 모든 IOS 시작 Swift 런타임 라이브러리가 포함 되어 Swift 5.1 +로 컴파일된 응용 프로그램을 실행 하는 데 사용할 수 있습니다. 이전 iOS 버전에 대 한 지원을 추가 해야 하는 경우 몇 가지 단계를 더 수행 해야 합니다.
 
 1. IOS 12.1 및 이전 버전에 대 한 지원을 추가 하려면 프레임 워크를 컴파일하는 데 사용 되는 특정 Swift dylibs를 제공 하려고 합니다. [SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet 패키지를 사용 하 여 필요한 라이브러리를 IPA로 처리 하 고 복사 합니다. 대상 프로젝트에 NuGet 참조를 추가 하 고 응용 프로그램을 다시 빌드합니다. 추가 단계가 필요 하지 않습니다. NuGet 패키지는 빌드 프로세스를 사용 하 여 실행 되는 특정 작업을 설치 하 고, 필수 Swift dylibs를 식별 하 고, 최종 IPA를 사용 하 여 패키지 합니다.
 
@@ -366,7 +366,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
         ![visual studio uitest 새로 만들기](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
-        > UITest 프로젝트를 만들고 [다음 링크로](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)앱에 대해 구성 하는 방법에 대 한 자세한 내용을 확인할 수 있습니다.
+        > UITest 프로젝트를 만들고 [다음 링크로](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)앱에 대해 구성 하는 방법에 대 한 자세한 내용을 확인할 수 있습니다.
 
     - 앱을 실행 하 고 Swift SDK 기능 중 일부를 사용 하는 기본 테스트를 만듭니다. 이 테스트는 앱을 활성화 하 고 로그인 한 다음 취소 단추를 누릅니다.
 
@@ -390,14 +390,14 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
         ```
 
         > [!TIP]
-        > Uitest framework 및 UI 자동화에 대 한 자세한 내용은 [다음 링크를](https://docs.microsoft.com/appcenter/test-cloud/uitest/)참조 하세요.
+        > Uitest framework 및 UI 자동화에 대 한 자세한 내용은 [다음 링크를](/appcenter/test-cloud/uitest/)참조 하세요.
 
     - App center에서 iOS 앱을 만들고, 테스트를 실행 하기 위해 새 장치 집합을 사용 하 여 새 테스트 실행을 만듭니다.
 
         ![visual studio app center 새로 만들기](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
-        > [다음 링크를](https://docs.microsoft.com/appcenter/test-cloud/)통해 appcenter Test Cloud에 대해 자세히 알아보세요.
+        > [다음 링크를](/appcenter/test-cloud/)통해 appcenter Test Cloud에 대해 자세히 알아보세요.
 
     - Appcenter CLI 설치
 
@@ -428,13 +428,13 @@ Xamarin.ios 바인딩 라이브러리를 통해 네이티브 Swift 프레임 워
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Mac용 Visual Studio](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/)
-- [Sharpie 메타 데이터 확인](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)
-- [바인딩 목표-C 프레임 워크](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md)
+- [Sharpie 메타 데이터 확인](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)
+- [바인딩 목표-C 프레임 워크](../binding-objective-c/walkthrough.md)
 - [Gigya iOS SDK (Swift framework)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Swift 5.1 ABI 안정성](https://swift.org/blog/swift-5-1-released/)
 - [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Xamarin UITest automation](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
-- [Xamarin.ios UITest 구성](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [AppCenter Test Cloud](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Xamarin UITest automation](/appcenter/test-cloud/uitest/)
+- [Xamarin.ios UITest 구성](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [AppCenter Test Cloud](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [샘플 프로젝트 리포지토리](https://github.com/alexeystrakh/xamarin-binding-swift-framework)

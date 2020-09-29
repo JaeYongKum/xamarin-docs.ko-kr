@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a7a09b1dec840090587377199533ef8c6ec63b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c607e4668e4754edaec50a4c8b24776c7bb5844e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573171"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430779"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.ios의 메뉴
 
@@ -80,7 +80,7 @@ Apple 및 기본적으로 모든 macOS 응용 프로그램은 응용 프로그�
 
 [![모든 연결 된 작업 보기](menu-images/defaultbar04.png "모든 연결 된 작업 보기")](menu-images/defaultbar04-large.png#lightbox) 
 
-JEA가 중요한 이유는 무엇일까요? 다음 섹션에서는 이러한 자동 정의 작업이 다른 Cocoa 사용자 인터페이스 요소와 함께 작동 하 여 메뉴 항목을 자동으로 활성화 및 비활성화 하 고 항목에 대 한 기본 제공 기능을 제공 하는 방법을 확인 합니다.
+이것이 중요한 이유는 무엇일까요? 다음 섹션에서는 이러한 자동 정의 작업이 다른 Cocoa 사용자 인터페이스 요소와 함께 작동 하 여 메뉴 항목을 자동으로 활성화 및 비활성화 하 고 항목에 대 한 기본 제공 기능을 제공 하는 방법을 확인 합니다.
 
 나중에 이러한 기본 제공 작업을 사용 하 여 코드에서 항목을 활성화 및 비활성화 하 고, 선택 하는 경우 고유한 기능을 제공 합니다.
 
@@ -120,7 +120,7 @@ UI 항목 또는 코드를 추가 하기 전에 새로 만든 Xamarin.ios 응용
 - **사용자 지정 작업 및 validateMenuItem:** [창 또는 뷰 컨트롤러 사용자 지정 작업](#Working-with-Custom-Window-Actions)에 바인딩된 메뉴 항목의 경우 작업을 추가 `validateMenuItem:` 하 고 메뉴 항목을 수동으로 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 - **수동 메뉴 사용** - `Enabled` 각 항목의 속성을 수동으로 설정 `NSMenuItem` 하 여 메뉴의 각 항목을 개별적으로 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
-시스템을 선택 하려면의 속성을 설정 합니다 `AutoEnablesItems` `NSMenu` . `true`는 자동 (기본 동작) 이며 `false` 수동입니다. 
+시스템을 선택 하려면의 속성을 설정 합니다 `AutoEnablesItems` `NSMenu` . `true` 는 자동 (기본 동작) 이며 `false` 수동입니다. 
 
 > [!IMPORTANT]
 > 수동 메뉴 사용을 사용 하도록 선택 하는 경우와 같은 AppKit 클래스에 의해 제어 되는 메뉴 항목도 `NSTextView` 자동으로 업데이트 되지 않습니다. 코드에서 모든 항목을 직접 사용 하거나 사용 하지 않도록 설정 하는 일을 담당 합니다.
@@ -226,7 +226,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 앱에서을 사용 하지 않는 경우에도를 사용 하 여의 `NSDocuments` `NSDocumentController` 메서드에 파일의 위치를 포함 하는를 전송 하 여 **최근 열기** 메뉴를 유지 관리 합니다 `NSUrl` `NoteNewRecentDocumentURL` `SharedDocumentController` .
 
-그런 다음 `OpenFile` 사용자가 **최근 항목 열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예를 들면 다음과 같습니다.
+그런 다음 `OpenFile` 사용자가 **최근 항목 열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -425,7 +425,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 표준 메뉴 항목으로 연결 되는 기본 제공 **첫 번째 응답자** 작업과 마찬가지로 새 사용자 지정 작업을 만들고 Interface Builder의 메뉴 항목에 연결할 수 있습니다.
 
-먼저 앱의 창 컨트롤러 중 하나에 대 한 사용자 지정 작업을 정의 합니다. 예를 들면 다음과 같습니다.
+먼저 앱의 창 컨트롤러 중 하나에 대 한 사용자 지정 작업을 정의 합니다. 다음은 그 예입니다.
 
 ```csharp
 [Action("defineKeyword:")]
@@ -992,7 +992,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;`시스템 차원의 상태 표시줄에 대 한 액세스를 제공 합니다. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);`새 상태 표시줄 항목을 만듭니다. 여기에서 메뉴 및 메뉴 항목을 몇 개 만들고 방금 만든 상태 표시줄 항목에 메뉴를 연결 합니다. 
+`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;` 시스템 차원의 상태 표시줄에 대 한 액세스를 제공 합니다. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);` 새 상태 표시줄 항목을 만듭니다. 여기에서 메뉴 및 메뉴 항목을 몇 개 만들고 방금 만든 상태 표시줄 항목에 메뉴를 연결 합니다. 
 
 응용 프로그램을 실행 하면 새 상태 표시줄 항목이 표시 됩니다. 메뉴에서 항목을 선택 하면 텍스트 보기의 텍스트가 변경 됩니다. 
 
@@ -1074,7 +1074,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacMenus (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
+- [MacMenus (샘플)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [인간 인터페이스 지침-메뉴](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [응용 프로그램 메뉴 및 팝업 목록 소개](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: a552b7c395634c264114a378ee3f5c67d164d9f3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ef632b4bff3313de82c71cb5839ecdc24c9242ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937958"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431492"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.ios의 파일 시스템 액세스
 
@@ -245,7 +245,7 @@ iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이
 
 ![Info.plist에 LSSupportsOpeningDocumentsInPlace를 설정 합니다.](file-system-images/51-supports-opening.png)
 
-이제 앱 **문서** 디렉터리를 **파일** 앱에서 찾아볼 수 있습니다. **파일** 앱에서 **내 iPhone** 로 이동 하면 공유 파일이 있는 각 앱이 표시 됩니다. 아래 스크린샷에는 [FileSystem 샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode) 이 표시 됩니다.
+이제 앱 **문서** 디렉터리를 **파일** 앱에서 찾아볼 수 있습니다. **파일** 앱에서 **내 iPhone** 로 이동 하면 공유 파일이 있는 각 앱이 표시 됩니다. 아래 스크린샷에는 [FileSystem 샘플 앱](/samples/xamarin/ios-samples/filesystemsamplecode) 이 표시 됩니다.
 
 ![iOS 11 파일 앱](file-system-images/50-files-app-1-sml.png) ![내 iPhone 파일 찾아보기](file-system-images/50-files-app-2-sml.png) ![샘플 앱 파일](file-system-images/50-files-app-3-sml.png)
 
@@ -356,6 +356,6 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 
 ## <a name="related-links"></a>관련 링크
 
-- [FileSystem 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+- [FileSystem 샘플 코드](/samples/xamarin/ios-samples/filesystemsamplecode)
 - [파일 시스템 프로그래밍 가이드](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [앱에서 지 원하는 파일 형식 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

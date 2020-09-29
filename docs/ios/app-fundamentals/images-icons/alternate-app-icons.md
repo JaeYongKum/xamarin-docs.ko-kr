@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 39a18a775946c2f139b4c032d2c360bc5680a0e7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6ac5a6924f2b297b63a73b8b417dd68bad062a84
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937919"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431362"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.ios의 대체 앱 아이콘
 
@@ -20,10 +20,10 @@ _이 문서에서는 Xamarin.ios에서 대체 앱 아이콘을 사용 하는 방
 
 Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지 향상 된 기능을 추가 했습니다.
 
-- `ApplicationIconBadgeNumber`-Springboard에서 앱 아이콘의 배지를 가져오거나 설정 합니다.
-- `SupportsAlternateIcons`- `true` 앱에 대체 아이콘 집합이 있는 경우입니다.
-- `AlternateIconName`-현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
-- `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
+- `ApplicationIconBadgeNumber` -Springboard에서 앱 아이콘의 배지를 가져오거나 설정 합니다.
+- `SupportsAlternateIcons` - `true` 앱에 대체 아이콘 집합이 있는 경우입니다.
+- `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
+- `SetAlternameIconName` -이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
 
 ![앱이 해당 아이콘을 변경 하는 경우의 샘플 경고](alternate-app-icons-images/icons04.png)
 
@@ -111,7 +111,7 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 
 Xamarin.ios 프로젝트에 포함 된 아이콘 이미지와 **info.plist** 파일이 올바르게 구성 된 상태에서 개발자는 iOS 10.3에 추가 된 많은 새 기능 중 하나를 사용 하 여 앱의 아이콘을 제어할 수 있습니다.
 
-`SupportsAlternateIcons` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 응용 프로그램에서 대체 아이콘을 지원 하는지 여부를 확인할 수 있습니다. 예를 들어:
+`SupportsAlternateIcons` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 응용 프로그램에서 대체 아이콘을 지원 하는지 여부를 확인할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Can the app select a different icon?
@@ -119,14 +119,14 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-`ApplicationIconBadgeNumber` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
+`ApplicationIconBadgeNumber` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 다음은 그 예입니다.
 
 ```csharp
 // Set the badge number to 1
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-`AlternateIconName`개발자는 클래스의 속성을 사용 `UIApplication` 하 여 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 있으며, `null` 앱에서 기본 아이콘을 사용 하는 경우에는를 반환 합니다. 예를 들어:
+`AlternateIconName`개발자는 클래스의 속성을 사용 `UIApplication` 하 여 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 있으며, `null` 앱에서 기본 아이콘을 사용 하는 경우에는를 반환 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Get the name of the currently selected alternate
@@ -138,7 +138,7 @@ if (name != null ) {
 }
 ```
 
-`SetAlternameIconName` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 앱 아이콘을 변경할 수 있습니다. 아이콘의 이름을 전달 하 여 또는를 선택 하 여 `null` 기본 아이콘으로 돌아갑니다. 예를 들어:
+`SetAlternameIconName` `UIApplication` 개발자는 클래스의 속성을 사용 하 여 앱 아이콘을 변경할 수 있습니다. 아이콘의 이름을 전달 하 여 또는를 선택 하 여 `null` 기본 아이콘으로 돌아갑니다. 다음은 그 예입니다.
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)
@@ -172,4 +172,4 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOSTenThree 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)
+- [iOSTenThree 샘플](/samples/xamarin/ios-samples/ios10-iostenthree/)

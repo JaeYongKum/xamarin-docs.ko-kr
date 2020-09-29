@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 86c7c726465257d71b6b407686153650dddbcbca
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e6879db1631bc6b58a36142344ff1fba997ee4fb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574472"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432051"
 ---
 # <a name="providing-haptic-feedback-in-xamarinios"></a>Xamarin.ios에서 햅 피드백 제공
 
@@ -37,9 +37,9 @@ IPhone 7 및 iPhone 7 Plus에서 Apple에는 사용자에 게 물리적으로 �
 
 개발자는 다음 `UIFeedbackGenerator` 서브 클래스 중 하나를 사용 하 여 프로그래밍 방식으로 햅 피드백을 트리거할 수 있습니다.
 
-- `UIImpactFeedbackGenerator`-이 피드백 생성기를 사용 하 여 뷰 슬라이드를 발표할 때 또는 두 개의 화면 개체가 충돌 하는 경우 "thud"를 제공 하는 등의 작업 또는 작업을 보완할 수 있습니다.
-- `UINotificationFeedbackGenerator`-작업 완료, 실패 또는 다른 유형의 경고와 같은 알림에 대해이 피드백 생성기를 사용 합니다.
-- `UISelectionFeedbackGenerator`-목록에서 항목을 선택 하는 등 적극적으로 변경 하는 경우이 피드백 생성기를 사용 합니다.
+- `UIImpactFeedbackGenerator` -이 피드백 생성기를 사용 하 여 뷰 슬라이드를 발표할 때 또는 두 개의 화면 개체가 충돌 하는 경우 "thud"를 제공 하는 등의 작업 또는 작업을 보완할 수 있습니다.
+- `UINotificationFeedbackGenerator` -작업 완료, 실패 또는 다른 유형의 경고와 같은 알림에 대해이 피드백 생성기를 사용 합니다.
+- `UISelectionFeedbackGenerator` -목록에서 항목을 선택 하는 등 적극적으로 변경 하는 경우이 피드백 생성기를 사용 합니다.
 
 <a name="UIImpactFeedbackGenerator"></a>
 
@@ -129,4 +129,4 @@ selection.SelectionChanged ();
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

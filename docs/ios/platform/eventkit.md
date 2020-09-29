@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a797fc654c7bdbbdb621c9d18dc7f1a82676778b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2e52fea7975094eb19d5247ea7747b40fda92630
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930236"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433164"
 ---
 # <a name="eventkit-in-xamarinios"></a>Xamarin.ios의 EventKit
 
@@ -106,7 +106,7 @@ App.Current.EventStore.RequestAccess (EKEntityType.Event,
 
 ### <a name="ekentitytype"></a>EKEntityType
 
-`EKEntityType`는 항목 또는 데이터의 형식을 설명 하는 열거형입니다 `EventKit` . 두 값 ( `Event` 및 미리 알림)이 있습니다. 이 클래스는 `EventStore.RequestAccess` `EventKit` 액세스 하거나 검색할 데이터의 종류를 알려 주는 다양 한 방법으로 사용 됩니다.
+`EKEntityType` 는 항목 또는 데이터의 형식을 설명 하는 열거형입니다 `EventKit` . 두 값 ( `Event` 및 미리 알림)이 있습니다. 이 클래스는 `EventStore.RequestAccess` `EventKit` 액세스 하거나 검색할 데이터의 종류를 알려 주는 다양 한 방법으로 사용 됩니다.
 
 ### <a name="ekcalendar"></a>EKCalendar
 
@@ -126,7 +126,7 @@ App.Current.EventStore.RequestAccess (EKEntityType.Event,
 
 ### <a name="ekspan"></a>EKSpan
 
-*EKSpan* 는 되풀이 가능한 이벤트를 수정할 때 이벤트의 범위를 설명 하는 열거형으로, 두 값 ( *ThisEvent* 및 *FutureEvents*)이 있습니다. `ThisEvent`는 참조 되는 계열의 특정 이벤트에 대해서만 변경 내용이 발생 하는 반면 `FutureEvents` 는 해당 이벤트 및 이후의 모든 되풀이에 영향을 줍니다.
+*EKSpan* 는 되풀이 가능한 이벤트를 수정할 때 이벤트의 범위를 설명 하는 열거형으로, 두 값 ( *ThisEvent* 및 *FutureEvents*)이 있습니다. `ThisEvent` 는 참조 되는 계열의 특정 이벤트에 대해서만 변경 내용이 발생 하는 반면 `FutureEvents` 는 해당 이벤트 및 이후의 모든 되풀이에 영향을 줍니다.
 
 ## <a name="tasks"></a>작업
 
@@ -274,7 +274,7 @@ App.Current.EventStore.SaveEvent ( newEvent, EKSpan.ThisEvent, out e );
 Console.WriteLine ("Event Saved, ID: " + newEvent.CalendarItemIdentifier);
 ```
 
- `EventIdentifier`문자열 형식의 GUID입니다.
+ `EventIdentifier` 문자열 형식의 GUID입니다.
 
 ### <a name="create-a-reminder-programmatically"></a>프로그래밍 방식으로 미리 알림 만들기
 
@@ -378,6 +378,6 @@ App.Current.EventStore.FetchReminders (
 
 ## <a name="related-links"></a>관련 링크
 
-- [달력 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/calendars)
+- [달력 (샘플)](/samples/xamarin/ios-samples/calendars)
 - [iOS 6 소개](~/ios/platform/introduction-to-ios6/index.md)
 - [일정 및 미리 알림 소개](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)

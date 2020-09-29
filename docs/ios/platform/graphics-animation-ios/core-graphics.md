@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 84e21378a8ac7b61bc1a389352eb53b75881592a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 281595f45db48316feeebb88debf8c70873f87f3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929651"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430862"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
@@ -279,9 +279,9 @@ public override void Draw (RectangleF rect)
 
 1. `UIGraphics.BeginImageContext`(또는)를 호출 하 여 `BeginImageContextWithOptions`
 
-2. 새을 만들어`CGBitmapContextInstance`
+2. 새을 만들어 `CGBitmapContextInstance`
 
- `CGBitmapContextInstance`는 사용자 지정 이미지 조작 알고리즘을 사용 하는 경우와 같이 이미지 비트로 직접 작업 하는 경우에 유용 합니다. 다른 모든 경우에는 또는를 사용 `BeginImageContext` 해야 `BeginImageContextWithOptions` 합니다.
+ `CGBitmapContextInstance` 는 사용자 지정 이미지 조작 알고리즘을 사용 하는 경우와 같이 이미지 비트로 직접 작업 하는 경우에 유용 합니다. 다른 모든 경우에는 또는를 사용 `BeginImageContext` 해야 `BeginImageContextWithOptions` 합니다.
 
 이미지 컨텍스트가 있으면 그리기 코드를 추가 하는 것은 하위 클래스에 있는 것과 같습니다 `UIView` . 예를 들어 앞에서 삼각형을 그리기 위해 사용 된 코드 예제를 사용 하 여 아래와 같이를 사용 하는 대신 메모리의 이미지를 그릴 수 있습니다 `UIView` .
 
@@ -427,7 +427,7 @@ UIGraphics.EndPDFContent ();
 
 ## <a name="related-links"></a>관련 링크
 
-- [핵심 그래픽 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [핵심 그래픽 샘플](/samples/xamarin/ios-samples/graphicsandanimation)
 - [그래픽 및 애니메이션 연습](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [핵심 애니메이션 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

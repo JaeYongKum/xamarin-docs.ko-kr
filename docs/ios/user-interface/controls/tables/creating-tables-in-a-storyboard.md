@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 57347336bb91757c9c54f7279f386f15e07c9cd7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 963151c8f5f88373fd6d71a2bb74bd2dbe5d6ab5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573651"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430088"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>iOS Designer에서 테이블 작업
 
@@ -66,7 +66,7 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 ### <a name="layout-the-view-controllers"></a>뷰 컨트롤러 레이아웃
 
-스토리 보드의 첫 번째 변경 내용은 기존 세부 정보 보기를 삭제 하 고 UITableViewController로 바꾸는 것입니다. 다음 단계를 수행하세요.
+스토리 보드의 첫 번째 변경 내용은 기존 세부 정보 보기를 삭제 하 고 UITableViewController로 바꾸는 것입니다. 다음 단계를 수행합니다.
 
 1. 뷰 컨트롤러의 맨 아래에 있는 막대를 선택 하 고 삭제 합니다.
 2. 도구 상자에서 **탐색 컨트롤러** 와 **테이블 뷰 컨트롤러** 를 스토리 보드로 끕니다. 
@@ -76,11 +76,11 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 5. 그런 다음 두 테이블 뷰를 선택 하 고 Properties Pad 사용 하 여 구성 합니다. 보기를 선택 하 고 보기 컨트롤러를 선택 하지 마십시오. 문서 개요를 사용 하 여 선택 항목에 대 한 도움말을 볼 수 있습니다.
 
-6. 루트 뷰 컨트롤러를 **콘텐츠 (동적 프로토타입** )로 변경 합니다. 즉, Design Surface에 대 한 뷰에는 **프로토타입 콘텐츠가** 레이블이 표시 됩니다.
+6. 루트 뷰 컨트롤러를  **콘텐츠 (동적 프로토타입** )로 변경 합니다. 즉, Design Surface에 대 한 뷰에는  **프로토타입 콘텐츠가** 레이블이 표시 됩니다.
 
     [![Content 속성을 동적 프로토타입으로 설정](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7. 새 **Uitableviewcontroller** 를 **콘텐츠: 정적 셀**로 변경 합니다. 
+7. 새 **Uitableviewcontroller** 를  **콘텐츠: 정적 셀**로 변경 합니다. 
 
 8. 새 UITableViewController에는 클래스 이름과 식별자가 설정 되어 있어야 합니다. 뷰 컨트롤러를 선택 하 고 **Properties Pad** **클래스** 에 대해 _TaskDetailViewController_ 를 입력 합니다. 이렇게 하면 `TaskDetailViewController.cs` Solution Pad에서 새 파일이 만들어집니다. 아래 예제에 나와 있는 것 처럼 **StoryboardID** 를 _세부 정보_로 입력 합니다. 나중에 c # 코드에서이 뷰를 로드 하는 데 사용 됩니다.  
 
@@ -133,7 +133,7 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 각 셀에 대해 **Properties Pad** 을 열고 다음을 설정 합니다.
 
-- **스타일**: _사용자 지정_
+- **스타일**:  _사용자 지정_
 - **식별자**: 각 셀에 대 한 고유 식별자를 선택 합니다 (예: "_제목_", "_메모_", "_완료_").
 - 필요한 컨트롤을 끌어 스크린샷에 표시 된 레이아웃 ( **UILabel**, **uitextfield** 및 **UISwitch** 를 올바른 셀에 생성 하 고 레이블을 적절 하 게 설정 합니다. 제목, 메모 및 완료).
 
@@ -338,10 +338,10 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 - 데이터 목록을 표시 하기 위해 다시 사용 하도록 셀이 정의 된 프로토타입 콘텐츠가 있는 테이블을 만듭니다. 
 - 정적 콘텐츠를 사용 하 여 테이블을 만들어 입력 폼을 작성 합니다. 여기에는 테이블 스타일 변경 및 섹션, 셀 및 UI 컨트롤 추가가 포함 됩니다. 
-- Segue를 만들고 메서드를 재정의 하 여 `PrepareForSegue` 필요한 매개 변수의 대상 뷰에 알리도록 하는 방법입니다. 
-- 메서드를 사용 하 여 스토리 보드 뷰를 직접 로드 `Storyboard.InstantiateViewController` 합니다.
+- Segue를 만들고 메서드를 재정의 하 여  `PrepareForSegue` 필요한 매개 변수의 대상 뷰에 알리도록 하는 방법입니다. 
+- 메서드를 사용 하 여 스토리 보드 뷰를 직접 로드  `Storyboard.InstantiateViewController` 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [StoryboardTable (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable)
+- [StoryboardTable (샘플)](/samples/xamarin/ios-samples/storyboardtable)
 - [Storyboards 소개](~/ios/user-interface/storyboards/index.md)

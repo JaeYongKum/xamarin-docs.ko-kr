@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 48399d35d27a700fa0b24583cce9cd0335f0e354
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9f21ccccbc3faf17fc272f303ef913b40b11ecd3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572080"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430915"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.ios 오류 메시지 (mmp)
 
@@ -23,7 +23,7 @@ ms.locfileid: "84572080"
 
 <a name="MM0000"></a>
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: 예기치 않은 오류입니다 .에서 버그 보고서를 파일에 넣으십시오.https://github.com/xamarin/xamarin-macios/issues/new
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: 예기치 않은 오류입니다 .에서 버그 보고서를 파일에 넣으십시오. https://github.com/xamarin/xamarin-macios/issues/new
 
 예기치 않은 오류 조건이 발생 했습니다. 다음과 같이 가능한 한 많은 정보를 사용 하 여 [버그 보고서를 파일](https://github.com/xamarin/xamarin-macios/issues/new) 에 입력 하세요.
 
@@ -35,7 +35,7 @@ ms.locfileid: "84572080"
 
 <a name="MM0001"></a>
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001:이 버전의 Xamarin.ios에는 Mono가 필요 {0} 합니다 (현재 mono 버전은 {1} ). Mono 프레임 워크를 업데이트 하십시오.http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001:이 버전의 Xamarin.ios에는 Mono가 필요 {0} 합니다 (현재 mono 버전은 {1} ). Mono 프레임 워크를 업데이트 하십시오. http://mono-project.com/Downloads
 
 <a name="MM0003"></a>
 
@@ -57,7 +57,7 @@ ms.locfileid: "84572080"
 
 <a name="MM0010"></a>
 
-#### <a name="mm0010-could-not-parse-the-command-line-arguments-0"></a>MM0010: 명령줄 인수를 구문 분석할 수 없습니다.{0}
+#### <a name="mm0010-could-not-parse-the-command-line-arguments-0"></a>MM0010: 명령줄 인수를 구문 분석할 수 없습니다. {0}
 
 <!-- 0013 is unused -->
 
@@ -83,7 +83,7 @@ ms.locfileid: "84572080"
 
 <a name="MM0026"></a>
 
-#### <a name="mm0026-could-not-parse-the-command-line-argument-0-1"></a>MM0026: 명령줄 인수 ' '을 (를) 구문 분석할 수 없습니다 {0} .{1}
+#### <a name="mm0026-could-not-parse-the-command-line-argument-0-1"></a>MM0026: 명령줄 인수 ' '을 (를) 구문 분석할 수 없습니다 {0} . {1}
 
 <a name="MM0043"></a>
 
@@ -119,9 +119,9 @@ ms.locfileid: "84572080"
 
 <a name="MM0071"></a>
 
-#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. https://bugzilla.xamarin.com테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
+#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. https://bugzilla.xamarin.com 테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
 
-이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
+이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 테스트 사례를 사용 하 여에서 버그 보고서를 파일에 입력 하세요.
 
 <a name="MM0073"></a>
 
@@ -204,7 +204,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 <a name="MM0132"></a>
 
-#### <a name="mm0132-unknown-optimization--valid-values-are-"></a>MM0132: 알 수 없는 최적화: \* . 유효한 값은 다음과 같습니다.\*
+#### <a name="mm0132-unknown-optimization--valid-values-are-"></a>MM0132: 알 수 없는 최적화: \* . 유효한 값은 다음과 같습니다. \*
 
 지정 된 최적화를 인식할 수 없습니다.
 
@@ -224,7 +224,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 또한 32 비트 응용 프로그램은 높은 시에라리온 (손상 없음) 후에 macOS 버전에서 실행 되지 않습니다.
 
-자세한 내용은 다음을 참조 하세요.https://developer.apple.com/news/?id=06282017a
+자세한 내용은 다음을 참조 하세요. https://developer.apple.com/news/?id=06282017a
 
 응용 프로그램 및 모든 종속성을 64 비트로 업데이트 하는 것이 좋습니다.
 
@@ -236,7 +236,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 이 오류를 해결 하는 권장 방법은 Xcode를 업그레이드 하 여 필요한 SDK를 가져오는 것입니다. 여러 버전의 Xcode가 설치 되어 있거나 기본이 아닌 위치에서 Xcode를 사용 하려는 경우에는 IDE의 기본 설정에서 올바른 Xcode 위치를 설정 해야 합니다.
 
-또는 관리 되는 [링커가](https://docs.microsoft.com/xamarin/mac/deploy-test/linker) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
+또는 관리 되는 [링커가](../deploy-test/linker.md) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
 
 마지막으로 straw 솔루션으로, 빌드 프로세스 중에 이러한 새 Sdk를 제공 하지 않아도 되는 이전 버전의 Xamarin.ios를 사용 합니다.
 
@@ -280,7 +280,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM1501"></a>
 
-#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: 참조를 확인할 수 없습니다.{0}
+#### <a name="mm1501-can-not-resolve-reference-0"></a>MM1501: 참조를 확인할 수 없습니다. {0}
 
 ### <a name="machocs"></a>MachO.cs
 
@@ -314,7 +314,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM2002"></a>
 
-#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: 참조를 확인할 수 없습니다.{0}
+#### <a name="mm2002-can-not-resolve-reference-0"></a>MM2002: 참조를 확인할 수 없습니다. {0}
 
 <a name="MM2003"></a>
 
@@ -350,7 +350,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM2012"></a>
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: {0} {1} "참조 된 사람" 경고만 표시 됩니다. \*\*이 메시지는 2009와 관련 되어 있습니다.\*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: {0} {1} "참조 된 사람" 경고만 표시 됩니다. \*\* 이 메시지는 2009와 관련 되어 있습니다. \*\*
 
 <a name="MM2013"></a>
 
@@ -358,7 +358,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM2014"></a>
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.ios 확장은 연결을 지원 하지 않습니다. 연결에 대 한 요청은 무시 됩니다. \*\*이 메시지는 XM 3.6 이상에서 사용 되지 않습니다.\*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.ios 확장은 연결을 지원 하지 않습니다. 연결에 대 한 요청은 무시 됩니다. \*\* 이 메시지는 XM 3.6 이상에서 사용 되지 않습니다. \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -368,7 +368,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM2017"></a>
 
-#### <a name="mm2017-could-not-process-xml-description-0"></a>MM2017: XML 설명을 처리할 수 없습니다.{0}
+#### <a name="mm2017-could-not-process-xml-description-0"></a>MM2017: XML 설명을 처리할 수 없습니다. {0}
 
 <a name="MM202x"></a>
 
@@ -501,7 +501,7 @@ https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies혼합 
 
 <a name="MM5103"></a>
 
-#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103: 컴파일하지 못했습니다. 오류 코드- {0} . 버그 보고서를 파일에 넣으십시오.http://bugzilla.xamarin.com
+#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103: 컴파일하지 못했습니다. 오류 코드- {0} . 버그 보고서를 파일에 넣으십시오. http://bugzilla.xamarin.com
 
 <!-- 5104 used by mtouch -->
 
@@ -509,7 +509,7 @@ https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies혼합 
 
 <a name="MM5202"></a>
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono. 프레임 워크 MDK가 없습니다. 다음에서 Mono 프레임 워크 버전에 대 한 MDK을 설치 하세요.http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono. 프레임 워크 MDK가 없습니다. 다음에서 Mono 프레임 워크 버전에 대 한 MDK을 설치 하세요. http://mono-project.com/Downloads
 
 <a name="MM5203"></a>
 
@@ -546,7 +546,7 @@ https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies혼합 
 
 <a name="MM5301"></a>
 
-#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301: pkg를 찾을 수 없습니다. 다음에서 Mono 프레임 워크를 설치 하세요.http://mono-project.com/Downloads
+#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301: pkg를 찾을 수 없습니다. 다음에서 Mono 프레임 워크를 설치 하세요. http://mono-project.com/Downloads
 
 <!-- 5302 used by mtouch -->
 <!-- 5303 used by mtouch -->

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c4fc1607667dd6201c28c4d00a2938760e429f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 826d8c982e9976cb4147c0ed77a55a4b1d18f879
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938985"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432412"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Xamarin에서 watchOS 체력 앱
 
@@ -390,8 +390,8 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 Apple은 watchOS 3에 다음과 같은 새 이벤트 유형을 추가 했습니다.
 
-- `HKWorkoutEventType.Lap`-체력을 동일한 거리 부분으로 나누는 이벤트의 경우입니다. 예를 들어를 실행 하는 동안 트랙 주위에 한 개의 랩 표시를 표시 합니다.
-- `HKWorkoutEventType.Marker`-체력 내에서 임의의 관심 점에 대 한 것입니다. 예를 들어, 실외 실행 경로의 특정 지점에 도달 합니다.
+- `HKWorkoutEventType.Lap` -체력을 동일한 거리 부분으로 나누는 이벤트의 경우입니다. 예를 들어를 실행 하는 동안 트랙 주위에 한 개의 랩 표시를 표시 합니다.
+- `HKWorkoutEventType.Marker` -체력 내에서 임의의 관심 점에 대 한 것입니다. 예를 들어, 실외 실행 경로의 특정 지점에 도달 합니다.
 
 이러한 새 형식은 앱에서 만들고 나중에 그래프 및 통계를 만드는 데 사용할 수 있도록 체력에 저장할 수 있습니다.
 
@@ -1253,5 +1253,5 @@ Apple은 watchOS 3 및 iOS 10에서 자동으로 진행 되는 앱을 설계 하
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [iOS 10 샘플](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [HealthKit 소개](~/ios/platform/healthkit.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 034169b4e77dace365b36733442afe295b62fb80
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: cae2b0ebfa81d140af1c233938ceddb9acd5ff07
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574010"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432919"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -1401,11 +1401,11 @@ namespace MacDatabase
 
 이 예제에서는 `NSComboBoxDataSource` 모든 SQLite 데이터 원본에서 콤보 상자 항목을 제공할 수 있는 새을 만듭니다. 먼저, 다음 속성을 정의 합니다.
 
-- `Conn`-SQLite 데이터베이스에 대 한 연결을 가져오거나 설정 합니다.
-- `TableName`-테이블 이름을 가져오거나 설정 합니다.
-- `IDField`-지정 된 테이블의 고유 ID를 제공 하는 필드를 가져오거나 설정 합니다. 기본값은 `ID`입니다.
-- `DisplayField`-드롭다운 목록에 표시 되는 필드를 가져오거나 설정 합니다.
-- `RecordCount`-지정 된 테이블의 레코드 수를 가져옵니다.
+- `Conn` -SQLite 데이터베이스에 대 한 연결을 가져오거나 설정 합니다.
+- `TableName` -테이블 이름을 가져오거나 설정 합니다.
+- `IDField` -지정 된 테이블의 고유 ID를 제공 하는 필드를 가져오거나 설정 합니다. 기본값은 `ID`입니다.
+- `DisplayField` -드롭다운 목록에 표시 되는 필드를 가져오거나 설정 합니다.
+- `RecordCount` -지정 된 테이블의 레코드 수를 가져옵니다.
 
 개체의 새 인스턴스를 만들 때 연결, 테이블 이름, 선택적으로 ID 필드 및 표시 필드를 전달 합니다.
 
@@ -2224,7 +2224,7 @@ public override void AwakeFromNib ()
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacDatabase (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabase)
+- [MacDatabase (샘플)](/samples/xamarin/mac-samples/macdatabase)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
 - [표준 컨트롤](~/mac/user-interface/standard-controls.md)

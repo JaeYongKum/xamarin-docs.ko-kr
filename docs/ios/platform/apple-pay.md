@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 87f81f96e51b6744e37a80819c3c88d1abb644f1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 51a18042bea820221f450d8d7ceedf3f69359a6d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022230"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431632"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -79,7 +79,7 @@ IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에 Apple
 
 ### <a name="passkit-framework-enhancements"></a>PassKit Framework의 향상 된 기능
 
-IOS 10에서 PassKit 프레임 워크는 `UIKit` 외부의 Apple Pay을 지원 하도록 확장 되었으며 카드 발급자가 자신의 앱 내에서 자신의 카드를 제공할 수 있도록 합니다.
+IOS 10에서 PassKit 프레임 워크는 외부 Apple Pay를 지원 하도록 확장 되었으며 `UIKit` 카드 발급자가 자신의 앱 내에서 자신의 카드를 제공할 수 있도록 합니다.
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>UIKit 외부에서 Apple Pay 지원
 
@@ -87,15 +87,15 @@ IOS 10에서 PassKit 프레임 워크는 `UIKit` 외부의 Apple Pay을 지원 �
 
 #### <a name="presenting-issuer-cards-from-within-apps"></a>앱 내에서 발급자 카드 제공
 
-IOS 10을 사용 하는 경우 카드 발급자가 자신의 앱 내에서 카드를 제공할 수 있도록 하는 새로운 기능이 PassKit 프레임 워크에 추가 되었습니다. 개발자는 카드에 대 한 Apple Pay 단추를 표시 하는 앱의 사용자 인터페이스에 `PKPaymentButtonTypeInStore` UIButton를 추가할 수 있습니다.
+IOS 10을 사용 하는 경우 카드 발급자가 자신의 앱 내에서 카드를 제공할 수 있도록 하는 새로운 기능이 PassKit 프레임 워크에 추가 되었습니다. 개발자는 `PKPaymentButtonTypeInStore` 카드에 대 한 Apple Pay 단추를 표시 하는 응용 프로그램의 사용자 인터페이스에 uibutton를 추가할 수 있습니다.
 
-[PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) 클래스의 `PresentPaymentPass` 메서드를 사용 하 여 프로그래밍 방식으로 카드를 표시할 수도 있습니다.
+`PresentPaymentPass` [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) 클래스의 메서드를 사용 하 여 프로그래밍 방식으로 카드를 표시할 수도 있습니다.
 
 ### <a name="new-payment-network-support"></a>새 결제 네트워크 지원
 
 IOS 10의 새로운 기능으로, 앱은 개발자가 수정 하지 않고도 사용할 수 있게 되 면 새 결제 네트워크를 자동으로 지원할 수 있습니다. 앱을 다시 컴파일하고 앱 스토어에 다시 전송 해야 합니다.
 
-`PKPaymentNetwork` 클래스의 새 [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) 메서드를 사용 하면 앱이 런타임에 사용자 장치에서 사용할 수 있는 네트워크를 검색할 수 있습니다. 또한 [Supportednetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) 속성은 지불 공급자의 이름을 인수로 사용 하도록 확장 되었습니다. 이러한 방법을 사용 하 여 앱은 지불 공급자가 지 원하는 모든 네트워크를 자동으로 지원할 수 있습니다.
+클래스의 새 [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) 메서드를 `PKPaymentNetwork` 사용 하면 앱이 런타임에 사용자 장치에서 사용할 수 있는 네트워크를 검색할 수 있습니다. 또한 [Supportednetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) 속성은 지불 공급자의 이름을 인수로 사용 하도록 확장 되었습니다. 이러한 방법을 사용 하 여 앱은 지불 공급자가 지 원하는 모든 네트워크를 자동으로 지원할 수 있습니다.
 
 자세한 내용은 [Apple Pay 구성](~/ios/platform/apple-pay.md) 및 Apple [Apple Pay 가이드](https://developer.apple.com/apple-pay/)를 참조 하세요.
 
@@ -123,4 +123,4 @@ IOS 10을 사용 하 여 Apple은 개발자가 iOS 장치에서 직접 테스트
 - [PassKit 소개](~/ios/platform/passkit.md)
 - [PassKit](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/)
 - [Apple Pay](https://developer.apple.com/apple-pay/)
-- [Emporium (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-emporium)
+- [Emporium (샘플)](/samples/xamarin/ios-samples/ios9-emporium)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 588dadbfe63a46bc7658d5d29a052cebe52be65c
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a01f0075ec7f47d6653313ea50047b7f89529bc6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997412"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431396"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.ios의 CloudKit
 
@@ -56,7 +56,7 @@ CloudKit에 액세스 하려면 **info.plist** 파일에 **iCloud**, **키-값 �
 
 ### <a name="sample-app"></a>샘플 앱
 
-[CloudKitAtlas 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) 에서는 Xamarin과 함께 cloudkit를 사용 하는 방법을 보여 줍니다. 아래 단계에서는 샘플을 구성 하는 방법을 보여 줍니다. CloudKit에만 필요한 것 외에 추가 설정이 필요 합니다.
+[CloudKitAtlas 샘플](/samples/xamarin/ios-samples/ios8-cloudkitatlas) 에서는 Xamarin과 함께 cloudkit를 사용 하는 방법을 보여 줍니다. 아래 단계에서는 샘플을 구성 하는 방법을 보여 줍니다. CloudKit에만 필요한 것 외에 추가 설정이 필요 합니다.
 
 1. Mac용 Visual Studio 또는 Visual Studio에서 프로젝트를 엽니다.
 2. **솔루션 탐색기**에서 **info.plist** 파일을 열고 **번들 식별자** 가 프로 비전 설정의 일부로 만든 **앱 ID** 에 정의 된 것과 일치 하는지 확인 합니다.
@@ -146,7 +146,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
 |**할당량**|개발자 할당량에서의 고려|사용자의 할당량에 대 한 고려|
 |**기본 사용 권한**|전 세계 읽기|사용자가 읽을 수 있음|
-|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|N/A|
+|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|해당 없음|
 
 ### <a name="records"></a>레코드
 
@@ -218,7 +218,7 @@ await CloudManager.SaveAsync (newRecord);
 var recordID =  new CKRecordID("My Record");
 ```
 
-### <a name="references"></a>참조
+### <a name="references"></a>참고 자료
 
 참조는 지정 된 데이터베이스 내에서 관련 레코드 간의 관계를 제공 합니다.
 
@@ -529,7 +529,7 @@ ThisApp.PublicDatabase.PerformQuery(query, CKRecordZone.DefaultRecordZone().Zone
 - 네트워크 트래픽에는 올바르지 않습니다.
 - 표시 되는 정보는 응용 프로그램이 데이터베이스를 폴링하는 빈도에 의해 제한 되기 때문에 사용자 환경에는 적합 하지 않습니다. 현재 사용자는 변경 사항이 있을 때 푸시 알림을 필요로 합니다.
 
-### <a name="subscriptions"></a>Subscriptions
+### <a name="subscriptions"></a>구독
 
 대부분의 정적 데이터 집합을 처리할 때는 클라이언트가 클라이언트를 대신 하 여 서버에서 실행 되어야 합니다. 쿼리는 백그라운드에서 실행 되어야 하며, 현재 장치나 다른 장치가 동일한 데이터베이스를 터치 하는지 여부에 관계 없이 모든 단일 레코드 저장 후 실행 되어야 합니다.
 
@@ -649,7 +649,7 @@ CloudKit는 개발자에 게 다음과 같은 사용자 정보를 제공 합니�
 
 사용자의 장치에서 실행 되는 클라이언트 응용 프로그램과 CloudKit 컨테이너 내의 모든 특정 사용자 개인 데이터베이스가 있습니다. 클라이언트 응용 프로그램은 이러한 특정 사용자 중 하나에 연결 됩니다. 장치에서 로컬로 iCloud에 로그인 한 사용자를 기반으로 합니다.
 
-이는 iCloud에서 제공 되기 때문에 사용자 정보에 대 한 다양 한 백업 저장소가 있습니다. ICloud는 실제로 컨테이너를 호스트 하기 때문에 사용자의 상관 관계를 지정할 수 있습니다. 위의 그림에서 iCloud 계정이 `user@icloud.com` 현재 클라이언트에 연결 되어 있는 사용자입니다.
+이는 iCloud에서 제공 되기 때문에 사용자 정보에 대 한 다양 한 백업 저장소가 있습니다. ICloud는 실제로 컨테이너를 호스트 하기 때문에 사용자의 상관 관계를 지정할 수 있습니다. 위의 그림에서 iCloud 계정이  `user@icloud.com` 현재 클라이언트에 연결 되어 있는 사용자입니다.
 
 컨테이너를 기반으로 하는 컨테이너에서 무작위로 생성 된 고유한 사용자 ID가 만들어지고 사용자의 iCloud 계정 (메일 주소)과 연결 됩니다. 이 사용자 ID는 응용 프로그램에 반환 되며 개발자가 적합 한 방식으로 사용할 수 있습니다.
 
@@ -855,5 +855,5 @@ CloudKit를 사용 하는 응용 프로그램을 전달 하기 전에 **프로�
 ## <a name="related-links"></a>관련 링크
 
 - [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
-- [CloudKitAtlas (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
+- [CloudKitAtlas (샘플)](/samples/xamarin/ios-samples/ios8-cloudkitatlas)
 - [프로 비전 프로필 만들기](~/ios/get-started/installation/device-provisioning/index.md)
