@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Xamarin.Android
-summary: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 제작합니다.
+summary: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 빌드합니다.
 metadata:
   title: Xamarin.Android
   description: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다.
@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020
-  ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: 593d8d20433222e1b18fd65b86a7586aa5560933
+  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374086"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91454288"
 landingContent:
 - title: 시작
   linkLists:
@@ -49,7 +49,7 @@ landingContent:
       url: ~/android/app-fundamentals/localization.md
     - text: 알림
       url: ~/android/app-fundamentals/notifications/index.md
-    - text: 사용 권한
+    - text: 권한
       url: ~/android/app-fundamentals/permissions.md
     - text: 터치 및 제스처
       url: ~/android/app-fundamentals/touch/index.md
@@ -91,7 +91,7 @@ landingContent:
       url: ~/android/platform/java-integration/index.md
     - text: 작업 스케줄러
       url: ~/android/platform/android-job-scheduler.md
-    - text: 맵 및 위치
+    - text: 지도 및 위치
       url: ~/android/platform/maps-and-location/index.md
     - text: 자세히 보기 >
       url: ~/android/platform/index.md
@@ -99,7 +99,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: About
+    - text: 정보
       url: ~/essentials/index.md?context=xamarin/android
     - text: 시작
       url: ~/essentials/get-started.md?context=xamarin/android
@@ -108,7 +108,7 @@ landingContent:
     - text: 문제 해결
       url: ~/essentials/troubleshooting.md?context=xamarin/android
     - text: 릴리스 정보
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: 데이터 및 클라우드 서비스
   linkLists:
   - linkListType: concept
@@ -151,7 +151,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 아키텍처
+    - text: Architecture
       url: ~/android/internals/architecture.md
     - text: 사용 가능한 어셈블리
       url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android

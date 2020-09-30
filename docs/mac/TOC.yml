@@ -31,7 +31,7 @@
           href: app-fundamentals/image.md
         - name: 데이터 바인딩 및 키-값 코딩
           href: app-fundamentals/databinding.md
-        - name: Databases
+        - name: 데이터베이스
           href: app-fundamentals/databases.md
         - name: 복사 및 붙여넣기
           href: app-fundamentals/copy-paste.md
@@ -222,6 +222,6 @@
         - name: 오류 메시지(mmp)
           href: troubleshooting/mmp-errors.md
     - name: 릴리스 정보
-      href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+      href: /xamarin/mac/release-notes/
     - name: 샘플
       href: samples/index.md

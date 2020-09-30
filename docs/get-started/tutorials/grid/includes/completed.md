@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 36454d9fe2903bc5e9b05c7809bd09a1f305f46b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4ee2326079ba9ddea6b0f4c5c4356412a3d5b492
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059735"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451445"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 >
-> - XAML에서 Xamarin.Forms [`Grid`](xref:Xamarin.Forms.Grid)을 만듭니다.
+> - XAML에서 Xamarin.Forms [`Grid`](xref:Xamarin.Forms.Grid)를 만듭니다.
 > - `Grid`에 대한 열과 행을 지정합니다.
 > - `Grid`의 여러 열 또는 여러 행에 콘텐츠를 스패닝합니다.
 
@@ -23,7 +23,7 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [GridTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-gridtutorial/)
+- [GridTutorial(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-gridtutorial/)
 - [Xamarin.Forms 그리드(가이드)](~/xamarin-forms/user-interface/layouts/grid.md)
 - [여백 및 안쪽 여백(가이드)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [그리드 API](xref:Xamarin.Forms.Grid)

@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: a0f2e909d4c7003ba1314b848fd01e604d190a1b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c1d2900e31b76bb9f66bde55eb948d1f3f46e34e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107301"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451460"
 ---
-이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
+축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 >
@@ -23,6 +23,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [LocalDatabaseTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
+- [LocalDatabaseTutorial(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
 - [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/data-cloud/data/databases.md)
 - [SQLite.NET NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/)
