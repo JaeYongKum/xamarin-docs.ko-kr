@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms다각형, 폴리라인 및 원 매핑
+title: Xamarin.Forms 다각형, 폴리라인 및 원 매핑
 description: 이 문서에서는 지도 인스턴스에서 다각형, 폴리라인 및 원을 만드는 방법을 설명 Xamarin.Forms 합니다.
 ms.prod: xamarin
 ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
@@ -10,14 +10,14 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca813f9f0f75aeaf4a2502faa7cb96d1fbead471
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d4b82cc9c04dd711cc99b558475c2e003e557252
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138413"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559781"
 ---
-# <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms다각형 및 다중선 매핑
+# <a name="no-locxamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms 다각형 및 다중선 매핑
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -28,7 +28,7 @@ ms.locfileid: "84138413"
 
 `Polygon`, `Polyline` 및 클래스는 `Circle` `MapElement` 다음과 같은 바인딩 가능한 속성을 노출 하는 클래스에서 파생 됩니다.
 
-- `StrokeColor`는 `Color` 선 색을 결정 하는 개체입니다.
+- `StrokeColor` 는 `Color` 선 색을 결정 하는 개체입니다.
 - `StrokeWidth``float`선 두께를 결정 하는 개체입니다.
 
 `Polygon`클래스는 다음과 같은 추가 바인딩 가능 속성을 정의 합니다.
@@ -39,9 +39,9 @@ ms.locfileid: "84138413"
 
 `Circle`클래스는 다음과 같은 바인딩 가능한 속성을 정의 합니다.
 
-- `Center`는 [`Position`](xref:Xamarin.Forms.Maps.Position) 위도 및 경도로 원의 중심을 정의 하는 개체입니다.
+- `Center` 는 [`Position`](xref:Xamarin.Forms.Maps.Position) 위도 및 경도로 원의 중심을 정의 하는 개체입니다.
 - `Radius`[`Distance`](xref:Xamarin.Forms.Maps.Distance)미터, 킬로미터 또는 마일 단위의 원 반지름을 정의 하는 개체입니다.
-- `FillColor`는 `Color` 원 둘레에 있는 색을 결정 하는 속성입니다.
+- `FillColor` 는 `Color` 원 둘레에 있는 색을 결정 하는 속성입니다.
 
 > [!NOTE]
 > `StrokeColor`속성이 지정 되지 않은 경우 스트로크는 기본적으로 검은색으로 지정 됩니다. 속성을 `FillColor` 지정 하지 않으면 채우기가 기본적으로 투명 합니다. 따라서 두 속성을 모두 지정 하지 않으면 도형은 채우기가 없는 검정 윤곽선을 갖게 됩니다.
@@ -233,4 +233,4 @@ map.MapElements.Add(circle);
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)

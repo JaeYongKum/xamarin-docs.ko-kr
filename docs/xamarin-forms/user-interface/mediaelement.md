@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMediaElement
+title: Xamarin.Forms MediaElement
 description: 이 문서에서는 MediaElement를 사용 하 여 응용 프로그램에서 비디오와 오디오를 재생 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165
@@ -10,40 +10,40 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4a8ca74fc12b59100cc60b72d3c2287cffadfd18
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: e868eccf446ab22879a66e6e507d810b7e0e13d7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918108"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559768"
 ---
-# <a name="no-locxamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
+# <a name="no-locxamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
 ![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement)는 비디오와 오디오를 재생 하는 보기입니다. 기본 플랫폼에서 지원 되는 미디어는 다음 원본에서 재생할 수 있습니다.
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) 는 비디오와 오디오를 재생 하는 보기입니다. 기본 플랫폼에서 지원 되는 미디어는 다음 원본에서 재생할 수 있습니다.
 
 - URI (HTTP 또는 HTTPS)를 사용 하는 웹입니다.
 - URI 체계를 사용 하 여 플랫폼 응용 프로그램에 포함 된 리소스 `ms-appx:///` 입니다.
 - URI 체계를 사용 하 여 앱의 로컬 및 임시 데이터 폴더에서 제공 되는 파일입니다 `ms-appdata:///` .
 - 장치의 라이브러리입니다.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement)는 전송 컨트롤 이라고 하는 플랫폼 재생 컨트롤을 사용할 수 있습니다. 그러나 기본적으로 사용 하지 않도록 설정 되어 있으며 사용자 고유의 전송 컨트롤로 바꿀 수 있습니다. 다음 스크린샷에서는 `MediaElement` 플랫폼 전송 컨트롤을 사용 하 여 비디오를 재생 하는 방법을 보여 줍니다.
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) 는 전송 컨트롤 이라고 하는 플랫폼 재생 컨트롤을 사용할 수 있습니다. 그러나 기본적으로 사용 하지 않도록 설정 되어 있으며 사용자 고유의 전송 컨트롤로 바꿀 수 있습니다. 다음 스크린샷에서는 `MediaElement` 플랫폼 전송 컨트롤을 사용 하 여 비디오를 재생 하는 방법을 보여 줍니다.
 
 [![IOS 및 Android에서 비디오를 재생 하는 MediaElement의 스크린샷](mediaelement-images/playback-controls.png "비디오 재생 MediaElement")](mediaelement-images/playback-controls-large.png#lightbox "비디오 재생 MediaElement")
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement)4.5에서 사용할 수 있습니다 Xamarin.Forms . 그러나 현재 실험적 이며 *App.xaml.cs* 파일에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) 4.5에서 사용할 수 있습니다 Xamarin.Forms . 그러나 현재 실험적 이며 *App.xaml.cs* 파일에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> [`MediaElement`](xref:Xamarin.Forms.MediaElement)iOS, Android, 유니버설 Windows 플랫폼 (UWP), macOS, Windows Presentation Foundation 및 Tizen에서 사용할 수 있습니다.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement) iOS, Android, 유니버설 Windows 플랫폼 (UWP), macOS, Windows Presentation Foundation 및 Tizen에서 사용할 수 있습니다.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement)는 다음 속성을 정의 합니다.
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) 는 다음 속성을 정의 합니다.
 
 - [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect)형식의은 [`Aspect`](xref:Xamarin.Forms.Aspect) 표시 영역에 맞게 미디어 크기를 조정 하는 방법을 결정 합니다. 이 속성의 기본값은 `AspectFit`입니다.
 - [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay)형식의는 `bool` 속성이 설정 될 때 미디어 재생이 자동으로 시작 되는지 여부를 나타냅니다 [`Source`](xref:Xamarin.Forms.MediaElement.Source) . 이 속성의 기본값은 `true`입니다.
@@ -64,10 +64,10 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement)또한 클래스는 다음과 같은 네 개의 이벤트를 정의 합니다.
 
-- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened)미디어 스트림의 유효성을 검사 하 고 연 경우에 발생 합니다.
-- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded)에서 미디어 재생을 완료할 때 발생 합니다 `MediaElement` .
-- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed)미디어 원본과 관련 된 오류가 있을 때 발생 합니다.
-- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted)요청 된 검색 작업의 검색 지점을 재생할 준비가 되 면 발생 합니다.
+- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened) 미디어 스트림의 유효성을 검사 하 고 연 경우에 발생 합니다.
+- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded) 에서 미디어 재생을 완료할 때 발생 합니다 `MediaElement` .
+- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed) 미디어 원본과 관련 된 오류가 있을 때 발생 합니다.
+- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted) 요청 된 검색 작업의 검색 지점을 재생할 준비가 되 면 발생 합니다.
 
 또한에는 [`MediaElement`](xref:Xamarin.Forms.MediaElement) , [`Play`](xref:Xamarin.Forms.MediaElement.Play) [`Pause`](xref:Xamarin.Forms.MediaElement.Pause) 및 메서드가 포함 됩니다 [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) .
 
@@ -84,7 +84,7 @@ Android에서 지원 되는 미디어 형식에 대 한 자세한 내용은 deve
 
 기본적으로 속성으로 정의 된 미디어는 미디어를 [`Source`](xref:Xamarin.Forms.MediaElement.Source) 연 후 즉시 재생 됩니다. 미디어 자동 재생을 표시 하지 않으려면 [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) 속성을로 설정 `false` 합니다.
 
-미디어 재생 컨트롤은 기본적으로 사용 하지 않도록 설정 되며, 속성을로 설정 하 여 사용할 수 있습니다 [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) `true` . [`MediaElement`](xref:Xamarin.Forms.MediaElement)는 플랫폼 재생 컨트롤을 사용 합니다.
+미디어 재생 컨트롤은 기본적으로 사용 하지 않도록 설정 되며, 속성을로 설정 하 여 사용할 수 있습니다 [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) `true` . [`MediaElement`](xref:Xamarin.Forms.MediaElement) 는 플랫폼 재생 컨트롤을 사용 합니다.
 
 ## <a name="play-local-media"></a>로컬 미디어 재생
 
@@ -251,9 +251,9 @@ if (!string.IsNullOrWhiteSpace(filename))
 
 [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect)속성은 비디오 미디어가 표시 영역에 맞게 조정 되는 방법을 결정 합니다. 기본적으로이 속성은 `AspectFit` 열거형 멤버로 설정 되지만 열거형 멤버로 설정할 수 있습니다 [`Aspect`](xref:Xamarin.Forms.Aspect) .
 
-- `AspectFit`필요한 경우 가로 세로 비율을 유지 하면서 비디오를 표시 영역에 맞게 letterboxed 나타냅니다.
-- `AspectFill`가로 세로 비율을 유지 하면서 표시 영역을 채우도록 비디오가 잘리는 것을 나타냅니다.
-- `Fill`표시 영역을 채우도록 비디오가 늘어 지는 것을 나타냅니다.
+- `AspectFit` 필요한 경우 가로 세로 비율을 유지 하면서 비디오를 표시 영역에 맞게 letterboxed 나타냅니다.
+- `AspectFill` 가로 세로 비율을 유지 하면서 표시 영역을 채우도록 비디오가 잘리는 것을 나타냅니다.
+- `Fill` 표시 영역을 채우도록 비디오가 늘어 지는 것을 나타냅니다.
 
 ## <a name="poll-for-position-data"></a>위치 데이터 폴링
 
@@ -313,12 +313,12 @@ protected override void OnDisappearing()
 
 [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)열거형은 다음 멤버를 정의 합니다.
 
-- `Closed`에 `MediaElement` 미디어가 포함 되어 있지 않음을 나타냅니다.
+- `Closed` 에 `MediaElement` 미디어가 포함 되어 있지 않음을 나타냅니다.
 - `Opening``MediaElement`가 유효성을 검사 하 고 지정 된 소스를 로드 하려고 함을 나타냅니다.
-- `Buffering`에서 `MediaElement` 재생할 미디어를 로드 하 고 있음을 나타냅니다. [`Position`](xref:Xamarin.Forms.MediaElement.Position)이 상태에서 해당 속성은 이동 하지 않습니다. `MediaElement`가 비디오를 재생 하는 경우 마지막으로 표시 된 프레임을 계속 표시 합니다.
-- `Playing`에서 미디어 원본을 재생 하 고 있음을 나타냅니다 `MediaElement` .
-- `Paused`에서 해당 `MediaElement` 속성을 이동 하지 않음을 나타냅니다 [`Position`](xref:Xamarin.Forms.MediaElement.Position) . `MediaElement`가 비디오를 재생 하는 경우 계속 해 서 현재 프레임을 표시 합니다.
-- `Stopped`에 `MediaElement` 미디어가 포함 되어 있지만 재생 되거나 일시 중지 되지 않았음을 나타냅니다. 해당 [`Position`](xref:Xamarin.Forms.MediaElement.Position) 속성은 0 이며 이동 하지 않습니다. 로드 된 미디어가 비디오 인 경우는 `MediaElement` 첫 번째 프레임을 표시 합니다.
+- `Buffering` 에서 `MediaElement` 재생할 미디어를 로드 하 고 있음을 나타냅니다. [`Position`](xref:Xamarin.Forms.MediaElement.Position)이 상태에서 해당 속성은 이동 하지 않습니다. `MediaElement`가 비디오를 재생 하는 경우 마지막으로 표시 된 프레임을 계속 표시 합니다.
+- `Playing` 에서 미디어 원본을 재생 하 고 있음을 나타냅니다 `MediaElement` .
+- `Paused` 에서 해당 `MediaElement` 속성을 이동 하지 않음을 나타냅니다 [`Position`](xref:Xamarin.Forms.MediaElement.Position) . `MediaElement`가 비디오를 재생 하는 경우 계속 해 서 현재 프레임을 표시 합니다.
+- `Stopped` 에 `MediaElement` 미디어가 포함 되어 있지만 재생 되거나 일시 중지 되지 않았음을 나타냅니다. 해당 [`Position`](xref:Xamarin.Forms.MediaElement.Position) 속성은 0 이며 이동 하지 않습니다. 로드 된 미디어가 비디오 인 경우는 `MediaElement` 첫 번째 프레임을 표시 합니다.
 
 일반적으로 [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) 전송 컨트롤을 사용 하는 경우 속성을 검사 하지 않아도 [`MediaElement`](xref:Xamarin.Forms.MediaElement) 됩니다. 그러나이 속성은 고유한 전송 컨트롤을 구현할 때 중요 합니다.
 
@@ -377,7 +377,7 @@ protected override void OnDisappearing()
 </ContentPage>
 ```
 
-이 예제에서 사용자 지정 전송 컨트롤은 개체로 정의 됩니다 [`Button`](xref:Xamarin.Forms.Button) . 하지만 `Button` 첫 번째 개체는 `Button` **재생** 및 **일시 중지**를 나타내고 두 번째 개체는 `Button` **중지**를 표시 하는 두 개의 개체만 있습니다. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger)개체는 단추를 활성화 및 비활성화 하 고 첫 번째 단추를 **Play** 와 **Pause**사이에서 전환 하는 데 사용 됩니다. 데이터 트리거에 대 한 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
+이 예제에서 사용자 지정 전송 컨트롤은 개체로 정의 됩니다 [`Button`](xref:Xamarin.Forms.Button) . 하지만 `Button` 첫 번째 개체는 `Button` **재생** 및 **일시 중지**를 나타내고 두 번째 개체는 `Button` **중지**를 표시 하는 두 개의 개체만 있습니다. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) 개체는 단추를 활성화 및 비활성화 하 고 첫 번째 단추를 **Play** 와 **Pause**사이에서 전환 하는 데 사용 됩니다. 데이터 트리거에 대 한 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 
 코드 숨겨진 파일에는 이벤트에 대 한 처리기가 있습니다 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) .
 
@@ -540,9 +540,9 @@ public class PositionSlider : Slider
 
 ## <a name="related-links"></a>관련 링크
 
-- [MediaElementDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+- [MediaElementDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [URI 체계](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms슬라이드](~/xamarin-forms/user-interface/slider.md)
+- [Xamarin.Forms 슬라이드](~/xamarin-forms/user-interface/slider.md)
 - [Android: 지원 되는 미디어 형식](https://developer.android.com/guide/topics/media/media-formats)
 - [UWP: 지원 되는 코덱](/windows/uwp/audio-video-camera/supported-codecs)

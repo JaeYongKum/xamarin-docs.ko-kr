@@ -10,12 +10,12 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b23aca29fa77b58183a1f09053bc2bb9ba66bb49
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: ee834bf7bae945536facb576ae26b9d13f5b7bcd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181513"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558949"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -48,7 +48,7 @@ XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있
 
 `x:Static`태그 확장은 클래스에서 지원 됩니다 [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) . 클래스에는 [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) `string` public 상수, 정적 속성, 정적 필드 또는 열거형 멤버의 이름으로 설정 하는 형식 이라는 단일 속성이 있습니다.
 
-를 사용 하는 일반적인 방법 중 하나 `x:Static` 는 먼저 `AppConstants` [**MarkupExtensions**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) 프로그램에서이 작은 클래스와 같은 일부 상수 또는 정적 변수를 사용 하 여 클래스를 정의 하는 것입니다.
+를 사용 하는 일반적인 방법 중 하나 `x:Static` 는 먼저 `AppConstants` [**MarkupExtensions**](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) 프로그램에서이 작은 클래스와 같은 일부 상수 또는 정적 변수를 사용 하 여 클래스를 정의 하는 것입니다.
 
 ```csharp
 static class AppConstants
@@ -636,7 +636,7 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [태그 확장 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML 태그 확장 책의 장 Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [동적 스타일](~/xamarin-forms/user-interface/styles/dynamic.md)

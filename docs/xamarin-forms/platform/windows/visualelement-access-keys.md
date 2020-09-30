@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfd61e79a2b4697e884afb45e4b9080ee939b87
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136528"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560249"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Windows의 VisualElement 액세스 키
 
@@ -80,12 +80,12 @@ button4.On<Windows>()
 
 `VisualElement.On<Windows>`메서드는이 플랫폼별가 유니버설 Windows 플랫폼 에서만 실행 되도록 지정 합니다. [ `VisualElement.SetAccessKey` ] (F: Xamarin.Forms 입니다. PlatformConfiguration. Windowsl. VisualElement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . 에 [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) 대 한 액세스 키 값을 설정 하는 데 네임 스페이스의 VisualElement}, system.string) 메서드를 사용 합니다 `VisualElement` . [ `VisualElement.SetAccessKeyPlacement` ] (F: Xamarin.Forms 입니다. PlatformConfiguration. SetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . VisualElement}, Xamarin.Forms . AccessKeyPlacement) 메서드는 선택적으로 [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) 다음과 같은 가능한 값을 제공 하는 열거형을 사용 하 여 액세스 키 팁을 표시 하는 데 사용할 위치를 지정 합니다.
 
-- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto)– 선택 키 팁 배치가 운영 체제에 의해 결정 됨을 나타냅니다.
-- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top)– 선택 키 팁이의 위쪽 가장자리 위에 표시 됨을 나타냅니다 `VisualElement` .
-- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom)– 선택 키 팁이의 아래쪽 가장자리 아래에 표시 됨을 나타냅니다 `VisualElement` .
-- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right)– 선택 키 팁이의 오른쪽 가장자리 오른쪽에 표시 됨을 나타냅니다 `VisualElement` .
-- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left)– 선택 키 팁이의 왼쪽 가장자리 왼쪽에 표시 됨을 나타냅니다 `VisualElement` .
-- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center)– 선택 키 팁이의 중앙에 겹쳐서 표시 됨을 나타냅니다 `VisualElement` .
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) – 선택 키 팁 배치가 운영 체제에 의해 결정 됨을 나타냅니다.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) – 선택 키 팁이의 위쪽 가장자리 위에 표시 됨을 나타냅니다 `VisualElement` .
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) – 선택 키 팁이의 아래쪽 가장자리 아래에 표시 됨을 나타냅니다 `VisualElement` .
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) – 선택 키 팁이의 오른쪽 가장자리 오른쪽에 표시 됨을 나타냅니다 `VisualElement` .
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) – 선택 키 팁이의 왼쪽 가장자리 왼쪽에 표시 됨을 나타냅니다 `VisualElement` .
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) – 선택 키 팁이의 중앙에 겹쳐서 표시 됨을 나타냅니다 `VisualElement` .
 
 > [!NOTE]
 > 일반적으로 [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) 주요 팁 배치가 충분 합니다. 여기에는 적응 사용자 인터페이스에 대 한 지원이 포함 됩니다.
@@ -107,6 +107,6 @@ button4.On<Windows>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

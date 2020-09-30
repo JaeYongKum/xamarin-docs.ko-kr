@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Forms셰이프: 채우기 규칙'
-description: Xamarin.Forms셰이프 채우기 규칙은 셰이프의 채우기 영역에 점이 있는지 여부를 결정 합니다.
+title: 'Xamarin.Forms 셰이프: 채우기 규칙'
+description: Xamarin.Forms 셰이프 채우기 규칙은 셰이프의 채우기 영역에 점이 있는지 여부를 결정 합니다.
 ms.prod: xamarin
 ms.assetid: 5CABB22B-C6BE-43D1-91D9-6E90A4BD5622
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 536992f5a8501f51e14dc15caa9825771e4ed950
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a1277b0acda598128e69b39a99910a468f6baa11
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918605"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559261"
 ---
-# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms셰이프: 채우기 규칙
+# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms 셰이프: 채우기 규칙
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -192,5 +192,5 @@ ms.locfileid: "87918605"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)

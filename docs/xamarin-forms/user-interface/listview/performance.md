@@ -10,12 +10,12 @@ ms.date: 12/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2b8e057d9687cd0a472451fc73cc578f9358277
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c010ac513cec8ac59927325dbe80ad1c8ac556d8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139895"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560002"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -168,19 +168,19 @@ public class CustomListView : ListView
 - Android에서는 `ListView` 성능 저하가 발생 하므로의 행 구분 기호 표시 또는 색을 인스턴스화한 후에 설정 하지 마십시오.
 - 에 따라 셀 레이아웃을 변경 하지 마십시오 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . 레이아웃을 변경 하면 많은 측정 및 초기화 비용이 발생 합니다.
 - 깊게 중첩 된 레이아웃 계층을 사용 하지 않습니다. `AbsoluteLayout` `Grid` 중첩을 줄이기 위해 또는를 사용 합니다.
-- 이외의 특정을 사용 하지 마십시오 `LayoutOptions` `Fill` `Fill` . (는 계산에 가장 저렴).
+- 이외의 특정을 사용 하지 마십시오 `LayoutOptions`  `Fill` `Fill` . (는 계산에 가장 저렴).
 - 다음과 같은 이유로에를에 배치 하지 마십시오 `ListView` `ScrollView` .
   - 는 `ListView` 자체 스크롤을 구현 합니다.
   - 는 `ListView` 부모에 의해 처리 되므로 제스처를 수신 하지 않습니다 `ScrollView` .
   - 는 `ListView` 목록 요소로 스크롤되는 사용자 지정 된 머리글 및 바닥글을 제공할 수 있으며,가 사용 된 기능을 제공 합니다 `ScrollView` . 자세한 내용은 [머리글 및 바닥글](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#headers-and-footers)을 참조 하세요.
 - 셀에 특정 하 고 복잡 한 디자인이 표시 되어야 하는 경우 사용자 지정 렌더러를 고려 합니다.
 
-`AbsoluteLayout`에서는 단일 측정 호출 없이 레이아웃을 수행 하 여 성능을 크게 높일 수 있습니다. `AbsoluteLayout`을 사용할 수 없는 경우를 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) 고려 합니다. 를 사용 하는 경우 `RelativeLayout` 식 API를 사용 하는 것 보다 직접 제약 조건을 전달 하는 것이 훨씬 빠릅니다. 이 메서드는 식 API가 JIT를 사용 하 고 iOS에서는 더 느린 트리를 해석 해야 하기 때문에 더 빠릅니다. 식 API는 초기 레이아웃 및 회전 에서만 필요 하지만 스크롤 중에 지속적으로 실행 되는 페이지 레이아웃에 적합 `ListView` 합니다.
+`AbsoluteLayout` 에서는 단일 측정 호출 없이 레이아웃을 수행 하 여 성능을 크게 높일 수 있습니다. `AbsoluteLayout`을 사용할 수 없는 경우를 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) 고려 합니다. 를 사용 하는 경우 `RelativeLayout` 식 API를 사용 하는 것 보다 직접 제약 조건을 전달 하는 것이 훨씬 빠릅니다. 이 메서드는 식 API가 JIT를 사용 하 고 iOS에서는 더 느린 트리를 해석 해야 하기 때문에 더 빠릅니다. 식 API는 초기 레이아웃 및 회전 에서만 필요 하지만 스크롤 중에 지속적으로 실행 되는 페이지 레이아웃에 적합 `ListView` 합니다.
 
 또는 해당 셀에 대 한 사용자 지정 렌더러를 작성 [`ListView`](xref:Xamarin.Forms.ListView) 하는 방법은 스크롤 성능에 대 한 레이아웃 계산의 효과를 줄이는 한 가지 방법입니다. 자세한 내용은 [ListView 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) 및 [viewcell 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [사용자 지정 렌더러 뷰 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [사용자 지정 렌더러 뷰 셀 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+- [사용자 지정 렌더러 뷰 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [사용자 지정 렌더러 뷰 셀 (샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

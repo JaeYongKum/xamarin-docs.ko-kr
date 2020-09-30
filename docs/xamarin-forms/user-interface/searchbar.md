@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsSearchBar
+title: Xamarin.Forms SearchBar
 description: Xamarin.FormsSearchbar는 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. SearchBar 컨트롤은 자리 표시자 텍스트, 쿼리 입력, 실행 및 취소를 지원 합니다. 이 문서에서는 XAML 및 코드에서 SearchBar를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
@@ -10,14 +10,14 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4c782f95db0f8e777494c47e9e668e9af67a2cc
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 3061692311811a360020041603bb8aca7af1b1f2
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917772"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559274"
 ---
-# <a name="no-locxamarinforms-searchbar"></a>Xamarin.FormsSearchBar
+# <a name="no-locxamarinforms-searchbar"></a>Xamarin.Forms SearchBar
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
@@ -27,19 +27,19 @@ ms.locfileid: "87917772"
 
 `SearchBar` 클래스는 다음과 같은 속성을 정의합니다.
 
-* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)는 `Color` 취소 단추의 색을 정의 하는입니다.
+* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) 는 `Color` 취소 단추의 색을 정의 하는입니다.
 * `double` 형식의 `CharacterSpacing`은 `SearchBar` 텍스트를 구성하는 문자 사이의 간격입니다.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)`FontAttributes` `SearchBar` 글꼴이 굵게, 기울임꼴로 또는 둘 다 인지 여부를 결정 하는 열거형 값입니다.
-* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily)는에서 `string` 사용 하는 글꼴 패밀리를 결정 하는입니다 `SearchBar` .
-* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize)는 `NamedSize` 열거형 값 이거나 `double` 여러 플랫폼에서 특정 글꼴 크기를 나타내는 값일 수 있습니다.
+* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) 는에서 `string` 사용 하는 글꼴 패밀리를 결정 하는입니다 `SearchBar` .
+* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) 는 `NamedSize` 열거형 값 이거나 `double` 여러 플랫폼에서 특정 글꼴 크기를 나타내는 값일 수 있습니다.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment)`TextAlignment`쿼리 텍스트의 가로 맞춤을 정의 하는 열거형 값입니다.
 * `VerticalTextAlignment``TextAlignment`쿼리 텍스트의 세로 맞춤을 정의 하는 열거형 값입니다.
-* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder)는 `string` "Search ..."와 같은 자리 표시자 텍스트를 정의 하는입니다.
+* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 는 `string` "Search ..."와 같은 자리 표시자 텍스트를 정의 하는입니다.
 * [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor)`Color`자리 표시자 텍스트의 색을 정의 하는입니다.
-* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand)는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
-* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `SearchCommand` .
-* [`Text`](xref:Xamarin.Forms.InputView.Text)는의 `string` 쿼리 텍스트를 포함 하는입니다 `SearchBar` .
-* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)는 `Color` 쿼리 텍스트 색을 정의 하는입니다.
+* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) 는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
+* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) 는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `SearchCommand` .
+* [`Text`](xref:Xamarin.Forms.InputView.Text) 는의 `string` 쿼리 텍스트를 포함 하는입니다 `SearchBar` .
+* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) 는 `Color` 쿼리 텍스트 색을 정의 하는입니다.
 * `TextTransform``TextTransform`텍스트의 대/소문자를 결정 하는 값입니다 `SearchBar` .
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,를 `SearchBar` 사용자 지정 하 고 데이터 바인딩의 대상으로 지정할 수 있습니다. 에서 글꼴 속성을 지정 하 `SearchBar` 는 것은 다른 [ Xamarin.Forms 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [의 Xamarin.Forms 글꼴 ](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
@@ -99,8 +99,8 @@ SearchBar searchBar = new SearchBar
 
 `SearchBar`다음 이벤트 중 하나에 이벤트 처리기를 연결 하 여 컨트롤을 사용 하 여 검색을 실행할 수 있습니다.
 
-* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed)사용자가 검색 단추를 클릭 하거나 enter 키를 누를 때 호출 됩니다.
-* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged)쿼리 상자의 텍스트가 변경 될 때마다이 호출 됩니다.
+* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) 사용자가 검색 단추를 클릭 하거나 enter 키를 누를 때 호출 됩니다.
+* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 쿼리 상자의 텍스트가 변경 될 때마다이 호출 됩니다.
 
 다음 예제에서는 XAML의 이벤트에 연결 된 이벤트 처리기를 보여 주고를 사용 하 여 `TextChanged` `ListView` 검색 결과를 표시 합니다.
 
@@ -195,7 +195,7 @@ public class SearchViewModel : INotifyPropertyChanged
 
 ## <a name="related-links"></a>관련 링크
 
-* [SearchBar 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
-* [Xamarin.Forms텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)
-* [글꼴Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
-* [Xamarin.Forms데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [SearchBar 데모](/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
+* [Xamarin.Forms 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)
+* [글꼴 Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
+* [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)

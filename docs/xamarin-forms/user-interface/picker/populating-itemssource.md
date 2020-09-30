@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a15ca2e11dabb73054f5f0a1dc3f79342d8ce7f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 395536752fb0d581408d0b8f91ef623d926aeeb4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938608"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559547"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
@@ -23,7 +23,7 @@ ms.locfileid: "86938608"
 
 _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 System.windows.controls.itemscontrol.itemssource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법과 사용자가 항목 선택 항목에 응답 하는 방법을 설명 합니다._
 
-Xamarin.Forms2.3.4는 [`Picker`](xref:Xamarin.Forms.Picker) [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) 속성을 설정 하 고 속성에서 선택한 항목을 검색 하 여 데이터를 데이터로 채우는 기능을 추가 하 여 뷰를 향상 시켰습니다 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) . 또한 속성을로 설정 하 여 선택한 항목에 대 한 텍스트 색을 변경할 수 있습니다 [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) [`Color`](xref:Xamarin.Forms.Color) .
+Xamarin.Forms 2.3.4는 [`Picker`](xref:Xamarin.Forms.Picker) [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) 속성을 설정 하 고 속성에서 선택한 항목을 검색 하 여 데이터를 데이터로 채우는 기능을 추가 하 여 뷰를 향상 시켰습니다 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) . 또한 속성을로 설정 하 여 선택한 항목에 대 한 텍스트 색을 변경할 수 있습니다 [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) [`Color`](xref:Xamarin.Forms.Color) .
 
 ## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택기 채우기
 
@@ -185,7 +185,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 ## <a name="related-links"></a>관련 링크
 
-- [선택 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
-- [원숭이 앱 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
-- [바인딩 가능한 선택기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [선택 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [원숭이 앱 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [바인딩 가능한 선택기 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
 - [선택 API](xref:Xamarin.Forms.Picker)

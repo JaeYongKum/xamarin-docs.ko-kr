@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms도형: 타원'
+title: 'Xamarin.Forms 도형: 타원'
 description: Xamarin.Forms타원 클래스를 사용 하 여 타원과 원을 그릴 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 5BF81E25-12E5-49F0-A40C-0CF4C5D63B9B
@@ -10,14 +10,14 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0796ba2a3b1ab28370fd8280e12df273223b9f4d
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: d0379f37a48a4cd11de06868a7616882a598e6a6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917740"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559248"
 ---
-# <a name="no-locxamarinforms-shapes-ellipse"></a>Xamarin.Forms도형: 타원
+# <a name="no-locxamarinforms-shapes-ellipse"></a>Xamarin.Forms 도형: 타원
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -64,5 +64,5 @@ ms.locfileid: "87917740"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)

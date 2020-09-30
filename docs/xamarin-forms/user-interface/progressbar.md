@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsProgressBar
+title: Xamarin.Forms ProgressBar
 description: Xamarin.FormsProgressBar는 유동 속성을 기반으로 채워진 가로 막대로 진행률을 시각적으로 나타내는 컨트롤입니다.
 ms.prod: xamarin
 ms.assetId: C2F85FED-797C-466B-A0FD-E73CFB79B267
@@ -10,14 +10,14 @@ ms.date: 07/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4ac6231c0483c0c44755c2ac9539f237dd64251
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 111b3ad13902b272256464f6f70f0db3dfd015b6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136281"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559456"
 ---
-# <a name="xamarinforms-progressbar"></a>Xamarin.FormsProgressBar
+# <a name="no-locxamarinforms-progressbar"></a>Xamarin.Forms ProgressBar
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
 Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 컨트롤은 값으로 표시 되는 백분율로 채워지는 가로 막대로 진행률을 시각적으로 나타냅니다 `float` . `ProgressBar`클래스는에서 상속 [`View`](xref:Xamarin.Forms.View) 됩니다.
@@ -28,8 +28,8 @@ Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 컨트롤은 값�
 
 `ProgressBar`컨트롤은 다음 두 가지 속성을 정의 합니다.
 
-* [`Progress`](xref:Xamarin.Forms.ProgressBar.Progress)`float`현재 진행률을 0에서 1 사이의 값으로 나타내는 값입니다. `Progress`0 보다 작은 값은 0으로 고정, 1 보다 큰 값은 1로 고정 됩니다.
-* [`ProgressColor`](xref:Xamarin.Forms.ProgressBar.ProgressColor)는 `Color` 현재 진행률을 나타내는 내부 막대 색에 영향을 주는입니다.
+* [`Progress`](xref:Xamarin.Forms.ProgressBar.Progress)`float`현재 진행률을 0에서 1 사이의 값으로 나타내는 값입니다. `Progress` 0 보다 작은 값은 0으로 고정, 1 보다 큰 값은 1로 고정 됩니다.
+* [`ProgressColor`](xref:Xamarin.Forms.ProgressBar.ProgressColor) 는 `Color` 현재 진행률을 나타내는 내부 막대 색에 영향을 주는입니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,의 스타일을 지정 `ProgressBar` 하 고 데이터 바인딩의 대상이 될 수 있습니다.
 
@@ -86,4 +86,4 @@ await progressBar.ProgressTo(0.75, 500, Easing.Linear);
 
 ## <a name="related-links"></a>관련 링크
 
-* [ProgressBar 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
+* [ProgressBar 데모](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)

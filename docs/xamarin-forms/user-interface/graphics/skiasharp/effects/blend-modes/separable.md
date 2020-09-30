@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0fd934a305e34bb7406a0379a0882873e3400fe8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139687"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558364"
 ---
 # <a name="the-separable-blend-modes"></a>분리 가능 블렌드 모드
 
@@ -155,7 +155,7 @@ public partial class LightenAndDarkenPage : ContentPage
 | `Plus`       | 검정     | 색 추가: Sc + Dc |
 | `Modulate`   | 흰색     | 색을 곱하여 어둡게: Sc · Dc | 
 | `Screen`     | 검정     | 보색의 제품 보완: Sc + Dc &ndash; Sc · Dc |
-| `Overlay`    | 회색      | 역`HardLight` |
+| `Overlay`    | 회색      | 역 `HardLight` |
 | `Darken`     | 흰색     | 최소 색: min (Sc, Dc) |
 | `Lighten`    | 검정     | 최대 색: 최대 (Sc, Dc) |
 | `ColorDodge` | 검정     | 소스를 기반으로 하는 대상 밝게 설정 |
@@ -430,5 +430,5 @@ public class PrimaryColorsPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

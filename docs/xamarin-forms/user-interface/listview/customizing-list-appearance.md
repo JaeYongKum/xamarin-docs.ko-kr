@@ -10,12 +10,12 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be8dd5d29aebf29395885d650fbd28082013d0d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dcf4e7ca0f081ff000aaa69d8be3a3cb3aa43e8e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929166"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560288"
 ---
 # <a name="listview-appearance"></a>ListView 모양
 
@@ -35,7 +35,7 @@ ms.locfileid: "86929166"
 - 을 `ListView` `ItemsSource` 해당 목록으로 설정 합니다.
 - `IsGroupingEnabled`를 true로 설정합니다.
 - [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding)그룹의 제목으로 사용 되는 그룹의 속성에 바인딩하려면 설정 합니다.
-- 필드 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding)그룹의 짧은 이름으로 사용 되는 그룹의 속성에 바인딩하려면 설정 합니다. 짧은 이름은 점프 목록 (iOS의 오른쪽 열)에 사용 됩니다.
+- 필드 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) 그룹의 짧은 이름으로 사용 되는 그룹의 속성에 바인딩하려면 설정 합니다. 짧은 이름은 점프 목록 (iOS의 오른쪽 열)에 사용 됩니다.
 
 먼저 그룹에 대 한 클래스를 만듭니다.
 
@@ -55,7 +55,7 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-위의 코드에서 `All` 는 ListView에 바인딩 소스로 제공 되는 목록입니다. `Title`및는 `ShortName` 그룹 제목에 사용 되는 속성입니다.
+위의 코드에서 `All` 는 ListView에 바인딩 소스로 제공 되는 목록입니다. `Title` 및는 `ShortName` 그룹 제목에 사용 되는 속성입니다.
 
 이 단계에서 `All` 는 빈 목록입니다. 프로그램이 시작 될 때 목록이 채워지도록 정적 생성자를 추가 합니다.
 
@@ -210,9 +210,9 @@ XAML에서:
 
 [`ListView`](xref:Xamarin.Forms.ListView)클래스에는 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 가로 또는 세로 스크롤 막대가 표시 될 때를 나타내는 값을 가져오거나 설정 하는 및 속성이 있습니다. 두 속성은 모두 다음 값으로 설정할 수 있습니다.
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 ## <a name="row-separators"></a>행 구분 기호
 
@@ -341,8 +341,8 @@ void OnImageTapped (object sender, EventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [그룹화 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
-- [사용자 지정 렌더러 뷰 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [행의 동적 크기 조정 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
+- [그룹화 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [사용자 지정 렌더러 뷰 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [행의 동적 크기 조정 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [1.4 릴리스 정보](https://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [1.3 릴리스 정보](https://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

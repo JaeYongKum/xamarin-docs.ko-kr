@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms지도 핀
+title: Xamarin.Forms 지도 핀
 description: 이 문서에서는 맵에 핀을 만드는 방법을 설명 Xamarin.Forms 합니다.
 ms.prod: xamarin
 ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
@@ -10,14 +10,14 @@ ms.date: 10/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 476ef1b8fd6c8e16c5fb3e5fdd1ac60eafd90b7c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138439"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559846"
 ---
-# <a name="xamarinforms-map-pins"></a>Xamarin.Forms지도 핀
+# <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms 지도 핀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -157,7 +157,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 
 ## <a name="pin-types"></a>Pin 유형
 
-[`Pin`](xref:Xamarin.Forms.Maps.Pin)개체에는 [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) [`PinType`](xref:Xamarin.Forms.Maps.PinType) pin의 유형을 나타내는 형식의 속성이 포함 됩니다. `PinType` 열거형은 다음 멤버를 정의합니다.
+[`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체에는 [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) [`PinType`](xref:Xamarin.Forms.Maps.PinType) pin의 유형을 나타내는 형식의 속성이 포함 됩니다. `PinType` 열거형은 다음 멤버를 정의합니다.
 
 - `Generic`는 일반 pin을 나타냅니다.
 - `Place`는 특정 위치의 pin을 나타냅니다.
@@ -271,7 +271,7 @@ public class MapItemTemplateSelector : DataTemplateSelector
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [사용자 지정 렌더러 매핑](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [XAML에서 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

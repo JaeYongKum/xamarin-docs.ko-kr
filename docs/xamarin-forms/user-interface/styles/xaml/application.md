@@ -1,5 +1,5 @@
 ---
-title: 전역 스타일Xamarin.Forms
+title: 전역 스타일 Xamarin.Forms
 description: 스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역적으로 사용할 수 있습니다. 이렇게 하면 여러 페이지나 컨트롤에서 스타일의 중복을 방지할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
@@ -10,14 +10,14 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ae3759c1e111906b82596af80d4bdcffd5d23305
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4b32c4b3ac4dea9dcdf52e3b9316f5f82aaad6ef
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938530"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558338"
 ---
-# <a name="global-styles-in-xamarinforms"></a>전역 스타일Xamarin.Forms
+# <a name="global-styles-in-no-locxamarinforms"></a>전역 스타일 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
@@ -156,8 +156,8 @@ public class ApplicationStylesPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
-- [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [기본 스타일 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [스타일 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

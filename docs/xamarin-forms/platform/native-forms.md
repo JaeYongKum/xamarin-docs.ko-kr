@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsXamarin 네이티브 프로젝트에서
+title: Xamarin.Forms Xamarin 네이티브 프로젝트에서
 description: 이 문서에서는 Xamarin 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 페이지를 사용 하는 방법과 이러한 페이지 간에 이동 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
@@ -10,14 +10,14 @@ ms.date: 08/19/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e34144f253b19796ea6ec83cb3873fe373aeb914
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132277"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560613"
 ---
-# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.FormsXamarin 네이티브 프로젝트에서
+# <a name="no-locxamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms Xamarin 네이티브 프로젝트에서
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 
@@ -80,7 +80,7 @@ public class AppDelegate : UIApplicationDelegate
 
 `FinishedLaunching` 메서드에서 수행하는 작업은 다음과 같습니다.
 
-- Xamarin.Forms는 메서드를 호출 하 여 초기화 됩니다 `Forms.Init` .
+- Xamarin.Forms 는 메서드를 호출 하 여 초기화 됩니다 `Forms.Init` .
 - 클래스에 대 한 참조는 `AppDelegate` 필드에 저장 됩니다 `static` `Instance` . 이는 클래스에 정의 된 메서드를 호출 하는 다른 클래스에 대 한 메커니즘을 제공 하기 위한 것입니다 `AppDelegate` .
 - `UIWindow`네이티브 iOS 응용 프로그램의 보기에 대 한 기본 컨테이너인가 만들어집니다.
 - `FolderPath`속성은 메모 데이터가 저장 되는 장치의 경로로 초기화 됩니다.
@@ -181,7 +181,7 @@ public class MainActivity : AppCompatActivity
 
 `OnCreate` 메서드에서 수행하는 작업은 다음과 같습니다.
 
-- Xamarin.Forms는 메서드를 호출 하 여 초기화 됩니다 `Forms.Init` .
+- Xamarin.Forms 는 메서드를 호출 하 여 초기화 됩니다 `Forms.Init` .
 - 클래스에 대 한 참조는 `MainActivity` 필드에 저장 됩니다 `static` `Instance` . 이는 클래스에 정의 된 메서드를 호출 하는 다른 클래스에 대 한 메커니즘을 제공 하기 위한 것입니다 `MainActivity` .
 - `Activity`콘텐츠는 레이아웃 리소스에서 설정 됩니다. 샘플 응용 프로그램에서 레이아웃은를 `LinearLayout` 포함 하는 `Toolbar` 와 `FrameLayout` 조각 컨테이너 역할을 하는로 구성 됩니다.
 - `Toolbar`가 검색 되어에 대 한 작업 모음으로 설정 되 `Activity` 고 작업 모음 제목이 설정 됩니다.
@@ -278,7 +278,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 ## <a name="uwp"></a>UWP
 
-UWP에서 네이티브 클래스는 `App` 일반적으로 응용 프로그램 시작 관련 작업을 수행 하는 장소입니다. Xamarin.Forms는 일반적으로 Xamarin.Forms UWP 응용 프로그램에서 `OnLaunched` 네이티브 클래스의 재정의에서 초기화 되어 `App` `LaunchActivatedEventArgs` 메서드에 인수를 전달 `Forms.Init` 합니다. 이러한 이유로 파생 페이지를 사용 하는 네이티브 UWP 응용 프로그램은 Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) 메서드에서 메서드를 가장 쉽게 호출할 수 있습니다 `Forms.Init` `App.OnLaunched` .
+UWP에서 네이티브 클래스는 `App` 일반적으로 응용 프로그램 시작 관련 작업을 수행 하는 장소입니다. Xamarin.Forms 는 일반적으로 Xamarin.Forms UWP 응용 프로그램에서 `OnLaunched` 네이티브 클래스의 재정의에서 초기화 되어 `App` `LaunchActivatedEventArgs` 메서드에 인수를 전달 `Forms.Init` 합니다. 이러한 이유로 파생 페이지를 사용 하는 네이티브 UWP 응용 프로그램은 Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) 메서드에서 메서드를 가장 쉽게 호출할 수 있습니다 `Forms.Init` `App.OnLaunched` .
 
 기본적으로 네이티브 클래스는 `App` `MainPage` 응용 프로그램의 첫 번째 페이지로 클래스를 시작 합니다. 다음 코드 예제에서는 `MainPage` 예제 응용 프로그램의 클래스를 보여 줍니다.
 
@@ -314,7 +314,7 @@ public sealed partial class MainPage : Page
 
 생성자가 실행 된 후에는 `MainPage` Xamarin.Forms `NotesPage` 다음 스크린샷에 표시 된 것 처럼 클래스에 정의 된 UI가 표시 됩니다.
 
-[![XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷 Xamarin.Forms](native-forms-images/uwp-notespage.png "UWP 앱에서 [! OP. NO-LOC (Xamarin.ios)] XAML UI")](native-forms-images/uwp-notespage-large.png#lightbox "UWP 앱에서 [! OP. NO-LOC (Xamarin.ios)] XAML UI")
+[![::: No loc (Xamarin.ios)::: XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-notespage.png "::: No loc (Xamarin.ios)::: XAML UI를 사용 하는 UWP 앱")](native-forms-images/uwp-notespage-large.png#lightbox "::: No loc (Xamarin.ios)::: XAML UI를 사용 하는 UWP 앱")
 
 UI와 상호 작용 하는 예를 들어를 탭 하면 **+** [`Button`](xref:Xamarin.Forms.Button) 코드를 실행 하는 동안 다음 이벤트 처리기가 발생 합니다 `NotesPage` .
 
@@ -340,7 +340,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 UWP의 탐색은 일반적으로 인수를 사용 하는 메서드를 사용 하 여 수행 됩니다 `Frame.Navigate` `Page` . Xamarin.Forms`Frame.Navigate`파생 페이지 인스턴스를 사용 하는 확장 메서드를 정의 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 합니다. 따라서 `NavigateToNoteEntryPage` 메서드가 실행 될 때 Xamarin.Forms `NoteEntryPage` 다음 스크린샷에 표시 된 것 처럼에 정의 된 UI가 표시 됩니다.
 
-[![XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷 Xamarin.Forms](native-forms-images/uwp-noteentrypage.png "UWP 앱에서 [! OP. NO-LOC (Xamarin.ios)] XAML UI")](native-forms-images/uwp-noteentrypage-large.png#lightbox "UWP 앱에서 [! OP. NO-LOC (Xamarin.ios)] XAML UI")
+[![::: No loc (Xamarin.ios)::: XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-noteentrypage.png "::: No loc (Xamarin.ios)::: XAML UI를 사용 하는 UWP 앱")](native-forms-images/uwp-noteentrypage-large.png#lightbox "::: No loc (Xamarin.ios)::: XAML UI를 사용 하는 UWP 앱")
 
 `NoteEntryPage`이 표시 되 면 뒤로 화살표를 눌러 `FrameworkElement` `NoteEntryPage` 앱 내 백오프 스택의를 팝 하 고 사용자를 `FrameworkElement` 클래스에 대 한로 반환 합니다 `NotesPage` .
 
@@ -419,5 +419,5 @@ UWP의 후방 탐색 지원에 대 한 자세한 내용은 [탐색 기록 및 uw
 
 ## <a name="related-links"></a>관련 링크
 
-- [NativeForms (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+- [NativeForms (샘플)](/samples/xamarin/xamarin-forms-samples/native2forms)
 - [네이티브 뷰](~/xamarin-forms/platform/native-views/index.md)

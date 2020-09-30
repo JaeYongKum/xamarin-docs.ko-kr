@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms지도 지 오 코딩
+title: Xamarin.Forms 지도 지 오 코딩
 description: 이 문서에서는를 사용 하 여 geocode 및 역방향 geocode 맵 데이터를 사용 하는 방법을 설명 합니다 Xamarin.Forms . Maps Geocoder 클래스입니다.
 ms.prod: xamarin
 ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
@@ -10,14 +10,14 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e92385f3a82c2d12881be4ff3e54bc47533696d
-ms.sourcegitcommit: ea2abdc789d0e292c3e1700a2b53b92097e0e542
+ms.openlocfilehash: d6a63e952d7466dc4b7f2d3e8cfc39d6c63e4daf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517495"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559976"
 ---
-# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms지도 지 오 코딩
+# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms 지도 지 오 코딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -60,6 +60,6 @@ string address = possibleAddresses.FirstOrDefault();
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Xamarin.Forms지도 위치 및 거리](position-distance.md)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Xamarin.Forms 지도 위치 및 거리](position-distance.md)
 - [Geocoder API](xref:Xamarin.Forms.Maps.Geocoder)

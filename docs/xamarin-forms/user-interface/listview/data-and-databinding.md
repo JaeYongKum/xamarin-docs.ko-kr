@@ -10,12 +10,12 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c77a219ab1b729aa279708d04610911fbbfe4e81
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938114"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560132"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
@@ -67,7 +67,7 @@ listView.ItemsSource = new string[]
 
 이 방법을 사용 하면가 `ListView` 문자열 목록으로 채워집니다. 기본적으로는를 `ListView` 호출 `ToString` 하 고 `TextCell` 각 행에 대해 결과를 표시 합니다. 데이터가 표시 되는 방식을 사용자 지정 하려면 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)을 참조 하세요.
 
-`ItemsSource`가 배열로 전송 되었기 때문에 기본 목록 또는 배열이 변경 될 때 콘텐츠가 업데이트 되지 않습니다. 기본 목록에서 항목이 추가, 제거 및 변경 될 때 ListView가 자동으로 업데이트 되 게 하려면를 사용 해야 `ObservableCollection` 합니다. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1)는에 정의 되어 `System.Collections.ObjectModel` 있으며 `List` 변경 내용을 알릴 수 있다는 점을 제외 하 고는와 동일 합니다 `ListView` .
+`ItemsSource`가 배열로 전송 되었기 때문에 기본 목록 또는 배열이 변경 될 때 콘텐츠가 업데이트 되지 않습니다. 기본 목록에서 항목이 추가, 제거 및 변경 될 때 ListView가 자동으로 업데이트 되 게 하려면를 사용 해야 `ObservableCollection` 합니다. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) 는에 정의 되어 `System.Collections.ObjectModel` 있으며 `List` 변경 내용을 알릴 수 있다는 점을 제외 하 고는와 동일 합니다 `ListView` .
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -147,7 +147,7 @@ public EmployeeListPage()
 ![데이터 바인딩을 사용 하는 ListView](data-and-databinding-images/bound-data.png)
 
 > [!WARNING]
-> `ObservableCollection`는 스레드로부터 안전 하지 않습니다. 을 수정 하면 `ObservableCollection` UI 업데이트가 수정 작업을 수행한 동일한 스레드에서 수행 됩니다. 스레드가 기본 UI 스레드가 아닌 경우 예외를 발생 시킵니다.
+> `ObservableCollection` 는 스레드로부터 안전 하지 않습니다. 을 수정 하면 `ObservableCollection` UI 업데이트가 수정 작업을 수행한 동일한 스레드에서 수행 됩니다. 스레드가 기본 UI 스레드가 아닌 경우 예외를 발생 시킵니다.
 
 ### <a name="binding-selecteditem"></a>바인딩 SelectedItem
 
@@ -165,4 +165,4 @@ public EmployeeListPage()
 
 ## <a name="related-links"></a>관련 링크
 
-- [양방향 바인딩 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [양방향 바인딩 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

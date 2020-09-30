@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Forms셰이프: 경로 태그 구문'
-description: Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다.
+title: 'Xamarin.Forms 셰이프: 경로 태그 구문'
+description: Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8250bd5e5f7d6c9cb93a986656e908b40cec9ae2
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 743f6366cc7e798247ea0151720a81e9cbddfeeb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918510"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559106"
 ---
-# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
+# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms 셰이프: 경로 태그 구문
 
 ![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다. 구문은 속성에 문자열 값으로 지정 됩니다 `Path.Data` .
+Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다. 구문은 속성에 문자열 값으로 지정 됩니다 `Path.Data` .
 
 ```xaml
 <Path Stroke="Black"
@@ -35,7 +35,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 이 구문에서 다음을 수행 합니다.
 
-- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0`는 채우기 규칙을 지정 하는 데 사용 되는 `EvenOdd` 반면는 `F1` 채우기 규칙을 지정 하는 데 사용 됩니다 `Nonzero` . 채우기 규칙에 대 한 자세한 내용은 [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
+- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0` 는 채우기 규칙을 지정 하는 데 사용 되는 `EvenOdd` 반면는 `F1` 채우기 규칙을 지정 하는 데 사용 됩니다 `Nonzero` . 채우기 규칙에 대 한 자세한 내용은 [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
 - *figureDescription* 은 이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성 된 그림을 나타냅니다. Move 명령은 그림의 시작점을 지정 합니다. 그리기 명령은 그림의 내용을 설명 하 고 선택적 닫기 명령은 그림을 닫습니다.
 
 위의 예제에서 path 태그 구문은 이동 명령 ()을 사용 하 여 시작점을 지정 하 `M` 고, 줄 명령 ()을 사용 하 여 일련의 직선을 지정 하 `L` 고, close 명령 ()을 사용 하 여 경로를 닫습니다 `Z` .
@@ -51,7 +51,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 이 구문에서 시작점 *은* [`Point`](xref:Xamarin.Forms.Point) 새 그림의 시작점을 지정 하는 구조체입니다. Move 명령 뒤에 여러 개의 점이 나열 되 면 해당 점에 선이 그려집니다.
 
-`M 10,10`는 유효한 move 명령의 예입니다.
+`M 10,10` 는 유효한 move 명령의 예입니다.
 
 ## <a name="draw-commands"></a>그리기 명령
 
@@ -74,7 +74,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 이 구문에서 *끝점* 은 선의 끝점을 [`Point`](xref:Xamarin.Forms.Point) 나타내는입니다.
 
-`L 20,30`및 `L 20 30` 은 올바른 줄 명령의 예입니다.
+`L 20,30` 및 `L 20 30` 은 올바른 줄 명령의 예입니다.
 
 직선을 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [Linesegment 만들기](geometries.md#create-a-linesegment)를 참조 하세요.
 
@@ -101,12 +101,12 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 이 구문에서 다음을 수행 합니다.
 
 - `size`[`Size`](xref:Xamarin.Forms.Size)원호의 x 및 y 반지름을 나타내는입니다.
-- `rotationAngle`는 `double` 타원의 회전 각도 (도)를 나타내는입니다.
-- `isLargeArcFlag`원호의 각도가 180도 이상이 면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
-- `sweepDirectionFlag`원호를 양의 각도 방향으로 그리면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
-- `endPoint`호를 [`Point`](xref:Xamarin.Forms.Point) 그릴입니다.
+- `rotationAngle` 는 `double` 타원의 회전 각도 (도)를 나타내는입니다.
+- `isLargeArcFlag` 원호의 각도가 180도 이상이 면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
+- `sweepDirectionFlag` 원호를 양의 각도 방향으로 그리면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
+- `endPoint` 호를 [`Point`](xref:Xamarin.Forms.Point) 그릴입니다.
 
-`A 150,150 0 1,0 150,-150`는 유효한 타원형 호 명령의 예입니다.
+`A 150,150 0 1,0 150,-150` 는 유효한 타원형 호 명령의 예입니다.
 
 원형 원호를 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [arcsegment 만들기](geometries.md#create-an-arcsegment)를 참조 하세요.
 
@@ -120,7 +120,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 - *controlPoint2* 는 곡선의 [`Point`](xref:Xamarin.Forms.Point) 끝 접선을 결정 하는 곡선의 두 번째 제어점을 나타내는입니다.
 - *끝점* 은 [`Point`](xref:Xamarin.Forms.Point) 곡선이 그려지는 점을 나타내는입니다.
 
-`C 100,200 200,400 300,200`는 유효한 입방 형 3 차원 곡선 명령의 예입니다.
+`C 100,200 200,400 300,200` 는 유효한 입방 형 3 차원 곡선 명령의 예입니다.
 
 입방 형 3 차원 곡선을 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [Create a system.windows.media.beziersegment>](geometries.md#create-a-beziersegment)을 참조 하세요.
 
@@ -148,7 +148,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 첫 번째 제어점은 현재 점을 기준으로 이전 명령의 두 번째 제어점에 대 한 리플렉션으로 간주 됩니다. 이전 명령이 없거나 이전 명령이 입방 형 3 차원 곡선 명령 또는 부드러운 입방 형 3 차원 곡선 명령이 아니면 첫 번째 제어점은 현재 지점과 일치 하는 것으로 간주 됩니다.
 
-`S 100,200 200,300`는 유효한 부드러운 입방 형 3 차원 곡선 명령의 예입니다.
+`S 100,200 200,300` 는 유효한 부드러운 입방 형 3 차원 곡선 명령의 예입니다.
 
 ### <a name="smooth-quadratic-bezier-curve-command"></a>부드러운 정방형 3 차원 곡선 명령
 
@@ -158,7 +158,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 제어점은 현재 점을 기준으로 이전 명령의 제어점의 리플렉션으로 간주됩니다. 이전 명령이 없거나 이전 명령이 정방형 3 차원 곡선 또는 부드러운 정방형 3 차원 곡선 명령이 아닌 경우 제어점은 현재 지점과 일치 하는 것으로 간주 됩니다.
 
-`T 100,30`는 유효한 부드러운 정방형 3 차원 곡선 명령의 예입니다.
+`T 100,30` 는 유효한 부드러운 정방형 3 차원 곡선 명령의 예입니다.
 
 ## <a name="close-command"></a>닫기 명령
 
@@ -178,6 +178,6 @@ Close 명령의 구문은 `Z` 또는 `z` 입니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms도형: 기 하 도형](geometries.md)
-- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 도형: 기 하 도형](geometries.md)
+- [Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)

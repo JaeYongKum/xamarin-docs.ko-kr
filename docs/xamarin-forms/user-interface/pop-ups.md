@@ -1,6 +1,6 @@
 ---
 title: 팝업 표시
-description: Xamarin.Forms경고, 작업 시트 및 프롬프트와 같은 세 가지 팝업 사용자 인터페이스 요소를 제공 합니다. 이 문서에서는 경고, 작업 시트 및 프롬프트 Api를 사용 하 여 사용자에 게 간단한 질문을 하 고, 작업을 안내 하 고, 프롬프트를 표시 하는 대화 상자를 표시 하는 방법을 보여줍니다.
+description: Xamarin.Forms 경고, 작업 시트 및 프롬프트와 같은 세 가지 팝업 사용자 인터페이스 요소를 제공 합니다. 이 문서에서는 경고, 작업 시트 및 프롬프트 Api를 사용 하 여 사용자에 게 간단한 질문을 하 고, 작업을 안내 하 고, 프롬프트를 표시 하는 대화 상자를 표시 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75cc3070f552ef05c3e8702d27caf7c353ac0a8f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 58ab2f785c26019c90b91c928daed864c3c6098b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931874"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559573"
 ---
 # <a name="display-pop-ups"></a>팝업 표시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-경고를 표시 하 여 사용자에 게 선택 하거나 프롬프트를 표시 하는 것은 일반적인 UI 작업입니다. Xamarin.Forms에는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 팝업을 통해 사용자와 상호 작용 하기 위한 세 가지 메서드인 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 및 `DisplayPromptAsync` 가 있습니다. 이 두 가지 항목은 각 플랫폼에 적절한 네이티브 컨트롤을 사용하여 렌더링됩니다.
+경고를 표시 하 여 사용자에 게 선택 하거나 프롬프트를 표시 하는 것은 일반적인 UI 작업입니다. Xamarin.Forms 에는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 팝업을 통해 사용자와 상호 작용 하기 위한 세 가지 메서드인 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 및 `DisplayPromptAsync` 가 있습니다. 이 두 가지 항목은 각 플랫폼에 적절한 네이티브 컨트롤을 사용하여 렌더링됩니다.
 
 ## <a name="display-an-alert"></a>경고 표시
 
@@ -112,4 +112,4 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 
 ## <a name="related-links"></a>관련 링크
 
-- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

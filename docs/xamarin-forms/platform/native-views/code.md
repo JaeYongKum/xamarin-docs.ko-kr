@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 71df780c648bcaa5a2ca4db388b52ac77a64d158
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938215"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560548"
 ---
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
@@ -33,8 +33,8 @@ _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만�
 
 플랫폼 특정 뷰를 레이아웃에 추가 하는 기능은 Xamarin.Forms 각 플랫폼에서 두 가지 확장 메서드를 사용 하 여 사용할 수 있습니다.
 
-- `Add`– 레이아웃의 컬렉션에 플랫폼별 뷰를 추가 [`Children`](xref:Xamarin.Forms.Layout`1.Children) 합니다.
-- `ToView`– 플랫폼별 뷰를 사용 하 여 Xamarin.Forms [`View`](xref:Xamarin.Forms.View) 컨트롤의 속성으로 설정할 수 있는으로 래핑합니다 `Content` .
+- `Add` – 레이아웃의 컬렉션에 플랫폼별 뷰를 추가 [`Children`](xref:Xamarin.Forms.Layout`1.Children) 합니다.
+- `ToView` – 플랫폼별 뷰를 사용 하 여 Xamarin.Forms [`View`](xref:Xamarin.Forms.View) 컨트롤의 속성으로 설정할 수 있는으로 래핑합니다 `Content` .
 
 공유 프로젝트에서 이러한 메서드를 사용 Xamarin.Forms 하려면 적절 한 플랫폼별 네임 스페이스를 가져와야 합니다 Xamarin.Forms .
 
@@ -75,7 +75,7 @@ contentView.Content = textView.ToView();
 
 이 예제에서는 `stackLayout` 및 `contentView` 인스턴스가 XAML 또는 c #에서 이전에 생성 된 것으로 가정 합니다.
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 다음 코드 예제에서는 및에를 추가 하는 방법을 보여 줍니다 `TextBlock` [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`ContentView`](xref:Xamarin.Forms.ContentView) .
 
@@ -232,7 +232,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 ![사용자 지정 GetDesiredSize 대리자를 사용 하는 Android CustomControl](code-images/android-good-measurement.png)
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 다음 코드 예제에서는 `CustomControl` 에서 상속 되는 클래스를 보여 줍니다 `Panel` .
 
@@ -325,5 +325,5 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 ## <a name="related-links"></a>관련 링크
 
-- [NativeEmbedding (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+- [NativeEmbedding (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [네이티브 양식](~/xamarin-forms/platform/native-forms.md)

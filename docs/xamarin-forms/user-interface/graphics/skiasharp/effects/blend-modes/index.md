@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dd1ef993fc2184561f01dad99aa01858251f8f73
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131705"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560678"
 ---
 # <a name="skiasharp-blend-modes"></a>SkiaSharp blend 모드
 
@@ -95,5 +95,5 @@ Porter-Duff blend 모드를 사용 하 여 원본 및 대상 이미지를 기반
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

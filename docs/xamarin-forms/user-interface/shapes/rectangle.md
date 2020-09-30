@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms도형: 사각형'
+title: 'Xamarin.Forms 도형: 사각형'
 description: Xamarin.Forms사각형 클래스를 사용 하 여 사각형을 그릴 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 2DD663D3-DAEC-495C-AB6D-8A143FC97637
@@ -10,14 +10,14 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42ecfc9f09683ccc61640520975b3f50beedaaf5
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 48d8d61633d09212e445d37f6bd282677ef6b1b1
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918501"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558845"
 ---
-# <a name="no-locxamarinforms-shapes-rectangle"></a>Xamarin.Forms도형: 사각형
+# <a name="no-locxamarinforms-shapes-rectangle"></a>Xamarin.Forms 도형: 사각형
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87918501"
 - `RadiusX`, 형식의, `double` 사각형의 모퉁이를 둥글게 하는 데 사용 되는 x 축 반지름입니다. 이 속성의 기본값은 0.0입니다.
 - `RadiusY`, 형식의, `double` 사각형의 모퉁이를 둥글게 하는 데 사용 되는 y-축 반경입니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 `Rectangle`클래스는 `Aspect` 클래스에서 상속 된 속성을로 설정 합니다 `Shape` `Stretch.Fill` . 속성에 대 한 자세한 내용은 `Aspect` [늘이기 셰이프](index.md#stretch-shapes)를 참조 하세요.
 
@@ -76,5 +76,5 @@ ms.locfileid: "87918501"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)

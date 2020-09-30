@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms셰이프도
-description: Xamarin.Forms도형은 화면에 모양을 그릴 수 있는 뷰 형식입니다.
+title: Xamarin.Forms 셰이프도
+description: Xamarin.Forms 도형은 화면에 모양을 그릴 수 있는 뷰 형식입니다.
 ms.prod: xamarin
 ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
@@ -10,23 +10,23 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a0771ac0dbbbc89301aeca3812c3b49e14655a2
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 07765fdb9f67f21415db495da1b635b0507b7ed1
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918462"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559209"
 ---
-# <a name="no-locxamarinforms-shapes"></a>Xamarin.Forms셰이프도
+# <a name="no-locxamarinforms-shapes"></a>Xamarin.Forms 셰이프도
 
 ![시험판 API](~/media/shared/preview.png)
 
 는 `Shape` [`View`](xref:Xamarin.Forms.View) 화면에 모양을 그릴 수 있는의 형식입니다. `Shape``Shape`클래스는 클래스에서 파생 되므로 레이아웃 클래스 및 대부분의 컨트롤 내에서 개체를 사용할 수 있습니다 `View` .
 
-Xamarin.Forms셰이프는 `Xamarin.Forms.Shapes` iOS, Android, macOS, 유니버설 Windows 플랫폼 (UWP) 및 Windows Presentation Foundation (WPF)의 네임 스페이스에서 사용할 수 있습니다.
+Xamarin.Forms 셰이프는 `Xamarin.Forms.Shapes` iOS, Android, macOS, 유니버설 Windows 플랫폼 (UWP) 및 Windows Presentation Foundation (WPF)의 네임 스페이스에서 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> Xamarin.Forms도형은 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `Shapes_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조 하세요.
+> Xamarin.Forms 도형은 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `Shapes_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조하세요.
 
 `Shape`는 다음 속성을 정의합니다.
 
@@ -40,13 +40,13 @@ Xamarin.Forms셰이프는 `Xamarin.Forms.Shapes` iOS, Android, macOS, 유니버�
 - `StrokeMiterLimit`형식의는 `double` 사접 길이와 도형의 절반의 비율에 대 한 제한을 지정 합니다 `StrokeThickness` . 이 속성의 기본값은 10.0입니다.
 - `StrokeThickness`형식의는 `double` 셰이프 윤곽선의 너비를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
-Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합니다. 여기에는,,,, `Ellipse` `Line` 및가 `Path` `Polygon` `Polyline` `Rectangle` 있습니다.
+Xamarin.Forms 클래스에서 파생 되는 개체의 수를 정의 `Shape` 합니다. 여기에는,,,, `Ellipse` `Line` 및가 `Path` `Polygon` `Polyline` `Rectangle` 있습니다.
 
 ## <a name="paint-shapes"></a>그리기 모양
 
-`Brush`개체는 모양의 및을 그리는 데 사용 `Stroke` 됩니다 `Fill` .
+`Brush` 개체는 모양의 및을 그리는 데 사용 `Stroke` 됩니다 `Fill` .
 
 ```xaml
 <Ellipse Fill="DarkBlue"
@@ -62,7 +62,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 ![그리기 모양](images/ellipse.png "그리기 모양")
 
 > [!IMPORTANT]
-> `Brush`개체는 [`Color`](xref:Xamarin.Forms.Color) 속성에 대해 값을 지정할 수 있도록 하는 형식 변환기를 사용 `Stroke` 합니다.
+> `Brush` 개체는 [`Color`](xref:Xamarin.Forms.Color) 속성에 대해 값을 지정할 수 있도록 하는 형식 변환기를 사용 `Stroke` 합니다.
 
 에 개체를 지정 하지 `Brush` `Stroke` 않거나 `StrokeThickness` 를 0으로 설정 하면 셰이프 주위의 테두리가 그려지지 않습니다.
 
@@ -70,7 +70,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ## <a name="stretch-shapes"></a>Stretch 셰이프
 
-`Shape`개체에는 `Aspect` 형식의 속성이 `Stretch` 있습니다. 이 속성은 개체의 `Shape` 콘텐츠를 `Shape` 개체의 레이아웃 공간에 채우도록 스트레치 하는 방법을 결정 합니다. `Shape`개체의 레이아웃 공간은 `Shape` Xamarin.Forms 명시적 `WidthRequest` 및 `HeightRequest` 설정이 나 `HorizontalOptions` 및 설정으로 인해가 레이아웃 시스템에서 할당 하는 공간 크기입니다 `VerticalOptions` .
+`Shape` 개체에는 `Aspect` 형식의 속성이 `Stretch` 있습니다. 이 속성은 개체의 `Shape` 콘텐츠를 `Shape` 개체의 레이아웃 공간에 채우도록 스트레치 하는 방법을 결정 합니다. `Shape`개체의 레이아웃 공간은 `Shape` Xamarin.Forms 명시적 `WidthRequest` 및 `HeightRequest` 설정이 나 `HorizontalOptions` 및 설정으로 인해가 레이아웃 시스템에서 할당 하는 공간 크기입니다 `VerticalOptions` .
 
 `Stretch` 열거형은 다음 멤버를 정의합니다.
 
@@ -102,9 +102,9 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ## <a name="draw-dashed-shapes"></a>파선 도형 그리기
 
-`Shape`개체에는 `StrokeDashArray` 형식의 속성이 `DoubleCollection` 있습니다. 이 속성은 `double` 셰이프를 윤곽선으로 표시 하는 데 사용 되는 대시와 간격의 패턴을 나타내는 값의 컬렉션을 나타냅니다. 는 `DoubleCollection` `ObservableCollection` 값의입니다 `double` . `double`컬렉션의 각은 대시 또는 간격의 길이를 지정 합니다. 인덱스 0에 있는 컬렉션의 첫 번째 항목은 대시의 길이를 지정 합니다. 인덱스 1에 있는 컬렉션의 두 번째 항목은 간격의 길이를 지정 합니다. 따라서 짝수 인덱스 값을 가진 개체는 대시를 지정 하 고 홀수 인덱스 값을 가진 개체는 간격을 지정 합니다.
+`Shape` 개체에는 `StrokeDashArray` 형식의 속성이 `DoubleCollection` 있습니다. 이 속성은 `double` 셰이프를 윤곽선으로 표시 하는 데 사용 되는 대시와 간격의 패턴을 나타내는 값의 컬렉션을 나타냅니다. 는 `DoubleCollection` `ObservableCollection` 값의입니다 `double` . `double`컬렉션의 각은 대시 또는 간격의 길이를 지정 합니다. 인덱스 0에 있는 컬렉션의 첫 번째 항목은 대시의 길이를 지정 합니다. 인덱스 1에 있는 컬렉션의 두 번째 항목은 간격의 길이를 지정 합니다. 따라서 짝수 인덱스 값을 가진 개체는 대시를 지정 하 고 홀수 인덱스 값을 가진 개체는 간격을 지정 합니다.
 
-`Shape`개체에는 `StrokeDashOffset` `double` 대시 패턴 내에서 대시가 시작 되는 거리를 지정 하는 형식의 속성도 있습니다. 이 속성을 설정 하지 않으면 실선이 발생 합니다 `Shape` .
+`Shape` 개체에는 `StrokeDashOffset` `double` 대시 패턴 내에서 대시가 시작 되는 거리를 지정 하는 형식의 속성도 있습니다. 이 속성을 설정 하지 않으면 실선이 발생 합니다 `Shape` .
 
 및 속성을 설정 하 여 파선 셰이프를 그릴 수 있습니다 `StrokeDashArray` `StrokeDashOffset` . `StrokeDashArray`속성은 하나 이상의 값으로 설정 되어야 하며 `double` 각 쌍은 단일 쉼표 및/또는 하나 이상의 공백으로 구분 됩니다. 예를 들어 "0.5 1.0" 및 "0.5, 1.0"은 모두 유효 합니다.
 
@@ -129,7 +129,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 줄에는 시작 단면, 줄 본문 및 끝 캡의 세 부분이 있습니다. 시작 및 끝 캡은 선 또는 세그먼트의 시작과 끝에 있는 셰이프를 설명 합니다.
 
-`Shape`개체에는 `StrokeLineCap` `PenLineCap` 줄의 시작과 끝에 있는 셰이프를 설명 하는 형식의 속성이 있습니다. `PenLineCap` 열거형은 다음 멤버를 정의합니다.
+`Shape` 개체에는 `StrokeLineCap` `PenLineCap` 줄의 시작과 끝에 있는 셰이프를 설명 하는 형식의 속성이 있습니다. `PenLineCap` 열거형은 다음 멤버를 정의합니다.
 
 - `Flat`는 줄의 마지막 점을 벗어나 확장 되지 않는 캡을 나타냅니다. 이 값은 선 끝 모양과 유사 하며 속성의 기본값입니다 `StrokeLineCap` .
 - `Square`-높이가 선 두께와 같고 길이가 선 두께의 절반에 해당 하는 사각형을 나타내는입니다.
@@ -156,7 +156,7 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ## <a name="control-line-joins"></a>줄 조인 제어
 
-`Shape`개체에는 `StrokeLineJoin` 형식의 속성이 있으며,이 속성은 `PenLineJoin` 셰이프의 꼭 짓 점에 사용 되는 조인 유형을 지정 합니다. `PenLineJoin` 열거형은 다음 멤버를 정의합니다.
+`Shape` 개체에는 `StrokeLineJoin` 형식의 속성이 있으며,이 속성은 `PenLineJoin` 셰이프의 꼭 짓 점에 사용 되는 조인 유형을 지정 합니다. `PenLineJoin` 열거형은 다음 멤버를 정의합니다.
 
 - `Miter`는 정규 각도 버텍스를 나타냅니다. 이 값은 `StrokeLineJoin` 속성의 기본값입니다.
 - `Bevel`는 경사진 정점을 나타냅니다.
@@ -180,6 +180,6 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms브러시](~/xamarin-forms/user-interface/brushes/index.md)
-- [색의Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 브러시](~/xamarin-forms/user-interface/brushes/index.md)
+- [색의 Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

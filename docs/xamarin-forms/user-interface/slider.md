@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms슬라이드
+title: Xamarin.Forms 슬라이드
 description: Xamarin.Forms슬라이더는 연속 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 Slider 클래스를 사용 하 여 연속 값 범위에서 값을 선택 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
@@ -10,14 +10,14 @@ ms.date: 02/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9fc61dcac588f49fc1df7ee96792cf55bdfa46c5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4d53f999e27aa5aea852f09e8650ea66aac1d9b9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572041"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558832"
 ---
-# <a name="xamarinforms-slider"></a>Xamarin.Forms슬라이드
+# <a name="no-locxamarinforms-slider"></a>Xamarin.Forms 슬라이드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
@@ -27,9 +27,9 @@ _연속 값 범위에서 선택 하려면 슬라이더를 사용 합니다._
 
 는 `Slider` 다음과 같은 세 가지 유형의 속성을 정의 합니다 `double` .
 
-- [`Minimum`](xref:Xamarin.Forms.Slider.Minimum)는 범위의 최소값 이며 기본값은 0입니다.
-- [`Maximum`](xref:Xamarin.Forms.Slider.Maximum)범위의 최대값입니다. 기본값은 1입니다.
-- [`Value`](xref:Xamarin.Forms.Slider.Value)는 슬라이더의 값으로,와의 범위에 `Minimum` 있으며 `Maximum` 기본값은 0입니다.
+- [`Minimum`](xref:Xamarin.Forms.Slider.Minimum) 는 범위의 최소값 이며 기본값은 0입니다.
+- [`Maximum`](xref:Xamarin.Forms.Slider.Maximum) 범위의 최대값입니다. 기본값은 1입니다.
+- [`Value`](xref:Xamarin.Forms.Slider.Value) 는 슬라이더의 값으로,와의 범위에 `Minimum` 있으며 `Maximum` 기본값은 0입니다.
 
 세 속성은 모두 개체에 의해 지원 됩니다 `BindableProperty` . `Value`속성의 기본 바인딩 모드를 사용 하는 `BindingMode.TwoWay` 경우이는 [MVVM (모델-뷰-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처를 사용 하는 응용 프로그램에서 바인딩 소스로 적합 함을 의미 합니다.
 
@@ -38,32 +38,32 @@ _연속 값 범위에서 선택 하려면 슬라이더를 사용 합니다._
 
 는 `Slider` `Value` `Minimum` 와 (포함) 사이에 있도록 속성을 강제 변환 합니다 `Maximum` . 속성이 `Minimum` 속성 보다 큰 값으로 설정 된 경우 `Value` 는 `Slider` 속성을로 설정 합니다 `Value` `Minimum` . 마찬가지로 `Maximum` ,가 보다 작은 값으로 설정 된 경우에는 `Value` 속성을 `Slider` 로 설정 합니다 `Value` `Maximum` .
 
-`Slider`의 [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) `Value` 사용자 조작을 통해 `Slider` 또는 프로그램에서 속성을 직접 설정 하는 경우가 변경 될 때 발생 하는 이벤트를 정의 합니다 `Value` . `ValueChanged`이벤트는 `Value` 이전 단락에서 설명한 대로 속성을 강제 변환할 때에도 발생 합니다.
+`Slider` 의 [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) `Value` 사용자 조작을 통해 `Slider` 또는 프로그램에서 속성을 직접 설정 하는 경우가 변경 될 때 발생 하는 이벤트를 정의 합니다 `Value` . `ValueChanged`이벤트는 `Value` 이전 단락에서 설명한 대로 속성을 강제 변환할 때에도 발생 합니다.
 
 [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs)이벤트와 함께 제공 되는 개체에는 `ValueChanged` 두 가지 속성인 `double` 및 형식이 [`OldValue`](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) [`NewValue`](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue) 있습니다. 이벤트가 발생 한 시점에의 값은 `NewValue` `Value` 개체의 속성과 같습니다 `Slider` .
 
-`Slider`또한는 `DragStarted` `DragCompleted` 끌기 작업의 시작과 끝에서 발생 하는 및 이벤트를 정의 합니다. 이벤트와 달리 [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) `DragStarted` 및 이벤트는 `DragCompleted` 의 사용자 조작을 통해서만 발생 합니다 `Slider` . `DragStarted`이벤트가 발생 하면 `DragStartedCommand` 형식의이 `ICommand` 실행 됩니다. 마찬가지로 `DragCompleted` 이벤트가 발생 하면 `DragCompletedCommand` 형식의이 `ICommand` 실행 됩니다.
+`Slider` 또한는 `DragStarted` `DragCompleted` 끌기 작업의 시작과 끝에서 발생 하는 및 이벤트를 정의 합니다. 이벤트와 달리 [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) `DragStarted` 및 이벤트는 `DragCompleted` 의 사용자 조작을 통해서만 발생 합니다 `Slider` . `DragStarted`이벤트가 발생 하면 `DragStartedCommand` 형식의이 `ICommand` 실행 됩니다. 마찬가지로 `DragCompleted` 이벤트가 발생 하면 `DragCompletedCommand` 형식의이 `ICommand` 실행 됩니다.
 
 > [!WARNING]
 > , 또는에서 제한 없는 가로 레이아웃 옵션을 사용 하지 마십시오 `Center` `Start` `End` `Slider` . Android 및 UWP 둘 다에서는 `Slider` 0 길이 막대로 축소 되 고, iOS에서는 막대가 매우 짧습니다. `HorizontalOptions`의 기본 설정을 유지 `Fill` 하 고 `Auto` 레이아웃에 넣을 때 너비를 사용 하지 않습니다 `Slider` `Grid` .
 
 는 `Slider` 또한 모양에 영향을 주는 몇 가지 속성을 정의 합니다.
 
-- [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty)엄지 단추의 왼쪽에 있는 막대 색입니다.
-- [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty)thumb의 오른쪽에 있는 막대 색입니다.
-- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty)thumb 색입니다.
-- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty)형식의 thumb에 사용할 이미지입니다 [`ImageSource`](xref:Xamarin.Forms.ImageSource) .
+- [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) 엄지 단추의 왼쪽에 있는 막대 색입니다.
+- [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) thumb의 오른쪽에 있는 막대 색입니다.
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) thumb 색입니다.
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) 형식의 thumb에 사용할 이미지입니다 [`ImageSource`](xref:Xamarin.Forms.ImageSource) .
 
 > [!NOTE]
 > `ThumbColor`및 `ThumbImageSource` 속성은 함께 사용할 수 없습니다. 두 속성이 모두 설정 되 면 `ThumbImageSource` 속성이 우선적으로 적용 됩니다.
 
 ## <a name="basic-slider-code-and-markup"></a>기본 슬라이더 코드 및 태그
 
-[**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플은 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 페이지로 시작 합니다. 첫 번째 페이지는 c # 코드만 사용 하 고, 두 번째는 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하 고, 세 번째 페이지는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 방지할 수 있습니다.
+[**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플은 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 페이지로 시작 합니다. 첫 번째 페이지는 c # 코드만 사용 하 고, 두 번째는 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하 고, 세 번째 페이지는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 방지할 수 있습니다.
 
 ### <a name="creating-a-slider-in-code"></a>코드에서 슬라이더 만들기
 
-[**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 **기본 슬라이더 코드** 페이지는 `Slider` 코드에서 및 두 개의 개체를 만드는 방법을 보여 줍니다 `Label` .
+[**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 **기본 슬라이더 코드** 페이지는 `Slider` 코드에서 및 두 개의 개체를 만드는 방법을 보여 줍니다 `Label` .
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -292,9 +292,9 @@ Slider slider = new Slider
 
 ### <a name="the-uwp-implementation"></a>UWP 구현
 
-의 UWP 구현은 `Slider` uwp 컨트롤을 기반으로 합니다 [`Slider`](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) . `StepFrequency`UWP의 속성 `Slider` 은 및 속성의 차이로 설정 되며 `Maximum` `Minimum` 1 보다 크지는 않습니다.
+의 UWP 구현은 `Slider` uwp 컨트롤을 기반으로 합니다 [`Slider`](/uwp/api/windows.ui.xaml.controls.slider) . `StepFrequency`UWP의 속성 `Slider` 은 및 속성의 차이로 설정 되며 `Maximum` `Minimum` 1 보다 크지는 않습니다.
 
-예를 들어 기본 범위인 0에서 1로 설정 된 경우 `StepFrequency` 속성은 0.1로 설정 됩니다. `Slider`가 조작 될 때 속성은 `Value` 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0로 제한 됩니다. 이는 [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 마지막 페이지에 있습니다. `Maximum`및 속성의 차이가 `Minimum` 10 이상일 경우 `StepFrequency` 은 1로 설정 되 고 속성에는 `Value` 정수 값이 있습니다.
+예를 들어 기본 범위인 0에서 1로 설정 된 경우 `StepFrequency` 속성은 0.1로 설정 됩니다. `Slider`가 조작 될 때 속성은 `Value` 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0로 제한 됩니다. 이는 [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 마지막 페이지에 있습니다. `Maximum` 및 속성의 차이가 `Minimum` 10 이상일 경우 `StepFrequency` 은 1로 설정 되 고 속성에는 `Value` 정수 값이 있습니다.
 
 ### <a name="the-stepslider-solution"></a>Stslider 솔루션
 
@@ -302,7 +302,7 @@ Slider slider = new Slider
 
 ## <a name="sliders-for-color-selection"></a>색 선택 슬라이더
 
-[**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 마지막 두 페이지는 색 선택에 세 개의 인스턴스를 사용 합니다 `Slider` . 첫 번째 페이지는 코드 사용 파일의 모든 상호 작용을 처리 하는 반면 두 번째 페이지는 ViewModel에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.
+[**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 마지막 두 페이지는 색 선택에 세 개의 인스턴스를 사용 합니다 `Slider` . 첫 번째 페이지는 코드 사용 파일의 모든 상호 작용을 처리 하는 반면 두 번째 페이지는 ViewModel에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.
 
 ### <a name="handling-sliders-in-the-code-behind-file"></a>코드 숨겨진 파일의 처리 슬라이더
 
@@ -508,5 +508,5 @@ ViewModels 인터페이스에 `INotifyPropertyChanged` 대해서는 문서 [데�
 
 ## <a name="related-links"></a>관련 링크
 
-- [슬라이더 데모 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+- [슬라이더 데모 샘플](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [슬라이더 API](xref:Xamarin.Forms.Slider)

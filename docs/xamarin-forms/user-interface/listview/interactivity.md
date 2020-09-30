@@ -10,12 +10,12 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 287b116d9ba2cb84e4e196fff080b8212e4eca3b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d665a80d6f1e0319fc9dc8696db379cf781ee833
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938413"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560119"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
@@ -27,13 +27,13 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 표시 되�
 
 [`ListView`](xref:Xamarin.Forms.ListView)선택 모드는 [`ListView.SelectionMode`](xref:Xamarin.Forms.ListView.SelectionMode) 속성을 열거형의 값으로 설정 하 여 제어 됩니다 [`ListViewSelectionMode`](xref:Xamarin.Forms.ListViewSelectionMode) .
 
-- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single)선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다. 기본값입니다.
-- [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None)항목을 선택할 수 없음을 나타냅니다.
+- [`Single`](xref:Xamarin.Forms.ListViewSelectionMode.Single) 선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다. 이것은 기본값입니다.
+- [`None`](xref:Xamarin.Forms.ListViewSelectionMode.None) 항목을 선택할 수 없음을 나타냅니다.
 
 사용자가 항목을 탭 하면 다음과 같은 두 개의 이벤트가 발생 합니다.
 
-- [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected)새 항목이 선택 될 때 발생 합니다.
-- [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped)항목을 탭 할 때 발생 합니다.
+- [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 새 항목이 선택 될 때 발생 합니다.
+- [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 항목을 탭 할 때 발생 합니다.
 
 동일한 항목을 두 번 누르면 두 개의 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트가 발생 하지만 단일 이벤트만 발생 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 합니다.
 
@@ -76,7 +76,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 ### <a name="xaml"></a>XAML
 
-`MenuItem`XAML 컬렉션에서 요소를 만들 수 있습니다. 다음 XAML에서는 두 개의 컨텍스트 작업이 구현 된 사용자 지정 셀을 보여 줍니다.
+`MenuItem` XAML 컬렉션에서 요소를 만들 수 있습니다. 다음 XAML에서는 두 개의 컨텍스트 작업이 구현 된 사용자 지정 셀을 보여 줍니다.
 
 ```xaml
 <ListView x:Name="ContextDemoList">
@@ -187,7 +187,7 @@ listView.RefreshControlColor = Color.Red;
 
 ![ListView 끌어오기-새로 고침 완료](interactivity-images/refresh-in-progress.png)
 
-[`ListView`](xref:Xamarin.Forms.ListView)이벤트를 발생 [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) 하 여 새로 고침을 시작 하 고 [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) 속성이로 설정 됩니다 `true` . 의 콘텐츠를 새로 고치는 데 필요한 모든 코드는 `ListView` 이벤트에 대 한 이벤트 처리기 또는에서 실행 되는 메서드에 의해 실행 되어야 합니다 `Refreshing` [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . 를 `ListView` 새로 고치면 `IsRefreshing` 속성이로 설정 `false` 되거나, [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) 새로 고침이 완료 되었음을 나타내기 위해 메서드를 호출 해야 합니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 이벤트를 발생 [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) 하 여 새로 고침을 시작 하 고 [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) 속성이로 설정 됩니다 `true` . 의 콘텐츠를 새로 고치는 데 필요한 모든 코드는 `ListView` 이벤트에 대 한 이벤트 처리기 또는에서 실행 되는 메서드에 의해 실행 되어야 합니다 `Refreshing` [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) . 를 `ListView` 새로 고치면 `IsRefreshing` 속성이로 설정 `false` 되거나, [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) 새로 고침이 완료 되었음을 나타내기 위해 메서드를 호출 해야 합니다.
 
 > [!NOTE]
 > 를 정의할 때 명령의 [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) `CanExecute` 메서드를 지정 하 여 명령을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
@@ -223,4 +223,4 @@ void OnListViewScrolled(object sender, ScrolledEventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [ListView 대화형 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+- [ListView 대화형 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

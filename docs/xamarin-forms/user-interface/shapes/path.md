@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms셰이프: 경로'
+title: 'Xamarin.Forms 셰이프: 경로'
 description: Xamarin.Forms경로 클래스를 사용 하 여 곡선 및 복잡 한 도형을 그릴 수 있습니다.
 ms.prod: xamarin
 ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
@@ -10,14 +10,14 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 80b0bcd84602fc999764e7e0896a44f83401a9dd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918255"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558897"
 ---
-# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms셰이프: 경로
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms 셰이프: 경로
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87918255"
 - `Data``Geometry`그릴 모양을 지정 하는 형식의입니다.
 - `RenderTransform`는 `Transform` 그리기 전에 경로의 기 하 도형에 적용 되는 변환을 나타내는 형식의입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 변환에 대 한 자세한 내용은 [ Xamarin.Forms 경로 변환](path-transforms.md)을 참조 하세요.
 
@@ -53,7 +53,7 @@ ms.locfileid: "87918255"
       HorizontalOptions="Start" />
 ```
 
-`Data`문자열은 `M` 경로에 대 한 절대 시작점을 설정 하는로 표시 되는 이동 명령으로 시작 합니다. `L`는 시작점에서 지정 된 끝점으로 직선을 만드는 line 명령입니다. `Z`는 close 명령이 며 현재 지점을 시작 지점에 연결 하는 줄을 만듭니다. 결과는 삼각형입니다.
+`Data`문자열은 `M` 경로에 대 한 절대 시작점을 설정 하는로 표시 되는 이동 명령으로 시작 합니다. `L` 는 시작점에서 지정 된 끝점으로 직선을 만드는 line 명령입니다. `Z` 는 close 명령이 며 현재 지점을 시작 지점에 연결 하는 줄을 만듭니다. 결과는 삼각형입니다.
 
 ![경로 삼각형](path-images/triangle.png "경로 삼각형")
 
@@ -66,7 +66,7 @@ ms.locfileid: "87918255"
 
 `Geometry`개체의 속성을 설정 하는 데 사용 되는 개체를 사용 하 여 곡선 및 셰이프를 설명할 수 있습니다 `Path` `Data` . 선택할 수 있는 다양 한 `Geometry` 개체가 있습니다. `EllipseGeometry`, `LineGeometry` 및 클래스는 `RectangleGeometry` 상대적으로 간단한 도형을 설명 합니다. 더 복잡 한 도형을 만들거나 곡선을 만들려면를 사용 `PathGeometry` 합니다.
 
-`PathGeometry`개체는 하나 이상의 개체로 구성 됩니다 `PathFigure` . 각 `PathFigure` 개체는 다른 모양을 나타냅니다. 각 `PathFigure` 개체는 각각 `PathSegment` 모양의 연결 부분을 나타내는 하나 이상의 개체로 구성 됩니다. 세그먼트 형식에는 `LineSegment` , `BezierSegment` 및 `ArcSegment` 클래스가 포함 됩니다.
+`PathGeometry` 개체는 하나 이상의 개체로 구성 됩니다 `PathFigure` . 각 `PathFigure` 개체는 다른 모양을 나타냅니다. 각 `PathFigure` 개체는 각각 `PathSegment` 모양의 연결 부분을 나타내는 하나 이상의 개체로 구성 됩니다. 세그먼트 형식에는 `LineSegment` , `BezierSegment` 및 `ArcSegment` 클래스가 포함 됩니다.
 
 다음 XAML 예제에서는 개체를 사용 하 여 삼각형을 그리는 방법을 보여 줍니다 `PathGeometry` .
 
@@ -103,8 +103,8 @@ ms.locfileid: "87918255"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
-- [Xamarin.Forms형상의](geometries.md)
-- [Xamarin.Forms경로 태그 구문](path-markup-syntax.md)
-- [Xamarin.Forms경로 변환](path-transforms.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)
+- [Xamarin.Forms 형상의](geometries.md)
+- [Xamarin.Forms 경로 태그 구문](path-markup-syntax.md)
+- [Xamarin.Forms 경로 변환](path-transforms.md)

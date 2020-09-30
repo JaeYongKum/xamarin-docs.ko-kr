@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms퍼
+title: Xamarin.Forms 퍼
 description: Xamarin.Forms스텝 퍼를 사용 하면 사용자가 값 범위에서 숫자 값을 선택할 수 있습니다. 이는 빼기 및 더하기 기호를 사용 하 여 레이블이 지정 된 두 개의 단추로 구성 됩니다. 두 단추를 조작 하면 선택한 값이 증분 방식으로 변경 됩니다.
 ms.prod: xamarin
 ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
@@ -10,14 +10,14 @@ ms.date: 10/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 390bca8cb74fd2da725724769956b164e0264173
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130548"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558760"
 ---
-# <a name="xamarinforms-stepper"></a>Xamarin.Forms퍼
+# <a name="no-locxamarinforms-stepper"></a>Xamarin.Forms 퍼
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
@@ -27,10 +27,10 @@ _값 범위에서 숫자 값을 선택 하는 경우 스텝 퍼를 사용 합니
 
 는 [`Stepper`](xref:Xamarin.Forms.Stepper) 다음과 같은 네 가지 형식의 속성을 정의 합니다 `double` .
 
-- [`Increment`](xref:Xamarin.Forms.Stepper.Increment)선택한 값을 변경할 크기 이며 기본값은 1입니다.
-- [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum)는 범위의 최소값 이며 기본값은 0입니다.
-- [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum)는 범위의 최대값 이며 기본값은 100입니다.
-- [`Value`](xref:Xamarin.Forms.Stepper.Value)는 스텝 퍼의 값으로, 및의 범위를 지정할 수 있으며 `Minimum` `Maximum` 기본값은 0입니다.
+- [`Increment`](xref:Xamarin.Forms.Stepper.Increment) 선택한 값을 변경할 크기 이며 기본값은 1입니다.
+- [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) 는 범위의 최소값 이며 기본값은 0입니다.
+- [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum) 는 범위의 최대값 이며 기본값은 100입니다.
+- [`Value`](xref:Xamarin.Forms.Stepper.Value) 는 스텝 퍼의 값으로, 및의 범위를 지정할 수 있으며 `Minimum` `Maximum` 기본값은 0입니다.
 
 이러한 모든 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . [`Value`](xref:Xamarin.Forms.Stepper.Value)속성의 기본 바인딩 모드를 사용 하는 [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 경우이는 [MVVM (모델-뷰-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처를 사용 하는 응용 프로그램에서 바인딩 소스로 적합 함을 의미 합니다.
 
@@ -45,11 +45,11 @@ _값 범위에서 숫자 값을 선택 하는 경우 스텝 퍼를 사용 합니
 
 ## <a name="basic-stepper-code-and-markup"></a>기본 스텝 퍼 코드 및 태그
 
-[**Stepperdemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플에는 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 개의 페이지가 포함 되어 있습니다. 첫 번째 페이지는 c # 코드만 사용 하 고, 두 번째는 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하 고, 세 번째 페이지는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 방지할 수 있습니다.
+[**Stepperdemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플에는 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 개의 페이지가 포함 되어 있습니다. 첫 번째 페이지는 c # 코드만 사용 하 고, 두 번째는 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하 고, 세 번째 페이지는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 방지할 수 있습니다.
 
 ### <a name="creating-a-stepper-in-code"></a>코드에서 스텝 퍼 만들기
 
-[**Stepperdemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플의 **기본 스텝 퍼 코드** 페이지는 [`Stepper`](xref:Xamarin.Forms.Stepper) 코드에서 및 두 개의 개체를 만드는 방법을 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
+[**Stepperdemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플의 **기본 스텝 퍼 코드** 페이지는 [`Stepper`](xref:Xamarin.Forms.Stepper) 코드에서 및 두 개의 개체를 만드는 방법을 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -99,7 +99,7 @@ public class BasicStepperCodePage : ContentPage
 
 [![기본 스텝 퍼 코드](stepper-images/basic-stepper-code.png "기본 스텝 퍼 코드")](stepper-images/basic-stepper-code-large.png#lightbox)
 
-두 번째는 [`Label`](xref:Xamarin.Forms.Label) 가 조작 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 하 여 [`Stepper`](xref:Xamarin.Forms.Stepper) 첫 번째 [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) 이벤트를 발생 시킵니다.
+두 번째는 [`Label`](xref:Xamarin.Forms.Label)  가 조작 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 하 여 [`Stepper`](xref:Xamarin.Forms.Stepper) 첫 번째 [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) 이벤트를 발생 시킵니다.
 
 ### <a name="creating-a-stepper-in-xaml"></a>XAML로 스텝 퍼 만들기
 
@@ -261,5 +261,5 @@ Stepper stepper = new Stepper
 
 ## <a name="related-links"></a>관련 링크
 
-- [스텝 퍼 데모 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+- [스텝 퍼 데모 샘플](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [스텝 퍼 API](xref:Xamarin.Forms.Stepper)

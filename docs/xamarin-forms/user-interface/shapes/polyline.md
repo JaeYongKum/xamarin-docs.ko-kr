@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms도형: 폴리라인'
+title: 'Xamarin.Forms 도형: 폴리라인'
 description: Xamarin.Forms다중선 클래스를 사용 하 여 일련의 연결 된 직선을 그릴 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
@@ -10,14 +10,14 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5b7e6404dec40814b800aef696afd058cafb69e5
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 3926e063fcabf9c70103e3ee72a4723358f26b2a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918355"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558871"
 ---
-# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms도형: 폴리라인
+# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms 도형: 폴리라인
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87918355"
 - `Points`는 `PointCollection` `Point` 다중선의 꼭 짓 점을 설명 하는 구조체 컬렉션인 형식의입니다.
 - `FillRule`는 다중선의 `FillRule` 교차 영역을 결합 하는 방법을 지정 하는 형식의입니다. 이 속성의 기본값은 `FillRule.EvenOdd`입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 `PointsCollection`형식은 `ObservableCollection` 개체의입니다 [`Point`](xref:Xamarin.Forms.Point) . `Point`구조체는 `X` `Y` `double` 2d 공간에서 x 및 y 좌표 쌍을 나타내는 형식의 및 속성을 정의 합니다. 따라서 속성은 `Points` 단일 쉼표 및/또는 하나 이상의 공백으로 구분 되는 다중선 꼭 짓 점 점을 설명 하는 x 좌표 및 y 좌표 쌍의 목록으로 설정 되어야 합니다. 예를 들어 "40, 10 70, 80" 및 "40 10, 70 80"는 모두 유효 합니다.
 
@@ -100,6 +100,6 @@ ms.locfileid: "87918355"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
-- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)
+- [Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)

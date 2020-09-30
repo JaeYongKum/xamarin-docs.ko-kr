@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms도형: 선'
+title: 'Xamarin.Forms 도형: 선'
 description: Xamarin.Forms줄 클래스를 사용 하 여 선을 그릴 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
@@ -10,14 +10,14 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918625"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559157"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms도형: 선
+# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms 도형: 선
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -32,7 +32,7 @@ ms.locfileid: "87918625"
 - `X2`double 형식의는 선 끝점의 x 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 - `Y2`double 형식의는 선 끝점의 y 좌표를 나타냅니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 줄 끝을 그리는 방법을 제어 하는 방법에 대 한 자세한 내용은 [줄 끝 제어](index.md#control-line-ends)를 참조 하세요.
 
@@ -89,5 +89,5 @@ ms.locfileid: "87918625"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)

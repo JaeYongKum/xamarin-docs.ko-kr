@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms라디오
+title: Xamarin.Forms 라디오
 description: Xamarin.FormsRadioButton은 사용자가 집합에서 하나의 옵션을 선택할 수 있도록 하는 단추 유형입니다. 각 옵션은 하나의 라디오 단추로 표시 되 고 그룹에서 라디오 단추 하나를 선택할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
@@ -10,14 +10,14 @@ ms.date: 03/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 964bac947f46e5279cbdcc6bdb61d74deba7f622
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127625"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559391"
 ---
-# <a name="xamarinforms-radiobutton"></a>Xamarin.Forms라디오
+# <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms 라디오
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
@@ -28,14 +28,14 @@ ms.locfileid: "84127625"
 ![IOS 및 Android에서 선택 되 고 지워진 상태의 Radiobutton 스크린샷](radiobutton-images/radiobutton-states.png "IOS 및 Android의 라디오 단추")
 
 > [!IMPORTANT]
-> `RadioButton`는 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `RadioButton_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조 하세요.
+> `RadioButton` 는 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `RadioButton_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조하세요.
 
 `RadioButton`컨트롤은 다음 속성을 정의 합니다.
 
 - `IsChecked``bool`는를 선택 했는지 여부를 정의 하는 형식의입니다 `RadioButton` . 이 속성은 `TwoWay` 바인딩을 사용 하며 기본값은 `false` 입니다.
 - `GroupName`는 `string` `RadioButton` 함께 사용할 수 없는 컨트롤을 지정 하는 이름을 정의 하는 형식의입니다. 이 속성의 기본값은 `null` 입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 `RadioButton`컨트롤은 `CheckedChanged` `IsChecked` 사용자 또는 프로그래밍 방식 조작을 통해 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. `CheckedChangedEventArgs`이벤트와 함께 제공 되는 개체에는 `CheckedChanged` 형식의 이라는 단일 속성이 있습니다 `Value` `bool` . 이벤트가 발생 하면 속성의 값 `Value` 이 속성의 새 값으로 설정 됩니다 `IsChecked` .
 
@@ -116,7 +116,7 @@ StackLayout stackLayout = new StackLayout
 
 ## <a name="respond-to-a-radiobutton-state-change"></a>RadioButton 상태 변경에 응답
 
-라디오 단추에는 두 가지 상태가 있습니다. 선택 하거나 선택 취소 합니다. 라디오 단추를 선택 하면 해당 `IsChecked` 속성은 `true` 입니다. 라디오 단추가 선택 취소 되 면 해당 `IsChecked` 속성은 `false` 입니다. 라디오 단추는 동일한 그룹의 다른 라디오 단추를 클릭 하 여 지울 수 있지만 다시 클릭 하 여 제거할 수는 없습니다. 그러나 속성을로 설정 하 여 라디오 단추를 프로그래밍 방식으로 지울 수 있습니다 `IsChecked` `false` .
+라디오 단추의 상태는 선택됨 및 선택 취소됨 두 가지입니다. 라디오 단추를 선택 하면 해당 `IsChecked` 속성은 `true` 입니다. 라디오 단추가 선택 취소되면 해당 `IsChecked` 속성은 `false`입니다. 라디오 단추는 동일한 그룹의 다른 라디오 단추를 클릭 하 여 지울 수 있지만 다시 클릭 하 여 제거할 수는 없습니다. 그러나 해당 `IsChecked` 속성을 `false`로 설정하여 라디오 단추를 프로그래밍 방식으로 지울 수 있습니다.
 
 `IsChecked`사용자 또는 프로그래밍 방식 조작을 통해 속성이 변경 되 면 `CheckedChanged` 이벤트가 발생 합니다. 이 이벤트에 대 한 이벤트 처리기를 등록 하 여 변경에 응답할 수 있습니다.
 
@@ -153,7 +153,7 @@ radioButton.CheckedChanged += (sender, e) =>
 
 ## <a name="radiobutton-visual-states"></a>RadioButton 시각적 상태
 
-`RadioButton`에는 `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) 를 선택할 때 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `RadioButton` .
+`RadioButton` 에는 `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) 를 선택할 때 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `RadioButton` .
 
 다음 XAML 예제에서는 상태에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다 `IsChecked` .
 
@@ -211,6 +211,6 @@ radioButton.CheckedChanged += (sender, e) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [RadioButton 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+- [RadioButton 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 - [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

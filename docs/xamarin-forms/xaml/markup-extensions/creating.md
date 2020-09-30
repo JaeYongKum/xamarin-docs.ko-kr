@@ -10,12 +10,12 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 43c8cd0dd7b50e3a5bfbd15d9858bd4502fedacc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130535"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558780"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장 만들기
 
@@ -25,11 +25,11 @@ ms.locfileid: "84130535"
 
 또는에서 파생 하 여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수도 `IMarkupExtension` 있습니다 `IMarkupExtension<T>` . 태그 확장이 특정 형식의 값을 가져오는 경우 일반 폼을 사용 합니다. 다음은 몇 가지 태그 확장을 사용 하는 경우입니다 Xamarin.Forms .
 
-- `TypeExtension`는 `IMarkupExtension<Type>`에서 파생됩니다.
-- `ArrayExtension`는 `IMarkupExtension<Array>`에서 파생됩니다.
-- `DynamicResourceExtension`는 `IMarkupExtension<DynamicResource>`에서 파생됩니다.
+- `TypeExtension`은 `IMarkupExtension<Type>`에서 파생됩니다.
+- `ArrayExtension`은 `IMarkupExtension<Array>`에서 파생됩니다.
+- `DynamicResourceExtension`은 `IMarkupExtension<DynamicResource>`에서 파생됩니다.
 - `BindingExtension`는 `IMarkupExtension<BindingBase>`에서 파생됩니다.
-- `ConstraintExpression`는 `IMarkupExtension<Constraint>`에서 파생됩니다.
+- `ConstraintExpression`은 `IMarkupExtension<Constraint>`에서 파생됩니다.
 
 두 `IMarkupExtension` 인터페이스는 각각 하나의 메서드만 정의 합니다 `ProvideValue` .
 
@@ -47,7 +47,7 @@ public interface IMarkupExtension<out T> : IMarkupExtension
 
 `IMarkupExtension<T>`는에서 파생 되 `IMarkupExtension` 고에 키워드를 포함 하므로 `new` `ProvideValue` 두 메서드를 모두 포함 `ProvideValue` 합니다.
 
-XAML 태그 확장은 반환 값에 영향을 주는 속성을 정의 하는 경우가 많습니다. 분명 한 예외는 이며 `NullExtension` , 여기서는를 `ProvideValue` 반환 `null` 합니다. `ProvideValue`메서드에는 `IServiceProvider` 이 문서의 뒷부분에서 설명 하는 형식의 단일 인수가 있습니다.
+XAML 태그 확장은 반환 값에 영향을 주는 속성을 정의 하는 경우가 많습니다. 분명 한 예외는 이며 `NullExtension` , 여기서는를 `ProvideValue` 반환 `null` 합니다. `ProvideValue` 메서드에는 `IServiceProvider` 이 문서의 뒷부분에서 설명 하는 형식의 단일 인수가 있습니다.
 
 ## <a name="a-markup-extension-for-specifying-color"></a>색을 지정 하기 위한 태그 확장
 
@@ -156,7 +156,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension`는 XAML 파일이 .NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우에 유용 합니다. 속성을 사용 하 여 `Source` 정적 메서드를 호출 `ImageSource.FromResource` 합니다. 이 메서드에는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. 메서드에 대 한 두 번째 인수는 `ImageSource.FromResource` 어셈블리 이름을 제공 하며 UWP의 릴리스 빌드에만 필요 합니다. 와 관계 없이 `ImageSource.FromResource` 은 비트맵이 포함 된 어셈블리에서 호출 되어야 합니다. 즉, 이미지가 해당 라이브러리에도 포함 되어 있지 않으면이 XAML 리소스 확장이 외부 라이브러리의 일부가 될 수 없습니다. 포함 리소스로 저장 된 비트맵에 액세스 하는 방법에 대 한 자세한 내용은 [**포함 된 이미지**](~/xamarin-forms/user-interface/images.md#embedded-images) 문서를 참조 하세요.
+`ImageResourceExtension` 는 XAML 파일이 .NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우에 유용 합니다. 속성을 사용 하 여 `Source` 정적 메서드를 호출 `ImageSource.FromResource` 합니다. 이 메서드에는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. 메서드에 대 한 두 번째 인수는 `ImageSource.FromResource` 어셈블리 이름을 제공 하며 UWP의 릴리스 빌드에만 필요 합니다. 와 관계 없이 `ImageSource.FromResource` 은 비트맵이 포함 된 어셈블리에서 호출 되어야 합니다. 즉, 이미지가 해당 라이브러리에도 포함 되어 있지 않으면이 XAML 리소스 확장이 외부 라이브러리의 일부가 될 수 없습니다. 포함 리소스로 저장 된 비트맵에 액세스 하는 방법에 대 한 자세한 내용은 [**포함 된 이미지**](~/xamarin-forms/user-interface/images.md#embedded-images) 문서를 참조 하세요.
 
 속성을 설정 해야 하지만 `ImageResourceExtension` `Source` 속성은 `Source` 특성에서 클래스의 콘텐츠 속성으로 표시 됩니다. 이는 `Source=` 중괄호 안에 있는 식의 일부를 생략할 수 있음을 의미 합니다. **이미지 리소스 데모** 페이지에서 `Image` 요소는 폴더 이름 및 마침표로 구분 된 파일 이름을 사용 하 여 두 개의 이미지를 인출 합니다.
 
@@ -206,5 +206,5 @@ XAML 태그 확장은 다양 한 소스에서 특성을 설정 하는 기능을 
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [태그 확장 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML 태그 확장 책의 장 Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

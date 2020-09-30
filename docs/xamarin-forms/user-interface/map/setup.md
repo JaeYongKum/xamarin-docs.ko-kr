@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms맵 초기화 및 구성
+title: Xamarin.Forms 맵 초기화 및 구성
 description: Xamarin.Forms입니다. Maps NuGet 패키지는 응용 프로그램에서 maps 기능을 사용 하는 데 필요 합니다. 또한 사용자의 위치에 액세스 하려면 응용 프로그램에 대 한 위치 권한이 있어야 합니다.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
@@ -10,14 +10,14 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52e2ac5f8075c57f533fcba064223f355e07ba48
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3da0223bf72e4de60cc50be2562a0fdbd279f52e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139843"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559742"
 ---
-# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms맵 초기화 및 구성
+# <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms 맵 초기화 및 구성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -60,11 +60,11 @@ NuGet 패키지를 추가 하 고 각 응용 프로그램 내에서 초기화 �
 IOS에서 지도를 표시 하 고 상호 작용 하려면 추가 구성이 필요 하지 않습니다. 그러나 위치 서비스에 액세스 하려면 info.plist에서 다음 키를 설정 해야 합니다 **.**
 
 - iOS 11 이상
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)– 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription)– 항상 위치 서비스를 사용 하는 경우
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – 항상 위치 서비스를 사용 하는 경우
 - iOS 10 및 이전 버전
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)– 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18)– 항상 위치 서비스를 사용 하는 경우    
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – 항상 위치 서비스를 사용 하는 경우    
 
 IOS 11 및 이전 버전을 지원 하기 위해, 및의 세 가지 키를 모두 포함할 수 있습니다 `NSLocationWhenInUseUsageDescription` `NSLocationAlwaysAndWhenInUseUsageDescription` `NSLocationAlwaysUsageDescription` .
 
@@ -115,7 +115,7 @@ API 키를 가져온 후에는 `<application>` **속성/AndroidManifest.xml** �
 이렇게 하면 API 키가 매니페스트에 포함 됩니다. 유효한 API 키가 없으면 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤은 빈 그리드를 표시 합니다.
 
 > [!NOTE]
-> `com.google.android.geo.API_KEY`는 API 키에 대해 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 위해 `com.google.android.maps.v2.API_KEY` 메타 데이터 이름을 사용할 수 있지만 Android MAPS API v 2에 대 한 인증만 허용 합니다.
+> `com.google.android.geo.API_KEY` 는 API 키에 대해 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 위해 `com.google.android.maps.v2.API_KEY` 메타 데이터 이름을 사용할 수 있지만 Android MAPS API v 2에 대 한 인증만 허용 합니다.
 
 APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는 모든 키 저장소 (디버그 및 릴리스)에 대해 SHA-1 지문 및 패키지 이름을 포함 해야 합니다. 예를 들어 디버그에 하나의 컴퓨터를 사용 하 고 다른 컴퓨터에서 릴리스 APK를 생성 하는 경우 첫 번째 컴퓨터의 디버그 키 저장소의 SHA-1 인증서 지문을 포함 하 고 두 번째 컴퓨터의 릴리스 키 저장소 SHA-1 인증서 지문을 포함 해야 합니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
 
@@ -236,7 +236,7 @@ Xamarin.Forms응용 프로그램이 API 28 이상을 대상으로 하는 경우 
 
 [![Android의 위치 권한 요청 스크린샷](setup-images/permission-android.png "Android 권한 요청")](setup-images/permission-android-large.png#lightbox "Android 권한 요청")
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 메서드 호출에서 인증 토큰을 지정 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
 
@@ -271,7 +271,7 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Forms. 지도 핀](~/xamarin-forms/user-interface/map/pins.md)입니다.
 - [지도 API](xref:Xamarin.Forms.Maps)
 - [사용자 지정 렌더러 매핑](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)

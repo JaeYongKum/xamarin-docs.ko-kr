@@ -1,6 +1,6 @@
 ---
-title: 장치 스타일Xamarin.Forms
-description: Xamarin.Forms에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
+title: 장치 스타일 Xamarin.Forms
+description: Xamarin.Forms 에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04669479bb321da4fee6c45fd0f2c00deb5bbf1a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b8665e5489da396cb9f7ef984c97fe79fda17434
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929729"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558325"
 ---
-# <a name="device-styles-in-xamarinforms"></a>장치 스타일Xamarin.Forms
+# <a name="device-styles-in-no-locxamarinforms"></a>장치 스타일 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
-_Xamarin.Forms에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다._
+_Xamarin.Forms 에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다._
 
 *장치* 스타일은 다음과 같습니다.
 
@@ -130,8 +130,8 @@ public class DeviceStylesPageCS : ContentPage
 
 - [텍스트 스타일](~/xamarin-forms/user-interface/text/styles.md)
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [동적 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
-- [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [동적 스타일 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [스타일 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [장치 스타일](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)

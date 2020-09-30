@@ -10,12 +10,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08be571d3ba69891a56c08efd556a999e51431c8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2dd2abed23704f6a67ac34bc828c48e7200cf99a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139856"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558721"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
@@ -114,9 +114,9 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 이 문제와 기타 문제에 대 한 해결 방법은 `Mode` 열거형의 멤버로 설정 된 속성을 포함 합니다 `BindingMode` .
 
 - `Default`
-- `OneWay`-값이 원본에서 대상으로 전송 됩니다.
-- `OneWayToSource`-값이 대상에서 원본으로 전송 됩니다.
-- `TwoWay`-값이 소스와 대상 간에 두 가지 방식으로 전송 됩니다.
+- `OneWay` -값이 원본에서 대상으로 전송 됩니다.
+- `OneWayToSource` -값이 대상에서 원본으로 전송 됩니다.
+- `TwoWay` -값이 소스와 대상 간에 두 가지 방식으로 전송 됩니다.
 - `OneTime`-데이터가 원본에서 대상으로 이동 하지만 변경 되는 경우에만 `BindingContext`
 
 다음 프로그램에서는 `OneWayToSource` 및 바인딩 모드를 일반적으로 사용 하는 방법을 보여 줍니다 `TwoWay` . 네 가지 `Slider` 뷰는 `Scale` 의,, 및 속성을 제어 하기 위한 것 `Rotate` `RotateX` `RotateY` `Label` 입니다. 처음에는에 의해 설정 되 고 있으므로의 이러한 4 가지 속성이 `Label` 데이터 바인딩 대상 이어야 하는 것 처럼 보입니다 `Slider` . 그러나의는 `BindingContext` `Label` 하나의 개체 일 수 있으며 네 가지 슬라이더가 있습니다.
@@ -401,7 +401,7 @@ namespace XamlSamples
 
 [![DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
-는 `ListView` 기본 데이터에서 동적으로 발생할 수 있는 변경 사항을 처리 하는 데 매우 정교 하지만 특정 단계를 수행 하는 경우에만 해당 됩니다. `ItemsSource` `ListView` 항목을 컬렉션에 추가 하거나 컬렉션에서 제거할 수 있는 경우의 속성에 할당 된 항목의 컬렉션이 런타임 중에 변경 되 면 `ObservableCollection` 이러한 항목에 대해 클래스를 사용 합니다. `ObservableCollection`인터페이스를 구현 `INotifyCollectionChanged` 하 고 `ListView` 이벤트에 대 한 처리기를 설치 `CollectionChanged` 합니다.
+는 `ListView` 기본 데이터에서 동적으로 발생할 수 있는 변경 사항을 처리 하는 데 매우 정교 하지만 특정 단계를 수행 하는 경우에만 해당 됩니다. `ItemsSource` `ListView` 항목을 컬렉션에 추가 하거나 컬렉션에서 제거할 수 있는 경우의 속성에 할당 된 항목의 컬렉션이 런타임 중에 변경 되 면 `ObservableCollection` 이러한 항목에 대해 클래스를 사용 합니다. `ObservableCollection` 인터페이스를 구현 `INotifyCollectionChanged` 하 고 `ListView` 이벤트에 대 한 처리기를 설치 `CollectionChanged` 합니다.
 
 런타임 중에 항목 자체의 속성이 변경 되 면 컬렉션의 항목이 인터페이스를 구현 하 `INotifyPropertyChanged` 고 이벤트를 사용 하 여 속성 값의 신호를 변경 해야 합니다 `PropertyChanged` . 이는이 시리즈의 다음 부분인 5 부에서 설명 [합니다. 데이터 바인딩에서 MVVM로](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
@@ -411,7 +411,7 @@ namespace XamlSamples
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1 부. XAML 시작 (샘플)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2 부. 필수 XAML 구문 (샘플)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3 부. XAML 태그 확장 (샘플)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

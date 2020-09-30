@@ -10,12 +10,12 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c271c3537c6e96497763c67c5b8128148191f16
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937360"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558378"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -171,7 +171,7 @@ Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 
 
 [`Typeface.Create`](xref:Android.Graphics.Typeface.Create*)팩터리 메서드는 [`TextView.Typeface`](xref:Android.Widget.TextView.Typeface) Android에서 속성을 새로 설정 하는 데 사용 됩니다 [`Typeface`](xref:Android.Graphics.Typeface) . `Typeface`패밀리 이름 및 스타일은 특성의 자식인 메서드 인수에 의해 지정 됩니다 `x:Arguments` .
 
-[`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily)생성자는 [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) `FontFamily` 유니버설 Windows 플랫폼 (UWP)에서 속성을 새로 설정 하는 데 사용 됩니다. `FontFamily`이름은 특성의 자식인 메서드 인수에 의해 지정 됩니다 `x:Arguments` .
+[`FontFamily`](/uwp/api/Windows.UI.Xaml.Media.FontFamily)생성자는 [`TextBlock.FontFamily`](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) `FontFamily` 유니버설 Windows 플랫폼 (UWP)에서 속성을 새로 설정 하는 데 사용 됩니다. `FontFamily`이름은 특성의 자식인 메서드 인수에 의해 지정 됩니다 `x:Arguments` .
 
 > [!NOTE]
 > 인수는 생성자 또는 팩터리 메서드에 필요한 형식과 일치 해야 합니다.
@@ -466,9 +466,9 @@ class MySpinner : Spinner
 
 ## <a name="related-links"></a>관련 링크
 
-- [NativeSwitch (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
-- [Forms2Native (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
-- [NativeViewInsideContentView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
-- [SubclassedNativeControls (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
+- [NativeSwitch (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (샘플)](/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [네이티브 양식](~/xamarin-forms/platform/native-forms.md)
 - [XAML에서 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)

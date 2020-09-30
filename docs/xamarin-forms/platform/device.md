@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms장치 클래스
+title: Xamarin.Forms 장치 클래스
 description: 이 문서에서는 Xamarin.Forms 플랫폼 단위로 기능과 레이아웃을 세밀 하 게 제어 하기 위해 장치 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
@@ -10,14 +10,14 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38452ac477404d92468b7c9c4d2c88ce60104b50
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 8eff115e894f77aeacff0f6c072bfd338fa19844
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918022"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560509"
 ---
-# <a name="no-locxamarinforms-device-class"></a>Xamarin.Forms장치 클래스
+# <a name="no-locxamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87918022"
 
 2.3.4 이전에는 Xamarin.Forms 속성을 검사 [`Device.OS`](xref:Xamarin.Forms.Device.OS) 하 고 [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS) ,, [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android) [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone) 및 [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값과 비교 하 여 응용 프로그램을 실행 하는 플랫폼을 가져올 수 있었습니다. 마찬가지로, 오버 로드 중 하나를 [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 사용 하 여 플랫폼 특정 값을 컨트롤에 제공할 수 있습니다.
 
-그러나 Xamarin.Forms 2.3.4 이러한 api는 더 이상 사용 되지 않으며 대체 되었습니다. [`Device`](xref:Xamarin.Forms.Device)이제 클래스에는 플랫폼을 식별 하는 공용 문자열 상수 ( [`Device.iOS`](xref:Xamarin.Forms.Device.iOS) , [`Device.Android`](xref:Xamarin.Forms.Device.Android) , `Device.WinPhone` (사용 되지 않음), `Device.WinRT` (사용 되지 않음), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP) 및 [`Device.macOS`](xref:Xamarin.Forms.Device.macOS) 가 포함 되어 있습니다. 마찬가지로 [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드도 및 api로 대체 되었습니다 [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) [`On`](xref:Xamarin.Forms.On) .
+그러나 Xamarin.Forms 2.3.4 이러한 api는 더 이상 사용 되지 않으며 대체 되었습니다. [`Device`](xref:Xamarin.Forms.Device)이제 클래스에는 플랫폼을 식별 하는 공용 문자열 상수 ( [`Device.iOS`](xref:Xamarin.Forms.Device.iOS) , [`Device.Android`](xref:Xamarin.Forms.Device.Android) , `Device.WinPhone` (사용 되지 않음), `Device.WinRT` (사용 되지 않음), [`Device.UWP`](xref:Xamarin.Forms.Device.UWP) 및 [`Device.macOS`](xref:Xamarin.Forms.Device.macOS) 가 포함 되어 있습니다. 마찬가지로  [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드도 및 api로 대체 되었습니다 [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) [`On`](xref:Xamarin.Forms.On) .
 
 C #에서는 `switch` 속성에 대해 문을 만든 [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) 다음 `case` 필요한 플랫폼에 대 한 문을 제공 하 여 플랫폼별 값을 제공할 수 있습니다.
 
@@ -160,7 +160,7 @@ someLabel.FontSize = Device.OnPlatform (
 
 ## <a name="devicegetnamedcolor"></a>Device.GetNamedColor
 
-Xamarin.Forms4.6에서는 명명 된 색을 지원 합니다. 명명 된 색은 장치에서 활성 상태인 시스템 모드 (예: 밝은 또는 어두운)에 따라 다른 값이 있는 색입니다. Android에서 이름이 지정 된 색은 [R. Color](https://developer.android.com/reference/android/R.color#constants_2) 클래스를 통해 액세스 됩니다. IOS에서는 명명 된 색을 [시스템 색](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors)이라고 합니다. 유니버설 Windows 플랫폼에서 명명 된 색을 [XAML 테마 리소스](/windows/uwp/design/controls-and-patterns/xaml-theme-resources)라고 합니다.
+Xamarin.Forms 4.6에서는 명명 된 색을 지원 합니다. 명명 된 색은 장치에서 활성 상태인 시스템 모드 (예: 밝은 또는 어두운)에 따라 다른 값이 있는 색입니다. Android에서 이름이 지정 된 색은 [R. Color](https://developer.android.com/reference/android/R.color#constants_2) 클래스를 통해 액세스 됩니다. IOS에서는 명명 된 색을 [시스템 색](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/#system-colors)이라고 합니다. 유니버설 Windows 플랫폼에서 명명 된 색을 [XAML 테마 리소스](/windows/uwp/design/controls-and-patterns/xaml-theme-resources)라고 합니다.
 
 `GetNamedColor`메서드는 Android, iOS 및 UWP에서 명명 된 색을 검색 하는 데 사용할 수 있습니다. 메서드는 인수를 사용 `string` 하 고를 반환 합니다 [`Color`](xref:Xamarin.Forms.Color) .
 
@@ -169,7 +169,7 @@ Xamarin.Forms4.6에서는 명명 된 색을 지원 합니다. 명명 된 색은 
 Color color = Device.GetNamedColor(NamedPlatformColor.HoloBlueBright);
 ```
 
-`Color.Default`는 색 이름을 찾을 수 없는 경우 또는 `GetNamedColor` 가 지원 되지 않는 플랫폼에서 호출 될 때 반환 됩니다.
+`Color.Default` 는 색 이름을 찾을 수 없는 경우 또는 `GetNamedColor` 가 지원 되지 않는 플랫폼에서 호출 될 때 반환 됩니다.
 
 > [!NOTE]
 > `GetNamedColor`이 메서드는 플랫폼에 해당 하는를 반환 하기 때문에 `Color` 일반적으로 속성과 함께 사용 해야 합니다 [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) .
@@ -273,6 +273,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [장치 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
-- [스타일 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [장치 샘플](/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [스타일 샘플](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [디바이스 API](xref:Xamarin.Forms.Device)

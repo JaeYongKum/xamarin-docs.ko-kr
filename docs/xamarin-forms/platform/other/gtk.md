@@ -1,6 +1,6 @@
 ---
 title: 'GTK # 플랫폼 설정'
-description: 'Xamarin.Forms이제 GTK # platform에 대 한 미리 보기 지원이 제공 됩니다.'
+description: 'Xamarin.Forms 이제 GTK # platform에 대 한 미리 보기 지원이 제공 됩니다.'
 ms.prod: xamarin
 ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
 ms.technology: xamarin-forms
@@ -10,23 +10,23 @@ ms.date: 04/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5635da9f7c083609ce1e0f120d0613fff9bd77b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1ced6b54ce91f9b14d16a1baf8f5dd1d85902a42
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198102"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558403"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)
 
-Xamarin.Forms는 이제 GTK # 앱에 대 한 미리 보기를 지원 합니다. GTK #은 GTK + 도구 키트와 다양 한 GNOME 라이브러리를 연결 하는 그래픽 사용자 인터페이스 도구 키트로, Mono 및 .NET을 사용 하 여 완전 한 네이티브 GNOME 그래픽 앱을 개발할 수 있습니다. 이 문서에서는 솔루션에 GTK # 프로젝트를 추가 하는 방법을 보여 줍니다 Xamarin.Forms .
+Xamarin.Forms 는 이제 GTK # 앱에 대 한 미리 보기를 지원 합니다. GTK #은 GTK + 도구 키트와 다양 한 GNOME 라이브러리를 연결 하는 그래픽 사용자 인터페이스 도구 키트로, Mono 및 .NET을 사용 하 여 완전 한 네이티브 GNOME 그래픽 앱을 개발할 수 있습니다. 이 문서에서는 솔루션에 GTK # 프로젝트를 추가 하는 방법을 보여 줍니다 Xamarin.Forms .
 
 > [!IMPORTANT]
-> Xamarin.FormsGTK #에 대 한 지원은 커뮤니티에서 제공 합니다. 자세한 내용은 [ Xamarin.Forms 플랫폼 지원](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)을 참조 하세요.
+> Xamarin.Forms GTK #에 대 한 지원은 커뮤니티에서 제공 합니다. 자세한 내용은 [ Xamarin.Forms 플랫폼 지원](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)을 참조 하세요.
 
-시작 하기 전에 새 솔루션을 만들거나 Xamarin.Forms 기존 Xamarin.Forms 솔루션 (예: [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife))을 사용 합니다.
+시작 하기 전에 새 솔루션을 만들거나 Xamarin.Forms 기존 Xamarin.Forms 솔루션 (예: [**GameOfLife**](/samples/xamarin/xamarin-forms-samples/boxview-gameoflife))을 사용 합니다.
 
 > [!NOTE]
 > 이 문서에서는 VS2017 및 Mac용 Visual Studio의 솔루션에 GTK # 앱을 추가 하는 데 중점을 둔 반면 Xamarin.Forms , Linux 용 [MonoDevelop](https://www.monodevelop.com/) 에서 수행할 수도 있습니다.
@@ -51,13 +51,13 @@ MacOS 및 Linux 용 GTK #은 [Mono](https://www.mono-project.com/download/stable
 
 4. **솔루션 탐색기**에서 새 GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리**를 선택 합니다. **찾아보기** 탭을 선택 하 고 **Xamarin.Forms** 3.0 이상의 값을 검색 합니다.
 
-    ![NuGet 패키지를 선택 합니다. Xamarin.Forms](gtk-images/win/select-forms-nuget-package.png "[!를 선택 합니다. OP. NO-LOC (Xamarin.ios)] NuGet 패키지")
+    ![::: No loc (Xamarin.ios)::: NuGet 패키지를 선택 합니다.](gtk-images/win/select-forms-nuget-package.png "::: No loc (Xamarin.ios)::: NuGet 패키지를 선택 합니다.")
 
     패키지를 선택 하 고 **설치** 단추를 클릭 합니다.
 
 5. 이제를 검색 ** Xamarin.Forms 합니다. Platform.object** 3.0 패키지 이상.
 
-    ![을 선택 Xamarin.Forms 합니다. Platform.object NuGet 패키지](gtk-images/win/select-forms-platform-nuget-package.png "[!를 선택 합니다. OP. NO-LOC (Xamarin.ios)]. Platform.object NuGet 패키지")
+    ![::: No loc (Xamarin.ios):::를 선택 합니다. Platform.object NuGet 패키지](gtk-images/win/select-forms-platform-nuget-package.png "::: No loc (Xamarin.ios):::를 선택 합니다. Platform.object NuGet 패키지")
 
     패키지를 선택 하 고 **설치** 단추를 클릭 합니다.
 
@@ -128,11 +128,11 @@ Mac 데스크톱에서 실행 되는 GTK # 앱을 추가 하려면 다음 지침
 
 4. **Solution Pad**에서 **패키지 > 패키지 추가** ...를 마우스 오른쪽 단추로 클릭 하 고, GTK 프로젝트에 대해 Xamarin.Forms 3.0 시험판 NuGet 패키지 이상을 추가 합니다.
 
-    ![NuGet 패키지를 선택 합니다. Xamarin.Forms](gtk-images/mac/select-forms-nuget-package.png "[!를 선택 합니다. OP. NO-LOC (Xamarin.ios)] NuGet 패키지")
+    ![::: No loc (Xamarin.ios)::: NuGet 패키지를 선택 합니다.](gtk-images/mac/select-forms-nuget-package.png "::: No loc (Xamarin.ios)::: NuGet 패키지를 선택 합니다.")
 
 5. **Solution Pad**에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가** ...를 마우스 오른쪽 단추로 클릭 하 고를 추가 합니다. Xamarin.Forms Platform.object 3.0 시험판 NuGet 패키지 이상
 
-    ![을 선택 Xamarin.Forms 합니다. Platform.object NuGet 패키지](gtk-images/mac/select-forms-platform-nuget-package.png "[!를 선택 합니다. OP. NO-LOC (Xamarin.ios)]. Platform.object NuGet 패키지")
+    ![::: No loc (Xamarin.ios):::를 선택 합니다. Platform.object NuGet 패키지](gtk-images/mac/select-forms-platform-nuget-package.png "::: No loc (Xamarin.ios):::를 선택 합니다. Platform.object NuGet 패키지")
 
 6. GTK 프로젝트에서 사용 하는 것과 동일한 버전을 사용 하도록 다른 플랫폼 프로젝트를 업데이트 합니다 Xamarin.Forms .
 

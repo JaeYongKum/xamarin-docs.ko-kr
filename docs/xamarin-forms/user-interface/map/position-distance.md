@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms지도 위치 및 거리
+title: Xamarin.Forms 지도 위치 및 거리
 description: Xamarin.Forms입니다. Maps 네임 스페이스에는 지도와 해당 핀의 위치를 지정할 때 일반적으로 사용 되는 위치 구조체와 지도를 배치할 때 선택적으로 사용할 수 있는 거리 구조체가 포함 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8
@@ -10,14 +10,14 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2b1613789029d59e46a6d0431bfa9da1a53082e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 896b7f878e1ec9c3ed3c8324330c288220963e62
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138400"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559716"
 ---
-# <a name="xamarinforms-map-position-and-distance"></a>Xamarin.Forms지도 위치 및 거리
+# <a name="no-locxamarinforms-map-position-and-distance"></a>Xamarin.Forms 지도 위치 및 거리
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -30,7 +30,7 @@ ms.locfileid: "84138400"
 - [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude)는 `double` 10 진수도에서 위치의 위도를 나타내는 형식의입니다.
 - [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude)는 `double` 10 진수 각도로 위치의 경도를 나타내는 형식의입니다.
 
-[`Position`](xref:Xamarin.Forms.Maps.Position)개체는 생성자를 사용 하 여 생성 됩니다 `Position` . 여기에는 위도 및 경도 인수가 값으로 지정 되어야 합니다 `double` .
+[`Position`](xref:Xamarin.Forms.Maps.Position) 개체는 생성자를 사용 하 여 생성 됩니다 `Position` . 여기에는 위도 및 경도 인수가 값으로 지정 되어야 합니다 `double` .
 
 ```csharp
 Position position = new Position(36.9628066, -122.0194722);
@@ -41,7 +41,7 @@ Position position = new Position(36.9628066, -122.0194722);
 > [!NOTE]
 > 클래스에는 `GeographyUtils` `ToRadians` 도에서 라디안으로 값을 변환 하는 확장 메서드와 `double` `ToDegrees` `double` 값을 라디안에서 각도로 변환 하는 확장 메서드가 있습니다.
 
-## <a name="distance"></a>Distance
+## <a name="distance"></a>거리
 
 [`Distance`](xref:Xamarin.Forms.Maps.Distance)구조체는 `double` 거리를 미터 단위로 나타내는 값으로 저장 된 거리를 캡슐화 합니다. 이 구조체는 세 개의 읽기 전용 속성을 정의 합니다.
 
@@ -66,4 +66,4 @@ Distance distance4 = Distance.BetweenPositions(position1, position2);
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)

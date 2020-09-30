@@ -1,5 +1,5 @@
 ---
-title: 에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
+title: 에서 네이티브 맵 앱을 시작 합니다. Xamarin.Forms
 description: 각 플랫폼의 네이티브 맵 앱은 Xamarin.Forms 시작 관리자 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Essentials .
 ms.prod: xamarin
 ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
@@ -10,14 +10,14 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ede34258650c378a45ee694f90de1e8b249acf71
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129340"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559885"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
+# <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>에서 네이티브 맵 앱을 시작 합니다. Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -80,7 +80,7 @@ else if (Device.RuntimePlatform == Device.UWP)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 - [맵 링크](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Maps 개발자 가이드](https://developer.android.com/guide/components/intents-common.html#Maps)

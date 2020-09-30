@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Forms도형: 기 하 도형'
-description: Xamarin.Formsgeometry 클래스를 사용 하 여 2D 도형의 기 하 도형을 설명할 수 있습니다.
+title: 'Xamarin.Forms 도형: 기 하 도형'
+description: Xamarin.Forms geometry 클래스를 사용 하 여 2D 도형의 기 하 도형을 설명할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 420099cadd3a541736084403265b9302c9a32b37
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918314"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559326"
 ---
-# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
+# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms 도형: 기 하 도형
 
 ![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-`Geometry`클래스 및이 클래스에서 파생 되는 클래스를 사용 하 여 2d 셰이프의 기 하 도형에 대해 설명할 수 있습니다. `Geometry`개체는 사각형 및 원과 같은 단순 또는 두 개 이상의 geometry 개체에서 만든 복합 일 수 있습니다. 또한 원호 및 곡선을 포함 하는 더 복잡 한 기 하 도형을 만들 수 있습니다.
+`Geometry`클래스 및이 클래스에서 파생 되는 클래스를 사용 하 여 2d 셰이프의 기 하 도형에 대해 설명할 수 있습니다. `Geometry` 개체는 사각형 및 원과 같은 단순 또는 두 개 이상의 geometry 개체에서 만든 복합 일 수 있습니다. 또한 원호 및 곡선을 포함 하는 더 복잡 한 기 하 도형을 만들 수 있습니다.
 
 `Geometry`클래스는 다양 한 종류의 기 하 도형을 정의 하는 여러 클래스의 부모 클래스입니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "87918314"
 - `RadiusX``double`기 하 도형의 x 반경 값을 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 - `RadiusY``double`기 하 도형의 y 반지름 값을 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `EllipseGeometry` `Path` .
 
@@ -85,7 +85,7 @@ ms.locfileid: "87918314"
 - `StartPoint`는 [`Point`](xref:Xamarin.Forms.Point) 선의 시작점을 나타내는 형식의입니다.
 - `EndPoint`[`Point`](xref:Xamarin.Forms.Point)선의 끝점을 나타내는 형식의입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 다음 예제에서는 개체에서를 만들고 렌더링 하는 방법을 보여 줍니다 `LineGeometry` `Path` .
 
@@ -137,7 +137,7 @@ ms.locfileid: "87918314"
 - `Figures`는 `PathFigureCollection` `PathFigure` 경로의 콘텐츠를 설명 하는 개체의 컬렉션을 나타내는 형식의입니다.
 - `FillRule``FillRule`기 하 도형에 포함 된 교차 영역이 결합 되는 방법을 결정 하는 형식의입니다. 이 속성의 기본값은 `FillRule.EvenOdd`입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 열거형에 대 한 자세한 내용은 `FillRule` [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
 
@@ -193,7 +193,7 @@ ms.locfileid: "87918314"
 - `SweepDirection``SweepDirection`호를 그릴 방향을 지정 하는 형식의입니다. 이 속성의 기본값은 `SweepDirection.CounterClockwise`입니다.
 - `IsLargeArc`는 원호의이 `bool` 180도 보다 큰지 여부를 나타내는 형식의입니다. 이 속성의 기본값은 `false`입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
 > `ArcSegment`클래스에 원호의 시작점에 대 한 속성이 포함 되어 있지 않습니다. 나타내는 원호의 끝점만 정의 합니다. 원호의 시작점은 `PathFigure` 가 추가 되는의 현재 지점입니다 `ArcSegment` .
@@ -242,7 +242,7 @@ ms.locfileid: "87918314"
 - `Point2`는 [`Point`](xref:Xamarin.Forms.Point) 곡선의 두 번째 제어점을 나타내는 형식의입니다. 이 속성의 기본값은 (0, 0)입니다.
 - `Point3`[`Point`](xref:Xamarin.Forms.Point)-곡선의 끝점을 나타내는 형식의입니다. 이 속성의 기본값은 (0, 0)입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
 > `BezierSegment`클래스에 곡선의 시작점에 대 한 속성이 포함 되어 있지 않습니다. 곡선의 시작점은 `PathFigure` 가 추가 되는의 현재 지점입니다 `BezierSegment` .
@@ -431,7 +431,7 @@ ms.locfileid: "87918314"
 - `Point1`는 [`Point`](xref:Xamarin.Forms.Point) 곡선의 제어점을 나타내는 형식의입니다. 이 속성의 기본값은 (0, 0)입니다.
 - `Point2`[`Point`](xref:Xamarin.Forms.Point)-곡선의 끝점을 나타내는 형식의입니다. 이 속성의 기본값은 (0, 0)입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
 > `QuadraticBezierSegment`클래스에 곡선의 시작점에 대 한 속성이 포함 되어 있지 않습니다. 곡선의 시작점은 `PathFigure` 가 추가 되는의 현재 지점입니다 `QuadraticBezierSegment` .
@@ -560,7 +560,7 @@ ms.locfileid: "87918314"
 - `Children`는를 정의 하는 개체를 지정 하는 형식의입니다 `GeometryCollection` `GeomtryGroup` . 는 `GeometryCollection` `ObservableCollection` 개체의입니다 `Geometry` .
 - `FillRule``FillRule`는의 교차 영역을 결합 하는 방법을 지정 하는 형식의입니다 `GeometryGroup` . 이 속성의 기본값은 `FillRule.EvenOdd`입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
 > `Children`속성은 `ContentProperty` 클래스의입니다 `GeometryGroup` . 따라서 XAML에서 명시적으로 설정할 필요가 없습니다.
@@ -630,6 +630,6 @@ ms.locfileid: "87918314"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms셰이프도](index.md)
-- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)
+- [ShapeDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms 셰이프도](index.md)
+- [Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)

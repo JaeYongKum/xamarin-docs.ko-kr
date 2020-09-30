@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMenuItem
+title: Xamarin.Forms MenuItem
 description: MenuItem 클래스는 ListView 항목 상황에 맞는 메뉴 및 셸 응용 프로그램 플라이 아웃 메뉴와 같은 메뉴에 대 한 메뉴 항목을 만드는 데 사용 됩니다.
 ms.prod: xamarin
 ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
@@ -10,14 +10,14 @@ ms.date: 08/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b27f778a417a2bc0b458af4214ee8cb914fd93d
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: 749e569e36896441c5b7cebbc4425d9c0e860e0b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990848"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559638"
 ---
-# <a name="xamarinforms-menuitem"></a>Xamarin.FormsMenuItem
+# <a name="no-locxamarinforms-menuitem"></a>Xamarin.Forms MenuItem
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
@@ -27,12 +27,12 @@ Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` 
 
 [!["IOS 및 Android에서 Menuitem"](menuitem-images/menuitem-demo-cropped.png "IOS 및 Android의 Menuitem")](menuitem-images/menuitem-demo-full.png#lightbox "IOS의 Menuitem 및 Android 전체 이미지")
 
-`MenuItem`클래스는 다음 속성을 정의 합니다.
+`MenuItem` 클래스는 다음과 같은 속성을 정의합니다.
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `Command` .
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) 는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) 는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `Command` .
 * [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)`ImageSource`표시 아이콘을 정의 하는 값입니다.
-* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive)가 `bool` `MenuItem` 목록에서 연결 된 UI 요소를 제거 하는지 여부를 나타내는 값입니다.
+* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) 가 `bool` `MenuItem` 목록에서 연결 된 UI 요소를 제거 하는지 여부를 나타내는 값입니다.
 * [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled)`bool`이 개체가 사용자 입력에 응답 하는지 여부를 나타내는 값입니다.
 * [`Text`](xref:Xamarin.Forms.MenuItem.Text)`string`표시 텍스트를 지정 하는 값입니다.
 
@@ -40,7 +40,7 @@ Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` 
 
 ## <a name="create-a-menuitem"></a>MenuItem 만들기
 
-`MenuItem`개체는 개체의 항목에 대 한 상황에 맞는 메뉴 내에서 사용할 수 있습니다 `ListView` . 가장 일반적인 패턴은 인스턴스 내에서 개체를 만드는 것입니다 .이 개체는 `MenuItem` `ViewCell` `DataTemplate` 의 개체로 사용 됩니다 `ListView` `ItemTemplate` . 개체를 `ListView` 채울 때 `DataTemplate` `MenuItem` 항목에 대 한 상황에 맞는 메뉴가 활성화 되 면 선택 항목을 표시 하 여를 사용 하 여 각 항목을 만듭니다.
+`MenuItem` 개체는 개체의 항목에 대 한 상황에 맞는 메뉴 내에서 사용할 수 있습니다 `ListView` . 가장 일반적인 패턴은 인스턴스 내에서 개체를 만드는 것입니다 .이 개체는 `MenuItem` `ViewCell` `DataTemplate` 의 개체로 사용 됩니다 `ListView` `ItemTemplate` . 개체를 `ListView` 채울 때 `DataTemplate` `MenuItem` 항목에 대 한 상황에 맞는 메뉴가 활성화 되 면 선택 항목을 표시 하 여를 사용 하 여 각 항목을 만듭니다.
 
 다음 예제에서는 `MenuItem` 개체의 컨텍스트 내에서 인스턴스화를 보여 줍니다 `ListView` .
 
@@ -192,7 +192,7 @@ public MenuItemXamlMvvmPage()
 ## <a name="menuitem-icons"></a>MenuItem 아이콘
 
 > [!WARNING]
-> `MenuItem`개체는 Android 에서만 아이콘을 표시 합니다. 다른 플랫폼에서는 속성으로 지정 된 텍스트만 표시 됩니다 `Text` .
+> `MenuItem` 개체는 Android 에서만 아이콘을 표시 합니다. 다른 플랫폼에서는 속성으로 지정 된 텍스트만 표시 됩니다 `Text` .
 
  아이콘은 속성을 사용 하 여 지정 됩니다 `IconImageSource` . 아이콘을 지정 하면 속성에 지정 된 텍스트가 `Text` 표시 되지 않습니다. 다음 스크린샷은 `MenuItem` Android에서 아이콘이 있는를 보여 줍니다.
 
@@ -263,5 +263,5 @@ UWP에서는 목록 항목을 마우스 오른쪽 단추로 클릭 하 여 상�
 
 ## <a name="related-links"></a>관련 링크
 
-* [MenuItem 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
-* [이미지Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [MenuItem 데모](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+* [이미지 Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

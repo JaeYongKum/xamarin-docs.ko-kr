@@ -12,14 +12,14 @@ no-loc:
 - Xamarin.Essentials
 - RefreshView
 - Universal Windows Platform
-ms.openlocfilehash: 83802683aee722468acf9bcc827ba66f45c05e6b
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: aa71e486e81c62a39840e4db05f206c4cb20bacd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225483"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559313"
 ---
-# <a name="xamarinforms-refreshview"></a>Xamarin.Forms RefreshView
+# <a name="no-locxamarinforms-no-locrefreshview"></a>Xamarin.Forms RefreshView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
@@ -32,12 +32,12 @@ ms.locfileid: "86225483"
 - `IsRefreshing`의 `bool` 현재 상태를 나타내는 형식의입니다 `RefreshView` .
 - `RefreshColor`형식의, `Color` 새로 고침 중에 표시 되는 진행률 원의 색입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
 > 에서 Universal Windows Platform 의 풀 방향은 `RefreshView` 플랫폼별로 설정할 수 있습니다. 자세한 내용은 [ RefreshView 끌어오기 방향](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)을 참조 하세요.
 
-## <a name="create-a-refreshview"></a>인증 요청을 처리하는 데 사용하는 RefreshView
+## <a name="create-a-no-locrefreshview"></a>인증 요청을 처리하는 데 사용하는 RefreshView
 
 다음 예제에서는 XAML로를 인스턴스화하는 방법을 보여 줍니다 `RefreshView` .
 
@@ -79,12 +79,12 @@ refreshView.Content = scrollView;
 
 사용자가 새로 고침을 시작 하면 `ICommand` 속성으로 정의 된가 `Command` 실행 되어 표시 되는 항목을 새로 고쳐야 합니다. 새로 고침이 발생 하는 동안 애니메이션 처리 원으로 구성 된 새로 고침 시각화가 표시 됩니다.
 
-[![RefreshViewIOS 및 Android에서 데이터 새로 고침의 스크린샷](refreshview-images/default-progress-circle.png "[! OP. NO LOC (RefreshView)] 데이터 새로 고침")](refreshview-images/default-progress-circle-large.png#lightbox "[! OP. NO LOC (RefreshView)] 데이터 새로 고침")
+[![IOS 및 Android에서::: no loc (RefreshView)::: 데이터 새로 고침의 스크린샷](refreshview-images/default-progress-circle.png "::: no loc (RefreshView)::: 데이터 새로 고침")](refreshview-images/default-progress-circle-large.png#lightbox "::: no loc (RefreshView)::: 데이터 새로 고침")
 
 > [!NOTE]
 > `IsRefreshing`속성을로 수동으로 설정 `true` 하면 새로 고침 시각화가 트리거되고 `ICommand` 속성으로 정의 된이 실행 됩니다 `Command` .
 
-## <a name="refreshview-appearance"></a>RefreshView바꿀
+## <a name="no-locrefreshview-appearance"></a>RefreshView 바꿀
 
 클래스에서 상속 되는 속성 외에 `RefreshView` [`VisualElement`](xref:Xamarin.Forms.VisualElement) `RefreshView` 도에서 속성을 정의 합니다 `RefreshColor` . 이 속성을 설정 하 여 새로 고침 중에 표시 되는 진행률 원의 색을 정의할 수 있습니다.
 
@@ -95,14 +95,14 @@ refreshView.Content = scrollView;
 
 다음 스크린샷에서는 속성이 설정 된를 보여 줍니다 `RefreshView` `RefreshColor` .
 
-[![RefreshViewIOS 및 Android에서 청록 진행률 원이 있는의 스크린샷](refreshview-images/teal-progress-circle.png "[! OP. NO-LOC (RefreshView)]-청록 진행률 원")](refreshview-images/teal-progress-circle-large.png#lightbox "[! OP. NO-LOC (RefreshView)]-청록 진행률 원")
+[![IOS 및 Android에서::: no-loc (RefreshView)::: 및 청록 진행률 원이 있는 스크린샷](refreshview-images/teal-progress-circle.png "::: no loc (RefreshView)::: 청록 진행률 원이 있는")](refreshview-images/teal-progress-circle-large.png#lightbox "::: no loc (RefreshView)::: 청록 진행률 원이 있는")
 
 또한 `BackgroundColor` 속성을 진행률 원의 배경색을 나타내는로 설정할 수 있습니다 [`Color`](xref:Xamarin.Forms.Color) .
 
 > [!NOTE]
 > IOS에서 속성은 `BackgroundColor` `UIView` 진행률 원이 포함 된의 배경색을 설정 합니다.
 
-## <a name="disable-a-refreshview"></a>사용 안 함RefreshView
+## <a name="disable-a-no-locrefreshview"></a>사용 안 함 RefreshView
 
 응용 프로그램은 끌어오기가 올바른 작업이 아닌 상태를 입력할 수 있습니다. 이러한 경우에는 `RefreshView` 속성을로 설정 하 여를 비활성화할 수 있습니다 `IsEnabled` `false` . 이렇게 하면 사용자가 끌어오기를 트리거하여 새로 고칠 수 없게 됩니다.
 
@@ -110,6 +110,6 @@ refreshView.Content = scrollView;
 
 ## <a name="related-links"></a>관련 링크
 
-- [RefreshView샘플이](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
-- [바인딩 가능한 레이아웃Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
-- [RefreshView끌어오기 방향 플랫폼별](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)
+- [RefreshView 샘플이](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+- [바인딩 가능한 레이아웃 Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [RefreshView 끌어오기 방향 플랫폼별](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms맵 컨트롤
+title: Xamarin.Forms 맵 컨트롤
 description: 지도 컨트롤은 지도를 표시 하 고 주석을 추가 하는 플랫폼 간 뷰입니다. 각 플랫폼에 대해 네이티브 맵 컨트롤을 사용 하 여 사용자에 게 빠르고 친숙 한 지도 환경을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
@@ -10,14 +10,14 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1aee81b6988e1f3a7099c2722b6f336f071ad8c0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: df3189455102cedab232e0c629e63f65e242c9b5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946366"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560054"
 ---
-# <a name="xamarinforms-map-control"></a>Xamarin.Forms맵 컨트롤
+# <a name="no-locxamarinforms-map-control"></a>Xamarin.Forms 맵 컨트롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
@@ -89,9 +89,9 @@ namespace WorkingWithMaps
 
 [`Map.MapType`](xref:Xamarin.Forms.Maps.Map.MapType)속성을 [`MapType`](xref:Xamarin.Forms.Maps.MapType) 열거형 멤버로 설정 하 여 지도의 표시 스타일을 정의할 수 있습니다. `MapType` 열거형은 다음 멤버를 정의합니다.
 
-- `Street`동 지도의 표시를 지정 합니다.
-- `Satellite`위성 이미지를 포함 하는 맵이 표시 되도록 지정 합니다.
-- `Hybrid`거리와 위성 데이터를 결합 하는 지도를 표시 하도록 지정 합니다.
+- `Street` 동 지도의 표시를 지정 합니다.
+- `Satellite` 위성 이미지를 포함 하는 맵이 표시 되도록 지정 합니다.
+- `Hybrid` 거리와 위성 데이터를 결합 하는 지도를 표시 하도록 지정 합니다.
 
 속성이 정의 되지 않은 경우 기본적으로에는 [`Map`](xref:Xamarin.Forms.Maps.Map) 번 지도가 표시 됩니다 [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) . 또는 속성을 `MapType` 열거형 멤버 중 하나로 설정할 수 있습니다 [`MapType`](xref:Xamarin.Forms.Maps.MapType) .
 
@@ -328,7 +328,7 @@ map.MapClicked += OnMapClicked;
 
 ## <a name="related-links"></a>관련 링크
 
-- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Maps 샘플](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [지도 위치 및 거리](position-distance.md)
 - [지도 사용자 지정 Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [XAML에서 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)
