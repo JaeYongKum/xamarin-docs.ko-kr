@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e20ea5d1d3f813b04a927601fbe1180ff39ed176
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 68cff80395f4bccf6acd718e044f708108ce4d18
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140194"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563863"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
@@ -36,13 +36,13 @@ SkiaSharp 변환은 다음과 같은 작업을 지원 합니다.
 
 SkiaSharp는 표준 3 x 3 변환 매트릭스를 기반으로 하는 비 상관 변환 ( *projective* 또는 *큐브 뷰* 라고도 함)도 지원 합니다. 비 상관 변환을 통해 사각형을 모든 볼록 사변형 변환할 수 있습니다 .이는 모든 내부 각도가 180도 미만인 4 면의 그림입니다. 비 관계 변환으로 인해 좌표나 크기가 무한 해질 수 있지만 3D 효과에는 중요 합니다.
 
-## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>SkiaSharp와 변환 간의 차이점 Xamarin.Forms
+## <a name="differences-between-skiasharp-and-no-locxamarinforms-transforms"></a>SkiaSharp와 변환 간의 차이점 Xamarin.Forms
 
-Xamarin.Forms는 SkiaSharp의 변환과 유사한 변환도 지원 합니다. Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스는 다음과 같은 변환 속성을 정의 합니다.
+Xamarin.Forms 는 SkiaSharp의 변환과 유사한 변환도 지원 합니다. Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스는 다음과 같은 변환 속성을 정의 합니다.
 
 - [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 및 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 - [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
-- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) 및 [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
+- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) , [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) 및 [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
 
 `RotationX`및 `RotationY` 속성은 준 3d 효과를 만드는 원근 변환입니다.
 
@@ -52,9 +52,9 @@ SkiaSharp 변환과 변환 사이에는 몇 가지 중요 한 차이점이 있�
 
 SkiaSharp 변환은의 왼쪽 위 모퉁이를 기준으로 하며, `SKCanvas` Xamarin.Forms 변환은 적용 되는의 왼쪽 위 모퉁이를 기준으로 합니다 `VisualElement` . 이러한 차이는 크기 조정 및 회전 변환을 적용 하는 경우에 중요 합니다. 이러한 변환은 항상 특정 점을 기준으로 하기 때문입니다.
 
-중요 한 차이점은 변환은 SKiaSharp 변환에 대 *methods* 한 것 이지만 Xamarin.Forms 변환은 *속성*입니다. 이는 구문상 차이를 제외한 의미 체계 차이입니다. SkiaSharp 변환은 Xamarin.Forms 변환 상태를 설정 하는 동안 작업을 수행 합니다. SkiaSharp 변환은 이후에 그려진 그래픽 개체에 적용 되지만 변환이 적용 되기 전에 그려진 그래픽 개체에는 적용 되지 않습니다. 반면, Xamarin.Forms 변환은 속성이 설정 되는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 메서드가 호출 될 때 누적 됩니다. Xamarin.Forms속성이 다른 값으로 설정 된 경우 변환이 바뀝니다.
+중요 한 차이점은 변환은 SKiaSharp 변환에 대 *methods* 한 것 이지만 Xamarin.Forms 변환은 *속성*입니다. 이는 구문상 차이를 제외한 의미 체계 차이입니다. SkiaSharp 변환은 Xamarin.Forms 변환 상태를 설정 하는 동안 작업을 수행 합니다. SkiaSharp 변환은 이후에 그려진 그래픽 개체에 적용 되지만 변환이 적용 되기 전에 그려진 그래픽 개체에는 적용 되지 않습니다. 반면, Xamarin.Forms 변환은 속성이 설정 되는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 메서드가 호출 될 때 누적 됩니다. Xamarin.Forms 속성이 다른 값으로 설정 된 경우 변환이 바뀝니다.
 
-이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 변환** 섹션에 표시 됩니다. 솔루션의 [**변환**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 폴더에서 소스 코드를 찾을 수 있습니다.
+이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 변환** 섹션에 표시 됩니다. 솔루션의 [**변환**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 폴더에서 소스 코드를 찾을 수 있습니다.
 
 ## <a name="the-translate-transform"></a>[좌표 이동 변환](translate.md)
 
@@ -90,5 +90,5 @@ SkiaSharp 회전 변환으로 가능한 효과 및 애니메이션을 탐색 합
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

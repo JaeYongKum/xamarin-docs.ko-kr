@@ -10,12 +10,12 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 972a5ac99ff775ea7301f803c333d8239ae7f193
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6af0641fe1f8f9be772b25c26825232b6bdba9b7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938192"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562381"
 ---
 # <a name="consume-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
@@ -54,7 +54,7 @@ REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세
 
 REST 서비스는 ASP.NET Core를 사용 하 여 작성 되며 다음 작업을 제공 합니다.
 
-|작업|HTTP 메서드|상대 URI|매개 변수|
+|작업(Operation)|HTTP 메서드|상대 URI|매개 변수|
 |--- |--- |--- |--- |
 |할 일 항목의 목록 가져오기|GET|/api/todoitems/|
 |새 할 일 항목 만들기|POST|/api/todoitems/|JSON 형식의 TodoItem|
@@ -214,5 +214,5 @@ REST 서비스는 `HttpResponseMessage.IsSuccessStatusCode` http 요청 성공 �
 ## <a name="related-links"></a>관련 링크
 
 - [네이티브 모바일 응용 프로그램에 대 한 백 엔드 서비스 만들기](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
-- [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)
+- [TodoREST(샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [HttpClient](/dotnet/api/system.net.http.httpclient)

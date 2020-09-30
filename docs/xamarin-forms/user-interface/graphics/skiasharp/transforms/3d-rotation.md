@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 855fde62483dcbc6f8769e7a8eb66d84aadfe1da
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bb2720d60f62c0bac6ab30007e226c362d1c5cd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934981"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563876"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
@@ -117,7 +117,7 @@ Z 축을 중심으로 회전 하는 것은 2D 그래픽과 동일 합니다.
 
 회전 방향은 좌표계를 활용 하 여 암시 됩니다. 이는 왼손 시스템 이므로 특정 축에 대 한 값을 높이는 왼쪽의 엄지 단추를 마우스 오른쪽 단추로 클릭 하 여 X 축을 중심으로 회전 하 고 Y 축을 중심으로 회전 하 여 Z 축을 중심으로 회전 하는 경우, 다른 손가락의 곡선은 긍정적인 각도의 회전 방향을 나타냅니다.
 
-`SKMatrix44`에는 [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) 회전이 발생 하는 축을 지정할 수 있는 일반화 된 정적 및 메서드가 있습니다.
+`SKMatrix44` 에는 [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) 회전이 발생 하는 축을 지정할 수 있는 일반화 된 정적 및 메서드가 있습니다.
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -540,5 +540,5 @@ public class AnimatedRotation3DPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

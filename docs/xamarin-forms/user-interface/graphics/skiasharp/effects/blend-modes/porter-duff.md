@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131055"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560782"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter-Duff blend 모드
 
@@ -71,7 +71,7 @@ _디지털 이미지 합성_ (256 페이지), Porter 및 duff를 사용 하 여 
 
 SkiaSharp에 정의 된 14 Porter-Duff 모드는 다음과 같습니다. 다음 표에서는 위의 다이어그램에서 비어 있지 않은 세 영역 각각의 색을 표시 하는 방법을 보여 줍니다.
 
-| Mode       | 대상 | 교집합 | 원본 |
+| 모드       | 대상 | 교집합 | 원본 |
 | ---------- |:-----------:|:------------:|:------:|
 | `Clear`    |             |              |        |
 | `Src`      |             | 원본       | X      |
@@ -260,7 +260,7 @@ public class PorterDuffGridPage : ContentPage
 }
 ```
 
-결과는 다음과 같습니다.
+결과:
 
 [![Porter-Duff 그리드](porter-duff-images/PorterDuffGrid.png "Porter-Duff 그리드")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
@@ -286,7 +286,7 @@ canvas.Clear(SKColors.White);
 
 ![꽂혀 있는 원숭이](porter-duff-images/SeatedMonkey.jpg "꽂혀 있는 원숭이")
 
-합성을 준비 하는 경우 이미지를 표시 하 고 그렇지 않은 경우 검정색 인 또 다른 비트맵 인 해당 _매트가_ 생성 됩니다. 이 파일은 **SeatedMonkeyMatte.png** 으로 이름이 지정 되며 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Media** 폴더에 있는 리소스 중 하나입니다.
+합성을 준비 하는 경우 이미지를 표시 하 고 그렇지 않은 경우 검정색 인 또 다른 비트맵 인 해당 _매트가_ 생성 됩니다. 이 파일은 **SeatedMonkeyMatte.png** 으로 이름이 지정 되며 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Media** 폴더에 있는 리소스 중 하나입니다.
 
 ![꽂혀 있는 원숭이 무광택](porter-duff-images/SeatedMonkeyMatte.png "꽂혀 있는 원숭이 무광택")
 
@@ -512,7 +512,7 @@ RGB 색에는 알파 값이 미리 곱해집니다. 예를 들어 **Sc** 가 순
 
 결과는 대괄호 안에 알파 채널과 함께 표시 되 고 RGB 색은 쉼표 ( **[alpha, color])** 로 구분 됩니다. 색의 경우 빨간색, 녹색 및 파랑 구성 요소에 대해 별도로 계산이 수행 됩니다.
 
-| Mode       | 작업(Operation) |
+| 모드       | 작업(Operation) |
 | ---------- | --------- |
 | `Clear`    | [0, 0]    |
 | `Src`      | [Sa, Sc]  |
@@ -905,5 +905,5 @@ public partial class GradientTransitionsPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

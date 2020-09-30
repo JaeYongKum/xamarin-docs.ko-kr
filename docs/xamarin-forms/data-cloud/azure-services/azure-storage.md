@@ -1,5 +1,5 @@
 ---
-title: Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
+title: Azure Storage의 데이터 저장 및 액세스 Xamarin.Forms
 description: Azure Storage는 구조화 되지 않은 구조화 된 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
@@ -10,14 +10,14 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d7b97f21e5184a445cfac85dc06a7da0e1a6a4c5
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: cba4c670e9e092eef92f7b37eefc750782c94367
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186215"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563837"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Azure Storage의 데이터 저장 및 액세스 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
@@ -65,11 +65,11 @@ Azure Storage에 저장 된 모든 개체에는 고유한 URL 주소가 있습�
 
 스토리지 계정의 개체에 액세스하기 위한 URL은 스토리지 계정의 개체 위치를 엔드포인트에 추가하여 작성됩니다. 예를 들어, blob 주소는 형식을 갖습니다 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치 프로그램
 
 Azure Storage 계정을 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
-1. 스토리지 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) 를 참조하세요.
+1. 스토리지 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](/azure/storage/common/storage-account-create#create-a-storage-account) 를 참조하세요.
 1. 응용 프로그램에 [Azure Storage 클라이언트 라이브러리](https://www.nuget.org/packages/WindowsAzure.Storage/) 를 추가 Xamarin.Forms 합니다.
 1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결](#connecting-to-azure-storage)을 참조 하세요.
 1. `using` `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` Azure Storage에 액세스 하는 클래스에 및 네임 스페이스에 대 한 지시문을 추가 합니다.
@@ -96,7 +96,7 @@ Azure storage 에뮬레이터는 개발 목적으로 Azure blob, queue 및 table
 UseDevelopmentStorage=true
 ```
 
-Azure storage 에뮬레이터에 대 한 자세한 내용은 [개발 및 테스트에 azure storage 에뮬레이터 사용](https://azure.microsoft.com/documentation/articles/storage-use-emulator/)을 참조 하세요.
+Azure storage 에뮬레이터에 대 한 자세한 내용은 [개발 및 테스트에 azure storage 에뮬레이터 사용](/azure/storage/common/storage-use-emulator)을 참조 하세요.
 
 ### <a name="connecting-to-azure-storage-using-a-shared-key"></a>공유 키를 사용 하 여 Azure Storage에 연결
 
@@ -106,7 +106,7 @@ Azure storage 에뮬레이터에 대 한 자세한 내용은 [개발 및 테스�
 DefaultEndpointsProtocol=[http|https];AccountName=myAccountName;AccountKey=myAccountKey
 ```
 
-`myAccountName`는 저장소 계정 이름으로 바꾸어야 하며, `myAccountKey` 두 계정 액세스 키 중 하나로 바꾸어야 합니다.
+`myAccountName` 는 저장소 계정 이름으로 바꾸어야 하며, `myAccountKey` 두 계정 액세스 키 중 하나로 바꾸어야 합니다.
 
 > [!NOTE]
 > 공유 키 인증을 사용 하는 경우 계정 이름 및 계정 키가 응용 프로그램을 사용 하는 각 사용자에 게 배포 되며,이는 저장소 계정에 대 한 전체 읽기/쓰기 액세스를 제공 합니다. 따라서 테스트 목적 으로만 공유 키 인증을 사용 하 고 다른 사용자에 게 키를 배포 하지 마십시오.
@@ -117,12 +117,12 @@ DefaultEndpointsProtocol=[http|https];AccountName=myAccountName;AccountKey=myAcc
 
 `BlobEndpoint=myBlobEndpoint;SharedAccessSignature=mySharedAccessSignature`
 
-`myBlobEndpoint`는 blob 끝점의 URL로 바꾸어야 하며 `mySharedAccessSignature` SAS로 바꾸어야 합니다. SAS는 프로토콜, 서비스 끝점 및 리소스에 액세스 하기 위한 자격 증명을 제공 합니다.
+`myBlobEndpoint` 는 blob 끝점의 URL로 바꾸어야 하며 `mySharedAccessSignature` SAS로 바꾸어야 합니다. SAS는 프로토콜, 서비스 끝점 및 리소스에 액세스 하기 위한 자격 증명을 제공 합니다.
 
 > [!NOTE]
 > SAS 인증은 프로덕션 응용 프로그램에 권장 됩니다. 그러나 프로덕션 응용 프로그램에서 SAS는 응용 프로그램과 함께 제공 되는 것이 아니라 요청 시 백 엔드 서비스에서 검색 되어야 합니다.
 
-공유 액세스 서명에 대 한 자세한 내용은 [SAS (공유 액세스 서명) 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)을 참조 하세요.
+공유 액세스 서명에 대 한 자세한 내용은 [SAS (공유 액세스 서명) 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
 
 ## <a name="creating-a-container"></a>컨테이너 만들기
 
@@ -154,7 +154,7 @@ var container = GetContainer(containerType);
 await container.CreateIfNotExistsAsync();
 ```
 
-기본적으로 새로 만든 컨테이너는 전용 컨테이너입니다. 이는 컨테이너에서 blob을 검색 하기 위해 저장소 액세스 키를 지정 해야 함을 의미 합니다. 컨테이너 내에서 blob을 공용으로 만드는 방법에 대 한 자세한 내용은 [컨테이너 만들기](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/#create-a-container)를 참조 하세요.
+기본적으로 새로 만든 컨테이너는 전용 컨테이너입니다. 이는 컨테이너에서 blob을 검색 하기 위해 저장소 액세스 키를 지정 해야 함을 의미 합니다. 컨테이너 내에서 blob을 공용으로 만드는 방법에 대 한 자세한 내용은 [컨테이너 만들기](/azure/storage/blobs/storage-quickstart-blobs-dotnet#create-a-container)를 참조 하세요.
 
 ## <a name="uploading-data-to-a-container"></a>컨테이너에 데이터 업로드
 
@@ -264,8 +264,8 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 ## <a name="related-links"></a>관련 링크
 
-- [Azure Storage (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+- [Azure Storage (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [저장소 소개](https://azure.microsoft.com/documentation/articles/storage-introduction/)
-- [Xamarin에서 Blob Storage를 사용하는 방법](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
-- [SAS(공유 액세스 서명) 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Xamarin에서 Blob Storage를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-xamarin)
+- [SAS(공유 액세스 서명) 사용](/azure/storage/common/storage-sas-overview)
 - [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

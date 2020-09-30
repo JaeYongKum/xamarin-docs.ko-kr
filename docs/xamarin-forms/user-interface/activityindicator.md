@@ -1,5 +1,5 @@
 ---
-title: 활동 표시기Xamarin.Forms
+title: 활동 표시기 Xamarin.Forms
 description: ActivityIndicator 컨트롤은 진행 상황을 표시 하지 않고 응용 프로그램이 긴 활동에서 사용 중임을 사용자에 게 나타냅니다. 이 문서에서는 XAML 및 코드에서 ActivityIndicator를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
@@ -10,14 +10,14 @@ ms.date: 07/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a83885175a44f2174db343abf4591f8777041d39
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 76136067f40d378a6bfa28698f15b6872bb40c93
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136515"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562352"
 ---
-# <a name="xamarinforms-activityindicator"></a>Xamarin.FormsActivityIndicator
+# <a name="no-locxamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
 Xamarin.Forms [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) 컨트롤은 응용 프로그램이 시간이 오래 걸리는 작업을 표시 하는 애니메이션을 표시 합니다. 와 달리 [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 는 진행률을 표시 `ActivityIndicator` 하지 않습니다. 는 `ActivityIndicator` 에서 상속 [`View`](xref:Xamarin.Forms.View) 됩니다.
@@ -28,8 +28,8 @@ Xamarin.Forms [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) 컨트
 
 `ActivityIndicator`컨트롤은 다음 속성을 정의 합니다.
 
-* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color)는 `Color` 의 표시 색을 정의 하는 값입니다 `ActivityIndicator` .
-* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning)을 `bool` `ActivityIndicator` 표시 하 고 애니메이션 효과를 적용할지 또는 숨길지를 나타내는 값입니다. 값이 이면 `false` `ActivityIndicator` 표시 되지 않습니다.
+* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color) 는 `Color` 의 표시 색을 정의 하는 값입니다 `ActivityIndicator` .
+* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) 을 `bool` `ActivityIndicator` 표시 하 고 애니메이션 효과를 적용할지 또는 숨길지를 나타내는 값입니다. 값이 이면 `false` `ActivityIndicator` 표시 되지 않습니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,의 스타일을 지정 `ActivityIndicator` 하 고 데이터 바인딩의 대상이 될 수 있습니다.
 
@@ -67,5 +67,5 @@ ActivityIndicator activityIndicator = new ActivityIndicator { Color = Color.Oran
 
 ## <a name="related-links"></a>관련 링크
 
-* [ActivityIndicator 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
+* [ActivityIndicator 데모](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 * [ProgressBar](~/xamarin-forms/user-interface/progressbar.md)

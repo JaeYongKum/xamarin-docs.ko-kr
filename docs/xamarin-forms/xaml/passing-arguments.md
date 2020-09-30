@@ -10,12 +10,12 @@ ms.date: 10/25/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 84d8901b7f8dee8ffd6c3ba22d30c76b456555f0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dcf09adc690aee5487107630eb74bb8c4e9599cb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571508"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562173"
 ---
 # <a name="passing-arguments-in-xaml"></a>XAML에서 인수 전달
 
@@ -34,7 +34,7 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 
 ## <a name="passing-constructor-arguments"></a>생성자 인수 전달
 
-특성을 사용 하 여 기본이 아닌 생성자에 인수를 전달할 수 있습니다 `x:Arguments` . 각 생성자 인수는 인수의 형식을 나타내는 XML 요소 내에서 구분 되어야 합니다. Xamarin.Forms에서는 기본 형식에 대해 다음 요소를 지원 합니다.
+특성을 사용 하 여 기본이 아닌 생성자에 인수를 전달할 수 있습니다 `x:Arguments` . 각 생성자 인수는 인수의 형식을 나타내는 XML 요소 내에서 구분 되어야 합니다. Xamarin.Forms 에서는 기본 형식에 대해 다음 요소를 지원 합니다.
 
 - `x:Array`
 - `x:Boolean`
@@ -136,7 +136,7 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 </BoxView>
 ```
 
-태그 내의 요소 수 `x:Arguments` 와 이러한 요소의 형식은 호출 되는 팩터리 메서드의 인수와 일치 해야 합니다. [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32))팩터리 메서드에는 [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) 각각 0에서 255 사이의 빨강, 녹색, 파랑 및 알파 값을 나타내는 4 개의 매개 변수가 필요 합니다. [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double))팩터리 메서드에는 [`Double`](https://docs.microsoft.com/dotnet/api/system.double) 각각 0에서 1 사이의 색상, 채도, 광도 및 알파 값을 나타내는 4 개의 매개 변수가 필요 합니다. [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String))팩터리 메서드에는 [`String`](https://docs.microsoft.com/dotnet/api/system.string) 16 진수 (a) RGB 색을 나타내는가 필요 합니다.
+태그 내의 요소 수 `x:Arguments` 와 이러한 요소의 형식은 호출 되는 팩터리 메서드의 인수와 일치 해야 합니다. [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32))팩터리 메서드에는 [`Int32`](/dotnet/api/system.int32) 각각 0에서 255 사이의 빨강, 녹색, 파랑 및 알파 값을 나타내는 4 개의 매개 변수가 필요 합니다. [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double))팩터리 메서드에는 [`Double`](/dotnet/api/system.double) 각각 0에서 1 사이의 색상, 채도, 광도 및 알파 값을 나타내는 4 개의 매개 변수가 필요 합니다. [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String))팩터리 메서드에는 [`String`](/dotnet/api/system.string) 16 진수 (a) RGB 색을 나타내는가 필요 합니다.
 
 다음 스크린샷에는 [`Color`](xref:Xamarin.Forms.Color) 지정 된 인수 값을 사용 하 여 각 팩터리 메서드를 호출한 결과가 나와 있습니다.
 
@@ -166,7 +166,7 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 
 ## <a name="related-links"></a>관련 링크
 
-- [생성자 인수 전달 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
-- [팩터리 메서드 호출 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
+- [생성자 인수 전달 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [팩터리 메서드 호출 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
 - [XAML의 제네릭 Xamarin.Forms](generics.md)

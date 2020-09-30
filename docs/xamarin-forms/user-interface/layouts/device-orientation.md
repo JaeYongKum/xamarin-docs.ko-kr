@@ -10,12 +10,12 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de5ebf086af7fa8d7c6360bf3a1f48f57b834e44
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 01e439812c3935e890acf0b9b83579b5813d8e21
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938439"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563954"
 ---
 # <a name="device-orientation"></a>디바이스 방향
 
@@ -88,7 +88,7 @@ UWP (유니버설 Windows 플랫폼)에서 지원 되는 방향은 **appxmanifes
 
 ## <a name="reacting-to-changes-in-orientation"></a>방향 변경에 대응
 
-Xamarin.Forms는 공유 코드의 방향 변경을 응용 프로그램에 알리기 위한 네이티브 이벤트를 제공 하지 않습니다. 그러나에는 [Xamarin.Essentials](~/essentials/index.md) `DeviceDisplay` 방향 변경에 대 한 알림을 제공 하는 [] 클래스가 포함 되어 있습니다.
+Xamarin.Forms 는 공유 코드의 방향 변경을 응용 프로그램에 알리기 위한 네이티브 이벤트를 제공 하지 않습니다. 그러나에는 [Xamarin.Essentials](~/essentials/index.md) `DeviceDisplay` 방향 변경에 대 한 알림을 제공 하는 [] 클래스가 포함 되어 있습니다.
 
 를 사용 하지 않고 방향을 감지 하려면의 Xamarin.Essentials `SizeChanged` `Page` 너비나 높이가 변경 될 때 발생 하는의 이벤트를 모니터링 합니다 `Page` . 의 너비가 `Page` 높이 보다 크면 장치가 가로 모드입니다. 자세한 내용은 [화면 방향에 따라 이미지 표시](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)를 참조 하세요.
 
@@ -215,7 +215,7 @@ protected override void OnSizeAllocated (double width, double height){
 
 다음 사항에 유의하세요.
 
-- `outerStack`사용 가능한 공간을 최대한 활용 하기 위해 방향에 따라 이미지 및 컨트롤을 가로 또는 세로 스택으로 표시 하도록 조정 됩니다.
+- `outerStack` 사용 가능한 공간을 최대한 활용 하기 위해 방향에 따라 이미지 및 컨트롤을 가로 또는 세로 스택으로 표시 하도록 조정 됩니다.
 
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -464,7 +464,7 @@ protected override void OnSizeAllocated (double width, double height){
 
 ## <a name="related-links"></a>관련 링크
 
-- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
-- [응답성이 뛰어난 레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+- [레이아웃 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [응답성이 뛰어난 레이아웃 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [화면 방향에 따라 이미지 표시](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

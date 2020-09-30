@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms바인딩 가능한 속성
+title: Xamarin.Forms 바인딩 가능한 속성
 description: 이 문서에서는 바인딩 가능한 속성에 대해 소개 하 고 이러한 속성을 만들고 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
@@ -10,14 +10,14 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226783"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561536"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Xamarin.Forms바인딩 가능한 속성
+# <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms 바인딩 가능한 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -221,8 +221,8 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
-- [명령 동작에 대 한 이벤트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-- [유효성 검사 콜백 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
-- [강제 값 콜백 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
+- [명령 동작에 대 한 이벤트 (샘플)](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [유효성 검사 콜백 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [강제 값 콜백 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [BindableProperty API](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject API](xref:Xamarin.Forms.BindableObject)

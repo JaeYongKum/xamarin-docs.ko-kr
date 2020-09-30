@@ -1,5 +1,5 @@
 ---
-title: 명시적 스타일Xamarin.Forms
+title: 명시적 스타일 Xamarin.Forms
 description: 명시적 스타일은 스타일 속성을 설정 하 여 컨트롤에 선택적으로 적용 되는 스타일입니다. 이 문서에서는 응용 프로그램에서 명시적 스타일을 사용 하는 방법을 설명 Xamarin.Forms 합니다.
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
@@ -10,14 +10,14 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62b84a5028c17c28a69a887a832028c2064fa78d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b462535815e1c8ca6262d82d2527d7667b645db8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136268"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563928"
 ---
-# <a name="explicit-styles-in-xamarinforms"></a>명시적 스타일Xamarin.Forms
+# <a name="explicit-styles-in-no-locxamarinforms"></a>명시적 스타일 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
@@ -187,8 +187,8 @@ public class ExplicitStylesPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
-- [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [기본 스타일 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [스타일 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

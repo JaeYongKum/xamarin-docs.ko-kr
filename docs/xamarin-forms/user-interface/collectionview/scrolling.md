@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCollectionView 스크롤
+title: Xamarin.Forms CollectionView 스크롤
 description: 사용자가 스크롤을 시작 swipes 면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 또한 CollectionView는 프로그래밍 방식으로 항목을 뷰로 스크롤 하는 두 개의 ScrollTo 메서드를 정의 합니다.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
@@ -10,28 +10,28 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04d190971fa5ef16e08091600558f7f016bc8605
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dad0c3fd70e2484033268f9ad0686d0b3f42cb70
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134539"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564110"
 ---
-# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.FormsCollectionView 스크롤
+# <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)항목을 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 뷰로 스크롤 하는 두 가지 메서드를 정의 합니다. 오버 로드 중 하나는 지정 된 인덱스에 있는 항목을 뷰로 스크롤하고 다른 하나는 지정 된 항목을 뷰로 스크롤합니다. 두 오버 로드 모두에 항목이 속한 그룹을 나타내는 추가 인수, 스크롤이 완료 된 후 항목의 정확한 위치 및 스크롤에 애니메이션 효과를 적용할지 여부를 지정 하는 추가 인수가 있습니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목을 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 뷰로 스크롤 하는 두 가지 메서드를 정의 합니다. 오버 로드 중 하나는 지정 된 인덱스에 있는 항목을 뷰로 스크롤하고 다른 하나는 지정 된 항목을 뷰로 스크롤합니다. 두 오버 로드 모두에 항목이 속한 그룹을 나타내는 추가 인수, 스크롤이 완료 된 후 항목의 정확한 위치 및 스크롤에 애니메이션 효과를 적용할지 여부를 지정 하는 추가 인수가 있습니다.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)메서드 중 [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 하나가 호출 될 때 발생 하는 이벤트를 정의 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 합니다. 이벤트와 함께 제공 되는 개체에는,,, 등의 [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) `ScrollToRequested` 많은 속성이 있습니다 `IsAnimated` `Index` `Item` `ScrollToPosition` . 이러한 속성은 메서드 호출에 지정 된 인수에서 설정 됩니다 `ScrollTo` .
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 메서드 중 [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 하나가 호출 될 때 발생 하는 이벤트를 정의 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 합니다. 이벤트와 함께 제공 되는 개체에는,,, 등의 [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) `ScrollToRequested` 많은 속성이 있습니다 `IsAnimated` `Index` `Item` `ScrollToPosition` . 이러한 속성은 메서드 호출에 지정 된 인수에서 설정 됩니다 `ScrollTo` .
 
 또한은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) `Scrolled` 스크롤이 발생 했음을 나타내기 위해 발생 하는 이벤트를 정의 합니다. `ItemsViewScrolledEventArgs`이벤트와 함께 제공 되는 개체에는 `Scrolled` 많은 속성이 있습니다. 자세한 내용은 [스크롤 검색](#detect-scrolling)을 참조 하세요.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)또한에 `ItemsUpdatingScrollMode` `CollectionView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 속성도 정의 합니다. 이 속성에 대 한 자세한 내용은 [새 항목이 추가 될 때 스크롤 위치 제어](#control-scroll-position-when-new-items-are-added)를 참조 하세요.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 또한에 `ItemsUpdatingScrollMode` `CollectionView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 속성도 정의 합니다. 이 속성에 대 한 자세한 내용은 [새 항목이 추가 될 때 스크롤 위치 제어](#control-scroll-position-when-new-items-are-added)를 참조 하세요.
 
 사용자가 스크롤을 시작 swipes 면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능은 스크롤이 중지 될 때 항목이 위치에 스냅 되기 때문에 맞추기 라고 합니다. 자세한 내용은 [맞추기 요소](#snap-points)를 참조 하세요.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)사용자가 스크롤하면 데이터를 증분 로드할 수도 있습니다. 자세한 내용은 [데이터를 증분 로드](populate-data.md#load-data-incrementally)를 참조 하세요.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 사용자가 스크롤하면 데이터를 증분 로드할 수도 있습니다. 자세한 내용은 [데이터를 증분 로드](populate-data.md#load-data-incrementally)를 참조 하세요.
 
 ## <a name="detect-scrolling"></a>스크롤 검색
 
@@ -149,7 +149,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 [![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-start.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
-### <a name="center"></a>중심
+### <a name="center"></a>Center
 
 [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition)멤버는 항목을 뷰의 가운데로 스크롤 해야 함을 나타냅니다.
 
@@ -175,11 +175,11 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>새 항목이 추가 되는 경우 스크롤 위치 제어
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)바인딩 가능한 `ItemsUpdatingScrollMode` 속성에 의해 지원 되는 속성을 정의 합니다. 이 속성은 `ItemsUpdatingScrollMode` `CollectionView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 열거형 값을 가져오거나 설정 합니다. `ItemsUpdatingScrollMode` 열거형은 다음 멤버를 정의합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 바인딩 가능한 `ItemsUpdatingScrollMode` 속성에 의해 지원 되는 속성을 정의 합니다. 이 속성은 `ItemsUpdatingScrollMode` `CollectionView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 열거형 값을 가져오거나 설정 합니다. `ItemsUpdatingScrollMode` 열거형은 다음 멤버를 정의합니다.
 
-- `KeepItemsInView`새 항목이 추가 될 때 표시 되는 첫 번째 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
-- `KeepScrollOffset`새 항목이 추가 될 때 목록의 시작 부분을 기준으로 스크롤 오프셋을 유지 합니다.
-- `KeepLastItemInView`새 항목이 추가 될 때 마지막 항목이 표시 되도록 스크롤 오프셋을 조정 합니다.
+- `KeepItemsInView` 새 항목이 추가 될 때 표시 되는 첫 번째 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
+- `KeepScrollOffset` 새 항목이 추가 될 때 목록의 시작 부분을 기준으로 스크롤 오프셋을 유지 합니다.
+- `KeepLastItemInView` 새 항목이 추가 될 때 마지막 항목이 표시 되도록 스크롤 오프셋을 조정 합니다.
 
 기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록에서 처음 표시 되는 항목에 새 항목이 추가 되 면 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 목록에 표시 되는 항목은 계속 표시 됩니다. 새로 추가 된 항목이 목록의 맨 아래에 항상 표시 되도록 하려면 `ItemsUpdatingScrollMode` 속성을로 설정 해야 합니다 `KeepLastItemInView` .
 
@@ -202,9 +202,9 @@ CollectionView collectionView = new CollectionView
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)`HorizontalScrollBarVisibility`바인딩 가능한 `VerticalScrollBarVisibility` 속성에 의해 지원 되는 및 속성을 정의 합니다. 이러한 속성은 [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 가로 또는 세로 스크롤 막대가 표시 되는 경우를 나타내는 열거형 값을 가져오거나 설정 합니다. `ScrollBarVisibility` 열거형은 다음 멤버를 정의합니다.
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 ## <a name="snap-points"></a>끌기 지점
 
@@ -222,9 +222,9 @@ CollectionView collectionView = new CollectionView
 
 [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType)열거형은 다음 멤버를 정의 합니다.
 
-- `None`스크롤이 항목에 맞추지 않음을 나타냅니다.
-- `Mandatory`는 항상 내용이 관성의 방향에 따라 스크롤할 수 있는 가장 가까운 맞춤 지점에 맞춰집니다.
-- `MandatorySingle`와 동일한 동작을 나타내지만 한 `Mandatory` 번에 한 항목만 스크롤합니다.
+- `None` 스크롤이 항목에 맞추지 않음을 나타냅니다.
+- `Mandatory` 는 항상 내용이 관성의 방향에 따라 스크롤할 수 있는 가장 가까운 맞춤 지점에 맞춰집니다.
+- `MandatorySingle` 와 동일한 동작을 나타내지만 한 `Mandatory` 번에 한 항목만 스크롤합니다.
 
 기본적으로 속성은 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) `SnapPointsType.None` 다음 스크린샷에 표시 된 것 처럼 스크롤이 항목을 맞추지 않도록 하는로 설정 됩니다.
 
@@ -272,7 +272,7 @@ CollectionView collectionView = new CollectionView
 
 [![IOS 및 Android의 시작 CollectionView 세로 목록 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CollectionView 세로 목록")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CollectionView 세로 목록")
 
-#### <a name="center"></a>중심
+#### <a name="center"></a>Center
 
 `SnapPointsAlignment.Center`멤버는 맞춤 지점이 항목의 가운데에 정렬 됨을 나타냅니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
@@ -340,4 +340,4 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

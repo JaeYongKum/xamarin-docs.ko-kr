@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms엔트리의
+title: Xamarin.Forms 엔트리의
 description: 이 문서에서는 Entry 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에서 한 줄 텍스트 또는 암호 입력을 허용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
@@ -10,14 +10,14 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3738a0fa3519f18864c2430430a6716bed5be130
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: ab2f0880f694bd9e270385dd6e0256374ed76c43
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918226"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562225"
 ---
-# <a name="no-locxamarinforms-entry"></a>Xamarin.Forms엔트리의
+# <a name="no-locxamarinforms-entry"></a>Xamarin.Forms 엔트리의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
@@ -78,10 +78,10 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 
 는 [`Entry`](xref:Xamarin.Forms.Entry) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
 
-- `None`텍스트가 변환 되지 않음을 나타냅니다.
-- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
-- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
-- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+- `None` 텍스트가 변환 되지 않음을 나타냅니다.
+- `Default` 플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase` 텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase` 텍스트가 대문자로 변환 됨을 나타냅니다.
 
 다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
 
@@ -136,7 +136,7 @@ Entry entry = new Entry { CharacterSpacing = 10 };
 
 ## <a name="password-fields"></a>암호 필드
 
-`Entry`속성을 제공 합니다 `IsPassword` . `IsPassword`가 이면 `true` 필드의 내용이 검정 원으로 표시 됩니다.
+`Entry` 속성을 제공 합니다 `IsPassword` . `IsPassword`가 이면 `true` 필드의 내용이 검정 원으로 표시 됩니다.
 
 XAML에서:
 
@@ -198,8 +198,8 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
 
 `ClearButtonVisibility`속성을 사용 하 여 [`Entry`](xref:Xamarin.Forms.Entry) 가 텍스트를 지울 수 있는 지우기 단추를 표시 하는지 여부를 제어할 수 있습니다. 이 속성은 열거형 멤버로 설정 해야 합니다 `ClearButtonVisibility` .
 
-- `Never`지우기 단추가 표시 되지 않는 것을 나타냅니다. 이 값은 `Entry.ClearButtonVisibility` 속성의 기본값입니다.
-- `WhileEditing`에 [`Entry`](xref:Xamarin.Forms.Entry) 포커스와 텍스트를 포함 하는 동안 지우기 단추가 표시 됨을 나타냅니다.
+- `Never` 지우기 단추가 표시 되지 않는 것을 나타냅니다. 이 값은 `Entry.ClearButtonVisibility` 속성의 기본값입니다.
+- `WhileEditing` 에 [`Entry`](xref:Xamarin.Forms.Entry) 포커스와 텍스트를 포함 하는 동안 지우기 단추가 표시 됨을 나타냅니다.
 
 다음 예제에서는 XAML에서 속성을 설정 하는 방법을 보여 줍니다.
 
@@ -281,12 +281,12 @@ entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.Capit
 
 에 포커스가 있을 때 표시 되는 소프트 키보드의 반환 키 모양은 [`Entry`](xref:Xamarin.Forms.Entry) [`ReturnType`](xref:Xamarin.Forms.Entry.ReturnType) 속성을 열거형의 값으로 설정 하 여 사용자 지정할 수 있습니다 [`ReturnType`](xref:Xamarin.Forms.ReturnType) .
 
-- [`Default`](xref:Xamarin.Forms.ReturnType.Default)– 특정 반환 키가 필요 하지 않으며 플랫폼 기본값이 사용 됨을 나타냅니다.
-- [`Done`](xref:Xamarin.Forms.ReturnType.Done)– "Done" 반환 키를 나타냅니다.
-- [`Go`](xref:Xamarin.Forms.ReturnType.Go)– "Go" 반환 키를 나타냅니다.
-- [`Next`](xref:Xamarin.Forms.ReturnType.Next)– "Next" 반환 키를 나타냅니다.
-- [`Search`](xref:Xamarin.Forms.ReturnType.Search)– "검색" 반환 키를 나타냅니다.
-- [`Send`](xref:Xamarin.Forms.ReturnType.Send)– "송신" 반환 키를 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) – 특정 반환 키가 필요 하지 않으며 플랫폼 기본값이 사용 됨을 나타냅니다.
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) – "Done" 반환 키를 나타냅니다.
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) – "Go" 반환 키를 나타냅니다.
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) – "Next" 반환 키를 나타냅니다.
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) – "검색" 반환 키를 나타냅니다.
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) – "송신" 반환 키를 나타냅니다.
 
 다음 XAML 예제에서는 반환 키를 설정 하는 방법을 보여 줍니다.
 
@@ -396,7 +396,7 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 ### <a name="completed"></a>완료됨
 
-`Completed`이벤트는 항목과의 상호 작용이 완료 될 때 대응 하는 데 사용 됩니다. `Completed`사용자가 키보드에서 return 키를 누르거나 UWP에서 Tab 키를 눌러 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트에 대 한 처리기는 일반 이벤트 처리기로, 발신자 및 다음을 수행 합니다 `EventArgs` .
+`Completed`이벤트는 항목과의 상호 작용이 완료 될 때 대응 하는 데 사용 됩니다. `Completed` 사용자가 키보드에서 return 키를 누르거나 UWP에서 Tab 키를 눌러 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트에 대 한 처리기는 일반 이벤트 처리기로, 발신자 및 다음을 수행 합니다 `EventArgs` .
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -424,7 +424,7 @@ entry.Completed += Entry_Completed;
 
 `TextChanged`이벤트는 필드 내용의 변경에 대응 하는 데 사용 됩니다.
 
-`TextChanged`의가 변경 될 때마다 발생 합니다 `Text` `Entry` . 이벤트에 대 한 처리기는의 인스턴스를 사용 `TextChangedEventArgs` 합니다. `TextChangedEventArgs``Entry` `Text` 및 속성을 통해의 이전 값과 새 값에 대 한 액세스를 제공 합니다 `OldTextValue` `NewTextValue` .
+`TextChanged` 의가 변경 될 때마다 발생 합니다 `Text` `Entry` . 이벤트에 대 한 처리기는의 인스턴스를 사용 `TextChangedEventArgs` 합니다. `TextChangedEventArgs``Entry` `Text` 및 속성을 통해의 이전 값과 새 값에 대 한 액세스를 제공 합니다 `OldTextValue` `NewTextValue` .
 
 ```csharp
 void Entry_TextChanged (object sender, TextChangedEventArgs e)
@@ -449,5 +449,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [텍스트 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [항목 API](xref:Xamarin.Forms.Entry)

@@ -1,5 +1,5 @@
 ---
-title: Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
+title: Azure Search 및를 사용 하 여 데이터 검색 Xamarin.Forms
 description: 이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -10,14 +10,14 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29e73f4051eda9117663992af9e710483e4b772b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 14d26c1360c1c1b7997598ef1263e3dd62e3c013
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934097"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561783"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
+# <a name="search-data-with-azure-search-and-no-locxamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
@@ -44,7 +44,7 @@ Azure Search는 검색 입력을 기준으로 제안 검색도 지원 합니다.
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설치 프로그램
 
 Azure Search를 응용 프로그램에 통합 하는 프로세스는 Xamarin.Forms 다음과 같습니다.
 
@@ -96,12 +96,12 @@ static void CreateSearchIndex()
 
 `Index.Name`속성은 인덱스의 이름으로 설정 해야 하며 `Index.Fields` 속성은 개체의 배열로 설정 되어야 합니다 `Field` . 각 `Field` 인스턴스는 필드를 사용 하는 방법을 지정 하는 이름, 형식 및 속성을 지정 합니다. 이러한 속성은 다음과 같습니다.
 
-- `IsKey`– 필드가 인덱스의 키인지 여부를 나타냅니다. 형식의 인덱스에 있는 필드 중 하나만 `DataType.String` 키 필드로 지정 해야 합니다.
-- `IsFacetable`–이 필드에서 패싯 탐색을 수행할 수 있는지 여부를 나타냅니다. 기본값은 `false`입니다.
-- `IsFilterable`– 필터 쿼리에서 필드를 사용할 수 있는지 여부를 나타냅니다. 기본값은 `false`입니다.
-- `IsRetrievable`– 검색 결과에서 필드를 검색할 수 있는지 여부를 나타냅니다. 기본값은 `true`입니다.
-- `IsSearchable`– 필드가 전체 텍스트 검색에 포함 되는지 여부를 나타냅니다. 기본값은 `false`입니다.
-- `IsSortable`– 식에 필드를 사용할 수 있는지 여부를 나타냅니다 `OrderBy` . 기본값은 `false`입니다.
+- `IsKey` – 필드가 인덱스의 키인지 여부를 나타냅니다. 형식의 인덱스에 있는 필드 중 하나만 `DataType.String` 키 필드로 지정 해야 합니다.
+- `IsFacetable` –이 필드에서 패싯 탐색을 수행할 수 있는지 여부를 나타냅니다. 기본값은 `false`입니다.
+- `IsFilterable` – 필터 쿼리에서 필드를 사용할 수 있는지 여부를 나타냅니다. 기본값은 `false`입니다.
+- `IsRetrievable` – 검색 결과에서 필드를 검색할 수 있는지 여부를 나타냅니다. 기본값은 `true`입니다.
+- `IsSearchable` – 필드가 전체 텍스트 검색에 포함 되는지 여부를 나타냅니다. 기본값은 `false`입니다.
+- `IsSortable` – 식에 필드를 사용할 수 있는지 여부를 나타냅니다 `OrderBy` . 기본값은 `false`입니다.
 
 > [!NOTE]
 > 배포 후 인덱스를 변경 하려면 데이터를 다시 작성 하 고 다시 로드 해야 합니다.
@@ -262,11 +262,11 @@ async Task AzureSuggestions(string text)
 
 `SuggestAsync`메서드는 검색 텍스트 인수, 사용할 확인 기 이름 (인덱스에 정의 됨) 및 `SuggestParameters` 쿼리를 추가로 구체화 하는 데 사용할 수 있는 선택적 개체를 사용 합니다. `SuggestParameters`인스턴스는 다음 속성을 설정 합니다.
 
-- `UseFuzzyMatching`–로 설정 하면 `true` 검색 텍스트에 대체 문자 또는 누락 된 문자가 있는 경우에도 Azure Search에서 제안을 찾을 수 있습니다.
-- `HighlightPreTag`– 제안 적중 항목 앞에 나오는 태그입니다.
-- `HighlightPostTag`– 제안 적중에 추가 되는 태그입니다.
-- `MinimumCoverage`– 쿼리가 성공 여부를 보고 하기 위해 제안 쿼리가 적용 해야 하는 인덱스의 백분율을 나타냅니다. 기본값은 80입니다.
-- `Top`– 검색할 제안 수입니다. 이 값은 1에서 100 사이의 정수 여야 하며 기본값은 5입니다.
+- `UseFuzzyMatching` –로 설정 하면 `true` 검색 텍스트에 대체 문자 또는 누락 된 문자가 있는 경우에도 Azure Search에서 제안을 찾을 수 있습니다.
+- `HighlightPreTag` – 제안 적중 항목 앞에 나오는 태그입니다.
+- `HighlightPostTag` – 제안 적중에 추가 되는 태그입니다.
+- `MinimumCoverage` – 쿼리가 성공 여부를 보고 하기 위해 제안 쿼리가 적용 해야 하는 인덱스의 백분율을 나타냅니다. 기본값은 80입니다.
+- `Top` – 검색할 제안 수입니다. 이 값은 1에서 100 사이의 정수 여야 하며 기본값은 5입니다.
 
 전반적인 효과는 인덱스의 상위 10 개 결과가 적중 항목 강조 표시와 함께 반환 되 고 결과는 유사한 철자의 검색어를 포함 하는 문서를 포함 하는 것입니다.
 
@@ -282,6 +282,6 @@ async Task AzureSuggestions(string text)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Azure Search (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+- [Azure Search (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Azure Search 설명서](/azure/search/)
 - [Microsoft Azure 검색 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.Search/)

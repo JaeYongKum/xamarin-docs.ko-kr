@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a7dedad6fc33b75a687f94897b64d04a72a0b08
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 42f89f09bd84127fd19bc3ab64794bdac7f145d7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918440"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561627"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -75,10 +75,10 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 
 는 [`Editor`](xref:Xamarin.Forms.Editor) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
 
-- `None`텍스트가 변환 되지 않음을 나타냅니다.
-- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
-- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
-- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+- `None` 텍스트가 변환 되지 않음을 나타냅니다.
+- `Default` 플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase` 텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase` 텍스트가 대문자로 변환 됨을 나타냅니다.
 
 다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
 
@@ -135,8 +135,8 @@ Editor editor = new editor { CharacterSpacing = 10 };
 
 [`Editor`](xref:Xamarin.Forms.Editor) [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) 속성을 열거형 값으로 설정 하 여 해당 콘텐츠에 대 한 크기를 자동으로 조정 하도록 만들 수 있습니다 [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) . 이 열거형에는 두 개의 값이 있습니다.
 
-- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled)자동 크기 조정을 사용 하지 않도록 설정 하 고 기본값을 나타냅니다.
-- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges)자동 크기 조정을 사용 하도록 설정 됨을 나타냅니다.
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) 자동 크기 조정을 사용 하지 않도록 설정 하 고 기본값을 나타냅니다.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) 자동 크기 조정을 사용 하도록 설정 됨을 나타냅니다.
 
 이러한 작업은 다음과 같이 코드에서 수행할 수 있습니다.
 
@@ -248,7 +248,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 
 ## <a name="colors"></a>색
 
-`Editor`속성을 통해 사용자 지정 배경색을 사용 하도록 설정할 수 있습니다 `BackgroundColor` . 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 색의 기본값이 다르기 때문에 각 플랫폼에 대 한 사용자 지정 배경색을 설정 해야 할 수도 있습니다. 각 플랫폼에 대 한 UI를 최적화 하는 방법에 대 한 자세한 내용은 [플랫폼 조정 작업](~/xamarin-forms/platform/device.md) 을 참조 하세요.
+`Editor` 속성을 통해 사용자 지정 배경색을 사용 하도록 설정할 수 있습니다 `BackgroundColor` . 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 색의 기본값이 다르기 때문에 각 플랫폼에 대 한 사용자 지정 배경색을 설정 해야 할 수도 있습니다. 각 플랫폼에 대 한 UI를 최적화 하는 방법에 대 한 자세한 내용은 [플랫폼 조정 작업](~/xamarin-forms/platform/device.md) 을 참조 하세요.
 
 C#:
 
@@ -296,7 +296,7 @@ XAML에서:
 
 ## <a name="events-and-interactivity"></a>이벤트 및 대화형 작업
 
-`Editor`는 다음과 같은 두 이벤트를 노출 합니다.
+`Editor` 는 다음과 같은 두 이벤트를 노출 합니다.
 
 - [TextChanged](xref:Xamarin.Forms.InputView.TextChanged) &ndash; 편집기에서 텍스트가 변경 될 때 발생 합니다. 변경 전후에 텍스트를 제공 합니다.
 - [완료 됨](xref:Xamarin.Forms.Editor.Completed) &ndash; 사용자가 키보드에서 return 키를 눌러 입력을 끝낸 경우 발생 합니다.
@@ -306,7 +306,7 @@ XAML에서:
 
 ### <a name="completed"></a>완료됨
 
-`Completed`이벤트는와의 상호 작용이 완료 될 때 대응 하는 데 사용 됩니다 `Editor` . `Completed`사용자가 키보드에서 return 키를 입력 하거나 UWP에서 Tab 키를 눌러 입력을 끝낼 때 발생 합니다. 이벤트에 대 한 처리기는 일반 이벤트 처리기로, 발신자 및 다음을 수행 합니다 `EventArgs` .
+`Completed`이벤트는와의 상호 작용이 완료 될 때 대응 하는 데 사용 됩니다 `Editor` . `Completed` 사용자가 키보드에서 return 키를 입력 하거나 UWP에서 Tab 키를 눌러 입력을 끝낼 때 발생 합니다. 이벤트에 대 한 처리기는 일반 이벤트 처리기로, 발신자 및 다음을 수행 합니다 `EventArgs` .
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -354,7 +354,7 @@ Title="Editor Demo">
 
 `TextChanged`이벤트는 필드 내용의 변경에 대응 하는 데 사용 됩니다.
 
-`TextChanged`의가 변경 될 때마다 발생 합니다 `Text` `Editor` . 이벤트에 대 한 처리기는의 인스턴스를 사용 `TextChangedEventArgs` 합니다. `TextChangedEventArgs``Editor` `Text` 및 속성을 통해의 이전 값과 새 값에 대 한 액세스를 제공 합니다 `OldTextValue` `NewTextValue` .
+`TextChanged` 의가 변경 될 때마다 발생 합니다 `Text` `Editor` . 이벤트에 대 한 처리기는의 인스턴스를 사용 `TextChangedEventArgs` 합니다. `TextChangedEventArgs``Editor` `Text` 및 속성을 통해의 이전 값과 새 값에 대 한 액세스를 제공 합니다 `OldTextValue` `NewTextValue` .
 
 ```csharp
 void EditorTextChanged (object sender, TextChangedEventArgs e)
@@ -401,5 +401,5 @@ Title="Editor Demo">
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [텍스트 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [편집기 API](xref:Xamarin.Forms.Editor)

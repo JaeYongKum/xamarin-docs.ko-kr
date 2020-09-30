@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4b2030461025c1cd647595a1ecc22c5589e99fef
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a05bdc9d4cef01681701143a3f3a642a884b9d1e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137048"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560743"
 ---
 # <a name="swipeview-swipe-transition-mode-on-ios"></a>IOS의 SwipeView 살짝 밀기 전환 모드
 
@@ -56,8 +56,8 @@ swipeView.On<iOS>().SetSwipeTransitionMode(SwipeTransitionMode.Drag);
 
 `SwipeView.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `SwipeView.SetSwipeTransitionMode`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 를 열 때 사용 되는 전환을 제어 하는 데 사용 됩니다 `SwipeView` . `SwipeTransitionMode`열거형은 다음 두 가지 가능한 값을 제공 합니다.
 
-- `Reveal`내용이 스와이프 때 살짝 밀기 항목이 표시 되 `SwipeView` 고 속성의 기본값입니다 `SwipeView.SwipeTransitionMode` .
-- `Drag`내용이 스와이프 때 살짝 밀기 항목을 뷰로 끌 것임을 나타냅니다 `SwipeView` .
+- `Reveal` 내용이 스와이프 때 살짝 밀기 항목이 표시 되 `SwipeView` 고 속성의 기본값입니다 `SwipeView.SwipeTransitionMode` .
+- `Drag` 내용이 스와이프 때 살짝 밀기 항목을 뷰로 끌 것임을 나타냅니다 `SwipeView` .
 
 또한 메서드를 사용 하 여에 `SwipeView.GetSwipeTransitionMode` 적용 되는를 반환할 수 있습니다 `SwipeTransitionMode` `SwipeView` .
 
@@ -67,6 +67,6 @@ swipeView.On<iOS>().SetSwipeTransitionMode(SwipeTransitionMode.Drag);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

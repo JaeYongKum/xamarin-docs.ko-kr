@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 91051b1ffc859d4e3deb62d41709db0c587b2789
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573296"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560834"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>SkiaSharp 비트맵 만들기 및 그리기
 
@@ -59,7 +59,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 그런 다음 비트맵을 표시할 수 있습니다. 나중에 프로그램은 `SKCanvas` 동일한 비트맵을 기반으로 새 개체를 만들고이 개체에 좀 더 그릴 수 있습니다.
 
-**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **hello 비트맵** 페이지에서 "hello, Bitmap!" 텍스트를 씁니다. 비트맵을 찾은 다음이 비트맵을 여러 번 표시 합니다.
+**[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **hello 비트맵** 페이지에서 "hello, Bitmap!" 텍스트를 씁니다. 비트맵을 찾은 다음이 비트맵을 여러 번 표시 합니다.
 
 의 생성자는 `HelloBitmapPage` `SKPaint` 텍스트를 표시 하기 위한 개체를 만들기 시작 합니다. 텍스트 문자열의 크기를 결정 하 고 이러한 차원을 사용 하 여 비트맵을 만듭니다. 그런 다음이 `SKCanvas` 비트맵을 기반으로 개체를 만들고를 호출한 `Clear` 다음을 호출 `DrawText` 합니다. `Clear`새로 만든 비트맵에 임의의 데이터가 포함 될 수 있으므로 항상 새 비트맵을 사용 하 여를 호출 하는 것이 좋습니다.
 
@@ -126,7 +126,7 @@ public partial class HelloBitmapPage : ContentPage
 
 의 메서드에 대 한 설명서에서는 `Clear` `SKCanvas` "현재 클립 캔버스의 모든 픽셀을 바꿉니다." 문을 사용 하 여 설명 합니다. "Replace" 단어를 사용 하면 이러한 메서드의 중요 한 특성이 표시 됩니다. 모든 그리기 메서드는 `SKCanvas` 기존 표시 화면에 항목을 추가 합니다. `Clear`메서드는 이미 있는 항목을 _대체_ 합니다.
 
-`Clear`는 두 가지 다른 버전으로 존재 합니다.
+`Clear` 는 두 가지 다른 버전으로 존재 합니다.
 
 - [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor))매개 변수가 있는 메서드는 `SKColor` 표시 표면의 픽셀을 해당 색의 픽셀로 바꿉니다.
 
@@ -176,8 +176,8 @@ Color = new SKColor(0, 0, 0, 0)
 
 이러한 일련의 문서는 `SKBitmap` 멤버가 지정 되지 않은 경우 기본적으로 사용 되는 색 형식으로 제한 됩니다 `SKColorType` . 기본 형식은 기본 플랫폼을 기반으로 합니다. 에서 지 원하는 플랫폼의 경우 Xamarin.Forms 기본 색 형식은 다음과 같습니다.
 
-- `Rgba8888`iOS 및 Android의 경우
-- `Bgra8888`UWP의 경우
+- `Rgba8888` iOS 및 Android의 경우
+- `Bgra8888` UWP의 경우
 
 유일한 차이점은 메모리에서 4 바이트의 순서 이며이는 픽셀 비트에 직접 액세스 하는 경우에만 문제가 됩니다. [**SkiaSharp 비트맵 픽셀에 액세스**](pixel-bits.md)하는 문서에 도달할 때까지이는 중요 하지 않습니다.
 
@@ -267,7 +267,7 @@ public partial class MonkeyMoustachePage : ContentPage
 
 비트맵을 수정 하는 가장 다양 한 방법은 실제 픽셀 비트 ( **[SkiaSharp 비트맵 픽셀 액세스](pixel-bits.md)** 문서에 설명 된 주제)에 액세스 하는 것입니다. 그러나 픽셀 비트에 액세스 하지 않아도 되는 비트맵을 수정 하는 다른 여러 가지 방법이 있습니다.
 
-**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 포함 된 다음 비트맵은 360 픽셀 너비 및 480 픽셀 높이로 되어 있습니다.
+**[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 포함 된 다음 비트맵은 360 픽셀 너비 및 480 픽셀 높이로 되어 있습니다.
 
 ![산지 Climbers](drawing-images/MountainClimbers.jpg "산지 Climbers")
 
@@ -497,7 +497,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 비트맵에서 일반적으로 수행 되는 다른 작업을 _대칭 이동_이라고 합니다. 개념적으로 비트맵은 세로 축 둘레의 3 차원 또는 비트맵의 중심을 통한 가로 축에서 회전 됩니다. 수직 대칭 이동은 미러 이미지를 만듭니다.
 
-**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **비트맵 플리퍼** 페이지는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 가로 및 세로로 대칭 이동 하기 위한 및 두 개의 단추가 포함 되어 있습니다.
+**[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **비트맵 플리퍼** 페이지는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 가로 및 세로로 대칭 이동 하기 위한 및 두 개의 단추가 포함 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,5 +599,5 @@ public partial class BitmapFlipperPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f783dcc9d0070e8e816f378d261191444822841b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127805"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561952"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
@@ -25,7 +25,7 @@ _SkiaSharp를 사용 하 여 곡선을 그리고 경로 기능을 사용 하는 
 
 [`SKPath`](xref:SkiaSharp.SKPath)메서드 및 속성 탐색은 [**SkiaSharp 줄 및 경로**](../paths/index.md) 문서에서 시작 되었습니다. 여기의 문서는 개체에 곡선을 추가 하 `SKPath` 고 다른 강력한 경로 기능을 활용 하는 메서드를 계속 사용 합니다. 간결한 텍스트 문자열에서 전체 경로를 지정 하는 방법, 경로 효과를 사용 하는 방법 및 경로 내부를 자세히 설명 하는 방법을 확인할 수 있습니다.
 
-이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 곡선 및 경로** 페이지와 솔루션의 [**곡선**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 폴더에서 찾을 수 있습니다.
+이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 곡선 및 경로** 페이지와 솔루션의 [**곡선**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 폴더에서 찾을 수 있습니다.
 
 ## <a name="three-ways-to-draw-an-arc"></a>[원호를 그리는 3가지 방법](arcs.md)
 
@@ -57,5 +57,5 @@ SkiaSharp를 사용 하 여 입방, 정방형 및 원추형 베 지 어 곡선�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

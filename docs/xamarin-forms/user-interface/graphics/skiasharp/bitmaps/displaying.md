@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1427b6f8461c74ded933fe562a7d17221790383a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134760"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562316"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵 표시
 
@@ -27,7 +27,7 @@ SkiaSharp 비트맵의 제목은 **[SkiaSharp의 비트맵 기본 사항](../bas
 
 `DrawBitmapLattice`및 메서드에 대 한 자세한 내용은 `DrawBitmapNinePatch` **[SkiaSharp 비트맵의 분할](segmented.md)** 된 항목 표시를 참조 하세요.
 
-이 페이지에 대 한 샘플은 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서 가져온 것입니다. 해당 응용 프로그램의 홈 페이지에서 **SkiaSharp 비트맵**을 선택 하 고 **비트맵 표시** 섹션으로 이동 합니다.
+이 페이지에 대 한 샘플은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서 가져온 것입니다. 해당 응용 프로그램의 홈 페이지에서 **SkiaSharp 비트맵**을 선택 하 고 **비트맵 표시** 섹션으로 이동 합니다.
 
 ## <a name="loading-a-bitmap"></a>비트맵 로드
 
@@ -95,7 +95,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 비트맵 파일은 iOS, Android 및 유니버설 Windows 플랫폼 (UWP) 용 개별 플랫폼 프로젝트에 리소스로 저장할 수도 있습니다. 그러나 이러한 비트맵을 로드 하려면 플랫폼 프로젝트에 있는 코드가 필요 합니다.
 
-비트맵을 가져오는 세 번째 방법은 사용자의 그림 라이브러리를 사용 하는 것입니다. 다음 코드에서는 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 포함 된 종속성 서비스를 사용 합니다. **SkiaSharpFormsDemo** .NET Standard 라이브러리는 `IPhotoLibrary` 인터페이스를 포함 하는 반면, 각 플랫폼 프로젝트는 `PhotoLibrary` 해당 인터페이스를 구현 하는 클래스를 포함 합니다.
+비트맵을 가져오는 세 번째 방법은 사용자의 그림 라이브러리를 사용 하는 것입니다. 다음 코드에서는 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 포함 된 종속성 서비스를 사용 합니다. **SkiaSharpFormsDemo** .NET Standard 라이브러리는 `IPhotoLibrary` 인터페이스를 포함 하는 반면, 각 플랫폼 프로젝트는 `PhotoLibrary` 해당 인터페이스를 구현 하는 클래스를 포함 합니다.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -147,7 +147,7 @@ paint.Color = SKColors.Red.WithAlpha(0x80);
 
 `SKPaint`개체는 또한 혼합 모드 또는 필터 효과를 사용 하 여 비트맵을 표시할 때 역할을 수행 합니다. 이러한 항목은 [SkiaSharp 합성 및 blend 모드](../effects/blend-modes/index.md) 및 [SkiaSharp 이미지 필터](../effects/image-filters.md)문서에 나와 있습니다.
 
-**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 샘플 프로그램의 **픽셀 차원** 페이지에는 240 픽셀의 320 픽셀 너비의 비트맵 리소스가 표시 됩니다.
+**[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 샘플 프로그램의 **픽셀 차원** 페이지에는 240 픽셀의 320 픽셀 너비의 비트맵 리소스가 표시 됩니다.
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -197,7 +197,7 @@ public class PixelDimensionsPage : ContentPage
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>리소스 비트맵을 로드 하는 방법
 
-들어오는 샘플 대부분은 비트맵 리소스를 로드 해야 합니다. `BitmapExtensions` **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 솔루션의 정적 클래스에는 다음을 수행 하는 데 도움이 되는 메서드가 포함 되어 있습니다.
+들어오는 샘플 대부분은 비트맵 리소스를 로드 해야 합니다. `BitmapExtensions` **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 솔루션의 정적 클래스에는 다음을 수행 하는 데 도움이 되는 메서드가 포함 되어 있습니다.
 
 ```csharp
 static class BitmapExtensions
@@ -314,7 +314,7 @@ public class UniformScalingPage : ContentPage
 
 [![균일 한 크기 조정](displaying-images/UniformScaling-Landscape.png "균일 한 크기 조정")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
-이 요소를 사용 하는 이점은 `scale` 약간 다른 알고리즘을 구현 하려는 경우에 분명 하 게 드러납니다. 비트맵의 가로 세로 비율을 유지 하 고 대상 사각형을 채우도록 하려고 한다고 가정 합니다. 이렇게 하려면 이미지의 일부를 자르는 것이 가능 하지만 `Math.Min` 위의 코드에서을로 변경 하 여이 알고리즘을 간단히 구현할 수 있습니다 `Math.Max` . 결과는 다음과 같습니다. 
+이 요소를 사용 하는 이점은 `scale` 약간 다른 알고리즘을 구현 하려는 경우에 분명 하 게 드러납니다. 비트맵의 가로 세로 비율을 유지 하 고 대상 사각형을 채우도록 하려고 한다고 가정 합니다. 이렇게 하려면 이미지의 일부를 자르는 것이 가능 하지만 `Math.Min` 위의 코드에서을로 변경 하 여이 알고리즘을 간단히 구현할 수 있습니다 `Math.Max` . 결과: 
 
 [![균일 한 확장 대안](displaying-images/UniformScaling-Alternative.png "균일 한 확장 대안")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 
@@ -322,7 +322,7 @@ public class UniformScalingPage : ContentPage
 
 ## <a name="a-versatile-bitmap-display-function"></a>다용도 비트맵 표시 함수
 
-XAML 기반 프로그래밍 환경 (예: UWP 및)에는 Xamarin.Forms 가로 세로 비율을 유지 하면서 비트맵 크기를 확장 하거나 축소할 수 있는 기능이 있습니다. SkiaSharp에는이 기능이 포함 되어 있지 않지만 직접 구현할 수 있습니다. `BitmapExtensions` [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에 포함 된 클래스는 방법을 보여 줍니다. 클래스는 `DrawBitmap` 가로 세로 비율 계산을 수행 하는 두 개의 새 메서드를 정의 합니다. 이러한 새 메서드는의 확장 메서드입니다 `SKCanvas` .
+XAML 기반 프로그래밍 환경 (예: UWP 및)에는 Xamarin.Forms 가로 세로 비율을 유지 하면서 비트맵 크기를 확장 하거나 축소할 수 있는 기능이 있습니다. SkiaSharp에는이 기능이 포함 되어 있지 않지만 직접 구현할 수 있습니다. `BitmapExtensions` [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에 포함 된 클래스는 방법을 보여 줍니다. 클래스는 `DrawBitmap` 가로 세로 비율 계산을 수행 하는 두 개의 새 메서드를 정의 합니다. 이러한 새 메서드는의 확장 메서드입니다 `SKCanvas` .
 
 새 `DrawBitmap` 메서드에는 `BitmapStretch` **BitmapExtensions.cs** 파일에 정의 된 열거형 인 형식의 매개 변수가 포함 됩니다.
 
@@ -338,7 +338,7 @@ public enum BitmapStretch
 }
 ```
 
-`None`,, `Fill` `Uniform` 및 멤버는 `UniformToFill` UWP 열거형의 멤버와 동일 합니다 [`Stretch`](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) . 유사한 열거형은, Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) 및 멤버를 정의 합니다 `Fill` `AspectFit` `AspectFill` .
+`None`,, `Fill` `Uniform` 및 멤버는 `UniformToFill` UWP 열거형의 멤버와 동일 합니다 [`Stretch`](/uwp/api/Windows.UI.Xaml.Media.Stretch) . 유사한 열거형은, Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) 및 멤버를 정의 합니다 `Fill` `AspectFit` `AspectFill` .
 
 위에 표시 된 **균일 한 크기 조정** 페이지는 사각형 내에서 비트맵을 가운데에 배치 하지만 사각형의 왼쪽 이나 오른쪽에 비트맵을 배치 하는 등의 다른 옵션을 원할 수도 있습니다. 이는 열거형의 목적입니다 `BitmapAlignment` .
 
@@ -668,5 +668,5 @@ public partial class ScalingModesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

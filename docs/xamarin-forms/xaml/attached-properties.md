@@ -10,19 +10,19 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1277b3cd875c1b4e05e45202a8e30ef2ff93972a
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 61edbb347b4d3466d1ca756208adb5d173d63b34
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226796"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561549"
 ---
 # <a name="attached-properties"></a>연결된 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 
-연결 된 속성을 사용 하면 개체에서 자체 클래스가 정의 하지 않는 속성에 대 한 값을 할당할 수 있습니다. 예를 들어 자식 요소는 연결 된 속성을 사용 하 여 사용자 인터페이스에 표시 되는 방식에 대 한 부모 요소를 알릴 수 있습니다. [`Grid`](xref:Xamarin.Forms.Grid)컨트롤을 사용 하면 및 연결 된 속성을 설정 하 여 자식의 행과 열을 지정할 수 있습니다 `Grid.Row` `Grid.Column` . `Grid.Row`및는 `Grid.Column` 자체가 아닌의 자식인 요소에 대해 설정 되기 때문에 연결 된 속성입니다 `Grid` `Grid` .
+연결 된 속성을 사용 하면 개체에서 자체 클래스가 정의 하지 않는 속성에 대 한 값을 할당할 수 있습니다. 예를 들어 자식 요소는 연결 된 속성을 사용 하 여 사용자 인터페이스에 표시 되는 방식에 대 한 부모 요소를 알릴 수 있습니다. [`Grid`](xref:Xamarin.Forms.Grid)컨트롤을 사용 하면 및 연결 된 속성을 설정 하 여 자식의 행과 열을 지정할 수 있습니다 `Grid.Row` `Grid.Column` . `Grid.Row` 및는 `Grid.Column` 자체가 아닌의 자식인 요소에 대해 설정 되기 때문에 연결 된 속성입니다 `Grid` `Grid` .
 
 다음 시나리오에서는 바인딩 가능한 속성을 연결 된 속성으로 구현 해야 합니다.
 
@@ -145,6 +145,6 @@ ShadowEffect.SetHasShadow (label, true);
 
 - [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
-- [그림자 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+- [그림자 효과(샘플)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [BindableProperty API](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject API](xref:Xamarin.Forms.BindableObject)

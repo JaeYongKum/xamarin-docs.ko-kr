@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms리소스 사전
-description: Xamarin.FormsXAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체입니다 Xamarin.Forms .
+title: Xamarin.Forms 리소스 사전
+description: Xamarin.Forms XAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체입니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cdf34d78751345857e89c6bfa6862b58207ad01e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139414"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562134"
 ---
-# <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Forms리소스 사전
+# <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms 리소스 사전
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
@@ -236,7 +236,7 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 
 ## <a name="related-links"></a>관련 링크
 
-- [리소스 사전 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+- [리소스 사전 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms 스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

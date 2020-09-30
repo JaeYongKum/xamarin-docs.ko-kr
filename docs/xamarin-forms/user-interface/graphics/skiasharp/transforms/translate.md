@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ed20da1005447334a99ea40c177c8f88d59d71ce
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 31a76e160186caec74665b7615323eb8e60b698a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938478"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562329"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
@@ -41,7 +41,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-[**SkiaSharpForms**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 프로그램의 **누적 번역** 페이지에서는 메서드의 여러 호출이 누적 됨을 보여 줍니다 `Translate` . [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs)클래스는 동일한 사각형의 20 개 버전을 표시 합니다. 각각은 이전 사각형에서 한 번만 오프셋 하 여 대각선을 따라 확장 합니다. `PaintSurface`이벤트 처리기는 다음과 같습니다.
+[**SkiaSharpForms**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 프로그램의 **누적 번역** 페이지에서는 메서드의 여러 호출이 누적 됨을 보여 줍니다 `Translate` . [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs)클래스는 동일한 사각형의 20 개 버전을 표시 합니다. 각각은 이전 사각형에서 한 번만 오프셋 하 여 대각선을 따라 확장 합니다. `PaintSurface`이벤트 처리기는 다음과 같습니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -308,5 +308,5 @@ public class HendecagramAnimationPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

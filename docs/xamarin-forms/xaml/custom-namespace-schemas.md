@@ -1,5 +1,5 @@
 ---
-title: 의 XAML 사용자 지정 네임 스페이스 스키마Xamarin.Forms
+title: 의 XAML 사용자 지정 네임 스페이스 스키마 Xamarin.Forms
 description: 사용자 지정 URL과 하나 이상의 CLR 네임 스페이스 간의 매핑을 지정 하는 매핑하기 클래스를 사용 하 여 XAML 사용자 지정 네임 스페이스 스키마를 정의할 수 있습니다. 그런 다음 사용자 지정 네임 스페이스 스키마를 XAML 네임 스페이스 선언에 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
@@ -10,14 +10,14 @@ ms.date: 12/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5c7e0d90358ec230436276070ea2792539c446e5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138166"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561484"
 ---
-# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>의 XAML 사용자 지정 네임 스페이스 스키마Xamarin.Forms
+# <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>의 XAML 사용자 지정 네임 스페이스 스키마 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
@@ -136,7 +136,7 @@ namespace CustomNamespaceSchemaDemo
 </ContentPage>
 ```
 
-`CircleButton`그런 다음 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 네임 스페이스 접두사를 사용 하 여 인스턴스를 선언 하 여에 추가할 수 있습니다 `controls` .
+`CircleButton` 그런 다음 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 네임 스페이스 접두사를 사용 하 여 인스턴스를 선언 하 여에 추가할 수 있습니다 `controls` .
 
 사용자 지정 네임 스페이스 스키마 형식을 찾기 위해에서 Xamarin.Forms 참조 된 어셈블리의 인스턴스를 검색 합니다 `XmlnsDefinitionAttribute` . `xmlns`XAML 파일의 요소에 대 한 특성이의 속성 값과 일치 하면는 `XmlNamespace` `XmlnsDefinitionAttribute` Xamarin.Forms `XmlnsDefinitionAttribute.ClrNamespace` 형식 확인을 위해 속성 값을 사용 하려고 합니다. 형식 확인에 실패 하는 경우는 Xamarin.Forms 추가 일치 하는 인스턴스를 기반으로 하는 형식 확인을 계속 시도 `XmlnsDefinitionAttribute` 합니다.
 
@@ -146,6 +146,6 @@ namespace CustomNamespaceSchemaDemo
 
 ## <a name="related-links"></a>관련 링크
 
-- [사용자 지정 네임 스페이스 스키마 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+- [사용자 지정 네임 스페이스 스키마 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [XAML Namespace 권장 접두사](custom-prefix.md)
-- [XAML 네임 스페이스Xamarin.Forms](namespaces.md)
+- [XAML 네임 스페이스 Xamarin.Forms](namespaces.md)

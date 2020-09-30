@@ -10,12 +10,12 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e02ef600af761915d05c912b586e409dd6f46b85
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a9eacc76fb3da6296039a713e15c4eaa30828d44
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137087"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560964"
 ---
 # <a name="searchbar-style-on-ios"></a>IOS의 SearchBar 스타일
 
@@ -47,9 +47,9 @@ searchBar.On<iOS>().SetSearchBarStyle(UISearchBarStyle.Minimal);
 
 `SearchBar.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `SearchBar.SetSearchBarStyle`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 이 배경을 사용 하는지 여부를 제어 하는 데 사용 됩니다 [`SearchBar`](xref:Xamarin.Forms.SearchBar) . `UISearchBarStyle`열거형은 세 가지 가능한 값을 제공 합니다.
 
-- `Default`에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 기본 스타일이 있음을 나타냅니다. 이 값은 바인딩 가능한 속성의 기본값입니다 `SearchBar.SearchBarStyle` .
-- `Prominent`에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 반투명 배경이 있고 검색 필드가 불투명 함을 나타냅니다.
-- `Minimal`에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 배경이 없고 검색 필드가 반투명 임을 나타냅니다.
+- `Default` 에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 기본 스타일이 있음을 나타냅니다. 이 값은 바인딩 가능한 속성의 기본값입니다 `SearchBar.SearchBarStyle` .
+- `Prominent` 에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 반투명 배경이 있고 검색 필드가 불투명 함을 나타냅니다.
+- `Minimal` 에 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 배경이 없고 검색 필드가 반투명 임을 나타냅니다.
 
 또한 메서드를 사용 하 여에 `SearchBar.GetSearchBarStyle` 적용 되는를 반환할 수 있습니다 `UISearchBarStyle` `SearchBar` .
 
@@ -63,6 +63,6 @@ searchBar.On<iOS>().SetSearchBarStyle(UISearchBarStyle.Minimal);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

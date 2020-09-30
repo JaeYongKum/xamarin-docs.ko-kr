@@ -10,12 +10,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c400bb342568a0399e2a582496f85ead273b6994
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e8afb0aa2a36a73af6c63e48a6c1048d8b69cf90
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572184"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563980"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
@@ -85,9 +85,9 @@ XAML에서 클래스의 속성은 일반적으로 XML 특성으로 설정 됩니
 
 이 새로운 구문을 사용 하 여 몇 가지 유용한 용어를 도입할 수 있습니다.
 
-- `Label`는 *개체 요소*입니다. Xamarin.FormsXML 요소로 표현 되는 개체입니다.
-- `Text`, `VerticalOptions` `FontAttributes` 및 `FontSize` 은 *속성 특성*입니다. 이러한 Xamarin.Forms 속성은 XML 특성으로 표현 되는 속성입니다.
-- 이 마지막 코드 조각에서는 `TextColor` 가 *속성 요소가*되었습니다. Xamarin.Forms속성 이지만 이제는 XML 요소입니다.
+- `Label` 는  *개체 요소*입니다. Xamarin.FormsXML 요소로 표현 되는 개체입니다.
+- `Text`,  `VerticalOptions` `FontAttributes` 및  `FontSize` 은  *속성 특성*입니다. 이러한 Xamarin.Forms 속성은 XML 특성으로 표현 되는 속성입니다.
+- 이 마지막 코드 조각에서는 `TextColor` 가  *속성 요소가*되었습니다. Xamarin.Forms속성 이지만 이제는 XML 요소입니다.
 
 속성 요소의 정의는 처음에 XML 구문을 위반 하는 것 처럼 보일 수 있지만이는 그렇지 않습니다. XML에서는이 기간에 특별 한 의미가 없습니다. XML 디코더에 `Label.TextColor` 는 단순히 일반 자식 요소입니다.
 
@@ -364,7 +364,7 @@ public class ContentPage : TemplatedPage
 
 즉, `Content` 속성 요소 태그가 필요 하지 않습니다. 시작 태그와 끝 태그 사이에 나타나는 모든 XML 콘텐츠 `ContentPage` 는 속성에 할당 된 것으로 간주 됩니다 `Content` .
 
- `StackLayout`, `Grid` , `AbsoluteLayout` 및 `RelativeLayout` 는 모두에서 파생 `Layout<View>` 되며, 설명서를 살펴보면 `Layout<T>` Xamarin.Forms 다른 특성을 볼 수 있습니다 `ContentProperty` .
+ `StackLayout`, `Grid` , `AbsoluteLayout` 및 `RelativeLayout` 는 모두에서 파생 `Layout<View>` 되며, 설명서를 살펴보면 `Layout<T>`  Xamarin.Forms 다른 특성을 볼 수 있습니다 `ContentProperty` .
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Children")]
@@ -400,7 +400,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-이러한 태그 내에 태그를 포함 `OnPlatform` 합니다. `OnPlatform`는 제네릭 클래스입니다. 이 경우 속성의 형식인 제네릭 형식 인수를 지정 해야 합니다 `Thickness` `Padding` . 다행히 라는 제네릭 인수를 정의 하는 XAML 특성이 있습니다 `x:TypeArguments` . 설정 하는 속성의 형식과 일치 해야 합니다.
+이러한 태그 내에 태그를 포함 `OnPlatform` 합니다. `OnPlatform` 는 제네릭 클래스입니다. 이 경우 속성의 형식인 제네릭 형식 인수를 지정 해야 합니다 `Thickness` `Padding` . 다행히 라는 제네릭 인수를 정의 하는 XAML 특성이 있습니다 `x:TypeArguments` . 설정 하는 속성의 형식과 일치 해야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -416,7 +416,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-`OnPlatform`에는 개체의 인 라는 속성이 있습니다 `Platforms` `IList` `On` . 해당 속성에 대해 속성 요소 태그를 사용 합니다.
+`OnPlatform` 에는 개체의 인 라는 속성이 있습니다 `Platforms` `IList` `On` . 해당 속성에 대해 속성 요소 태그를 사용 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -534,7 +534,7 @@ Android 및 UWP는의 기본값으로 설정 되므로 `Padding` 해당 태그�
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1 부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [3 부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4 부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

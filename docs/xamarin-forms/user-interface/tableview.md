@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsTableView
+title: Xamarin.Forms TableView
 description: 이 문서에서는 TableView 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에서 스크롤 메뉴, 설정 및 입력 폼을 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
@@ -10,30 +10,30 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bf09856efddbd1887ee93b34014ef0f573058f4d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2a54b5e2523f4d1993cf0c86ba141135b1e9d74c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565293"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561746"
 ---
-# <a name="xamarinforms-tableview"></a>Xamarin.FormsTableView
+# <a name="no-locxamarinforms-tableview"></a>Xamarin.Forms TableView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
-[`TableView`](xref:Xamarin.Forms.TableView)는 스크롤 가능한 데이터 목록이 나 동일한 템플릿을 공유 하지 않는 행이 있는 선택 항목을 표시 하기 위한 뷰입니다. [ListView](~/xamarin-forms/user-interface/listview/index.md)와 달리에 `TableView` 는의 개념이 없으므로 항목을 `ItemsSource` 수동으로 자식으로 추가 해야 합니다.
+[`TableView`](xref:Xamarin.Forms.TableView) 는 스크롤 가능한 데이터 목록이 나 동일한 템플릿을 공유 하지 않는 행이 있는 선택 항목을 표시 하기 위한 뷰입니다. [ListView](~/xamarin-forms/user-interface/listview/index.md)와 달리에 `TableView` 는의 개념이 없으므로 항목을 `ItemsSource` 수동으로 자식으로 추가 해야 합니다.
 
 ![TableView 예제](tableview-images/tableview-all-sml.png)
 
 ## <a name="use-cases"></a>사용 사례
 
-[`TableView`](xref:Xamarin.Forms.TableView)는 다음과 같은 경우에 유용 합니다.
+[`TableView`](xref:Xamarin.Forms.TableView) 는 다음과 같은 경우에 유용 합니다.
 
 - 설정 목록 표시
 - 폼에서 데이터 수집 또는
 - 행 마다 다르게 표시 되는 데이터 (예: 숫자, 비율 및 이미지)를 표시 합니다.
 
-[`TableView`](xref:Xamarin.Forms.TableView)는 위의 시나리오에 대 한 일반적인 요구 사항이 매력적인 섹션에서 행 스크롤 및 레이아웃을 처리 합니다. `TableView`컨트롤은 사용 가능한 경우 각 플랫폼의 기본 동일 뷰를 사용 하 여 각 플랫폼에 대 한 네이티브 모양을 만듭니다.
+[`TableView`](xref:Xamarin.Forms.TableView) 는 위의 시나리오에 대 한 일반적인 요구 사항이 매력적인 섹션에서 행 스크롤 및 레이아웃을 처리 합니다. `TableView`컨트롤은 사용 가능한 경우 각 플랫폼의 기본 동일 뷰를 사용 하 여 각 플랫폼에 대 한 네이티브 모양을 만듭니다.
 
 ## <a name="structure"></a>구조체
 
@@ -72,10 +72,10 @@ Content = new TableView
 
 [`TableView`](xref:Xamarin.Forms.TableView)[`Intent`](xref:Xamarin.Forms.TableView.Intent)열거형 멤버로 설정할 수 있는 속성을 노출 합니다 [`TableIntent`](xref:Xamarin.Forms.TableIntent) .
 
-- `Data`– 데이터 항목을 표시할 때 사용 됩니다. [ListView](~/xamarin-forms/user-interface/listview/index.md) 는 데이터 목록을 스크롤 하는 데 더 나은 옵션 일 수 있습니다.
-- `Form`– TableView가 폼 역할을 하는 경우 사용 합니다.
-- `Menu`– 선택 항목 메뉴를 표시할 때 사용 합니다.
-- `Settings`– 구성 설정 목록을 표시 하는 데 사용 됩니다.
+- `Data` – 데이터 항목을 표시할 때 사용 됩니다. [ListView](~/xamarin-forms/user-interface/listview/index.md) 는 데이터 목록을 스크롤 하는 데 더 나은 옵션 일 수 있습니다.
+- `Form` – TableView가 폼 역할을 하는 경우 사용 합니다.
+- `Menu` – 선택 항목 메뉴를 표시할 때 사용 합니다.
+- `Settings` – 구성 설정 목록을 표시 하는 데 사용 됩니다.
 
 [`TableIntent`](xref:Xamarin.Forms.TableIntent)선택한 값은가 [`TableView`](xref:Xamarin.Forms.TableView) 각 플랫폼에 표시 되는 방식에 영향을 줄 수 있습니다. 명확한 차이가 없는 경우에도 `TableIntent` 테이블 사용 방법과 가장 일치 하는를 선택 하는 것이 가장 좋습니다.
 
@@ -83,7 +83,7 @@ Content = new TableView
 
 ## <a name="built-in-cells"></a>기본 제공 셀
 
-Xamarin.Forms는 정보를 수집 하 고 표시 하기 위한 기본 제공 셀과 함께 제공 됩니다. [`ListView`](xref:Xamarin.Forms.ListView)및는 [`TableView`](xref:Xamarin.Forms.TableView) 동일한 셀을 모두 사용할 수 있지만는 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) [`EntryCell`](xref:Xamarin.Forms.EntryCell) 시나리오와 가장 관련이 있습니다 `TableView` .
+Xamarin.Forms 는 정보를 수집 하 고 표시 하기 위한 기본 제공 셀과 함께 제공 됩니다. [`ListView`](xref:Xamarin.Forms.ListView)및는 [`TableView`](xref:Xamarin.Forms.TableView) 동일한 셀을 모두 사용할 수 있지만는 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) [`EntryCell`](xref:Xamarin.Forms.EntryCell) 시나리오와 가장 관련이 있습니다 `TableView` .
 
 [Textcell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) 및 [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell)에 대 한 자세한 설명은 [ListView 셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) 을 참조 하세요.
 
@@ -91,29 +91,29 @@ Xamarin.Forms는 정보를 수집 하 고 표시 하기 위한 기본 제공 셀
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell)on/off 또는 상태를 표시 하 고 캡처하는 데 사용 하는 컨트롤입니다 `true` / `false` . 이 파일은 다음 속성을 정의합니다.
 
-- `Text`– 스위치 옆에 표시할 텍스트입니다.
-- `On`– 스위치를 on 또는 off로 표시할지 여부를 지정 합니다.
-- `OnColor`– [`Color`](xref:Xamarin.Forms.Color) on 위치에 있는 경우 스위치의입니다.
+- `Text` – 스위치 옆에 표시할 텍스트입니다.
+- `On` – 스위치를 on 또는 off로 표시할지 여부를 지정 합니다.
+- `OnColor` – [`Color`](xref:Xamarin.Forms.Color) on 위치에 있는 경우 스위치의입니다.
 
 이러한 속성은 모두 바인딩할 수 있습니다.
 
-[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)는 또한 이벤트를 노출 하 여 `OnChanged` 셀의 상태 변경 내용에 응답할 수 있도록 합니다.
+[`SwitchCell`](xref:Xamarin.Forms.SwitchCell) 는 또한 이벤트를 노출 하 여 `OnChanged` 셀의 상태 변경 내용에 응답할 수 있도록 합니다.
 
 ![SwitchCell 예제](tableview-images/switch-cell.png)
 
 ### <a name="entrycell"></a>EntryCell
 
-[`EntryCell`](xref:Xamarin.Forms.EntryCell)는 사용자가 편집할 수 있는 텍스트 데이터를 표시 해야 하는 경우에 유용 합니다. 이 파일은 다음 속성을 정의합니다.
+[`EntryCell`](xref:Xamarin.Forms.EntryCell) 는 사용자가 편집할 수 있는 텍스트 데이터를 표시 해야 하는 경우에 유용 합니다. 이 파일은 다음 속성을 정의합니다.
 
-- `Keyboard`– 편집 하는 동안 표시할 키보드입니다. 숫자 값, 전자 메일, 전화 번호 등과 같은 항목에 대 한 옵션이 있습니다. [API 문서를 참조](xref:Xamarin.Forms.Keyboard)하세요.
-- `Label`– 텍스트 입력 필드의 왼쪽에 표시할 레이블 텍스트입니다.
-- `LabelColor`– 레이블 텍스트의 색입니다.
-- `Placeholder`– Null 이거나 비어 있는 경우 입력 필드에 표시할 텍스트입니다. 텍스트 항목이 시작 되 면이 텍스트가 사라집니다.
-- `Text`– Entry 필드의 텍스트입니다.
-- `HorizontalTextAlignment`– 텍스트의 가로 맞춤입니다. 값은 가운데, 왼쪽 또는 오른쪽 맞춤입니다. [API 문서를 참조](xref:Xamarin.Forms.TextAlignment)하세요.
-- `VerticalTextAlignment`– 텍스트의 세로 맞춤입니다. 값은 `Start` , `Center` 또는 `End` 입니다.
+- `Keyboard` – 편집 하는 동안 표시할 키보드입니다. 숫자 값, 전자 메일, 전화 번호 등과 같은 항목에 대 한 옵션이 있습니다. [API 문서를 참조](xref:Xamarin.Forms.Keyboard)하세요.
+- `Label` – 텍스트 입력 필드의 왼쪽에 표시할 레이블 텍스트입니다.
+- `LabelColor` – 레이블 텍스트의 색입니다.
+- `Placeholder` – Null 이거나 비어 있는 경우 입력 필드에 표시할 텍스트입니다. 텍스트 항목이 시작 되 면이 텍스트가 사라집니다.
+- `Text` – Entry 필드의 텍스트입니다.
+- `HorizontalTextAlignment` – 텍스트의 가로 맞춤입니다. 값은 가운데, 왼쪽 또는 오른쪽 맞춤입니다. [API 문서를 참조](xref:Xamarin.Forms.TextAlignment)하세요.
+- `VerticalTextAlignment` – 텍스트의 세로 맞춤입니다. 값은 `Start` , `Center` 또는 `End` 입니다.
 
-[`EntryCell`](xref:Xamarin.Forms.EntryCell)또한는 `Completed` 텍스트를 편집 하는 동안 사용자가 키보드의 ' 완료 ' 단추를 누를 때 발생 하는 이벤트를 노출 합니다.
+[`EntryCell`](xref:Xamarin.Forms.EntryCell) 또한는 `Completed` 텍스트를 편집 하는 동안 사용자가 키보드의 ' 완료 ' 단추를 누를 때 발생 하는 이벤트를 노출 합니다.
 
 ![EntryCell 예제](tableview-images/entry-cell.png)
 
@@ -193,8 +193,8 @@ Content = table;
 
 클래스에는 [`TableView`](xref:Xamarin.Forms.TableView) 셀의 행 높이를 변경 하는 데 사용할 수 있는 두 개의 속성이 있습니다.
 
-- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight)– 각 행의 높이를로 설정 `int` 합니다.
-- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows)–로 설정 된 경우 행의 높이가 달라 집니다 `true` . 이 속성을로 설정 하면 `true` 에서 행 높이가 자동으로 계산 되어 적용 됩니다 Xamarin.Forms .
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) – 각 행의 높이를로 설정 `int` 합니다.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) –로 설정 된 경우 행의 높이가 달라 집니다 `true` . 이 속성을로 설정 하면 `true` 에서 행 높이가 자동으로 계산 되어 적용 됩니다 Xamarin.Forms .
 
 의 셀에 있는 콘텐츠의 높이가 변경 되 면 [`TableView`](xref:Xamarin.Forms.TableView) Android 및 유니버설 Windows 플랫폼 (UWP)에서 행 높이가 암시적으로 업데이트 됩니다. 그러나 iOS에서는 속성을로 설정 하 [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) `true` 고 메서드를 호출 하 여 강제로 업데이트 해야 합니다 [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) .
 
@@ -253,4 +253,4 @@ void OnViewCellTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [TableView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+- [TableView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-tableview)

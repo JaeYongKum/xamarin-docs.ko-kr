@@ -1,6 +1,6 @@
 ---
 title: XAML의 제네릭 Xamarin.Forms
-description: Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다.
+description: Xamarin.Forms XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다.
 ms.prod: xamarin
 ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 04/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5a033e5feeefc41b97be29491a70632e767aa1b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e6856e0ef513905a6300dcaf661ea33f4a89852c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565202"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563915"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>XAML의 제네릭 Xamarin.Forms
+# <a name="generics-in-no-locxamarinforms-xaml"></a>XAML의 제네릭 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다. 이 지원은 `x:TypeArguments` 제네릭의 제약 형식 인수를 제네릭 형식의 생성자에 전달 하는 지시문을 통해 제공 됩니다.
+Xamarin.Forms XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다. 이 지원은 `x:TypeArguments` 제네릭의 제약 형식 인수를 제네릭 형식의 생성자에 전달 하는 지시문을 통해 제공 됩니다.
 
 > [!IMPORTANT]
 > 지시문을 사용 하 여 XAML에서 제네릭 클래스를 정의 하 Xamarin.Forms `x:TypeArguments` 는 것은 지원 되지 않습니다.
@@ -212,7 +212,7 @@ Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 
 
 ## <a name="related-links"></a>관련 링크
 
-- [XAML의 제네릭 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+- [XAML의 제네릭 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [XAML 2009 언어 기본 형식](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
 - [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
 - [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

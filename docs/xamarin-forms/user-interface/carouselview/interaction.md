@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCarouselView 상호 작용
+title: Xamarin.Forms CarouselView 상호 작용
 description: CarouselView에 현재 표시 된 항목은 CurrentItem 및 Position 속성을 통해 액세스할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
@@ -10,18 +10,18 @@ ms.date: 02/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 43f2e32a240b74fde50659033096c8a7246ea60c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137412"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564058"
 ---
-# <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsCarouselView 상호 작용
+# <a name="no-locxamarinforms-carouselview-interaction"></a>Xamarin.Forms CarouselView 상호 작용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)사용자 상호 작용을 제어 하는 다음 속성을 정의 합니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 사용자 상호 작용을 제어 하는 다음 속성을 정의 합니다.
 
 - `CurrentItem`형식의, `object` 현재 표시 되는 항목입니다. 이 속성은의 기본 바인딩 모드를 가지 `TwoWay` 며 `null` 표시할 데이터가 없는 경우 값을 포함 합니다.
 - `CurrentItemChangedCommand``ICommand`현재 항목이 변경 될 때 실행 되는 형식의입니다.
@@ -37,13 +37,13 @@ ms.locfileid: "84137412"
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)`CurrentItemChanged` `CurrentItem` 사용자 스크롤으로 인해 또는 응용 프로그램이 속성을 설정 하는 경우 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 이벤트와 함께 제공 되는 개체에는 `CurrentItemChangedEventArgs` `CurrentItemChanged` 두 가지 속성이 있습니다 `object` .
 
-- `PreviousItem`– 속성이 변경 된 후의 이전 항목입니다.
-- `CurrentItem`– 속성 변경 후 현재 항목입니다.
+- `PreviousItem` – 속성이 변경 된 후의 이전 항목입니다.
+- `CurrentItem` – 속성 변경 후 현재 항목입니다.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)또한 `PositionChanged` `Position` 사용자 스크롤으로 인해 또는 응용 프로그램이 속성을 설정 하는 경우 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 이벤트와 함께 제공 되는 개체에는 `PositionChangedEventArgs` `PositionChanged` 두 가지 속성이 있습니다 `int` .
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 또한 `PositionChanged` `Position` 사용자 스크롤으로 인해 또는 응용 프로그램이 속성을 설정 하는 경우 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 이벤트와 함께 제공 되는 개체에는 `PositionChangedEventArgs` `PositionChanged` 두 가지 속성이 있습니다 `int` .
 
-- `PreviousPosition`– 속성 변경 후의 이전 위치입니다.
-- `CurrentPosition`– 속성 변경 후의 현재 위치입니다.
+- `PreviousPosition` – 속성 변경 후의 이전 위치입니다.
+- `CurrentPosition` – 속성 변경 후의 현재 위치입니다.
 
 ## <a name="respond-to-the-current-item-changing"></a>현재 항목 변경에 응답
 
@@ -281,12 +281,12 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 ## <a name="define-visual-states"></a>시각적 상태 정의
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)네 가지 시각적 상태를 정의 합니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 네 가지 시각적 상태를 정의 합니다.
 
-- `CurrentItem`현재 표시 된 항목의 시각적 상태를 나타냅니다.
-- `PreviousItem`이전에 표시 된 항목의 시각적 상태를 나타냅니다.
-- `NextItem`다음 항목에 대 한 시각적 상태를 나타냅니다.
-- `DefaultItem`항목의 나머지 부분에 대 한 시각적 상태를 나타냅니다.
+- `CurrentItem` 현재 표시 된 항목의 시각적 상태를 나타냅니다.
+- `PreviousItem` 이전에 표시 된 항목의 시각적 상태를 나타냅니다.
+- `NextItem` 다음 항목에 대 한 시각적 상태를 나타냅니다.
+- `DefaultItem` 항목의 나머지 부분에 대 한 시각적 상태를 나타냅니다.
 
 이러한 시각적 상태를 사용 하 여에 표시 되는 항목에 대 한 시각적 변경을 시작할 수 있습니다 [`CarouselView`](xref:Xamarin.Forms.CarouselView) .
 
@@ -362,5 +362,5 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 ## <a name="related-links"></a>관련 링크
 
-- [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

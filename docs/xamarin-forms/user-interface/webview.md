@@ -10,12 +10,12 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0fbdc91c2661732e3afdbde44ce9891f89c5f62
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: d535956e03ac02e2cf0c5d7528ee8e363a2a1e55
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228640"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561653"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms 웹
 
@@ -25,7 +25,7 @@ ms.locfileid: "88228640"
 
 ![앱 브라우저에서](webview-images/in-app-browser.png)
 
-## <a name="content"></a>콘텐츠
+## <a name="content"></a>Content
 
 `WebView` 는 다음과 같은 콘텐츠 형식을 지원 합니다.
 
@@ -117,7 +117,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예:
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 다음은 그 예입니다.
 
 ```html
 <html>
@@ -329,7 +329,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-간단하죠.
+이것으로 끝입니다.
 
 ![웹 보기 탐색 단추](webview-images/in-app-browser.png)
 
@@ -355,7 +355,7 @@ public partial class InAppBrowserXaml : ContentPage
 - `Source` – 탐색을 수행한 요소입니다.
 - `Url` – 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 다음은 그 예입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -420,9 +420,9 @@ webView.Reload();
 
 `WebView` Android의 경우 기본적으로 기본 제공 브라우저 만큼 빠르게 제공 됩니다.
 
-[UWP 웹 보기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) 에서는 Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치에는 Edge 브라우저 자체를 사용 하는 것과 동일한 성능이 표시 되어야 합니다.
+[UWP 웹 보기](/windows/uwp/design/controls-and-patterns/web-view) 에서는 Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치에는 Edge 브라우저 자체를 사용 하는 것과 동일한 성능이 표시 되어야 합니다.
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 가 `WebView` 작동 하려면 각 플랫폼에 대 한 사용 권한이 설정 되어 있는지 확인 해야 합니다. 일부 플랫폼에서는 `WebView` 디버그 모드에서 작동 하지만 릴리스를 위해 빌드할 때는 작동 하지 않습니다. Android에서 인터넷에 액세스 하는 것과 같은 일부 사용 권한은 기본적으로 디버그 모드에서 Mac용 Visual Studio 하 여 설정 되기 때문입니다.
 
@@ -430,7 +430,7 @@ webView.Reload();
 - **Android** &ndash; `INTERNET`  네트워크에서 콘텐츠를 표시 하는 경우에만 필요 합니다. 로컬 콘텐츠에는 특별 한 권한이 필요 하지 않습니다.
 - **iOS** &ndash; 특별 한 권한이 필요 하지 않습니다.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 대부분의 다른 Xamarin.Forms 뷰와 달리에서는 `WebView` `HeightRequest` `WidthRequest` stacklayout 또는 RelativeLayout에 포함 된 경우 및가 지정 되어야 합니다. 이러한 속성을 지정 하지 않으면 `WebView` 가 렌더링 되지 않습니다.
 
@@ -490,7 +490,7 @@ HeightRequest를 & 하는 wrequest가 *없는* 그리드. 그리드는 요청 �
 
 ## <a name="invoking-javascript"></a>JavaScript 호출
 
-[`WebView`](xref:Xamarin.Forms.WebView) c #에서 JavaScript 함수를 호출 하 고 모든 결과를 호출 하는 c # 코드에 반환 하는 기능을 포함 합니다. 이 [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 작업은 [웹 보기](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) 샘플의 다음 예제에 표시 된 메서드를 사용 하 여 수행 됩니다.
+[`WebView`](xref:Xamarin.Forms.WebView) c #에서 JavaScript 함수를 호출 하 고 모든 결과를 호출 하는 c # 코드에 반환 하는 기능을 포함 합니다. 이 [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 작업은 [웹 보기](/samples/xamarin/xamarin-forms-samples/userinterface-webview) 샘플의 다음 예제에 표시 된 메서드를 사용 하 여 수행 됩니다.
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -597,6 +597,6 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 ## <a name="related-links"></a>관련 링크
 
-- [웹 보기 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
-- [웹 보기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [웹 보기 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [웹 보기 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-webview)
 - [UIWebView 보기 사용 중단](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsImageButton
+title: Xamarin.Forms ImageButton
 description: ImageButton은 이미지를 표시 하 고 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 또는 클릭에 응답 합니다.
 ms.prod: xamarin
 ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
@@ -10,14 +10,14 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d81c0ce4dc2a46a840a34cc9084c8f2388a0169
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3b27ef8ecbd5f357eabd728423b5787ea222c593
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137646"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562303"
 ---
-# <a name="xamarinforms-imagebutton"></a>Xamarin.FormsImageButton
+# <a name="no-locxamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
@@ -28,7 +28,7 @@ _ImageButton은 이미지를 표시 하 고 응용 프로그램이 특정 작업
 > [!NOTE]
 > [`Button`](xref:Xamarin.Forms.Button)뷰에서 [`Image`](xref:Xamarin.Forms.Button.Image) 이미지를 표시할 수 있는 속성을 정의 하는 동안 `Button` 이 속성은 텍스트 옆에 작은 아이콘을 표시할 때 사용 됩니다 `Button` .
 
-이 가이드의 코드 예제는 [양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)에서 가져온 것입니다.
+이 가이드의 코드 예제는 [양식 갤러리 샘플](/samples/xamarin/xamarin-forms-samples/formsgallery)에서 가져온 것입니다.
 
 ## <a name="setting-the-image-source"></a>이미지 원본 설정
 
@@ -216,7 +216,7 @@ public class ImageButtonDemoPage : ContentPage
 응용 프로그램이 `ImageButton` 이벤트를 처리 하지 않고 탭에 응답할 수 있습니다 `Clicked` . 는 `ImageButton` _명령 또는 명령_ 인터페이스 라는 대체 알림 메커니즘을 _commanding_ 구현 합니다. 이는 두 가지 속성으로 구성 됩니다.
 
 - `Command`[`ICommand`](xref:System.Windows.Input.ICommand)네임 스페이스에 정의 된 인터페이스인 형식의입니다 [`System.Windows.Input`](xref:System.Windows.Input) .
-- `CommandParameter`형식의 속성 [`Object`](xref:System.Object) 입니다.
+- `CommandParameter` 형식의 속성 [`Object`](xref:System.Object) 입니다.
 
 이 방법은 데이터 바인딩과의 연결에 적합 하며 특히 MVVM (모델-뷰-ViewModel) 아키텍처를 구현 하는 경우에 적합 합니다.
 
@@ -232,23 +232,23 @@ public class ImageButtonDemoPage : ContentPage
 
 클래스에서 상속 되는 속성 외에 `ImageButton` [`View`](xref:Xamarin.Forms.View) 도는 `ImageButton` 모양에 영향을 주는 몇 가지 속성을 정의 합니다.
 
-- `Aspect`표시 영역에 맞게 이미지 크기를 조정 하는 방법입니다.
-- `BorderColor`주위의 영역 색입니다 `ImageButton` .
-- `BorderWidth`테두리의 너비입니다.
-- `CornerRadius`는의 모퉁이 반경입니다 `ImageButton` .
+- `Aspect` 표시 영역에 맞게 이미지 크기를 조정 하는 방법입니다.
+- `BorderColor` 주위의 영역 색입니다 `ImageButton` .
+- `BorderWidth` 테두리의 너비입니다.
+- `CornerRadius` 는의 모퉁이 반경입니다 `ImageButton` .
 
 `Aspect`속성은 열거형의 멤버 중 하나로 설정할 수 있습니다 [`Aspect`](xref:Xamarin.Forms.Aspect) .
 
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill)-이미지를 완전히 확장 하 고 정확 하 게 채웁니다 `ImageButton` . 이로 인해 이미지가 왜곡 될 수 있습니다.
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)- `ImageButton` 가로 세로 비율을 유지 하면서를 채우도록 이미지를 클리핑 합니다.
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-이미지 (필요한 경우)를 letterboxes 하 여 전체 이미지가에 맞도록 하 고 `ImageButton` 이미지의 너비 또는 높이에 따라 위쪽/아래쪽 또는 옆쪽에 공백이 추가 됩니다. 이 값은 열거형의 기본값입니다 [`Aspect`](xref:Xamarin.Forms.Aspect) .
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) -이미지를 완전히 확장 하 고 정확 하 게 채웁니다 `ImageButton` . 이로 인해 이미지가 왜곡 될 수 있습니다.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - `ImageButton` 가로 세로 비율을 유지 하면서를 채우도록 이미지를 클리핑 합니다.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -이미지 (필요한 경우)를 letterboxes 하 여 전체 이미지가에 맞도록 하 고 `ImageButton` 이미지의 너비 또는 높이에 따라 위쪽/아래쪽 또는 옆쪽에 공백이 추가 됩니다. 이 값은 열거형의 기본값입니다 [`Aspect`](xref:Xamarin.Forms.Aspect) .
 
 > [!NOTE]
 > `ImageButton`또한 클래스에 [`Margin`](xref:Xamarin.Forms.View.Margin) `Padding` 는의 레이아웃 동작을 제어 하는 및 속성이 있습니다 `ImageButton` . 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
 
 ## <a name="imagebutton-visual-states"></a>ImageButton 시각적 상태
 
-`ImageButton`에는 `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) `ImageButton` 사용자가 사용 하도록 설정 된 경우 사용자가 누를 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다.
+`ImageButton` 에는 `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) `ImageButton` 사용자가 사용 하도록 설정 된 경우 사용자가 누를 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다.
 
 다음 XAML 예제에서는 상태에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다 `Pressed` .
 
@@ -282,4 +282,4 @@ public class ImageButtonDemoPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [양식 갤러리 샘플](/samples/xamarin/xamarin-forms-samples/formsgallery)

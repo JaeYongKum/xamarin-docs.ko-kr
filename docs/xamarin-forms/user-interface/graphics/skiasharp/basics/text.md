@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 032a01a1e4e0f2b3e3d394aec6a30bd215fd84f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935982"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562420"
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
@@ -65,10 +65,10 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `Left` `Top` 구조체의 및 속성은 `SKRect` `DrawText` X 및 Y 위치가 0 인 호출에 의해 텍스트가 표시 되는 경우 렌더링 된 텍스트의 왼쪽 위 모퉁이의 좌표를 표시 합니다. 예를 들어이 프로그램이 iPhone 7 시뮬레이터에서 실행 되는 경우 `TextSize` 에 대 한 첫 번째 호출 후 계산 결과에는 90.6254 값이 할당 됩니다 `MeasureText` . `SKRect`에 대 한 두 번째 호출에서 가져온 값에는 `MeasureText` 다음과 같은 속성 값이 있습니다.
 
-- `Left`= 6
+- `Left` = 6
 - `Top` = &ndash;68
-- `Width`= 664.8214
-- `Height`= 88;
+- `Width` = 664.8214
+- `Height` = 88;
 
 메서드에 전달 하는 X 및 Y 좌표는 `DrawText` 기준선에서 텍스트의 왼쪽을 지정 합니다. `Top`이 값은 텍스트가 기준선 보다 68 픽셀을 확장 하 고 기준선 아래에서 20 픽셀 (88에서 68)을 빼는 것을 나타냅니다. `Left`6 값은 텍스트가 호출에서 X 값의 오른쪽에 6 픽셀 시작 됨을 나타냅니다 `DrawText` . 이렇게 하면 일반적인 문자 간 간격을 사용할 수 있습니다. 표시의 왼쪽 위 모퉁이에 snugly 텍스트를 표시 하려면 이러한 및 값의 음수를 `Left` `Top` X 및 Y 좌표로 전달 합니다 `DrawText` .이 예제에서는 &ndash; 6과 68입니다.
 
@@ -179,5 +179,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

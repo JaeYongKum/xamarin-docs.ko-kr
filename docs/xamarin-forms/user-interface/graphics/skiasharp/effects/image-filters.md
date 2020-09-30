@@ -10,12 +10,12 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4f10d39ff9fb08897f12cf1991ddcd2d7793b695
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136346"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564032"
 ---
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
 
@@ -41,7 +41,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
 
 이 메서드에는 &mdash; 가로 방향의 흐림 범위에 대해 첫 번째 시그마 값과 세로 방향에 대 한 두 번째 시그마 값이 있습니다. 다른 이미지 필터를 선택적인 세 번째 인수로 지정 하 여 이미지 필터를 계단식으로 지정할 수 있습니다. 자르기 사각형을 지정할 수도 있습니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 의 **이미지 흐림 실험** 페이지에 `Slider` 는 다양 한 수준의 흐림 효과를 설정 하 여 시험해 볼 수 있는 두 가지 보기가 포함 되어 있습니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 의 **이미지 흐림 실험** 페이지에 `Slider` 는 다양 한 수준의 흐림 효과를 설정 하 여 시험해 볼 수 있는 두 가지 보기가 포함 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -445,5 +445,5 @@ Android 스크린 샷에는 Z 값 0이 있습니다. 즉, 조명이 오른쪽 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

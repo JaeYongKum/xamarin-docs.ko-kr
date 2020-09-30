@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 88761472c4beae3f40f2ca6852eea4db8276c4c9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 162683c4fabb0a8b6deed1fb30bd7a7dece1f597
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930683"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562290"
 ---
 # <a name="large-page-titles-on-ios"></a>IOS의 큰 페이지 제목
 
@@ -77,9 +77,9 @@ public class iOSLargeTitlePageCS : ContentPage
 
 `Page.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `Page.SetLargeTitleDisplay`네임 스페이스의 메서드는 다음과 같은 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) [`Page`](xref:Xamarin.Forms.Page) `LargeTitleDisplayMode` 세 가지 값을 제공 하는 열거형을 사용 하 여의 긴 제목 동작을 제어 합니다.
 
-- `Always`– 탐색 모음 및 글꼴 크기를 강제로 큰 형식으로 사용 합니다.
-- `Automatic`– 탐색 스택에서 이전 항목과 동일한 스타일 (크거나 작음)을 사용 합니다.
-- `Never`– 작은 형식의 일반 탐색 모음을 강제로 사용 합니다.
+- `Always` – 탐색 모음 및 글꼴 크기를 강제로 큰 형식으로 사용 합니다.
+- `Automatic` – 탐색 스택에서 이전 항목과 동일한 스타일 (크거나 작음)을 사용 합니다.
+- `Never` – 작은 형식의 일반 탐색 모음을 강제로 사용 합니다.
 
 또한 메서드를 `SetLargeTitleDisplay` 호출 하 여 `LargeTitleDisplay` 현재을 반환 하는 메서드를 호출 하 여 열거형 값을 전환 하는 데 메서드를 사용할 수 있습니다 `LargeTitleDisplayMode` .
 
@@ -104,6 +104,6 @@ switch (On<iOS>().LargeTitleDisplay())
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

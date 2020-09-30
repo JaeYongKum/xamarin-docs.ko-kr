@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsDatePicker
+title: Xamarin.Forms DatePicker
 description: DatePicker는 Xamarin.Forms 사용자가 날짜를 선택할 수 있는 뷰입니다. 이 문서에서는 응용 프로그램에서 DatePicker를 사용 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
@@ -10,29 +10,29 @@ ms.date: 06/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c1de52e2a173e7d9a366d8fd7cbd63998b3a6d1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fed80f0954613a6bff49d0611d56549405c78333
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137360"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564097"
 ---
-# <a name="xamarinforms-datepicker"></a>Xamarin.FormsDatePicker
+# <a name="no-locxamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _Xamarin.Forms사용자가 날짜를 선택할 수 있는 뷰입니다._
 
-는 Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 사용자가 날짜를 선택할 수 있게 합니다. `DatePicker`는 8 개의 속성을 정의 합니다.
+는 Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 사용자가 날짜를 선택할 수 있게 합니다. `DatePicker` 는 8 개의 속성을 정의 합니다.
 
 - [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate)[`DateTime`](xref:System.DateTime)1900 년의 첫 번째 날로 기본 설정 된 형식입니다.
 - [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate)`DateTime`2100 년의 마지막 날로 기본 설정 되는 형식의입니다.
-- [`Date`](xref:Xamarin.Forms.DatePicker.Date)형식으로 `DateTime` , 선택 된 날짜로, 값이 기본값으로 설정 [`DateTime.Today`](xref:System.DateTime.Today) 됩니다.
+- [`Date`](xref:Xamarin.Forms.DatePicker.Date) 형식으로 `DateTime` , 선택 된 날짜로, 값이 기본값으로 설정 [`DateTime.Today`](xref:System.DateTime.Today) 됩니다.
 - [`Format`](xref:Xamarin.Forms.DatePicker.Format)`string` [표준](/dotnet/standard/base-types/standard-date-and-time-format-strings/) 또는 [사용자 지정](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .net 형식 문자열의 형식으로, 기본적으로 "D"는 long 날짜 패턴입니다.
-- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor)형식으로 [`Color`](xref:Xamarin.Forms.Color) , 선택 된 날짜를 표시 하는 데 사용 되는 색입니다. 기본값은 [`Color.Default`](xref:Xamarin.Forms.Color.Default) 입니다.
-- [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes)형식의 [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) 이며 기본값은 [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) 입니다.
-- [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily)형식의 `string` 이며 기본값은 `null` 입니다.
-- [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize)형식의 `double` 이며 기본값은-1.0입니다.
+- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor) 형식으로 [`Color`](xref:Xamarin.Forms.Color) , 선택 된 날짜를 표시 하는 데 사용 되는 색입니다. 기본값은 [`Color.Default`](xref:Xamarin.Forms.Color.Default) 입니다.
+- [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) 형식의 [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) 이며 기본값은 [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) 입니다.
+- [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) 형식의 `string` 이며 기본값은 `null` 입니다.
+- [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) 형식의 `double` 이며 기본값은-1.0입니다.
 - `double` 형식의 `CharacterSpacing`은 `DatePicker` 텍스트를 구성하는 문자 사이의 간격입니다.
 
 는 `DatePicker` [`DateSelected`](xref:Xamarin.Forms.DatePicker.DateSelected) 사용자가 날짜를 선택할 때 이벤트를 발생 시킵니다.
@@ -96,7 +96,7 @@ DatePicker datePicker = new DatePicker
 
 ## <a name="datepicker-in-an-application"></a>응용 프로그램의 DatePicker
 
-[**DaysBetweenDates**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) 샘플에는 `DatePicker` 해당 페이지에 두 개의 뷰가 포함 되어 있습니다. 이러한 값은 두 날짜를 선택 하는 데 사용할 수 있으며 프로그램은 해당 날짜 사이의 일 수를 계산 합니다. 프로그램은 및 속성의 설정을 변경 하지 `MinimumDate` `MaximumDate` 않으므로 두 날짜가 1900에서 2100 사이 여야 합니다.
+[**DaysBetweenDates**](/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) 샘플에는 `DatePicker` 해당 페이지에 두 개의 뷰가 포함 되어 있습니다. 이러한 값은 두 날짜를 선택 하는 데 사용할 수 있으며 프로그램은 해당 날짜 사이의 일 수를 계산 합니다. 프로그램은 및 속성의 설정을 변경 하지 `MinimumDate` `MaximumDate` 않으므로 두 날짜가 1900에서 2100 사이 여야 합니다.
 
 XAML 파일은 다음과 같습니다.
 
@@ -200,5 +200,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [DaysBetweenDates 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
+- [DaysBetweenDates 샘플](/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 - [DatePicker API](xref:Xamarin.Forms.DatePicker)

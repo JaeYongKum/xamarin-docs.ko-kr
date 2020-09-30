@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms바꿀
+title: Xamarin.Forms 바꿀
 description: Xamarin.Forms스위치는 사용자가 설정 및 해제 상태를 전환 하기 위해 조작할 수 있는 단추 유형입니다. 이 문서에서는 Switch 클래스를 사용 하 여 토글 UI 요소를 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
@@ -10,14 +10,14 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12831eec6ba97eee7cde7479729c5c22dce78e90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 94f77fd70fee595efd341ff7372828b12661442d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946434"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561731"
 ---
-# <a name="xamarinforms-switch"></a>Xamarin.Forms바꿀
+# <a name="no-locxamarinforms-switch"></a>Xamarin.Forms 바꿀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
@@ -30,8 +30,8 @@ Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 �
 `Switch`컨트롤은 다음 속성을 정의 합니다.
 
 - [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)가 `boolean` 설정 되어 있는지 여부를 나타내는 값입니다 `Switch` . **on**
-- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)가 `Color` `Switch` 전환 또는 상태에서 렌더링 되는 방식 **에**영향을 주는입니다.
-- `ThumbColor`는 `Color` 스위치 엄지의입니다.
+- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) 가 `Color` `Switch` 전환 또는 상태에서 렌더링 되는 방식 **에**영향을 주는입니다.
+- `ThumbColor` 는 `Color` 스위치 엄지의입니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,가 `Switch` 스타일을 지정 하 고 데이터 바인딩의 대상이 될 수 있습니다.
 
@@ -125,7 +125,7 @@ switchControl.Toggled += (sender, e) =>
 
 ## <a name="switch-visual-states"></a>시각적 상태 전환
 
-[`Switch`](xref:Xamarin.Forms.Switch)에 `On` 는 `Off` 속성이 변경 될 때 시각적 변경을 시작 하는 데 사용할 수 있는 및 시각적 상태가 있습니다 [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) .
+[`Switch`](xref:Xamarin.Forms.Switch) 에 `On` 는 `Off` 속성이 변경 될 때 시각적 변경을 시작 하는 데 사용할 수 있는 및 시각적 상태가 있습니다 [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) .
 
 다음 XAML 예제에서는 및 상태에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다 `On` `Off` .
 
@@ -163,6 +163,6 @@ switchControl.Toggled += (sender, e) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [데모 전환](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+- [데모 전환](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 - [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

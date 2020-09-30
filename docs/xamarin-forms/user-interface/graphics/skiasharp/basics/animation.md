@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71e64f7b8286f22040a802336e9be756d932c0cd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3052220b914b09f18490846bbd2558bbf07e4d3a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936541"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562264"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본 애니메이션
 
@@ -27,7 +27,7 @@ _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법을 알아봅니�
 
 ![여러 동심 원이 가운데에서 확장 되는 것으로 보입니다.](animation-images/animationexample.png)
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Pulsating ellipse** 페이지는 타원의 두 축에 애니메이션 효과를 주기 위해 타원의 두 축에 애니메이션 효과를 주기 때문에이 pulsation의 요율도 제어할 수 있습니다. [**PulsatingEllipsePage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은 Xamarin.Forms `Slider` `Label` 슬라이더의 현재 값을 표시 하는 및를 인스턴스화합니다. 이는를 다른 뷰와 통합 하는 일반적인 방법입니다 `SKCanvasView` Xamarin.Forms .
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Pulsating ellipse** 페이지는 타원의 두 축에 애니메이션 효과를 주기 위해 타원의 두 축에 애니메이션 효과를 주기 때문에이 pulsation의 요율도 제어할 수 있습니다. [**PulsatingEllipsePage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은 Xamarin.Forms `Slider` `Label` 슬라이더의 현재 값을 표시 하는 및를 인스턴스화합니다. 이는를 다른 뷰와 통합 하는 일반적인 방법입니다 `SKCanvasView` Xamarin.Forms .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -146,7 +146,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![Pulsating 타원 페이지의 세 번째 스크린샷](animation-images/pulsatingellipse-small.png)](animation-images/pulsatingellipse-large.png#lightbox "Pulsating 타원 페이지의 세 번째 스크린샷")
 
-`SKPaint`개체는 블록에 생성 됩니다 `using` . 많은 SkiaSharp 클래스와 마찬가지로 인터페이스를 구현 하는에서 `SKPaint` `SKObject` 파생 되는에서 파생 `SKNativeObject` [`IDisposable`](xref:System.IDisposable) 됩니다. `SKPaint`메서드를 재정의 `Dispose` 하 여 관리 되지 않는 리소스를 해제 합니다.
+`SKPaint`개체는 블록에 생성 됩니다 `using` . 많은 SkiaSharp 클래스와 마찬가지로 인터페이스를 구현 하는에서 `SKPaint` `SKObject` 파생 되는에서 파생 `SKNativeObject` [`IDisposable`](xref:System.IDisposable) 됩니다. `SKPaint` 메서드를 재정의 `Dispose` 하 여 관리 되지 않는 리소스를 해제 합니다.
 
  블록을 배치 하면이 `SKPaint` `using` `Dispose` 관리 되지 않는 리소스를 해제 하기 위해 블록의 끝에서가 호출 됩니다. 이는 개체에서 사용 하는 메모리가 `SKPaint` .net 가비지 수집기에 의해 해제 되는 경우에도 마찬가지입니다. 하지만 애니메이션 코드에서는 메모리를 보다 순차적인 방법으로 해제 하는 것이 좋습니다.
 
@@ -251,5 +251,5 @@ public class ExpandingCirclesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

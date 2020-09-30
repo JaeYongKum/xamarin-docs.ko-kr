@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ffadcf5153938a812fffbcdee90ec12430ebe531
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 09b5f145b273d234322eb560207c65aab3313558
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931445"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560796"
 ---
 # <a name="navigationpage-bar-text-color-mode-on-ios"></a>IOS의 NavigationPage Bar 텍스트 색 모드
 
@@ -68,8 +68,8 @@ IsPresentedChanged += (sender, e) =>
 
 `NavigationPage.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. [ `NavigationPage.SetStatusBarTextColorMode` ] (F: Xamarin.Forms 입니다. PlatformConfiguration. iOSSpecific ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . NavigationPage}, Xamarin.Forms . StatusBarTextColorMode) 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스에서 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) 다음 두 가지 가능한 값을 제공 하는 열거형과 함께의 상태 표시줄 텍스트 색이 탐색 모음의 광도와 일치 하도록 조정 되는지 여부를 제어 합니다.
 
-- [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust)– 상태 표시줄 텍스트 색을 조정 하지 않아야 함을 나타냅니다.
-- [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity)– 상태 표시줄 텍스트 색이 탐색 모음의 광도와 일치 해야 함을 나타냅니다.
+- [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust) – 상태 표시줄 텍스트 색을 조정 하지 않아야 함을 나타냅니다.
+- [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity) – 상태 표시줄 텍스트 색이 탐색 모음의 광도와 일치 해야 함을 나타냅니다.
 
 또한 [ `GetStatusBarTextColorMode` ] (f: Xamarin.Forms 입니다. PlatformConfiguration. iOSSpecific ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . NavigationPage}) 메서드를 사용 하 여에 적용 된 열거형의 현재 값을 검색할 수 있습니다 [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) .
 
@@ -79,6 +79,6 @@ IsPresentedChanged += (sender, e) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -10,12 +10,12 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131341"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564084"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
@@ -146,7 +146,7 @@ XAML에서 널리 사용 되는 솔루션 중 하나는 *리소스 사전*에 �
 
 `StaticResource`태그 확장은 항상 중괄호로 구분 되며 사전 키를 포함 합니다.
 
-이름은 `StaticResource` `DynamicResource` 를 Xamarin.Forms 지 원하는와 구별 됩니다. `DynamicResource`는 런타임에 변경 될 수 있는 값과 연결 된 사전 키 용 이며,는 `StaticResource` 페이지의 요소가 생성 될 때 사전에 있는 요소에 한 번만 액세스 합니다.
+이름은 `StaticResource` `DynamicResource` 를 Xamarin.Forms 지 원하는와 구별 됩니다. `DynamicResource` 는 런타임에 변경 될 수 있는 값과 연결 된 사전 키 용 이며,는 `StaticResource` 페이지의 요소가 생성 될 때 사전에 있는 요소에 한 번만 액세스 합니다.
 
 속성의 경우 `BorderWidth` 사전에 double을 저장 해야 합니다. XAML은 및와 같은 일반적인 데이터 형식에 대 한 태그를 편리 하 게 정의 합니다 `x:Double` `x:Int32` .
 
@@ -323,7 +323,7 @@ XAML에서 널리 사용 되는 솔루션 중 하나는 *리소스 사전*에 �
 
 ## <a name="the-xstatic-markup-extension"></a>X:Static 태그 확장
 
-이름의 유사성에도 불구 `x:Static` 하 고 `StaticResource` 는 매우 다릅니다. `StaticResource`는 다음 중 하나에 액세스 하는 동안 리소스 사전에서 개체를 반환 합니다 `x:Static` .
+이름의 유사성에도 불구 `x:Static` 하 고 `StaticResource` 는 매우 다릅니다. `StaticResource` 는 다음 중 하나에 액세스 하는 동안 리소스 사전에서 개체를 반환 합니다 `x:Static` .
 
 - 공용 정적 필드
 - 공용 정적 속성
@@ -444,9 +444,9 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 
 몇 가지 태그 확장은 XAML에 내장 되며 xaml 파일에서 지원 됩니다 Xamarin.Forms . 이러한 항목 중 일부는 자주 사용 되지 않지만 필요할 때 반드시 필요 합니다.
 
-- 속성에 `null` 기본값이 아닌 값이 있지만이 속성을로 설정 하려면 `null` 태그 확장으로 설정 합니다 `{x:Null}` .
-- 속성이 형식인 경우 `Type` `Type` 태그 확장을 사용 하 여 개체에 할당할 수 있습니다 `{x:Type someClass}` .
-- 태그 확장을 사용 하 여 XAML에서 배열을 정의할 수 있습니다 `x:Array` . 이 태그 확장에는 `Type` 배열의 요소 형식을 나타내는 라는 필수 특성이 있습니다.
+- 속성에 `null` 기본값이 아닌 값이 있지만이 속성을로 설정 하려면  `null` 태그 확장으로 설정 합니다 `{x:Null}` .
+- 속성이 형식인 경우 `Type`  `Type` 태그 확장을 사용 하 여 개체에 할당할 수 있습니다 `{x:Type someClass}` .
+- 태그 확장을 사용 하 여 XAML에서 배열을 정의할 수 있습니다 `x:Array` . 이 태그 확장에는  `Type` 배열의 요소 형식을 나타내는 라는 필수 특성이 있습니다.
 - `Binding`태그 확장은 4 부에서 설명 합니다 [. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)입니다.
 - `RelativeSource`태그 확장은 [상대 바인딩에서](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)설명 합니다.
 
@@ -563,7 +563,7 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1 부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2 부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [4 부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

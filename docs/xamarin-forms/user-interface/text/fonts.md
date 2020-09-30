@@ -1,5 +1,5 @@
 ---
-title: 글꼴Xamarin.Forms
+title: 글꼴 Xamarin.Forms
 description: 이 문서에서는 응용 프로그램에 텍스트를 표시 하는 컨트롤에 대 한 글꼴 정보를 지정 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
@@ -10,14 +10,14 @@ ms.date: 04/01/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a657915edb41573f9637128b4c88233d58a5909a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fb32d3248b1dbbe633a99afd8de14b4fb4f0ba09
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572210"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562199"
 ---
-# <a name="fonts-in-xamarinforms"></a>글꼴Xamarin.Forms
+# <a name="fonts-in-no-locxamarinforms"></a>글꼴 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
@@ -27,7 +27,7 @@ ms.locfileid: "84572210"
 
 텍스트를 표시 하는 컨트롤의 세 가지 글꼴 관련 속성을 사용 합니다.
 
-- **FontFamily** &ndash; `string`글꼴 이름입니다.
+- **FontFamily** &ndash; `string` 글꼴 이름입니다.
 - **FontSize** &ndash; 글꼴 크기 () `double` 입니다.
 - **글꼴 특성** &ndash; *기울임꼴* 및 **Bold** 와 같은 스타일 정보를 지정 하는 문자열 `FontAttributes` 입니다 (c #의 열거형 사용).
 
@@ -52,7 +52,7 @@ label.FontSize = 24;
 
 크기 값은 장치 독립적 단위로 측정 됩니다. 자세한 내용은 [측정 단위](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement)를 참조 하세요.
 
-Xamarin.Forms는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형의 필드도 정의 합니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 [명명 된 글꼴 크기](#named-font-sizes)를 참조 하십시오.
+Xamarin.Forms 는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형의 필드도 정의 합니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 [명명 된 글꼴 크기](#named-font-sizes)를 참조 하십시오.
 
 ### <a name="font-attributes"></a>글꼴 특성
 
@@ -60,7 +60,7 @@ Xamarin.Forms는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크�
 
 - **없음**
 - **굵게**
-- **서식을**
+- **기울임꼴**
 
 `FontAttribute`열거형은 다음과 같이 사용할 수 있습니다. 단일 특성을 지정 하거나 함께 지정할 수 있습니다 `OR` .
 
@@ -83,7 +83,7 @@ IOS에 대 한 올바른 글꼴 정보는 [iosfonts.com](http://iosfonts.com)입
 
 ## <a name="set-the-font-in-xaml"></a>XAML에서 글꼴 설정
 
-Xamarin.Forms텍스트를 표시 하는 컨트롤에는 모두 `FontSize` XAML로 설정할 수 있는 속성이 있습니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음 예제에 표시 된 것 처럼 명명 된 크기 열거형 값을 사용 하는 것입니다.
+Xamarin.Forms 텍스트를 표시 하는 컨트롤에는 모두 `FontSize` XAML로 설정할 수 있는 속성이 있습니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음 예제에 표시 된 것 처럼 명명 된 크기 열거형 값을 사용 하는 것입니다.
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
@@ -116,7 +116,7 @@ Xamarin.Forms텍스트를 표시 하는 컨트롤에는 모두 `FontSize` XAML�
 
 Xamarin.Forms[`NamedSize`](xref:Xamarin.Forms.NamedSize)특정 글꼴 크기를 나타내는 열거형의 필드를 정의 합니다. 다음 표에서는 `NamedSize` 구성원 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기를 보여 줍니다.
 
-| 구성원 | iOS | Android | UWP |
+| 멤버 | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15.667 |
@@ -206,10 +206,10 @@ Label label2 = new Label
 
 Xamarin.Forms개체의 글꼴 아이콘 데이터를 지정 하 여 응용 프로그램에서 글꼴 아이콘을 표시할 수 있습니다 `FontImageSource` . 클래스에서 파생 되는이 클래스에 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 는 다음과 같은 속성이 있습니다.
 
-- `Glyph`–로 지정 된 글꼴 아이콘의 유니코드 문자 값입니다 `string` .
-- `Size`– `double` 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)를 나타내는 값입니다. 기본값은 30입니다. 또한이 속성은 명명 된 글꼴 크기로 설정할 수 있습니다.
-- `FontFamily`– `string` 글꼴 아이콘이 속한 글꼴 패밀리를 나타내는입니다.
-- `Color`– [`Color`](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용 되는 선택적 값입니다.
+- `Glyph` –로 지정 된 글꼴 아이콘의 유니코드 문자 값입니다 `string` .
+- `Size` – `double` 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)를 나타내는 값입니다. 기본값은 30입니다. 또한이 속성은 명명 된 글꼴 크기로 설정할 수 있습니다.
+- `FontFamily` – `string` 글꼴 아이콘이 속한 글꼴 패밀리를 나타내는입니다.
+- `Color` – [`Color`](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용 되는 선택적 값입니다.
 
 이 데이터는를 표시할 수 있는 보기에서 표시할 수 있는 PNG를 만드는 데 사용 됩니다 `ImageSource` . 이 접근 방식을 사용 하면 글꼴 아이콘 표시를 같은 단일 텍스트 (예:)로 제한 하는 것과 달리 여러 뷰에 표시 되는 emojis와 같은 글꼴 아이콘을 사용할 수 있습니다 [`Label`](xref:Xamarin.Forms.Label) .
 
@@ -240,13 +240,13 @@ image.Source = new FontImageSource
 };
 ```
 
-[바인딩](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) 가능한 레이아웃 샘플에서 다음 스크린샷에는 바인딩 가능한 레이아웃에 의해 표시 되는 몇 가지 글꼴 아이콘이 표시 됩니다.
+[바인딩](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) 가능한 레이아웃 샘플에서 다음 스크린샷에는 바인딩 가능한 레이아웃에 의해 표시 되는 몇 가지 글꼴 아이콘이 표시 됩니다.
 
 ![IOS 및 Android에서 표시 되는 글꼴 아이콘의 스크린샷](fonts-images/font-image-source.png "이미지 뷰에 표시 되는 글꼴 아이콘")
 
 ## <a name="related-links"></a>관련 링크
 
-- [FontsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
-- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [바인딩 가능한 레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [FontsSample](/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+- [텍스트 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [바인딩 가능한 레이아웃 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

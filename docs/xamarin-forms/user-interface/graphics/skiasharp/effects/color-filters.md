@@ -10,12 +10,12 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 809477fe466ee7a8f0985308896c14341f2dd460
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136385"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561939"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
@@ -123,7 +123,7 @@ M44 셀은 불투명도를 유지 하므로 매우 중요 합니다. 일반적�
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-여기서 `matrix` 는 20 값의 배열입니다 `float` . C #에서 배열을 만들 때 4 × 5 매트릭스와 유사 하 게 숫자의 형식을 지정 하는 것이 쉽습니다. 이는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **회색 크기 행렬** 페이지에서 보여 줍니다.
+여기서 `matrix` 는 20 값의 배열입니다 `float` . C #에서 배열을 만들 때 4 × 5 매트릭스와 유사 하 게 숫자의 형식을 지정 하는 것이 쉽습니다. 이는 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **회색 크기 행렬** 페이지에서 보여 줍니다.
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -166,7 +166,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-`DrawBitmap`이 코드에 사용 되는 메서드는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에 포함 된 **BitmapExtension.cs** 파일에서 가져온 것입니다. 
+`DrawBitmap`이 코드에 사용 되는 메서드는 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에 포함 된 **BitmapExtension.cs** 파일에서 가져온 것입니다. 
 
 IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과는 다음과 같습니다.
 
@@ -176,7 +176,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과는 �
 
 색 매트릭스를 사용 하 여 실험 하는 경우 원본 또는 대상의 큐브 뷰에서 변환을 처리할 수 있습니다. 원본의 빨간색 픽셀이 대상의 빨간색, 녹색 및 파란색 픽셀에 어떻게 기여 하나요? 행렬의 첫 번째 _열_ 에 있는 값에 따라 결정 됩니다. 또는 대상 빨강 픽셀의 영향을 받는 빨간색, 녹색 및 파란색 픽셀의 영향을 받습니까? 이는 행렬의 첫 번째 _행_ 에 의해 결정 됩니다.
 
-색 변환을 사용 하는 방법에 대 한 몇 가지 아이디어는 [**이미지 다시 칠하기**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) 페이지를 참조 하세요. 논의에는 Windows Forms, 행렬은 다른 형식 이지만 개념은 동일 합니다.
+색 변환을 사용 하는 방법에 대 한 몇 가지 아이디어는 [**이미지 다시 칠하기**](/dotnet/framework/winforms/advanced/recoloring-images) 페이지를 참조 하세요. 논의에는 Windows Forms, 행렬은 다른 형식 이지만 개념은 동일 합니다.
 
 **파스텔 행렬** 은 원본 빨강 픽셀을 attenuating 빨강 및 녹색 픽셀을 약간 강조 하 여 대상 빨강 픽셀을 계산 합니다. 이 프로세스는 다음과 유사 하 게 녹색 및 파란색 픽셀에 대해 발생 합니다.
 
@@ -302,5 +302,5 @@ public class PosterizeTablePage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

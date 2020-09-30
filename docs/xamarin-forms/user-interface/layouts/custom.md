@@ -1,5 +1,5 @@
 ---
-title: 에서 사용자 지정 레이아웃 만들기Xamarin.Forms
+title: 에서 사용자 지정 레이아웃 만들기 Xamarin.Forms
 description: 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934266"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563850"
 ---
-# <a name="create-a-custom-layout-in-xamarinforms"></a>에서 사용자 지정 레이아웃 만들기Xamarin.Forms
+# <a name="create-a-custom-layout-in-no-locxamarinforms"></a>에서 사용자 지정 레이아웃 만들기 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이아웃의 5 가지 레이아웃 클래스를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 하는 경우도 있습니다 Xamarin.Forms . 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
+_Xamarin.Forms 는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이아웃의 5 가지 레이아웃 클래스를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 하는 경우도 있습니다 Xamarin.Forms . 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
 
 에서 Xamarin.Forms 모든 레이아웃 클래스는 클래스에서 파생 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 되며 제네릭 형식과 [`View`](xref:Xamarin.Forms.View) 해당 파생 형식으로 제한 됩니다. 또한 클래스는 `Layout<T>` [`Layout`](xref:Xamarin.Forms.Layout) 자식 요소를 배치 하 고 크기를 조정 하는 메커니즘을 제공 하는 클래스에서 파생 됩니다.
 
@@ -29,7 +29,7 @@ _Xamarin.Forms는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이�
 
 Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무효화 주기를 충분히 이해 해야 합니다. 이러한 주기는 이제 설명 되어 있습니다.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 레이아웃은 페이지를 사용 하 여 시각적 트리 위쪽에서 시작 하 고 시각적 트리의 모든 분기를 진행 하 여 페이지의 모든 시각적 요소를 포함 합니다. 다른 요소에 대 한 부모인 요소는 자신을 기준으로 자식 항목의 크기를 조정 하 고 위치를 지정 해야 합니다.
 
@@ -40,7 +40,7 @@ Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무�
 
 이 주기를 사용 하면 페이지의 모든 시각적 요소가 및 메서드에 대 한 호출을 받을 수 `Measure` `Layout` 있습니다. 프로세스는 다음 다이어그램에 표시 됩니다.
 
-![Xamarin.Forms레이아웃 주기](custom-images/layout-cycle.png)
+![::: no loc (Xamarin.ios)::: Layout Cycle](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > 레이아웃에 영향을 주는 변경 사항이 있을 경우 시각적 트리의 하위 집합 에서도 레이아웃 사이클이 발생할 수 있습니다. 여기에는의와 같은 컬렉션에서 추가 또는 제거 되는 항목 [`StackLayout`](xref:Xamarin.Forms.StackLayout) , [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 요소의 속성 변경 또는 요소 크기 변경 내용이 포함 됩니다.
@@ -80,8 +80,8 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
     > [!NOTE]
     > 및 재정의에서 자식을 열거 하는 경우 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 속성이로 설정 된 모든 자식을 건너뜁니다 `false` . 이렇게 하면 사용자 지정 레이아웃에서 보이지 않는 자식을 위한 공간이 확보 되지 않습니다.
 
-1. [*선택 사항*] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [Override The InvalidateLayout Method](#override-the-invalidatelayout-method)을 참조 하세요.
-1. [*선택 사항*] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated)레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [Override The OnChildMeasureInvalidated Method](#override-the-onchildmeasureinvalidated-method)을 참조 하세요.
+1. [*선택 사항*] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) 자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [Override The InvalidateLayout Method](#override-the-invalidatelayout-method)을 참조 하세요.
+1. [*선택 사항*] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [Override The OnChildMeasureInvalidated Method](#override-the-onchildmeasureinvalidated-method)을 참조 하세요.
 
 > [!NOTE]
 > [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))레이아웃의 크기가 자식 노드가 아닌 부모에 의해 관리 되는 경우 재정의는 호출 되지 않습니다. 그러나 제약 조건 중 하나 또는 둘 모두가 무한 이거나 layout 클래스에 기본값이 아닌 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 값 또는 속성 값이 있는 경우 재정의가 호출 됩니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 이유로 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의는 메서드를 호출 하는 동안 가져온 자식 크기를 사용할 수 없습니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) . 대신 `LayoutChildren` 는 [ `Measure` ] (f:)를 호출 해야 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 호출 하기 전에 레이아웃의 자식에 대 한 메서드를 호출 합니다 `Layout` Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . 사각형) 메서드. 또는 재정의에서 얻은 자식의 크기를 `OnMeasure` 캐시 하 여 나중에 재정의에 대 한 호출을 방지할 수 있습니다 `Measure` `LayoutChildren` . 하지만 레이아웃 클래스는 크기를 다시 가져와야 하는 경우에도 알고 있어야 합니다. 자세한 내용은 [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
@@ -108,10 +108,10 @@ public class WrapLayout : Layout<View>
 
 `LayoutData`구조체는 자식 컬렉션에 대 한 데이터를 다양 한 속성에 저장 합니다.
 
-- `VisibleChildCount`– 레이아웃에 표시 되는 자식의 수입니다.
-- `CellSize`– 레이아웃 크기에 맞게 조정 된 모든 자식의 최대 크기입니다.
-- `Rows`– 행의 수입니다.
-- `Columns`– 열 수입니다.
+- `VisibleChildCount` – 레이아웃에 표시 되는 자식의 수입니다.
+- `CellSize` – 레이아웃 크기에 맞게 조정 된 모든 자식의 최대 크기입니다.
+- `Rows` – 행의 수입니다.
+- `Columns` – 열 수입니다.
 
 `layoutDataCache`필드는 여러 값을 저장 하는 데 사용 됩니다 `LayoutData` . 응용 프로그램이 시작 되 면 두 `LayoutData` 개체가 `layoutDataCache` 현재 방향에 대 한 사전에 캐시 됩니다. 하나는 재정의에 대 한 제약 조건 인수이 `OnMeasure` 고 하나는 재정의 `width` `height` 에 대 한 인수입니다 `LayoutChildren` . 장치를 가로 방향으로 회전할 때 `OnMeasure` 재정의 및 `LayoutChildren` 재정의가 다시 호출 되 고,이로 인해 다른 두 `LayoutData` 개체가 사전에 캐시 됩니다. 그러나 장치를 세로 방향으로 반환할 때에는 이미 필요한 데이터가 있으므로 추가 계산은 필요 하지 않습니다 `layoutDataCache` .
 
@@ -412,9 +412,9 @@ async Task<ImageList> GetImageListAsync()
 
 ## <a name="related-links"></a>관련 링크
 
-- [WrapLayout (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+- [WrapLayout (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [사용자 지정 레이아웃](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [에서 사용자 지정 레이아웃 만들기 Xamarin.Forms (비디오)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
-- [레이아웃](xref:Xamarin.Forms.Layout):
+- [레이아웃\<T>](xref:Xamarin.Forms.Layout`1)
+- [레이아웃](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

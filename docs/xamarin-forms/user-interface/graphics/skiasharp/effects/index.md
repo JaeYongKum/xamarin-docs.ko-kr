@@ -10,12 +10,12 @@ ms.date: 08/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e63d92cde5925561dae4217c3c46af2c2c59f795
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136307"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563993"
 ---
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
 
@@ -47,9 +47,9 @@ SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) 클래스는 일반적인 _효과_
 
 [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) `SKPaint` [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) 테이블 또는 행렬 변환을 사용 하 여 색을 변경 하려면의 속성을 형식의 개체로 설정 합니다.
 
-이러한 아티클의 모든 샘플 코드는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)에 있습니다. 홈 페이지에서 **SkiaSharp 효과**를 선택 합니다.
+이러한 아티클의 모든 샘플 코드는 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)에 있습니다. 홈 페이지에서 **SkiaSharp 효과**를 선택 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

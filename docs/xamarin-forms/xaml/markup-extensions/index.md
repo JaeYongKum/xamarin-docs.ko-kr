@@ -10,12 +10,12 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 98eb35697aee9022a837a7b0b531edb0c53b2239
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130392"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562147"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
@@ -61,7 +61,7 @@ XAML 태그 확장은 리터럴 텍스트 문자열이 아닌 소스에서 요�
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [태그 확장 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML 태그 확장 책의 장 Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [동적 스타일](~/xamarin-forms/user-interface/styles/dynamic.md)
