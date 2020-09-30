@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 00b6251f530a4927d069ae92ec919645a06baf15
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127766"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555400"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
 
@@ -47,7 +47,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 `seed`매개 변수는 난수 생성기의 시작 지점입니다. 는 부동 소수점 값으로 지정 되기는 하지만 사용 하기 전에 소수 자릿수가 잘리고 0은 1과 같습니다.
 
-[ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Perlin 노이즈** 페이지에서는 및 인수의 다양 한 값을 시험해 볼 수 `baseFrequency` 있습니다 `numOctaves` . XAML 파일은 다음과 같습니다.
+[ **SkiaSharpFormsDemos**)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Perlin 노이즈** 페이지에서는 및 인수의 다양 한 값을 시험해 볼 수 `baseFrequency` 있습니다 `numOctaves` . XAML 파일은 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -188,7 +188,7 @@ public static SKShader CreatePerlinNoiseFractalNoise (float baseFrequencyX, floa
 public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed, SKPointI tileSize);
 ```
 
-[`SKPointI`](xref:SkiaSharp.SKPointI)구조는 친숙 한 구조의 정수 버전입니다 [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI`이 `X` 아닌 `Y` 형식의 및 속성을 정의 `int` `float` 합니다.
+[`SKPointI`](xref:SkiaSharp.SKPointI)구조는 친숙 한 구조의 정수 버전입니다 [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI` 이 `X` 아닌 `Y` 형식의 및 속성을 정의 `int` `float` 합니다.
 
 이러한 메서드는 지정 된 크기의 반복 패턴을 만듭니다. 각 타일에서 오른쪽 가장자리는 왼쪽 가장자리와 같으며 위쪽 가장자리는 아래쪽 가장자리와 동일 합니다. 이 특성은 **바둑판식 Perlin 노이즈** 페이지에서 보여 줍니다. XAML 파일은 이전 샘플과 유사 하지만 `Stepper` 인수를 변경 하기 위한 보기만 있습니다 `seed` .
 
@@ -401,5 +401,5 @@ public static SKShader CreateCompose (SKShader dstShader, SKShader srcShader, SK
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

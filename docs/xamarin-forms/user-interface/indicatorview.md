@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsIndicatorView
+title: Xamarin.Forms IndicatorView
 description: IndicatorView는 CarouselView에서 항목 수 및 현재 위치를 나타내는 표시기를 표시 하는 컨트롤입니다.
 ms.prod: xamarin
 ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
@@ -10,14 +10,14 @@ ms.date: 02/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0e6d223fd10e7b792f2d145a7cdd417865a095bb
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 95c4e247ca0be6e5f0f39a7bc95c41a73b3f590e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101436"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556791"
 ---
-# <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
+# <a name="no-locxamarinforms-indicatorview"></a>Xamarin.Forms IndicatorView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
@@ -39,7 +39,7 @@ ms.locfileid: "85101436"
 - `Position`형식의, `int` 현재 선택한 지표 인덱스입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 속성이 설정 될 때 자동으로 설정 됩니다 `CarouselView.IndicatorView` .
 - `SelectedIndicatorColor`형식의,의 `Color` 현재 항목을 나타내는 표시기의 색입니다 `CarouselView` .
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 ## <a name="create-an-indicatorview"></a>IndicatorView 만들기
 
@@ -69,8 +69,8 @@ ms.locfileid: "85101436"
 
 클래스에는 `IndicatorView` `IndicatorsShape` 표시기의 모양을 결정 하는 속성이 있습니다. 이 속성은 열거형 멤버 중 하나로 설정할 수 있습니다 `IndicatorShape` .
 
-- `Circle`표시기 셰이프를 원형으로 지정 합니다. 이 값은 `IndicatorView.IndicatorsShape` 속성의 기본값입니다.
-- `Square`표시기 셰이프가 정사각형 임을 나타냅니다.
+- `Circle` 표시기 셰이프를 원형으로 지정 합니다. 이 값은 `IndicatorView.IndicatorsShape` 속성의 기본값입니다.
+- `Square` 표시기 셰이프가 정사각형 임을 나타냅니다.
 
 다음 예제에서는 `IndicatorView` 사각형 표시기를 사용 하도록 구성 된를 보여 줍니다.
 
@@ -138,5 +138,5 @@ ms.locfileid: "85101436"
 
 ## <a name="related-links"></a>관련 링크
 
-- [IndicatorView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
+- [IndicatorView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 - [FontImage 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)

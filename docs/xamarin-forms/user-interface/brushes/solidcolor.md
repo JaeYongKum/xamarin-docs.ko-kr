@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms브러시: 단색'
+title: 'Xamarin.Forms 브러시: 단색'
 description: Xamarin.FormsSystem.windows.media.solidcolorbrush> 클래스는 단색으로 영역을 그립니다.
 ms.prod: xamarin
 ms.assetid: 4225D40A-16C1-40E1-ACBE-23E321E7FDE4
@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7b77cab7c0f87dbedf66651c3ab59ef20b7f3ecd
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 3c3caf064ca550086f8e7924786ac8bcaf1badfc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919565"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556284"
 ---
-# <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms브러시: 단색
+# <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms 브러시: 단색
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 클래스는 `SolidColorBrush` 클래스에서 파생 `Brush` 되며 단색으로 영역을 그리는 데 사용 됩니다. 의 색을 지정 하는 방법에는 여러 가지가 있습니다 `SolidColorBrush` . 예를 들어 값을 사용 [`Color`](xref:Xamarin.Forms.Color) 하거나 `SolidColorBrush` 클래스에서 제공 하는 미리 정의 된 개체 중 하나를 사용 하 여 색을 지정할 수 있습니다 `Brush` .
 
@@ -35,7 +35,7 @@ ms.locfileid: "87919565"
 
 ### <a name="use-a-predefined-color"></a>미리 정의 된 색 사용
 
-Xamarin.Forms값에서를 만드는 형식 변환기를 포함 `SolidColorBrush` [`Color`](xref:Xamarin.Forms.Color) 합니다. XAML에서이를 사용 하면 `SolidColorBrush` 미리 정의 된 값에서을 만들 수 있습니다 `Color` .
+Xamarin.Forms 값에서를 만드는 형식 변환기를 포함 `SolidColorBrush` [`Color`](xref:Xamarin.Forms.Color) 합니다. XAML에서이를 사용 하면 `SolidColorBrush` 미리 정의 된 값에서을 만들 수 있습니다 `Color` .
 
 ```xaml
 <Frame Background="DarkBlue"
@@ -98,11 +98,11 @@ Frame frame = new Frame
 
 ### <a name="use-hexadecimal-notation"></a>16 진수 표기법 사용
 
-`SolidColorBrush`16 진수 표기법을 사용 하 여 개체를 만들 수도 있습니다. 이 방법을 사용 하는 경우 색은 빨강, 녹색 및 파랑의 양으로 단일 색으로 결합 하 여 지정 됩니다. 16 진수 표기법을 사용 하 여 색을 지정 하는 기본 형식은입니다 `#rrggbb` .
+`SolidColorBrush` 16 진수 표기법을 사용 하 여 개체를 만들 수도 있습니다. 이 방법을 사용 하는 경우 색은 빨강, 녹색 및 파랑의 양으로 단일 색으로 결합 하 여 지정 됩니다. 16 진수 표기법을 사용 하 여 색을 지정 하는 기본 형식은입니다 `#rrggbb` .
 
-- `rr`는 빨강의 상대적 크기를 지정 하는 두 자리 16 진수입니다.
-- `gg`는 상대 크기의 녹색을 지정 하는 두 자리 16 진수입니다.
-- `bb`는 파란색의 상대적 크기를 지정 하는 두 자리 16 진수입니다.
+- `rr` 는 빨강의 상대적 크기를 지정 하는 두 자리 16 진수입니다.
+- `gg` 는 상대 크기의 녹색을 지정 하는 두 자리 16 진수입니다.
+- `bb` 는 파란색의 상대적 크기를 지정 하는 두 자리 16 진수입니다.
 
 또한 색은에서 `#aarrggbb` `aa` 색의 알파 값 또는 투명도를 지정 하는으로 지정할 수 있습니다. 이 방법은 사용하면 부분적으로 투명한 색을 만들 수 있습니다.
 
@@ -131,5 +131,5 @@ Frame frame = new Frame
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [색의Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)
+- [BrushesDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [색의 Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

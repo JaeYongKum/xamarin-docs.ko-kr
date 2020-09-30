@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 재질 시각적 개체
-description: Xamarin.Forms재질 시각적 개체는 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만드는 데 사용할 수 있습니다.
+description: Xamarin.Forms 재질 시각적 개체는 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만드는 데 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 11/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bba7d77d8cf565b1b2db2c1324e171389c5d0280
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 753644b372fafc7c3ea22008267844251527050d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127181"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556479"
 ---
-# <a name="xamarinforms-material-visual"></a>Xamarin.Forms 재질 시각적 개체
+# <a name="no-locxamarinforms-material-visual"></a>Xamarin.Forms 재질 시각적 개체
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 [재질 설계](https://material.io) 는 Google에서 만든 독단적인 디자인 시스템이 며,이 시스템은 보기와 레이아웃의 모양과 동작에 대 한 크기, 색, 간격 및 기타 측면을 규정 합니다.
 
-Xamarin.Forms재질 시각적 개체를 사용 하 여 응용 프로그램에 재질 디자인 규칙을 적용 하 여 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만들 수 있습니다. 재질 시각적 개체를 사용 하는 경우 지원 되는 보기는 동일한 디자인 플랫폼을 채택 하 여 통일 된 모양과 느낌을 만듭니다.
+Xamarin.Forms 재질 시각적 개체를 사용 하 여 응용 프로그램에 재질 디자인 규칙을 적용 하 여 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만들 수 있습니다. 재질 시각적 개체를 사용 하는 경우 지원 되는 보기는 동일한 디자인 플랫폼을 채택 하 여 통일 된 모양과 느낌을 만듭니다.
 
 [![재질 시각적 스크린샷](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
@@ -92,9 +92,9 @@ contentPage.Visual = VisualMarker.Material;
 
 속성을 `VisualElement.Visual` 로 설정 하면 `Material` 응용 프로그램에서 기본 렌더러 대신 재질 시각적 렌더러를 사용 하도록 지시 합니다. [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)속성은 다음 속성을 제공 하는 클래스를 사용 하 여을 구현 하는 모든 형식으로 설정할 수 있습니다 `IVisual` [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) `IVisual` .
 
-- `Default`– 뷰가 기본 렌더러를 사용 하 여 렌더링 되어야 함을 나타냅니다.
-- `MatchParent`– 뷰에서 직접 부모와 동일한 렌더러를 사용 해야 함을 나타냅니다.
-- `Material`– 뷰가 재질 렌더러를 사용 하 여 렌더링 되어야 함을 나타냅니다.
+- `Default` – 뷰가 기본 렌더러를 사용 하 여 렌더링 되어야 함을 나타냅니다.
+- `MatchParent` – 뷰에서 직접 부모와 동일한 렌더러를 사용 해야 함을 나타냅니다.
+- `Material` – 뷰가 재질 렌더러를 사용 하 여 렌더링 되어야 함을 나타냅니다.
 
 > [!IMPORTANT]
 > [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)속성은 [`VisualElement`](xref:Xamarin.Forms.VisualElement) `Visual` 부모에서 속성 값을 상속 하는 뷰를 사용 하 여 클래스에서 정의 됩니다. 따라서의 속성을 설정 하면 `Visual` [`ContentPage`](xref:Xamarin.Forms.ContentPage) 페이지에서 지원 되는 모든 뷰에서 해당 시각적 개체를 사용할 수 있습니다. 또한 `Visual` 뷰에 대해 속성을 재정의할 수 있습니다.
@@ -157,7 +157,7 @@ namespace MyApp.Android
 
 ## <a name="related-links"></a>관련 링크
 
-- [재질 시각적 개체 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [재질 시각적 개체 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Xamarin.Forms시각적 렌더러 만들기](create.md)
-- [Xamarin.Forms]](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Xamarin.Forms ]](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms단추만
+title: Xamarin.Forms 단추만
 description: 단추는 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 하거나 클릭에 응답 합니다.
 ms.prod: xamarin
 ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
@@ -10,14 +10,14 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ed24d38c75036245a024eecbef7f9a74380b591
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: fba8dcb344f79c21815a58cff0d8132967381cca
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917893"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556739"
 ---
-# <a name="no-locxamarinforms-button"></a>Xamarin.Forms단추만
+# <a name="no-locxamarinforms-button"></a>Xamarin.Forms 단추만
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
@@ -25,13 +25,13 @@ _단추는 응용 프로그램이 특정 작업을 수행 하도록 지시 하�
 
 는 [`Button`](xref:Xamarin.Forms.Button) 모든에서 가장 기본적인 대화형 컨트롤입니다 Xamarin.Forms . `Button`일반적으로는 명령을 나타내는 짧은 텍스트 문자열을 표시 하지만 비트맵 이미지 또는 텍스트와 이미지의 조합을 표시할 수도 있습니다. 사용자가 `Button` 손가락으로를 누르거나 마우스로 클릭 하 여 해당 명령을 시작 합니다.
 
-아래에서 설명 하는 대부분의 항목은 [**Buttondemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 페이지에 해당 합니다.
+아래에서 설명 하는 대부분의 항목은 [**Buttondemos**](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 페이지에 해당 합니다.
 
 ## <a name="handling-button-clicks"></a>단추 클릭 처리
 
 `Button`[`Clicked`](xref:Xamarin.Forms.Button.Clicked)사용자가 `Button` 손가락 또는 마우스 포인터로를 누를 때 발생 하는 이벤트를 정의 합니다. 이 이벤트는 화면에서 손가락 또는 마우스 단추를 놓을 때 발생 `Button` 합니다. 는 `Button` [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) `true` 탭에 응답 하려면 속성이로 설정 되어 있어야 합니다.
 
-[**Buttondemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 **기본 단추 클릭** 페이지에서는 XAML로를 인스턴스화하고 해당 이벤트를 처리 하는 방법을 보여 줍니다 `Button` `Clicked` . **Basicbutton클릭 페이지 .xaml** 파일에는 `StackLayout` 와를 모두 포함 하는가 포함 되어 있습니다. `Label` `Button`
+[**Buttondemos**](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 **기본 단추 클릭** 페이지에서는 XAML로를 인스턴스화하고 해당 이벤트를 처리 하는 방법을 보여 줍니다 `Button` `Clicked` . **Basicbutton클릭 페이지 .xaml** 파일에는 `StackLayout` 와를 모두 포함 하는가 포함 되어 있습니다. `Label` `Button`
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -84,7 +84,7 @@ public partial class BasicButtonClickPage : ContentPage
 
 `OnButtonClicked` `async` `await` 는 이벤트 처리기 내에서 사용 되므로 메서드는 한정자를 포함 합니다. `Clicked`이벤트 처리기는 `async` 처리기의 본문이를 사용 하는 경우에만 한정자를 요구 합니다 `await` .
 
-각 플랫폼은 `Button` 고유의 특정 방식으로를 렌더링 합니다. [**단추 모양**](#button-appearance) 섹션에서 색을 설정 하 고 사용자 지정 된 모양에 맞게 테두리를 표시 하는 방법을 볼 수 있습니다 `Button` . `Button`는 인터페이스를 구현 [`IFontElement`](xref:Xamarin.Forms.Internals.IFontElement) 하므로 [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) , [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 및 속성을 포함 [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 합니다.
+각 플랫폼은 `Button` 고유의 특정 방식으로를 렌더링 합니다. [**단추 모양**](#button-appearance) 섹션에서 색을 설정 하 고 사용자 지정 된 모양에 맞게 테두리를 표시 하는 방법을 볼 수 있습니다 `Button` . `Button` 는 인터페이스를 구현 [`IFontElement`](xref:Xamarin.Forms.Internals.IFontElement) 하므로 [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) , [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 및 속성을 포함 [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 합니다.
 
 ## <a name="creating-a-button-in-code"></a>코드에서 단추 만들기
 
@@ -149,13 +149,13 @@ button.Clicked += OnButtonClicked;
 응용 프로그램이 `Button` 이벤트를 처리 하지 않고 탭에 응답할 수 있습니다 `Clicked` . 는 `Button` _명령 또는 명령_ 인터페이스 라는 대체 알림 메커니즘을 _commanding_ 구현 합니다. 이는 두 가지 속성으로 구성 됩니다.
 
 - [`Command`](xref:Xamarin.Forms.Button.Command)[`ICommand`](xref:System.Windows.Input.ICommand)네임 스페이스에 정의 된 인터페이스인 형식의입니다 [`System.Windows.Input`](xref:System.Windows.Input) .
-- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)형식의 속성 [`Object`](xref:System.Object) 입니다.
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) 형식의 속성 [`Object`](xref:System.Object) 입니다.
 
 이 방법은 특히 MVVM (모델-뷰-ViewModel) 아키텍처를 구현할 때 데이터 바인딩과 연결 하는 데 특히 적합 합니다. 이러한 항목에 대해서는 데이터 바인딩에서 [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md) [데이터 바인딩에서 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)로, [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md)에 설명 되어 있습니다.
 
-MVVM 응용 프로그램에서 viewmodel은 `ICommand` 데이터 바인딩을 사용 하 여 XAML 요소에 연결 되는 형식의 속성을 정의 합니다 `Button` . Xamarin.Forms는 [`Command`](xref:Xamarin.Forms.Command) [`Command<T>`](xref:Xamarin.Forms.Command`1) 인터페이스를 구현 하 `ICommand` 고 형식의 속성을 정의 하는 데 viewmodel을 지 원하는 및 클래스도 정의 합니다 `ICommand` .
+MVVM 응용 프로그램에서 viewmodel은 `ICommand` 데이터 바인딩을 사용 하 여 XAML 요소에 연결 되는 형식의 속성을 정의 합니다 `Button` . Xamarin.Forms 는 [`Command`](xref:Xamarin.Forms.Command) [`Command<T>`](xref:Xamarin.Forms.Command`1) 인터페이스를 구현 하 `ICommand` 고 형식의 속성을 정의 하는 데 viewmodel을 지 원하는 및 클래스도 정의 합니다 `ICommand` .
 
-[**명령 인터페이스 문서에서는 명령 인터페이스**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 에 대해 자세히 설명 하지만 [**Buttondemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 **기본 단추 명령** 페이지에는 기본적인 방법이 나와 있습니다.
+[**명령 인터페이스 문서에서는 명령 인터페이스**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 에 대해 자세히 설명 하지만 [**Buttondemos**](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플의 **기본 단추 명령** 페이지에는 기본적인 방법이 나와 있습니다.
 
 `CommandDemoViewModel`클래스는 라는 형식의 속성을 정의 하 `double` `Number` 고 및 라는 형식의 속성 두 개를 정의 하는 매우 간단한 viewmodel입니다 `ICommand` `MultiplyBy2Command` `DivideBy2Command` .
 
@@ -271,7 +271,7 @@ class CommandDemoViewModel : INotifyPropertyChanged
 
 둘 이상의 `Button` 요소를 동일한 속성에 바인딩할 수 있습니다 `ICommand` . `Button`요소는의 속성을 사용 하 여 구분할 수 있습니다 [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) `Button` . 이 경우 제네릭 클래스를 사용 하는 것이 좋습니다 [`Command<T>`](xref:Xamarin.Forms.Command`1) . `CommandParameter`그런 다음 개체는 및 메서드에 인수로 전달 됩니다 `execute` `canExecute` . 이 기술은 [**명령 인터페이스**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) 문서의 [**기본 명령**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) 섹션에 자세히 나와 있습니다.
 
-또한 [**Buttondemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플은 해당 클래스에서이 기법을 사용 `MainPage` 합니다. **Mainpage** 파일에는 `Button` 샘플의 각 페이지에 대 한가 포함 되어 있습니다.
+또한 [**Buttondemos**](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플은 해당 클래스에서이 기법을 사용 `MainPage` 합니다. **Mainpage** 파일에는 `Button` 샘플의 각 페이지에 대 한가 포함 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -419,15 +419,15 @@ public partial class PressAndReleaseButtonPage : ContentPage
 는 `Button` 모양에 영향을 주는 몇 가지 속성을 상속 하거나 정의 합니다.
 
 - [`TextColor`](xref:Xamarin.Forms.Button.TextColor)텍스트의 색입니다. `Button`
-- [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor)해당 텍스트에 대 한 배경의 색입니다.
-- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor)는을 둘러싼 영역의 색입니다.`Button`
-- [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily)텍스트에 사용 되는 글꼴 패밀리입니다.
-- [`FontSize`](xref:Xamarin.Forms.Button.FontSize)텍스트 크기입니다.
-- [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)텍스트가 기울임꼴 또는 굵은 글꼴 인지 여부를 나타냅니다.
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)테두리의 너비입니다.
-- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius)는의 모퉁이 반경입니다.`Button`
-- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing)텍스트 문자 사이의 간격입니다 `Button` .
-- `TextTransform`텍스트의 대/소문자를 결정 합니다 `Button` .
+- [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) 해당 텍스트에 대 한 배경의 색입니다.
+- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor) 는을 둘러싼 영역의 색입니다. `Button`
+- [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) 텍스트에 사용 되는 글꼴 패밀리입니다.
+- [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 텍스트 크기입니다.
+- [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 텍스트가 기울임꼴 또는 굵은 글꼴 인지 여부를 나타냅니다.
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) 테두리의 너비입니다.
+- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 는의 모퉁이 반경입니다. `Button`
+- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing) 텍스트 문자 사이의 간격입니다 `Button` .
+- `TextTransform` 텍스트의 대/소문자를 결정 합니다 `Button` .
 
 > [!NOTE]
 > `Button`또한 클래스에 [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) 는의 레이아웃 동작을 제어 하는 및 속성이 있습니다 `Button` . 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
@@ -551,7 +551,7 @@ UWP에서 `CornerRadius` 높이의 절반을 초과 하는를 선택 하면 `But
 
 ## <a name="button-visual-states"></a>단추 시각적 상태
 
-[`Button`](xref:Xamarin.Forms.Button)에는 `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) `Button` 사용자가 사용 하도록 설정 된 경우 사용자가 누를 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다.
+[`Button`](xref:Xamarin.Forms.Button) 에는 `Pressed` [`VisualState`](xref:Xamarin.Forms.VisualState) `Button` 사용자가 사용 하도록 설정 된 경우 사용자가 누를 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다.
 
 다음 XAML 예제에서는 상태에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다 `Pressed` .
 
@@ -763,8 +763,8 @@ IOS, Android 및 UWP에서 실행 되는 프로그램은 다음과 같습니다.
 IOS 프로젝트의 **Resources** 폴더에는이 이미지의 세 가지 크기가 포함 되어 있습니다.
 
 - **/Resources/MonkeyFace.png** 로 저장 된 48 픽셀 사각형 비트맵
-- 로 저장 된 96 픽셀 사각형 비트맵**/Resource/MonkeyFace@2x.png**
-- 로 저장 된 144 픽셀 사각형 비트맵**/Resource/MonkeyFace@3x.png**
+- 로 저장 된 96 픽셀 사각형 비트맵 **/Resource/MonkeyFace@2x.png**
+- 로 저장 된 144 픽셀 사각형 비트맵 **/Resource/MonkeyFace@3x.png**
 
 세 개의 비트맵 모두 **BundleResource**의 **빌드 작업** 을 제공 했습니다.
 
@@ -891,5 +891,5 @@ UWP 비트맵이 프로젝트의 루트 디렉터리에 저장 된 경우이 태
 
 ## <a name="related-links"></a>관련 링크
 
-- [ButtonDemos 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+- [ButtonDemos 샘플](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 - [단추 API](xref:Xamarin.Forms.Button)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCollectionView 그룹화
+title: Xamarin.Forms CollectionView 그룹화
 description: CollectionView는 IsGrouped 속성을 true로 설정 하 여 올바르게 그룹화 된 데이터를 표시할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
@@ -10,20 +10,20 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 51bdcc6f9a95911c548269dbf7b3050cc5921183
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136463"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556622"
 ---
-# <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsCollectionView 그룹화
+# <a name="no-locxamarinforms-collectionview-grouping"></a>Xamarin.Forms CollectionView 그룹화
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 자주 발생 하는 데이터 집합은 계속 해 서 스크롤 목록에 표시 될 때 어려울 수 있습니다. 이 시나리오에서 데이터를 그룹으로 구성 하면 데이터를 쉽게 탐색할 수 있으므로 사용자 환경을 개선할 수 있습니다.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)은 그룹화 된 데이터 표시를 지원 하 고 표시 되는 방법을 제어 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 그룹화 된 데이터 표시를 지원 하 고 표시 되는 방법을 제어 하는 다음 속성을 정의 합니다.
 
 - `IsGrouped`형식의는 `bool` 기본 데이터가 그룹에 표시 되어야 하는지 여부를 나타냅니다. 이 속성의 기본값은 `false`입니다.
 - `GroupHeaderTemplate`[`DataTemplate`](xref:Xamarin.Forms.DataTemplate)각 그룹의 헤더에 사용할 템플릿인 형식의입니다.
@@ -142,7 +142,7 @@ Animals.Add(new AnimalGroup("Monkeys", new List<Animal>
 
 ## <a name="display-grouped-data"></a>그룹화 된 데이터 표시
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)에서는 속성을로 설정 하 여 데이터를 올바르게 그룹화 한 경우에 그룹화 된 데이터를 표시 합니다 `IsGrouped` `true` .
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 에서는 속성을로 설정 하 여 데이터를 올바르게 그룹화 한 경우에 그룹화 된 데이터를 표시 합니다 `IsGrouped` `true` .
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -241,7 +241,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 
 ## <a name="group-without-templates"></a>템플릿이 없는 그룹
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)속성을로 설정 하지 않고 올바르게 그룹화 된 데이터를 표시할 수 있습니다 [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하지 않고 올바르게 그룹화 된 데이터를 표시할 수 있습니다 [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -252,5 +252,5 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CollectionView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

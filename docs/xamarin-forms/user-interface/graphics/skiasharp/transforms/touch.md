@@ -10,12 +10,12 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c6d568e948f02952fa71ed21af48160a53bfc419
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931861"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556544"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -419,7 +419,7 @@ enum TouchManipulationMode
 }
 ```
 
-`PanOnly`는 변환을 사용 하 여 구현 되는 단일 손가락 끌기입니다. 모든 후속 옵션에는 패닝도 포함 되지만 두 손가락을 포함 `IsotropicScale` 합니다. 즉, 개체를 가로 및 세로 방향으로 균등 하 게 조정 하는 손가락으로 작업을 수행 합니다. `AnisotropicScale`크기를 다르게 조정할 수 있습니다.
+`PanOnly` 는 변환을 사용 하 여 구현 되는 단일 손가락 끌기입니다. 모든 후속 옵션에는 패닝도 포함 되지만 두 손가락을 포함 `IsotropicScale` 합니다. 즉, 개체를 가로 및 세로 방향으로 균등 하 게 조정 하는 손가락으로 작업을 수행 합니다. `AnisotropicScale` 크기를 다르게 조정할 수 있습니다.
 
 `ScaleRotate`이 옵션은 두 손가락 크기 조정 및 회전에 대 한 옵션입니다. 크기 조정은 isotropic입니다. 앞서 언급 했 듯이, 대부분의 경우에는 손가락 이동이 본질적으로 동일 하기 때문에 이방성 크기 조정을 사용 하는 두 손가락 회전을 구현 하는 것이
 
@@ -708,7 +708,7 @@ class TouchManipulationBitmap
 
 이는 중요 합니다. `Manipulate` 메서드는 한 손가락의 움직임만 처리 하 고 있다고 가정할 수 있습니다. 이 호출이 진행 되는 동안 다른 손가락은 이동 하지 않습니다. 즉, 이동 하는 경우에 대 한 후속 호출에서 해당 이동이 처리 됩니다 `Manipulate` .
 
-`Manipulate`메서드는 편의를 위해 먼저 사전을 배열에 복사 합니다. 처음 두 항목 이외의 항목은 무시 합니다. 두 개 이상의 손가락이 비트맵을 조작 하려고 시도 하는 경우 나머지는 무시 됩니다. `Manipulate`최종 멤버 `TouchManipulationBitmap` :
+`Manipulate`메서드는 편의를 위해 먼저 사전을 배열에 복사 합니다. 처음 두 항목 이외의 항목은 무시 합니다. 두 개 이상의 손가락이 비트맵을 조작 하려고 시도 하는 경우 나머지는 무시 됩니다. `Manipulate` 최종 멤버 `TouchManipulationBitmap` :
 
 ```csharp
 class TouchManipulationBitmap
@@ -751,7 +751,7 @@ class TouchManipulationBitmap
 
 두 경우 모두에서가 `TouchManipulationManager` `SKMatrix` 비트맵을 `Matrix` `TouchManipulationPage` 렌더링 하는 데 사용 하는 현재 속성과 연결 하는 값을 반환 합니다.
 
-`TouchManipulationManager`는 일반화 되며를 제외 하 고 다른 파일은 사용 하지 않습니다 `TouchManipulationMode` . 사용자 고유의 응용 프로그램에서이 클래스를 변경 하지 않고 사용할 수 있습니다. 이 클래스는 `TouchManipulationMode` 형식의 단일 속성을 정의합니다.
+`TouchManipulationManager` 는 일반화 되며를 제외 하 고 다른 파일은 사용 하지 않습니다 `TouchManipulationMode` . 사용자 고유의 응용 프로그램에서이 클래스를 변경 하지 않고 사용할 수 있습니다. 이 클래스는 `TouchManipulationMode` 형식의 단일 속성을 정의합니다.
 
 ```csharp
 class TouchManipulationManager
@@ -763,7 +763,7 @@ class TouchManipulationManager
 
 그러나이 옵션을 사용 하지 않는 것이 좋습니다 `AnisotropicScale` . 배율 인수 중 하나가 0이 되도록 비트맵을 조작 하는 것이 매우 쉽습니다. 그러면 비트맵이 보이지 않게 되며 반환 되지 않습니다. 이제는 이방성 크기 조정이 필요한 경우 원치 않는 결과를 방지 하기 위해 논리를 향상 시킬 수 있습니다.
 
-`TouchManipulationManager`는 벡터를 사용 하지만 SkiaSharp에는 구조가 없기 때문에 `SKVector` `SKPoint` 대신가 사용 됩니다. `SKPoint`빼기 연산자를 지원 하 고 결과를 벡터로 취급할 수 있습니다. 추가 해야 하는 벡터 특정 논리도 `Magnitude` 계산입니다.
+`TouchManipulationManager` 는 벡터를 사용 하지만 SkiaSharp에는 구조가 없기 때문에 `SKVector` `SKPoint` 대신가 사용 됩니다. `SKPoint` 빼기 연산자를 지원 하 고 결과를 벡터로 취급할 수 있습니다. 추가 해야 하는 벡터 특정 논리도 `Magnitude` 계산입니다.
 
 ```csharp
 class TouchManipulationManager
@@ -1273,6 +1273,6 @@ else
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [효과로부터 이벤트 호출](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

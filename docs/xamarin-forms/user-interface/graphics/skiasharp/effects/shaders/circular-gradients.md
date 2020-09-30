@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135644"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556674"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 원형 그라데이션
 
@@ -57,7 +57,7 @@ public static SKShader CreateRadialGradient (SKPoint center,
 
 을 사용 하 여 `CreateRadialGradient` 원을 채울 경우 그라데이션의 중심을 원 중심으로 설정 하 고 그라데이션의 반경을 원의 반경으로 설정할 수 있습니다. 이 경우 `SKShaderTileMode` 인수는 그라데이션 렌더링에 영향을 주지 않습니다. 하지만 그라데이션으로 채워진 영역이 그라데이션으로 정의 된 원 보다 큰 경우이 인수는 원 외부에서 발생 하는 `SKShaderTileMode` 상황에 매우 큰 영향을 미칠 수 있습니다.
 
-의 효과는 `SKShaderMode` [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **방사형 그라데이션** 페이지에서 보여 줍니다. 이 페이지의 XAML 파일은 `Picker` 열거형의 세 가지 멤버 중 하나를 선택할 수 있는를 인스턴스화합니다 `SKShaderTileMode` .
+의 효과는 `SKShaderMode` [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **방사형 그라데이션** 페이지에서 보여 줍니다. 이 페이지의 XAML 파일은 `Picker` 열거형의 세 가지 멤버 중 하나를 선택할 수 있는를 인스턴스화합니다 `SKShaderTileMode` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -334,7 +334,7 @@ public class RadialSpecularHighlightPage : ContentPage
 }
 ```
 
-`CreateRadialGradient`이 호출은 흰색을 사용 하 여 해당 지점에서 시작 하 `offCenter` 고 반경 절반 거리 만큼 빨간색으로 끝나는 그라데이션을 만듭니다. 다음과 같이 나타납니다.
+`CreateRadialGradient`이 호출은 흰색을 사용 하 여 해당 지점에서 시작 하 `offCenter` 고 반경 절반 거리 만큼 빨간색으로 끝나는 그라데이션을 만듭니다. 다음과 같습니다.
 
 [![방사형 반사 강조 표시](circular-gradients-images/RadialSpecularHighlight.png "방사형 반사 강조 표시")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 
@@ -622,5 +622,5 @@ public class ConicalSpecularHighlightPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

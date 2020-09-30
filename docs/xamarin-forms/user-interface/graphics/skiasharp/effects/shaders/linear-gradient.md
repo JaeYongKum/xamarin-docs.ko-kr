@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132225"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555530"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>SkiaSharp 선형 그라데이션
 
@@ -40,7 +40,7 @@ ms.locfileid: "84132225"
 - 가로 오른쪽 위 모퉁이까지
 - 오른쪽 아래 모서리에 대각선으로
 
-대각선 선형 그라데이션은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **SkiaSharp 셰이더 및 기타 효과** 섹션에 있는 첫 번째 페이지에서 보여 줍니다. **모퉁이-모퉁이 그라데이션** 페이지는 `SKCanvasView` 해당 생성자에를 만듭니다. `PaintSurface`처리기는 `SKPaint` 문에 개체를 만든 `using` 다음 캔버스를 중심으로 300 픽셀 사각형 사각형을 정의 합니다.
+대각선 선형 그라데이션은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **SkiaSharp 셰이더 및 기타 효과** 섹션에 있는 첫 번째 페이지에서 보여 줍니다. **모퉁이-모퉁이 그라데이션** 페이지는 `SKCanvasView` 해당 생성자에를 만듭니다. `PaintSurface`처리기는 `SKPaint` 문에 개체를 만든 `using` 다음 캔버스를 중심으로 300 픽셀 사각형 사각형을 정의 합니다.
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -103,7 +103,7 @@ public class CornerToCornerGradientPage : ContentPage
 
 `float`네 번째 인수로 지정 된 값 배열에는 색 배열과 일 대 일 대응 관계가 있습니다. 값은 이러한 색이 발생 하는 그라데이션 선을 따라 상대적인 위치를 표시 합니다. 여기서 0은 `Red` 그라데이션 선의 시작 부분에서 발생 함을 의미 하 고 1은 `Blue` 줄의 끝에서 발생 함을 의미 합니다. 숫자는 오름차순 이어야 하며 0에서 1 사이 여야 합니다. 해당 범위에 없으면 해당 범위에 맞게 조정 됩니다.
 
-배열의 두 값은 0과 1이 아닌 값으로 설정할 수 있습니다. 다음을 실행해보세요.
+배열의 두 값은 0과 1이 아닌 값으로 설정할 수 있습니다. 다음과 같이 해보세요.
 
 ```csharp
 new float[] { 0.25f, 0.75f }
@@ -514,7 +514,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-약간 다른 방법으로는 더 작은 코드가 필요 합니다. 이 접근 방식을 사용 하면 [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) 행렬 변환이 있는 오버 로드 메서드를 마지막 인수로 사용 합니다. 이 방법은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 버전입니다.
+약간 다른 방법으로는 더 작은 코드가 필요 합니다. 이 접근 방식을 사용 하면 [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) 행렬 변환이 있는 오버 로드 메서드를 마지막 인수로 사용 합니다. 이 방법은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 버전입니다.
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -620,13 +620,13 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-메서드의 두 그라데이션 지점은 `CreateLinearGradient` 이 경로를 정의 하는 두 개의 점에 기반 합니다. 두 점이 모두 왼쪽 위 모퉁이에 가깝습니다. 첫 번째는 캔버스의 위쪽 가장자리에 있고, 두 번째는 캔버스의 왼쪽 가장자리에 있습니다. 결과는 다음과 같습니다.
+메서드의 두 그라데이션 지점은 `CreateLinearGradient` 이 경로를 정의 하는 두 개의 점에 기반 합니다. 두 점이 모두 왼쪽 위 모퉁이에 가깝습니다. 첫 번째는 캔버스의 위쪽 가장자리에 있고, 두 번째는 캔버스의 왼쪽 가장자리에 있습니다. 결과:
 
 [![무지개 오류가 잘못 되었습니다.](linear-gradient-images/RainbowGradientFaulty.png "무지개 오류가 잘못 되었습니다.")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 
 이는 흥미로운 이미지 이지만 의도 한 것이 아닙니다. 문제는 선형 그라데이션을 만들 때 상수 색의 줄이 그라데이션 선에 수직인 것입니다. 그라데이션 선은 그림의 위쪽과 왼쪽이 교차 하는 지점을 기반으로 하며, 해당 선은 일반적으로 오른쪽 아래 모퉁이로 확장 되는 그림의 가장자리와 수직이 아닙니다. 이 방법은 캔버스를 정사각형으로 사용 하는 경우에만 작동 합니다.
 
-적절 한 무지개 그라데이션을 만들려면 그라데이션 선이 레인의 가장자리와 수직이 야 합니다. 더 많은 계산을 포함 합니다. 벡터는 그림의 긴 쪽에 평행 하 게 정의 해야 합니다. 벡터는 해당 면에 수직이 되도록 90도 회전 됩니다. 그런 다음를 곱하여 그림의 너비가 되도록 `rainbowWidth` 합니다. 두 그라데이션 지점은 그림의 측면에 있는 점을 기반으로 계산 되며, 해당 점과 벡터를 더한 값입니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **무지개 그라데이션** 페이지에 표시 되는 코드는 다음과 같습니다.
+적절 한 무지개 그라데이션을 만들려면 그라데이션 선이 레인의 가장자리와 수직이 야 합니다. 더 많은 계산을 포함 합니다. 벡터는 그림의 긴 쪽에 평행 하 게 정의 해야 합니다. 벡터는 해당 면에 수직이 되도록 90도 회전 됩니다. 그런 다음를 곱하여 그림의 너비가 되도록 `rainbowWidth` 합니다. 두 그라데이션 지점은 그림의 측면에 있는 점을 기반으로 계산 되며, 해당 점과 벡터를 더한 값입니다. [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **무지개 그라데이션** 페이지에 표시 되는 코드는 다음과 같습니다.
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -919,5 +919,5 @@ textBounds.Offset(xText, yText);
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms항목 항목
+title: Xamarin.Forms 항목 항목
 description: 도구 모음 항목 클래스는 응용 프로그램의 탐색 모음에서 사용 되는 특수 한 형식의 단추입니다.
 ms.prod: xamarin
 ms.assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1
@@ -10,14 +10,14 @@ ms.date: 07/29/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46aba32ebbae1646b9af00877bba530b619210cd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c6aabe5931dce51889432e7d5dce2be40631ffe2
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138218"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556505"
 ---
-# <a name="xamarinforms-toolbaritem"></a>Xamarin.Forms항목 항목
+# <a name="no-locxamarinforms-toolbaritem"></a>Xamarin.Forms 항목 항목
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
@@ -27,15 +27,15 @@ Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 클래스는 `Page
 
 ![Android 및 iOS의 "도구 항목 데모 스크린샷"](toolbaritem-images/toolbaritem-device-screenshot.png "Android 및 iOS의 도구 모음의 항목 데모 스크린샷")
 
-`ToolbarItem`클래스는 다음 속성을 정의 합니다.
+`ToolbarItem` 클래스는 다음과 같은 속성을 정의합니다.
 
 * [`Order`](xref:Xamarin.Forms.ToolbarItem.Order)`ToolbarItemOrder` `ToolbarItem` 인스턴스가 기본 메뉴 또는 보조 메뉴에 표시 되는지 여부를 결정 하는 열거형 값입니다.
 * [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority)`integer`개체의 컬렉션에 있는 항목의 표시 순서를 결정 하는 값입니다 `Page` `ToolbarItems` .
 
 `ToolbarItem`클래스는 클래스에서 다음과 같이 일반적으로 사용 되는 속성을 상속 합니다 `MenuItem` .
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `Command` .
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) 는 `ICommand` 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) 는에 `object` 전달 되어야 하는 매개 변수를 지정 하는입니다 `Command` .
 * [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)`ImageSource`개체의 표시 아이콘을 결정 하는 값입니다 `ToolbarItem` .
 * [`Text`](xref:Xamarin.Forms.MenuItem.Text)`string`개체의 표시 텍스트를 결정 하는입니다 `ToolbarItem` .
 
@@ -103,7 +103,7 @@ void OnItemClicked(object sender, EventArgs e)
 }
 ```
 
-`ToolbarItem`또한 개체는 `Command` 및 속성을 사용 `CommandParameter` 하 여 이벤트 처리기 없이 사용자 입력에 반응할 수 있습니다. `ICommand`인터페이스 및 MVVM 데이터 바인딩에 대 한 자세한 내용은 [ Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm)를 참조 하세요.
+`ToolbarItem` 또한 개체는 `Command` 및 속성을 사용 `CommandParameter` 하 여 이벤트 처리기 없이 사용자 입력에 반응할 수 있습니다. `ICommand`인터페이스 및 MVVM 데이터 바인딩에 대 한 자세한 내용은 [ Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm)를 참조 하세요.
 
 ## <a name="enable-or-disable-a-toolbaritem-at-runtime"></a>런타임에 기능 항목 사용 또는 사용 안 함
 
@@ -115,7 +115,7 @@ void OnItemClicked(object sender, EventArgs e)
 
 `ToolbarItemOrder`열거형에는 `Default` , `Primary` 및 `Secondary` 값이 있습니다.
 
-`Order`속성이로 설정 되 면 `Primary` `ToolbarItem` 개체는 모든 플랫폼의 기본 탐색 모음에 표시 됩니다. `ToolbarItem`개체는 페이지 제목 보다 우선 순위가 지정 되며, 항목의 공간을 확보 하기 위해 잘립니다. 다음 스크린샷에서는 `ToolbarItem` iOS 및 Android의 기본 메뉴에 있는 개체를 보여 줍니다.
+`Order`속성이로 설정 되 면 `Primary` `ToolbarItem` 개체는 모든 플랫폼의 기본 탐색 모음에 표시 됩니다. `ToolbarItem` 개체는 페이지 제목 보다 우선 순위가 지정 되며, 항목의 공간을 확보 하기 위해 잘립니다. 다음 스크린샷에서는 `ToolbarItem` iOS 및 Android의 기본 메뉴에 있는 개체를 보여 줍니다.
 
 !["화면 캡처 항목 주 메뉴 스크린샷 Android 및 iOS"](toolbaritem-images/toolbaritem-primary-menu.png "도구 모음의 항목 기본 메뉴 스크린샷 (Android 및 iOS)")
 
@@ -128,6 +128,6 @@ void OnItemClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-* [나이 항목 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
-* [이미지Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
-* [Xamarin.FormsMenuItem](~/xamarin-forms/user-interface/menuitem.md)
+* [나이 항목 데모](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+* [이미지 Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

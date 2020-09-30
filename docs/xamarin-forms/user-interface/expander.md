@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms기호
+title: Xamarin.Forms 기호
 description: Xamarin.Forms확장기 컨트롤은 모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 확장 헤더를 누르면 콘텐츠가 표시 되거나 숨겨집니다.
 ms.prod: xamarin
 ms.assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985
@@ -10,14 +10,14 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33659dd52452c575c403d0a25b24f17daf9e3f17
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: 4be3744e0cce465aab8fc4af39495d2f7d8e9004
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988215"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556609"
 ---
-# <a name="xamarinforms-expander"></a>Xamarin.Forms기호
+# <a name="no-locxamarinforms-expander"></a>Xamarin.Forms 기호
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
@@ -28,7 +28,7 @@ Xamarin.Forms `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확�
 ![IOS 및 Android에서 축소 및 확장 된 상태의 확장기 스크린샷](expander-images/expander.png "IOS 및 Android의 확장기")
 
 > [!IMPORTANT]
-> `Expander`는 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `Expander_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조 하세요.
+> `Expander` 는 현재 실험적 이며 플래그를 설정 하는 방법 으로만 사용할 수 있습니다 `Expander_Experimental` . 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조하세요.
 >
 > 또한 `Expander` 컨트롤은 네임 스페이스에서 완전히 구현 됩니다 `Xamarin.Forms` . 따라서에서 지 원하는 모든 플랫폼에서 사용할 수 있습니다 Xamarin.Forms .
 
@@ -47,17 +47,17 @@ Xamarin.Forms `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확�
 - `IsExpanded`가 `bool` 확장 되었는지 여부를 결정 하는 형식의입니다 `Expander` . 이 속성은 `TwoWay` 바인딩 모드를 사용 하며 기본값은 `false` 입니다.
 - `State`의 상태를 `ExpanderState` 나타내는 형식의입니다 `Expander` . 이 속성은 `OneWayToSource` 바인딩 모드를 사용 합니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!NOTE]
-> `Content`속성은 클래스의 콘텐츠 속성 이므로 `Expander` XAML에서 명시적으로 설정할 필요가 없습니다.
+> `Content` 속성은 `Expander` 클래스의 콘텐츠 속성이므로 XAML에서 명시적으로 설정할 필요가 없습니다.
 
 `ExpanderState` 열거형은 다음 멤버를 정의합니다.
 
-- `Expanding`가 확장 중임을 나타냅니다 `Expander` .
-- `Expanded`가 확장 됨을 나타냅니다 `Expander` .
-- `Collapsing`가 축소 됨을 나타냅니다 `Expander` .
-- `Collapsed`이 축소 됨을 나타냅니다 `Expander` .
+- `Expanding` 가 확장 중임을 나타냅니다 `Expander` .
+- `Expanded` 가 확장 됨을 나타냅니다 `Expander` .
+- `Collapsing` 가 축소 됨을 나타냅니다 `Expander` .
+- `Collapsed` 이 축소 됨을 나타냅니다 `Expander` .
 
 `Expander`또한이 컨트롤은 `Tapped` 헤더를 누를 때 발생 하는 이벤트를 정의 합니다 `Expander` . 또한에 `Expander` `ForceUpdateSize` 는 런타임에 프로그래밍 방식으로 크기를 조정 하기 위해 호출할 수 있는 메서드가 포함 되어 있습니다 `Expander` .
 
@@ -135,7 +135,7 @@ expander.Content = grid;
 
 ## <a name="create-expander-content-on-demand"></a>주문형 확장기 콘텐츠 만들기
 
-`Expander`확장에 대 한 응답으로 요청 시 콘텐츠를 만들 수 있습니다 `Expander` . 이 `Expander.ContentTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 작업은 콘텐츠를 포함 하는로 속성을 설정 하 여 수행할 수 있습니다.
+`Expander` 확장에 대 한 응답으로 요청 시 콘텐츠를 만들 수 있습니다 `Expander` . 이 `Expander.ContentTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 작업은 콘텐츠를 포함 하는로 속성을 설정 하 여 수행할 수 있습니다.
 
 ```xaml
 <Expander>
@@ -340,7 +340,7 @@ void OnLabelTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [확장기 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
-- [Xamarin.Forms감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)
+- [확장기 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+- [Xamarin.Forms 감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)
 - [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [Xamarin.Forms 바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

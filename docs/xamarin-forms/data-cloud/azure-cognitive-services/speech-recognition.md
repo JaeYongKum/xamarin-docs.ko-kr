@@ -10,12 +10,12 @@ ms.date: 01/14/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e5888e77948bef0fbb60a4e0068cbedf2d2a50e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139323"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555387"
 ---
 # <a name="speech-recognition-using-azure-speech-service"></a>Azure 음성 서비스를 사용한 음성 인식
 
@@ -34,7 +34,7 @@ Azure Speech Service는 다음과 같은 기능을 제공 하는 클라우드 �
 
 ## <a name="create-an-azure-speech-service-resource"></a>Azure Speech Service 리소스 만들기
 
-Azure Speech Service는 이미지 인식, 음성 인식 및 번역, Bing 검색 등의 작업을 위한 클라우드 기반 Api를 제공 하는 Azure Cognitive Services의 일부입니다. 자세한 내용은 [Azure Cognitive Services 란?](https://docs.microsoft.com/azure/cognitive-services/welcome)을 참조 하세요.
+Azure Speech Service는 이미지 인식, 음성 인식 및 번역, Bing 검색 등의 작업을 위한 클라우드 기반 Api를 제공 하는 Azure Cognitive Services의 일부입니다. 자세한 내용은 [Azure Cognitive Services 란?](/azure/cognitive-services/welcome)을 참조 하세요.
 
 샘플 프로젝트를 사용 하려면 Azure Portal에서 Azure Cognitive Services 리소스를 만들어야 합니다. 음성 서비스와 같은 단일 서비스 또는 다중 서비스 리소스로 Cognitive Services 리소스를 만들 수 있습니다. 음성 서비스 리소스를 만드는 단계는 다음과 같습니다.
 
@@ -43,7 +43,7 @@ Azure Speech Service는 이미지 인식, 음성 인식 및 번역, Bing 검색 
 1. 리소스에 대 한 API 키 및 지역 정보를 가져옵니다.
 1. 샘플 **Constants.cs** 파일을 업데이트 합니다.
 
-리소스를 만드는 단계별 가이드는 [Cognitive Services 리소스 만들기](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)를 참조 하세요.
+리소스를 만드는 단계별 가이드는 [Cognitive Services 리소스 만들기](/azure/cognitive-services/cognitive-services-apis-create-account)를 참조 하세요.
 
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다. 계정이 있으면 무료 계층에서 단일 서비스 리소스를 만들어 서비스를 사용해 볼 수 있습니다.
@@ -471,7 +471,7 @@ namespace CognitiveSpeechService.UWP.Services
 
 ## <a name="related-links"></a>관련 링크
 
-- [Azure Speech Service 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
-- [Azure Speech Service 개요](https://docs.microsoft.com/azure/cognitive-services/speech-service/overview)
-- [Cognitive Services 리소스 만들기](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account)
-- [빠른 시작: 마이크에서 음성 인식](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)
+- [Azure Speech Service 샘플](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+- [Azure Speech Service 개요](/azure/cognitive-services/speech-service/overview)
+- [Cognitive Services 리소스 만들기](/azure/cognitive-services/cognitive-services-apis-create-account)
+- [빠른 시작: 마이크에서 음성 인식](/azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-microphone)

@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9a39433a0bad518055542adb190f4f441675ddfb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138673"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556375"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>분할 된 SkiaSharp 비트맵 표시
 
@@ -27,7 +27,7 @@ SkiaSharp `SKCanvas` 개체는 라는 메서드와 `DrawBitmapNinePatch` 매우 
 
 이러한 메서드는 일반적으로 단추와 같은 사용자 인터페이스 개체의 일부를 구성 하는 비트맵을 렌더링 하는 데 사용 됩니다. 단추를 디자인할 때 일반적으로 단추의 내용에 따라 단추의 크기를 조정 하는 것이 좋습니다. 단추 내용에 관계 없이 단추의 테두리 너비가 동일한 것이 좋습니다. 이는의 이상적인 응용 프로그램입니다 `DrawBitmapNinePatch` .
 
-`DrawBitmapNinePatch`는의 특수 한 경우 `DrawBitmapLattice` 이지만를 사용 하 고 이해 하는 두 가지 방법이 더 쉽습니다.
+`DrawBitmapNinePatch` 는의 특수 한 경우 `DrawBitmapLattice` 이지만를 사용 하 고 이해 하는 두 가지 방법이 더 쉽습니다.
 
 ## <a name="the-nine-patch-display"></a>9 개의 패치 표시 
 
@@ -47,7 +47,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 가운데 사각형은 비트맵을 기준으로 합니다. `SKRectI`값 (의 정수 버전 `SKRect` )이 고 모든 좌표와 크기는 픽셀 단위입니다. 대상 사각형은 표시 화면을 기준으로 합니다. `paint` 인수는 선택적 요소입니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **9 개 패치 표시** 페이지는 먼저 정적 생성자를 사용 하 여 형식의 공용 정적 속성을 만듭니다 `SKBitmap` .
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **9 개 패치 표시** 페이지는 먼저 정적 생성자를 사용 하 여 형식의 공용 정적 속성을 만듭니다 `SKBitmap` .
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -141,8 +141,8 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 가 중 Ia 설명서에 따라 배열에는 `Flags` 각 사각형에 대 한 요소, 먼저 사각형의 맨 위 행, 두 번째 행 등이 포함 됩니다. `Flags`배열은 형식이 며 [`SKLatticeFlags`](xref:SkiaSharp.SKLatticeFlags) , 열거형은 다음 멤버를 포함 합니다.
 
-- `Default`값 0 인
-- `Transparent`값 1
+- `Default` 값 0 인
+- `Transparent` 값 1
 
 그러나 이러한 플래그는 예상 대로 작동 하지 않으며 무시 하는 것이 가장 좋습니다. 하지만 속성은로 설정 하지 않습니다 `Flags` `null` . `SKLatticeFlags`총 사각형 수를 포함할 수 있는 크기의 배열로 설정 합니다.
 
@@ -230,5 +230,5 @@ public class LatticeDisplayPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

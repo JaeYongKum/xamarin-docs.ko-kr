@@ -10,18 +10,18 @@ ms.date: 03/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a8e8388a6a460b3a2958d3ab3b9a4c9c34ea1831
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127143"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556466"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Xamarin.Forms시각적 렌더러 만들기
+# <a name="create-a-no-locxamarinforms-visual-renderer"></a>Xamarin.Forms시각적 렌더러 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-Xamarin.Forms시각적 개체를 사용 하면 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 뷰를 서브 클래스 하지 않고도 개체에 렌더러를 만들고 선택적으로 적용할 수 있습니다 Xamarin.Forms . 의 일부로 형식을 지정 하는 렌더러는 `IVisual` `ExportRendererAttribute` 기본 렌더러 대신 옵트인 (opt in) 뷰를 렌더링 하는 데 사용 됩니다. 렌더러 선택 시간에 `Visual` 뷰의 속성이 검사 되 고 렌더러 선택 프로세스에 포함 됩니다.
+Xamarin.Forms 시각적 개체를 사용 하면 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 뷰를 서브 클래스 하지 않고도 개체에 렌더러를 만들고 선택적으로 적용할 수 있습니다 Xamarin.Forms . 의 일부로 형식을 지정 하는 렌더러는 `IVisual` `ExportRendererAttribute` 기본 렌더러 대신 옵트인 (opt in) 뷰를 렌더링 하는 데 사용 됩니다. 렌더러 선택 시간에 `Visual` 뷰의 속성이 검사 되 고 렌더러 선택 프로세스에 포함 됩니다.
 
 > [!IMPORTANT]
 > 현재 [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) 뷰를 렌더링 한 후에는 속성을 변경할 수 없지만 이후 릴리스에서 변경 될 수 있습니다.
@@ -175,6 +175,6 @@ button.Visual = new CustomVisual();
 
 ## <a name="related-links"></a>관련 링크
 
-- [재질 시각적 개체 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [재질 시각적 개체 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Xamarin.Forms 재질 시각적 개체](material-visual.md)
 - [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -1,5 +1,5 @@
 ---
-title: SkiaSharp 그래픽Xamarin.Forms
+title: SkiaSharp 그래픽 Xamarin.Forms
 description: 'SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 Kia 그래픽 엔진으로 구동 되는 .NET 및 c # 용 2D 그래픽 시스템입니다. 이 가이드에서는 응용 프로그램에서 2D 그래픽에 SkiaSharp를 사용 하는 방법을 설명 합니다 Xamarin.Forms .'
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
@@ -9,14 +9,14 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da00aafb9f659d8af119e00476a9a243a2f91023
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 6ca08815e422b9ec96dcb11d6b069a227bf62866
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795064"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555270"
 ---
-# <a name="skiasharp-graphics-in-xamarinforms"></a>SkiaSharp 그래픽Xamarin.Forms
+# <a name="skiasharp-graphics-in-no-locxamarinforms"></a>SkiaSharp 그래픽 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
@@ -28,7 +28,7 @@ SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 K
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**웹 세미나: SkiaSharpXamarin.Forms**
+**웹 세미나: SkiaSharp Xamarin.Forms**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp Preliminaries
 
@@ -67,6 +67,6 @@ SkiaSharp으로 그릴 수 있는 가장 간단한 그래픽 그림 중 일부�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [SkiaSharp with Xamarin.Forms 웹 세미나 (비디오)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

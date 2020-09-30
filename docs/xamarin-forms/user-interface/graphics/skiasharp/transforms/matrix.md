@@ -10,12 +10,12 @@ ms.date: 04/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 020319761ba1274495b7595a0d18435f98a5f990
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 911365b6293fecd3bf309f3e61d9b232d90b7a13
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937178"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556557"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 매트릭스 변환
 
@@ -41,7 +41,7 @@ _다양 한 변환 매트릭스를 사용 하 여 SkiaSharp 변환에 대해 자
 | 0  0  1 |
 </pre>
 
-정적 메서드를 사용 하 여 항등 행렬을 만들 수 있습니다 [`SKMatrix.MakeIdentity`](xref:SkiaSharp.SKMatrix.MakeIdentity) .
+정적 메서드를 사용 하 여 항등 행렬을 만들 수 있습니다  [`SKMatrix.MakeIdentity`](xref:SkiaSharp.SKMatrix.MakeIdentity) .
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeIdentity();
@@ -174,7 +174,7 @@ canvas.Scale(sx, sy);
 |  0   0   1 |   | tx  ty   1 |   | tx  ty   1 |
 </pre>
 
-`Scale`다음과 같이 호출할 수 있습니다 `Translate` .
+`Scale` 다음과 같이 호출할 수 있습니다 `Translate` .
 
 ```csharp
 canvas.Scale(sx, sy);
@@ -221,7 +221,7 @@ canvas.Translate(–px, –py);
 │ TransX  TransY  Persp2 │
 </pre>
 
-`SKMatrix`또한 형식 이라는 속성을 정의 [`Values`](xref:SkiaSharp.SKMatrix.Values) `float[]` 합니다. 이 속성을 사용 하 여,,,,,,, 및 순서로 한 샷의 9 개의 값을 설정 하거나 가져올 수 있습니다 `ScaleX` `SkewX` `TransX` `SkewY` `ScaleY` `TransY` `Persp0` `Persp1` `Persp2` .
+`SKMatrix` 또한 형식 이라는 속성을 정의 [`Values`](xref:SkiaSharp.SKMatrix.Values) `float[]` 합니다. 이 속성을 사용 하 여,,,,,,, 및 순서로 한 샷의 9 개의 값을 설정 하거나 가져올 수 있습니다 `ScaleX` `SkewX` `TransX` `SkewY` `ScaleY` `TransY` `Persp0` `Persp1` `Persp2` .
 
 `Persp0`, `Persp1` 및 셀은 `Persp2` [**비 관계 변환**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)문서에서 설명 합니다. 이러한 셀의 기본값은 0, 0, 1 이면 다음과 같이 변환에 좌표 점이 곱해집니다.
 
@@ -243,14 +243,14 @@ canvas.Translate(–px, –py);
 
 - [`MakeTranslation`](xref:SkiaSharp.SKMatrix.MakeTranslation(System.Single,System.Single))
 - [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single))
-- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single,System.Single,System.Single))피벗 점을 사용 하 여
-- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single))라디안의 각도
-- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single,System.Single,System.Single))피벗 점이 있는 라디안의 각도
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single,System.Single,System.Single)) 피벗 점을 사용 하 여
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single)) 라디안의 각도
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single,System.Single,System.Single)) 피벗 점이 있는 라디안의 각도
 - [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single))
-- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single))피벗 점을 사용 하 여
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single)) 피벗 점을 사용 하 여
 - [`MakeSkew`](xref:SkiaSharp.SKMatrix.MakeSkew(System.Single,System.Single))
 
-`SKMatrix`는 두 매트릭스를 연결 하는 여러 정적 메서드를 정의 합니다 .이는 곱하기를 의미 합니다. 이러한 메서드의 이름은 [`Concat`](xref:SkiaSharp.SKMatrix.Concat*) , [`PostConcat`](xref:SkiaSharp.SKMatrix.PostConcat*) 및 이며 [`PreConcat`](xref:SkiaSharp.SKMatrix.PreConcat*) , 각각에는 두 가지 버전이 있습니다. 이러한 메서드에는 반환 값이 없습니다. 대신 인수를 통해 기존 `SKMatrix` 값을 참조 `ref` 합니다. 다음 예제에서, `A` `B` 및 `R` ("result"의 경우)는 모두 `SKMatrix` 값입니다.
+`SKMatrix` 는 두 매트릭스를 연결 하는 여러 정적 메서드를 정의 합니다 .이는 곱하기를 의미 합니다. 이러한 메서드의 이름은 [`Concat`](xref:SkiaSharp.SKMatrix.Concat*) , [`PostConcat`](xref:SkiaSharp.SKMatrix.PostConcat*) 및 이며 [`PreConcat`](xref:SkiaSharp.SKMatrix.PreConcat*) , 각각에는 두 가지 버전이 있습니다. 이러한 메서드에는 반환 값이 없습니다. 대신 인수를 통해 기존 `SKMatrix` 값을 참조 `ref` 합니다. 다음 예제에서, `A` `B` 및 `R` ("result"의 경우)는 모두 `SKMatrix` 값입니다.
 
 두 `Concat` 메서드는 다음과 같이 호출 됩니다.
 
@@ -444,9 +444,9 @@ SKRect transformedRect = matrix.MapRect(rect);
 
 상관 변환에 대 한 느낌을 얻는 한 가지 방법은 화면 주위에서 비트맵의 세 모퉁이를 대화형으로 이동 하 고 변환 결과를 확인 하는 것입니다. 이는 **관계 행렬 표시** 페이지의 개념입니다. 이 페이지에는 다른 데모 에서도 사용 되는 두 개의 다른 클래스가 필요 합니다.
 
-[`TouchPoint`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchPoint.cs)클래스는 화면 주위에서 끌 수 있는 반투명 원을 표시 합니다. `TouchPoint`에는 `SKCanvasView` 또는의 부모인 요소에 연결 된가 있어야 합니다 `SKCanvasView` [`TouchEffect`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchEffect.cs) . `Capture` 속성을 `true`로 설정합니다. `TouchAction`이벤트 처리기에서 프로그램은 `ProcessTouchEvent` `TouchPoint` 각 인스턴스에 대해의 메서드를 호출 해야 합니다 `TouchPoint` . `true`터치 이벤트로 인해 터치 지점이 이동 하는 경우 메서드는를 반환 합니다. 또한 처리기는 `PaintSurface` 각 인스턴스에서 메서드를 호출 하 여 개체에 전달 해야 합니다 `Paint` `TouchPoint` `SKCanvas` .
+[`TouchPoint`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchPoint.cs)클래스는 화면 주위에서 끌 수 있는 반투명 원을 표시 합니다. `TouchPoint` 에는 `SKCanvasView` 또는의 부모인 요소에 연결 된가 있어야 합니다 `SKCanvasView` [`TouchEffect`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/TouchEffect.cs) . `Capture` 속성을 `true`으로 설정합니다. `TouchAction`이벤트 처리기에서 프로그램은 `ProcessTouchEvent` `TouchPoint` 각 인스턴스에 대해의 메서드를 호출 해야 합니다 `TouchPoint` . `true`터치 이벤트로 인해 터치 지점이 이동 하는 경우 메서드는를 반환 합니다. 또한 처리기는 `PaintSurface` 각 인스턴스에서 메서드를 호출 하 여 개체에 전달 해야 합니다 `Paint` `TouchPoint` `SKCanvas` .
 
-`TouchPoint`SkiaSharp 시각적 개체를 별도의 클래스에 캡슐화 하는 일반적인 방법을 보여 줍니다. 클래스는 시각적 개체의 특성을 지정 하는 속성을 정의할 수 있으며, `Paint` 인수를 사용 하 여 명명 된 메서드는 `SKCanvas` 이를 렌더링할 수 있습니다.
+`TouchPoint` SkiaSharp 시각적 개체를 별도의 클래스에 캡슐화 하는 일반적인 방법을 보여 줍니다. 클래스는 시각적 개체의 특성을 지정 하는 속성을 정의할 수 있으며, `Paint` 인수를 사용 하 여 명명 된 메서드는 `SKCanvas` 이를 렌더링할 수 있습니다.
 
 `Center`의 속성은 `TouchPoint` 개체의 위치를 나타냅니다. 이 속성을 설정 하 여 위치를 초기화할 수 있습니다. 사용자가 캔버스 주위에서 원을 끌면 속성이 변경 됩니다.
 
@@ -655,5 +655,5 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

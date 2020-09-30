@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a7a4e8c4467438d1f732508a15bee7045310109b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6387da5ffa240c2509a2942a1e721def8f8d39b9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931224"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555634"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
@@ -31,15 +31,15 @@ _연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 �
 
 외형선은 일반적으로 다음 메서드를 호출 하 여 시작 합니다 `SKPath` .
 
-- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*)새 컨투어를 시작 하려면
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) 새 컨투어를 시작 하려면
 
 이 메서드에 대 한 인수는 단일 점으로, 값으로 표현 `SKPoint` 하거나 별도 X 및 Y 좌표로 표현할 수 있습니다. 이 `MoveTo` 호출은 컨투어 시작 지점 및 초기 *현재 점을*설정 합니다. 다음 메서드를 호출 하 여 현재 점에서 메서드에 지정 된 지점까지 선 또는 곡선이 있는 컨투어를 계속 진행 하 고 새 현재 점이 됩니다.
 
-- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*)경로에 직선을 추가 하려면
-- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*)원 또는 타원의 원주 선 인 호를 추가 하려면
-- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*)입방 형 3 차원 곡선 스플라인을 추가 하려면
-- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*)정방형 3 차원 곡선 스플라인을 추가 하려면
-- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*)원추형 섹션 (줄임표, parabolas 및 hyperbolas)을 정확 하 게 렌더링할 수 있는 유리수 정방형 3 차원 곡선 스플라인을 추가 하려면
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) 경로에 직선을 추가 하려면
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) 원 또는 타원의 원주 선 인 호를 추가 하려면
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) 입방 형 3 차원 곡선 스플라인을 추가 하려면
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) 정방형 3 차원 곡선 스플라인을 추가 하려면
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) 원추형 섹션 (줄임표, parabolas 및 hyperbolas)을 정확 하 게 렌더링할 수 있는 유리수 정방형 3 차원 곡선 스플라인을 추가 하려면
 
 이러한 다섯 가지 방법에는 선 또는 곡선을 설명 하는 데 필요한 모든 정보가 포함 되어 있지 않습니다. 이러한 다섯 개의 메서드는 바로 앞의 메서드 호출로 설정 된 현재 지점과 함께 작동 합니다. 예를 들어, `LineTo` 메서드는 현재 점에 따라 윤곽선에 직선을 추가 하므로에 대 한 매개 변수는 `LineTo` 단일 지점만 됩니다.
 
@@ -108,25 +108,25 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기서 볼 수 있듯이 첫 번째 컨투어는 세 개의 연결 된 선 이지만 끝에 연결 되지 않습니다. 두 줄이 위쪽에 겹칩니다. 두 번째 컨투어는 명확 하 게 종결 되며, `LineTo` `Close` 메서드가 컨투어를 닫기 위해 최종 줄을 자동으로 추가 하기 때문에 한 번의 호출로 수행 되었습니다.
 
-`SKCanvas`하나의 메서드만 정의 합니다 [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) .이 데모에서는 경로를 채우고 스트로크 하기 위해를 두 번 호출 합니다. 닫히지 않은 경우에도 모든 컨투어가 채워집니다. 닫히지 않은 경로를 채우기 위해 직선은 윤곽선의 시작점과 끝점 사이에 존재 하는 것으로 간주 됩니다. `LineTo`첫 번째 컨투어에서 마지막을 제거 하거나 `Close` 두 번째 컨투어에서 호출을 제거 하는 경우 각 컨투어는 두 면만 갖지만 삼각형 인 것 처럼 채워집니다.
+`SKCanvas` 하나의 메서드만 정의 합니다 [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) .이 데모에서는 경로를 채우고 스트로크 하기 위해를 두 번 호출 합니다. 닫히지 않은 경우에도 모든 컨투어가 채워집니다. 닫히지 않은 경로를 채우기 위해 직선은 윤곽선의 시작점과 끝점 사이에 존재 하는 것으로 간주 됩니다. `LineTo`첫 번째 컨투어에서 마지막을 제거 하거나 `Close` 두 번째 컨투어에서 호출을 제거 하는 경우 각 컨투어는 두 면만 갖지만 삼각형 인 것 처럼 채워집니다.
 
-`SKPath`다른 많은 메서드와 속성을 정의 합니다. 다음 메서드는 경로에 전체 컨투어를 추가 합니다 .이는 메서드에 따라 닫히거나 닫히지 않았을 수 있습니다.
+`SKPath` 다른 많은 메서드와 속성을 정의 합니다. 다음 메서드는 경로에 전체 컨투어를 추가 합니다 .이는 메서드에 따라 닫히거나 닫히지 않았을 수 있습니다.
 
 - [`AddRect`](xref:SkiaSharp.SKPath.AddRect*)
 - [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
-- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single))타원의 원주에 곡선을 추가 하려면
-- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*)현재 경로에 다른 경로를 추가 하려면
-- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath))반대 방향으로 다른 경로를 추가 하려면
+- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) 타원의 원주에 곡선을 추가 하려면
+- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*) 현재 경로에 다른 경로를 추가 하려면
+- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) 반대 방향으로 다른 경로를 추가 하려면
 
 `SKPath`개체는 &mdash; 일련의 점과 연결의 기 하 도형만 정의 한다는 점에 유의 하세요. `SKPath`가 개체와 결합 된 경우에만 `SKPaint` 특정 색, 스트로크 너비 등을 사용 하 여 렌더링 된 경로입니다. 또한 메서드로 전달 되는 개체는 `SKPaint` `DrawPath` 전체 경로의 특징을 정의 합니다. 여러 색이 필요한 항목을 그리려면 각 색에 별도의 경로를 사용 해야 합니다.
 
 선의 시작과 끝 모양이 스트로크 단면에 의해 정의 되는 것 처럼 두 줄 사이의 연결 모양은 *스트로크 조인*에 의해 정의 됩니다. [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin)의 속성을 `SKPaint` 열거형의 멤버로 설정 하 여이를 지정 합니다 [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) .
 
-- `Miter`pointy join의 경우
-- `Round`둥근 조인의 경우
-- `Bevel`잘라내야 조인
+- `Miter` pointy join의 경우
+- `Round` 둥근 조인의 경우
+- `Bevel` 잘라내야 조인
 
 스트로크 **조인** 페이지에는 스트로크 **단면** 페이지와 비슷한 코드와 세 가지 스트로크 조인이 표시 됩니다. `PaintSurface`다음은 클래스의 이벤트 처리기입니다 [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) .
 
@@ -200,5 +200,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 04/05/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 074b782bfc5458cf89e593913b6f31de633ffd73
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98722d29a674e4d69f31a670a541eaabb550898e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938153"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555647"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 그리기
 
@@ -27,9 +27,9 @@ _손가락을 사용 하 여 캔버스에 그립니다._
 
 ![손가락 그리기의 연습](finger-paint-images/fingerpaintsample.png)
 
-의 터치 지원은 Xamarin.Forms 화면에서 개별 손가락을 추적 하는 것을 허용 하지 않으므로 터치식 Xamarin.Forms 추적 효과가 추가 터치 지원을 제공 하도록 개발 되었습니다. 이 효과는 [**효과에서 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)하는 문서에 설명 되어 있습니다. 샘플 프로그램 [**터치 추적 효과 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 에는 손가락 그리기 프로그램을 포함 하 여 SkiaSharp를 사용 하는 두 페이지가 포함 되어 있습니다.
+의 터치 지원은 Xamarin.Forms 화면에서 개별 손가락을 추적 하는 것을 허용 하지 않으므로 터치식 Xamarin.Forms 추적 효과가 추가 터치 지원을 제공 하도록 개발 되었습니다. 이 효과는 [**효과에서 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)하는 문서에 설명 되어 있습니다. 샘플 프로그램 [**터치 추적 효과 데모**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 에는 손가락 그리기 프로그램을 포함 하 여 SkiaSharp를 사용 하는 두 페이지가 포함 되어 있습니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 솔루션에는이 터치 추적 이벤트가 포함 됩니다. .NET Standard library 프로젝트에는 `TouchEffect` 클래스, `TouchActionType` 열거형, `TouchActionEventHandler` 대리자 및 클래스가 포함 되어 있습니다 `TouchActionEventArgs` . 각 플랫폼 프로젝트에 `TouchEffect` 는 해당 플랫폼에 대 한 클래스가 포함 되어 있습니다. iOS 프로젝트에는 클래스도 포함 되어 있습니다 `TouchRecognizer` .
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 솔루션에는이 터치 추적 이벤트가 포함 됩니다. .NET Standard library 프로젝트에는 `TouchEffect` 클래스, `TouchActionType` 열거형, `TouchActionEventHandler` 대리자 및 클래스가 포함 되어 있습니다 `TouchActionEventArgs` . 각 플랫폼 프로젝트에 `TouchEffect` 는 해당 플랫폼에 대 한 클래스가 포함 되어 있습니다. iOS 프로젝트에는 클래스도 포함 되어 있습니다 `TouchRecognizer` .
 
 **SkiaSharpFormsDemos** 의 **손가락 그리기** 페이지는 손가락 그리기의 단순화 된 구현입니다. 색 또는 스트로크 너비 선택을 허용 하지 않으며 캔버스를 지울 수는 없으며, 물론 아트 워크는 저장할 수 없습니다.
 
@@ -174,7 +174,7 @@ public partial class FingerPaintPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [터치식 추적 효과 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [터치식 추적 효과 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [효과로부터 이벤트 호출](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

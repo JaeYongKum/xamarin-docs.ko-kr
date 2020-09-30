@@ -1,5 +1,5 @@
 ---
-title: 단순 애니메이션Xamarin.Forms
+title: 단순 애니메이션 Xamarin.Forms
 description: ViewExtensions 클래스는 간단한 애니메이션을 생성 하는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서에서는 ViewExtensions 클래스를 사용 하 여 애니메이션을 만들고 취소 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
@@ -10,14 +10,14 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b13ec7ab079dcf7069b5f4b0dccbb52faf25f927
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2336a4fbd92a7e9158d332de1ea2e2b018d144ce
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933798"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556661"
 ---
-# <a name="simple-animations-in-xamarinforms"></a>단순 애니메이션Xamarin.Forms
+# <a name="simple-animations-in-no-locxamarinforms"></a>단순 애니메이션 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
@@ -26,9 +26,9 @@ _ViewExtensions 클래스는 간단한 애니메이션을 생성 하는 데 사�
 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)클래스는 간단한 애니메이션을 만드는 데 사용할 수 있는 다음과 같은 확장 메서드를 제공 합니다.
 
 - [ `TranslateTo` ] (f: Xamarin.Forms . ViewExtensions ( Xamarin.Forms . VisualElement, system.string, system.string, 시스템. UInt32, Xamarin.Forms . 감속/가속)은 [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 의 및 속성에 애니메이션을 적용 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
-- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*)의 속성에 애니메이션 효과를 적용 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
-- `ScaleXTo`의 속성에 애니메이션 효과를 적용 [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
-- `ScaleYTo`의 속성에 애니메이션 효과를 적용 [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
+- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) 의 속성에 애니메이션 효과를 적용 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
+- `ScaleXTo` 의 속성에 애니메이션 효과를 적용 [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
+- `ScaleYTo` 의 속성에 애니메이션 효과를 적용 [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
 - [ `RelScaleTo` ] (f: Xamarin.Forms . ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속/가속)는 애니메이션 된 증분 증가 또는 감소를 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) 의 속성에 적용 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
 - [ `RotateTo` ] (f: Xamarin.Forms . ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속/가속)는의 속성에 애니메이션 효과를 적용 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
 - [ `RelRotateTo` ] (f: Xamarin.Forms . ViewExtensions ( Xamarin.Forms . VisualElement, Xamarin.Forms system.string, system.object. 감속/가속)는 애니메이션 된 증분 증가 또는 감소를 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) 의 속성에 적용 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 합니다.
@@ -85,7 +85,7 @@ await image.RelRotateTo (360, 2000);
 
 ![상대 회전 애니메이션](simple-images/relrotateto.png)
 
-### <a name="scaling"></a>확장
+### <a name="scaling"></a>크기 조정
 
 다음 코드 예제에서는 메서드를 사용 하 여 [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) 의 속성에 애니메이션 효과를 주는 방법을 보여 줍니다 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) [`Image`](xref:Xamarin.Forms.Image) .
 
@@ -237,5 +237,5 @@ ViewExtensions.CancelAnimations (image);
 ## <a name="related-links"></a>관련 링크
 
 - [비동기 지원 개요](~/cross-platform/platform/async.md)
-- [기본 애니메이션 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+- [기본 애니메이션 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

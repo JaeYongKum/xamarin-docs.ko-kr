@@ -10,14 +10,14 @@ ms.date: 04/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdead80671a1ae6539de6614441df7e86863a5a6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9dc5b8e63a35c3a0b797d0794af7a31aea4969c9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137477"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555595"
 ---
-# <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>Xamarin.Forms기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?
+# <a name="can-i-update-the-no-locxamarinforms-default-template-to-a-newer-nuget-package"></a>Xamarin.Forms기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?
 
 이 가이드에서는 Xamarin.Forms .NET Standard 라이브러리 템플릿을 예로 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에도 적용 됩니다. 이 가이드는 1.5.1.6471에서 2.1.0.6529로 업데이트 하는 예제를 사용 하 여 작성 Xamarin.Forms 되었지만 동일한 단계를 통해 다른 버전을 기본값으로 설정할 수 있습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "84137477"
 
     예제: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4. 기본 [다중 프로젝트 템플릿 파일](https://msdn.microsoft.com/library/ms185308.aspx) ()의 "name" 요소를 변경 `Xamarin.Forms.PCL.vstemplate` 하 여 고유 하 게 만듭니다. 다음은 그 예입니다.
+4. 기본 [다중 프로젝트 템플릿 파일](/visualstudio/ide/how-to-create-multi-project-templates) ()의 "name" 요소를 변경 `Xamarin.Forms.PCL.vstemplate` 하 여 고유 하 게 만듭니다. 다음은 그 예입니다.
 
     > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 

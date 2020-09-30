@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 75d19e41243076da127d58defdabeca908d900cd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932368"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556089"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -37,11 +37,11 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 줄의 시작 및 끝 모양을 *줄 캡* 이라고 하며, 선 끝 *에 선 끝*을 표시 합니다. 이 컨텍스트에서 "캡" 이라는 단어는 &mdash; 줄의 끝에 있는 종류의 hat 항목을 나타냅니다. [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap)개체의 속성을 `SKPaint` 열거형의 다음 멤버 중 하나로 설정 합니다 [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) .
 
-- `Butt`(기본값)
+- `Butt` (기본값)
 - `Square`
 - `Round`
 
-이는 샘플 프로그램에서 가장 잘 보여 줍니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp Lines 및 Paths** 섹션은 클래스에 따라 **스트로크 캡** 이라는 페이지로 시작 합니다 [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) . 이 페이지에서는 열거형 `PaintSurface` 의 세 가지 멤버를 반복 하 여 `SKStrokeCap` 열거형 멤버의 이름을 표시 하 고 해당 스트로크 캡을 사용 하 여 선을 그리는 이벤트 처리기를 정의 합니다.
+이는 샘플 프로그램에서 가장 잘 보여 줍니다. [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp Lines 및 Paths** 섹션은 클래스에 따라 **스트로크 캡** 이라는 페이지로 시작 합니다 [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) . 이 페이지에서는 열거형 `PaintSurface` 의 세 가지 멤버를 반복 하 여 `SKStrokeCap` 열거형 멤버의 이름을 표시 하 고 해당 스트로크 캡을 사용 하 여 선을 그리는 이벤트 처리기를 정의 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,9 +109,9 @@ DrawPoints (SKPointMode mode, points, paint)
 
 `points`매개 변수는 값의 배열이 며 `SKPoint` , 다음 `mode` [`SKPointMode`](xref:SkiaSharp.SKPointMode) 세 개의 멤버를 포함 하는 열거형의 멤버입니다.
 
-- `Points`개별 요소를 렌더링 하려면
-- `Lines`각 점의 쌍을 연결 하려면
-- `Polygon`연속 되는 모든 요소를 연결 하려면
+- `Points` 개별 요소를 렌더링 하려면
+- `Lines` 각 점의 쌍을 연결 하려면
+- `Polygon` 연속 되는 모든 요소를 연결 하려면
 
 **여러 줄** 페이지에서이 메서드를 보여 줍니다. [**MultipleLinesPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) 파일은 열거형 `Picker` 의 멤버 `SKPointMode` 와 열거형의 멤버를 선택할 수 있는 두 개의 뷰를 인스턴스화합니다 `SKStrokeCap` .
 
@@ -243,5 +243,5 @@ Android 스크린샷에는의 결과가 표시 `SKPointMode.Lines` 됩니다. `D
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

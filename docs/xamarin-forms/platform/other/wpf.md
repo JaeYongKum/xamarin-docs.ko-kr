@@ -1,6 +1,6 @@
 ---
 title: WPF 플랫폼 설정
-description: Xamarin.FormsWPF 플랫폼에 대 한 미리 보기를 지원 합니다.
+description: Xamarin.Forms WPF 플랫폼에 대 한 미리 보기를 지원 합니다.
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
@@ -11,23 +11,23 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 774ae964643b9b78f424d96b3dd382f244205dcf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 17db86eb6e6c767498f1d8b550b923377b905364
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946327"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557441"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)
 
-Xamarin.Forms에는 .NET Framework 및 .NET Core 3의 Windows Presentation Foundation (WPF)에 대 한 미리 보기가 지원 됩니다. 이 문서에서는 .NET Framework를 대상으로 하는 WPF 프로젝트를 솔루션에 추가 하는 방법을 보여 줍니다 Xamarin.Forms .
+Xamarin.Forms 에는 .NET Framework 및 .NET Core 3의 Windows Presentation Foundation (WPF)에 대 한 미리 보기가 지원 됩니다. 이 문서에서는 .NET Framework를 대상으로 하는 WPF 프로젝트를 솔루션에 추가 하는 방법을 보여 줍니다 Xamarin.Forms .
 
 > [!IMPORTANT]
-> Xamarin.FormsWPF에 대 한 지원은 커뮤니티에서 제공 합니다. 자세한 내용은 [ Xamarin.Forms 플랫폼 지원](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)을 참조 하세요.
+> Xamarin.Forms WPF에 대 한 지원은 커뮤니티에서 제공 합니다. 자세한 내용은 [ Xamarin.Forms 플랫폼 지원](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)을 참조 하세요.
 
-시작 하기 전에 Xamarin.Forms Visual Studio 2019에서 새 솔루션을 만들거나 기존 Xamarin.Forms 솔루션 (예: [**boxviewclock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock))을 사용 합니다. WPF 앱은 Windows의 솔루션에만 추가할 수 있습니다 Xamarin.Forms .
+시작 하기 전에 Xamarin.Forms Visual Studio 2019에서 새 솔루션을 만들거나 기존 Xamarin.Forms 솔루션 (예: [**boxviewclock**](/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock))을 사용 합니다. WPF 앱은 Windows의 솔루션에만 추가할 수 있습니다 Xamarin.Forms .
 
 ## <a name="add-a-wpf-application"></a>WPF 응용 프로그램 추가
 
@@ -42,7 +42,7 @@ Windows 7, 8 및 10 데스크톱에서 실행 되는 WPF 응용 프로그램을 
     **다음** 단추를 누릅니다.
 
     > [!NOTE]
-    > Xamarin.Forms4.7는 .NET Core 3에서 실행 되는 WPF 앱에 대 한 지원을 포함 합니다.
+    > Xamarin.Forms 4.7는 .NET Core 3에서 실행 되는 WPF 앱에 대 한 지원을 포함 합니다.
 
 3. **새 프로젝트 구성** 창에서 **wpf** 확장명을 사용 하 여 프로젝트의 이름을 입력 합니다 (예: **boxviewclock. wpf**). **찾아보기** 단추를 클릭 하 여 **boxviewclock** 폴더를 선택 하 고 **폴더 선택** 을 클릭 하 여 솔루션의 다른 프로젝트와 같은 디렉터리에 WPF 프로젝트를 추가 합니다.
 
@@ -162,4 +162,4 @@ Title="BoxViewClock" Height="450" Width="800"
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Xamarin.Forms3.0 WPF 지원 비디오**
+**Xamarin.Forms 3.0 WPF 지원 비디오**

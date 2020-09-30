@@ -1,6 +1,6 @@
 ---
-title: 색의Xamarin.Forms
-description: Xamarin.Forms유연한 플랫폼 간 색 클래스를 제공 합니다. 이 문서에서는 Color 클래스에서 제공 하는 기능과 사용 방법에 대해 설명 합니다.
+title: 색의 Xamarin.Forms
+description: Xamarin.Forms 유연한 플랫폼 간 색 클래스를 제공 합니다. 이 문서에서는 Color 클래스에서 제공 하는 기능과 사용 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
@@ -10,31 +10,31 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a02fe7451702367d85d322b756df4a547a009454
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6b4e44cb667335ecca7a0c7e5ec77d6e14ed975c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137347"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557233"
 ---
-# <a name="colors-in-xamarinforms"></a>색의Xamarin.Forms
+# <a name="colors-in-no-locxamarinforms"></a>색의 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
-_Xamarin.ios는 유연한 플랫폼 간 색 클래스를 제공 합니다._
+_Xamarin.Forms 유연한 플랫폼 간 색 클래스를 제공 합니다._
 
 이 문서에서는에서 클래스를 사용 하는 다양 한 방법을 소개 [`Color`](xref:Xamarin.Forms.Color) Xamarin.Forms 합니다.
 
 [`Color`](xref:Xamarin.Forms.Color)클래스는 인스턴스를 작성 하는 여러 메서드를 제공 합니다 `Color` .
 
 - **명명 된 색** -, 및를 포함 한 일반적인 명명 된 색의 컬렉션입니다 `Red` `Green` `Blue` .
-- `FromHex`-HTML에서 사용 된 구문과 유사한 문자열 값 (예: "00FF00")입니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
-- `FromHsla`-색조, 채도 및 명도 `double` 값 (선택적 알파 값 (0.0-1.0)).
-- `FromHsv`-색상, 채도 및 값 `int` 또는 값 `double` 입니다.
-- `FromHsva`-색상, 채도 및 값 `int` 또는 값 `double` 입니다.
-- `FromRgb`-빨강, 녹색 및 파랑 `int` 값 (0-255)입니다.
-- `FromRgba`-빨강, 녹색, 파랑 및 알파 `int` 값 (0-255)입니다.
-- `FromUint`- `double` **argb**를 나타내는 단일 값을 설정 합니다.
+- `FromHex` -HTML에서 사용 된 구문과 유사한 문자열 값 (예: "00FF00")입니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
+- `FromHsla` -색조, 채도 및 명도 `double` 값 (선택적 알파 값 (0.0-1.0)).
+- `FromHsv` -색상, 채도 및 값 `int` 또는 값 `double` 입니다.
+- `FromHsva` -색상, 채도 및 값 `int` 또는 값 `double` 입니다.
+- `FromRgb` -빨강, 녹색 및 파랑 `int` 값 (0-255)입니다.
+- `FromRgba` -빨강, 녹색, 파랑 및 알파  `int` 값 (0-255)입니다.
+- `FromUint` - `double` **argb**를 나타내는 단일 값을 설정 합니다.
 
 다음은 `BackgroundColor` 허용 되는 구문의 다른 변형을 사용 하 여 일부 레이블의에 할당 된 몇 가지 예제 색입니다.
 
@@ -72,14 +72,14 @@ IOS 및 Android에서이 인스턴스는 기본 배경에 표시 되는 대비 �
 
 ## <a name="additional-methods"></a>추가 방법
 
-[`Color`](xref:Xamarin.Forms.Color)인스턴스에는 다음과 같은 추가 메서드가 포함 됩니다.
+[`Color`](xref:Xamarin.Forms.Color) 인스턴스에는 다음과 같은 추가 메서드가 포함 됩니다.
 
-- `AddLuminosity`-제공 된 `Color` 델타를 기준으로 광도를 수정 하 여를 반환 합니다.
-- `MultiplyAlpha`-알파를 `Color` 수정 하 고 제공 된 알파 값을 곱하여를 반환 합니다.
-- `ToHex`-의 16 진수 `string` 표현을 반환 `Color` 합니다.
-- `WithHue`-를 반환 `Color` 하 고, 지정 된 값으로 색상을 바꿉니다.
-- `WithLuminosity`-광도를 `Color` 제공 된 값으로 바꿔를 반환 합니다.
-- `WithSaturation`-채도를 `Color` 제공 된 값으로 바꿔를 반환 합니다.
+- `AddLuminosity` -제공 된 `Color` 델타를 기준으로 광도를 수정 하 여를 반환 합니다.
+- `MultiplyAlpha` -알파를 `Color` 수정 하 고 제공 된 알파 값을 곱하여를 반환 합니다.
+- `ToHex` -의 16 진수 `string` 표현을 반환 `Color` 합니다.
+- `WithHue` -를 반환 `Color` 하 고, 지정 된 값으로 색상을 바꿉니다.
+- `WithLuminosity` -광도를 `Color` 제공 된 값으로 바꿔를 반환 합니다.
+- `WithSaturation` -채도를 `Color` 제공 된 값으로 바꿔를 반환 합니다.
 
 ## <a name="implicit-conversions"></a>암시적 변환
 
@@ -125,5 +125,5 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 
 ## <a name="related-links"></a>관련 링크
 
-- [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
-- [바인딩 가능한 선택기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [ColorsSample](/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+- [바인딩 가능한 선택기 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

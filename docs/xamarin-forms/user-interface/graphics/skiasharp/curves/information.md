@@ -10,12 +10,12 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4fee695a20cae26537beb30513423492114e5c77
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cf9ebb819d5b424963170d563575c4900bbed28b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936242"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556362"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -121,7 +121,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="traversing-the-path"></a>경로 트래버스
 
-`SKPathMeasure`는 경로의 길이를 측정 하는 것 이상의 작업을 수행할 수 있습니다. 0과 경로 길이 사이의 값에 대해 `SKPathMeasure` 개체는 경로의 위치와 해당 지점에 있는 경로 곡선에 대 한 탄젠트를 가져올 수 있습니다. 탄젠트는 개체 형식으로 벡터 `SKPoint` 나 개체에 캡슐화 된 회전으로 사용할 수 있습니다 `SKMatrix` . `SKPathMeasure`다양 하 고 유연한 방식으로이 정보를 가져오는 메서드는 다음과 같습니다.
+`SKPathMeasure` 는 경로의 길이를 측정 하는 것 이상의 작업을 수행할 수 있습니다. 0과 경로 길이 사이의 값에 대해 `SKPathMeasure` 개체는 경로의 위치와 해당 지점에 있는 경로 곡선에 대 한 탄젠트를 가져올 수 있습니다. 탄젠트는 개체 형식으로 벡터 `SKPoint` 나 개체에 캡슐화 된 회전으로 사용할 수 있습니다 `SKMatrix` . `SKPathMeasure`다양 하 고 유연한 방식으로이 정보를 가져오는 메서드는 다음과 같습니다.
 
 ```csharp
 Boolean GetPosition (Single distance, out SKPoint position)
@@ -232,12 +232,12 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 `Next`메서드는 열거형 형식의 멤버를 반환 합니다 [`SKPathVerb`](xref:SkiaSharp.SKPathVerb) . 이러한 값은 경로의 특정 그리기 명령을 표시 합니다. 배열에 삽입 된 유효한 점의 수는 다음 동사에 따라 다릅니다.
 
-- `Move`단일 지점 사용
-- `Line`두 개의 점이 있는
-- `Cubic`네 개의 점이 있는
-- `Quad`3 개 점이 있는
-- `Conic`3 개 요소를 사용 하 고 [`ConicWeight`](xref:SkiaSharp.SKPath.RawIterator.ConicWeight*) 가중치에 대해 메서드를 호출 합니다.
-- `Close`한 점을 사용 하 여
+- `Move` 단일 지점 사용
+- `Line` 두 개의 점이 있는
+- `Cubic` 네 개의 점이 있는
+- `Quad` 3 개 점이 있는
+- `Conic` 3 개 요소를 사용 하 고 [`ConicWeight`](xref:SkiaSharp.SKPath.RawIterator.ConicWeight*) 가중치에 대해 메서드를 호출 합니다.
+- `Close` 한 점을 사용 하 여
 - `Done`
 
 `Done`동사는 경로 열거가 완료 되었음을 나타냅니다.
@@ -258,7 +258,7 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 키는 원래의 직선을 일련의 작은 직선으로 분할 하는 것입니다. 그런 다음 이러한 개별 작은 직선을 다른 방법으로 조작 하 여 곡선을 형성할 수 있습니다.
 
-이 프로세스를 지원 하기 위해 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) `Interpolate` 길이가 한 단위 인 여러 짧은 줄로 직선을 분할 하는 메서드가 포함 된 정적 클래스가 포함 되어 있습니다. 또한 클래스에는 세 가지 종류의 베 지 어 곡선을 곡선으로 이어지는 일련의 작은 직선으로 변환 하는 여러 메서드가 포함 되어 있습니다. 패라메트릭 수식은 [**3 가지 유형의 베 지 어 곡선**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)문서에 나와 있습니다. 이 프로세스를 곡선 _평면화_ 라고 합니다.
+이 프로세스를 지원 하기 위해 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 [`PathExtensions`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) `Interpolate` 길이가 한 단위 인 여러 짧은 줄로 직선을 분할 하는 메서드가 포함 된 정적 클래스가 포함 되어 있습니다. 또한 클래스에는 세 가지 종류의 베 지 어 곡선을 곡선으로 이어지는 일련의 작은 직선으로 변환 하는 여러 메서드가 포함 되어 있습니다. 패라메트릭 수식은 [**3 가지 유형의 베 지 어 곡선**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)문서에 나와 있습니다. 이 프로세스를 곡선 _평면화_ 라고 합니다.
 
 ```csharp
 static class PathExtensions
@@ -526,5 +526,5 @@ public class GlobularTextPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

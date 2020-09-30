@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a77ebb07a09c1bbd2df482c81040f271cdf8f56e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130184"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556349"
 ---
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
@@ -211,11 +211,11 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 ## <a name="a-matte-for-a-separable-mode"></a>분리 가능 모드의 무광택
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **Banana.jpg**입니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **Banana.jpg**입니다.
 
 ![바나나 원숭이](non-separable-images/Banana.jpg "바나나 원숭이")
 
-바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte.png**입니다.
+바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte.png**입니다.
 
 ![바나나 무광택](non-separable-images/BananaMatte.png "바나나 무광택")
 
@@ -294,5 +294,5 @@ Blend 모드를로 변경해 보세요 `SKBlendMode.Saturation` . 바나나 노�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

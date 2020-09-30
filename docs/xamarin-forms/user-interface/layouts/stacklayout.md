@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsStackLayout
+title: Xamarin.Forms StackLayout
 description: StackLayout은 1 차원 스택의 자식 뷰를 가로 또는 세로로 구성 합니다.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
@@ -10,18 +10,18 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c8e7c0e3edb581e13944ce48e2241f035791574
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137971"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556856"
 ---
-# <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
+# <a name="no-locxamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
-[![Xamarin.FormsStackLayout](stacklayout-images/layouts.png "[! OP. NO-LOC (Xamarin.ios)] StackLayout")](stacklayout-images/layouts-large.png#lightbox "[! OP. NO-LOC (Xamarin.ios)] StackLayout")
+[![::: no loc (Xamarin.ios)::: StackLayout](stacklayout-images/layouts.png "::: no loc (Xamarin.ios)::: StackLayout")](stacklayout-images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: StackLayout")
 
 는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 1 차원 스택의 자식 뷰를 가로 또는 세로로 구성 합니다. 기본적으로는 `StackLayout` 세로 방향입니다. 또한 `StackLayout` 다른 자식 레이아웃을 포함 하는 부모 레이아웃으로를 사용할 수 있습니다.
 
@@ -471,7 +471,7 @@ public class CombinedStackLayoutPageCS : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [StackLayout 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
-- [의 레이아웃 옵션Xamarin.Forms](layout-options.md)
+- [StackLayout 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+- [의 레이아웃 옵션 Xamarin.Forms](layout-options.md)
 - [레이아웃 선택 Xamarin.Forms](choose-layout.md)
 - [Xamarin.Forms앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)

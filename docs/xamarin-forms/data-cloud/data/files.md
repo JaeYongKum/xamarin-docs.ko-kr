@@ -1,5 +1,5 @@
 ---
-title: 파일 처리Xamarin.Forms
+title: 파일 처리 Xamarin.Forms
 description: 를 사용 하 여 파일을 처리 Xamarin.Forms 하는 것은 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
@@ -10,14 +10,14 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f62e5522b5b9a10a3806a70fe949561d77ce0d4e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574355"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557259"
 ---
-# <a name="file-handling-in-xamarinforms"></a>파일 처리Xamarin.Forms
+# <a name="file-handling-in-no-locxamarinforms"></a>파일 처리 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
@@ -25,7 +25,7 @@ _를 사용 하 여 파일을 처리 Xamarin.Forms 하는 것은 .NET Standard �
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms코드는 여러 플랫폼에서 실행 됩니다. 각 플랫폼에는 고유한 파일 시스템이 있습니다. 이전에는 각 플랫폼에서 원시 파일 API를 사용하여 파일을 읽고 쓰는 것이 가장 쉽게 수행되었다는 것을 의미합니다. 또는 포함 리소스가 앱을 사용하여 데이터 파일을 배포하는 더 간단한 솔루션입니다. 그러나 .NET Standard 2.0을 사용하면 .NET Standard 라이브러리에서 파일 액세스 코드를 공유할 수 있습니다.
+Xamarin.Forms 코드는 여러 플랫폼에서 실행 됩니다. 각 플랫폼에는 고유한 파일 시스템이 있습니다. 이전에는 각 플랫폼에서 원시 파일 API를 사용하여 파일을 읽고 쓰는 것이 가장 쉽게 수행되었다는 것을 의미합니다. 또는 포함 리소스가 앱을 사용하여 데이터 파일을 배포하는 더 간단한 솔루션입니다. 그러나 .NET Standard 2.0을 사용하면 .NET Standard 라이브러리에서 파일 액세스 코드를 공유할 수 있습니다.
 
 이미지 파일 처리에 대한 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md) 페이지를 참조하세요.
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream))
 }
 ```
 
-그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
+그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](/samples/xamarin/xamarin-forms-samples/workingwithfiles)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
 
  [![.NET 표준 라이브러리에 포함 된 텍스트 파일](files-images/pcltext-sml.png "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")](files-images/pcltext.png#lightbox "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")
 
@@ -159,6 +159,6 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+- [FilesSample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
 - [Xamarin.iOS에서 파일 시스템 작업](~/ios/app-fundamentals/file-system.md)

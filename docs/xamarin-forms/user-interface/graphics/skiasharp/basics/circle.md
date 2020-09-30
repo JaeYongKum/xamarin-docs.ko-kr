@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 785532d1a8fedfaef367c8fb8ae437220c3de9c4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 538a3ea3bd5b2293f93047d9796a185abfa5f2b9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938179"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556596"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
@@ -25,7 +25,7 @@ _Canvas 및 paint 개체를 포함 하 여 SkiaSharp drawing의 기본 사항을
 
 이 문서에서는 Xamarin.Forms `SKCanvasView` 그래픽을 호스트 하 고, `PaintSurface` 이벤트를 처리 하 고, 개체를 사용 하 여 `SKPaint` 색 및 기타 그리기 특성을 지정 하는 개체를 만드는 등 SkiaSharp를 사용 하 여 그래픽을 그리는 개념을 소개 합니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램에는이 일련의 SkiaSharp 아티클에 대 한 모든 샘플 코드가 포함 되어 있습니다. 첫 번째 페이지에는 **간단한 원이** 부여 되 고 page 클래스가 호출 됩니다 [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . 이 코드에서는 페이지의 중앙에서 반지름이 100 픽셀인 원을 그리는 방법을 보여 줍니다. 원의 윤곽선은 빨간색이 고 원의 내부는 파란색입니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램에는이 일련의 SkiaSharp 아티클에 대 한 모든 샘플 코드가 포함 되어 있습니다. 첫 번째 페이지에는 **간단한 원이** 부여 되 고 page 클래스가 호출 됩니다 [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . 이 코드에서는 페이지의 중앙에서 반지름이 100 픽셀인 원을 그리는 방법을 보여 줍니다. 원의 윤곽선은 빨간색이 고 원의 내부는 파란색입니다.
 
 ![빨간색으로 표시 된 파란색 원](circle-images/circleexample.png)
 
@@ -163,5 +163,5 @@ IOS 및 Android에서 실행 되는 프로그램은 다음과 같습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

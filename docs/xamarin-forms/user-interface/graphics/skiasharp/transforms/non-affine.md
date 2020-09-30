@@ -10,12 +10,12 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4c6569acbade7edf64c9aaf54237ebaa342ea54
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6de5e21c509203c5402ed8c7e75908b54808d140
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936645"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556895"
 ---
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
@@ -395,7 +395,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다음은 몇 가지 예입니다.
+몇 가지 예제는 다음과 같습니다.
 
 [![테이퍼 변형 페이지의 삼중 스크린샷](non-affine-images/tapertransform-small.png)](non-affine-images/tapertransform-large.png#lightbox "테이퍼 변형 페이지의 삼중 스크린샷")
 
@@ -474,5 +474,5 @@ W 및 H는 비트맵의 너비와 높이를 나타냅니다. 첫 번째 변환�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

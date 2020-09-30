@@ -10,12 +10,12 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 32de64c0fa6b0ec0a0b03c8075710e1cbc92dd49
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140020"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557415"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
@@ -65,7 +65,7 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 그러나는 `AddArc` 닫힌 컨투어를 정의 *하지* 않습니다. 이후에를 호출 하는 경우에는 `LineTo` `AddArc` 원호의 끝에서 메서드의 지점으로 줄이 그려지며의 경우에도 `LineTo` 마찬가지입니다 `ArcTo` .
 
-`AddArc`는 새 컨투어를 자동으로 시작 하 고의 마지막 인수를 사용 하 여에 대 한 호출과 기능적으로 동일 합니다 `ArcTo` `true` .
+`AddArc` 는 새 컨투어를 자동으로 시작 하 고의 마지막 인수를 사용 하 여에 대 한 호출과 기능적으로 동일 합니다 `ArcTo` `true` .
 
 ```csharp
 path.ArcTo (oval, startAngle, sweepAngle, true);
@@ -221,7 +221,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 에서 지 원하는 두 번째 형식의 호는 `SKPath` *탄젠트 호*이므로, arc가 연결 된 두 줄에 탄젠트 한 원의 원주 때문에 호출 됩니다.
 
-탄젠트 원호는 [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) 두 개의 매개 변수를 사용 하 여 메서드를 호출 하거나 해당 `SKPoint` [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) 점에 대해 별도의 매개 변수가 있는 오버 로드를 사용 하 여 경로에 추가 됩니다 `Single` .
+탄젠트 원호는  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) 두 개의 매개 변수를 사용 하 여 메서드를 호출 하거나 해당 `SKPoint` [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) 점에 대해 별도의 매개 변수가 있는 오버 로드를 사용 하 여 경로에 추가 됩니다 `Single` .
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -498,7 +498,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="the-elliptical-arc"></a>타원형 원호
 
-타원형 원호는 [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) 두 개의 매개 변수가 있는 메서드를 호출 `SKPoint` 하거나 [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) 별도 X 및 Y 좌표가 있는 오버 로드를 사용 하 여 경로에 추가 됩니다.
+타원형 원호는 [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) 두 개의 매개 변수가 있는 메서드를 호출 `SKPoint` 하거나  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) 별도 X 및 Y 좌표가 있는 오버 로드를 사용 하 여 경로에 추가 됩니다.
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -671,5 +671,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

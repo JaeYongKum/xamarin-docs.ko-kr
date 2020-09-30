@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsScrollView
+title: Xamarin.Forms ScrollView
 description: Xamarin.FormsScrollView는 콘텐츠를 스크롤할 수 있는 레이아웃입니다.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
@@ -10,25 +10,25 @@ ms.date: 05/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f527acabe3b051cbfd6450ba6f5328449b1a728c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af8513d86b7cf02ec7adcee75241d8ce99e2dfab
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84199196"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556830"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin.FormsScrollView
+# <a name="no-locxamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
 
-[![Xamarin.FormsScrollView](scrollview-images/layouts.png "[! OP. NO-LOC (Xamarin.ios)] ScrollView")](scrollview-images/layouts-large.png#lightbox "[! OP. NO-LOC (Xamarin.ios)] ScrollView")
+[![::: no loc (Xamarin.ios)::: ScrollView](scrollview-images/layouts.png "::: no loc (Xamarin.ios)::: ScrollView")](scrollview-images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: ScrollView")
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)는 콘텐츠를 스크롤할 수 있는 레이아웃입니다. 클래스는 `ScrollView` 클래스에서 파생 [`Layout`](xref:Xamarin.Forms.Layout) 되며 기본적으로 콘텐츠를 세로로 스크롤합니다. 는 `ScrollView` 다른 레이아웃 일 수 있지만 하나의 자식만 가질 수 있습니다.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) 는 콘텐츠를 스크롤할 수 있는 레이아웃입니다. 클래스는 `ScrollView` 클래스에서 파생 [`Layout`](xref:Xamarin.Forms.Layout) 되며 기본적으로 콘텐츠를 세로로 스크롤합니다. 는 `ScrollView` 다른 레이아웃 일 수 있지만 하나의 자식만 가질 수 있습니다.
 
 > [!WARNING]
-> [`ScrollView`](xref:Xamarin.Forms.ScrollView)개체는 중첩 될 수 없습니다. 또한 개체는 `ScrollView` 스크롤을 제공 하는 다른 컨트롤 (예:, 및)에 중첩 될 수 없습니다 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ListView`](xref:Xamarin.Forms.ListView) [`WebView`](xref:Xamarin.Forms.WebView) .
+> [`ScrollView`](xref:Xamarin.Forms.ScrollView) 개체는 중첩 될 수 없습니다. 또한 개체는 `ScrollView` 스크롤을 제공 하는 다른 컨트롤 (예:, 및)에 중첩 될 수 없습니다 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ListView`](xref:Xamarin.Forms.ListView) [`WebView`](xref:Xamarin.Forms.WebView) .
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)는 다음 속성을 정의 합니다.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) 는 다음 속성을 정의 합니다.
 
 - [`Content`](xref:Xamarin.Forms.ScrollView.Content)형식의은 [`View`](xref:Xamarin.Forms.View) 에 표시할 콘텐츠를 나타냅니다 [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
 - [`ContentSize`](xref:Xamarin.Forms.ScrollView)형식의는 [`Size`](xref:Xamarin.Forms.Size) 콘텐츠의 크기를 나타냅니다. 이 속성은 읽기 전용입니다.
@@ -205,12 +205,12 @@ public class BlackCatPageCS : ContentPage
 
 ## <a name="orientation"></a>방향
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)에 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 는의 스크롤 방향을 나타내는 속성이 있습니다 `ScrollView` . 이 속성은 [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) 다음 멤버를 정의 하는 형식입니다.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) 에 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 는의 스크롤 방향을 나타내는 속성이 있습니다 `ScrollView` . 이 속성은 [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) 다음 멤버를 정의 하는 형식입니다.
 
-- `Vertical`가 세로로 스크롤 됨을 나타냅니다 `ScrollView` . 이 멤버는 속성의 기본값입니다 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) .
-- `Horizontal`가 가로로 스크롤 됨을 나타냅니다 `ScrollView` .
+- `Vertical` 가 세로로 스크롤 됨을 나타냅니다 `ScrollView` . 이 멤버는 속성의 기본값입니다 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) .
+- `Horizontal` 가 가로로 스크롤 됨을 나타냅니다 `ScrollView` .
 - `Both``ScrollView`가 가로 및 세로로 스크롤 됨을 나타냅니다.
-- `Neither`가 스크롤되지 않음을 나타냅니다 `ScrollView` .
+- `Neither` 가 스크롤되지 않음을 나타냅니다 `ScrollView` .
 
 > [!TIP]
 > 속성을로 설정 하 여 스크롤을 사용 하지 않도록 설정할 수 있습니다 [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) `Neither` .
@@ -280,21 +280,21 @@ await scrollView.ScrollToAsync(label, ScrollToPosition.End, true);
 
 요소를 뷰로 스크롤할 때 스크롤이 완료 된 후 요소의 정확한 위치는 메서드의 두 번째 인수인를 사용 하 여 설정할 수 있습니다 `position` [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) . 이 인수는 열거형 멤버를 허용 합니다 [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) .
 
-- `MakeVisible`에 표시 될 때까지 요소를 스크롤 함을 나타냅니다 `ScrollView` .
-- `Start`요소를의 시작 부분으로 스크롤 함을 나타냅니다 `ScrollView` .
-- `Center`요소를의 가운데로 스크롤 해야 함을 나타냅니다 `ScrollView` .
-- `End`요소를의 끝으로 스크롤 해야 함을 나타냅니다 `ScrollView` .
+- `MakeVisible` 에 표시 될 때까지 요소를 스크롤 함을 나타냅니다 `ScrollView` .
+- `Start` 요소를의 시작 부분으로 스크롤 함을 나타냅니다 `ScrollView` .
+- `Center` 요소를의 가운데로 스크롤 해야 함을 나타냅니다 `ScrollView` .
+- `End` 요소를의 끝으로 스크롤 해야 함을 나타냅니다 `ScrollView` .
 
 ## <a name="scroll-bar-visibility"></a>스크롤 막대 표시 여부
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView)[`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView)바인딩 가능한 [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) 속성에 의해 지원 되는 및 속성을 정의 합니다. 이러한 속성은 [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibility) 가로 또는 세로 스크롤 막대를 표시할지 여부를 나타내는 열거형 값을 가져오거나 설정 합니다. `ScrollBarVisibility` 열거형은 다음 멤버를 정의합니다.
 
-- `Default`플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
-- `Always`뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
-- `Never`콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
+- `Default` 플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
+- `Always` 뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- `Never` 콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ScrollView 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [바인딩 가능한 레이아웃Xamarin.Forms](bindable-layouts.md)
+- [ScrollView 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [바인딩 가능한 레이아웃 Xamarin.Forms](bindable-layouts.md)

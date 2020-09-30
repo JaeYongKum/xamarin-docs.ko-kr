@@ -10,12 +10,12 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0c6e305287c97abac3500cba4771479b60381ac
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b029ffdb0a16d9f54951ae3754ca0f1eb7f69aaa
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939804"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556882"
 ---
 # <a name="platform-specifics"></a>플랫폼 사양
 
@@ -56,11 +56,11 @@ XAML을 통해 또는 흐름 코드 API를 통해 플랫폼별를 사용 하는 
 > [!NOTE]
 > 사용자의 편리한 사용을 위해 공급 업체는이 기술을 사용 하 여 고유한 플랫폼 정보를 만드는 것이 예상. 사용자가 고유한 플랫폼 정보를 만들도록 선택할 수 있지만 효과를 만들고 소비 하는 것 보다 더 많은 코드가 필요 하다는 점에 유의 해야 합니다.
 
-[샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 컨트롤에 의해 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별를 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
+[샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 컨트롤에 의해 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별를 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
 
 ![섀도 플랫폼 관련](images/screenshots.png)
 
-이 [샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 이해를 용이 하 게 하기 위해 플랫폼 별로 각 플랫폼을 구현 합니다. 그러나 각 플랫폼별 효과 구현 외에는 각 플랫폼에 대해 섀도 클래스 구현이 거의 동일 합니다. 따라서이 가이드는 섀도 클래스의 구현에 대 한 집중적으로 살펴봅니다 단일 플랫폼에 미치는 영향을 설명 합니다.
+이 [샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 이해를 용이 하 게 하기 위해 플랫폼 별로 각 플랫폼을 구현 합니다. 그러나 각 플랫폼별 효과 구현 외에는 각 플랫폼에 대해 섀도 클래스 구현이 거의 동일 합니다. 따라서이 가이드는 섀도 클래스의 구현에 대 한 집중적으로 살펴봅니다 단일 플랫폼에 미치는 영향을 설명 합니다.
 
 효과에 대 한 자세한 내용은 [효과를 사용 하 여 컨트롤 사용자 지정](~/xamarin-forms/app-fundamentals/effects/index.md)을 참조 하세요.
 
@@ -280,8 +280,8 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
-- [ShadowPlatformSpecific (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [iOS 플랫폼-세부 정보](~/xamarin-forms/platform/ios/index.md)
 - [Android 플랫폼-세부 정보](~/xamarin-forms/platform/android/index.md)
 - [Windows 플랫폼-세부 정보](~/xamarin-forms/platform/windows/index.md)

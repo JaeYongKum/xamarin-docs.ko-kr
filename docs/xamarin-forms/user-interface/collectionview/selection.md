@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCollectionView 선택
+title: Xamarin.Forms CollectionView 선택
 description: 기본적으로 CollectionView 선택은 사용 하지 않도록 설정 되어 있습니다. 그러나 단일 및 다중 선택을 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
@@ -10,18 +10,18 @@ ms.date: 05/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39f118d7073fc551923f891681c8c6cf6a4c5ddd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c432c1981ba057f61bba780b7997c8b78f8cef3f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137386"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557350"
 ---
-# <a name="xamarinforms-collectionview-selection"></a>Xamarin.FormsCollectionView 선택
+# <a name="no-locxamarinforms-collectionview-selection"></a>Xamarin.Forms CollectionView 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)항목 선택을 제어 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목 선택을 제어 하는 다음 속성을 정의 합니다.
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), 형식의, [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) 선택 모드입니다.
 - [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)`object`목록에서 선택 된 항목인 형식의입니다. 이 속성의 기본 바인딩 모드는 `TwoWay` 이며, `null` 선택 된 항목이 없는 경우에는 값이 있습니다.
@@ -33,14 +33,14 @@ ms.locfileid: "84137386"
 
 기본적으로 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택은 사용 하지 않도록 설정 되어 있습니다. 그러나 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성 값을 열거형 멤버 중 하나로 설정 하 여이 동작을 변경할 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) .
 
-- `None`– 항목을 선택할 수 없음을 나타냅니다. 이것은 기본값입니다.
-- `Single`– 선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다.
-- `Multiple`– 선택한 항목을 강조 표시 하 여 여러 항목을 선택할 수 있음을 나타냅니다.
+- `None` – 항목을 선택할 수 없음을 나타냅니다. 이것은 기본값입니다.
+- `Single` – 선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다.
+- `Multiple` – 선택한 항목을 강조 표시 하 여 여러 항목을 선택할 수 있음을 나타냅니다.
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)[`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 사용자가 목록에서 항목을 선택 하거나 응용 프로그램에서 속성을 설정 하 여 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 또한이 이벤트는 속성이 변경 될 때에도 발생 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 합니다. 이벤트와 함께 제공 되는 개체에는 [`SelectionChangedEventArgs`](xref:Xamarin.Forms.SelectionChangedEventArgs) `SelectionChanged` 두 가지 속성이 있습니다 `IReadOnlyList<object>` .
 
-- `PreviousSelection`– 선택 항목을 변경 하기 전에 선택 된 항목의 목록입니다.
-- `CurrentSelection`– 선택 항목을 변경한 후 선택 된 항목의 목록입니다.
+- `PreviousSelection` – 선택 항목을 변경 하기 전에 선택 된 항목의 목록입니다.
+- `CurrentSelection` – 선택 항목을 변경한 후 선택 된 항목의 목록입니다.
 
 또한에는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) `UpdateSelectedItems` [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 선택한 항목의 목록으로 속성을 업데이트 하는 메서드와 단일 변경 알림만 발생 합니다.
 
@@ -267,7 +267,7 @@ namespace CollectionViewDemos.ViewModels
 
 ## <a name="change-selected-item-color"></a>선택한 항목 색 변경
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)에는 `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) 에서 선택한 항목에 대 한 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `CollectionView` . 이에 대 한 일반적인 사용 사례는 `VisualState` 다음 XAML 예제에 표시 된 대로 선택한 항목의 배경색을 변경 하는 것입니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) 에서 선택한 항목에 대 한 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `CollectionView` . 이에 대 한 일반적인 사용 사례는 `VisualState` 다음 XAML 예제에 표시 된 대로 선택한 항목의 배경색을 변경 하는 것입니다.
 
 ```xaml
 <ContentPage ...>
@@ -314,7 +314,7 @@ namespace CollectionViewDemos.ViewModels
 
 ## <a name="disable-selection"></a>선택 사용 안 함
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)선택은 기본적으로 사용 하지 않도록 설정 되어 있습니다. 그러나에서 `CollectionView` 선택이 활성화 되어 있으면 속성을로 설정 하 여 사용 하지 않도록 설정할 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) `None` .
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택은 기본적으로 사용 하지 않도록 설정 되어 있습니다. 그러나에서 `CollectionView` 선택이 활성화 되어 있으면 속성을로 설정 하 여 사용 하지 않도록 설정할 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) `None` .
 
 ```xaml
 <CollectionView ...
@@ -338,5 +338,5 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

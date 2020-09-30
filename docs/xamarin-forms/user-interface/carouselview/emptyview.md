@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCarouselView EmptyView
+title: Xamarin.Forms CarouselView EmptyView
 description: CarouselView에서 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 빈 뷰를 지정할 수 있습니다. 빈 뷰는 문자열, 뷰 또는 여러 뷰가 될 수 있습니다.
 ms.prod: xamarin
 ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
@@ -10,20 +10,20 @@ ms.date: 10/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0dd1f4a15d9a8c1315cd3f0f71b641c82bebe004
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 5a6ca7926196a993dda301bac1b87041a975da71
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918656"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557389"
 ---
-# <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
+# <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.Forms CarouselView EmptyView
 
 ![시험판 API](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)표시할 데이터가 없을 때 사용자 의견을 제공 하는 데 사용할 수 있는 다음 속성을 정의 합니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 표시할 데이터가 없을 때 사용자 의견을 제공 하는 데 사용할 수 있는 다음 속성을 정의 합니다.
 
 - [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)`object` [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 이거나 속성에서 지정 된 컬렉션이 `ItemsSource` `null` 이거나 비어 있을 때 표시 되는 문자열, 바인딩 또는 뷰의 형식입니다. 기본값은 `null`입니다.
 - [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate)[`DataTemplate`](xref:Xamarin.Forms.DataTemplate)지정 된의 형식을 지정 하는 데 사용할 템플릿인 형식의입니다 `EmptyView` . 기본값은 `null`입니다.
@@ -321,7 +321,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 ## <a name="related-links"></a>관련 링크
 
-- [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CarouselView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

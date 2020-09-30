@@ -10,12 +10,12 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d613c4f73c0a377a599b0137ce2f2b557c04ad6a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 45634695050dc6f74a9b1617a2180481e3788d11
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572340"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557324"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
@@ -448,7 +448,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>Photo cropper canvas 뷰 호스팅
 
-자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **사진 자르기** 페이지에서 수행할 작업은 거의 없습니다. XAML 파일은를 인스턴스화하고 `Grid` `PhotoCropperCanvasView` **Done** 단추를 호스팅합니다.
+자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **사진 자르기** 페이지에서 수행할 작업은 거의 없습니다. XAML 파일은를 인스턴스화하고 `Grid` `PhotoCropperCanvasView` **Done** 단추를 호스팅합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -535,9 +535,9 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>비트맵을 타일로 분할
 
-Xamarin.FormsXamagonXuzzle를 [_사용 하 여 Mobile Apps를 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 발췌 한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
+Xamarin.FormsXamagonXuzzle로 [_ Xamarin.Forms Mobile Apps을 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 설명한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
 
-이 버전의 14-15 퍼즐은 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 일부 이며 **사진 퍼즐**이라는 일련의 페이지로 구성 됩니다.
+이 버전의 14-15 퍼즐은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 일부 이며 **사진 퍼즐**이라는 일련의 페이지로 구성 됩니다.
 
 **PhotoPuzzlePage1** 파일은 다음으로 구성 됩니다 `Button` .
 
@@ -650,7 +650,7 @@ public partial class PhotoPuzzlePage2 : ContentPage
 
 사용자가 **완료** 단추를 클릭 하면 처리기가 `Clicked` 로 이동 하 여 `PhotoPuzzlePage3` 페이지의 생성자에서 최종 회전 된 비트맵을 전달 합니다.
 
-`PhotoPuzzlePage3`사진을 자를 수 있습니다. 이 프로그램을 사용 하려면 타일의 4 x 4 모눈으로 나누는 사각형 비트맵이 필요 합니다.
+`PhotoPuzzlePage3` 사진을 자를 수 있습니다. 이 프로그램을 사용 하려면 타일의 4 x 4 모눈으로 나누는 사각형 비트맵이 필요 합니다.
 
 **PhotoPuzzlePage3** 파일에는를 `Label` `Grid` 호스트 하는 `PhotoCropperCanvasView` 및 다른 **완료** 단추를 포함 합니다.
 
@@ -737,9 +737,9 @@ public partial class PhotoPuzzlePage3 : ContentPage
 }
 ```
 
-**완료** 단추 처리기는 잘린 비트맵의 너비와 높이를 가져온 다음 (이 두 값은 동일 해야 함) 15 개의 개별 비트맵으로 나눕니다. 각 비트맵은 원래 1/4의 너비와 높이를 각각 합니다. 가능 하면 16 개의 비트맵 중 마지막 비트맵이 생성 되지 않습니다. `DrawBitmap`원본 및 대상 사각형이 있는 메서드를 사용 하면 큰 비트맵의 하위 집합을 기반으로 비트맵을 만들 수 있습니다.
+**완료** 단추 처리기는 잘린 비트맵의 너비와 높이를 가져온 다음 (이 두 값은 동일 해야 함) 15 개의 개별 비트맵으로 나눕니다. 각 비트맵은 원래 1/4의 너비와 높이를 각각 합니다. 가능 하면 16 개의 비트맵 중 마지막 비트맵이 생성 되지 않습니다. `DrawBitmap` 원본 및 대상 사각형이 있는 메서드를 사용 하면 큰 비트맵의 하위 집합을 기반으로 비트맵을 만들 수 있습니다.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>비트맵으로 변환 Xamarin.Forms
+## <a name="converting-to-no-locxamarinforms-bitmaps"></a>비트맵으로 변환 Xamarin.Forms
 
 `OnDoneButtonClicked`메서드에서 15 개의 비트맵에 대해 만들어진 배열은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 다음과 같습니다.
 
@@ -747,7 +747,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource`는 Xamarin.Forms 비트맵을 캡슐화 하는 기본 형식입니다. 다행히 SkiaSharp는 SkiaSharp 비트맵에서 비트맵으로의 변환을 허용 Xamarin.Forms 합니다. **SkiaSharp** 어셈블리는 [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) 에서 파생 되는 클래스를 정의 `ImageSource` 하지만 SkiaSharp 개체를 기반으로 만들 수 있습니다 `SKBitmap` . `SKBitmapImageSource`는 및 간의 변환만 `SKBitmapImageSource` 정의 `SKBitmap` 하며,이는 `SKBitmap` 개체가 배열에 비트맵으로 저장 되는 방식입니다 Xamarin.Forms .
+`ImageSource` 는 Xamarin.Forms 비트맵을 캡슐화 하는 기본 형식입니다. 다행히 SkiaSharp는 SkiaSharp 비트맵에서 비트맵으로의 변환을 허용 Xamarin.Forms 합니다. **SkiaSharp** 어셈블리는 [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) 에서 파생 되는 클래스를 정의 `ImageSource` 하지만 SkiaSharp 개체를 기반으로 만들 수 있습니다 `SKBitmap` . `SKBitmapImageSource` 는 및 간의 변환만 `SKBitmapImageSource` 정의 `SKBitmap` 하며,이는 `SKBitmap` 개체가 배열에 비트맵으로 저장 되는 방식입니다 Xamarin.Forms .
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
@@ -765,5 +765,5 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

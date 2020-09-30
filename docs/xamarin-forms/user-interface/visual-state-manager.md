@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms Visual State Manager
+title: Xamarin.Forms 시각적 상태 관리자
 description: Visual State Manager를 사용 하 여 코드에서 설정 된 시각적 상태에 따라 XAML 요소를 변경 합니다.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -11,14 +11,14 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3dda730446ec2b4268f42ee5af853400b33565d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7e59cddbe9192f29ca1636c567131aad60157066
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946232"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556583"
 ---
-# <a name="xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
+# <a name="no-locxamarinforms-visual-state-manager"></a>Xamarin.Forms 시각적 상태 관리자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
@@ -78,7 +78,7 @@ VSM 태그를 뷰에 연결 하려면 `Entry` 먼저를 `Entry` 시작 태그와
 </Entry>
 ```
 
-[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty)는 클래스에 의해 정의 된 바인딩 가능한 속성입니다 [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) . 연결 된 바인딩 가능한 속성에 대 한 자세한 내용은 연결 된 [속성](~/xamarin-forms/xaml/attached-properties.md)문서를 참조 하세요. `VisualStateGroups`속성이 개체에 연결 되는 방식입니다 `Entry` .
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) 는 클래스에 의해 정의 된 바인딩 가능한 속성입니다 [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) . 연결 된 바인딩 가능한 속성에 대 한 자세한 내용은 연결 된 [속성](~/xamarin-forms/xaml/attached-properties.md)문서를 참조 하세요. `VisualStateGroups` 속성이 개체에 연결 되는 방식입니다 `Entry` .
 
 `VisualStateGroups`속성은 [`VisualStateGroupList`](xref:Xamarin.Forms.VisualStateGroupList) 개체의 컬렉션인 형식입니다 [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) . 태그 내에서 `VisualStateManager.VisualStateGroups` `VisualStateGroup` 포함 하려는 각 시각적 상태 그룹의 태그 쌍을 삽입 합니다.
 
@@ -124,9 +124,9 @@ VSM 태그를 뷰에 연결 하려면 `Entry` 먼저를 `Entry` 시작 태그와
 </Entry>
 ```
 
-`VisualState`개체 컬렉션인 라는 속성을 정의 [`Setters`](xref:Xamarin.Forms.VisualState.Setters) [`Setter`](xref:Xamarin.Forms.Setter) 합니다. 이러한 개체는 개체에서 사용 하는 것과 동일한 `Setter` 개체 [`Style`](xref:Xamarin.Forms.Style) 입니다.
+`VisualState` 개체 컬렉션인 라는 속성을 정의 [`Setters`](xref:Xamarin.Forms.VisualState.Setters) [`Setter`](xref:Xamarin.Forms.Setter) 합니다. 이러한 개체는 개체에서 사용 하는 것과 동일한 `Setter` 개체 [`Style`](xref:Xamarin.Forms.Style) 입니다.
 
-`Setters`는의 content 속성이 _아니므로_ `VisualState` 속성의 속성 요소 태그를 포함 해야 합니다 `Setters` .
+`Setters` 는의 content 속성이 _아니므로_ `VisualState` 속성의 속성 요소 태그를 포함 해야 합니다 `Setters` .
 
 ```xaml
 <Entry FontSize="18">
@@ -184,7 +184,7 @@ VSM 태그를 뷰에 연결 하려면 `Entry` 먼저를 `Entry` 시작 태그와
 
 각 `Setter` 태그는 해당 상태가 current 인 경우 특정 속성의 값을 나타냅니다. 개체에서 참조 하는 모든 속성은 `Setter` 바인딩 가능한 속성에 의해 지원 되어야 합니다.
 
-이와 비슷한 마크업은 **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플 프로그램의 **보기 페이지에** 대 한 기본 설정입니다. 이 페이지에는 세 개의 보기가 포함 되어 `Entry` 있지만 두 번째 보기에는 VSM 태그가 연결 되어 있습니다.
+이와 비슷한 마크업은 **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플 프로그램의 **보기 페이지에** 대 한 기본 설정입니다. 이 페이지에는 세 개의 보기가 포함 되어 `Entry` 있지만 두 번째 보기에는 VSM 태그가 연결 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -404,7 +404,7 @@ VSM 태그의 나머지 부분은 이전과 동일 합니다.
 
 [![스타일의 VSM](vsm-images/VsmInStyle.png "스타일의 VSM")](vsm-images/VsmInStyle-Large.png#lightbox)
 
-## <a name="visual-states-in-xamarinforms"></a>시각적 상태Xamarin.Forms
+## <a name="visual-states-in-no-locxamarinforms"></a>시각적 상태 Xamarin.Forms
 
 다음 표에서는에 정의 된 시각적 상태를 보여 줍니다 Xamarin.Forms .
 
@@ -439,7 +439,7 @@ VSM 태그의 나머지 부분은 이전과 동일 합니다.
 > [!NOTE]
 > 개체에서 참조 하는 모든 속성은 `Setter` 바인딩 가능한 속성에 의해 지원 되어야 합니다.
 
-**[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플의 **VSM with Setter TargetName** 페이지는 단일 시각적 상태 그룹에서 여러 요소에 대 한 상태를 설정 하는 방법을 보여 줍니다. XAML 파일은 요소가 포함 된, 및를 포함 하는로 구성 됩니다 `StackLayout` `Label` `Entry` `Button` .
+**[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플의 **VSM with Setter TargetName** 페이지는 단일 시각적 상태 그룹에서 여러 요소에 대 한 상태를 설정 하는 방법을 보여 줍니다. XAML 파일은 요소가 포함 된, 및를 포함 하는로 구성 됩니다 `StackLayout` `Label` `Entry` `Button` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -499,7 +499,7 @@ VisualStateManager.GoToState(this, "Focused");
 
 사용자 고유의 시각적 상태를 구현 하려면 코드에서를 호출 해야 `VisualStateManager.GoToState` 합니다. 가장 자주 사용 하는 페이지 클래스의 코드 파일에서이 호출을 수행 합니다.
 
-**[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플의 **VSM 유효성 검사** 페이지에서는 입력 유효성 검사와 관련 된 연결에서 Visual State Manager를 사용 하는 방법을 보여 줍니다. XAML 파일은 `StackLayout` 및 라는 두 개의 요소가 포함 된로 구성 됩니다 `Label` `Entry` `Button` .
+**[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플의 **VSM 유효성 검사** 페이지에서는 입력 유효성 검사와 관련 된 연결에서 Visual State Manager를 사용 하는 방법을 보여 줍니다. XAML 파일은 `StackLayout` 및 라는 두 개의 요소가 포함 된로 구성 됩니다 `Label` `Entry` `Button` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -625,7 +625,7 @@ Xamarin.Forms휴대폰에서 실행 되는 응용 프로그램은 일반적으�
 
 위에서 아래로 프로그램은 유니버설 Windows 플랫폼, Android 및 iOS에서 실행 됩니다.
 
-[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) 샘플의 **VSM 적응 레이아웃** 페이지는 이름이 "세로" 및 "가로" 인 두 개의 시각적 상태를 포함 하는 "OrientationStates" 라는 그룹을 정의 합니다. 더 복잡 한 방법은 여러 페이지 또는 창 너비를 기반으로 할 수 있습니다.
+[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) 샘플의 **VSM 적응 레이아웃** 페이지는 이름이 "세로" 및 "가로" 인 두 개의 시각적 상태를 포함 하는 "OrientationStates" 라는 그룹을 정의 합니다. 더 복잡 한 방법은 여러 페이지 또는 창 너비를 기반으로 할 수 있습니다.
 
 VSM 태그는 XAML 파일의 네 위치에서 발생 합니다. `StackLayout`이라는은 `mainStack` 요소인 메뉴와 콘텐츠를 모두 포함 합니다 `Image` . `StackLayout`세로 모드의 세로 방향이 가로 모드의 가로 방향 이어야 합니다.
 
@@ -775,9 +775,9 @@ XAML 파일의 요소 속성을 설정 하 여 코드 숨김이 방향 변경을
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Xamarin.Forms3.0 Visual State Manager 비디오**
+**Xamarin.Forms 3.0 Visual State Manager 비디오**
 
 ## <a name="related-links"></a>관련 링크
 
-- [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+- [VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 - [상태 트리거](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)

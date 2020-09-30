@@ -1,23 +1,12 @@
 ---
-title: Xamarin.Forms상자
-description: Xamarin.FormsCheckBox는 선택 하거나 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다.
-ms.prod: xamarin
-ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/11/2019
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8399dde2e4e2c9fb53b38fca2923eb0e3bfc6ce3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136476"
+제목: " Xamarin.Forms checkbox" 설명: Xamarin.Forms 확인란은 선택 하거나 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다.
+assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238: xamarin-forms author: davidbritch: dabritch:: 06/11/2019: (loc):
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
-# <a name="xamarinforms-checkbox"></a>Xamarin.Forms상자
+
+# <a name="no-locxamarinforms-checkbox"></a>Xamarin.Forms 상자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
@@ -133,7 +122,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 ## <a name="checkbox-visual-states"></a>CheckBox 시각적 상태
 
-`CheckBox`에는 `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) 이 선택 될 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `CheckBox` .
+`CheckBox` 에는 `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) 이 선택 될 때의 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `CheckBox` .
 
 다음 XAML 예제에서는 상태에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다 `IsChecked` .
 
@@ -165,6 +154,6 @@ checkBox.CheckedChanged += (sender, e) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [확인란 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [확인란 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 - [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

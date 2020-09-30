@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4c07f2667230695c6b884eb4902e68f7f4120f6b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 719bc923a53d6a2ce9250def48a99893cadac32d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939505"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555309"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API 사용 하 여 맞춤법 검사
 
@@ -27,8 +27,8 @@ _Bing Spell Check는 텍스트에 대 한 상황별 맞춤법 검사를 수행 �
 
 Bing Spell Check REST API에는 두 가지 운영 모드가 있으며 API에 요청을 수행할 때 모드를 지정 해야 합니다.
 
-- `Spell`대/소문자를 변경 하지 않고 짧은 텍스트 (최대 9 개 단어)를 수정 합니다.
-- `Proof`긴 텍스트를 수정 하 고, 대/소문자를 수정 하 고, 기본 문장 부호를 제공 하며, 적극적으로 수정
+- `Spell` 대/소문자를 변경 하지 않고 짧은 텍스트 (최대 9 개 단어)를 수정 합니다.
+- `Proof` 긴 텍스트를 수정 하 고, 대/소문자를 수정 하 고, 기본 문장 부호를 제공 하며, 적극적으로 수정
 
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
@@ -140,10 +140,10 @@ API 응답은 JSON 형식으로 반환 됩니다. 다음 JSON 데이터는 철�
 
 배열에 잘못 된 `flaggedTokens` 철자의 플래그가 지정 되었거나 문법적으로 잘못 된 텍스트의 단어 배열이 포함 되어 있습니다. 철자 또는 문법 오류가 없으면 배열이 비어 있습니다. 배열 내의 태그는 다음과 같습니다.
 
-- `offset`– 텍스트 문자열의 시작 부분부터 플래그가 지정 된 단어로의 0부터 시작 하는 오프셋입니다.
-- `token`– 텍스트 문자열에서 철자가 잘못 되었거나 문법적으로 잘못 된 단어입니다.
-- `type`– 단어에 플래그가 지정 된 오류의 형식입니다. 및의 두 가지 값을 사용할 수 있습니다 `RepeatedToken` `UnknownToken` .
-- `suggestions`– 철자 또는 문법 오류를 수정 하는 단어의 배열입니다. 배열은 및로 구성 되며 제안 된 `suggestion` `score` 수정이 정확한 것으로 확신 하는 수준을 나타냅니다.
+- `offset` – 텍스트 문자열의 시작 부분부터 플래그가 지정 된 단어로의 0부터 시작 하는 오프셋입니다.
+- `token` – 텍스트 문자열에서 철자가 잘못 되었거나 문법적으로 잘못 된 단어입니다.
+- `type` – 단어에 플래그가 지정 된 오류의 형식입니다. 및의 두 가지 값을 사용할 수 있습니다 `RepeatedToken` `UnknownToken` .
+- `suggestions` – 철자 또는 문법 오류를 수정 하는 단어의 배열입니다. 배열은 및로 구성 되며 제안 된 `suggestion` `score` 수정이 정확한 것으로 확신 하는 수준을 나타냅니다.
 
 샘플 응용 프로그램에서 JSON 응답은 인스턴스로 deserialize 되며 `SpellCheckResult` 결과는 표시를 위해 호출 메서드로 반환 됩니다. 다음 코드 예제에서는 `SpellCheckResult` 인스턴스를 표시 하기 위해 처리 하는 방법을 보여 줍니다.
 
@@ -172,5 +172,5 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 - [Bing Spell Check 설명서](/azure/cognitive-services/bing-spell-check/)
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Bing Spell Check API v7 참조](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

@@ -10,12 +10,12 @@ ms.date: 02/21/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 594e436c9db7c123fea4f9aa262c9d27af765b07
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 53930f6b6b83ea855db9538f19e88482a4d1a82f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136008"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557454"
 ---
 # <a name="listview-row-animations-on-ios"></a>IOS의 ListView 행 애니메이션
 
@@ -47,10 +47,10 @@ listView.On<iOS>().SetRowAnimationsEnabled(false);
 `ListView.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `ListView.SetRowAnimationsEnabled`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) items 컬렉션을 업데이트할 때 행 애니메이션을 사용 하지 않도록 설정할지 여부를 제어 하는 데 사용 됩니다 [`ListView`](xref:Xamarin.Forms.ListView) . 또한 `ListView.GetRowAnimationsEnabled` 메서드를 사용 하 여에서 행 애니메이션을 사용 하지 않도록 설정할지 여부를 반환할 수 있습니다 `ListView` .
 
 > [!NOTE]
-> [`ListView`](xref:Xamarin.Forms.ListView)행 애니메이션은 기본적으로 사용 하도록 설정 됩니다. 따라서에 새 행이 삽입 될 때 애니메이션이 발생 `ListView` 합니다.
+> [`ListView`](xref:Xamarin.Forms.ListView) 행 애니메이션은 기본적으로 사용 하도록 설정 됩니다. 따라서에 새 행이 삽입 될 때 애니메이션이 발생 `ListView` 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

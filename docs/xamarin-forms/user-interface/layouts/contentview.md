@@ -10,14 +10,14 @@ ms.date: 08/14/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: eb94b2943cfe4659bb77764f810d45dc8b189005
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130119"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555374"
 ---
-# <a name="xamarinforms-contentview"></a>Xamarin.Forms ContentView
+# <a name="no-locxamarinforms-contentview"></a>Xamarin.Forms ContentView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
@@ -29,11 +29,11 @@ Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스는 `Layo
 
 `ContentView`클래스는 단일 속성을 정의 합니다.
 
-* [`Content`](xref:Xamarin.Forms.ContentView.Content)는 `View` 개체입니다. 이 속성은 개체에 의해 지원 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 되므로 데이터 바인딩의 대상이 될 수 있습니다.
+* [`Content`](xref:Xamarin.Forms.ContentView.Content) 는 `View` 개체입니다. 이 속성은 개체에 의해 지원 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 되므로 데이터 바인딩의 대상이 될 수 있습니다.
 
 는 `ContentView` 또한 클래스에서 속성을 상속 합니다 `TemplatedView` .
 
-* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate)는 `ControlTemplate` 컨트롤의 모양을 정의 하거나 재정의할 수 있는입니다.
+* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) 는 `ControlTemplate` 컨트롤의 모양을 정의 하거나 재정의할 수 있는입니다.
 
 속성에 대 한 자세한 내용은 `ControlTemplate` ControlTemplate를 [사용 하 여 모양 사용자 지정](#customize-appearance-with-a-controltemplate)을 참조 하세요.
 
@@ -211,7 +211,7 @@ CardView card = new CardView
 
 ## <a name="related-links"></a>관련 링크
 
-* [ContentView 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+* [ContentView 샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)입니다.
 * [Xamarin.Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)

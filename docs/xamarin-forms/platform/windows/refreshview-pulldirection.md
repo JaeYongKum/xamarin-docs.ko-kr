@@ -10,12 +10,12 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46a1b4d00b9eea276b9a3b3d5bffbdac3d31e0ef
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b5c1310e300373fe75cbcd1464220acf989516ba
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136580"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555686"
 ---
 # <a name="refreshview-pull-direction-on-windows"></a>Windows의 RefreshView 풀 방향
 
@@ -47,10 +47,10 @@ refreshView.On<Windows>().SetRefreshPullDirection(RefreshPullDirection.LeftToRig
 
 `RefreshView.On<Windows>`메서드는이 플랫폼별가 유니버설 Windows 플랫폼 에서만 실행 되도록 지정 합니다. `RefreshView.SetRefreshPullDirection`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) `RefreshView` `RefreshPullDirection` 다음 네 가지 값을 제공 하는 열거형을 사용 하 여의 끌어오기 방향을 설정 하는 데 사용 됩니다.
 
-- `LeftToRight`왼쪽에서 오른쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
-- `TopToBottom`위쪽에서 아래쪽으로의 끌어오기가 새로 고침을 시작 하 고의 기본 끌어오기 방향 임을 나타냅니다 `RefreshView` .
-- `RightToLeft`오른쪽에서 왼쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
-- `BottomToTop`아래쪽에서 위쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
+- `LeftToRight` 왼쪽에서 오른쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
+- `TopToBottom` 위쪽에서 아래쪽으로의 끌어오기가 새로 고침을 시작 하 고의 기본 끌어오기 방향 임을 나타냅니다 `RefreshView` .
+- `RightToLeft` 오른쪽에서 왼쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
+- `BottomToTop` 아래쪽에서 위쪽으로의 끌어오기가 새로 고침을 시작 함을 나타냅니다.
 
 또한 `GetRefreshPullDirection` 메서드를 사용 하 여의 현재를 반환할 수 있습니다 `RefreshPullDirection` `RefreshView` .
 
@@ -63,6 +63,6 @@ refreshView.On<Windows>().SetRefreshPullDirection(RefreshPullDirection.LeftToRig
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

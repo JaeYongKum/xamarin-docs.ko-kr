@@ -11,12 +11,12 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bdc5b715d4502590b56b41b864835a47076ad518
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134214"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556453"
 ---
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
@@ -33,7 +33,7 @@ Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 �
 * .NET 워크 로드를 사용 하는 **모바일 개발과** 함께 [Visual Studio 2017 버전 15.7 이상](https://visualstudio.microsoft.com/vs/)
 * [ Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/)
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio Marketplace에서 Xamarin Live 다시 로드를 설치 합니다.
 
 Xamarin Live Reload는 Visual Studio Marketplace를 통해 배포 됩니다. 확장을 설치 하려면 Visual Studio Marketplace 웹 사이트의 [Xamarin Live Reload 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 를 방문 하 여 **다운로드**를 클릭 합니다.
@@ -186,7 +186,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 
 1. Azure Portal에서 새 Ubuntu Server VM 만들기
 2. 네트워킹 탭에서 1883 (기본 MQTT 포트)에 대 한 새 인바운드 포트 규칙을 추가 합니다.
-3. [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (bash 모드)를 엽니다.
+3. [Cloud Shell](/azure/cloud-shell/overview) (bash 모드)를 엽니다.
 4. `ssh [USERNAME]@[PUBLIC_IP]`1) 및 VM 개요 페이지에 표시 된 공용 IP를 사용 하 여 입력 합니다.
 5. `sudo apt-get install mosquitto`을 실행 하 고 1에서 선택한 암호를 입력 합니다.
 

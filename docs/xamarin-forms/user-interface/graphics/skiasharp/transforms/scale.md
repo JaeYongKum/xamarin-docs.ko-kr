@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5ea4fa88925925ba7c81f47c30875c3419603ab8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932047"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555465"
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -105,7 +105,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-크기 조정 요소가의 메서드에서 반환 된 값에 어떻게 영향을 주는지 궁금할 수 있습니다. `MeasureText` `SKPaint` 대답은 그렇지 않습니다. `Scale`는의 메서드입니다 `SKCanvas` . 개체를 사용 하 여 `SKPaint` 캔버스에서 항목을 렌더링할 때까지 개체를 사용 하는 모든 작업에는 영향을 주지 않습니다.
+크기 조정 요소가의 메서드에서 반환 된 값에 어떻게 영향을 주는지 궁금할 수 있습니다. `MeasureText` `SKPaint` 대답은 그렇지 않습니다. `Scale` 는의 메서드입니다 `SKCanvas` . 개체를 사용 하 여 `SKPaint` 캔버스에서 항목을 렌더링할 때까지 개체를 사용 하는 모든 작업에는 영향을 주지 않습니다.
 
 여기에서 볼 수 있듯이, 호출 후에 그려진 모든 항목은 `Scale` 비례적으로 늘어납니다.
 
@@ -348,5 +348,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7149a818506611176f7c34a6fae4ec733cd2ad9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8e8c5696235e0258ab4e300a821c1ef804e6bd50
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938569"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556687"
 ---
 # <a name="picker-item-selection-on-ios"></a>IOS에서 선택 항목 선택
 
@@ -47,8 +47,8 @@ picker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 `Picker.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `Picker.SetUpdateMode`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) `UpdateMode` 다음 두 가지 가능한 값을 제공 하는 열거형을 사용 하 여 항목 선택이 발생 하는 시기를 제어 하는 데 사용 됩니다.
 
-- `Immediately`– 항목 선택은 사용자가의 항목을 탐색할 때 발생 합니다 [`Picker`](xref:Xamarin.Forms.Picker) . 이는의 기본 동작입니다 Xamarin.Forms .
-- `WhenFinished`– 항목 선택은 사용자가에서 [ **완료** ] 단추를 누른 경우에만 발생 합니다 [`Picker`](xref:Xamarin.Forms.Picker) .
+- `Immediately` – 항목 선택은 사용자가의 항목을 탐색할 때 발생 합니다 [`Picker`](xref:Xamarin.Forms.Picker) . 이는의 기본 동작입니다 Xamarin.Forms .
+- `WhenFinished` – 항목 선택은 사용자가에서 [ **완료** ] 단추를 누른 경우에만 발생 합니다 [`Picker`](xref:Xamarin.Forms.Picker) .
 
 또한 메서드를 `SetUpdateMode` 호출 하 여 `UpdateMode` 현재을 반환 하는 메서드를 호출 하 여 열거형 값을 전환 하는 데 메서드를 사용할 수 있습니다 `UpdateMode` .
 
@@ -70,6 +70,6 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCollectionView 레이아웃
+title: Xamarin.Forms CollectionView 레이아웃
 description: 기본적으로 CollectionView은 해당 항목을 세로 목록에 표시 합니다. 그러나 세로 및 가로 목록과 그리드를 지정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
@@ -10,18 +10,18 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 73e7ace96c17aea2b397f2706e128ea498338b09
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: e399ae590dbd1260f3b2a403c39ef7e7d98d3592
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918263"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557363"
 ---
-# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.FormsCollectionView 레이아웃
+# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 레이아웃을 제어 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 레이아웃을 제어 하는 다음 속성을 정의 합니다.
 
 - [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), 형식의, [`IItemsLayout`](xref:Xamarin.Forms.IItemsLayout) 사용할 레이아웃을 지정 합니다.
 - [`ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy), 형식의, [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) 사용할 항목 측정 전략을 지정 합니다.
@@ -35,7 +35,7 @@ ms.locfileid: "87918263"
 - 세로 그리드 – 새 항목이 추가 될 때 세로로 증가 하는 여러 열 표입니다.
 - 가로 그리드 – 새 항목이 추가 될 때 가로로 증가 하는 다중 행 표입니다.
 
-이러한 레이아웃은 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) 클래스에서 파생 되는 클래스에 속성을 설정 하 여 지정할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) . 이 클래스는 다음 속성을 정의 합니다.
+이러한 레이아웃은 [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) 클래스에서 파생 되는 클래스에 속성을 설정 하 여 지정할 수 있습니다 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) . 이 클래스는 다음과 같은 속성을 정의합니다.
 
 - [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation)형식의는 [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) [`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목이 추가 될 때가 확장 되는 방향을 지정 합니다.
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment)형식의는 [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) 맞춤 지점이 항목에 정렬 되는 방법을 지정 합니다.
@@ -59,7 +59,7 @@ ms.locfileid: "87918263"
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)에서는 네이티브 레이아웃 엔진을 사용 하 여 레이아웃을 수행 합니다.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에서는 네이티브 레이아웃 엔진을 사용 하 여 레이아웃을 수행 합니다.
 
 ## <a name="vertical-list"></a>세로 목록
 
@@ -327,9 +327,9 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="headers-and-footers"></a>머리글 및 바닥글
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 목록에 있는 항목으로 스크롤 하는 머리글 및 바닥글을 표시할 수 있습니다. 머리글과 바닥글은 문자열, 뷰 또는 개체 일 수 있습니다 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 목록에 있는 항목으로 스크롤 하는 머리글 및 바닥글을 표시할 수 있습니다. 머리글과 바닥글은 문자열, 뷰 또는 개체 일 수 있습니다 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)머리글 및 바닥글을 지정 하기 위한 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 머리글 및 바닥글을 지정 하기 위한 다음 속성을 정의 합니다.
 
 - `Header`형식의는 `object` 목록 시작 부분에 표시 되는 문자열, 바인딩 또는 뷰를 지정 합니다.
 - `HeaderTemplate`형식의 형식은를 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 지정 `DataTemplate` 하는 데 사용할를 지정 합니다 `Header` .
@@ -550,8 +550,8 @@ CollectionView collectionView = new CollectionView
 
 의 UI 요소가 고정 크기를 지정 하지 않는 경우 기본적으로의 각 항목 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 개별적으로 측정 되 고 크기가 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 지정 됩니다. 변경할 수 있는이 동작은 속성 값으로 지정 됩니다 [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) . 이 속성 값은 열거형 멤버 중 하나로 설정할 수 있습니다 [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) .
 
-- `MeasureAllItems`– 각 항목은 개별적으로 측정 됩니다. 기본값입니다.
-- `MeasureFirstItem`– 첫 번째 항목만 측정 되며 이후의 모든 항목은 첫 번째 항목의 크기와 동일 하 게 지정 됩니다.
+- `MeasureAllItems` – 각 항목은 개별적으로 측정 됩니다. 이것은 기본값입니다.
+- `MeasureFirstItem` – 첫 번째 항목만 측정 되며 이후의 모든 항목은 첫 번째 항목의 크기와 동일 하 게 지정 됩니다.
 
 > [!IMPORTANT]
 > `MeasureFirstItem`크기 조정 전략을 사용 하면 항목 크기를 모든 항목에서 균일 하 게 사용할 수 있는 경우 성능이 향상 됩니다.
@@ -593,7 +593,7 @@ void OnImageTapped(object sender, EventArgs e)
 
 ## <a name="right-to-left-layout"></a>오른쪽에서 왼쪽 레이아웃
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)속성을로 설정 하 여 오른쪽에서 왼쪽 흐름 방향으로 해당 콘텐츠를 레이아웃 할 수 있습니다 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) . 그러나 페이지 `FlowDirection` 또는 루트 레이아웃에 속성을 설정 하는 것이 가장 좋습니다. 이렇게 하면 페이지 또는 루트 레이아웃 내의 모든 요소가 흐름 방향에 응답 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을로 설정 하 여 오른쪽에서 왼쪽 흐름 방향으로 해당 콘텐츠를 레이아웃 할 수 있습니다 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) . 그러나 페이지 `FlowDirection` 또는 루트 레이아웃에 속성을 설정 하는 것이 가장 좋습니다. 이렇게 하면 페이지 또는 루트 레이아웃 내의 모든 요소가 흐름 방향에 응답 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -617,6 +617,6 @@ void OnImageTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Xamarin.FormsCollectionView 스크롤](scrolling.md)
+- [Xamarin.Forms CollectionView 스크롤](scrolling.md)

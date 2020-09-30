@@ -1,5 +1,5 @@
 ---
-title: 바인딩 가능한 레이아웃Xamarin.Forms
+title: 바인딩 가능한 레이아웃 Xamarin.Forms
 description: 바인딩 가능한 레이아웃을 사용 하면 레이아웃 클래스가 항목 컬렉션에 바인딩하여 콘텐츠를 생성할 수 있으며,이 옵션을 사용 하 여 각 항목의 모양을 DataTemplate로 설정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
@@ -10,30 +10,30 @@ ms.date: 03/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a5b1e43586810521e87360d8b6537d9bafdabad7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138244"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555439"
 ---
-# <a name="bindable-layouts-in-xamarinforms"></a>바인딩 가능한 레이아웃Xamarin.Forms
+# <a name="bindable-layouts-in-no-locxamarinforms"></a>바인딩 가능한 레이아웃 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 바인딩 가능한 레이아웃을 사용 하면 클래스에서 파생 되는 모든 레이아웃 클래스가 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 항목 컬렉션에 바인딩하여 항목의 모양을로 설정 하는 옵션을 사용 하 여 콘텐츠를 생성할 수 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 있습니다. 바인딩 가능한 레이아웃은 `BindableLayout` 다음 연결 된 속성을 노출 하는 클래스에서 제공 됩니다.
 
-- `ItemsSource`– 레이아웃에 표시 되는 항목의 컬렉션을 지정 합니다 `IEnumerable` .
-- `ItemTemplate`– 레이아웃에 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 의해 표시 되는 항목 컬렉션의 각 항목에 적용할를 지정 합니다.
-- `ItemTemplateSelector`– [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 런타임에 항목에 대해를 선택 하는 데 사용 되는를 지정 합니다.
+- `ItemsSource` – 레이아웃에 표시 되는 항목의 컬렉션을 지정 합니다 `IEnumerable` .
+- `ItemTemplate` – 레이아웃에 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 의해 표시 되는 항목 컬렉션의 각 항목에 적용할를 지정 합니다.
+- `ItemTemplateSelector` – [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 런타임에 항목에 대해를 선택 하는 데 사용 되는를 지정 합니다.
 
 > [!NOTE]
 > `ItemTemplate`및 속성이 모두 설정 된 경우 속성이 우선적으로 적용 `ItemTemplate` `ItemTemplateSelector` 됩니다.
 
 또한 `BindableLayout` 클래스는 다음과 같은 바인딩 가능한 속성을 노출 합니다.
 
-- `EmptyView`– 속성이 이거나 `string` `ItemsSource` `null` 속성으로 지정 된 컬렉션이 `ItemsSource` `null` 이거나 비어 있을 때 표시 되는 또는 뷰를 지정 합니다. 기본값은 `null`입니다.
-- `EmptyViewTemplate`– 속성이 이거나 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `ItemsSource` `null` 속성으로 지정 된 컬렉션이 `ItemsSource` `null` 이거나 비어 있을 때 표시 되는를 지정 합니다. 기본값은 `null`입니다.
+- `EmptyView` – 속성이 이거나 `string` `ItemsSource` `null` 속성으로 지정 된 컬렉션이 `ItemsSource` `null` 이거나 비어 있을 때 표시 되는 또는 뷰를 지정 합니다. 기본값은 `null`입니다.
+- `EmptyViewTemplate` – 속성이 이거나 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `ItemsSource` `null` 속성으로 지정 된 컬렉션이 `ItemsSource` `null` 이거나 비어 있을 때 표시 되는를 지정 합니다. 기본값은 `null`입니다.
 
 > [!NOTE]
 > `EmptyViewTemplate`및 속성이 모두 설정 된 경우 속성이 우선적으로 적용 `EmptyView` `EmptyViewTemplate` 됩니다.
@@ -253,7 +253,7 @@ void ToggleEmptyView(bool isToggled)
 
 ## <a name="related-links"></a>관련 링크
 
-- [바인딩 가능한 레이아웃 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [바인딩 가능한 레이아웃 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [사용자 지정 레이아웃 만들기](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

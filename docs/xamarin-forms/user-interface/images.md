@@ -1,5 +1,5 @@
 ---
-title: 이미지Xamarin.Forms
+title: 이미지 Xamarin.Forms
 description: 이미지는를 사용 하 여 플랫폼 간에 공유 될 수 있으며 Xamarin.Forms , 각 플랫폼에 대해 특별히 로드 하거나 표시를 위해 다운로드할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -10,42 +10,42 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3ad0981c0249bc81a97d5c48489167d81a1523de
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 824d5ca711495c8a8ad663034e77506468efd397
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938471"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556193"
 ---
-# <a name="images-in-xamarinforms"></a>이미지Xamarin.Forms
+# <a name="images-in-no-locxamarinforms"></a>이미지 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _이미지는를 사용 하 여 플랫폼 간에 공유 될 수 있으며 Xamarin.Forms , 각 플랫폼에 대해 특별히 로드 하거나 표시를 위해 다운로드할 수 있습니다._
 
-이미지는 응용 프로그램 탐색, 유용성 및 브랜딩의 중요 한 부분입니다. Xamarin.Forms응용 프로그램은 모든 플랫폼에서 이미지를 공유할 수 있어야 하 고 각 플랫폼 마다 다른 이미지를 표시할 수도 있습니다.
+이미지는 응용 프로그램 탐색, 유용성 및 브랜딩의 중요 한 부분입니다. Xamarin.Forms 응용 프로그램은 모든 플랫폼에서 이미지를 공유할 수 있어야 하 고 각 플랫폼 마다 다른 이미지를 표시할 수도 있습니다.
 
 플랫폼 관련 이미지는 아이콘 및 시작 화면에도 필요 합니다. 이러한 기능은 플랫폼별로 구성 해야 합니다.
 
 ## <a name="display-images"></a>이미지 표시
 
-Xamarin.Forms뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지에 이미지를 표시 합니다. 여기에는 몇 가지 중요 한 속성이 있습니다.
+Xamarin.Forms 뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지에 이미지를 표시 합니다. 여기에는 몇 가지 중요 한 속성이 있습니다.
 
-- [`Source`](xref:Xamarin.Forms.Image.Source)- [`ImageSource`](xref:Xamarin.Forms.ImageSource) 표시할 이미지를 설정 하는 파일, Uri 또는 리소스 중 하나입니다.
-- [`Aspect`](xref:Xamarin.Forms.Image.Aspect)-이미지가 표시 되는 범위 내에서 이미지의 크기를 조정 하는 방법 (스트레치, 자르기 또는 레터 박스).
+- [`Source`](xref:Xamarin.Forms.Image.Source) - [`ImageSource`](xref:Xamarin.Forms.ImageSource) 표시할 이미지를 설정 하는 파일, Uri 또는 리소스 중 하나입니다.
+- [`Aspect`](xref:Xamarin.Forms.Image.Aspect) -이미지가 표시 되는 범위 내에서 이미지의 크기를 조정 하는 방법 (스트레치, 자르기 또는 레터 박스).
 
-[`ImageSource`](xref:Xamarin.Forms.ImageSource)각 이미지 원본 형식에 대해 정적 메서드를 사용 하 여 인스턴스를 가져올 수 있습니다.
+[`ImageSource`](xref:Xamarin.Forms.ImageSource) 각 이미지 원본 형식에 대해 정적 메서드를 사용 하 여 인스턴스를 가져올 수 있습니다.
 
-- [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String))-각 플랫폼에서 확인할 수 있는 파일 이름 또는 파일 경로가 필요 합니다.
-- [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri))-Uri 개체가 필요 합니다 (예:).  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*)- **빌드 작업 (EmbeddedResource**)을 사용 하 여 응용 프로그램 또는 .NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일에 대 한 리소스 식별자가 필요 합니다.
-- [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream}))-이미지 데이터를 제공 하는 스트림이 필요 합니다.
+- [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) -각 플랫폼에서 확인할 수 있는 파일 이름 또는 파일 경로가 필요 합니다.
+- [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) -Uri 개체가 필요 합니다 (예:).  `new Uri("http://server.com/image.jpg")` .
+- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) - **빌드 작업 (EmbeddedResource**)을 사용 하 여 응용 프로그램 또는 .NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일에 대 한 리소스 식별자가 필요 합니다.
+- [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) -이미지 데이터를 제공 하는 스트림이 필요 합니다.
 
 [`Aspect`](xref:Xamarin.Forms.Image.Aspect)속성은 이미지가 표시 영역에 맞게 조정 되는 방법을 결정 합니다.
 
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill)-표시 영역을 완전히 그리고 정확 하 게 채우도록 이미지를 확장 합니다. 이로 인해 이미지가 왜곡 될 수 있습니다.
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-화면을 유지 하면서 화면에 표시 영역을 채우도록 이미지를 클리핑 합니다 (즉, 왜곡이 발생 하지 않음).
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-이미지 (필요한 경우)를 Letterboxes 하 여 전체 이미지가 표시 영역에 들어가도록 이미지의 너비 또는 높이에 따라 위쪽/아래쪽 또는 옆쪽에 공백이 추가 됩니다.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) -표시 영역을 완전히 그리고 정확 하 게 채우도록 이미지를 확장 합니다. 이로 인해 이미지가 왜곡 될 수 있습니다.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -화면을 유지 하면서 화면에 표시 영역을 채우도록 이미지를 클리핑 합니다 (즉, 왜곡이 발생 하지 않음).
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -이미지 (필요한 경우)를 Letterboxes 하 여 전체 이미지가 표시 영역에 들어가도록 이미지의 너비 또는 높이에 따라 위쪽/아래쪽 또는 옆쪽에 공백이 추가 됩니다.
 
 이미지는 [로컬 파일](#local-images)에서 로드 하거나, [포함 된 리소스](#embedded-images)에서 로드 하거나, [다운로드](#download-images)하거나, 스트림에서 로드할 수 있습니다. 또한 [`Image`](xref:Xamarin.Forms.Image) 개체에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다 `FontImageSource` . 자세한 내용은 글꼴 가이드에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) [를 참조](~/xamarin-forms/user-interface/text/fonts.md) 하세요.
 
@@ -91,7 +91,7 @@ image.Source = Device.RuntimePlatform == Device.Android
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>네이티브 해상도 (레 티 나 및 높은 DPI)
 
-iOS, Android 및 UWP에는 다양 한 이미지 해상도에 대 한 지원이 포함 되어 있습니다. 여기서 운영 체제는 장치 기능에 따라 런타임에 적절 한 이미지를 선택 합니다. Xamarin.Forms는 네이티브 플랫폼의 Api를 사용 하 여 로컬 이미지를 로드 하므로 파일의 이름을 올바르게 지정 하 고 프로젝트에 배치 하는 경우 자동으로 대체 해상도를 지원 합니다.
+iOS, Android 및 UWP에는 다양 한 이미지 해상도에 대 한 지원이 포함 되어 있습니다. 여기서 운영 체제는 장치 기능에 따라 런타임에 적절 한 이미지를 선택 합니다. Xamarin.Forms 는 네이티브 플랫폼의 Api를 사용 하 여 로컬 이미지를 로드 하므로 파일의 이름을 올바르게 지정 하 고 프로젝트에 배치 하는 경우 자동으로 대체 해상도를 지원 합니다.
 
 IOS 9부터 이미지를 관리 하는 기본 방법은 적절 한 자산 카탈로그 이미지 집합에 필요한 각 해상도에 대해 이미지를 끄는 것입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)를 참조 하세요.
 
@@ -101,16 +101,16 @@ Android 대체 해상도 이미지는 다음 스크린샷에 표시 된 것 처�
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
-UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사를 추가할 수 있습니다](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) `xxx` . 여기서은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage.scale-200.png**). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage.png**). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
+UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사를 추가할 수 있습니다](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) `xxx` . 여기서은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage.scale-200.png**). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage.png**). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 
 일부 컨트롤에는 다음과 같은 이미지를 표시 하는 속성이 있습니다.
 
-- [`Button`](xref:Xamarin.Forms.Button)에 [`ImageSource`](xref:Xamarin.Forms.Button.ImageSource) 는에 표시할 비트맵 이미지로 설정할 수 있는 속성이 있습니다 `Button` . 자세한 내용은 [단추를 사용 하 여 비트맵 사용](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)을 참조 하세요.
-- [`ImageButton`](xref:Xamarin.Forms.Button)에 [`Source`](xref:Xamarin.Forms.ImageButton.Source) 는에 표시할 이미지에 설정할 수 있는 속성이 있습니다 `ImageButton` . 자세한 내용은 [이미지 원본 설정](~/xamarin-forms/user-interface/imagebutton.md#setting-the-image-source)을 참조 하세요.
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)에는 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 파일, 포함 리소스, URI 또는 스트림에서 로드 된 이미지로 설정할 수 있는 속성이 있습니다.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell)에는 [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) 파일, 포함 리소스, URI 또는 스트림에서 검색 된 이미지로 설정할 수 있는 속성이 있습니다.
+- [`Button`](xref:Xamarin.Forms.Button) 에 [`ImageSource`](xref:Xamarin.Forms.Button.ImageSource) 는에 표시할 비트맵 이미지로 설정할 수 있는 속성이 있습니다 `Button` . 자세한 내용은 [단추를 사용 하 여 비트맵 사용](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)을 참조 하세요.
+- [`ImageButton`](xref:Xamarin.Forms.Button) 에 [`Source`](xref:Xamarin.Forms.ImageButton.Source) 는에 표시할 이미지에 설정할 수 있는 속성이 있습니다 `ImageButton` . 자세한 내용은 [이미지 원본 설정](~/xamarin-forms/user-interface/imagebutton.md#setting-the-image-source)을 참조 하세요.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 에는 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 파일, 포함 리소스, URI 또는 스트림에서 로드 된 이미지로 설정할 수 있는 속성이 있습니다.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) 에는 [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) 파일, 포함 리소스, URI 또는 스트림에서 검색 된 이미지로 설정할 수 있는 속성이 있습니다.
 - [`Page`](xref:Xamarin.Forms.Page). 에서 파생 되는 모든 페이지 형식 `Page` 에는 [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) 파일, 포함 리소스, URI 또는 스트림이 할당 될 수 있는 및 속성이 있습니다. 가를 표시 하는 경우와 같은 특정 상황에서는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) [`ContentPage`](xref:Xamarin.Forms.ContentPage) 플랫폼이 지 원하는 경우 아이콘이 표시 됩니다.
 
   > [!IMPORTANT]
@@ -280,8 +280,8 @@ webImage.Source = "https://aka.ms/campus.jpg";
 
 는 [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) 다음 속성을 통해 구성 된 다운로드 된 이미지의 캐싱도 지원 합니다.
 
-- [`CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled)-캐싱이 기본적으로 사용 되는지 여부 `true` 입니다.
-- [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity)- `TimeSpan` 이미지가 로컬로 저장 되는 기간을 정의 하는입니다.
+- [`CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) -캐싱이 기본적으로 사용 되는지 여부 `true` 입니다.
+- [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) - `TimeSpan` 이미지가 로컬로 저장 되는 기간을 정의 하는입니다.
 
 캐싱은 기본적으로 사용 하도록 설정 되며 24 시간 동안 로컬로 이미지를 저장 합니다. 특정 이미지에 대 한 캐싱을 사용 하지 않도록 설정 하려면 다음과 같이 이미지 원본을 인스턴스화합니다.
 
@@ -304,7 +304,7 @@ webImage.Source = new UriImageSource
 
 ## <a name="animated-gifs"></a>애니메이션 Gif
 
-Xamarin.Forms에는 작은 애니메이션 Gif를 표시할 수 있는 기능이 포함 되어 있습니다. 이 작업을 수행 [`Image.Source`](xref:Xamarin.Forms.Image.Source) 하려면 속성을 애니메이션 GIF 파일로 설정 합니다.
+Xamarin.Forms 에는 작은 애니메이션 Gif를 표시할 수 있는 기능이 포함 되어 있습니다. 이 작업을 수행 [`Image.Source`](xref:Xamarin.Forms.Image.Source) 하려면 속성을 애니메이션 GIF 파일로 설정 합니다.
 
 ```xaml
 <Image Source="demo.gif" />
@@ -341,7 +341,7 @@ Windows 개발자 센터에서 이미지 및 [시작 화면](/windows/uwp/launch
 
 ## <a name="related-links"></a>관련 링크
 
-- [WorkingWithImages (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
+- [WorkingWithImages (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)
 - [Android Iconography](https://developer.android.com/design/style/iconography.html)
 - [타일 및 아이콘 자산에 대한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

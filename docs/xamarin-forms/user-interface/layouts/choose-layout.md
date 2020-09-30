@@ -1,6 +1,6 @@
 ---
 title: 레이아웃 선택 Xamarin.Forms
-description: Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
+description: Xamarin.Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 6f5702695698881a30cfbf3e63110856a97a2c24
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181487"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555349"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다. 레이아웃 클래스를 선택 하려면 레이아웃이 자식 요소를 배치 하는 방법과 레이아웃의 자식 요소 크기를 조정 하는 방법을 알고 있어야 합니다. 또한 원하는 레이아웃을 만드는 레이아웃을 중첩 해야 할 수도 있습니다.
+Xamarin.Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다. 레이아웃 클래스를 선택 하려면 레이아웃이 자식 요소를 배치 하는 방법과 레이아웃의 자식 요소 크기를 조정 하는 방법을 알고 있어야 합니다. 또한 원하는 레이아웃을 만드는 레이아웃을 중첩 해야 할 수도 있습니다.
 
 다음 이미지는 주 레이아웃 클래스를 사용 하 여 얻을 수 있는 일반적인 레이아웃을 보여 줍니다 Xamarin.Forms .
 
@@ -29,7 +29,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 ## <a name="stacklayout"></a>StackLayout
 
-는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 1 차원 스택의 요소를 가로 또는 세로로 구성 합니다. [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation)속성은 요소의 방향을 지정 하 고 기본 방향은 [`Vertical`](xref:Xamarin.Forms.StackOrientation) 입니다. `StackLayout`는 일반적으로 페이지에서 UI의 하위 섹션을 정렬 하는 데 사용 됩니다.
+는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 1 차원 스택의 요소를 가로 또는 세로로 구성 합니다. [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation)속성은 요소의 방향을 지정 하 고 기본 방향은 [`Vertical`](xref:Xamarin.Forms.StackOrientation) 입니다. `StackLayout` 는 일반적으로 페이지에서 UI의 하위 섹션을 정렬 하는 데 사용 됩니다.
 
 다음 XAML은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 세 가지 개체를 포함 하는 세로를 만드는 방법을 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
 
@@ -78,7 +78,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 자세한 내용은 [ Xamarin.Forms stacklayout](stacklayout.md)을 참조 하세요.
 
-## <a name="grid"></a>Grid
+## <a name="grid"></a>그리드
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 비례 또는 절대 크기를 가질 수 있는 행 및 열에 요소를 표시 하는 데 사용 됩니다. 표의 행과 열은 및 속성을 사용 하 여 지정 됩니다 [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) .
 
@@ -250,12 +250,12 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 ## <a name="related-links"></a>관련 링크
 
-- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Xamarin.Forms레이아웃 (비디오)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [Xamarin.Forms그리드에](grid.md)
-- [Xamarin.Forms가는 레이아웃](flex-layout.md)
-- [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relativelayout.md)
+- [레이아웃 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Xamarin.Forms 레이아웃 (비디오)](https://youtu.be/4HlLjTZQzjM)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [Xamarin.Forms 그리드에](grid.md)
+- [Xamarin.Forms 가는 레이아웃](flex-layout.md)
+- [Xamarin.Forms AbsoluteLayout](absolutelayout.md)
+- [Xamarin.Forms RelativeLayout](relativelayout.md)
 - [레이아웃 성능 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [레이아웃 압축](layout-compression.md)

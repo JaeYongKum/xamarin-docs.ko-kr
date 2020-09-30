@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsC # 태그'
+title: 'Xamarin.Forms C # 태그'
 description: 'C # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다.'
 ms.prod: xamarin
 ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
@@ -10,14 +10,14 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918564"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557155"
 ---
-# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsC # 태그
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms C # 태그
 
 ![시험판 API](~/media/shared/preview.png)
 
@@ -207,7 +207,7 @@ new Label { } .FormattedText (
 
 ### <a name="gesture-recognizers"></a>제스처 인식기
 
-`Command`및 `CommandParameter` 속성은 `GestureElement` `View` , 및 `BindClickGesture` `BindSwipeGesture` 확장 메서드를 사용 하 여 및 형식에 바인딩될 수 있습니다 `BindTapGesture` .
+`Command` 및 `CommandParameter` 속성은 `GestureElement` `View` , 및 `BindClickGesture` `BindSwipeGesture` 확장 메서드를 사용 하 여 및 형식에 바인딩될 수 있습니다 `BindTapGesture` .
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -231,11 +231,11 @@ new Label { Text = "Tap Me" }
 
 제스처 인식기는 이기 때문에 `BindableObject` `Bind` 초기화할 때 및 확장 메서드를 사용할 수 있습니다 `BindCommand` . 또한 확장 메서드를 사용 하 여 사용자 지정 제스처 인식기 형식을 초기화할 수 있습니다 `Gesture<TGestureElement, TGestureRecognizer>` .
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원하는 일련의 레이아웃 확장 메서드가 포함 되어 있습니다.
 
-| 형식 | 확장 메서드 |
+| 유형 | 확장 메서드 |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원�
 
 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 흐름 방향을 모두 지원 하도록 설계 된 c # 태그의 경우 위의 네임 스페이스 중 하나가 아니라 다음 표에 있는 확장 메서드를 사용 하는 것이 좋습니다.
 
-| 형식 | 확장 메서드 |
+| 유형 | 확장 메서드 |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -553,7 +553,7 @@ new Label { }
 
 ## <a name="related-links"></a>관련 링크
 
-- [CSharpForMarkupDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+- [CSharpForMarkupDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 - [Android 플랫폼 기능](~/xamarin-forms/platform/android/index.md)
 - [iOS 플랫폼 기능](~/xamarin-forms/platform/ios/index.md)
 - [Windows 플랫폼 기능](~/xamarin-forms/platform/windows/index.md)

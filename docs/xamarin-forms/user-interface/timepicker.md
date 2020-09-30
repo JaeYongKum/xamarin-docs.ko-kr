@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsTimePicker
+title: Xamarin.Forms TimePicker
 description: TimePicker는 Xamarin.Forms 사용자가 시간을 선택할 수 있는 뷰입니다. 이 문서에서는 응용 프로그램에서 TimePicker를 사용 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
@@ -10,14 +10,14 @@ ms.date: 10/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c2e6b97f2207ebb6543fb6a720cd430331f989b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9b913d9d310b4b2f1b560d06256f18e7532e1834
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138231"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556531"
 ---
-# <a name="xamarinforms-timepicker"></a>Xamarin.FormsTimePicker
+# <a name="no-locxamarinforms-timepicker"></a>Xamarin.Forms TimePicker
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
@@ -27,10 +27,10 @@ _Xamarin.Forms사용자가 시간을 선택할 수 있는 뷰입니다._
 
 - [`Time`](xref:Xamarin.Forms.TimePicker.Time)`TimeSpan`선택한 시간 형식의 이며 기본값은 `TimeSpan` 0입니다. `TimeSpan`형식은 자정 이후의 기간을 나타냅니다.
 - [`Format`](xref:Xamarin.Forms.TimePicker.Format)`string` [표준](/dotnet/standard/base-types/standard-date-and-time-format-strings/) 또는 [사용자 지정](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .net 형식 문자열의 형식으로, 간단한 시간 패턴 인 "t"로 기본 설정 됩니다.
-- [`TextColor`](xref:Xamarin.Forms.TimePicker.TextColor)형식으로 [`Color`](xref:Xamarin.Forms.Color) , 선택 된 시간을 표시 하는 데 사용 되는 색입니다. 기본값은 [`Color.Default`](xref:Xamarin.Forms.Color.Default) 입니다.
-- [`FontAttributes`](xref:Xamarin.Forms.TimePicker.FontAttributes)형식의 [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) 이며 기본값은 [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) 입니다.
-- [`FontFamily`](xref:Xamarin.Forms.TimePicker.FontFamily)형식의 `string` 이며 기본값은 `null` 입니다.
-- [`FontSize`](xref:Xamarin.Forms.TimePicker.FontSize)형식의 `double` 이며 기본값은-1.0입니다.
+- [`TextColor`](xref:Xamarin.Forms.TimePicker.TextColor) 형식으로 [`Color`](xref:Xamarin.Forms.Color) , 선택 된 시간을 표시 하는 데 사용 되는 색입니다. 기본값은 [`Color.Default`](xref:Xamarin.Forms.Color.Default) 입니다.
+- [`FontAttributes`](xref:Xamarin.Forms.TimePicker.FontAttributes) 형식의 [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) 이며 기본값은 [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) 입니다.
+- [`FontFamily`](xref:Xamarin.Forms.TimePicker.FontFamily) 형식의 `string` 이며 기본값은 `null` 입니다.
+- [`FontSize`](xref:Xamarin.Forms.TimePicker.FontSize) 형식의 `double` 이며 기본값은-1.0입니다.
 - `double` 형식의 `CharacterSpacing`은 `TimePicker` 텍스트를 구성하는 문자 사이의 간격입니다.
 
 이러한 모든 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 이러한 속성은 스타일을 지정할 수 있으며 속성은 데이터 바인딩의 대상이 될 수 있습니다. [`Time`](xref:Xamarin.Forms.TimePicker.Time)속성의 기본 바인딩 모드를 사용 하는 [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 경우이는 [MVVM (모델-뷰-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처를 사용 하는 응용 프로그램의 데이터 바인딩 대상이 될 수 있음을 의미 합니다.
@@ -83,7 +83,7 @@ TimePicker timePicker = new TimePicker
 
 ## <a name="timepicker-in-an-application"></a>응용 프로그램의 TimePicker
 
-[**Settimer**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) 샘플은 [`TimePicker`](xref:Xamarin.Forms.TimePicker) [`Entry`](xref:Xamarin.Forms.Entry) 해당 페이지에, 및 뷰를 포함 합니다 [`Switch`](xref:Xamarin.Forms.Switch) . 는 `TimePicker` 시간을 선택 하는 데 사용할 수 있으며, `Entry` 가 설정 되 면에서 텍스트를 사용자에 게 알리는 경고 대화 상자가 표시 됩니다 `Switch` . XAML 파일은 다음과 같습니다.
+[**Settimer**](/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) 샘플은 [`TimePicker`](xref:Xamarin.Forms.TimePicker) [`Entry`](xref:Xamarin.Forms.Entry) 해당 페이지에, 및 뷰를 포함 합니다 [`Switch`](xref:Xamarin.Forms.Switch) . 는 `TimePicker` 시간을 선택 하는 데 사용할 수 있으며, `Entry` 가 설정 되 면에서 텍스트를 사용자에 게 알리는 경고 대화 상자가 표시 됩니다 `Switch` . XAML 파일은 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -183,5 +183,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SetTimer 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
+- [SetTimer 샘플](/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 - [TimePicker API](xref:Xamarin.Forms.TimePicker)
