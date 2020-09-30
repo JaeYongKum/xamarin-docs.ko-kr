@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e9c20f8ca0656f6bad72e1e09fbe873a9208be2b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: cea36ad2a1f8ae54ad1e38dc94d6eb222822b8f3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107298"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451565"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 >
-> - XAML에서 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry)을 만듭니다.
+> - XAML에서 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry)를 만듭니다.
 > - 변경 중인 `Entry`에 있는 텍스트에 응답합니다.
 > - `Entry`의 동작을 사용자 지정합니다.
 
@@ -23,6 +23,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [EntryTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
+- [EntryTutorial(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Xamarin.Forms 항목(가이드)](~/xamarin-forms/user-interface/text/entry.md)
 - [항목 API](xref:Xamarin.Forms.Entry)

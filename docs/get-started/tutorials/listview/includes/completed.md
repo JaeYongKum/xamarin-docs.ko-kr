@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b01ea403fde614bc06e616c3b1e30bfd8ed10a0f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8d7572d4fb04bd7974c1badc28226c991e60ddcd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107295"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451542"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
@@ -24,6 +24,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [ListViewTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
+- [ListViewTutorial(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
 - [Xamarin.Forms ListView(가이드)](~/xamarin-forms/user-interface/listview/index.md)
 - [ListView API](xref:Xamarin.Forms.ListView)

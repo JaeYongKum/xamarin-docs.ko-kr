@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/24/2020
-  ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: c54bbc3d1157ad46abbfe798dbf3227efaed4f78
+  ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374112"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91432224"
 landingContent:
 - title: 시작
   linkLists:
@@ -99,7 +99,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: About
+    - text: 정보
       url: ~/essentials/index.md?context=xamarin/ios
     - text: 시작
       url: ~/essentials/get-started.md?context=xamarin/ios
@@ -108,7 +108,7 @@ landingContent:
     - text: 문제 해결
       url: ~/essentials/troubleshooting.md?context=xamarin/ios
     - text: 릴리스 정보
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: 데이터 및 클라우드 서비스
   linkLists:
   - linkListType: concept
