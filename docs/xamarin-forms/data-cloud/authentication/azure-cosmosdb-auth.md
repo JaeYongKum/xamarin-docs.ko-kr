@@ -1,5 +1,5 @@
 ---
-title: Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
+title: Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증 Xamarin.Forms
 description: 이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션 Azure Cosmos DB 액세스 제어를 결합 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -10,14 +10,14 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05547e960ba1ea141a830396f803dfc265283627
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936463"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563291"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
@@ -51,7 +51,7 @@ _Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하
 
 Cosmos DB 분할에 대 한 자세한 내용은 [Azure Cosmos DB을 분할 하 고 크기를 조정 하는 방법](/azure/cosmos-db/partition-data/)을 참조 하세요. Cosmos DB access control에 대 한 자세한 내용은 [SQL API에서](/rest/api/documentdb/access-control-on-documentdb-resources/)Cosmos DB 데이터 및 access control에 대 한 [액세스 보안](/azure/cosmos-db/secure-access-to-data/) 을 참조 하세요.
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치 프로그램
 
 리소스 토큰 브로커를 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
@@ -77,11 +77,11 @@ Azure App Service에서 리소스 토큰 브로커를 호스트 하는 프로세
 
 1. Azure Portal에서 새 App Service 웹 앱을 만듭니다. 자세한 내용은 [App Service Environment에서 웹 앱 만들기](/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase/)를 참조 하세요.
 1. Azure Portal에서 웹 앱에 대 한 앱 설정 블레이드를 열고 다음 설정을 추가 합니다.
-    - `accountUrl`– 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
-    - `accountKey`– 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 마스터 키 (주 또는 보조) 여야 합니다.
-    - `databaseId`– 값은 Cosmos DB 데이터베이스의 이름 이어야 합니다.
-    - `collectionId`– 값은 Cosmos DB 컬렉션의 이름 (이 경우) 이어야 합니다 `UserItems` .
-    - `hostUrl`– 값은 App Service 계정의 개요 블레이드에서 웹 앱의 URL 이어야 합니다.
+    - `accountUrl` – 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
+    - `accountKey` – 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 마스터 키 (주 또는 보조) 여야 합니다.
+    - `databaseId` – 값은 Cosmos DB 데이터베이스의 이름 이어야 합니다.
+    - `collectionId` – 값은 Cosmos DB 컬렉션의 이름 (이 경우) 이어야 합니다 `UserItems` .
+    - `hostUrl` – 값은 App Service 계정의 개요 블레이드에서 웹 앱의 URL 이어야 합니다.
 
     다음 스크린샷은이 구성을 보여 줍니다.
 
@@ -121,16 +121,16 @@ App Service 간편한 인증을 구성 하는 프로세스는 다음과 같습�
 
 또한 App Service 웹 앱은 Facebook 앱과 통신 하 여 인증 흐름을 사용 하도록 구성 해야 합니다. Facebook id 공급자를 선택 하 고 facebook 개발자 센터의 Facebook 앱 설정에서 **앱 id** 및 **앱 암호** 값을 입력 하 여이를 수행할 수 있습니다. 자세한 내용은 [응용 프로그램에 Facebook 정보 추가](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)를 참조 하세요.
 
-### <a name="xamarinforms-application-configuration"></a>Xamarin.Forms응용 프로그램 구성
+### <a name="no-locxamarinforms-application-configuration"></a>Xamarin.Forms 응용 프로그램 구성
 
 예제 응용 프로그램을 구성 하는 프로세스는 Xamarin.Forms 다음과 같습니다.
 
 1. 솔루션을 엽니다 Xamarin.Forms .
 1. `Constants.cs`을 열고 다음 상수의 값을 업데이트 합니다.
-    - `EndpointUri`– 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
-    - `DatabaseName`–이 값은 문서 데이터베이스의 이름 이어야 합니다.
-    - `CollectionName`–이 값은 문서 데이터베이스 컬렉션의 이름 (이 경우) 이어야 합니다 `UserItems` .
-    - `ResourceTokenBrokerUrl`– 값은 App Service 계정의 개요 블레이드에서 리소스 토큰 브로커 웹 앱의 URL 이어야 합니다.
+    - `EndpointUri` – 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
+    - `DatabaseName` –이 값은 문서 데이터베이스의 이름 이어야 합니다.
+    - `CollectionName` –이 값은 문서 데이터베이스 컬렉션의 이름 (이 경우) 이어야 합니다 `UserItems` .
+    - `ResourceTokenBrokerUrl` – 값은 App Service 계정의 개요 블레이드에서 리소스 토큰 브로커 웹 앱의 URL 이어야 합니다.
 
 ## <a name="initiating-login"></a>로그인 시작 중
 
@@ -264,10 +264,10 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo Azure Cosmos DB Auth (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+- [Todo Azure Cosmos DB Auth (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Azure Cosmos DB 문서 데이터베이스 사용](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Azure Cosmos DB 데이터에 대한 액세스 보호](/azure/cosmos-db/secure-access-to-data/)
 - [SQL API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)
 - [Azure Cosmos DB에서 분할 및 확장하는 방법](/azure/cosmos-db/partition-data/)
 - [Azure Cosmos DB 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client)

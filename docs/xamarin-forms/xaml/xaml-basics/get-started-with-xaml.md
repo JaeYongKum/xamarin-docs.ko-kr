@@ -10,12 +10,12 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 874793975f027e1323dbf8a8acd30d19e980370b
-ms.sourcegitcommit: 562d4f2d51a43af21b7dc3ab892dd3a4264349a1
+ms.openlocfilehash: 319afff4572c02e363fef6296aca06ba290923c2
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87177647"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562836"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1부. XAML 시작
 
@@ -111,7 +111,7 @@ Mac용 Visual Studio의 메뉴에서 **파일 > 새 솔루션** 을 선택 합�
 
 두 XML 네임 스페이스 ( `xmlns` ) 선언은 uri를 참조 하 고, 첫 번째는 Xamarin의 웹 사이트에, 두 번째는 Microsoft의에 있습니다. 해당 Uri가 가리키는 내용을 확인 하지 마십시오. 아무것도 없습니다. 이는 Xamarin 및 Microsoft가 소유 하는 Uri 이며 기본적으로 버전 식별자로 작동 합니다.
 
-첫 번째 XML 네임 스페이스 선언은 접두사가 없는 XAML 파일 내에 정의 된 태그가의 클래스를 참조 함을 의미 Xamarin.Forms 합니다 (예:) `ContentPage` . 두 번째 네임 스페이스 선언은 접두사를 정의 합니다 `x` . 이는 XAML 자체에 내장 되어 있고 다른 XAML 구현에서 지원 되는 여러 요소 및 특성에 사용 됩니다. 그러나 이러한 요소와 특성은 URI에 포함 된 연도에 따라 약간 다릅니다. Xamarin.Forms는 2009 XAML 사양을 지원 하지만 일부는 지원 하지 않습니다.
+첫 번째 XML 네임 스페이스 선언은 접두사가 없는 XAML 파일 내에 정의 된 태그가의 클래스를 참조 함을 의미 Xamarin.Forms 합니다 (예:) `ContentPage` . 두 번째 네임 스페이스 선언은 접두사를 정의 합니다 `x` . 이는 XAML 자체에 내장 되어 있고 다른 XAML 구현에서 지원 되는 여러 요소 및 특성에 사용 됩니다. 그러나 이러한 요소와 특성은 URI에 포함 된 연도에 따라 약간 다릅니다. Xamarin.Forms 는 2009 XAML 사양을 지원 하지만 일부는 지원 하지 않습니다.
 
 `local`네임 스페이스 선언을 사용 하면 .NET Standard library 프로젝트에서 다른 클래스에 액세스할 수 있습니다.
 
@@ -142,7 +142,7 @@ namespace XamlSamples
 
 Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하도록 XAML 파일을 구문 분석 합니다. **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 살펴보면 이름이 **XamlSamples.MainPage.xaml.g.cs**인 파일이 검색 됩니다. ' G '는 생성 된를 나타냅니다. 이는 `MainPage` 생성자에서 호출 된 메서드의 정의를 포함 하는의 다른 partial 클래스 정의입니다 `InitializeComponent` `MainPage` . 이러한 두 partial `MainPage` 클래스 정의를 함께 컴파일할 수 있습니다. Xaml이 컴파일 되었는지 여부에 따라 xaml 파일이 나 xaml 파일의 이진 형식이 실행 파일에 포함 됩니다.
 
-런타임에 특정 플랫폼 프로젝트의 코드는 메서드를 호출 하 여 `LoadApplication` `App` .NET Standard 라이브러리에 있는 클래스의 새 인스턴스를 전달 합니다. `App`클래스 생성자는를 인스턴스화합니다 `MainPage` . 이 클래스의 생성자는를 호출 하 여 `InitializeComponent` `LoadFromXaml` .NET Standard 라이브러리에서 XAML 파일 (또는 컴파일된 이진)을 추출 하는 메서드를 호출 합니다. `LoadFromXaml`XAML 파일에 정의 된 모든 개체를 초기화 하 고, 모두 부모-자식 관계에서 연결 하 고, 코드에 정의 된 이벤트 처리기를 XAML 파일에 설정 된 이벤트에 연결 하 고, 개체의 결과 트리를 페이지의 콘텐츠로 설정 합니다.
+런타임에 특정 플랫폼 프로젝트의 코드는 메서드를 호출 하 여 `LoadApplication` `App` .NET Standard 라이브러리에 있는 클래스의 새 인스턴스를 전달 합니다. `App`클래스 생성자는를 인스턴스화합니다 `MainPage` . 이 클래스의 생성자는를 호출 하 여 `InitializeComponent` `LoadFromXaml` .NET Standard 라이브러리에서 XAML 파일 (또는 컴파일된 이진)을 추출 하는 메서드를 호출 합니다. `LoadFromXaml` XAML 파일에 정의 된 모든 개체를 초기화 하 고, 모두 부모-자식 관계에서 연결 하 고, 코드에 정의 된 이벤트 처리기를 XAML 파일에 설정 된 이벤트에 연결 하 고, 개체의 결과 트리를 페이지의 콘텐츠로 설정 합니다.
 
 일반적으로 생성 된 코드 파일을 사용 하 여 많은 시간을 소비할 필요는 없지만 생성 된 파일의 코드에서 런타임 예외가 발생 하는 경우가 있으므로이에 대해 잘 알고 있어야 합니다.
 
@@ -186,7 +186,7 @@ Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하�
 
 `ContentPage.Content`태그는 고유한 XAML 구문의 일부입니다. 처음에는 잘못 된 XML로 표시 될 수 있지만 올바른 XML로 표시 될 수 있습니다. 마침표가 XML에서 특수 문자가 아닙니다.
 
-`ContentPage.Content`태그를 *속성 요소* 태그 라고 합니다. `Content`는의 속성 이며 `ContentPage` 일반적으로 단일 뷰나 자식 뷰가 있는 레이아웃으로 설정 됩니다. 일반적으로 속성은 XAML에서 특성이 되지만 특성을 복합 개체로 설정 하기가 어렵습니다 `Content` . 이러한 이유로 속성은 마침표로 구분 된 클래스 이름 및 속성 이름으로 구성 된 XML 요소로 표현 됩니다. 이제 `Content` 다음과 같이 태그 사이에 속성을 설정할 수 있습니다 `ContentPage.Content` .
+`ContentPage.Content`태그를 *속성 요소* 태그 라고 합니다. `Content` 는의 속성 이며 `ContentPage` 일반적으로 단일 뷰나 자식 뷰가 있는 레이아웃으로 설정 됩니다. 일반적으로 속성은 XAML에서 특성이 되지만 특성을 복합 개체로 설정 하기가 어렵습니다 `Content` . 이러한 이유로 속성은 마침표로 구분 된 클래스 이름 및 속성 이름으로 구성 된 XML 요소로 표현 됩니다. 이제 `Content` 다음과 같이 태그 사이에 속성을 설정할 수 있습니다 `ContentPage.Content` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -458,7 +458,7 @@ public partial class XamlPlusCodePage : ContentPage {
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [2 부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3 부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4 부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 380c9d5b8159a1a142ebf005955e4345dbc6e6d8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138998"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562901"
 ---
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 선 및 경로
 
@@ -27,7 +27,7 @@ _SkiaSharp를 사용 하 여 선 및 그래픽 패스 그리기_
 
 그래픽 경로는 SkiaSharp에서 선과 곡선을 그리는 가장 일반화 된 방법입니다. 이 섹션에서는 개체를 사용 하 여 [`SKPath`](xref:SkiaSharp.SKPath) 직선을 그리는 방법 및 작은 직선 ( *다중선*이라고 함)의 컬렉션을 사용 하 여 알고리즘 방식으로 정의할 수 있는 곡선을 그리는 방법을 설명 합니다. [**SkiaSharp 곡선 및 경로**](../curves/index.md) 에 대 한 이후 섹션에서는에서 지 원하는 다양 한 곡선 종류에 대해 설명 `SKPath` 합니다.
 
-이 섹션의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 홈 페이지 및 해당 솔루션의 [**paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) 폴더에 있는 제목 **선 및 경로** 아래에 나타납니다.
+이 섹션의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 홈 페이지 및 해당 솔루션의 [**paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) 폴더에 있는 제목 **선 및 경로** 아래에 나타납니다.
 
 ## <a name="lines-and-stroke-caps"></a>[선 및 스트로크 단면](lines.md)
 
@@ -55,5 +55,5 @@ SkiaSharp에서 점선 및 파선 그리기의 복잡성을 줄입니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

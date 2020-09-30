@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7269b0617be7199c365f350fc26ecd42256e28f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 27d19773d86c125cd5574f7a281c37c26ef643fd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128455"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563200"
 ---
 # <a name="webview-mixed-content-on-android"></a>Android의 웹 보기 혼합 콘텐츠
 
@@ -42,9 +42,9 @@ webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 
 `WebView.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. [ `WebView.SetMixedContentMode` ] (F: Xamarin.Forms 입니다. 플랫폼 구성. SetMixedContentMode ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . 웹 보기}, Xamarin.Forms . MixedContentHandling) 메서드를 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 사용 하 여 네임 스페이스에서 혼합 콘텐츠를 표시할 수 있는지 여부를 제어할 수 있습니다. [`MixedContentHandling`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 열거형은 세 가지 가능한 값을 제공 합니다.
 
-- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow)– [`WebView`](xref:Xamarin.Forms.WebView) 가 HTTPS 원본을 통해 HTTP 원본에서 콘텐츠를 로드할 수 있음을 나타냅니다.
-- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow)– [`WebView`](xref:Xamarin.Forms.WebView) 가 HTTP 원본에서 콘텐츠를 로드 하는 것을 허용 하지 않음을 나타냅니다.
-- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode)–가 [`WebView`](xref:Xamarin.Forms.WebView) 최신 장치 웹 브라우저의 방법과 호환 되는지 여부를 나타냅니다. 일부 HTTP 콘텐츠는 HTTPS 원본에서 로드할 수 있고 다른 유형의 콘텐츠는 차단 될 수 있습니다. 차단 되거나 허용 되는 콘텐츠 유형은 각 운영 체제 릴리스에서 변경 될 수 있습니다.
+- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow) – [`WebView`](xref:Xamarin.Forms.WebView) 가 HTTPS 원본을 통해 HTTP 원본에서 콘텐츠를 로드할 수 있음을 나타냅니다.
+- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow) – [`WebView`](xref:Xamarin.Forms.WebView) 가 HTTP 원본에서 콘텐츠를 로드 하는 것을 허용 하지 않음을 나타냅니다.
+- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode) –가 [`WebView`](xref:Xamarin.Forms.WebView) 최신 장치 웹 브라우저의 방법과 호환 되는지 여부를 나타냅니다. 일부 HTTP 콘텐츠는 HTTPS 원본에서 로드할 수 있고 다른 유형의 콘텐츠는 차단 될 수 있습니다. 차단 되거나 허용 되는 콘텐츠 유형은 각 운영 체제 릴리스에서 변경 될 수 있습니다.
 
 그러면 지정 된 [`MixedContentHandling`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 값이에 적용 되어 [`WebView`](xref:Xamarin.Forms.WebView) 혼합 된 콘텐츠를 표시할 수 있는지 여부를 제어 합니다.
 
@@ -52,7 +52,7 @@ webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

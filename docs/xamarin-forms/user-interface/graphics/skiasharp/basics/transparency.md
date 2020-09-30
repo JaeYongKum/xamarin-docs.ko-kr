@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af1747a19af6c715d1594122393e500d1f73c79b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134721"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562524"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-앞서 살펴본 것 처럼 클래스에는 [`SKPaint`](xref:SkiaSharp.SKPaint) [`Color`](xref:SkiaSharp.SKPaint.Color) 형식의 속성이 포함 됩니다 [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor`알파 채널을 포함 하므로 값을 사용 하 여 색을 지정할 수 있는 모든 항목을 `SKColor` 부분적으로 투명 하 게 지정할 수 있습니다. 
+앞서 살펴본 것 처럼 클래스에는 [`SKPaint`](xref:SkiaSharp.SKPaint) [`Color`](xref:SkiaSharp.SKPaint.Color) 형식의 속성이 포함 됩니다 [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor` 알파 채널을 포함 하므로 값을 사용 하 여 색을 지정할 수 있는 모든 항목을 `SKColor` 부분적으로 투명 하 게 지정할 수 있습니다. 
 
 [**SkiaSharp 문서의 기본 애니메이션**](animation.md) 에서 일부 투명도를 보여 주었습니다. 이 문서에서는 혼합을 통해 여러 개체를 단일 장면으로 결합 하 여 _혼합_으로 알려진 기법을 결합 하는 방법에 대해 자세히 설명 합니다. 고급 혼합 기술에 대해서는 [**SkiaSharp 셰이더**](../effects/shaders/index.md) 섹션의 문서에서 설명 합니다.
 
@@ -39,7 +39,7 @@ SKColor (byte red, byte green, byte blue, byte alpha);
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **코드 추가 코드** 페이지에서 부분적으로 투명 한 텍스트를 사용 하는 방법을 보여 줍니다. 이 페이지는 값에 투명도를 통합 하 여의 두 텍스트 문자열을 페이드 아웃 합니다 `SKColor` .
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **코드 추가 코드** 페이지에서 부분적으로 투명 한 텍스트를 사용 하는 방법을 보여 줍니다. 이 페이지는 값에 투명도를 통합 하 여의 두 텍스트 문자열을 페이드 아웃 합니다 `SKColor` .
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -242,5 +242,5 @@ public partial class BitmapDissolvePage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

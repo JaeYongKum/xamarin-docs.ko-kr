@@ -1,6 +1,6 @@
 ---
-title: 의 감속/가속 함수Xamarin.Forms
-description: Xamarin.Forms에는 애니메이션이 실행 되는 속도를 제어 하는 속도를 제어 하는 전송 함수를 지정할 수 있는 감속/가속 클래스가 포함 되어 있습니다. 이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다.
+title: 의 감속/가속 함수 Xamarin.Forms
+description: Xamarin.Forms 에는 애니메이션이 실행 되는 속도를 제어 하는 속도를 제어 하는 전송 함수를 지정할 수 있는 감속/가속 클래스가 포함 되어 있습니다. 이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 07/14/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 574b6f82aea3c71d43799c6ca86997d895eed4c5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1769a1eb562d4ae0551598493afa9b04491a42d5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573809"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562797"
 ---
-# <a name="easing-functions-in-xamarinforms"></a>의 감속/가속 함수Xamarin.Forms
+# <a name="easing-functions-in-no-locxamarinforms"></a>의 감속/가속 함수 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
-_Xamarin.ios에는 애니메이션이 실행 되는 속도를 제어 하는 방법을 제어 하는 전송 함수를 지정할 수 있도록 하는 감속/가속 클래스가 포함 되어 있습니다. 이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다._
+_Xamarin.Forms 에는 애니메이션이 실행 되는 속도를 제어 하는 속도를 제어 하는 전송 함수를 지정할 수 있는 감속/가속 클래스가 포함 되어 있습니다. 이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다._
 
 [`Easing`](xref:Xamarin.Forms.Easing)클래스는 애니메이션에서 사용할 수 있는 여러 감속/가속 함수를 정의 합니다.
 
@@ -105,11 +105,11 @@ await image.TranslateTo (0, 200, 2000, new Easing (t => 1 - Math.Cos (10 * Math.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 살펴보았습니다. Xamarin.Forms에는 [`Easing`](xref:Xamarin.Forms.Easing) 애니메이션이 실행 되는 속도를 제어 하는 방법을 제어 하는 전송 함수를 지정 하는 데 사용할 수 있는 클래스가 포함 되어 있습니다.
+이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 살펴보았습니다. Xamarin.Forms 에는 [`Easing`](xref:Xamarin.Forms.Easing) 애니메이션이 실행 되는 속도를 제어 하는 방법을 제어 하는 전송 함수를 지정 하는 데 사용할 수 있는 클래스가 포함 되어 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [비동기 지원 개요](~/cross-platform/platform/async.md)
-- [감속/가속 함수 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
+- [감속/가속 함수 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 - [감속/가속](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

@@ -10,12 +10,12 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8127191aab80d81fc2e532e3d5e14931b834eeae
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bfd581eebba259ecf7e4e9a426f7382c8a3d1d5a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137035"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562550"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>IOS의 TabbedPage 반투명 탭 모음
 
@@ -55,6 +55,6 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

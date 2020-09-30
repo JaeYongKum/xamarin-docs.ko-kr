@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms로컬 데이터베이스
-description: Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 하므로 공유 코드에서 개체를 로드 하 고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램이 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 설명 합니다.
+title: Xamarin.Forms 로컬 데이터베이스
+description: Xamarin.Forms 는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 하므로 공유 코드에서 개체를 로드 하 고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램이 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 021831da13a936fc5eb9d2e4cb63412484ceb465
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 6c5390057baf48634056101d44540020648ea709
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426866"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563109"
 ---
-# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms로컬 데이터베이스
+# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
@@ -173,7 +173,7 @@ public static class TaskExtensions
 
 `SafeFireAndForget`메서드는 제공 된 개체의 비동기 실행을 기다립니다 하 `Task` 고, `Action` 예외가 throw 되 면 호출 되는를 연결할 수 있도록 합니다.
 
-자세한 내용은 [작업 기반 비동기 패턴 (탭)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)을 참조 하세요.
+자세한 내용은 [작업 기반 비동기 패턴 (탭)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)을 참조 하세요.
 
 ### <a name="data-manipulation-methods"></a>데이터 조작 메서드
 
@@ -219,7 +219,7 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-no-locxamarinforms"></a>데이터 액세스Xamarin.Forms
+## <a name="access-data-in-no-locxamarinforms"></a>데이터 액세스 Xamarin.Forms
 
 Xamarin.Forms `App` 클래스는 클래스의 인스턴스를 노출 합니다 `TodoItemDatabase` .
 
@@ -238,7 +238,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
+이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -289,10 +289,10 @@ SQLite 데이터베이스를 복사 해야 하는 여러 가지 경우가 있습
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Todo 샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/todo)
 - [SQLite.NET NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [SQLite 설명서](https://www.sqlite.org/docs.html)
 - [Android에서 SQLite 사용](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [IOS에서 SQLite 사용](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [작업 기반 비동기 패턴 (탭)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [TAP(작업 기반 비동기 패턴)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 - [Lazy &lt; T &gt; 클래스](xref:System.Lazy`1)

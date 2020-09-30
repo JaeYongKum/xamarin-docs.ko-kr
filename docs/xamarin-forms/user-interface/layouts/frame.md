@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms프레임씩
+title: Xamarin.Forms 프레임씩
 description: Xamarin.FormsFrame 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 보기 또는 레이아웃을 래핑하는 데 사용 되는 레이아웃입니다.
 ms.prod: xamarin
 ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
@@ -10,14 +10,14 @@ ms.date: 08/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a14390afc04c1a0b2ccb5199350b69a9645a794
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137191"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563551"
 ---
-# <a name="xamarinforms-frame"></a>Xamarin.Forms프레임씩
+# <a name="no-locxamarinforms-frame"></a>Xamarin.Forms 프레임씩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
@@ -27,7 +27,7 @@ Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) 클래스는 색, 그림자 �
 
 [!["IOS 및 Android의 프레임 예제"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "IOS 및 Android의 프레임 예제")
 
-`Frame`클래스는 다음 속성을 정의 합니다.
+`Frame` 클래스는 다음과 같은 속성을 정의합니다.
 
 * [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)`Color`테두리의 색을 결정 하는 값입니다 `Frame` .
 * [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)`float`모퉁이의 둥근 반경을 결정 하는 값입니다.
@@ -57,7 +57,7 @@ Frame defaultFrame = new Frame
 };
 ```
 
-`Frame`XAML에서 속성을 설정 하 여 모퉁이가 둥근 모퉁이, 색이 지정 된 테두리 및 그림자를 사용 하 여 개체를 사용자 지정할 수 있습니다. 다음 예제에서는 사용자 지정 된 개체를 보여 줍니다 `Frame` .
+`Frame` XAML에서 속성을 설정 하 여 모퉁이가 둥근 모퉁이, 색이 지정 된 테두리 및 그림자를 사용 하 여 개체를 사용자 지정할 수 있습니다. 다음 예제에서는 사용자 지정 된 개체를 보여 줍니다 `Frame` .
 
 ```xaml
 <Frame BorderColor="Orange"
@@ -196,5 +196,5 @@ Frame circleImageFrame = new Frame
 
 ## <a name="related-links"></a>관련 링크
 
-* [프레임 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
-* [이미지Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [프레임 데모](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [이미지 Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

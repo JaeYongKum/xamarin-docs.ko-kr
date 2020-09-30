@@ -10,12 +10,12 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130574"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562888"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C로 사용자 인증
 
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-`OnForgotPassword`메서드는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword`는 `AcquireTokenAsync` 특정 **권한을**제공할 수 있는의 다른 오버 로드를 사용 합니다. 다음 예제에서는 토큰을 획득할 때 사용자 지정 **권한을** 제공 하는 방법을 보여 줍니다.
+`OnForgotPassword`메서드는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword` 는 `AcquireTokenAsync` 특정 **권한을**제공할 수 있는의 다른 오버 로드를 사용 합니다. 다음 예제에서는 토큰을 획득할 때 사용자 지정 **권한을** 제공 하는 방법을 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -332,7 +332,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 유니버설 Windows 플랫폼에서 MSAL을 사용 하는 데 필요한 추가 설치는 없습니다.
 
@@ -344,7 +344,7 @@ public class MainActivity : FormsAppCompatActivity
 
 ## <a name="related-links"></a>관련 링크
 
-- [AzureADB2CAuth (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+- [AzureADB2CAuth (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Microsoft 인증 라이브러리 설명서](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c1ae9e05b6671d45d8df485a89cfc0dea86632d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3df3a606c54d7367079638d48330dfe1b214043b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937308"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563187"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
@@ -31,7 +31,7 @@ _SkiaSharp 좌표와 좌표 간의 차이점 탐색 Xamarin.Forms_
 
 이러한 원은 크기와 *비교할 때* 작습니다 Xamarin.Forms . 기본적으로 SkiaSharp는 기본 Xamarin.Forms 플랫폼에 의해 설정 된 장치 독립적 단위에서 좌표와 크기를 기준으로 픽셀 단위로 그립니다. 좌표계에 대 한 자세한 내용은 Xamarin.Forms 5 장에서 찾을 수 있습니다 [. ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) *을 사용 하 여 Xamarin.Forms Mobile Apps를 만드는 *책의 크기를 처리 합니다.)
 
-[**SkewSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Surface 크기** 에 해당 하는 페이지에서는 SkiaSharp 텍스트 출력을 사용 하 여 세 가지 원본에서 표시 표면의 크기를 표시 합니다.
+[**SkewSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Surface 크기** 에 해당 하는 페이지에서는 SkiaSharp 텍스트 출력을 사용 하 여 세 가지 원본에서 표시 표면의 크기를 표시 합니다.
 
 - Xamarin.Forms [`Width`](xref:Xamarin.Forms.VisualElement.Width) [`Height`](xref:Xamarin.Forms.VisualElement.Height) 개체의 일반 및 속성 `SKCanvasView` 입니다.
 - [`CanvasSize`](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize)개체의 속성입니다 `SKCanvasView` .
@@ -52,7 +52,7 @@ public SurfaceSizePage()
 }
 ```
 
-`SKCanvas`에는 6 가지 방법이 포함 되어 `DrawText` 있지만이 [`DrawText`](xref:SkiaSharp.SKCanvas.DrawText(System.String,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드는 가장 간단 합니다.
+`SKCanvas` 에는 6 가지 방법이 포함 되어 `DrawText` 있지만이 [`DrawText`](xref:SkiaSharp.SKCanvas.DrawText(System.String,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드는 가장 간단 합니다.
 
 ```csharp
 public void DrawText (String text, Single x, Single y, SKPaint paint)
@@ -168,5 +168,5 @@ canvas.DrawOval(rect, paint);
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

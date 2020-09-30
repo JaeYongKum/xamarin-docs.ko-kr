@@ -11,12 +11,12 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 805bdef812b33d3f4329346a437e1202a16fe3ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8cb59738519af933e509ebf63a923e573667941e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937321"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562914"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5부. 데이터 바인딩에서 MVVM까지
 
@@ -39,7 +39,7 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`는 특별 한 속성입니다. 요소에 대해를 설정 하면 해당 `BindingContext` 요소의 모든 자식에 의해 상속 됩니다. 즉,의 모든 자식 항목이 동일 하 `StackLayout` `BindingContext` 고 해당 개체의 속성에 대 한 단순 바인딩을 포함할 수 있습니다.
+`BindingContext` 는 특별 한 속성입니다. 요소에 대해를 설정 하면 해당 `BindingContext` 요소의 모든 자식에 의해 상속 됩니다. 즉,의 모든 자식 항목이 동일 하 `StackLayout` `BindingContext` 고 해당 개체의 속성에 대 한 단순 바인딩을 포함할 수 있습니다.
 
 **일회성 DateTime** 프로그램에서 두 개의 자식에는 해당 값의 속성에 대 한 바인딩이 포함 되어 `DateTime` 있지만 두 개의 다른 자식은 바인딩 경로가 누락 된 것으로 보이는 바인딩을 포함 합니다. 즉, `DateTime` 값 자체가에 사용 됩니다 `StringFormat` .
 
@@ -312,14 +312,14 @@ ViewModels을 특정 사용자 인터페이스 개체와 독립적으로 사용�
 - `MenuItem`
 - `ToolbarItem`
 - `SearchBar`
-- `TextCell`(및 `ImageCell` )
+- `TextCell` (및 `ImageCell` )
 - `ListView`
 - `TapGestureRecognizer`
 
 `SearchBar`및 요소를 제외 하 고 `ListView` , 이러한 요소는 두 가지 속성을 정의 합니다.
 
-- `Command`유형`System.Windows.Input.ICommand`
-- `CommandParameter`유형`Object`
+- `Command` 유형  `System.Windows.Input.ICommand`
+- `CommandParameter` 유형  `Object`
 
 는 `SearchBar` `SearchCommand` 및 `SearchCommandParameter` 속성을 정의 하는 반면는 `ListView` 형식의 속성을 정의 합니다 `RefreshCommand` `ICommand` .
 
@@ -585,7 +585,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>탐색 메뉴 구현
 
-이 문서 시리즈의 모든 소스 코드를 포함 하는 [Xamlsamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) 프로그램은 홈 페이지에 ViewModel을 사용 합니다. 이 ViewModel은 `Type` `Title` `Description` 각 샘플 페이지의 형식, 제목 및 간단한 설명을 포함 하는, 및 라는 세 개의 속성을 가진 short 클래스의 정의입니다. 또한 ViewModel은 `All` 프로그램에 있는 모든 페이지의 컬렉션인 이라는 정적 속성을 정의 합니다.
+이 문서 시리즈의 모든 소스 코드를 포함 하는 [Xamlsamples](/samples/xamarin/xamarin-forms-samples/xamlsamples) 프로그램은 홈 페이지에 ViewModel을 사용 합니다. 이 ViewModel은 `Type` `Title` `Description` 각 샘플 페이지의 형식, 제목 및 간단한 설명을 포함 하는, 및 라는 세 개의 속성을 가진 short 클래스의 정의입니다. 또한 ViewModel은 `All` 프로그램에 있는 모든 페이지의 컬렉션인 이라는 정적 속성을 정의 합니다.
 
 ```csharp
 public class PageDataViewModel
@@ -714,7 +714,7 @@ XAML은 응용 프로그램에서 사용자 인터페이스를 정의 하기 위
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1 부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2 부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3 부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

@@ -10,12 +10,12 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4bb6c30ada13691146d00d2094df8f13ca453b9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 604d2aa8368c85b852530f999601fffca8e104e6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140259"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562927"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
@@ -173,9 +173,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 열거형에는 [`SKClipOperation`](xref:SkiaSharp.SKClipOperation) 두 개의 멤버만 있습니다.
 
-- `Difference`기존 클리핑 영역에서 지정 된 경로 또는 사각형을 제거 합니다.
+- `Difference` 기존 클리핑 영역에서 지정 된 경로 또는 사각형을 제거 합니다.
 
-- `Intersect`지정 된 경로 또는 사각형과 기존 클리핑 영역을 교차 시킵니다.
+- `Intersect` 지정 된 경로 또는 사각형과 기존 클리핑 영역을 교차 시킵니다.
 
 `SKClipOperation.Intersect`클래스의 네 인수를 `FourCircleIntersectClipPage` 로 바꾸면 `SKClipOperation.Difference` 다음과 같이 표시 됩니다.
 
@@ -515,5 +515,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

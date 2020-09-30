@@ -10,12 +10,12 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137426"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563135"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 비트맵 바둑판식 배열
 
@@ -45,7 +45,7 @@ public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShade
 
 ## <a name="exploring-the-tile-modes"></a>타일 모드 탐색
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **셰이더 및 기타 효과** 페이지의 **비트맵 바둑판식 배열** 섹션에 있는 첫 번째 프로그램은 두 인수의 효과를 보여 줍니다 `SKShaderTileMode` . **비트맵 타일 대칭 이동 모드** XAML 파일은 `SKCanvasView` 및 두 개의 `Picker` 뷰를 인스턴스화하고 `SKShaderTilerMode` 가로 및 세로 바둑판식 배열에 대 한 값을 선택할 수 있도록 합니다. 멤버의 배열은 `SKShaderTileMode` 섹션에 정의 되어 `Resources` 있습니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **셰이더 및 기타 효과** 페이지의 **비트맵 바둑판식 배열** 섹션에 있는 첫 번째 프로그램은 두 인수의 효과를 보여 줍니다 `SKShaderTileMode` . **비트맵 타일 대칭 이동 모드** XAML 파일은 `SKCanvasView` 및 두 개의 `Picker` 뷰를 인스턴스화하고 `SKShaderTilerMode` 가로 및 세로 바둑판식 배열에 대 한 값을 선택할 수 있도록 합니다. 멤버의 배열은 `SKShaderTileMode` 섹션에 정의 되어 `Resources` 있습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -250,7 +250,7 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-결과는 다음과 같습니다.
+결과:
 
 [![알고리즘 Brick 벽](bitmap-tiling-images/AlgorithmicBrickWall.png "알고리즘 Brick 벽")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
 
@@ -303,7 +303,7 @@ public class PhotographicBrickWallPage : ContentPage
 
 타일에 대 한 적절 한 비트맵을 얻으려면 몇 가지 작업을 수행 해야 합니다. 이는 더 진한 brick이 너무 많이 작동 하기 때문에 제대로 작동 하지 않습니다. 반복 되는 이미지 내에 정기적으로 나타나므로이 brick 벽이 작은 비트맵에서 생성 되었다는 사실을 표시 합니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **미디어** 폴더에는 다음과 같은 석재 벽 이미지도 포함 됩니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **미디어** 폴더에는 다음과 같은 석재 벽 이미지도 포함 됩니다.
 
 ![석재 벽 타일](bitmap-tiling-images/StoneWallTile.jpg "석재 벽 타일")
 
@@ -369,7 +369,7 @@ SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 
 [**타일 맞춤**](#tile-alignment)섹션에서 셰이더에 적용 되는 변환 변환의 예를 확인할 수 있습니다.
 
-독립 실행형 [**Cat Clock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) 샘플 ( **SkiaSharpFormsDemos**의 일부가 아님)은이 240 픽셀 사각형 비트맵을 기반으로 하는 비트맵 바둑판식 배열을 사용 하 여 목재-그레인 배경을 시뮬레이션 합니다.
+독립 실행형 [**Cat Clock**](/samples/xamarin/xamarin-forms-samples/catclock) 샘플 ( **SkiaSharpFormsDemos**의 일부가 아님)은이 240 픽셀 사각형 비트맵을 기반으로 하는 비트맵 바둑판식 배열을 사용 하 여 목재-그레인 배경을 시뮬레이션 합니다.
 
 ![목재 그레인](bitmap-tiling-images/WoodGrain.png "목재 그레인")
 
@@ -782,6 +782,6 @@ public class AnimatedBitmapTilePage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [이상 클록 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [이상 클록 (샘플)](/samples/xamarin/xamarin-forms-samples/catclock)

@@ -1,6 +1,6 @@
 ---
 title: 응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
-description: Xamarin.Forms응용 프로그램은 OnAppTheme 유형과 DynamicResource 태그 확장을 사용 하 여 운영 체제 테마 변경 내용에 응답할 수 있습니다.
+description: Xamarin.Forms 응용 프로그램은 OnAppTheme 유형과 DynamicResource 태그 확장을 사용 하 여 운영 체제 테마 변경 내용에 응답할 수 있습니다.
 ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: efd9cabc9504a9fa56f1f7a763013e6852be9382
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 258061042fc8ab80b8bbdd9a0a9a965d87a1e064
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918100"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557571"
 ---
 # <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
 
@@ -25,11 +25,11 @@ ms.locfileid: "87918100"
 
 시스템 테마는 장치 구성에 따라 다양 한 이유로 변경 될 수 있습니다. 여기에는 사용자가 명시적으로 변경 하는 시스템 테마, 하루 중 시간으로 변경 된 시스템 테마 및 낮은 광원 등의 환경적 요소로 인 한 변경 내용이 포함 됩니다.
 
-Xamarin.Forms응용 프로그램은 `AppThemeBinding` 태그 확장 및 `SetAppThemeColor` 및 확장 메서드를 사용 하 여 리소스를 사용 하 여 시스템 테마 변경에 응답할 수 있습니다 `SetOnAppTheme<T>` .
+Xamarin.Forms 응용 프로그램은 `AppThemeBinding` 태그 확장 및 `SetAppThemeColor` 및 확장 메서드를 사용 하 여 리소스를 사용 하 여 시스템 테마 변경에 응답할 수 있습니다 `SetOnAppTheme<T>`  .
 
 Xamarin.Forms시스템 테마 변경에 응답 하려면에 대해 다음과 같은 요구 사항을 충족 해야 합니다.
 
-- Xamarin.Forms4.6.0.967 이상
+- Xamarin.Forms 4.6.0.967 이상
 - iOS 13 이상
 - Android 10 (API 29) 이상.
 - UWP 빌드 14393 이상.
@@ -145,7 +145,7 @@ Application.Current.UserAppTheme = OSAppTheme.Dark;
 
 ## <a name="react-to-theme-changes"></a>테마 변경에 대응
 
-장치를 구성 하는 방법에 따라 다양 한 이유로 장치의 시스템 테마가 변경 될 수 있습니다. Xamarin.Forms이벤트를 처리 하 여 시스템 테마가 변경 될 때 앱에 알릴 수 있습니다 `Application.RequestedThemeChanged` .
+장치를 구성 하는 방법에 따라 다양 한 이유로 장치의 시스템 테마가 변경 될 수 있습니다. Xamarin.Forms 이벤트를 처리 하 여 시스템 테마가 변경 될 때 앱에 알릴 수 있습니다 `Application.RequestedThemeChanged` .
 
 ```csharp
 Application.Current.RequestedThemeChanged += (s, a) =>
@@ -161,7 +161,7 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [SystemThemes (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+- [SystemThemes (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 - [AppThemeBinding 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#appthemebinding-markup-extension)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

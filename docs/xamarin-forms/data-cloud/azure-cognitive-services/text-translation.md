@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b26e80267be9af6bf300b2ffc82e43fe717f59c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929950"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563122"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Translator API를 사용 하 여 텍스트 번역
 
@@ -153,5 +153,5 @@ API 응답은 XML 형식으로 반환 됩니다. 다음 XML 데이터는 일반�
 
 - [Translator Text API 설명서](/azure/cognitive-services/translator/)
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)

@@ -10,12 +10,12 @@ ms.date: 07/11/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7f0b7c61d44170ab97b060a16693287c28903660
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135583"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562966"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트 액세스
 
@@ -35,12 +35,12 @@ SkiaSharp는 비트맵의 픽셀 비트에 액세스 하기 위한 몇 가지 �
 
 - `GetPixel`및 메서드를 사용 하 여 `SetPixel` 단일 픽셀의 색을 얻거나 설정할 수 있습니다.
 - `Pixels`속성은 전체 비트맵의 픽셀 색 배열을 얻거나 색 배열을 설정 합니다.
-- `GetPixels`비트맵에서 사용 하는 픽셀 메모리의 주소를 반환 합니다.
-- `SetPixels`비트맵에서 사용 하는 픽셀 메모리의 주소를 바꿉니다.
+- `GetPixels` 비트맵에서 사용 하는 픽셀 메모리의 주소를 반환 합니다.
+- `SetPixels` 비트맵에서 사용 하는 픽셀 메모리의 주소를 바꿉니다.
 
 처음 두 가지 기술을 "상위 수준"으로 생각 하 고 두 번째 기술을 "낮은 수준"으로 생각할 수 있습니다. 사용할 수 있는 몇 가지 다른 메서드 및 속성이 있지만 가장 중요 합니다.
 
-이러한 기술 간의 성능 차이를 확인할 수 있도록 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에는 빨강 및 파랑 음영을 결합 하 여 그라데이션을 만드는 픽셀을 사용 하 여 비트맵을 만드는 **그라데이션 비트맵** 페이지가 포함 되어 있습니다. 프로그램은 비트맵 픽셀을 설정 하는 다양 한 기술을 사용 하 여이 비트맵의 8 가지 복사본을 만듭니다. 이러한 8 개 비트맵은 각각이 기술에 대 한 간략 한 텍스트 설명도 설정 하 고 모든 픽셀을 설정 하는 데 필요한 시간을 계산 하는 별도의 메서드로 생성 됩니다. 각 메서드는 픽셀 설정 논리를 100 번 반복 하 여 더 나은 성능 예측을 제공 합니다.
+이러한 기술 간의 성능 차이를 확인할 수 있도록 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에는 빨강 및 파랑 음영을 결합 하 여 그라데이션을 만드는 픽셀을 사용 하 여 비트맵을 만드는 **그라데이션 비트맵** 페이지가 포함 되어 있습니다. 프로그램은 비트맵 픽셀을 설정 하는 다양 한 기술을 사용 하 여이 비트맵의 8 가지 복사본을 만듭니다. 이러한 8 개 비트맵은 각각이 기술에 대 한 간략 한 텍스트 설명도 설정 하 고 모든 픽셀을 설정 하는 데 필요한 시간을 계산 하는 별도의 메서드로 생성 됩니다. 각 메서드는 픽셀 설정 논리를 100 번 반복 하 여 더 나은 성능 예측을 제공 합니다.
 
 ### <a name="the-setpixel-method"></a>SetPixel 메서드
 
@@ -130,7 +130,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
 배열의 인덱스는 `pixels` 및 변수에서 계산 해야 `row` `col` 합니다. 행에 각 행의 픽셀 수 (이 경우 256)를 곱한 다음 열이 추가 됩니다.
 
-`SKBitmap`는 또한 `Bytes` 전체 비트맵의 바이트 배열을 반환 하는 유사한 속성을 정의 하지만 전체 색 비트맵의 경우 더 복잡 합니다.
+`SKBitmap` 는 또한 `Bytes` 전체 비트맵의 바이트 배열을 반환 하는 유사한 속성을 정의 하지만 전체 색 비트맵의 경우 더 복잡 합니다.
 
 ### <a name="the-getpixels-pointer"></a>GetPixels 포인터
 
@@ -287,7 +287,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 
 ### <a name="the-setpixels-method"></a>SetPixels 메서드
 
-`SKBitmap`는 [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)) 다음과 같이 호출 하는 라는 메서드도 정의 합니다.
+`SKBitmap` 는 [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)) 다음과 같이 호출 하는 라는 메서드도 정의 합니다.
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -796,5 +796,5 @@ public class PosterizePage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

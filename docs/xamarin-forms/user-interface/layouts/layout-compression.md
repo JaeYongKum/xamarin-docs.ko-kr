@@ -10,12 +10,12 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d5e1cb9709c224ed5059de24bb45eed882ef216b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931172"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563538"
 ---
 # <a name="layout-compression"></a>레이아웃 압축
 
@@ -25,7 +25,7 @@ _레이아웃 압축은 페이지 렌더링 성능을 향상 시키기 위해 �
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms두 시리즈의 재귀 메서드 호출을 사용 하 여 레이아웃을 수행 합니다.
+Xamarin.Forms 두 시리즈의 재귀 메서드 호출을 사용 하 여 레이아웃을 수행 합니다.
 
 - 레이아웃은 페이지를 사용 하 여 시각적 트리 위쪽에서 시작 하 고 시각적 트리의 모든 분기를 진행 하 여 페이지의 모든 시각적 요소를 포함 합니다. 다른 요소에 대 한 부모인 요소는 자신을 기준으로 자식 항목의 크기를 조정 하 고 위치를 지정 해야 합니다.
 - 무효화는 페이지의 요소를 변경 하 여 새 레이아웃 주기를 트리거하는 프로세스입니다. 요소는 더 이상 올바른 크기나 위치가 없는 경우 유효 하지 않은 것으로 간주 됩니다. 자식 트리의 모든 요소는 자식 항목 중 하나가 크기를 변경할 때마다 경고를 표시 합니다. 따라서 시각적 트리의 요소 크기를 변경 하면 트리가 변경 될 수 있습니다.
@@ -125,4 +125,4 @@ Android에서는 다음의 중첩 된 뷰 계층 구조를 생성 합니다.
 
 - [사용자 지정 레이아웃 만들기](~/xamarin-forms/user-interface/layouts/custom.md)
 - [빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+- [LayoutCompression (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

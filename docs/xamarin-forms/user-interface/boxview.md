@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsBoxView
+title: Xamarin.Forms BoxView
 description: 이 문서에서는 응용 프로그램에서 장식, 그래픽 및 상호 작용에 색이 지정 된 사각형을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
@@ -10,18 +10,18 @@ ms.date: 07/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3f4788c0201d2d286ff4de9b29ba6385d323a3b0
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 3fba761d2740f323fb55e80d8cb4e3ba3d8e7cad
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130944"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563603"
 ---
-# <a name="no-locxamarinforms-boxview"></a>Xamarin.FormsBoxView
+# <a name="no-locxamarinforms-boxview"></a>Xamarin.Forms BoxView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
-[`BoxView`](xref:Xamarin.Forms.BoxView)지정 된 너비, 높이 및 색의 단순 사각형을 렌더링 합니다. 를 사용 하 여 `BoxView` 데코레이션, 기초적인 그래픽 및 터치를 통해 사용자와 상호 작용할 수 있습니다.
+[`BoxView`](xref:Xamarin.Forms.BoxView) 지정 된 너비, 높이 및 색의 단순 사각형을 렌더링 합니다. 를 사용 하 여 `BoxView` 데코레이션, 기초적인 그래픽 및 터치를 통해 사용자와 상호 작용할 수 있습니다.
 
 에는 Xamarin.Forms 기본 제공 벡터 그래픽 시스템이 없으므로에서 보정할 수 있습니다 `BoxView` . 이 문서에서 설명 하는 일부 샘플 프로그램은를 사용 하 여 `BoxView` 그래픽을 렌더링 합니다. 는 `BoxView` 특정 너비 및 두께의 줄과 비슷하게 크기를 지정한 다음 속성을 사용 하 여 임의의 각도로 회전 합니다 `Rotation` .
 
@@ -31,10 +31,10 @@ ms.locfileid: "88130944"
 
 일반적으로의 다음 속성을 설정 합니다 `BoxView` .
 
-- [`Color`](xref:Xamarin.Forms.BoxView.Color)색을 설정 합니다.
-- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius)모퉁이 반경을 설정 합니다.
-- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)장치 독립적 단위로의 너비를 설정 합니다 `BoxView` .
-- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest)의 높이를 설정 `BoxView` 합니다.
+- [`Color`](xref:Xamarin.Forms.BoxView.Color) 색을 설정 합니다.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) 모퉁이 반경을 설정 합니다.
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 장치 독립적 단위로의 너비를 설정 합니다 `BoxView` .
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 높이를 설정 `BoxView` 합니다.
 
 `Color`속성은 형식입니다 .이 `Color` 속성은 `Color` 에서로의 사전순으로 범위가 지정 된 명명 된 색의 정적 읽기 전용 필드인 141을 포함 하 여 모든 값으로 설정할 수 있습니다 `AliceBlue` `YellowGreen` .
 
@@ -46,7 +46,7 @@ ms.locfileid: "88130944"
 
 `BoxView`는 하나의 차원에서는 제한되고 다른 차원에서는 제한되지 않을 수 있습니다. 예를 들어 `BoxView` 가 세로의 자식인 경우 `StackLayout` 의 세로 차원은 `BoxView` 제한 되지 않으며 가로 차원은 일반적으로 제한 됩니다. 그러나이 가로 차원에 대 한 예외가 있습니다 .의 `BoxView` `HorizontalOptions` 속성이 이외의 다른로 설정 된 경우에는 `LayoutOptions.Fill` 가로 차원만 제한 되지 않습니다. 또한 `StackLayout` 자체에 제한 되지 않은 가로 차원이 있을 수 있으며,이 경우에는 행이 `BoxView` 제한 되지 않습니다.
 
-[**Basicboxview**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview) 샘플은 `BoxView` 해당 페이지의 가운데에서 1 인치의 제한 없는 1 인치의 사각형을 표시 합니다.
+[**Basicboxview**](/samples/xamarin/xamarin-forms-samples/boxview-basicboxview) 샘플은 `BoxView` 해당 페이지의 가운데에서 1 인치의 제한 없는 1 인치의 사각형을 표시 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -76,7 +76,7 @@ ms.locfileid: "88130944"
 
 ## <a name="rendering-text-decorations"></a>텍스트 장식 렌더링
 
-를 사용 하 여 `BoxView` 가로 및 세로 선 형식으로 페이지에 몇 가지 간단한 장식을 추가할 수 있습니다. [**Textdecoration**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration) 샘플에서는이를 보여 줍니다. 모든 프로그램의 시각적 개체는 **MainPage.xaml** `Label` `BoxView` `StackLayout` 다음에 표시 된의 여러 및 요소를 포함 하는 mainpage 파일에 정의 됩니다.
+를 사용 하 여 `BoxView` 가로 및 세로 선 형식으로 페이지에 몇 가지 간단한 장식을 추가할 수 있습니다. [**Textdecoration**](/samples/xamarin/xamarin-forms-samples/boxview-textdecoration) 샘플에서는이를 보여 줍니다. 모든 프로그램의 시각적 개체는 **MainPage.xaml** `Label` `BoxView` `StackLayout` 다음에 표시 된의 여러 및 요소를 포함 하는 mainpage 파일에 정의 됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -165,7 +165,7 @@ XAML 파일에서에는를 `AbsoluteLayout` `Label` 설명 하는 형식이 지�
 
 [![ListView 색](boxview-images/listviewcolors-small.png "ListView 색")](boxview-images/listviewcolors-large.png#lightbox "ListView 색")
 
-[**ListViewColors**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors) 프로그램에는 라는 클래스가 포함 되어 있습니다 `NamedColor` . 정적 생성자는 리플렉션을 사용 하 여 구조체의 모든 필드에 액세스 하 `Color` 고 `NamedColor` 각각에 대 한 개체를 만듭니다. 이러한 속성은 정적 속성에 저장 됩니다 `All` .
+[**ListViewColors**](/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors) 프로그램에는 라는 클래스가 포함 되어 있습니다 `NamedColor` . 정적 생성자는 리플렉션을 사용 하 여 구조체의 모든 필드에 액세스 하 `Color` 고 `NamedColor` 각각에 대 한 개체를 만듭니다. 이러한 속성은 정적 속성에 저장 됩니다 `All` .
 
 ```csharp
 public class NamedColor
@@ -294,7 +294,7 @@ public class NamedColor
 
 생활의 게임은 *1970 년대의 mvvm* 페이지에서 Mathematician John conway가 만든 셀룰러 automaton입니다. 가장 좋은 소개는 위키백과 문서와 생활의 [생활](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)에서 제공 됩니다.
 
-Xamarin.Forms [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife) 프로그램은 `LifeCell` 에서 파생 되는 이라는 클래스를 정의 합니다 `BoxView` . 이 클래스는 수명 게임의 개별 셀에 대 한 논리를 캡슐화 합니다.
+Xamarin.Forms [**GameOfLife**](/samples/xamarin/xamarin-forms-samples/boxview-gameoflife) 프로그램은 `LifeCell` 에서 파생 되는 이라는 클래스를 정의 합니다 `BoxView` . 이 클래스는 수명 게임의 개별 셀에 대 한 논리를 캡슐화 합니다.
 
 ```csharp
 class LifeCell : BoxView
@@ -337,9 +337,9 @@ class LifeCell : BoxView
 }
 ```
 
-`LifeCell`에 세 가지 추가 속성을 추가 `BoxView` 합니다. `Col` 및 `Row` 속성은 표 안에 셀의 위치를 저장 하 고 `IsAlive` 속성은 해당 상태를 나타냅니다. `IsAlive`또한이 속성은 `Color` `BoxView` 셀이 활성 상태 이면의 속성을 검은색으로 설정 하 고, 셀이 활성 상태가 아닌 경우에는 흰색으로 설정 합니다.
+`LifeCell` 에 세 가지 추가 속성을 추가 `BoxView` 합니다. `Col` 및 `Row` 속성은 표 안에 셀의 위치를 저장 하 고 `IsAlive` 속성은 해당 상태를 나타냅니다. `IsAlive`또한이 속성은 `Color` `BoxView` 셀이 활성 상태 이면의 속성을 검은색으로 설정 하 고, 셀이 활성 상태가 아닌 경우에는 흰색으로 설정 합니다.
 
-`LifeCell`또한 사용자가 셀을 탭 하 여 상태를 토글할 수 있도록를 설치 합니다 `TapGestureRecognizer` . 클래스는 `Tapped` 제스처 인식기에서 이벤트를 자체 이벤트로 변환 합니다 `Tapped` .
+`LifeCell` 또한 사용자가 셀을 탭 하 여 상태를 토글할 수 있도록를 설치 합니다 `TapGestureRecognizer` . 클래스는 `Tapped` 제스처 인식기에서 이벤트를 자체 이벤트로 변환 합니다 `Tapped` .
 
 **GameOfLife** 프로그램에는 `LifeGrid` 게임의 많은 논리를 캡슐화 하는 클래스와 `MainPage` 프로그램의 시각적 개체를 처리 하는 클래스가 포함 되어 있습니다. 여기에는 게임의 규칙을 설명 하는 오버레이가 포함 됩니다. 페이지에 수백 개의 개체를 표시 하는 작업의 프로그램은 `LifeCell` 다음과 같습니다.
 
@@ -347,7 +347,7 @@ class LifeCell : BoxView
 
 ## <a name="creating-a-digital-clock"></a>디지털 시계 만들기
 
-[**DotMatrixClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock) 프로그램은 210 `BoxView` 요소를 만들어 이전의 5-7 점 행렬 디스플레이의 점을 시뮬레이션 합니다. 세로 또는 가로 모드에서 시간을 읽을 수 있지만 가로 크기는 다음과 같습니다.
+[**DotMatrixClock**](/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock) 프로그램은 210 `BoxView` 요소를 만들어 이전의 5-7 점 행렬 디스플레이의 점을 시뮬레이션 합니다. 세로 또는 가로 모드에서 시간을 읽을 수 있지만 가로 크기는 다음과 같습니다.
 
 [![점 행렬 클록](boxview-images/dotmatrixclock-small.png "점 행렬 클록")](boxview-images/dotmatrixclock-large.png#lightbox "점 행렬 클록")
 
@@ -586,7 +586,7 @@ public partial class MainPage : ContentPage
 
 [![BoxView 클록](boxview-images/boxviewclock-small.png "BoxView 클록")](boxview-images/boxviewclock-large.png#lightbox "BoxView 클록")
 
-[**Boxviewclock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) 프로그램의 모든 시각적 개체는의 자식 `AbsoluteLayout` 입니다. 이러한 요소는 연결 된 속성을 사용 하 여 크기가 조정 되 `LayoutBounds` 고 속성을 사용 하 여 회전 됩니다 `Rotation` .
+[**Boxviewclock**](/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) 프로그램의 모든 시각적 개체는의 자식 `AbsoluteLayout` 입니다. 이러한 요소는 연결 된 속성을 사용 하 여 크기가 조정 되 `LayoutBounds` 고 속성을 사용 하 여 회전 됩니다 `Rotation` .
 
 `BoxView`Clock의 손을 위한 세 요소는 XAML 파일에서 인스턴스화되고 위치 지정 또는 크기가 지정 되지 않습니다.
 
@@ -764,10 +764,10 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [기본 BoxView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
-- [텍스트 장식 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration)
-- [ListView 색 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/)
-- [생명 Game (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife)
-- [도트 매트릭스 클록 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock)
-- [BoxView 클록 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock)
+- [기본 BoxView (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
+- [텍스트 장식 (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-textdecoration)
+- [ListView 색 (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/)
+- [생명 Game (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-gameoflife)
+- [도트 매트릭스 클록 (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock)
+- [BoxView 클록 (샘플)](/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock)
 - [BoxView](xref:Xamarin.Forms.BoxView)

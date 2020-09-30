@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsXAML 기본 사항
+title: Xamarin.Forms XAML 기본 사항
 description: 이 가이드에서는 모바일 장치용 플랫폼 간 XAML을 시작 하는 방법을 설명 합니다. 개발자는 XAML을 Xamarin.Forms 사용 하 여 코드 대신 태그를 사용 하 여 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다.
 ms.prod: xamarin
 ms.custom: video
@@ -11,14 +11,14 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3d2620014c9554712c746b98de3b9a0eeaa20864
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138621"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562758"
 ---
-# <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsXAML 기본 사항
+# <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
@@ -37,14 +37,14 @@ XAML은 동등한 코드에 비해 여러 가지 장점이 있습니다.
 주로 태그 언어에 내장 된 제한과 관련 된 단점이 있습니다.
 
 - XAML은 코드를 포함할 수 없습니다. 모든 이벤트 처리기는 코드 파일에 정의 되어야 합니다.
-- XAML은 반복적인 처리를 위한 루프를 포함할 수 없습니다. 그러나 Xamarin.Forms 대부분의 시각적 개체 (특히)는 [`ListView`](xref:Xamarin.Forms.ListView) 컬렉션의 개체를 기반으로 하 여 여러 자식을 생성할 수 있습니다 `ItemsSource` .
+- XAML은 반복적인 처리를 위한 루프를 포함할 수 없습니다. 그러나 Xamarin.Forms 대부분의 시각적 개체 (특히)는  [`ListView`](xref:Xamarin.Forms.ListView) 컬렉션의 개체를 기반으로 하 여 여러 자식을 생성할 수 있습니다 `ItemsSource` .
 - XAML은 조건부 처리를 포함할 수 없습니다. 그러나 데이터 바인딩은 일부 조건부 처리를 효과적으로 허용 하는 코드 기반 바인딩 변환기를 참조할 수 있습니다.
 - XAML은 일반적으로 매개 변수가 없는 생성자를 정의 하지 않는 클래스를 인스턴스화할 수 없습니다. 그러나 이러한 제한을 해결 하는 방법도 있습니다.
 - XAML은 일반적으로 메서드를 호출할 수 없습니다. (이 제한 사항을 해결 하는 경우도 있습니다.)
 
 응용 프로그램에서 XAML을 생성 하기 위한 비주얼 디자이너는 아직 없습니다 Xamarin.Forms . 모든 XAML은 직접 작성 되어야 하지만 [Xaml 미리 보기](~/xamarin-forms/xaml/xaml-previewer/index.md)는 있습니다. XAML을 처음 접하는 프로그래머는 응용 프로그램을 자주 빌드하고 실행 하는 것이 좋습니다 (특히 올바른 것은 아닐 수 있음). XAML에서 많은 경험을 가진 개발자 라도 실험이 더욱 생산적인 것을 알고 있습니다.
 
-XAML은 기본적으로 XML 이지만 XAML에는 몇 가지 고유한 구문 기능이 있습니다. 가장 중요 한 사항은 다음과 같습니다.
+XAML은 기본적으로 XML 이지만 XAML에는 몇 가지 고유한 구문 기능이 있습니다. 가장 중요한 사항은 다음과 같습니다.
 
 - 속성 요소
 - 연결된 속성
@@ -60,9 +60,9 @@ XAML은 기본적으로 XML 이지만 XAML에는 몇 가지 고유한 구문 기
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Mobile Apps 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## <a name="related-video"></a>관련 동영상
 

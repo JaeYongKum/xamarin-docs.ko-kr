@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms브러시: 선형 그라데이션'
+title: 'Xamarin.Forms 브러시: 선형 그라데이션'
 description: Xamarin.FormsSystem.windows.media.lineargradientbrush.startpoint 클래스는 선형 그라데이션으로 영역을 그립니다.
 ms.prod: xamarin
 ms.assetid: BEA2B3F5-96B0-4E39-88A6-0FAFE95C3DCD
@@ -10,27 +10,27 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 734ecae4fdafd71f0c88ddc5e4b4ed0c672f2019
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: be4b868a2f38063f3a46d57ecb190b377eb89dce
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919634"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563590"
 ---
-# <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms브러시: 선형 그라데이션
+# <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms 브러시: 선형 그라데이션
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
-클래스는 `LinearGradientBrush` 클래스에서 파생 `GradientBrush` 되 고 선형 그라데이션으로 영역을 그리며 그라데이션 축 이라고 하는 선을 따라 둘 이상의 색을 혼합 합니다. `GradientStop`개체는 그라데이션의 색과 위치를 지정 하는 데 사용 됩니다. 개체에 대 한 자세한 내용은 `GradientStop` [ Xamarin.Forms 브러시: 그라데이션](gradient.md)을 참조 하세요.
+클래스는 `LinearGradientBrush` 클래스에서 파생 `GradientBrush` 되 고 선형 그라데이션으로 영역을 그리며 그라데이션 축 이라고 하는 선을 따라 둘 이상의 색을 혼합 합니다. `GradientStop` 개체는 그라데이션의 색과 위치를 지정 하는 데 사용 됩니다. 개체에 대 한 자세한 내용은 `GradientStop` [ Xamarin.Forms 브러시: 그라데이션](gradient.md)을 참조 하세요.
 
 `LinearGradientBrush` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `StartPoint`는 [`Point`](xref:Xamarin.Forms.Point) 선형 그라데이션의 시작 2 차원 좌표를 나타내는 형식의입니다. 이 속성의 기본값은 (0, 0)입니다.
 - `EndPoint`[`Point`](xref:Xamarin.Forms.Point)-선형 그라데이션의 끝 2 차원 좌표를 나타내는 형식의입니다. 이 속성의 기본값은 (1, 1)입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 `LinearGradientBrush`클래스는 `IsEmpty` `bool` 브러시에 개체가 할당 되었는지 여부를 나타내는을 반환 하는 메서드 이기도 합니다 `GradientStop` .
 
@@ -134,5 +134,5 @@ ms.locfileid: "87919634"
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.Forms브러시: 그라데이션](gradient.md)
+- [BrushesDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms 브러시: 그라데이션](gradient.md)

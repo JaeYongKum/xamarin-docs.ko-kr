@@ -11,12 +11,12 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
-ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
+ms.openlocfilehash: 0468d132ee6e75ab75c0150f1f5c9e0af6dfde40
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88648163"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557779"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
@@ -236,7 +236,7 @@ public class ProportionalDemoPageCS : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [AbsoluteLayout 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+- [AbsoluteLayout 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 - [Xamarin.Forms 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)
 - [레이아웃 선택 Xamarin.Forms](choose-layout.md)
 - [Xamarin.Forms앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)

@@ -1,5 +1,5 @@
 ---
-title: 의 레이아웃 옵션Xamarin.Forms
+title: 의 레이아웃 옵션 Xamarin.Forms
 description: 모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및 VerticalOptions 속성이 있습니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
@@ -10,14 +10,14 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bf85bb3bf6f694aa5eefa8512b8391084228598e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930691"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563525"
 ---
-# <a name="layout-options-in-xamarinforms"></a>의 레이아웃 옵션Xamarin.Forms
+# <a name="layout-options-in-no-locxamarinforms"></a>의 레이아웃 옵션 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
@@ -62,7 +62,7 @@ _모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및
 는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) `Start` `Center` `End` `Fill` [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) 방향과 같은 방향에 있는 자식 보기의,, 및 필드를 고려 하지 않습니다 `StackLayout` . 따라서 `StackLayout` `Start` `Center` `End` `Fill` 자식 뷰의 속성에 설정 된 경우 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 에는 세로 방향으로,, 또는 필드가 무시 됩니다. 마찬가지로,,, `StackLayout` `Start` `Center` `End` 또는 `Fill` 필드가 자식 뷰의 속성에 설정 된 경우 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 가로 방향으로 무시 됩니다.
 
 > [!NOTE]
-> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)일반적으로는 및 속성을 사용 하 여 지정 된 크기 요청을 재정의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 합니다.
+> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) 일반적으로는 및 속성을 사용 하 여 지정 된 크기 요청을 재정의  [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 합니다.
 
 다음 XAML 코드 예제에서는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 각 자식 [`Label`](xref:Xamarin.Forms.Label) [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 에서 해당 속성을 구조체의 네 가지 맞춤 필드 중 하나로 설정 하는 방향을 세로로 보여 줍니다 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) .
 
@@ -157,5 +157,5 @@ Content = new StackLayout
 
 ## <a name="related-links"></a>관련 링크
 
-- [LayoutOptions (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+- [LayoutOptions (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms그리드에
+title: Xamarin.Forms 그리드에
 description: Xamarin.Forms표는 자식 항목을 셀의 행과 열로 구성 하는 레이아웃입니다.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
@@ -10,18 +10,18 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 59a4d5c0730719d6cc332728c6cab641d02239b4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946341"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563564"
 ---
-# <a name="xamarinforms-grid"></a>Xamarin.Forms그리드에
+# <a name="no-locxamarinforms-grid"></a>Xamarin.Forms 그리드에
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Xamarin.Forms그리드에](grid-images/layouts.png "[! OP. 비 LOC (Xamarin.ios)] 그리드")](grid-images/layouts-large.png#lightbox "[! OP. 비 LOC (Xamarin.ios)] 그리드")
+[![::: no loc (Xamarin.ios)::: Grid](grid-images/layouts.png "::: no loc (Xamarin.ios)::: Grid")](grid-images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: Grid")
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 하위 항목을 행과 열로 구성 하는 레이아웃으로, 비례 또는 절대 크기를 가질 수 있습니다. 기본적으로에는 `Grid` 하나의 행과 하나의 열이 포함 됩니다. 또한 `Grid` 다른 자식 레이아웃을 포함 하는 부모 레이아웃으로를 사용할 수 있습니다.
 
@@ -67,9 +67,9 @@ ms.locfileid: "84946341"
 
 [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)클래스는 [`Height`](xref:Xamarin.Forms.RowDefinition.Height) 형식의 속성을 정의 [`GridLength`](xref:Xamarin.Forms.GridLength) 하 고 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 클래스는 형식의 속성을 정의 합니다 [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) [`GridLength`](xref:Xamarin.Forms.GridLength) . [`GridLength`](xref:Xamarin.Forms.GridLength)구조체는 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) 세 개의 멤버를 포함 하는 열거형을 기준으로 행 높이나 열 너비를 지정 합니다.
 
-- `Absolute`– 행 높이 또는 열 너비는 장치 독립적 단위의 값 (XAML의 숫자)입니다.
-- `Auto`– 행 높이 또는 열 너비는 셀 내용 (XAML)에 따라 자동으로 크기가 조정 됩니다 `Auto` .
-- `Star`– 남겨진 행 높이 또는 열 너비는 비례적으로 할당 됩니다 (숫자 뒤에 XAML로 표시 됨 `*` ).
+- `Absolute` – 행 높이 또는 열 너비는 장치 독립적 단위의 값 (XAML의 숫자)입니다.
+- `Auto` – 행 높이 또는 열 너비는 셀 내용 (XAML)에 따라 자동으로 크기가 조정 됩니다 `Auto` .
+- `Star` – 남겨진 행 높이 또는 열 너비는 비례적으로 할당 됩니다 (숫자 뒤에 XAML로 표시 됨 `*` ).
 
 [`Grid`](xref:Xamarin.Forms.Grid)속성이 인 행은 `Height` `Auto` 세로와 동일한 방식으로 해당 행의 뷰 높이를 제한 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) . 마찬가지로 속성을 가진 열은 `Width` `Auto` 가로와 매우 유사 하 게 작동 `StackLayout` 합니다.
 
@@ -752,7 +752,7 @@ public class ColorSlidersGridPageCS : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [그리드 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [의 레이아웃 옵션Xamarin.Forms](layout-options.md)
+- [그리드 데모 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [의 레이아웃 옵션 Xamarin.Forms](layout-options.md)
 - [레이아웃 선택 Xamarin.Forms](choose-layout.md)
 - [Xamarin.Forms앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)

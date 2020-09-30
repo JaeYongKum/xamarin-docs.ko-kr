@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 애니메이션Xamarin.Forms
+title: 사용자 지정 애니메이션 Xamarin.Forms
 description: 이 문서에서는 Xamarin.ios 애니메이션 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
@@ -10,14 +10,14 @@ ms.date: 02/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3731f35ab03edf9b65c3adca7a2091c2a609b552
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946106"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563395"
 ---
-# <a name="custom-animations-in-xamarinforms"></a>사용자 지정 애니메이션Xamarin.Forms
+# <a name="custom-animations-in-no-locxamarinforms"></a>사용자 지정 애니메이션 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
@@ -181,6 +181,6 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 
 ## <a name="related-links"></a>관련 링크
 
-- [사용자 지정 애니메이션 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
+- [사용자 지정 애니메이션 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 - [애니메이션 API](xref:Xamarin.Forms.Animation)
 - [애니메이션 확장 API](xref:Xamarin.Forms.AnimationExtensions)

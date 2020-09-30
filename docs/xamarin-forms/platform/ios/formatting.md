@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4381b1fbe7b38c2695bce645903d599bdb792fc2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f447a89ca4b4f21554a75ec52c5771ee9f9d35fd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937438"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562992"
 ---
 # <a name="adding-ios-specific-formatting"></a>IOS 특정 형식 추가
 
@@ -32,7 +32,7 @@ IOS 앱의 모양을 제어 하는 다른 옵션은 Xamarin.Forms 다음과 같�
 
 **Info.plist** 파일을 사용 하 여 상태 표시줄을 표시할지 여부와 같은 iOS 응용 프로그램의 렌더링 일부 측면을 구성할 수 있습니다.
 
-예를 들어 [Todo 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) 은 다음 코드를 사용 하 여 모든 플랫폼의 탐색 모음 색과 텍스트 색을 설정 합니다.
+예를 들어 [Todo 샘플](/samples/xamarin/xamarin-forms-samples/todo) 은 다음 코드를 사용 하 여 모든 플랫폼의 탐색 모음 색과 텍스트 색을 설정 합니다.
 
 ```csharp
 var nav = new NavigationPage (new TodoListPage ());
@@ -85,7 +85,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-기본적으로의 선택 된 탭 표시줄 아이콘은[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+기본적으로의 선택 된 탭 표시줄 아이콘은 [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 는 파란색입니다.
 
 ![TabbedPage의 기본 iOS 탭 표시줄 아이콘](theme-images/tabbar-default.png)
@@ -100,8 +100,8 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 ![TabbedPage의 녹색 iOS 탭 표시줄 아이콘](theme-images/tabbar-custom.png)
 
-이 API를 사용 하면 다음의 모양을 사용자 지정할 수 있습니다.Xamarin.Forms
-`TabbedPage`매우 작은 코드를 사용 하는 iOS 사용자 지정 렌더러를 사용 하 여 탭에 대 한 특정 글꼴을 설정 하는 방법에 대 한 자세한 내용은 [탭 사용자 지정 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) 을 참조 하세요.
+이 API를 사용 하면 다음의 모양을 사용자 지정할 수 있습니다. Xamarin.Forms
+`TabbedPage` 매우 작은 코드를 사용 하는 iOS 사용자 지정 렌더러를 사용 하 여 탭에 대 한 특정 글꼴을 설정 하는 방법에 대 한 자세한 내용은 [탭 사용자 지정 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) 을 참조 하세요.
 
 ### <a name="uiswitch"></a>UISwitch
 
@@ -111,7 +111,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 ```
 
-이 두 화면 캡처는 왼쪽의 기본 `UISwitch` 컨트롤과 `Appearance` [Todo 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)의 오른쪽에 사용자 지정 된 버전 (설정)을 표시 합니다.
+이 두 화면 캡처는 왼쪽의 기본 `UISwitch` 컨트롤과 `Appearance` [Todo 샘플](/samples/xamarin/xamarin-forms-samples/todo)의 오른쪽에 사용자 지정 된 버전 (설정)을 표시 합니다.
 
 ![기본 UISwitch 색](theme-images/switch-default.png) ![사용자 지정 된 UISwitch 색](theme-images/switch-custom.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms레이블
+title: Xamarin.Forms 레이블
 description: 이 문서에서는 Label 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에 단일 및 여러 줄 텍스트를 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
@@ -10,18 +10,18 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1fcfc2c3fbb91a7ee326db7aeef08459e05d834d
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 742cc1171901d5aa9b81cab31fd45258686c2085
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917875"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557584"
 ---
-# <a name="no-locxamarinforms-label"></a>Xamarin.Forms레이블
+# <a name="no-locxamarinforms-label"></a>Xamarin.Forms 레이블
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_텍스트 표시Xamarin.Forms_
+_텍스트 표시 Xamarin.Forms_
 
 [`Label`](xref:Xamarin.Forms.Label)뷰는 단일 및 여러 줄 텍스트를 표시 하는 데 사용 됩니다. 레이블에는 텍스트 장식, 색이 지정 된 텍스트 및 사용자 지정 글꼴 (패밀리, 크기 및 옵션)을 사용할 수 있습니다.
 
@@ -60,10 +60,10 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 는 [`Label`](xref:Xamarin.Forms.Entry) `Text` `TextTransform` 속성을 열거형의 값으로 설정 하 여 속성에 저장 된 해당 텍스트의 대/소문자를 변환할 수 있습니다 `TextTransform` . 이 열거형에는 4 개의 값이 있습니다.
 
-- `None`텍스트가 변환 되지 않음을 나타냅니다.
-- `Default`플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
-- `Lowercase`텍스트가 소문자로 변환 됨을 나타냅니다.
-- `Uppercase`텍스트가 대문자로 변환 됨을 나타냅니다.
+- `None` 텍스트가 변환 되지 않음을 나타냅니다.
+- `Default` 플랫폼의 기본 동작이 사용 됨을 나타냅니다. 이 값은 `TextTransform` 속성의 기본값입니다.
+- `Lowercase` 텍스트가 소문자로 변환 됨을 나타냅니다.
+- `Uppercase` 텍스트가 대문자로 변환 됨을 나타냅니다.
 
 다음 예제에서는 텍스트를 대문자로 변환 하는 방법을 보여 줍니다.
 
@@ -175,7 +175,7 @@ public partial class LabelPage : ContentPage
 
 ## <a name="truncation-and-wrapping"></a>잘림 및 래핑
 
-속성에 의해 노출 되는 여러 가지 방법 중 하나로 한 줄에 맞지 않는 텍스트를 처리 하도록 레이블을 설정할 수 있습니다 `LineBreakMode` . [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode)는 다음 값을 포함 하는 열거형입니다.
+속성에 의해 노출 되는 여러 가지 방법 중 하나로 한 줄에 맞지 않는 텍스트를 처리 하도록 레이블을 설정할 수 있습니다 `LineBreakMode` . [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) 는 다음 값을 포함 하는 열거형입니다.
 
 - **헤드 잘림** &ndash; 끝을 표시 하는 텍스트의 헤드를 자릅니다.
 - **CharacterWrap** &ndash; 문자 경계의 새 줄로 텍스트를 래핑합니다.
@@ -219,8 +219,8 @@ var label =
 
 클래스에는 [`Label`](xref:Xamarin.Forms.Label) `TextType` `Label` 인스턴스가 일반 텍스트를 표시할지 아니면 HTML 텍스트를 표시할지를 결정 하는 속성이 있습니다. 이 속성은 열거형의 멤버 중 하나로 설정 해야 합니다 `TextType` .
 
-- `Text`가 `Label` 일반 텍스트를 표시 하 고 속성의 기본값을 나타냅니다 `Label.TextType` .
-- `Html`에서 `Label` HTML 텍스트를 표시 함을 나타냅니다.
+- `Text` 가 `Label` 일반 텍스트를 표시 하 고 속성의 기본값을 나타냅니다 `Label.TextType` .
+- `Html` 에서 `Label` HTML 텍스트를 표시 함을 나타냅니다.
 
 따라서 [`Label`](xref:Xamarin.Forms.Label) 인스턴스는 속성을로 설정 하 `Label.TextType` `Html` 고 속성을 `Label.Text` html 문자열로 설정 하 여 html을 표시할 수 있습니다.
 
@@ -266,18 +266,18 @@ XAML에서 및 기호를 추가로 이스케이프 하면 HTML 문자열을 읽�
 
 `FormattedText`속성은 [`FormattedString`](xref:Xamarin.Forms.FormattedString) 속성을 통해 설정 된 하나 이상의 인스턴스로 구성 된 유형입니다 [`Span`](xref:Xamarin.Forms.Span) [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) . `Span`시각적 효과를 설정 하는 데 사용할 수 있는 속성은 다음과 같습니다.
 
-- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor)– span 배경의 색입니다.
+- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – span 배경의 색입니다.
 - `double` 형식의 `CharacterSpacing`은 `Span` 텍스트를 구성하는 문자 사이의 간격입니다.
-- [`Font`](xref:Xamarin.Forms.Span.Font)– 범위의 텍스트 글꼴입니다.
-- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes)– 범위의 텍스트에 대 한 글꼴 특성입니다.
-- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily)– 범위의 텍스트 글꼴이 속한 글꼴 패밀리입니다.
-- [`FontSize`](xref:Xamarin.Forms.Span.FontSize)– 범위의 텍스트에 대 한 글꼴 크기입니다.
-- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor)– 범위의 텍스트 색입니다. 이 속성은 사용 되지 않으며 속성으로 대체 되었습니다 `TextColor` .
-- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight)-범위의 기본 선 높이에 적용 되는 승수입니다. 자세한 내용은 [줄 높이](#line-height)를 참조 하세요.
-- [`Style`](xref:Xamarin.Forms.Span.Style)-범위에 적용 되는 스타일입니다.
-- [`Text`](xref:Xamarin.Forms.Span.Text)– 범위의 텍스트입니다.
-- [`TextColor`](xref:Xamarin.Forms.Span.TextColor)– 범위의 텍스트 색입니다.
-- `TextDecorations`-범위의 텍스트에 적용할 장식입니다. 자세한 내용은 [텍스트 장식](#text-decorations)을 참조 하세요.
+- [`Font`](xref:Xamarin.Forms.Span.Font) – 범위의 텍스트 글꼴입니다.
+- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) – 범위의 텍스트에 대 한 글꼴 특성입니다.
+- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – 범위의 텍스트 글꼴이 속한 글꼴 패밀리입니다.
+- [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – 범위의 텍스트에 대 한 글꼴 크기입니다.
+- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – 범위의 텍스트 색입니다. 이 속성은 사용 되지 않으며 속성으로 대체 되었습니다 `TextColor` .
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -범위의 기본 선 높이에 적용 되는 승수입니다. 자세한 내용은 [줄 높이](#line-height)를 참조 하세요.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  -범위에 적용 되는 스타일입니다.
+- [`Text`](xref:Xamarin.Forms.Span.Text) – 범위의 텍스트입니다.
+- [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 범위의 텍스트 색입니다.
+- `TextDecorations` -범위의 텍스트에 적용할 장식입니다. 자세한 내용은 [텍스트 장식](#text-decorations)을 참조 하세요.
 
 [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor), [`Text`](xref:Xamarin.Forms.Span.Text) 및 바인딩 가능한 [`Text`](xref:Xamarin.Forms.Span.Text) 속성의 기본 바인딩 모드는 [`OneWay`](xref:Xamarin.Forms.BindingMode) 입니다. 이 바인딩 모드에 대 한 자세한 내용은 [바인딩 모드](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) 가이드에서 [기본 바인딩 모드](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) 를 참조 하세요.
 
@@ -466,7 +466,7 @@ Label label = new Label
 1. `ICommand`에 의해 실행 될를 정의 합니다 [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) .
 1. 에 의해 실행 되는 코드를 작성 합니다 `ICommand` .
 
-[Hyperlink 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) 샘플에서 가져온 다음 코드 예제는 [`Label`](xref:Xamarin.Forms.Label) 여러 인스턴스에서 해당 콘텐츠가 설정 된를 보여 줍니다 [`Span`](xref:Xamarin.Forms.Span) .
+[Hyperlink 데모](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) 샘플에서 가져온 다음 코드 예제는 [`Label`](xref:Xamarin.Forms.Label) 여러 인스턴스에서 해당 콘텐츠가 설정 된를 보여 줍니다 [`Span`](xref:Xamarin.Forms.Span) .
 
 ```xaml
 <Label>
@@ -515,7 +515,7 @@ public partial class MainPage : ContentPage
 
 하이퍼링크를 만드는 이전 방법에는 응용 프로그램에서 하이퍼링크를 요구할 때마다 반복적인 코드를 작성 해야 합니다. 그러나 및 클래스를 [`Label`](xref:Xamarin.Forms.Label) 모두 [`Span`](xref:Xamarin.Forms.Span) 서브클래싱 하 여 `HyperlinkLabel` 및 클래스를 만들 수 있습니다 `HyperlinkSpan` . 여기에는 제스처 인식기와 텍스트 서식 지정 코드가 추가 됩니다.
 
-[Hyperlink 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) 샘플에서 가져온 다음 코드 예제는 클래스를 보여 줍니다 `HyperlinkSpan` .
+[Hyperlink 데모](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) 샘플에서 가져온 다음 코드 예제는 클래스를 보여 줍니다 `HyperlinkSpan` .
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -573,8 +573,8 @@ public class HyperlinkSpan : Span
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [하이퍼링크 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
+- [텍스트 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [하이퍼링크 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
 - [을 사용 하 여 Mobile Apps 만들기 Xamarin.Forms , 3 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [레이블 API](xref:Xamarin.Forms.Label)
 - [범위 API](xref:Xamarin.Forms.Span)

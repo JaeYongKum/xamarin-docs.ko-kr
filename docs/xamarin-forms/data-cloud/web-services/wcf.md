@@ -10,12 +10,12 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cee301178880a62695f4208161965b01bb6f522e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 596fab91a1f64e0fb6c5483e354c2ef15fd24346
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938595"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557922"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
@@ -71,7 +71,7 @@ WCF 서비스는 다음과 같은 작업을 제공 합니다.
 
 TPL (작업 병렬 라이브러리)은 동일한 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다 `Task` . 이 캡슐화는 메서드의 여러 오버 로드에서 제공 됩니다 `TaskFactory.FromAsync` .
 
-APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) 을 참조 하세요.
+APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming) 을 참조 하세요.
 
 ### <a name="create-the-todoserviceclient-object"></a>TodoServiceClient 개체 만들기
 
@@ -315,6 +315,6 @@ Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoWCF (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [방법: Windows Communication Foundation 클라이언트 만들기](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [TodoWCF (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [방법: Windows Communication Foundation 클라이언트 만들기](/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

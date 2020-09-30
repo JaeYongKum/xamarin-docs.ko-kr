@@ -8,14 +8,14 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 no-loc:
-- ':::no-loc(Xamarin.Forms):::'
-- ':::no-loc(Xamarin.Essentials):::'
-ms.openlocfilehash: a721f51d3f59bc166a48f5cc3a3eec9712ace837
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7eb21f9a6a679c294a848d7fa79721c6db03bb0d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996684"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563226"
 ---
 # <a name="visualelement-elevation-on-android"></a>Android에서 VisualElement 권한 상승
 
@@ -25,7 +25,7 @@ ms.locfileid: "86996684"
 
 ```xaml
 <ContentPage ...
-             xmlns:android="clr-namespace::::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific;assembly=:::no-loc(Xamarin.Forms):::.Core"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              Title="Elevation">
     <StackLayout>
         <Grid>
@@ -43,8 +43,8 @@ ms.locfileid: "86996684"
 또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
-using :::no-loc(Xamarin.Forms):::.PlatformConfiguration;
-using :::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 ...
 
 public class AndroidElevationPageCS : ContentPage
@@ -82,15 +82,15 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-`Button.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. `VisualElement.SetElevation`네임 스페이스의 메서드를 [`:::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific`](xref::::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific) 사용 하 여 시각적 요소의 승격을 nullable로 설정 합니다 `float` . 또한 `VisualElement.GetElevation` 메서드를 사용 하 여 시각적 요소의 상승 값을 검색할 수 있습니다.
+`Button.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. `VisualElement.SetElevation`네임 스페이스의 메서드를 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 사용 하 여 시각적 요소의 승격을 nullable로 설정 합니다 `float` . 또한 `VisualElement.GetElevation` 메서드를 사용 하 여 시각적 요소의 상승 값을 검색할 수 있습니다.
 
-그 결과, Z 값이 더 높은 시각적 요소가 Z 값이 작은 시각적 요소를 려 시각적 요소의 상승을 제어할 수 있습니다. 따라서이 예제에서 두 번째는 [`Button`](xref::::no-loc(Xamarin.Forms):::.Button) [`BoxView`](xref::::no-loc(Xamarin.Forms):::.BoxView) 상승 값이 더 높기 때문에에서 렌더링 됩니다.
+그 결과, Z 값이 더 높은 시각적 요소가 Z 값이 작은 시각적 요소를 려 시각적 요소의 상승을 제어할 수 있습니다. 따라서이 예제에서 두 번째는 [`Button`](xref:Xamarin.Forms.Button) [`BoxView`](xref:Xamarin.Forms.BoxView) 상승 값이 더 높기 때문에에서 렌더링 됩니다.
 
 ![VisualElement 권한 상승 스크린샷](visualelement-elevation-images/elevation.png)
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref::::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific AppCompat API](xref::::no-loc(Xamarin.Forms):::.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

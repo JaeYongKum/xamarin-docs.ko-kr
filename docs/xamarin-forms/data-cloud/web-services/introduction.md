@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms웹 서비스 소개
+title: Xamarin.Forms 웹 서비스 소개
 description: 이 가이드에서는 Xamarin.Forms 다양 한 웹 서비스와 통신 하는 방법을 보여 주는 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스는 별도의 샘플 응용 프로그램을 사용 하지만, 기능적으로 비슷하며 공통 클래스를 공유 합니다.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
@@ -10,14 +10,14 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cd9815c6448efae0bb0af982c8807c47263ae13e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ebff259519776718f41ab0fcc0a7abb0c692dac6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938212"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563421"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Xamarin.Forms웹 서비스 소개
+# <a name="no-locxamarinforms-web-services-introduction"></a>Xamarin.Forms 웹 서비스 소개
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
@@ -47,11 +47,11 @@ _이 항목에서는 Xamarin.Forms 다양 한 웹 서비스와 통신 하는 방
 |--- |--- |
 |데이터|데이터 항목을 관리 하 고 웹 서비스와 통신 하는 데 사용 되는 클래스 및 인터페이스를 포함 합니다. 최소한 클래스는 클래스의 `TodoItemManager` 속성을 통해 노출 되어 `App` 웹 서비스 작업을 호출 하는 클래스를 포함 합니다.|
 |모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함 합니다. 이 클래스에는 최소한 `TodoItem` 응용 프로그램에서 사용 하는 데이터의 단일 항목을 모델링 하는 클래스가 포함 됩니다. 이 폴더에는 사용자 데이터를 모델링 하는 데 사용 되는 추가 클래스도 포함 될 수 있습니다.|
-|뷰|응용 프로그램에 대 한 페이지를 포함 합니다. 이는 일반적으로 `TodoListPage` 및 `TodoItemPage` 클래스와 인증 목적으로 사용 되는 추가 클래스로 구성 됩니다.|
+|보기|응용 프로그램에 대 한 페이지를 포함 합니다. 이는 일반적으로 `TodoListPage` 및 `TodoItemPage` 클래스와 인증 목적으로 사용 되는 추가 클래스로 구성 됩니다.|
 
 또한 각 응용 프로그램에 대 한 공유 코드 프로젝트는 여러 중요 한 파일로 구성 되어 있습니다.
 
-|파일|목적|
+|파일|용도|
 |--- |--- |
 |Constants.cs|`Constants`클래스는 응용 프로그램에서 웹 서비스와 통신 하는 데 사용 하는 상수를 지정 합니다. 이러한 상수는 공급자에서 만든 개인 백엔드 서비스에 액세스 하기 위해 업데이트 해야 합니다.|
 |ITextToSpeech.cs|인터페이스는 구현 하는 `ITextToSpeech` `Speak` 클래스에서 메서드를 제공 하도록 지정 합니다.|
@@ -96,6 +96,6 @@ public class TodoItem
 
 ## <a name="related-links"></a>관련 링크
 
-- [ASMX (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [WCF (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [REST (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [ASMX (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)

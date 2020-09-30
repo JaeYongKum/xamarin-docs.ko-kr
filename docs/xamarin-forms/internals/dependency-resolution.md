@@ -10,25 +10,25 @@ ms.date: 07/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ae30b4a4b75906613baf8a2568548c8890ccb33a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6d4c9be2166881824e798e9cb801a5720ab55178
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139089"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557858"
 ---
-# <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms의 종속성 확인
+# <a name="dependency-resolution-in-no-locxamarinforms"></a>Xamarin.Forms의 종속성 확인
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
-_이 문서에서는 Xamarin.Forms 응용 프로그램의 종속성 주입 컨테이너가 사용자 지정 렌더러, 효과 및 DependencyService 구현의 생성 및 수명을 제어 하도록 종속성 확인 방법을에 삽입 하는 방법을 설명 합니다. 이 문서의 코드 예제는 컨테이너 샘플을 [사용 하 여 종속성 확인](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) 에서 가져옵니다._
+_이 문서에서는 Xamarin.Forms 응용 프로그램의 종속성 주입 컨테이너가 사용자 지정 렌더러, 효과 및 DependencyService 구현의 생성 및 수명을 제어 하도록 종속성 확인 방법을에 삽입 하는 방법을 설명 합니다. 이 문서의 코드 예제는 컨테이너 샘플을 [사용 하 여 종속성 확인](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) 에서 가져옵니다._
 
 Xamarin.FormsMVVM (모델-뷰-ViewModel) 패턴을 사용 하는 응용 프로그램의 컨텍스트에서 종속성 주입 컨테이너를 사용 하 여 뷰 모델을 등록 하 고 해결 하며, 서비스를 등록 하 고이를 뷰 모델에 삽입할 수 있습니다. 뷰 모델을 만드는 동안 컨테이너는 필요한 모든 종속성을 삽입 합니다. 이러한 종속성을 만들지 않은 경우 컨테이너는 종속성을 먼저 만들고 확인 합니다. 뷰 모델에 종속성을 삽입 하는 예제를 포함 하 여 종속성 주입에 대 한 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)을 참조 하세요.
 
-플랫폼 프로젝트에서 형식의 생성 및 수명에 대 한 제어는 일반적으로 Xamarin.Forms 메서드를 사용 하 여 `Activator.CreateInstance` 사용자 지정 렌더러, 효과 및 구현의 인스턴스를 만드는에 의해 수행 됩니다 [`DependencyService`](xref:Xamarin.Forms.DependencyService) . 아쉽게도 이러한 형식의 생성 및 수명 및 종속성을 삽입 하는 기능에 대 한 개발자 제어를 제한 합니다. Xamarin.Forms응용 프로그램의 종속성 주입 컨테이너 또는에서 형식을 만드는 방법을 제어 하는 종속성 확인 메서드를에 삽입 하 여이 동작을 변경할 수 있습니다 Xamarin.Forms . 그러나 종속성 확인 메서드를에 삽입할 필요는 없습니다 Xamarin.Forms . Xamarin.Forms종속성 확인 방법이 삽입 되지 않은 경우는 플랫폼 프로젝트에서 형식의 수명을 계속 만들고 관리 합니다.
+플랫폼 프로젝트에서 형식의 생성 및 수명에 대 한 제어는 일반적으로 Xamarin.Forms 메서드를 사용 하 여 `Activator.CreateInstance` 사용자 지정 렌더러, 효과 및 구현의 인스턴스를 만드는에 의해 수행 됩니다 [`DependencyService`](xref:Xamarin.Forms.DependencyService) . 아쉽게도 이러한 형식의 생성 및 수명 및 종속성을 삽입 하는 기능에 대 한 개발자 제어를 제한 합니다. Xamarin.Forms응용 프로그램의 종속성 주입 컨테이너 또는에서 형식을 만드는 방법을 제어 하는 종속성 확인 메서드를에 삽입 하 여이 동작을 변경할 수 있습니다 Xamarin.Forms . 그러나 종속성 확인 메서드를에 삽입할 필요는 없습니다 Xamarin.Forms . Xamarin.Forms 종속성 확인 방법이 삽입 되지 않은 경우는 플랫폼 프로젝트에서 형식의 수명을 계속 만들고 관리 합니다.
 
 > [!NOTE]
-> 이 문서에서는 종속성 확인 메서드를에 삽입 하 Xamarin.Forms 여 종속성 주입 컨테이너를 사용 하는 등록 된 형식을 확인 하는 데 중점을 둔 반면, 팩터리 메서드를 사용 하 여 등록 된 형식을 확인 하는 종속성 확인 메서드를 삽입할 수 있습니다. 자세한 내용은 [팩터리 메서드를 사용 하 여 종속성 확인](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-factoriesdemo) 샘플을 참조 하세요.
+> 이 문서에서는 종속성 확인 메서드를에 삽입 하 Xamarin.Forms 여 종속성 주입 컨테이너를 사용 하는 등록 된 형식을 확인 하는 데 중점을 둔 반면, 팩터리 메서드를 사용 하 여 등록 된 형식을 확인 하는 종속성 확인 메서드를 삽입할 수 있습니다. 자세한 내용은 [팩터리 메서드를 사용 하 여 종속성 확인](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-factoriesdemo) 샘플을 참조 하세요.
 
 ## <a name="injecting-a-dependency-resolution-method"></a>종속성 확인 방법 삽입
 
@@ -304,7 +304,7 @@ async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨테이너를 사용 하 여 종속성 확인 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
+- [컨테이너를 사용 하 여 종속성 확인 (샘플)](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 - [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [비디오 플레이어 구현](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [효과에서 이벤트 호출](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

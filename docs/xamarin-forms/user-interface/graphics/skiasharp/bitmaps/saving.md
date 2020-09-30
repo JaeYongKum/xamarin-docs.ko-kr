@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2e0c4d247f3ecf9c1b8e077c4a96712e9ed138ca
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138660"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562953"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵을 파일에 저장
 
@@ -71,7 +71,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 다른 응용 프로그램에서 파일을 공유 하려면 해당 파일을 사용자의 사진 라이브러리에 저장 해야 합니다. 이 작업을 수행 하려면 플랫폼별 코드와를 사용 해야 합니다 Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **SkiaSharpFormsDemo** 프로젝트는 `IPhotoLibrary` 클래스와 함께 사용 되는 인터페이스를 정의 합니다 `DependencyService` . 다음은 메서드 구문을 정의 합니다 `SavePhotoAsync` .
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **SkiaSharpFormsDemo** 프로젝트는 `IPhotoLibrary` 클래스와 함께 사용 되는 인터페이스를 정의 합니다 `DependencyService` . 다음은 메서드 구문을 정의 합니다 `SavePhotoAsync` .
 
 ```csharp
 public interface IPhotoLibrary
@@ -248,7 +248,7 @@ public class PhotoLibrary : IPhotoLibrary
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat)는 11 가지 비트맵 파일 형식을 참조 하는 멤버를 포함 하는 열거형 이며, 그 중 일부는 모호 하지 않습니다.
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) 는 11 가지 비트맵 파일 형식을 참조 하는 멤버를 포함 하는 열거형 이며, 그 중 일부는 모호 하지 않습니다.
 
 - `Astc`&mdash;적응 확장 가능한 질감 압축
 - `Bmp`&mdash;Windows 비트맵
@@ -283,7 +283,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 
 `SKManagedWStream`클래스가에서 파생 `SKWStream` 되는 경우 ("쓰기 가능 스트림"을 나타냄) `Encode`메서드는 인코딩된 비트맵 파일을 해당 스트림에 씁니다. 해당 코드의 주석은 수행 해야 할 수 있는 몇 가지 오류 검사를 나타냅니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **파일 형식 저장** 페이지는 비슷한 코드를 사용 하 여 다양 한 형식으로 비트맵을 저장 하는 방법을 시험해 볼 수 있습니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **파일 형식 저장** 페이지는 비슷한 코드를 사용 하 여 다양 한 형식으로 비트맵을 저장 하는 방법을 시험해 볼 수 있습니다.
 
 XAML 파일에는 비트맵을 표시 하는가 포함 되어 있고 `SKCanvasView` , 페이지의 나머지 부분에는 응용 프로그램에서의 메서드를 호출 하는 데 필요한 모든 것이 포함 되어 있습니다 `Encode` `SKBitmap` . 이 클래스 `Picker` 에는 열거형의 멤버 `SKEncodedImageFormat` , `Slider` 손실 비트맵 형식의 품질 인수에 대 한, `Entry` 파일 이름 및 폴더 이름에 대 한 두 개의 뷰, 파일을 `Button` 저장 하기 위한가 있습니다.
 
@@ -456,7 +456,7 @@ public partial class SaveFileFormatsPage : ContentPage
 
 **파일 형식 저장** 페이지에서 저장 하는 비트맵은 600 픽셀 사각형입니다. 픽셀당 4 바이트를 사용 하 여 메모리에서 총 144만 바이트입니다. 다음 표에서는 다양 한 파일 형식 및 품질 조합의 파일 크기를 보여 줍니다.
 
-|형식|품질|크기|
+|서식|품질|크기|
 |------|------:|---:|
 | PNG | 해당 없음 | 492K |
 | JPEG | 0 | 2.95 k |
@@ -474,7 +474,7 @@ public partial class SaveFileFormatsPage : ContentPage
 
 [**SkiaSharp에서 손가락 그리기**](../paths/finger-paint.md) 문서는 터치 추적을 사용 하 여 기본 손가락 그리기 프로그램을 구현 하는 방법을 보여 주었습니다. 프로그램은 한 가지 색과 하나의 스트로크 너비만 지원 하지만 개체의 컬렉션에 전체 그리기를 유지 합니다 `SKPath` .
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **저장을 사용 하 여 손가락으로** 그리기는 개체의 컬렉션에도 전체 그리기를 유지 `SKPath` 하지만 비트맵에서 그리기를 렌더링 하 여 사진 라이브러리에 저장할 수 있습니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **저장을 사용 하 여 손가락으로** 그리기는 개체의 컬렉션에도 전체 그리기를 유지 `SKPath` 하지만 비트맵에서 그리기를 렌더링 하 여 사진 라이브러리에 저장할 수 있습니다.
 
 이 프로그램의 대부분은 원래 **손가락 그리기** 프로그램과 유사 합니다. 한 가지 향상 된 기능은 이제 XAML 파일이 **Clear** 및 **Save**라는 레이블이 지정 된 단추를 인스턴스화하는 것입니다.
 
@@ -701,7 +701,7 @@ public partial class FingerPaintSavePage : ContentPage
 
 [![손가락 그리기 저장](saving-images/FingerPaintSave.png "손가락 그리기 저장")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-[**SpinPaint**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) 샘플에서 매우 유사한 기법을 사용 합니다. 또한 손가락 그리기 프로그램은 사용자가 회전 하는 디스크를 페인트 한 후 다른 4 개의 사분면에서 디자인을 재현 한다는 점을 제외 하 고는 손가락 그리기 프로그램입니다. 디스크가 회전 하는 동안 손가락 페인트의 색이 변경 됩니다.
+[**SpinPaint**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) 샘플에서 매우 유사한 기법을 사용 합니다. 또한 손가락 그리기 프로그램은 사용자가 회전 하는 디스크를 페인트 한 후 다른 4 개의 사분면에서 디자인을 재현 한다는 점을 제외 하 고는 손가락 그리기 프로그램입니다. 디스크가 회전 하는 동안 손가락 페인트의 색이 변경 됩니다.
 
 [![페인트 회전](saving-images/SpinPaint.png "페인트 회전")](saving-images/SpinPaint-Large.png#lightbox)
 
@@ -709,6 +709,6 @@ public partial class FingerPaintSavePage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [SpinPaint (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SpinPaint (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint)

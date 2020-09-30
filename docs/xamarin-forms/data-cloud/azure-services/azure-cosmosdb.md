@@ -1,5 +1,5 @@
 ---
-title: 에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
+title: 에서 Azure Cosmos DB 문서 데이터베이스 사용 Xamarin.Forms
 description: 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 합니다 Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -11,14 +11,14 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b8cd2ea2f54e4bfdfea4fa5787a01aca252691b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ef6ccbaac73946ac19f4f5fe194f395234226b5e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564656"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562849"
 ---
-# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
+# <a name="consume-an-azure-cosmos-db-document-database-in-no-locxamarinforms"></a>에서 Azure Cosmos DB 문서 데이터베이스 사용 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
@@ -229,7 +229,7 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo Azure Cosmos DB (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
+- [Todo Azure Cosmos DB (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Azure Cosmos DB 설명서](/azure/cosmos-db/)
 - [Azure Cosmos DB .NET Standard 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://docs.microsoft.com/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)
+- [Azure Cosmos DB API](/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

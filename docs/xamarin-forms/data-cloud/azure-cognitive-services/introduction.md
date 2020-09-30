@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAzure Cognitive Services 소개
+title: Xamarin.Forms Azure Cognitive Services 소개
 description: 이 문서에서는 일부 Microsoft 인식 서비스 Api를 호출 하는 방법을 보여 주는 예제 응용 프로그램에 대해 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -10,14 +10,14 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f40220a29611bb365dc77eeb5e85445a0df19fd6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929339"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563252"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.FormsAzure Cognitive Services 소개
+# <a name="no-locxamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Forms Azure Cognitive Services 소개
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
@@ -66,11 +66,11 @@ _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 �
 |리포지토리|`ITodoItemRepository` `TodoItemRepository` 데이터베이스 작업을 수행 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
 |서비스|`DependencyService`플랫폼 프로젝트의 인터페이스를 구현 하는 클래스를 찾기 위해 클래스에서 사용 하는 인터페이스와 함께 다양 한 Microsoft 인지 서비스 api에 액세스 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
 |유틸리티|클래스에서 `Timer` `AuthenticationService` 9 분 마다 JWT 액세스 토큰을 갱신 하는 데 사용 하는 클래스를 포함 합니다.|
-|뷰|응용 프로그램에 대 한 페이지를 포함 합니다.|
+|보기|응용 프로그램에 대 한 페이지를 포함 합니다.|
 
 공유 코드 프로젝트에는 몇 가지 중요 한 파일도 포함 되어 있습니다.
 
-|파일|목적|
+|파일|용도|
 |--- |--- |
 |Constants.cs|`Constants`호출 되는 Microsoft 인식 서비스 api에 대 한 api 키 및 끝점을 지정 하는 클래스입니다. API 키 상수를 업데이트 하려면 다른 인지 서비스 Api에 액세스 해야 합니다.|
 |App.xaml.cs|`App`클래스는 각 플랫폼에서 응용 프로그램에 의해 표시 되는 첫 번째 페이지와 `TodoManager` 데이터베이스 작업을 호출 하는 데 사용 되는 클래스를 모두 인스턴스화하기 위한 책임이 있습니다.|
@@ -79,10 +79,10 @@ _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 �
 
 샘플 응용 프로그램은 다음 NuGet 패키지를 사용 합니다.
 
-- `Newtonsoft.Json`– .NET 용 JSON 프레임 워크를 제공 합니다.
-- `PCLStorage`– 플랫폼 간 로컬 파일 IO Api 집합을 제공 합니다.
-- `sqlite-net-pcl`– SQLite 데이터베이스 저장소를 제공 합니다.
-- `Xam.Plugin.Media`– Api를 활용 하 고 선택 하는 플랫폼 간 사진을 제공 합니다.
+- `Newtonsoft.Json` – .NET 용 JSON 프레임 워크를 제공 합니다.
+- `PCLStorage` – 플랫폼 간 로컬 파일 IO Api 집합을 제공 합니다.
+- `sqlite-net-pcl` – SQLite 데이터베이스 저장소를 제공 합니다.
+- `Xam.Plugin.Media` – Api를 활용 하 고 선택 하는 플랫폼 간 사진을 제공 합니다.
 
 또한 이러한 NuGet 패키지는 자체 종속성을 설치 합니다.
 
@@ -132,4 +132,4 @@ public class TodoItem
 
 - [음성 인식 음성 서비스 API](~/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition.md)
 - [Microsoft Cognitive Services 설명서](https://www.microsoft.com/cognitive-services/documentation)
-- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

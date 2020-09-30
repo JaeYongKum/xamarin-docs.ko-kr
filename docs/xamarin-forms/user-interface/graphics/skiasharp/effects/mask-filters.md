@@ -10,12 +10,12 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 827b5618dce019e2dedb773f270fe1090da5d616
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136411"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562511"
 ---
 # <a name="skiasharp-mask-filters"></a>SkiaSharp mask 필터
 
@@ -37,7 +37,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 오버 로드를 사용 하면 흐림 효과를 만드는 데 사용 되는 알고리즘에 대 한 플래그를 지정 하 고 다른 그래픽 개체에서 다룰 영역에서 흐리게를 방지 하는 사각형을 지정할 수 있습니다.
 
-[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle)는 다음 멤버를 포함 하는 열거형입니다.
+[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle) 는 다음 멤버를 포함 하는 열거형입니다.
 
 - `Normal`
 - `Solid`
@@ -46,7 +46,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 이러한 스타일의 효과는 아래 예제에 나와 있습니다. `sigma`매개 변수는 흐림 효과의 범위를 지정 합니다. 이전 버전의 버전에는 흐림의 범위가 반경 값으로 표시 되었습니다. 응용 프로그램에 대 한 radius 값이 더 적합 한 경우에는 해당 값 [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) 을 다른 값으로 변환할 수 있는 정적 메서드가 있습니다. 메서드는 반지름을 0.57735에 곱하고 0.5를 추가 합니다.
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **마스크 흐림 실험** 페이지를 사용 하 여 흐림 스타일 및 시그마 값을 시험해 볼 수 있습니다. XAML 파일은 `Picker` 4 개의 `SKBlurStyle` 열거형 멤버와 `Slider` 시그마 값을 지정 하는을 사용 하 여를 인스턴스화합니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **마스크 흐림 실험** 페이지를 사용 하 여 흐림 스타일 및 시그마 값을 시험해 볼 수 있습니다. XAML 파일은 `Picker` 4 개의 `SKBlurStyle` 열거형 멤버와 `Slider` 시그마 값을 지정 하는을 사용 하 여를 인스턴스화합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -276,5 +276,5 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

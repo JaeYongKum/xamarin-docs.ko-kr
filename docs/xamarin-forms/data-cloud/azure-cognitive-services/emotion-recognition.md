@@ -10,12 +10,12 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ac7b90fb3e70fd07fcafe78a68136338469862e0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 220b8a49f4f261568a653af16e333885edec23f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936372"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562875"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
@@ -54,9 +54,9 @@ Face API에 유효한 API 키를 전달 하지 못하면 401 응답 오류가 �
 
 Emotion 인식은에서 api에 이미지를 포함 하는 POST 요청을 수행 하 여 수행 됩니다 `detect` `https://[location].api.cognitive.microsoft.com/face/v1.0` `[location]]` . 여기서는 api 키를 가져오는 데 사용 된 지역입니다. 선택적 요청 매개 변수는 다음과 같습니다.
 
-- `returnFaceId`– 검색 된 면의 faceIds 반환할지 여부입니다. 기본값은 `true`입니다.
-- `returnFaceLandmarks`– 검색 된 면의 얼굴 랜드마크 반환할지 여부입니다. 기본값은 `false`입니다.
-- `returnFaceAttributes`– 하나 이상의 지정 된 얼굴 특성을 분석 하 여 반환할지 여부입니다. 지원 되는 face 특성에는,,,,,,,,,,,,, 등이 `age` `gender` `headPose` `smile` `facialHair` `glasses` `emotion` `hair` `makeup` `occlusion` `accessories` `blur` `exposure` `noise` 있습니다. 얼굴 특성 분석에는 추가 계산 및 시간 비용이 있습니다.
+- `returnFaceId` – 검색 된 면의 faceIds 반환할지 여부입니다. 기본값은 `true`입니다.
+- `returnFaceLandmarks` – 검색 된 면의 얼굴 랜드마크 반환할지 여부입니다. 기본값은 `false`입니다.
+- `returnFaceAttributes` – 하나 이상의 지정 된 얼굴 특성을 분석 하 여 반환할지 여부입니다. 지원 되는 face 특성에는,,,,,,,,,,,,, 등이 `age` `gender` `headPose` `smile` `facialHair` `glasses` `emotion` `hair` `makeup` `occlusion` `accessories` `blur` `exposure` `noise` 있습니다. 얼굴 특성 분석에는 추가 계산 및 시간 비용이 있습니다.
 
 이미지 콘텐츠는 POST 요청의 본문에 URL 또는 이진 데이터로 배치 되어야 합니다.
 
@@ -183,5 +183,5 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 ## <a name="related-links"></a>관련 링크
 
 - [Face API](/azure/cognitive-services/face/overview/).
-- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Todo Cognitive Services (샘플)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [얼굴 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

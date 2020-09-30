@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Forms브러시: 그라데이션'
+title: 'Xamarin.Forms 브러시: 그라데이션'
 description: Xamarin.FormsGradientbrush가 아니며 클래스는 그라데이션 중지점으로 구성 된 그라데이션을 설명 하는 추상 클래스입니다.
 ms.prod: xamarin
 ms.assetid: 24763E56-74EC-4082-897B-E4EAACCADFEE
@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 254a4433888be0e441ae37d41c24b1886040998b
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 08a423830ee3db55cb0ec7facfa5630c8832885b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919621"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562940"
 ---
-# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms브러시: 그라데이션
+# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms 브러시: 그라데이션
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 `GradientBrush`클래스는 클래스에서 파생 `Brush` 되며 그라데이션 중지점으로 구성 된 그라데이션을 설명 하는 추상 클래스입니다. 그라데이션 브러시는 축을 따라 서로 혼합되는 여러 색으로 영역을 그립니다. 에서 파생 되는 클래스는 `GradientBrush` 그라데이션 중지점을 해석 하는 다양 한 방법을 설명 하 고 Xamarin.Forms 다음과 같은 그라데이션 브러시를 제공 합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "87919621"
 - `Color`[`Color`](xref:Xamarin.Forms.Color)-그라데이션 중지점의 색을 나타내는 형식의입니다. 이 속성의 기본값은 `Color.Default`입니다.
 - `Offset``float`-그라데이션 벡터 내에서 그라데이션 중지점의 위치를 나타내는 형식의입니다. 이 속성의 기본값은 0이 고 유효한 값은 0.0-1.0 범위에 있습니다. 이 값이 0에 가까울수록 색이 그라데이션의 시작 부분에 가깝습니다. 마찬가지로이 값이 1에 가까울수록 색이 그라데이션의 끝에 가까울수록 좋습니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
 
 > [!IMPORTANT]
 > 그라데이션에 사용 되는 좌표계는 출력 영역에 대 한 경계 상자를 기준으로 합니다. 0은 경계 상자의 0%를 나타내고 1은 경계 상자의 100%를 나타냅니다. 따라서 (0.5, 0.5)는 경계 상자 가운데에 있는 점을 설명 하 고 (1, 1)은 경계 상자의 오른쪽 아래에 있는 점을 설명 합니다.
@@ -71,6 +71,6 @@ ms.locfileid: "87919621"
 
 ## <a name="related-links"></a>관련 링크
 
-- [BrushesDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.Forms브러시: 선형 그라데이션](lineargradient.md)
-- [Xamarin.Forms브러시: 방사형 그라데이션](radialgradient.md)
+- [BrushesDemos (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms 브러시: 선형 그라데이션](lineargradient.md)
+- [Xamarin.Forms 브러시: 방사형 그라데이션](radialgradient.md)

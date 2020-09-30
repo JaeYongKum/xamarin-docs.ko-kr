@@ -10,12 +10,12 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6f3304c9eeb87405ab303a80450a1cd8b2af267
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c355816ec1b89801814b217cad8a23be2f453226
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938062"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563798"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Android의 ImageButton 그림자
 
@@ -67,8 +67,8 @@ imageButton.On<Android>()
 
 `ImageButton.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. `ImageButton.SetIsShadowEnabled`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 에서 그림자를 사용할 수 있는지 여부를 제어 하는 데 사용 됩니다 `ImageButton` . 또한 다음 메서드를 호출 하 여 그림자를 제어할 수 있습니다.
 
-- `SetShadowColor`– 그림자의 색을 설정 합니다. 기본 색은 [`Color.Default`](xref:Xamarin.Forms.Color.Default*) 입니다.
-- `SetShadowOffset`– 그림자의 오프셋을 설정 합니다. 오프셋은 그림자가 캐스팅 되는 방향을 변경 하 고 값으로 지정 됩니다 [`Size`](xref:Xamarin.Forms.Size) . `Size`구조 값은 왼쪽 (음수 값) 또는 오른쪽 (양수 값)에 대 한 첫 번째 값이 고 두 번째 값은 위 거리가 (음수 값) 이하인 (양수 값) 인 장치 독립적 단위로 표현 됩니다. 이 속성의 기본값은 (0.0, 0.0) 이며이로 인해의 모든 측면에서 그림자가 캐스팅 됩니다 `ImageButton` .
+- `SetShadowColor` – 그림자의 색을 설정 합니다. 기본 색은 [`Color.Default`](xref:Xamarin.Forms.Color.Default*) 입니다.
+- `SetShadowOffset` – 그림자의 오프셋을 설정 합니다. 오프셋은 그림자가 캐스팅 되는 방향을 변경 하 고 값으로 지정 됩니다 [`Size`](xref:Xamarin.Forms.Size) . `Size`구조 값은 왼쪽 (음수 값) 또는 오른쪽 (양수 값)에 대 한 첫 번째 값이 고 두 번째 값은 위 거리가 (음수 값) 이하인 (양수 값) 인 장치 독립적 단위로 표현 됩니다. 이 속성의 기본값은 (0.0, 0.0) 이며이로 인해의 모든 측면에서 그림자가 캐스팅 됩니다 `ImageButton` .
 - `SetShadowRadius`– 그림자를 렌더링 하는 데 사용 되는 흐리게 반경을 설정 합니다. 기본 반지름 값은 10.0입니다.
 
 > [!NOTE]
@@ -80,7 +80,7 @@ imageButton.On<Android>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

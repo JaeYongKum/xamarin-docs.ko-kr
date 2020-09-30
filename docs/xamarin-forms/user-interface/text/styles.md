@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms텍스트 스타일
+title: Xamarin.Forms 텍스트 스타일
 description: 이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 합니다 Xamarin.Forms . 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
@@ -10,25 +10,25 @@ ms.date: 05/22/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d82348231c4b4905f2f70b80f73c45f2f0bf66b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e2c6898439da5869d79bc500643ca3cfc52c2e3f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572002"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557558"
 ---
-# <a name="xamarinforms-text-styles"></a>Xamarin.Forms텍스트 스타일
+# <a name="no-locxamarinforms-text-styles"></a>Xamarin.Forms 텍스트 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Xamarin.ios에서 텍스트 스타일 지정_
+_텍스트 스타일 지정 Xamarin.Forms_
 
 스타일을 사용 하 여 레이블, 항목 및 편집기의 모양을 조정할 수 있습니다. 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
 스타일에는를 지정 하 `Key` 고 특정 컨트롤의 속성을 사용 하 여 선택적으로 적용할 수 있습니다 `Style` .
 
 ## <a name="built-in-styles"></a>기본 제공 스타일
 
-Xamarin.Forms에는 일반적인 시나리오에 대 한 여러 가지 [기본 제공](xref:Xamarin.Forms.Device.Styles) 스타일이 포함 되어 있습니다.
+Xamarin.Forms 에는 일반적인 시나리오에 대 한 여러 가지 [기본 제공](xref:Xamarin.Forms.Device.Styles) 스타일이 포함 되어 있습니다.
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -126,7 +126,7 @@ C #에서 기본 제공 스타일은 다음에서 선택 됩니다 `Device.Style
 label.Style = Device.Styles.TitleStyle;
 ```
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a>액세스 가능성
 
 기본 제공 스타일은 접근성 기본 설정을 보다 쉽게 적용할 수 있도록 하기 위해 존재 합니다. 기본 제공 스타일을 사용 하는 경우 사용자가 접근성 기본 설정을 적절 하 게 설정 하면 글꼴 크기가 자동으로 증가 합니다.
 
@@ -146,5 +146,5 @@ label.Style = Device.Styles.TitleStyle;
 
 - [을 사용 하 여 Mobile Apps 만들기 Xamarin.Forms , 12 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
-- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [텍스트 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Style](xref:Xamarin.Forms.Style)

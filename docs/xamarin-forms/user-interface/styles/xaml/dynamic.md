@@ -1,5 +1,5 @@
 ---
-title: 의 동적 스타일Xamarin.Forms
+title: 의 동적 스타일 Xamarin.Forms
 description: 이 문서에서는 Xamarin.Forms 동적 리소스를 사용 하 여 런타임에 응용 프로그램에서 동적으로 스타일 변경에 응답할 수 있는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: d40ca3423cca68757cf458faf5cca1138aec5461
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d6944da583679d58885c20d327b3e43e176eb6fa
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140090"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563356"
 ---
-# <a name="dynamic-styles-in-xamarinforms"></a>의 동적 스타일Xamarin.Forms
+# <a name="dynamic-styles-in-no-locxamarinforms"></a>의 동적 스타일 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
@@ -214,8 +214,8 @@ public class DynamicStylesInheritancePageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [동적 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
-- [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [동적 스타일 (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [스타일 작업 (샘플)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

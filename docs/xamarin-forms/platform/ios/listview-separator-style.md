@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fda45bc0aa2b7bc582c30b752662055bd4bd4865
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fe9a93e8e5a35df98587efc0dc3ad6192653d173
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937061"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563707"
 ---
 # <a name="listview-separator-style-on-ios"></a>IOS의 ListView 구분 기호 스타일
 
@@ -46,8 +46,8 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 `ListView.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. [ `ListView.SetSeparatorStyle` ] (F: Xamarin.Forms 입니다. PlatformConfiguration. iOSSpecific ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . ListView}, Xamarin.Forms . SeparatorStyle) 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스에서의 셀 사이에 있는 구분 기호에서의 전체 너비를 사용 하는지 여부를 제어 하는 데 사용 되며 [`ListView`](xref:Xamarin.Forms.ListView) `ListView` [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 열거형은 두 가지 가능한 값을 제공 합니다.
 
-- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default)– 기본 iOS 구분 기호 동작을 나타냅니다. 이는의 기본 동작입니다 Xamarin.Forms .
-- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth)–의 한 가장자리에서 다른 가장자리까지 구분 기호를 그리도록 지정 `ListView` 합니다.
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default) – 기본 iOS 구분 기호 동작을 나타냅니다. 이는의 기본 동작입니다 Xamarin.Forms .
+- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth) –의 한 가장자리에서 다른 가장자리까지 구분 기호를 그리도록 지정 `ListView` 합니다.
 
 그러면 지정 된 [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 값이에 적용 되어 [`ListView`](xref:Xamarin.Forms.ListView) 셀 간의 구분 기호 너비를 제어 합니다.
 
@@ -58,6 +58,6 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

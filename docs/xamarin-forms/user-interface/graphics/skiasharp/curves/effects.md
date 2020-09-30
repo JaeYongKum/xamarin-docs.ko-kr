@@ -10,12 +10,12 @@ ms.date: 07/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 074af11d7873ed44c0a48f923f7560dd50cea6a5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128055"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563239"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp의 경로 효과
 
@@ -38,7 +38,7 @@ _스트로크 그리기 및 채우기에 경로를 사용할 수 있도록 하�
 
 또한 두 개 이상의 경로 효과를 결합할 수 있습니다.
 
-또한이 문서에서는의 메서드를 사용 하 여 [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) `SKPaint` `SKPaint` 및를 비롯 한의 속성을 적용 하 여 한 경로를 다른 경로로 변환 하 `StrokeWidth` 는 방법을 보여 줍니다 `PathEffect` . 이로 인해 다른 경로에 대 한 개요 인 경로를 얻는 것과 같은 몇 가지 흥미로운 기술이 있습니다. `GetFillPath`는 경로 효과와 연결 하는 데도 유용 합니다.
+또한이 문서에서는의 메서드를 사용 하 여 [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) `SKPaint` `SKPaint` 및를 비롯 한의 속성을 적용 하 여 한 경로를 다른 경로로 변환 하 `StrokeWidth` 는 방법을 보여 줍니다 `PathEffect` . 이로 인해 다른 경로에 대 한 개요 인 경로를 얻는 것과 같은 몇 가지 흥미로운 기술이 있습니다. `GetFillPath` 는 경로 효과와 연결 하는 데도 유용 합니다.
 
 ## <a name="dots-and-dashes"></a>점 및 대시
 
@@ -273,7 +273,7 @@ canvas.DrawPath(newPath, newPaint);
 
 [`SKPathEffect.Create1DPath`](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle))메서드는 `SKPathEffect.CreateDash` 대시 및 간격 패턴 대신 경로를 지정 한다는 점을 제외 하 고는 개념적으로 유사 합니다. 이 경로는 선 또는 곡선을 스트로크 하기 위해 여러 번 복제 됩니다.
 
-사용되는 구문은 다음과 같습니다.
+구문은 다음과 같습니다.
 
 ```csharp
 public static SKPathEffect Create1DPath (SKPath path, Single advance,
@@ -288,7 +288,7 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 - `Rotate`
 - `Morph`
 
-`Translate`멤버는 회선이 나 곡선을 따라 복제 되는 것과 동일한 방향으로 경로를 유지 합니다. 의 경우 곡선에 대 한 `Rotate` 탄젠트를 기준으로 경로가 회전 됩니다. 경로의 법선 방향은 가로 선입니다. `Morph`는와 유사 합니다 `Rotate` . 단,는 경로 자체가 스트로크 되는 선의 곡률과 일치 하는 곡선입니다.
+`Translate`멤버는 회선이 나 곡선을 따라 복제 되는 것과 동일한 방향으로 경로를 유지 합니다. 의 경우 곡선에 대 한 `Rotate` 탄젠트를 기준으로 경로가 회전 됩니다. 경로의 법선 방향은 가로 선입니다. `Morph` 는와 유사 합니다 `Rotate` . 단,는 경로 자체가 스트로크 되는 선의 곡률과 일치 하는 곡선입니다.
 
 **1D 경로 효과** 페이지는 이러한 세 가지 옵션을 보여 줍니다. [**OneDimensionalPathEffectPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) 파일은 열거형의 세 멤버에 해당 하는 세 개의 항목이 포함 된 선택기를 정의 합니다.
 
@@ -1289,7 +1289,7 @@ public class CatsInFramePage : ContentPage
 
 `catPath` `SKPathEffect.Create2DPath` `SKPaint` 개체 `Style` 속성이로 설정 된 경우 메서드에서를 사용할 수 있습니다 `Stroke` . 그러나 `catPath` 이 프로그램에서 직접 사용 되는 경우에는 cat의 전체 헤드를 채우고 수염 표시 되지 않습니다. (사용해 보세요!) 해당 경로의 개요를 가져와서 메서드에서 해당 개요를 사용 해야 `SKPathEffect.Create2DPath` 합니다.
 
-생성자는이 작업을 수행 합니다. 먼저 두 개의 변환을 적용 `catPath` 하 여 (0, 0) 점을 가운데로 이동 하 고 크기를 축소 합니다. `GetFillPath`에서 컨투어의 모든 윤곽선을 가져오고 `outlinedCatPath` 해당 개체가 호출에 사용 됩니다 `SKPathEffect.Create2DPath` . `SKMatrix`타일 사이에 약간의 버퍼를 제공 하기 위해이 값의 배율 인수는 cat의 가로 및 세로 크기 보다 약간 더 크지만, 변환 요소는 약간 알려지고 실험적으로 되어 프레임의 왼쪽 위 모퉁이에 전체 cat이 표시 됩니다.
+생성자는이 작업을 수행 합니다. 먼저 두 개의 변환을 적용 `catPath` 하 여 (0, 0) 점을 가운데로 이동 하 고 크기를 축소 합니다. `GetFillPath` 에서 컨투어의 모든 윤곽선을 가져오고 `outlinedCatPath` 해당 개체가 호출에 사용 됩니다 `SKPathEffect.Create2DPath` . `SKMatrix`타일 사이에 약간의 버퍼를 제공 하기 위해이 값의 배율 인수는 cat의 가로 및 세로 크기 보다 약간 더 크지만, 변환 요소는 약간 알려지고 실험적으로 되어 프레임의 왼쪽 위 모퉁이에 전체 cat이 표시 됩니다.
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1417,5 +1417,5 @@ public class DashedHatchLinesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharp Api](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (샘플)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

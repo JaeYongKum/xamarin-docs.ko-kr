@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46e8dec3d5644defdeb8a2265a73815adfde92d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b8be4610a327fb9902d62efb061406bff16de484
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136036"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557480"
 ---
 # <a name="listview-group-header-style-on-ios"></a>IOS의 ListView 그룹 머리글 스타일
 
@@ -46,8 +46,8 @@ listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 
 `ListView.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `ListView.SetGroupHeaderStyle`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) [`ListView`](xref:Xamarin.Forms.ListView) 스크롤 하는 동안 머리글 셀의 부동 여부를 제어 하는 데 사용 됩니다. `GroupHeaderStyle`열거형은 다음 두 가지 가능한 값을 제공 합니다.
 
-- `Plain`–가 스크롤 될 때 머리글 셀이 float을 나타냅니다 [`ListView`](xref:Xamarin.Forms.ListView) (기본값).
-- `Grouped`–가 스크롤될 때 머리글 셀이 부동 되지 않음을 나타냅니다 [`ListView`](xref:Xamarin.Forms.ListView) .
+- `Plain` –가 스크롤 될 때 머리글 셀이 float을 나타냅니다 [`ListView`](xref:Xamarin.Forms.ListView) (기본값).
+- `Grouped` –가 스크롤될 때 머리글 셀이 부동 되지 않음을 나타냅니다 [`ListView`](xref:Xamarin.Forms.ListView) .
 
 또한 메서드를 사용 하 여에 `ListView.GetGroupHeaderStyle` 적용 되는를 반환할 수 있습니다 `GroupHeaderStyle` [`ListView`](xref:Xamarin.Forms.ListView) .
 
@@ -57,6 +57,6 @@ listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
