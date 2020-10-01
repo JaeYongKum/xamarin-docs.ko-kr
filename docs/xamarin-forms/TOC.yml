@@ -919,7 +919,7 @@ items:
       - name: 웹 인증자
         href: ~/essentials/web-authenticator.md?context=xamarin/xamarin-forms
       - name: Xamarin.Essentials 릴리스 정보
-        href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+        href: /xamarin/essentials/release-notes/
       - name: 문제 해결
         href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
   - name: 데이터 및 Azure Cloud Services
@@ -1033,7 +1033,7 @@ items:
           - name: 'COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR가 발생하여 Xamarin.Forms.Maps Android 프로젝트가 실패하는 이유는 무엇인가요?'
             href: troubleshooting/questions/maps-compiletodalvik-error.md
   - name: 릴리스 정보
-    href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+    href: /xamarin/xamarin-forms/release-notes/
   - name: 샘플
     href: samples/index.md
   - name: Xamarin.Forms 책으로 모바일 앱 만들기
