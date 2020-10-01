@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 컴파일된 바인딩” description: “이 문서에서는 컴파일된 바인딩을 사용하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/18/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 컴파일된 바인딩
+description: 이 문서에서는 컴파일된 바인딩을 사용하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상시키는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 09/18/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1bc2ed53b12e6953033760b072d38353c65a6708
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571560"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563460"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
+# <a name="no-locxamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -178,4 +178,4 @@ _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

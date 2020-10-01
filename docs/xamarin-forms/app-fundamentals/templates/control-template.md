@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 컨트롤 템플릿” description: “Xamarin.Forms 컨트롤 템플릿은 ContentView 파생 사용자 지정 컨트롤 및 ContentPage 파생 페이지의 시각적 구조를 정의합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/13/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 컨트롤 템플릿
+description: Xamarin.Forms 컨트롤 템플릿은 ContentView 파생 사용자 지정 컨트롤 및 ContentPage 파생 페이지의 시각적 구조를 정의합니다.
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 44eebed2a49fbdda5504f9a09873f93466d0326c
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 575169459433725ae3f3a7db675fc65caef1494e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132550"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563447"
 ---
-# <a name="xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
+# <a name="no-locxamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
@@ -637,7 +637,7 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [ControlTemplateDemos(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+- [ControlTemplateDemos(샘플)](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 - [Xamarin.Forms ContentView](~/xamarin-forms/user-interface/layouts/contentview.md)
 - [Xamarin.Forms 상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)
 - [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)

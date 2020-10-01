@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: f0d8766420f876898a3f10c2f23a35a0b0afeb43
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917549"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563473"
 ---
 # <a name="no-locxamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
@@ -336,5 +336,5 @@ searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFla
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals(샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms Shell 탐색](navigation.md)

@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a1a0febfdb38e577363ba59e8d0a5ceda9464a26
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133765"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563499"
 ---
 # <a name="loading-application-resource-videos"></a>애플리케이션 리소스 비디오 로드
 
@@ -186,4 +186,4 @@ iOS 리소스를 **Resources** 폴더에 저장한 경우 및 UWP 리소스를 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [비디오 플레이어 데모(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08bfb86f040bfbce834df5a5d98231afae92e78d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133770"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563512"
 ---
 # <a name="implementing-a-video-player"></a>비디오 플레이어 구현
 
@@ -23,7 +23,7 @@ ms.locfileid: "84133770"
 
 Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 좋은 경우가 있습니다. 이 문서 시리즈에서는 `VideoPlayer`라는 이름의 Xamarin.Forms 클래스에 대해 iOS, Android 및 UWP(유니버설 Windows 플랫폼)용 사용자 지정 렌더러를 작성하는 방법을 설명합니다.
 
-[**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 샘플에서 `VideoPlayer`를 구현하고 지원하는 모든 파일은 `FormsVideoLibrary` 폴더에 있으며 네임스페이스 `FormsVideoLibrary` 또는 `FormsVideoLibrary`로 시작되는 네임스페이스로 식별됩니다. 이러한 조직 및 명명을 통해 비디오 플레이어 파일을 사용자의 Xamarin.Forms 솔루션으로 쉽게 복사할 수 있습니다.
+[**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 샘플에서 `VideoPlayer`를 구현하고 지원하는 모든 파일은 `FormsVideoLibrary` 폴더에 있으며 네임스페이스 `FormsVideoLibrary` 또는 `FormsVideoLibrary`로 시작되는 네임스페이스로 식별됩니다. 이러한 조직 및 명명을 통해 비디오 플레이어 파일을 사용자의 Xamarin.Forms 솔루션으로 쉽게 복사할 수 있습니다.
 
 `VideoPlayer`는 세 가지 소스의 비디오 파일을 재생할 수 있습니다.
 
@@ -71,4 +71,4 @@ Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [비디오 플레이어 데모(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

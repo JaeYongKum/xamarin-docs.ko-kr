@@ -10,14 +10,14 @@ ms.date: 05/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62c323dd73f656d5b4f4e06c672fd952845efb22
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9ce36af6b8b2a70a7993ff9605c6a7b7735fd974
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137802"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563278"
 ---
-# <a name="create-a-xamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
+# <a name="create-a-no-locxamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -142,4 +142,4 @@ Xamarin.Forms Shell 애플리케이션을 만드는 마지막 단계는 서브�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals(샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
