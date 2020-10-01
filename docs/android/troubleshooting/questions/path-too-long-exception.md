@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: ffe88546ff58387865d71268bd64ec05c8aec3c5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d58cb676b347caac00c39a381de94954219d1865
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026784"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456862"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>PathTooLongException 오류를 해결하려면 어떻게 할까요?
 
@@ -24,7 +24,7 @@ Xamarin.Android 프로젝트에서 생성된 경로 이름은 매우 길 수 있
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\__library_projects__\\Xamarin.Forms.Platform.Android\\library_project_imports\\assets**
 
-최대 경로 길이가 [260자](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)인 Windows에서는 생성된 경로가 최대 길이를 초과하는 경우 프로젝트를 빌드하는 동안 **PathTooLongException**이 생성될 수 있습니다. 
+최대 경로 길이가 [260자](/windows/win32/fileio/naming-a-file)인 Windows에서는 생성된 경로가 최대 길이를 초과하는 경우 프로젝트를 빌드하는 동안 **PathTooLongException**이 생성될 수 있습니다. 
 
 ## <a name="fix"></a>문제 해결
 
@@ -41,7 +41,7 @@ Xamarin.Android 프로젝트에서 생성된 경로 이름은 매우 길 수 있
 </PropertyGroup>
 ```
 
-이 플래그를 설정해도 **PathTooLongException** 오류가 해결되지 않으면 프로젝트 **.csproj** 파일에서 `IntermediateOutputPath`를 설정하여 솔루션의 프로젝트에 대한 [공통 중간 출력 루트](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/)를 지정하는 것이 또 다른 방법입니다. 비교적 짧은 경로를 사용하세요. 예를 들어:
+이 플래그를 설정해도 **PathTooLongException** 오류가 해결되지 않으면 프로젝트 **.csproj** 파일에서 `IntermediateOutputPath`를 설정하여 솔루션의 프로젝트에 대한 [공통 중간 출력 루트](/archive/blogs/kirillosenkov/using-a-common-intermediate-and-output-directory-for-your-solution)를 지정하는 것이 또 다른 방법입니다. 비교적 짧은 경로를 사용하세요. 예를 들어:
 
 ```xml
 <PropertyGroup>

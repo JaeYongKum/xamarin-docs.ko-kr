@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 5a069595aa12852a4a861de9bac52eebd7247e48
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: 721785fe2eeb35f0ef04d1a7854afe4039a66849
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228627"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561835"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
@@ -279,7 +279,7 @@ void SendMessageToMainPage(string body)
 로컬 알림 및 `Intent` 예제에서는 사용자가 알림 탭하기 동작을 수행해야 합니다. 이는 애플리케이션 상태가 변경되기 전에 사용자가 조치를 취해야 하는 경우에 적합합니다. 그러나 때에 따라 사용자 동작을 요구하지 않고 메시지 데이터에 액세스할 수 있습니다. 이전 예제에서도 `SendMessageToMainPage` 메서드를 사용하여 메시지를 현재 `MainPage` 인스턴스로 직접 보냅니다. 프로덕션에서 단일 메시지 유형에 대해 두 메서드를 모두 구현하는 경우 사용자가 알림을 탭하면 `MainPage` 개체가 중복 메시지를 받게 됩니다.
 
 > [!NOTE]
-> Android 애플리케이션은 백그라운드 또는 포그라운드로 실행되는 경우에만 푸시 알림을 받게 됩니다. 기본 `Activity`가 실행되고 있지 않을 때 푸시 알림을 받으려면 이 샘플의 범위를 벗어난 서비스를 구현해야 합니다. 자세한 내용은 [Android 서비스 만들기](/xamarin/android/app-fundamentals/services/)를 참조하세요.
+> Android 애플리케이션은 백그라운드 또는 포그라운드로 실행되는 경우에만 푸시 알림을 받게 됩니다. 기본 `Activity`가 실행되고 있지 않을 때 푸시 알림을 받으려면 이 샘플의 범위를 벗어난 서비스를 구현해야 합니다. 자세한 내용은 [Android 서비스 만들기](../../../android/app-fundamentals/services/index.md)를 참조하세요.
 
 ### <a name="add-incoming-notifications-to-the-no-locxamarinforms-ui"></a>Xamarin.Forms UI에 들어오는 알림 추가
 

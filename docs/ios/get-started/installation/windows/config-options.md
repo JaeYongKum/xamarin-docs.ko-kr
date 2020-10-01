@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0f57c10ea263a3dcf882d2cf75a57105e7f7d0d4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022532"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434523"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>iOS 개발을 위한 Visual Studio 구성
 
@@ -27,7 +27,7 @@ Visual Studio 2019 또는 Visual Studio 2017은 Mac 빌드 호스트에 설치�
 - Visual Studio 2019 Preview를 사용하는 경우 Mac용 Visual Studio에서 **알파** 업데이트 채널을 선택합니다.
 
 > [!NOTE]
-> [Visual Studio 2017 버전 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning)부터 Visual Studio 2017은 Mac 빌드 호스트에서 Windows와 동일한 버전의 Xamarin.iOS를 사용하고 있는지 자동으로 검색합니다. 버전이 일치하지 않으면 Visual Studio 2017에서 Mac 빌드 호스트에 올바른 버전을 원격으로 설치합니다. 자세한 내용은 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 [자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning) 섹션을 살펴보세요.
+> [Visual Studio 2017 버전 15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning)부터 Visual Studio 2017은 Mac 빌드 호스트에서 Windows와 동일한 버전의 Xamarin.iOS를 사용하고 있는지 자동으로 검색합니다. 버전이 일치하지 않으면 Visual Studio 2017에서 Mac 빌드 호스트에 올바른 버전을 원격으로 설치합니다. 자세한 내용은 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 [자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning) 섹션을 살펴보세요.
 
 ## <a name="ios-toolbar"></a>iOS 도구 모음
 

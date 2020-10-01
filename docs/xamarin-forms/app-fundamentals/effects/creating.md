@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb4e0c81fb3f2e58be9c44d1ec7fddcf4d72a656
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: b109459f583afd491b613b4e32e4e4530eeb5ca4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964599"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562693"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -274,5 +274,5 @@ public HomePageCS ()
 - [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [효과](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
-- [배경색 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
-- [포커스 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+- [배경색 효과(샘플)](/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
+- [포커스 효과(샘플)](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

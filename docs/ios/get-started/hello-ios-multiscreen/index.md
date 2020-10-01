@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 871a94d06048f893cf06b00de46d66dd59b3703e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 01980ab03119729d5405691f94d2509ca9b1beee
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73023212"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435686"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS 멀티스크린
 
@@ -27,6 +27,6 @@ ms.locfileid: "73023212"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS(샘플)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

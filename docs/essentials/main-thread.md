@@ -9,14 +9,14 @@ ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 82c54a72d0e0bc991644295f05136f89fd280d7f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0dc8981024105e24ef4dcd725284723060e7313c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802267"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432315"
 ---
-# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
+# <a name="no-locxamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 **MainThread** 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있으며, 특정 코드 블록이 현재 주 스레드에서 실행되고 있는지 확인할 수 있습니다.
 
@@ -63,7 +63,7 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 ```
 
 > [!NOTE]
-> Xamarin.Forms에는 [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)라는 메서드가 있으며 이 메서드는
+> Xamarin.Forms에는 [`Device.BeginInvokeOnMainThread(Action)`](/dotnet/api/xamarin.forms.device.begininvokeonmainthread)라는 메서드가 있으며 이 메서드는
 > `MainThread.BeginInvokeOnMainThread(Action)`와 동일한 작업을 수행합니다.
 > Xamarin.Forms 앱에서 두 메서드 중 하나를 사용할 수 있지만, 호출 코드에 Xamarin.Forms에 대한 다른 종속성 요구가 있는지 여부를 고려합니다. 다른 종속성 요구가 없으면 `MainThread.BeginInvokeOnMainThread(Action)`가 더 나은 옵션일 가능성이 큽니다.
 

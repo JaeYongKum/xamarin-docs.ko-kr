@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: d638bf17d2a4ea23134a2d4ed335637f67e46ff7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 89c6125b4afacd23ddf2c2877c97dff34b5692e3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022460"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436635"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Windows에 Xamarin.iOS 설치
 
@@ -53,10 +53,10 @@ Visual Studio 2019에서 Xamarin.iOS 개발을 설정하려면 다음 단계를 
     배포를 위해 iOS 애플리케이션을 빌드, 디버그 및 서명하려면, Apple의 개발자 도구(Xcode)와 Xamarin.iOS를 사용하여 구성된 Mac 빌드 호스트에 대한 네트워크 액세스 권한이 Visual Studio 2017에 있어야 합니다.
 
     - [Mac 앱 스토어에서 Xcode를 다운로드하여 설치합니다](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-    - [Mac용 Visual Studio를 설치](https://docs.microsoft.com/visualstudio/mac/installation)하고, Xamarin.iOS도 설치합니다.
+    - [Mac용 Visual Studio를 설치](/visualstudio/mac/installation)하고, Xamarin.iOS도 설치합니다.
 
     > [!NOTE]
-    > Mac용 Visual Studio를 설치하지 않으려는 경우 Visual Studio 2019를 [자동으로](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning) 구성할 수 있으며, Mac은 Xamarin.iOS 애플리케이션을 빌드하는 데 필요한 소프트웨어를 사용하여 호스트를 빌드합니다.
+    > Mac용 Visual Studio를 설치하지 않으려는 경우 Visual Studio 2019를 [자동으로](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning) 구성할 수 있으며, Mac은 Xamarin.iOS 애플리케이션을 빌드하는 데 필요한 소프트웨어를 사용하여 호스트를 빌드합니다.
     > 자세한 내용은 [자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning)을 참조하세요.
 
 3. Mac에 페어링(Mac에 Visual Studio 2019 연결)
@@ -93,10 +93,10 @@ Visual Studio 2017에서 Xamarin.iOS 개발을 설정하려면 다음 단계를 
     배포를 위해 iOS 애플리케이션을 빌드, 디버그 및 서명하려면, Apple의 개발자 도구(Xcode)와 Xamarin.iOS를 사용하여 구성된 Mac 빌드 호스트에 대한 네트워크 액세스 권한이 Visual Studio 2017에 있어야 합니다.
 
     - [Mac 앱 스토어에서 Xcode를 다운로드하여 설치합니다](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-    - [Mac용 Visual Studio를 설치](https://docs.microsoft.com/visualstudio/mac/installation)하고, Xamarin.iOS도 설치합니다.
+    - [Mac용 Visual Studio를 설치](/visualstudio/mac/installation)하고, Xamarin.iOS도 설치합니다.
 
     > [!NOTE]
-    > Mac용 Visual Studio를 설치하지 않으려는 경우 [Visual Studio 2017 버전 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning)부터 Visual Studio 2017은 Xamarin.iOS 애플리케이션을 빌드하는 데 필요한 소프트웨어를 통해 Mac 빌드 호스트를 자동으로 구성할 수 있습니다. 자세한 내용은 [자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning)을 참조하세요.
+    > Mac용 Visual Studio를 설치하지 않으려는 경우 [Visual Studio 2017 버전 15.6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning)부터 Visual Studio 2017은 Xamarin.iOS 애플리케이션을 빌드하는 데 필요한 소프트웨어를 통해 Mac 빌드 호스트를 자동으로 구성할 수 있습니다. 자세한 내용은 [자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning)을 참조하세요.
 
 3. Mac에 페어링(Mac에 Visual Studio 2017 연결)
 

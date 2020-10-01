@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/29/2016
-ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 06d413b2bf07df38f78e93af027de2c7dc0badcc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030199"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436773"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -109,7 +109,7 @@ container.AddSubview (new MyView (container));
 
 #### <a name="weak-attribute"></a>약한 특성
 
-[Xamarin.iOS 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`와 마찬가지로 더 적은 코드로 [강력한 순환 참조](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
+[Xamarin.iOS 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`와 마찬가지로 더 적은 코드로 [강력한 순환 참조](#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
 
 `WeakReference <T>`를 사용하는 다음 코드를 살펴봅니다.
 
@@ -211,15 +211,15 @@ class MyChild : UIView
 ```
 
 강력한 참조를 해제하는 방법에 대한 자세한 내용은 [IDisposable 리소스 해제](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable)를 참조하세요.
-다음 블로그 게시물에도 유용한 논의가 있습니다. [Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me)(Xamarin.iOS 가비지 수집기 관련 주요 정보)
+또한 [Xamarin.iOS, 가비지 수집기 및 나](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) 블로그 게시물에도 훌륭한 토론이 있습니다.
 
-### <a name="more-information"></a>추가 정보
+### <a name="more-information"></a>자세한 정보
 
 자세한 내용은 [순환 유지를 방지하는 규칙](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html)(Cocoa With Love 제공), [MonoTouch GC에 있는 버그인가요?](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc)(StackOverflow 제공) 및 [MonoTouch GC에서 refcount가 1보다 큰 관리 개체를 종료할 수 없는 이유는 무엇인가요?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1)(StackOverflow 제공)를 참조하세요
 
 ## <a name="optimize-table-views"></a>테이블 보기 최적화
 
-사용자에게는 [`UITableView`](xref:UIKit.UITableView) 인스턴스에 대한 부드러운 스크롤 및 빠른 로드 시간이 필요합니다. 그러나 셀에 깊게 중첩된 뷰 계층 구조 또는 복잡한 레이아웃이 포함되어 있으면 스크롤 성능이 저하될 수 있습니다. 그러나 `UITableView` 성능이 저하되지 않도록 방지하는 데 사용할 수 있는 방법이 있습니다.
+사용자에게는 [`UITableView`](xref:UIKit.UITableView) 인스턴스에 대한 부드러운 스크롤 및 빠른 로드 시간이필요합니다. 그러나 셀에 깊게 중첩된 뷰 계층 구조 또는 복잡한 레이아웃이 포함되어 있으면 스크롤 성능이 저하될 수 있습니다. 그러나 `UITableView` 성능이 저하되지 않도록 방지하는 데 사용할 수 있는 방법이 있습니다.
 
 - 셀을 다시 사용합니다. 자세한 내용은 [셀 재사용](#reuse-cells)을 참조하세요.
 - 하위 뷰의 수를 줄입니다.

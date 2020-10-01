@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ecc094abf816f11dcb16d9eba7d715c8c4e4ab1
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: 3a085226da3c63f4f151bc657976bba384c02170
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964801"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561146"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
@@ -35,7 +35,7 @@ _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준
 효과에 대한 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
 > [!NOTE]
-> `EffectBehavior`는 [효과 동작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)에 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
+> `EffectBehavior`는 [효과 동작 샘플](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)에 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 
@@ -171,6 +171,6 @@ label.Behaviors.Add (new EffectBehavior {
 ## <a name="related-links"></a>관련 링크
 
 - [효과](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [효과 동작(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+- [효과 동작(샘플)](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [동작](xref:Xamarin.Forms.Behavior)
 - [동작&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1214360f98464e1451da58aaca13df6a3964aba9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 56c4e9c5b0ca44500ca3930a63b300b6bd3fb33f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933070"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436593"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -268,7 +268,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
 1. Visual Studio를 종료합니다.
 
-2. [**개발자 명령 프롬프트**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx)를 시작합니다.
+2. [**개발자 명령 프롬프트**](/dotnet/framework/tools/developer-command-prompt-for-vs)를 시작합니다.
 
 3. 명령 프롬프트에서 다음 명령을 실행하여 자세한 정보 로깅으로 Visual Studio를 시작합니다.
 

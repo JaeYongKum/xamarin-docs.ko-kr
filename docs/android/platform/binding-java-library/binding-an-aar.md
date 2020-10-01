@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
-ms.openlocfilehash: 514157873412b3af31e43ba211aa636c9b53c112
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 489408400a7a900bf867a4303188cdc927020f7f
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853108"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454470"
 ---
 # <a name="binding-an-aar"></a>.AAR 바인딩
 
@@ -303,5 +303,5 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 - [Java 바인딩 라이브러리 빌드(비디오)](https://university.xamarin.com/classes#10090)
 - [JAR 바인딩](~/android/platform/binding-java-library/binding-a-jar.md)
 - [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)
-- [AarBinding(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/javaintegration-aarbinding)
+- [AarBinding(샘플)](/samples/xamarin/monodroid-samples/javaintegration-aarbinding)
 - [버그 44573 - 한 프로젝트에서 여러 .aar 파일을 바인딩할 수 없습니다.](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)

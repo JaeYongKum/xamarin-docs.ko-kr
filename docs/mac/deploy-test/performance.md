@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a5a759ae9f156eec71706d9681fac2a94995848e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a1649c4b8498f3e7ad3684cb4d119236b4ceaf57
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021681"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435478"
 ---
 # <a name="xamarinmac-performance"></a>Xamarin.Mac 성능
 
@@ -59,7 +59,7 @@ Xamarin.Mac 애플리케이션에는 다양한 성능 특성과 기능을 가진
 
 사용 가능한 경우 항상 [비동기](~/cross-platform/platform/async.md) 및 스레드를 사용하여 UI 차단을 방지하도록 합니다.
 
-장기 실행 작업의 경우 [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) 또는 Apple의 [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/)에 언급된 다른 옵션을 사용하여 사용자에게 알리는 것이 좋습니다.
+장기 실행 작업의 경우 [NSProgressIndicator](/samples/xamarin/mac-samples/progressbarexample) 또는 Apple의 [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/)에 언급된 다른 옵션을 사용하여 사용자에게 알리는 것이 좋습니다.
 
 ## <a name="related-links"></a>관련 링크
 

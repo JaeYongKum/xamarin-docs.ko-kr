@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: adbceca38fca2cbe65c739f0d7fe26f18bdf5450
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4d9749c110019f2cf711c1df56196d3296223641
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939856"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557974"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
@@ -37,7 +37,7 @@ _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 �
 
 라이브 카메라 피드 및 사진을 캡처하는 기능을 제공하는 `CameraPage`를 구현하기 위해 각 항목을 차례로 살펴보겠습니다.
 
-## <a name="creating-the-xamarinforms-page"></a>Xamarin.Forms 페이지 만들기
+## <a name="creating-the-no-locxamarinforms-page"></a>Xamarin.Forms 페이지 만들기
 
 다음 XAML 코드 예제에 나온 대로 변경되지 않은 [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 공유 Xamarin.Forms 프로젝트에 추가할 수 있습니다.
 
@@ -76,7 +76,7 @@ public class CameraPageCS : ContentPage
 
 `CameraPage`의 인스턴스는 각 플랫폼에서 라이브 카메라 피드를 표시하는 데 사용됩니다. 컨트롤의 사용자 지정은 사용자 지정 렌더러에서 수행되므로 `CameraPage` 클래스에서 추가 구현할 필요가 없습니다.
 
-## <a name="consuming-the-xamarinforms-page"></a>Xamarin.Forms 페이지 사용
+## <a name="consuming-the-no-locxamarinforms-page"></a>Xamarin.Forms 페이지 사용
 
 빈 `CameraPage`가 Xamarin.Forms 애플리케이션에서 표시되어야 합니다. 이는 다음 코드 예제에 표시된 대로 `MainPage` 인스턴스의 단추를 탭하여 `OnTakePhotoButtonClicked` 메서드를 실행할 때 발생합니다.
 
@@ -196,7 +196,7 @@ namespace CustomRenderer.Droid
 
 기본 클래스의 `OnElementChanged` 메서드에 대한 호출은 보기의 그룹인 Android `ViewGroup` 컨트롤을 인스턴스화합니다. 라이브 카메라 스트림은 렌더러가 기존 Xamarin.Forms 요소에 아직 연결되어 있지 않은 경우 및 사용자 지정 렌더러에 의해 렌더링된 페이지 인스턴스가 존재하는 경우에만 렌더링됩니다.
 
-그런 다음, 페이지는 `AddView` 메서드가 호출되어 `ViewGroup`에 라이브 카메라 스트림 UI를 추가하기 전에, 카메라의 라이브 스트림 및 사진을 캡처하는 기능을 제공하는 데 `Camera` API를 사용하는 일련의 메서드를 호출하여 사용자 지정됩니다. Android에서는 보기에서 측정값 및 레이아웃 작업을 수행하는 `OnLayout` 메서드도 재정의해야 합니다. 자세한 내용은 [ContentPage 렌더러 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)을 참조하세요.
+그런 다음, 페이지는 `AddView` 메서드가 호출되어 `ViewGroup`에 라이브 카메라 스트림 UI를 추가하기 전에, 카메라의 라이브 스트림 및 사진을 캡처하는 기능을 제공하는 데 `Camera` API를 사용하는 일련의 메서드를 호출하여 사용자 지정됩니다. Android에서는 보기에서 측정값 및 레이아웃 작업을 수행하는 `OnLayout` 메서드도 재정의해야 합니다. 자세한 내용은 [ContentPage 렌더러 샘플](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)을 참조하세요.
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>UWP에서 페이지 렌더러 만들기
 
@@ -245,7 +245,7 @@ namespace CustomRenderer.UWP
 UWP에서 `PageRenderer`로부터 파생되는 사용자 지정 렌더러를 구현하는 경우 기본 렌더러는 수행할 작업을 알 수 없으므로 `ArrangeOverride` 메서드 또한 페이지 컨트롤을 정렬하도록 구현되어야 합니다. 그렇지 않은 경우 빈 페이지가 발생합니다. 따라서 이 예제에서 `ArrangeOverride` 메서드는 `Page` 인스턴스에서 `Arrange` 메서드를 호출합니다.
 
 > [!NOTE]
-> UWP 애플리케이션에서 카메라에 대한 액세스를 제공하는 개체를 중지 및 삭제하는 것이 중요합니다. 이렇게 하지 않으면 디바이스의 카메라에 액세스하려고 하는 다른 애플리케이션을 방해할 수 있습니다. 자세한 내용은 [카메라 미리 보기 표시](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)를 참조하세요.
+> UWP 애플리케이션에서 카메라에 대한 액세스를 제공하는 개체를 중지 및 삭제하는 것이 중요합니다. 이렇게 하지 않으면 디바이스의 카메라에 액세스하려고 하는 다른 애플리케이션을 방해할 수 있습니다. 자세한 내용은 [카메라 미리 보기 표시](/windows/uwp/audio-video-camera/simple-camera-preview-access)를 참조하세요.
 
 ## <a name="summary"></a>요약
 
@@ -253,4 +253,4 @@ UWP에서 `PageRenderer`로부터 파생되는 사용자 지정 렌더러를 구
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererContentPage(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+- [CustomRendererContentPage(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

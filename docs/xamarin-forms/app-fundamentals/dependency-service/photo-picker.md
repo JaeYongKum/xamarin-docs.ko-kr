@@ -10,12 +10,12 @@ ms.date: 03/06/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9f999d56fbf178be160e91756643c127d574b090
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 083c8b97d158f817dbe98212bc244e8d1cac845c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84197550"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556778"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
@@ -86,7 +86,7 @@ namespace DependencyServiceDemos.iOS
 
 `GetImageStreamAsync` 메서드는 사진 라이브러리에서 이미지를 선택하려면 `UIImagePickerController`를 만들고 초기화합니다. 두 개의 이벤트 처리기가 필요합니다. 하나는 사용자가 사진을 선택할 경우 필요하며 다른 하나는 사용자가 사진 라이브러리의 표시를 취소하는 경우 필요합니다. `PresentViewController` 메서드는 사용자에게 사진 라이브러리를 표시합니다.
 
-이 시점에서 `GetImageStreamAsync` 메서드는 `Task<Stream>` 개체를 호출하는 코드에 해당 개체를 반환해야 합니다. 이 태스크는 사용자가 사진 라이브러리와 상호 작용을 완료하고 이벤트 처리기 중 하나를 호출하는 경우에만 완료됩니다. 이와 같은 경우에 [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) 클래스는 필수입니다. 클래스는 `GetImageStreamAsync` 메서드에서 반환할 적절한 제네릭 형식의 `Task` 개체를 제공하며, 해당 클래스는 태스크를 완료한 경우 나중에 신호를 받을 수 있습니다.
+이 시점에서 `GetImageStreamAsync` 메서드는 `Task<Stream>` 개체를 호출하는 코드에 해당 개체를 반환해야 합니다. 이 태스크는 사용자가 사진 라이브러리와 상호 작용을 완료하고 이벤트 처리기 중 하나를 호출하는 경우에만 완료됩니다. 이와 같은 경우에 [`TaskCompletionSource`](/dotnet/api/system.threading.tasks.taskcompletionsource-1) 클래스는 필수입니다. 클래스는 `GetImageStreamAsync` 메서드에서 반환할 적절한 제네릭 형식의 `Task` 개체를 제공하며, 해당 클래스는 태스크를 완료한 경우 나중에 신호를 받을 수 있습니다.
 
 `FinishedPickingMedia` 이벤트 처리기는 사용자가 사진을 선택한 경우 호출됩니다. 하지만 해당 처리기는 `UIImage` 개체를 제공하고 `Task`는 .NET `Stream` 개체를 반환해야 합니다. 이 반환은 두 단계로 수행됩니다. 먼저 `UIImage` 개체가 `NSData` 개체에 저장된 메모리 내 PNG 또는 JPEG 파일로 변환된 다음, `NSData` 개체가 .NET `Stream` 개체로 변환됩니다. `TaskCompletionSource` 개체의 `SetResult` 메서드에 대한 호출은 `Stream` 개체를 제공하여 태스크를 완료합니다.
 
@@ -297,6 +297,6 @@ async void OnPickPhotoButtonClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [DependencyService(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [DependencyService(샘플)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [갤러리에서 사진 선택(iOS)](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)
 - [이미지 선택(Android)](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)

@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: 32dec6b8fcdd5387e138a7812d8c3e2074673111
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f3de8f6bb5cc8cb717642ebc86cefe1a184f4a78
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939622"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456628"
 ---
 # <a name="mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기
 
@@ -70,7 +70,7 @@ ms.locfileid: "86939622"
 
 #### <a name="ux-design"></a>UX 디자인
 
-UX는 일반적으로 여러 [디자인 도구 키트](https://docs.microsoft.com/windows/uwp/design/downloads/) 중 하나를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다. UX 모형을 통해 실제 UI 디자인을 고민할 필요없이 UX를 디자인할 수 있습니다.
+UX는 일반적으로 여러 [디자인 도구 키트](/windows/uwp/design/downloads/) 중 하나를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다. UX 모형을 통해 실제 UI 디자인을 고민할 필요없이 UX를 디자인할 수 있습니다.
 
  [![UX는 일반적으로 Balsamiq와 같은 도구를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다.](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
@@ -78,7 +78,7 @@ UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인�
 
 1. **Apple** -  [휴먼 인터페이스 지침](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1. **Android** –  [디자인 지침](https://developer.android.com/design/index.html)
-1. **UWP** – [UWP 디자인 기본 내용](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **UWP** – [UWP 디자인 기본 내용](/windows/uwp/design/basics/)
 
 예를 들어, 각 앱에는 애플리케이션의 섹션 간 전환을 위한 메타포가 있습니다. iOS는 화면 하단에 탭 표시줄을 사용하고 Android는 화면 상단에 탭 표시줄을 사용하며 UWP는 [Pivot 또는 탭](/windows/uwp/design/controls-and-patterns/pivot) 뷰를 사용합니다.
 
@@ -153,7 +153,7 @@ Android는 이 정보를 사용하여 Android OS 내에서 실행되는 애플�
 
 #### <a name="uwp"></a>UWP
 
-UWP 애플리케이션은 Microsoft Store를 통해 사용자에게 배포됩니다. 개발자가 앱을 제출하여 승인을 받으면 해당 앱이 스토어에 표시됩니다. Windows 앱 게시에 대한 자세한 내용은 UWP의 [게시](https://docs.microsoft.com/windows/uwp/publish/) 설명서를 참조하세요.
+UWP 애플리케이션은 Microsoft Store를 통해 사용자에게 배포됩니다. 개발자가 앱을 제출하여 승인을 받으면 해당 앱이 스토어에 표시됩니다. Windows 앱 게시에 대한 자세한 내용은 UWP의 [게시](/windows/uwp/publish/) 설명서를 참조하세요.
 
 ## <a name="mobile-development-considerations"></a>모바일 개발 고려 사항
 
@@ -243,7 +243,7 @@ UWP 하드웨어는 유형이 거의 같지만 여전히 선택적인 구성 요
 
 #### <a name="security-considerations"></a>보안 고려 사항
 
-UWP의 중요한 보안 고려 사항에 대한 자세한 내용은 [보안](https://docs.microsoft.com/windows/uwp/security/) 설명서를 참조하세요.
+UWP의 중요한 보안 고려 사항에 대한 자세한 내용은 [보안](/windows/uwp/security/) 설명서를 참조하세요.
 
 ## <a name="summary"></a>요약
 

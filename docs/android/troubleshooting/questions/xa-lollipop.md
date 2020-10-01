@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 27631d19ea157c1af08666b55a067e729b806434
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026709"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453638"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
 
@@ -22,7 +22,7 @@ ms.locfileid: "73026709"
 - [Xamarin.Android 4.17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md)에서 Android L 미리 보기 지원이 추가되었습니다.
 - [Xamarin.Android 4.20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md)에서 Android Lollipop 지원이 추가되었습니다.
 
-Xamarin은 Xamarin 도구의 안정적인 현재 릴리스만 지원합니다. 아래에서 제공하는 정보는 이전 버전의 도구에 대해 “있는 그대로” 제공됩니다. Xamarin 릴리스에 대한 최신 정보는 [릴리스 정보](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes)를 확인하세요.
+Xamarin은 Xamarin 도구의 안정적인 현재 릴리스만 지원합니다. 아래에서 제공하는 정보는 이전 버전의 도구에 대해 “있는 그대로” 제공됩니다. Xamarin 릴리스에 대한 최신 정보는 [릴리스 정보](/xamarin/android/release-notes/)를 확인하세요.
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>Android L 미리 보기의 “API 레벨 21에 대해 누락된 android.jar”
 

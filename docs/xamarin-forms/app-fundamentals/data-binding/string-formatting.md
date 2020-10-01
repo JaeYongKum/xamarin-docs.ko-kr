@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135761"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558585"
 ---
-# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
+# <a name="no-locxamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -189,5 +189,5 @@ RGB(빨강, 녹색, 파랑) 값을 기존의 2자리 16진수 형식으로 표�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

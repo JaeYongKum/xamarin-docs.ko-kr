@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d417f5e0b2b0bea5a3e129c87e94b289dc7201ed
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133733"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562485"
 ---
 # <a name="binding-video-sources-to-the-player"></a>플레이어에 비디오 소스 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-`VideoPlayer` 보기의 `Source` 속성이 새 비디오 파일로 설정되면 기본 비디오는 재생이 중지되고 새 비디오가 시작됩니다. 이는 [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 샘플의 **웹 비디오 선택** 페이지에서 확인할 수 있습니다. 페이지에는 **App.xaml** 파일에서 참조된 세 비디오의 제목이 있는 `ListView`가 포함됩니다.
+`VideoPlayer` 보기의 `Source` 속성이 새 비디오 파일로 설정되면 기본 비디오는 재생이 중지되고 새 비디오가 시작됩니다. 이는 [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 샘플의 **웹 비디오 선택** 페이지에서 확인할 수 있습니다. 페이지에는 **App.xaml** 파일에서 참조된 세 비디오의 제목이 있는 `ListView`가 포함됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -144,4 +144,4 @@ namespace VideoPlayerDemos
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [비디오 플레이어 데모(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

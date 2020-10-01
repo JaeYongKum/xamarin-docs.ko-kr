@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: e27e73ac2c5164fa3431c8892b21a71c32fcd8ef
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 85efadaa88e8923f363bd92c0426d536b6ebd331
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724017"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454873"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 디바이스 및 Xamarin.Android
 
@@ -226,7 +226,7 @@ Xamarin.Android는 다음 32비트 아키텍처를 지원합니다.
 - `x86`
 
 > [!NOTE]
-> **^** [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture)부터는 `armeabi`가 더이상 지원되지 않습니다.
+> **^** [Xamarin.Android 9.2](/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture)부터는 `armeabi`가 더이상 지원되지 않습니다.
 
 Xamarin.Android는 현재 `mips`에 대한 지원을 제공하지 않습니다.
 

@@ -9,14 +9,14 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7a8a90674b395c90f698a4a0854dc0dc3fc5fe15
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a7341137d7f7ddf1d0db47672af8810380805478
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802344"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434360"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
+# <a name="no-locxamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
 
 **Flashlight** 클래스에는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있습니다.
 
@@ -120,7 +120,7 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 
 ### <a name="uwp"></a>[UWP](#tab/uwp)
 
-[램프](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp)는 켜거나 끌 디바이스 뒷면에 있는 첫 번째 램프를 검색하는 데 사용됩니다.
+[램프](/uwp/api/windows.devices.lights.lamp)는 켜거나 끌 디바이스 뒷면에 있는 첫 번째 램프를 검색하는 데 사용됩니다.
 
 -----
 

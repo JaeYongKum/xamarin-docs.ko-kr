@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: d877f415bb96024bb41edc2be9aec108ae248e88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 11feb8e3e10e12bfb2c647182ec4ba953ab34e24
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020039"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456901"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Xamarin.Android에서 Google 맵 및 위치를 사용하는 방법
 
@@ -31,8 +31,8 @@ _이 문서에서는 Xamarin.Android에서 맵과 위치를 사용하는 방법�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MapsAndLocationDemo_v3(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
-- [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
+- [MapsAndLocationDemo_v3(샘플)](/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
+- [활동 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [의도 목록: Android 디바이스에서 Google 애플리케이션 호출](https://developer.android.com/guide/appendix/g-app-intents.html)
 - [위치 및 지도](https://developer.android.com/guide/topics/location/index.html)

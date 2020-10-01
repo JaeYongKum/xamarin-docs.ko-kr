@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: 93336f5a741cf9643288163f2bf1d8ef44ea52d2
-ms.sourcegitcommit: d42dadc6da584953865b1adb616489d91a7b25d0
+ms.openlocfilehash: baeabf2cde7e0aabe3439d698e63636810069705
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454613"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -37,7 +37,7 @@ Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적
 다음 가상화 기술은 Android 에뮬레이터를 가속화하는 데 사용할 수 있습니다.
 
 1. **Microsoft의 Hyper-V 및 Windows 하이퍼바이저 플랫폼(WHPX)**
-   [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/)는 물리적 호스트 컴퓨터에서 가상화된 컴퓨터 시스템을 실행할 수 있게 해 주는 Windows의 가상화 기능입니다.
+   [Hyper-V](/virtualization/hyper-v-on-windows/)는 물리적 호스트 컴퓨터에서 가상화된 컴퓨터 시스템을 실행할 수 있게 해 주는 Windows의 가상화 기능입니다.
 
 2. **Intel의 HAXM(Hardware Accelerated Execution Manager)**
    HAXM은 Intel CPU를 실행하는 컴퓨터에 대한 가상화 엔진입니다.

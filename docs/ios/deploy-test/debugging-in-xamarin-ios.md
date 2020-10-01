@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a5135d9bb481afcaefc851e392196a87b8ef80dd
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 8d4b60a2e8e53b5b3f97a781b7f1888239541f1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997204"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431867"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
@@ -126,7 +126,7 @@ Visual Studio에서 조건부 중단점을 설정하려면 먼저 [일반 중단
 
 여기서 중단점이 발생되게 하는 조건을 입력할 수 있습니다.
 
-이전 버전의 Visual Studio에서 중단점 조건을 사용하는 방법에 대한 자세한 내용은 이 항목에 대한 [Visual Studio 설명서](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)를 참조하세요.
+이전 버전의 Visual Studio에서 중단점 조건을 사용하는 방법에 대한 자세한 내용은 이 항목에 대한 [Visual Studio 설명서](/visualstudio/debugger/using-breakpoints)를 참조하세요.
 
 -----
 
@@ -160,7 +160,7 @@ Visual Studio에서는 다음과 같이 표시됩니다.
 - **한 단계씩 코드 실행(F10)** - 다음 코드 줄을 실행합니다. 다음 줄이 함수 호출인 경우 한 단계씩 코드 실행은 함수의 첫 번째 줄에서 중지되며, 함수 디버깅을 줄 단위로 계속할 수 있도록 합니다. 다음 줄이 함수가 아닌 경우 프로시저 단위 실행과 동일하게 동작합니다.
 - **프로시저 나가기(Shift+F11)** - 현재 함수가 호출된 줄로 돌아갑니다.
 
-디버깅에 대한 자세한 설명은 [Visual Studio 디버거를 사용하여 코드 탐색](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)을 참조하세요.
+디버깅에 대한 자세한 설명은 [Visual Studio 디버거를 사용하여 코드 탐색](/visualstudio/debugger/navigating-through-code-with-the-debugger)을 참조하세요.
 
 -----
 

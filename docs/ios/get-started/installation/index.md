@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: 76696c094634c90fc0f9d445b932e04f53bc87c7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9754018d48a64c3f3df27f3c0979939ee3cbfee3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022519"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435418"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 설치
 
@@ -33,7 +33,7 @@ Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
 ## <a name="mac-installation"></a>Mac 설치
 
-Mac에서 Xamarin.iOS 설치에 대한 지침은 [Mac 설치](https://docs.microsoft.com/visualstudio/mac/installation) 가이드를 참조하세요.
+Mac에서 Xamarin.iOS 설치에 대한 지침은 [Mac 설치](/visualstudio/mac/installation) 가이드를 참조하세요.
 
 ## <a name="windows-installation"></a>Windows 설치
 

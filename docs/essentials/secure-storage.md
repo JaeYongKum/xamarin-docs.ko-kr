@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 061bc1cfe785ad080092ba21340f7d38bc499ed9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801948"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433500"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
+# <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
 **SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
 
@@ -154,7 +154,7 @@ KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해�
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)를 사용하여 UWP 디바이스에서 값을 안전하게 암호화합니다.
+[DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)를 사용하여 UWP 디바이스에서 값을 안전하게 암호화합니다.
 
 암호화된 값은 `ApplicationData.Current.LocalSettings`의 컨테이너 안에 **[YOUR-APP-ID].xamarinessentials**라는 이름으로 저장됩니다.
 

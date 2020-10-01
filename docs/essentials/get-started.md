@@ -9,12 +9,12 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3599958a493dd4051064b5e7f54aa5901e6bf32c
-ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
+ms.openlocfilehash: f8a65c7bd3476114b849bb0e9383227e2ec78c7c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052762"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432620"
 ---
 # <a name="get-started-with-no-locxamarinessentials"></a>Xamarin.Essentials 시작하기
 
@@ -58,7 +58,7 @@ Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio�
 
     Android 9.0에 대해 컴파일할 때 Xamarin.Essentials는 필요한 Xamarin.Android.Support 라이브러리 버전 28.0.0.3을 설치합니다. NuGet 패키지 관리자를 사용하여 애플리케이션에 필요한 다른 모든 Xamarin.Android.Support 라이브러리도 버전 28.0.0.3으로 업데이트해야 합니다. 애플리케이션에서 사용하는 모든 Xamarin.Android.Support 라이브러리는 동일해야 하며, 적어도 28.0.0.3 버전이어야 합니다. Xamarin.Essentials NuGet을 추가하거나 솔루션의 NuGet을 업데이트하는 데 문제가 있는 경우 [문제 해결 페이지](troubleshooting.md)를 참조하세요.
 
-    버전 1.5.0부터는 Android 10.0에 대해 컴파일할 때 Xamarin.Essentials는 필요한 AndroidX 지원 라이브러리를 설치합니다. 아직 전환하지 않은 경우에는 [AndroidX 설명서](https://docs.microsoft.com/xamarin/android/platform/androidx)를 참조하세요.
+    버전 1.5.0부터는 Android 10.0에 대해 컴파일할 때 Xamarin.Essentials는 필요한 AndroidX 지원 라이브러리를 설치합니다. 아직 전환하지 않은 경우에는 [AndroidX 설명서](../android/platform/androidx.md)를 참조하세요.
 
     Android 프로젝트의 `MainLauncher` 또는 시작된 `Activity`의 `OnCreate` 메서드에서 Xamarin.Essentials를 초기화해야 합니다.
 

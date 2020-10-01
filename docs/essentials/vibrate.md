@@ -9,14 +9,14 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2ed2dfdca6b6811089d4dbb5d6e90e794c79591
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 77ef074ab23532249e7a22bdd0cf8ecd429120a3
+ms.sourcegitcommit: 744f977b0595f489c592e29c8a3ba548fde02b6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801805"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91410677"
 ---
-# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
+# <a name="no-locxamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
 
 **Vibration** 클래스를 사용하면 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있습니다.
 
@@ -52,7 +52,7 @@ Vibrate 권한이 필요하며 Android 프로젝트에서 구성해야 합니다
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-플랫폼의 차이점이 없습니다.
+추가 설정이 필요하지 않습니다.
 
 -----
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
-ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c0d4b0d1a31be43d16fb69eba18c07815631f496
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020263"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453937"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>조각 연습 &ndash; 가로
 
@@ -34,9 +34,9 @@ ms.locfileid: "73020263"
 
 ## <a name="1-create-an-alternate-layout"></a>1. 대체 레이아웃 만들기
 
-기본 작업이 Android 디바이스에 생성되면 Android가 디바이스 방향에 따라 로드할 레이아웃을 결정합니다. 기본적으로 Android는 **Resources/layout/activity_main.axml** 레이아웃 파일을 제공합니다. 가로 모드로 로드되는 디바이스의 경우 Android가 **Resources/layout-land/activity_main.axml** 레이아웃 파일을 제공합니다. [Android 리소스](/xamarin/android/app-fundamentals/resources-in-android)에 대한 가이드에는 Android가 애플리케이션에 대해 로드할 리소스 파일을 결정하는 방법에 대한 자세한 정보가 포함되어 있습니다.
+기본 작업이 Android 디바이스에 생성되면 Android가 디바이스 방향에 따라 로드할 레이아웃을 결정합니다. 기본적으로 Android는 **Resources/layout/activity_main.axml** 레이아웃 파일을 제공합니다. 가로 모드로 로드되는 디바이스의 경우 Android가 **Resources/layout-land/activity_main.axml** 레이아웃 파일을 제공합니다. [Android 리소스](../../../app-fundamentals/resources-in-android/index.md)에 대한 가이드에는 Android가 애플리케이션에 대해 로드할 리소스 파일을 결정하는 방법에 대한 자세한 정보가 포함되어 있습니다.
 
-[대체 레이아웃](/xamarin/android/user-interface/android-designer/alternative-layout-views) 가이드에 설명된 단계에 따라 **가로** 방향을 대상으로 하는 대체 레이아웃을 만듭니다. 그러면 프로젝트에 새로운 레이아웃 리소스 파일인 **Resources/layout/activity_main.axml**이 추가됩니다.
+[대체 레이아웃](../../../user-interface/android-designer/alternative-layout-views.md) 가이드에 설명된 단계에 따라 **가로** 방향을 대상으로 하는 대체 레이아웃을 만듭니다. 그러면 프로젝트에 새로운 레이아웃 리소스 파일인 **Resources/layout/activity_main.axml**이 추가됩니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 

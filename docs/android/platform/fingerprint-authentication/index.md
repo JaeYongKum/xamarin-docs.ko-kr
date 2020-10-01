@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 4a4b6ee7a123683a9d5a140c46c0b3542767ffa3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a3fd03ece3618172e68539e2a92e8924e85e2ce5
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027520"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453885"
 ---
 # <a name="fingerprint-authentication"></a>지문 인증
 
@@ -53,8 +53,8 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 
 ## <a name="related-links"></a>관련 링크
 
-- [지문 가이드 샘플 앱](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
-- [지문 대화 상자 샘플](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [지문 가이드 샘플 앱](/samples/xamarin/monodroid-samples/fingerprintguide)
+- [지문 대화 상자 샘플](/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [런타임에 권한 요청](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)

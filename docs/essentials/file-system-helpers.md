@@ -9,14 +9,14 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eb35750372c5ccb878c7b38f9d25898b09fd7f1e
-ms.sourcegitcommit: e412858ce431b3280c88241e324fcab33066eb58
+ms.openlocfilehash: 967fa5f54ec9ccbb1f8bac2a87d77dca63caba3a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865899"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434332"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
+# <a name="no-locxamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
 
 **FileSystem** 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
 
@@ -77,8 +77,8 @@ iOS 프로젝트의 **Resources** 폴더에 파일을 추가하고 빌드 작업
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-- **CacheDirectory** – [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) 디렉터리를 반환합니다.
-- **AppDataDirectory** - 클라우드에 백업된 [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) 디렉터리를 반환합니다.
+- **CacheDirectory** – [LocalCacheFolder](/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) 디렉터리를 반환합니다.
+- **AppDataDirectory** - 클라우드에 백업된 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) 디렉터리를 반환합니다.
 
 UWP 프로젝트의 루트에 파일을 추가하고 빌드 작업을 **Content**로 표시하여 `OpenAppPackageFileAsync`와 함께 사용합니다.
 

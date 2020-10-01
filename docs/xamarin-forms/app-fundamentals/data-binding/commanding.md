@@ -10,12 +10,12 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad36bd5efe09909753fed948a961a690feb0592a
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: 7edde81a926b142a5e792a203e96ee61b1fdfb7b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964664"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562706"
 ---
 # <a name="the-no-locxamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
@@ -89,7 +89,7 @@ Windows와 Xamarin.Forms 간에 ViewModel을 공유하는 것이 문제가 되�
 
 ## <a name="basic-commanding"></a>기본 명령
 
-[**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램의 **Person Entry**(사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
+[**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램의 **Person Entry**(사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
 
 `PersonViewModel`은 사용자를 정의하는 `Name`, `Age` 및 `Skills`라는 세 가지 속성을 정의합니다. 이 클래스에는 `ICommand` 속성이 *포함되지 않습니다*.
 
@@ -691,7 +691,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>비동기 탐색 메뉴 명령
 
-명령은 [**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml**의 일부는 다음과 같습니다.
+명령은 [**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml**의 일부는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -765,5 +765,5 @@ XAML 파서에서 바인딩 정의를 발견하면 바인딩의 두 구성 요�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

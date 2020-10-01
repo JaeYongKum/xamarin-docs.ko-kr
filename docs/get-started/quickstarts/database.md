@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a28e391c6bacd460f095c94e30b2d9433a5191e4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8f19595fdabd663312e6346deaed65f85aed1280
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931796"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436973"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
 
@@ -35,7 +35,7 @@ ms.locfileid: "86931796"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작을 시도하기 전에 [이전 빠른 시작](multi-page.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
+이 빠른 시작을 시도하기 전에 [이전 빠른 시작](multi-page.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
 
 ::: zone pivot="windows"
 
@@ -486,5 +486,5 @@ XAML 스타일로 애플리케이션의 스타일을 지정하려면 다음 빠�
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+- [노트(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 - [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)

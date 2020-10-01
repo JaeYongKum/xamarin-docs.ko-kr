@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: bc7a5217f3260eb36e45a683b5520347c22641b0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da3148022f1280a18fd398e7c960c1a8440c0200
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016378"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456810"
 ---
 # <a name="building-mobile-apps"></a>모바일 앱 빌드
 
@@ -44,7 +44,7 @@ Xamarin 작동 방법 및 모바일 앱 개발 프로젝트에 접근하는 방�
 
 모바일 애플리케이션을 디자인 및 개발할 때 Xamarin을 선택하고 몇 가지 사항을 유의하면, 모바일 플랫폼 간 상당한 코드 공유를 확인하고, 시장에 빠르게 진입하며, 기존 역량을 활용하고, 모바일 액세스에 대한 고객 요구를 충족하며, 플랫폼 간 복잡성을 줄일 수 있습니다. 이 문서에서는 유틸리티 및 생산성 애플리케이션의 이러한 이점을 확인하기 위한 주요 지침을 설명합니다.
 
-### <a name="introducing-visual-studio-for-mac"></a>[Mac용 Visual Studio 소개](https://docs.microsoft.com/visualstudio/mac/)
+### <a name="introducing-visual-studio-for-mac"></a>[Mac용 Visual Studio 소개](/visualstudio/mac/)
 
 macOS용 IDE(통합 개발 환경)인 Mac용 Visual Studio에 대해 자세히 알아보세요.
 

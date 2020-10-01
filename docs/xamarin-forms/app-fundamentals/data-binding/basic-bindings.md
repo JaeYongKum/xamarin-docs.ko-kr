@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 기본 바인딩” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 개체 중 하나 이상은 일반적으로 사용자 인터페이스 개체입니다.'
-description: '두 개체는 대상 및 소스라고 합니다.” ms.prod: xamarin ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials] ms.custom: video'
+title: Xamarin.Forms 기본 바인딩
+description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 대상과 원본이라고 합니다.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 9bedde64f0eda233c289cb31296854b5cbca54a1
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84133551"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561120"
 ---
-# <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
+# <a name="no-locxamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -334,7 +334,7 @@ XAML 태그 확장은 일반적으로 중괄호로 구분되지만, 개체 요�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>관련 동영상

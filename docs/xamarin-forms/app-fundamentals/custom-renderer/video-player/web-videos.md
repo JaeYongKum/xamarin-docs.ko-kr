@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133681"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557948"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
 
@@ -452,7 +452,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>URL 원본 설정
 
-세 가지 렌더러에서 이러한 속성을 구현하면 URL 원본에서 비디오를 재생할 수 있습니다. [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 프로그램의 **웹 비디오 재생** 페이지는 다음 XAML 파일에서 정의됩니다.
+세 가지 렌더러에서 이러한 속성을 구현하면 URL 원본에서 비디오를 재생할 수 있습니다. [**VideoPlayDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 프로그램의 **웹 비디오 재생** 페이지는 다음 XAML 파일에서 정의됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -524,4 +524,4 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [비디오 플레이어 데모(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

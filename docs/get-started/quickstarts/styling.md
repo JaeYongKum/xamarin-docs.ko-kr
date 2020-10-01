@@ -12,14 +12,14 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05560ae7c3d255140c0782e5f442dd2356d86cad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9794f429744611654ce883b48aa828b997ec881f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937425"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435436"
 ---
-# <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
+# <a name="style-a-cross-platform-no-locxamarinforms-application"></a>플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
@@ -34,7 +34,7 @@ ms.locfileid: "86937425"
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작을 시도하기 전에 [이전 빠른 시작](database.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
+이 빠른 시작을 시도하기 전에 [이전 빠른 시작](database.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
 
 ::: zone pivot="windows"
 
@@ -326,5 +326,5 @@ Xamarin.Forms를 사용하여 애플리케이션을 개발하는 기본 사항�
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [노트(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 - [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)

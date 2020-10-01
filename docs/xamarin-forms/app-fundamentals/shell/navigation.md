@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 셸 탐색” description: “Xamarin.Forms 셸 애플리케이션은 설정된 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동을 허용하는 URI 기반 탐색 환경을 이용할 수 있습니다.”'
-description: 'ms.prod: xamarin ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/02/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms Shell 탐색
+description: Xamarin.Forms Shell 애플리케이션은 설정된 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동을 허용하는 URI 기반 탐색 환경을 이용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 6cf4932c3265d1d66200ae12ba448a758586f11c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84132394"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563148"
 ---
-# <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
+# <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -372,4 +372,4 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals(샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

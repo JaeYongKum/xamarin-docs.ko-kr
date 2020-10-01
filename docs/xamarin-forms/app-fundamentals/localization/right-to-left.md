@@ -11,12 +11,12 @@ ms.date: 05/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fe27c00752723ac34d614c510f1305b197933715
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137555"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558169"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화
 
@@ -77,7 +77,7 @@ this.FlowDirection = Device.FlowDirection;
 
 ![Info.plist에서 지원하는 언어](rtl-images/ios-locales.png "Info.plist에서 지원하는 언어")
 
-자세한 내용은 [iOS의 지역화 기본 사항](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)을 참조하세요.
+자세한 내용은 [iOS의 지역화 기본 사항](../../../ios/app-fundamentals/localization/index.md#localization-basics-in-ios)을 참조하세요.
 
 디바이스/시뮬레이터의 언어와 지역을 **Info.plist**에 지정된 오른쪽에서 왼쪽으로 쓰는 로캘로 변경하여 오른쪽에서 왼쪽으로 쓰는 언어 지역화를 테스트할 수 있습니다.
 
@@ -197,4 +197,4 @@ Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoLocalizedRTL 샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+- [TodoLocalizedRTL 샘플 앱](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

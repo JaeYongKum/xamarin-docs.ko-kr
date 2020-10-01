@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: c4eaebc8d5f184b1108815c37e992fa97e67aa8f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e732e4f04aa5a219a267502bd1aca11ccb2b72f8
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458214"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -70,7 +70,7 @@ Visual Studio 2019 및 Visual Studio 2017 설치 관리자에는 Xamarin을 자�
 
 ## <a name="installation-instructions"></a>설치 지침
 
-macOS용 최신 Xamarin 릴리스는 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation)로 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 설치 지침](https://docs.microsoft.com/visualstudio/install/install-visual-studio)을 따릅니다.
+macOS용 최신 Xamarin 릴리스는 [Mac용 Visual Studio](/visualstudio/mac/installation)로 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 설치 지침](/visualstudio/install/install-visual-studio)을 따릅니다.
 
 현재 제품 릴리스의 전체 목록은 [새로운 기능 페이지](~/whats-new/index.yml)에서 볼 수 있습니다. 이 페이지에서는 릴리스 정보로 연결되는 링크도 제공됩니다.
 

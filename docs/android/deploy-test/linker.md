@@ -6,27 +6,27 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
-ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3c42743a26ab4ec5388c1d3458d88ef4d161a1f3
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021450"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454847"
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
 Xamarin.Android 애플리케이션은 *링커*를 사용하여 애플리케이션의 크기를 줄일 수 있습니다. 링커는 애플리케이션의 정적 분석을 통해 실제로 사용되는 어셈블리, 형식 및 멤버를 확인합니다. 그런 다음, *가비지 수집기*로 작동하여 참조되는 어셈블리, 형식 및 멤버의 의 완전한 클로저가 발견될 때까지, 참조되는 어셈블리, 형식 및 멤버를 계속 찾습니다. 그런 다음, 이 클로저 외부의 모든 것은 *삭제*됩니다.
 
-예를 들어 [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a) 샘플은 다음과 같습니다.
+예를 들어 [Hello, Android](/samples/xamarin/monodroid-samples/hellom4a) 샘플은 다음과 같습니다.
 
-|Configuration|1.2.0 크기|4.0.1 크기|
+|구성|1.2.0 크기|4.0.1 크기|
 |---|---|---|
 |연결 없이 릴리스:|14.0MB|16.0MB|
 |연결 없이 릴리스:|4.2MB|2.9MB|
 
 연결 결과 1.2.0에서 원래(연결되지 않은) 패키지 크기의 30%, 4.0.1에서 연결되지 않은 패키지 크기의 18%에 해당하는 패키지가 생성됩니다.
 
-## <a name="control"></a>컨트롤
+## <a name="control"></a>제어
 
 연결은 *정적 분석*을 기반으로 합니다. 따라서 런타임 환경에 종속된 모든 것은 검색되지 않습니다.
 
@@ -50,7 +50,7 @@ public class MyActivity {
 
 ### <a name="linker-behavior"></a>링커 동작
 
-링커 제어의 기본 메커니즘은 **프로젝트 옵션** 대화 상자 내 **링커 동작**(Visual Studio의 *연결*) 드롭다운입니다. 여기에는 세 가지 옵션이 있습니다.
+링커 제어의 기본 메커니즘은 **프로젝트 옵션** 대화 상자 내 **링커 동작**(Visual Studio의 *연결*) 드롭다운입니다. 세 개의 옵션이 있습니다.
 
 1. **연결하지 않음**(Visual Studio의 *없음*)
 1. **SDK 어셈블리 연결**(*SDK 어셈블리만*)
@@ -85,7 +85,7 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 ### <a name="preserving-code"></a>코드 유지
 
-링커는 사용자가 유지하려는 코드를 제거하는 경우가 있습니다. 예를 들어:
+링커는 사용자가 유지하려는 코드를 제거하는 경우가 있습니다. 예를 들면 다음과 같습니다.
 
 - `System.Reflection.MemberInfo.Invoke`를 통해 동적으로 호출하는 코드가 있을 수 있습니다.
 

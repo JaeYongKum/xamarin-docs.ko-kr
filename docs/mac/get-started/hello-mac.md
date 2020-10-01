@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: fe052fee9bd72164ce0d739f01cc1c21a9517cc6
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 49a4597aec37c1a9be550f62f4f97dd8fe7def08
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997165"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430623"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – 연습
 
@@ -39,7 +39,7 @@ Xamarin.Mac 애플리케이션 개발에는 다음이 필요합니다.
 
 - macOS High Sierra(10.13) 이상을 실행하는 Mac 컴퓨터
 - [Xcode 10 이상](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-- 최신 버전의 [Xamarin.Mac 및 Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation/).
+- 최신 버전의 [Xamarin.Mac 및 Mac용 Visual Studio](/visualstudio/mac/installation/).
 
 Xamarin.Mac으로 빌드된 애플리케이션을 실행하려면 다음이 필요합니다.
 
@@ -579,9 +579,9 @@ Xamarin.Mac 애플리케이션을 작업하기 위한 기본 개념을 살펴보
 - [컬렉션 보기](~/mac/user-interface/collection-view.md) - 이 문서에서는 Xamarin.Mac 애플리케이션에서 컬렉션 보기를 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 컬렉션 보기를 생성 및 유지 관리하고, 출선 및 작업을 사용하여 컬렉션 보기 요소를 코드에 노출하고, 컬렉션 보기를 채우고, 마지막으로 C# 코드에서 컬렉션 보기에 응답하는 내용을 다룹니다.
 - [이미지 작업](~/mac/app-fundamentals/image.md) - 이 문서에서는 Xamarin.Mac 애플리케이션에서 이미지 및 아이콘을 작업하는 내용을 다룹니다. 앱 아이콘을 만드는 데 필요한 이미지를 생성 및 유지 관리하고 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용하는 내용을 다룹니다.
 
-[Mac 샘플 갤러리](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)에는 Xamarin.Mac을 학습하는 데 도움이 되는, 즉시 사용할 수 있는 코드 예제가 있습니다.
+[Mac 샘플 갤러리](/samples/browse/?products=xamarin&term=Xamarin.Mac)에는 Xamarin.Mac을 학습하는 데 도움이 되는, 즉시 사용할 수 있는 코드 예제가 있습니다.
 
-사용자가 일반적인 Mac 애플리케이션에서 예상하는 여러 기능을 포함하고 있는 완전한 Xamarin.Mac 앱은 [SourceWriter 샘플 앱](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter)입니다. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
+사용자가 일반적인 Mac 애플리케이션에서 예상하는 여러 기능을 포함하고 있는 완전한 Xamarin.Mac 앱은 [SourceWriter 샘플 앱](/samples/xamarin/mac-samples/sourcewriter)입니다. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
 
 SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 
@@ -591,5 +591,5 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, Mac(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac(샘플)](/samples/xamarin/mac-samples/hello-mac)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

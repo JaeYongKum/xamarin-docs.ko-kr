@@ -10,12 +10,12 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de85e9108244230e9c0a740b1aa9140ecf92a033
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: af6da36e242ae2d967d795b61d65a38e5e43e22b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997399"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557285"
 ---
 # <a name="creating-mobile-apps-with-no-locxamarinforms-book"></a>Creating Mobile Apps with Xamarin.Forms 책
 
@@ -88,7 +88,7 @@ Microsoft Virtual Academy에서 원하는 형식의 eBook을 다운로드하세�
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>이 책의 오래된 내용에 대한 설명
 
-*Creating Mobile Apps with Xamarin.Forms* 책이 출간된 뒤로 Xamarin.Forms에 다양한 새로운 기능이 추가되었습니다. 해당 새로운 기능은 [Xamarin.Forms](/xamarin/) 설명서의 개별 문서에 설명되어 있습니다.
+*Creating Mobile Apps with Xamarin.Forms* 책이 출간된 뒤로 Xamarin.Forms에 다양한 새로운 기능이 추가되었습니다. 해당 새로운 기능은 [Xamarin.Forms](../../index.yml) 설명서의 개별 문서에 설명되어 있습니다.
 
 그 밖에도 다음과 같은 변경 사항으로 인해 이 책의 내용이 유효하지 않을 수 있습니다.
 
@@ -131,5 +131,5 @@ Xamarin.Forms에는 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamari
 
 ## <a name="related-links"></a>관련 링크
 
-- [MS 보도 자료 블로그](https://blogs.msdn.microsoft.com/microsoft_press/2016/03/31/free-ebook-creating-mobile-apps-with-xamarin-forms/)
+- [MS 보도 자료 블로그](/archive/blogs/microsoft_press/free-ebook-creating-mobile-apps-with-xamarin-forms)
 - [책의 샘플 코드](https://github.com/xamarin/xamarin-forms-book-samples)

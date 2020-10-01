@@ -10,20 +10,20 @@ ms.date: 05/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a7c62ec6d7329227abd8f52644212341098185f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139778"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556440"
 ---
-# <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
+# <a name="no-locxamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 [이전 문서](basic-bindings.md)에서는 **Alternative Code Binding**(대체 코드 바인딩)과 **Alternative XAML Binding**(대체 XAML 바인딩) 페이지에 `Scale` 속성이 있는 `Label`이 `Slider`의 `Value`에 바인딩되는 것을 설명했습니다. `Slider` 초기 값이 0이라서 `Label`의 `Scale` 속성이 1이 아닌 0으로 설정되어 `Label`이 사라졌습니다.
 
-[**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **Reverse Binding**(역방향 바인딩) 페이지는 이전 문서의 프로그램과 유사하며, 데이터 바인딩이 `Label`에 정의되지 않고 `Slider`에 정의되는 것만 다릅니다.
+[**DataBindingDemos**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **Reverse Binding**(역방향 바인딩) 페이지는 이전 문서의 프로그램과 유사하며, 데이터 바인딩이 `Label`에 정의되지 않고 `Slider`에 정의되는 것만 다릅니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -686,5 +686,5 @@ public partial class SampleSettingsPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -9,14 +9,14 @@ ms.date: 03/13/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f54c31afef691d316cbc3108792ab3158359c47c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4a671be5f65e0e35c89f4acec17f406a214b9fa9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802321"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434619"
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
+# <a name="no-locxamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
 **Geolocation** 클래스는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
 
@@ -238,7 +238,7 @@ iOS에서 [고도](https://developer.apple.com/documentation/corelocation/clloca
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-UWP에서 고도는 미터 단위로 반환됩니다. 자세한 내용은 [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) 문서를 참조하세요.
+UWP에서 고도는 미터 단위로 반환됩니다. 자세한 내용은 [AltitudeReferenceSystem](/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) 문서를 참조하세요.
 
 -----
 

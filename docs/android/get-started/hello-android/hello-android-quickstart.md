@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: ab401c24fc486ba69fe01aff76e1a9b7d53122d0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da074d5df9033e4a86c4b38ca76d7cb1373ab205
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028026"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455211"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -535,4 +535,4 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin Android 앱 아이콘(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+- [Phoneword(샘플)](/samples/xamarin/monodroid-samples/phoneword)

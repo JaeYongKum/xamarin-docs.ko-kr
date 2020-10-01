@@ -10,12 +10,12 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a414127c01d26db6bf7b462d6fc5a7f9ae44dddc
-ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
+ms.openlocfilehash: e1d2a443a6005050c518e21e4e0f2df64c2aab0c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832282"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562628"
 ---
 # <a name="no-locxamarinforms-dual-screen"></a>Xamarin.Forms 이중 화면
 
@@ -49,7 +49,7 @@ Xamarin.Forms 앱에 이중 화면 기능을 추가하려면 다음 단계를 �
 
 `DualScreenInfo` 클래스 또는 `TwoPaneView` 레이아웃이 예상대로 작동하지 않는 경우 이 페이지의 설정 지침을 다시 확인하세요. `Init` 메서드나 `ConfigurationChanges` 특성 값을 생략하거나 잘못 구성하는 것이 오류의 일반적인 원인입니다.
 
-추가 지침 및 참조 구현에 대한 자세한 내용은 [Xamarin.Forms 이중 화면 샘플](https://docs.microsoft.com/dual-screen/xamarin/samples)을 검토하세요.
+추가 지침 및 참조 구현에 대한 자세한 내용은 [Xamarin.Forms 이중 화면 샘플](/dual-screen/xamarin/samples)을 검토하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -60,4 +60,4 @@ NuGet을 추가한 후에는 다음 지침에 따라 앱에 이중 화면 기능
 - [DualScreenInfo 도우미 클래스](dual-screen-info.md) - `DualScreenInfo` 클래스를 사용하면 보기가 표시된 창과 그 크기, 디바이스의 방향, 힌지 각도 등을 확인할 수 있습니다.
 - [이중 화면 트리거](triggers.md) - [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) 네임스페이스에는 연결된 레이아웃 또는 창의 보기 모드가 변경될 때 [`VisualState`](xref:Xamarin.Forms.VisualState) 변경을 트리거하는 두 개의 상태 트리거가 포함되어 있습니다.
 
-자세한 내용은 [이중 화면 개발자 문서](https://docs.microsoft.com/dual-screen/)를 참조하세요.
+자세한 내용은 [이중 화면 개발자 문서](/dual-screen/)를 참조하세요.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2020
-ms.openlocfilehash: 0aafe01fcbde6cf1aacf3e2dd47444d4b77021e2
-ms.sourcegitcommit: 79ba3deb031c8a60d0841bb3dbeaaf65daf2b224
+ms.openlocfilehash: 0c10e73d8d6c2dcafacbb069eaf905a227030b87
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85846384"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557532"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Xamarin.Forms 다중 바인딩
 
@@ -273,7 +273,7 @@ Xamarin.Forms의 문자열 서식 지정에 대한 자세한 정보는 [Xamarin.
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 문자열 서식 지정](string-formatting.md)
 - [Xamarin.Forms 바인딩 대체](binding-fallbacks.md)
 - [Xamarin.Forms 상대 바인딩](relative-bindings.md)

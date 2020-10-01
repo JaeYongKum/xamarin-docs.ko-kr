@@ -10,14 +10,14 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c234af1a5d47446149c92a71e9ce592dc0366b8f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0110fa7c348c4facaf60cd261c8a584904aa0b8e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937464"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563070"
 ---
-# <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
+# <a name="no-locxamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
@@ -238,6 +238,6 @@ public class MainPageCS : CarouselPage
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 종류](~/xamarin-forms/user-interface/controls/pages.md)
-- [CarouselPage(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
-- [CarouselPageTemplate(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate)
+- [CarouselPage(샘플)](/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
+- [CarouselPageTemplate(샘플)](/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate)
 - [CarouselPage](xref:Xamarin.Forms.CarouselPage)

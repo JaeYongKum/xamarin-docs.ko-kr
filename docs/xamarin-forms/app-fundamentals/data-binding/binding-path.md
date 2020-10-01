@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 바인딩 경로” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 바인딩 클래스의 경로 속성에서 하위 속성 및 컬렉션 멤버에 액세스하는 방법에 대해 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 바인딩 경로
+description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 바인딩 클래스의 경로 속성에서 하위 속성 및 컬렉션 멤버에 액세스하는 방법에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0ac8a568c3e8c46fa7e53112461aa0bff5684ae
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 154219f58c22005de0a0a2171aeedd04ec9f9ff9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570793"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557961"
 ---
-# <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
+# <a name="no-locxamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -168,5 +168,5 @@ Xamarin.Forms에서 바인딩 경로를 처리하면 경로의 개체에 `Proper
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

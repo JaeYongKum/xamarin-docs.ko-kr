@@ -8,14 +8,14 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e86ebcd55f3a36da1ad5c7c13bb50e7fc9094010
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: c4437f05eddd6885f88fc57ddc108f4fc9f4376d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226809"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433531"
 ---
-# <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
+# <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
 **WebAuthenticator** 클래스를 사용하면 앱에 등록된 특정 URL에 대한 콜백을 수신 대기하는 브라우저 기반 흐름을 시작할 수 있습니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "86226809"
 
 많은 앱에서 사용자 인증 추가가 필요하며, 이는 흔히 사용자가 기존 Microsoft, Facebook, Google 그리고 이제 Apple 로그인 계정에 로그인할 수 있게 된다는 의미입니다.
 
-[MSAL(Microsoft 인증 라이브러리)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview)은 앱에 인증을 추가하는 뛰어난 턴 키 솔루션을 제공합니다. 클라이언트 NuGet 패키지에서 Xamarin 앱을 지원하기도 합니다.
+[MSAL(Microsoft 인증 라이브러리)](/azure/active-directory/develop/msal-overview)은 앱에 인증을 추가하는 뛰어난 턴 키 솔루션을 제공합니다. 클라이언트 NuGet 패키지에서 Xamarin 앱을 지원하기도 합니다.
 
 자체 웹 서비스를 인증에 사용하는 데 관심이 있는 경우 **WebAuthenticator**를 사용하여 클라이언트 쪽 기능을 구현할 수 있습니다.
 
@@ -153,7 +153,7 @@ UWP에서는 `WebAuthenticationBroker`가 지원되는 경우 사용되고, 그�
 
 [Apple 검토 지침](https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple)에 따라 앱에서 소셜 로그인 서비스를 사용하여 인증하는 경우에는 Apple 로그인도 옵션으로 제공해야 합니다.
 
-앱에 Apple 로그인을 추가하려면 먼저 [Apple 로그인을 사용하도록 앱을 구성](https://docs.microsoft.com/xamarin/ios/platform/ios13/sign-in)해야 합니다.
+앱에 Apple 로그인을 추가하려면 먼저 [Apple 로그인을 사용하도록 앱을 구성](../ios/platform/ios13/sign-in.md)해야 합니다.
 
 iOS 13 이상에서는 `AppleSignInAuthenticator.AuthenticateAsync()` 메서드를 호출하는 것이 좋습니다. 이렇게 하면 내부에서 네이티브 Apple 로그인 API를 사용하여 사용자가 이러한 디바이스에서 최상의 환경을 얻을 수 있습니다. 다음과 같이 런타임에 적절한 API를 사용하는 공유 코드를 작성할 수 있습니다.
 
@@ -190,7 +190,7 @@ var accessToken = r?.AccessToken;
 
 모든 웹 백 엔드 서비스에서 `WebAuthenticator` API를 사용할 수 있습니다.  ASP.NET Core 앱에서 사용하려면 먼저 다음 단계를 사용하여 웹앱을 구성해야 합니다.
 
-1. ASP.NET Core 웹앱에 원하는 [외부 소셜 인증 공급자](https://docs.microsoft.com/aspnet/core/security/authentication/social/?view=aspnetcore-3.1&tabs=visual-studio)를 설치합니다.
+1. ASP.NET Core 웹앱에 원하는 [외부 소셜 인증 공급자](/aspnet/core/security/authentication/social/?tabs=visual-studio&view=aspnetcore-3.1)를 설치합니다.
 2. `.AddAuthentication()` 호출에서 기본 인증 체계를 `CookieAuthenticationDefaults.AuthenticationScheme`으로 설정합니다.
 3. Startup.cs `.AddAuthentication()` 호출에서 `.AddCookie()`를 사용합니다.
 4. `.SaveTokens = true;`를 사용하여 모든 공급자를 구성해야 합니다.

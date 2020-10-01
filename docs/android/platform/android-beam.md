@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: aab121ed5f811baf38eed48cf891ccdf076eaf44
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8132be3e709e6cfe519934ce6c16ae16ac7054c6
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76723814"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454223"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -72,10 +72,10 @@ IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMes
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-아래 스크린샷에서 실행 중으로 표시되는 Android Beam을 사용하는 전체 코드 예제는 샘플 갤러리에서 [Android Beam 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)를 참조하세요.
+아래 스크린샷에서 실행 중으로 표시되는 Android Beam을 사용하는 전체 코드 예제는 샘플 갤러리에서 [Android Beam 데모](/samples/xamarin/monodroid-samples/androidbeamdemo)를 참조하세요.
 
 [![Android Beam 데모 예제 스크린샷](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android Beam 데모(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
+- [Android Beam 데모(샘플)](/samples/xamarin/monodroid-samples/androidbeamdemo)

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: b937cc653275f509b7f759af5c3d995e84381cb2
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 94bb87e10b8cab2a9a37c7701b59d621f6329b8d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997347"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436185"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
@@ -26,7 +26,7 @@ ms.locfileid: "86997347"
 
 ## <a name="requirements"></a>요구 사항
 
-이 가이드는 Hello, iOS 문서가 중단된 곳에서 다시 시작하고 [Hello, iOS 빠른 시작](~/ios/get-started/hello-ios/index.md)의 완료가 필요합니다. 전체 버전의 Phoneword 앱을 [Hello, iOS 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)에서 다운로드합니다.
+이 가이드는 Hello, iOS 문서가 중단된 곳에서 다시 시작하고 [Hello, iOS 빠른 시작](~/ios/get-started/hello-ios/index.md)의 완료가 필요합니다. 전체 버전의 Phoneword 앱을 [Hello, iOS 샘플](/samples/xamarin/ios-samples/hello-ios)에서 다운로드합니다.
 
 ::: zone pivot="macos"
 
@@ -34,7 +34,7 @@ ms.locfileid: "86997347"
 
 이 연습에서는 **Phoneword** 애플리케이션에 통화 기록 화면을 추가합니다.
 
-1. Mac용 Visual Studio에서 **Phoneword** 애플리케이션을 엽니다. 필요한 경우 [Hello, iOS 연습](~/ios/get-started/hello-ios/index.md) 가이드의 완료된 Phoneword 애플리케이션을 [여기](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)에서 다운로드할 수 있습니다.
+1. Mac용 Visual Studio에서 **Phoneword** 애플리케이션을 엽니다. 필요한 경우 [Hello, iOS 연습](~/ios/get-started/hello-ios/index.md) 가이드의 완료된 Phoneword 애플리케이션을 [여기](/samples/xamarin/ios-samples/hello-ios)에서 다운로드할 수 있습니다.
 
 2. **Solution Pad**에서 **Main.storyboard** 파일을 엽니다.
 
@@ -275,7 +275,7 @@ ms.locfileid: "86997347"
 
 이 연습에서는 **Phoneword** 애플리케이션에 통화 기록 화면을 추가합니다.
 
-1. Visual Studio에서 **Phoneword** 애플리케이션을 엽니다. 필요한 경우 [Hello, iOS 연습](~/ios/get-started/hello-ios/index.md) 가이드에서 [완료된 Phoneword 애플리케이션](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)을 다운로드합니다. iOS 디자이너 및 iOS 시뮬레이터를 사용하도록 [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)에 연결해야 합니다.
+1. Visual Studio에서 **Phoneword** 애플리케이션을 엽니다. 필요한 경우 [Hello, iOS 연습](~/ios/get-started/hello-ios/index.md) 가이드에서 [완료된 Phoneword 애플리케이션](/samples/xamarin/ios-samples/hello-ios)을 다운로드합니다. iOS 디자이너 및 iOS 시뮬레이터를 사용하도록 [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)에 연결해야 합니다.
 
 2. 사용자 인터페이스를 편집하여 시작합니다. **다른 이름으로 보기**가 _iPhone 6_으로 설정되었는지 확인하여 **솔루션 탐색기**에서 **Main.storyboard** 파일을 엽니다.
 
@@ -517,6 +517,6 @@ ms.locfileid: "86997347"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS(샘플)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

@@ -10,14 +10,14 @@ ms.date: 10/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47b459945aec4ef8f1c3fa9729efd82461aec0e0
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138855"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561965"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능한 RoundEffect
+# <a name="no-locxamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능한 RoundEffect
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
@@ -224,6 +224,6 @@ image.Effects.Add(new RoundEffect());
 
 ## <a name="related-links"></a>관련 링크
 
-- [RoundEffect 샘플 애플리케이션](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [RoundEffect 샘플 애플리케이션](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 - [효과 소개](~/xamarin-forms/app-fundamentals/effects/introduction.md)
 - [효과 만들기](~/xamarin-forms/app-fundamentals/effects/creating.md)

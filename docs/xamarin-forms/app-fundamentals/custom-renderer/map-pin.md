@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 13d9ddb5ba13960b4ed5af8f4fdb98b486b7e93e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935722"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562277"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -650,11 +650,11 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 이 메서드는 웹 브라우저를 열고 `CustomPin` 인스턴스의 `Url` 속성에 저장된 주소로 이동합니다. .NET Standard 라이브러리 프로젝트에서 `CustomPin` 컬렉션을 만들 때 주소가 정의되었습니다.
 
-`MapControl` 인스턴스 사용자 지정에 대한 자세한 내용은 MSDN의 [맵 및 위치 개요](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx)를 참조하세요.
+`MapControl` 인스턴스 사용자 지정에 대한 자세한 내용은 MSDN의 [맵 및 위치 개요](/windows/uwp/maps-and-location/)를 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 - [맵 컨트롤](~/xamarin-forms/user-interface/map/index.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)
-- [사용자 지정된 Pin(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+- [사용자 지정된 Pin(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

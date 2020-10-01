@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 6f192e9171a9da2e2ef7e0478b5bb6838676faee
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019881"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453443"
 ---
 # <a name="android-pie-features"></a>Android Pie 기능
 
@@ -24,7 +24,7 @@ _Xamarin.Android를 사용하여 Android 9 Pie용 앱 개발을 시작하는 방
 
 이 문서는 Android Pie용 Xamarin.Android 앱 개발을 시작하는 데 도움이 되도록 구성되었습니다. 필요한 업데이트를 설치하고, SDK를 구성하고, 테스트할 에뮬레이터 또는 디바이스를 준비하는 방법을 설명합니다. 또한 Android Pie의 새로운 기능에 대한 개요를 제공하고 주요 Android Pie 기능 중 일부를 사용하는 방법을 보여주는 예제 소스 코드를 제공합니다.
 
-Xamarin.Android 9.0은 Android Pie를 지원합니다. Android Pie에 대한 Xamarin.Android 지원에 대한 자세한 내용은 [Android P 개발자 미리 보기 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1)릴리즈 정보를 참조하세요.
+Xamarin.Android 9.0은 Android Pie를 지원합니다. Android Pie에 대한 Xamarin.Android 지원에 대한 자세한 내용은 [Android P 개발자 미리 보기 3](/xamarin/android/release-notes/9/9.0/#android-p-dp1)릴리즈 정보를 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -43,7 +43,7 @@ Xamarin 기반 앱에서 Android Pie 기능을 사용하려면 다음 목록이 
 
 Xamarin.Android를 사용하여 Android Pie 앱 개발을 시작하려면 첫 번째 Android Pie 프로젝트를 만들기 전에 최신 도구 및 SDK 패키지를 다운로드하여 설치해야 합니다.
 
-1. Visual Studio 2019를 사용하는 것이 좋습니다. Visual Studio 2017을 사용하는 경우 [Visual Studio 2017 버전 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상으로 업데이트합니다. Mac용 Visual Studio를 사용하는 경우 [Mac용 Visual Studio 2017 버전 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상으로 업데이트합니다.
+1. Visual Studio 2019를 사용하는 것이 좋습니다. Visual Studio 2017을 사용하는 경우 [Visual Studio 2017 버전 15.8](/visualstudio/releasenotes/vs2017-relnotes) 이상으로 업데이트합니다. Mac용 Visual Studio를 사용하는 경우 [Mac용 Visual Studio 2017 버전 7.6](/visualstudio/releasenotes/vs2017-relnotes) 이상으로 업데이트합니다.
 
 2. SDK 관리자를 통해 **Android Pie(API 28)** 패키지 및 도구를 설치합니다.
 
@@ -57,7 +57,7 @@ Xamarin.Android를 사용하여 Android Pie 앱 개발을 시작하려면 첫 �
 
 Xamarin을 사용하여 Android Pie 앱을 빌드하려면 Visual Studio 2019를 사용하는 것이 좋습니다.
 
-Visual Studio 2017을 사용하는 경우 Visual Studio 2017 버전 15.8 이상으로 업데이트합니다. 자세한 내용은 [Visual Studio 2017을 최신 릴리스로 업데이트](https://docs.microsoft.com/visualstudio/install/update-visual-studio)를 참조하세요. macOS에서 Mac용 Visual Studio 2017 7.6 이상으로 업데이트합니다. 자세한 내용은 [Mac용 Visual Studio 설정 및 설치](https://docs.microsoft.com/visualstudio/mac/installation)를 참조하세요.
+Visual Studio 2017을 사용하는 경우 Visual Studio 2017 버전 15.8 이상으로 업데이트합니다. 자세한 내용은 [Visual Studio 2017을 최신 릴리스로 업데이트](/visualstudio/install/update-visual-studio)를 참조하세요. macOS에서 Mac용 Visual Studio 2017 7.6 이상으로 업데이트합니다. 자세한 내용은 [Mac용 Visual Studio 설정 및 설치](/visualstudio/mac/installation)를 참조하세요.
 
 ### <a name="install-the-android-sdk"></a>Android SDK 설치
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: af926b518c55bd0d6c73180e512dd669e93778f7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: d75ec48bf9736297c31e0bb5af5a71de4332c66b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853057"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454275"
 ---
 # <a name="walkthrough-bind-an-android-kotlin-library"></a>연습: Android Kotlin 라이브러리 바인딩
 
@@ -27,7 +27,7 @@ Android 플랫폼은 최근에 도입된 Kotlin 언어를 비롯한 기본 언�
 
 ## <a name="background"></a>배경
 
-Kotlin은 2016년 2월에 출시되었으며 2017년까지 표준 Java 컴파일러의 대안으로 Android Studio에 포함되도록 포지셔닝되었습니다. 2019년 말에 Google은 Kotlin 프로그래밍 언어가 Android 앱 개발자들의 기본 언어가 될 것이라고 발표했습니다. 대략적인 바인딩 방법은 [일반적인 Java 라이브러리의 바인딩 프로세스](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)와 비슷하지만, Kotlin에만 해당하는 몇 가지 중요한 단계가 있습니다.
+Kotlin은 2016년 2월에 출시되었으며 2017년까지 표준 Java 컴파일러의 대안으로 Android Studio에 포함되도록 포지셔닝되었습니다. 2019년 말에 Google은 Kotlin 프로그래밍 언어가 Android 앱 개발자들의 기본 언어가 될 것이라고 발표했습니다. 대략적인 바인딩 방법은 [일반적인 Java 라이브러리의 바인딩 프로세스](../binding-java-library/index.md)와 비슷하지만, Kotlin에만 해당하는 몇 가지 중요한 단계가 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -103,7 +103,7 @@ AAR 파일은 컴파일된 Kotlin 소스 코드 및 자산을 포함하는 Andro
 
 두 번째 단계는 Xamarin.Android에서 해당 C# 클래스를 생성하는 데 사용할 메타데이터 변환 파일을 준비하는 것입니다. Xamarin.Android 바인딩 프로젝트는 지정된 Android 보관 스토리지 계층의 모든 네이티브 클래스 및 멤버를 검색한 다음, 적절한 메타데이터를 사용하여 XML 파일을 생성합니다. 그러면 수동으로 만든 메타데이터 변환 파일이 이전에 생성된 기준에 적용되어 C# 코드를 생성하는 데 사용되는 최종 XML 정의 파일이 만들어집니다.
 
-메타데이터는  [XPath](https://www.w3.org/TR/xpath/)  구문을 사용하며, 바인딩 생성기에서 바인딩 어셈블리 생성에 영향을 주는 데 사용됩니다. [Java 바인딩 메타데이터](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) 문서에서는 다음과 같이 적용할 수 있는 변환에 대한 자세한 정보를 제공합니다.
+메타데이터는  [XPath](https://www.w3.org/TR/xpath/)  구문을 사용하며, 바인딩 생성기에서 바인딩 어셈블리 생성에 영향을 주는 데 사용됩니다. [Java 바인딩 메타데이터](../binding-java-library/customizing-bindings/java-bindings-metadata.md) 문서에서는 다음과 같이 적용할 수 있는 변환에 대한 자세한 정보를 제공합니다.
 
 1. 빈 **Metadata.xml** 파일 만들기:
 
@@ -198,7 +198,7 @@ AAR 파일은 컴파일된 Kotlin 소스 코드 및 자산을 포함하는 Andro
     Java 및 Kotlin 제네릭은 Xamarin.Android 바인딩에서 지원되지 않으므로 제네릭 API에 액세스하는 일반화된 C# 메서드가 만들어집니다. 해결 방법으로 래퍼 Kotlin 라이브러리를 만들고, 제네릭 없이 강력한 형식 방법으로 필요한 API를 노출할 수 있습니다. 또는 강력한 형식 API를 통해 동일한 방법으로 이슈를 해결하는 도우미를 C# 쪽에서 만들 수 있습니다.
 
     > [!TIP]
-    > 메타데이터를 변환하면 모든 변경 내용을 생성된 바인딩에 적용할 수 있습니다. [바인딩 Java 라이브러리](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) 문서에서는 메타데이터를 생성하고 처리하는 방법을 자세히 설명합니다.
+    > 메타데이터를 변환하면 모든 변경 내용을 생성된 바인딩에 적용할 수 있습니다. [바인딩 Java 라이브러리](../binding-java-library/index.md) 문서에서는 메타데이터를 생성하고 처리하는 방법을 자세히 설명합니다.
 
 ## <a name="build-a-binding-library"></a>바인딩 라이브러리 빌드
 
@@ -342,8 +342,8 @@ AAR 파일은 컴파일된 Kotlin 소스 코드 및 자산을 포함하는 Andro
 - [Mac용 Visual Studio](https://visualstudio.microsoft.com/downloads)
 - [Java 디컴파일러](http://java-decompiler.github.io/)
 - [BubblePicker Kotlin 라이브러리](https://github.com/igalata/Bubble-Picker)
-- [Java 라이브러리 바인딩](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Java 라이브러리 바인딩](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Java 바인딩 메타데이터](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Java 바인딩 메타데이터](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [샘플 프로젝트 리포지토리](https://github.com/alexeystrakh/xamarin-binding-kotlin-framework)

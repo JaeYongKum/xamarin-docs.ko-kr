@@ -5,12 +5,12 @@ description: Xamarin 및 C#를 사용하여 플랫폼 간 C/C++ 코드를 빌드
 author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
-ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 80878ec36eb319ff6c798788493469793efdcf56
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73842815"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457993"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Xamarin에서 C/C++ 라이브러리 사용
 
@@ -18,7 +18,7 @@ ms.locfileid: "73842815"
 
 Xamarin을 통해 개발자는 Visual Studio를 사용하여 플랫폼 간 네이티브 모바일 앱을 만들 수 있습니다. 일반적으로 C# 바인딩은 기존 플랫폼 구성 요소를 개발자에게 노출하는 데 사용됩니다. 그러나 Xamarin 앱에서 기존 코드베이스를 사용해야 하는 경우도 있습니다. 때로는 팀이 잘 테스트되고 최적화된 대규모 코드베이스를 C#로 이식할 시간, 예산 또는 리소스가 없는 경우가 있습니다.
 
-[플랫폼 간 모바일 개발용 Visual C++](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development)를 사용하면 C/C++ 및 C# 코드를 동일한 솔루션의 일부로 작성하여 통합된 디버깅 환경을 비롯한 다양한 이점을 제공할 수 있습니다. Microsoft는 이러한 방식으로C/C++ 및 Xamarin을 사용하여 [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) 및 [Pix Camera](https://www.microsoft.com/microsoftpix)같은 앱을 제공했습니다.
+[플랫폼 간 모바일 개발용 Visual C++](/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development)를 사용하면 C/C++ 및 C# 코드를 동일한 솔루션의 일부로 작성하여 통합된 디버깅 환경을 비롯한 다양한 이점을 제공할 수 있습니다. Microsoft는 이러한 방식으로C/C++ 및 Xamarin을 사용하여 [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) 및 [Pix Camera](https://www.microsoft.com/microsoftpix)같은 앱을 제공했습니다.
 
 그러나 경우에 따라 기존 C/C++ 도구 및 프로세스를 그대로 유지하고 라이브러리 코드를 애플리케이션에서 분리하여 타사 구성 요소인 것처럼 라이브러리를 처리해야 할 수도 있습니다. 이러한 상황에서는 관련 멤버를 C#에 노출하는 것뿐 아니라 라이브러리를 종속성으로 관리하는 것도 어려운 과제입니다. 물론 이 프로세스를 최대한 자동화할 수 있습니다.  
 
@@ -30,7 +30,7 @@ C/C++ 는 플랫폼 간 언어로 간주되지만, 모든 대상 컴파일러에
 
 궁극적으로 코드는 모든 대상 플랫폼에서 성공적으로 컴파일되고 실행되어야 하므로 이는 대상으로 지정되는 플랫폼(및 컴파일러)의 공통성으로 귀결됩니다. 컴파일러 간의 사소한 차이로 인해 문제가 발생할 수 있으며, 따라서 각 대상 플랫폼에 대한 철저 한 테스트(가능하면 자동화)가 점차 중요해지고 있습니다.  
 
-## <a name="high-level-approach"></a>상위 수준 접근 방식
+## <a name="high-level-approach"></a>개략적인 접근법
 
 아래 그림은 C/C++ 소스 코드를 NuGet을 통해 공유되어 Xamarin.Forms 앱에서 사용되는 플랫폼 간 Xamarin 라이브러리로 변환하는 데 사용되는 방법을 네 가지 단계로 보여 줍니다.
 
@@ -77,11 +77,11 @@ C/C++ 는 플랫폼 간 언어로 간주되지만, 모든 대상 컴파일러에
 
 제공된 단계는 **Mac용 Visual Studio**에만 적용되지만, 구조는 **Visual Studio 2017**에서도 유효합니다.
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 계속하려면 다음이 필요합니다.
 
-- [NuGet CLI(명령줄)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [NuGet CLI(명령줄)](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
 - [*Mac용* *Visual Studio*](https://visualstudio.microsoft.com/downloads)
 
@@ -90,7 +90,7 @@ C/C++ 는 플랫폼 간 언어로 간주되지만, 모든 대상 컴파일러에
 
 ## <a name="creating-the-native-libraries-stage-1"></a>네이티브 라이브러리 만들기(1단계)
 
-네이티브 라이브러리 기능은 [연습: 정적 라이브러리 만들기 및 사용(C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)의 예제를 기반으로 합니다.
+네이티브 라이브러리 기능은 [연습: 정적 라이브러리 만들기 및 사용(C++)](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)의 예제를 기반으로 합니다.
 
 이 시나리오에서는 라이브러리가 타사 종속성으로 제공되기 때문에 이 연습에서 네이티브 라이브러리를 빌드하는 첫 번째 단계를 건너뜁니다. 미리 컴파일된 네이티브 라이브러리는 [샘플 코드](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin)에 포함되어 있거나 직접 [다운로드](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts)할 수 있습니다.
 
@@ -189,7 +189,7 @@ extern "C" {
 
 1. **MathFuncs.Android** 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 폴더**를 선택하고 이름을 **libs**로 지정합니다.
 
-2. 각 **ABI**(애플리케이션 이진 인터페이스)에 대해, **libs** 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 폴더**를 선택하고 각 **ABI**를 따라 이름을 지정합니다. 이 경우:
+2. 각 **ABI**(애플리케이션 이진 인터페이스)에 대해, **libs** 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 폴더**를 선택하고 각 **ABI**를 따라 이름을 지정합니다. 이 경우 다음과 같습니다.
 
     - arm64-v8a
     - armeabi-v7a
@@ -250,7 +250,7 @@ extern "C" {
     - Smart Link
 
     > [!NOTE]
-    > [네이티브 참조](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references)와 함께 바인딩 라이브러리 프로젝트 형식을 사용하여 정적 라이브러리를 포함하고 이를 참조하는 Xamarin.iOS 앱과 자동으로 연결되도록 할 수 있습니다(NuGet 패키지를 통해 포함된 경우에도).
+    > [네이티브 참조](../macios/native-references.md)와 함께 바인딩 라이브러리 프로젝트 형식을 사용하여 정적 라이브러리를 포함하고 이를 참조하는 Xamarin.iOS 앱과 자동으로 연결되도록 할 수 있습니다(NuGet 패키지를 통해 포함된 경우에도).
 
 5. **ApiDefinition.cs**를 열고 템플릿 기반 주석 처리된 코드를 삭제한 다음(`MathFuncs` 네임스페이스만 남겨 둠) **Structs.cs**에 대해 동일한 단계를 수행합니다. 
 
@@ -289,7 +289,7 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > [SafeHandle](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2)은 관리 코드에서 관리되지 않는 리소스로 작업하는 데 선호되는 방법입니다. 이는 중요한 종료 및 개체 수명 주기와 관련된 많은 상용구 코드를 추상화합니다. 이 핸들의 소유자는 나중에 이 핸들을 다른 관리되는 리소스처럼 취급할 수 있으며 전체 [삭제 가능한 패턴](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)을 구현할 필요가 없습니다. 
+    > [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2)은 관리 코드에서 관리되지 않는 리소스로 작업하는 데 선호되는 방법입니다. 이는 중요한 종료 및 개체 수명 주기와 관련된 많은 상용구 코드를 추상화합니다. 이 핸들의 소유자는 나중에 이 핸들을 다른 관리되는 리소스처럼 취급할 수 있으며 전체 [삭제 가능한 패턴](/dotnet/standard/garbage-collection/implementing-dispose)을 구현할 필요가 없습니다. 
 
 #### <a name="creating-the-internal-wrapper-class"></a>내부 래퍼 클래스 만들기
 
@@ -480,7 +480,7 @@ NuGet을 통해 라이브러리를 패키지하고 배포하기 위해 솔루션
 1. 솔루션 **MathFuncs**를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **솔루션 폴더 추가**를 선택하여 이름을 **SolutionItems**로 지정합니다.
 2. **SolutionItems** 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 파일...** 을 선택합니다.
 3. **새 파일** 창에서 **빈 XML 파일**을 선택하고 이름을 **MathFuncs.nuspec**으로 지정한 다음 **새로 만들기**를 클릭합니다.
-4. **NuGet** 소비자에게 표시되는 기본 패키지 메타데이터를 사용하여 **MathFuncs.nuspec**을 업데이트합니다. 예를 들어:
+4. **NuGet** 소비자에게 표시되는 기본 패키지 메타데이터를 사용하여 **MathFuncs.nuspec**을 업데이트합니다. 예를 들면 다음과 같습니다.
 
     ```xml
     <?xml version="1.0"?>
@@ -497,7 +497,7 @@ NuGet을 통해 라이브러리를 패키지하고 배포하기 위해 솔루션
     ```
 
     > [!NOTE]
-    > 이 매니페스트에 사용된 스키마에 대한 자세한 내용은 [nuspec 참조](https://docs.microsoft.com/nuget/reference/nuspec) 문서를 참조하세요.
+    > 이 매니페스트에 사용된 스키마에 대한 자세한 내용은 [nuspec 참조](/nuget/reference/nuspec) 문서를 참조하세요.
 
 5. `<files>` 요소를 `<package>` 요소의 자식으로 추가하여(`<metadata>` 바로 아래) 별도의 `<file>` 요소를 사용해 각 파일을 식별합니다.
 
@@ -588,7 +588,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 1. **빌드 구성**을 **릴리스**로 설정하고 **COMMAND + B**를 사용하여 빌드를 실행합니다.
 2. **터미널**을 열고 디렉터리를 **nuspec** 파일이 포함된 폴더로 변경합니다.
-3. **터미널**에서 **nuspec** 파일, **버전**(예: 1.0.0), **OutputDirectory**([이전 단계](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed)에서 만든 폴더, 즉 **local-nuget-feed**를 사용)를 지정하여 **nuget pack** 명령을 실행합니다. 예를 들어:
+3. **터미널**에서 **nuspec** 파일, **버전**(예: 1.0.0), **OutputDirectory**([이전 단계](#preparing-a-local-packages-directory)에서 만든 폴더, 즉 **local-nuget-feed**를 사용)를 지정하여 **nuget pack** 명령을 실행합니다. 예를 들면 다음과 같습니다.
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
@@ -598,9 +598,9 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 ### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>[선택 사항] Azure DevOps에서 비공개 NuGet 피드 사용
 
-[Azure DevOps에서 NuGet 패키지 시작](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package)에 보다 강력한 기법이 설명되어 있습니다. 여기서는 비공개 피드를 만들고 패키지(이전 단계에서 생성됨)를 해당 피드에 푸시하는 방법을 보여 줍니다.
+[Azure DevOps에서 NuGet 패키지 시작](/azure/devops/artifacts/get-started-nuget?tabs=new-nav&view=vsts#publish-a-package)에 보다 강력한 기법이 설명되어 있습니다. 여기서는 비공개 피드를 만들고 패키지(이전 단계에서 생성됨)를 해당 피드에 푸시하는 방법을 보여 줍니다.
 
-예를 들어 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts)를 사용하여 이 워크플로를 완전히 자동화하는 것이 이상적입니다. 자세한 내용은 [Azure Pipelines 시작](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts)을 참조하세요.
+예를 들어 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)를 사용하여 이 워크플로를 완전히 자동화하는 것이 이상적입니다. 자세한 내용은 [Azure Pipelines 시작](/azure/devops/pipelines/get-started/index?view=vsts)을 참조하세요.
 
 ## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Xamarin.Forms 앱에서 .NET 래퍼 사용
 
@@ -763,14 +763,14 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 ### <a name="downloads"></a>다운로드
 
-- [NuGet CLI(명령줄 ) 도구](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [NuGet CLI(명령줄 ) 도구](/nuget/tools/nuget-exe-cli-reference#macoslinux)
 - [Visual Studio](https://visualstudio.microsoft.com/vs)
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 - [C++를 사용한 Hyperlapse 플랫폼 간 모바일 개발](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
 - [Microsoft Pix(C++ 및 Xamarin)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
-- [Mono San Angeles 샘플 포트](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk/)
+- [Mono San Angeles 샘플 포트](/samples/xamarin/monodroid-samples/sanangeles-ndk/)
 
 ### <a name="further-reading"></a>추가 정보
 

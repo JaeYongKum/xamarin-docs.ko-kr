@@ -13,14 +13,14 @@ ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d1670506fa78b39825368fc91d2452a44ddf8f03
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8bfa78ef334829ab228d691368ec44ac71d415ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939921"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433519"
 ---
-# <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
+# <a name="no-locxamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
 
 [Xamarin.Forms 빠른 시작](~/get-started/index.yml)에서 Notes 애플리케이션이 빌드되었습니다. 이 문서에서는 Xamarin.Forms 애플리케이션의 핵심 작동 원리를 이해하기 위해 빌드된 결과물을 검토합니다.
 
@@ -39,7 +39,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 - Notes.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 애플리케이션의 진입점입니다.
 - Notes.UWP - 이 프로젝트는 UWP(유니버설 Windows 플랫폼) 관련 코드를 보관하며 UWP 애플리케이션의 진입점입니다.
 
-## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 애플리케이션 분석
+## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Xamarin.Forms 애플리케이션 분석
 
 다음 스크린샷은 Visual Studio의 Notes .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
 
@@ -65,7 +65,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 - Notes.Android - 이 프로젝트는 Android 관련 코드를 보관하며 Android 애플리케이션의 진입점입니다.
 - Notes.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 애플리케이션의 진입점입니다.
 
-## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 애플리케이션 분석
+## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Xamarin.Forms 애플리케이션 분석
 
 다음 스크린샷은 Mac용 Visual Studio의 Notes .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
 
@@ -540,8 +540,8 @@ Visual Studio와 Mac용 Visual Studio는 애플리케이션을 테스트하고 �
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [시작 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
+- [Xamarin.Forms 샘플](/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [시작 샘플](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted)
 - [Xamarin.Forms API 참조](xref:Xamarin.Forms)
 - [무료 학습(비디오)](https://university.xamarin.com/self-guided/)
 

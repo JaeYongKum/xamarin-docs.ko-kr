@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 173af9638f4e7b2da39a89dd745ec53f54cf6c39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4ba1daeb94706efc9d27136c6bd4b4d13e774689
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937568"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437205"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -26,7 +26,7 @@ Objective-C 코드와 통신하는 하위 수준 런타임은 [MonoTouch.ObjCRun
 
 다음은 Xamarin.iOS 바인딩에 대한 몇 가지 디자인 원칙입니다(이는 Xamarin.Mac에도 적용되며, macOS에서는 Objective-C에 대한 Mono 바인딩입니다).
 
-- [프레임워크 디자인 지침](https://docs.microsoft.com/dotnet/standard/design-guidelines) 준수
+- [프레임워크 디자인 지침](/dotnet/standard/design-guidelines) 준수
 - 개발자가 Objective-C 클래스를 서브클래싱하도록 허용.
 
   - 기존 클래스에서 파생
@@ -665,7 +665,7 @@ Xamarin.iOS에는 더 이상 사용되지 않는 리소스를 해제하는 데 �
 
 `IDisposable` 인터페이스를 공개하는 것은 개발자가 큰 메모리 블록(예를 들어 `UIImage`는 위험성이 없는 포인터로 보일 수 있지만 2MB 이미지를 가리킬 수 있음)과 기타 중요하고 한정된 리소스(예: 비디오 디코딩 버퍼)의 큰 블록을 캡슐화할 수 있는 개체를 해제할 수 있는 편리한 방법입니다.
 
-NSObject는 IDisposable 인터페이스와 [.NET Dispose 패턴](https://msdn.microsoft.com/library/fs2xkftw.aspx)을 구현합니다. 이렇게 하면 NSObject를 서브클래싱하는 개발자가 Dispose 동작을 재정의하고 요청 시 고유한 리소스를 해제할 수 있습니다. 예를 들어 여러 이미지를 유지하는 이 뷰 컨트롤러를 살펴보겠습니다.
+NSObject는 IDisposable 인터페이스와 [.NET Dispose 패턴](/dotnet/standard/garbage-collection/implementing-dispose)을 구현합니다. 이렇게 하면 NSObject를 서브클래싱하는 개발자가 Dispose 동작을 재정의하고 요청 시 고유한 리소스를 해제할 수 있습니다. 예를 들어 여러 이미지를 유지하는 이 뷰 컨트롤러를 살펴보겠습니다.
 
 ```csharp
 class MenuViewController : UIViewController {

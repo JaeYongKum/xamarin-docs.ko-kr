@@ -10,12 +10,12 @@ ms.date: 12/07/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb6167eae394b41583195911bfac9d691e48d361
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 20de91e7a9d0acf5c5aacfb7a05088aec2c20c71
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929378"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558299"
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
@@ -574,4 +574,4 @@ namespace CustomRenderer.UWP
 ## <a name="related-links"></a>관련 링크
 
 - [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+- [CustomRendererViewCell(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

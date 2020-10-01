@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 바인딩 값 변환기” description: “이 문서에서는 값 변환기를 구현하여(바인딩 변환기 또는 바인딩 값 변환기라고도 함) Xamarin.Forms 데이터 바인딩 내의 값을 캐스팅하거나 변환하는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 바인딩 값 변환기
+description: 이 문서에서는 값 변환기를 구현하여(바인딩 변환기 또는 바인딩 값 변환기라고도 함) Xamarin.Forms 데이터 바인딩 내의 값을 캐스팅하거나 변환하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 2a5912d18787543b05b3937f2b8b5c6a36b04873
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139765"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556817"
 ---
-# <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
+# <a name="no-locxamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -54,7 +54,7 @@ public class IntToBoolConverter : IValueConverter
 
 데이터 바인딩에 `StringFormat` 설정이 포함되는 경우 값 변환기는 결과가 문자열로 서식 지정되기 전에 호출됩니다.
 
-[**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **단추 사용** 페이지는 데이터 바인딩에서 이 값 변환기를 사용하는 방법을 보여줍니다. `IntToBoolConverter`는 페이지의 리소스 사전에서 인스턴스화됩니다. 그런 다음, `StaticResource` 태그 확장을 참조하여 두 개의 데이터 바인딩에서 `Converter` 속성을 설정합니다. 페이지의 여러 데이터 바인딩 간에 데이터 변환기를 공유하는 것은 매우 일반적입니다.
+[**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **단추 사용** 페이지는 데이터 바인딩에서 이 값 변환기를 사용하는 방법을 보여줍니다. `IntToBoolConverter`는 페이지의 리소스 사전에서 인스턴스화됩니다. 그런 다음, `StaticResource` 태그 확장을 참조하여 두 개의 데이터 바인딩에서 `Converter` 속성을 설정합니다. 페이지의 여러 데이터 바인딩 간에 데이터 변환기를 공유하는 것은 매우 일반적입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -469,5 +469,5 @@ binding.ConverterParameter = 255;
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

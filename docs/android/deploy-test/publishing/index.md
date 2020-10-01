@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 3062afda82be2b45146687b9d77210a42f8f55fa
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0b44cbf754e8d1be66b0f3bf09badb78852978eb
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75487960"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454639"
 ---
 # <a name="publishing-an-application"></a>애플리케이션 게시
 
@@ -52,11 +52,11 @@ Google Play는 Android 애플리케이션에 대한 가장 포괄적이고 인�
 
 ## <a name="related-links"></a>관련 링크
 
-- [HelloWorldPublishing(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
+- [HelloWorldPublishing(샘플)](/samples/xamarin/monodroid-samples/helloworldpublishing)
 - [빌드 프로세스](~/android/deploy-test/building-apps/build-process.md)
-- [링크](~/android/deploy-test/linker.md)
+- [연결](~/android/deploy-test/linker.md)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Visual Studio App Center를 통한 배포](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
+- [Visual Studio App Center를 통한 배포](/appcenter/distribution/stores/googleplay)
 - [애플리케이션 서명](https://source.android.com/security/apksigning/)
 - [Google Play에 게시](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Google 애플리케이션 라이선스](https://developer.android.com/guide/google/play/licensing/index.html)

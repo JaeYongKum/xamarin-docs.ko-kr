@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018
-ms.openlocfilehash: 3e57e0cd2fa87db8035fa68995b69f231151fa09
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7583cfcb4f1a22167b95370f1376aa70d61188a0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020533"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454054"
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 
@@ -303,4 +303,4 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SimpleContentProvider(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
+- [SimpleContentProvider(샘플)](/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)

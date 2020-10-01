@@ -12,14 +12,14 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc09f93a8d86b96324435bf63cd3d19b51242ed2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931809"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436225"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
+# <a name="create-a-single-page-no-locxamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
@@ -506,5 +506,5 @@ ms.locfileid: "86931809"
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+- [노트(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 - [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)

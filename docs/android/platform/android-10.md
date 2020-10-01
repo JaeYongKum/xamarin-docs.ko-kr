@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: b26d99c131e9759da3077a767476de38712bcb18
-ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
+ms.openlocfilehash: 1ce0233a45211ee91b9f1e30247ac18cdd5c5a66
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82047575"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454301"
 ---
 # <a name="android-10-with-xamarin"></a>Xamarin이 포함된 Android 10
 
@@ -22,7 +22,7 @@ _Xamarin.Android를 사용하여 Android 10용 앱 개발을 시작하는 방법
 
 이 문서는 Android 10용 Xamarin.Android 앱 개발을 시작하는 데 도움이 되도록 구성되었습니다. 필요한 업데이트를 설치하고, SDK를 구성하고, 테스트할 에뮬레이터 또는 디바이스를 준비하는 방법을 설명합니다. 또한 Android 10의 새로운 기능에 대한 개요를 제공하고 주요 Android 10 기능 중 일부를 사용하는 방법을 보여주는 예제 소스 코드를 제공합니다.
 
-Xamarin.Android 10.0은 Android 10을 지원합니다. Android 10에 대한 Xamarin.Android 지원에 대한 자세한 내용은 [Xamarin.Android 10.0 릴리스 정보](https://docs.microsoft.com/xamarin/android/release-notes/10/10.0)를 참조하세요.
+Xamarin.Android 10.0은 Android 10을 지원합니다. Android 10에 대한 Xamarin.Android 지원에 대한 자세한 내용은 [Xamarin.Android 10.0 릴리스 정보](/xamarin/android/release-notes/10/10.0)를 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -53,7 +53,7 @@ Xamarin.Android를 사용하여 Android 10 앱 개발을 시작하려면 첫 번
 
 Xamarin을 사용하여 Android 10 앱을 빌드하려면 Visual Studio 2019를 사용하는 것이 좋습니다.
 
-Visual Studio 2019를 사용하는 경우 Visual Studio 2019 버전 16.3 이상으로 업데이트합니다. 자세한 내용은 [Visual Studio 2019를 최신 릴리스로 업데이트](https://docs.microsoft.com/visualstudio/install/update-visual-studio)를 참조하세요. macOS에서 Mac용 Visual Studio 2019 8.3 이상으로 업데이트합니다. 자세한 내용은 [Mac용 Visual Studio 2019를 최신 릴리스로 업데이트](https://docs.microsoft.com/visualstudio/mac/update)를 참조하세요.
+Visual Studio 2019를 사용하는 경우 Visual Studio 2019 버전 16.3 이상으로 업데이트합니다. 자세한 내용은 [Visual Studio 2019를 최신 릴리스로 업데이트](/visualstudio/install/update-visual-studio)를 참조하세요. macOS에서 Mac용 Visual Studio 2019 8.3 이상으로 업데이트합니다. 자세한 내용은 [Mac용 Visual Studio 2019를 최신 릴리스로 업데이트](/visualstudio/mac/update)를 참조하세요.
 
 ### <a name="install-the-android-sdk"></a>Android SDK 설치
 
@@ -64,15 +64,15 @@ Xamarin.Android 10.0을 통해 프로젝트를 만들려면 먼저 Android SDK �
 
     ![Android SDK 관리자 리포지토리 선택](~/android/platform/android-10-images/sdkrepository.png)
 
-3. **플랫폼** 탭에서 **Android SDK 플랫폼 29**로 나열된 **Android 10 SDK 플랫폼** 패키지를 설치합니다(SDK 관리자 사용에 대한 자세한 내용은 [Android SDK 설치](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk) 참조).
+3. **플랫폼** 탭에서 **Android SDK 플랫폼 29**로 나열된 **Android 10 SDK 플랫폼** 패키지를 설치합니다(SDK 관리자 사용에 대한 자세한 내용은 [Android SDK 설치](../get-started/installation/android-sdk.md) 참조).
 
     ![Android SDK 관리자 플랫폼 탭](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Xamarin.Android 프로젝트 만들기
 
-새 Xamarin.Android 프로젝트를 만듭니다. Xamarin을 사용한 Android 개발을 처음 접하는 경우 [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index)를 참조하여 Xamarin.Android 프로젝트를 만드는 방법에 대해 알아보세요.
+새 Xamarin.Android 프로젝트를 만듭니다. Xamarin을 사용한 Android 개발을 처음 접하는 경우 [Hello, Android](../get-started/hello-android/index.md)를 참조하여 Xamarin.Android 프로젝트를 만드는 방법에 대해 알아보세요.
 
-Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전 설정을 구성해야 합니다. 예를 들어 Android 10용 프로젝트를 대상으로 하려면 프로젝트의 대상 Android API 수준을 **Android 10.0(API 29)** 으로 구성해야 합니다. 여기에는 **대상 프레임워크 버전** 및 **대상 Android SDK 버전**이 API 29 이상에 모두 포함됩니다. Android API 수준을 구성하는 방법에 대한 자세한 내용은 [Android API 수준 이해](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)를 참조하세요.
+Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전 설정을 구성해야 합니다. 예를 들어 Android 10용 프로젝트를 대상으로 하려면 프로젝트의 대상 Android API 수준을 **Android 10.0(API 29)** 으로 구성해야 합니다. 여기에는 **대상 프레임워크 버전** 및 **대상 Android SDK 버전**이 API 29 이상에 모두 포함됩니다. Android API 수준을 구성하는 방법에 대한 자세한 내용은 [Android API 수준 이해](../app-fundamentals/android-api-levels.md)를 참조하세요.
 
 ![Xamarin.Android 대상 프레임워크](~/android/platform/android-10-images/targetframework.png)
 
@@ -80,7 +80,7 @@ Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전
 
 픽셀과 같은 물리적 디바이스를 사용하는 경우 휴대폰 설정에서 시스템 > 시스템 업데이트 > 업데이트 확인으로 이동하여 Android 10 업데이트를 다운로드할 수 있습니다. 디바이스를 플래시하려면 디바이스에 대한 [팩터리 이미지](https://developers.google.com/android/images) 또는 [OTA 이미지](https://developers.google.com/android/ota)를 플래시하는 방법에 대한 지침을 참조하세요.
 
-에뮬레이터를 사용하는 경우 API 수준 29용 가상 디바이스를 만들고 x86 기반 이미지를 선택합니다. Android 디바이스 관리자를 사용하여 가상 디바이스를 만들고 관리하는 방법에 대한 자세한 내용은 [Android 디바이스 관리자를 사용하여 가상 디바이스 관리](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager)를 참조하세요. 테스트 및 디버깅을 위해 Android Emulator를 사용하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)을 참조하세요.
+에뮬레이터를 사용하는 경우 API 수준 29용 가상 디바이스를 만들고 x86 기반 이미지를 선택합니다. Android 디바이스 관리자를 사용하여 가상 디바이스를 만들고 관리하는 방법에 대한 자세한 내용은 [Android 디바이스 관리자를 사용하여 가상 디바이스 관리](../get-started/installation/android-emulator/device-manager.md)를 참조하세요. 테스트 및 디버깅을 위해 Android Emulator를 사용하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](../deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
 
 ## <a name="new-features"></a>새 기능
 

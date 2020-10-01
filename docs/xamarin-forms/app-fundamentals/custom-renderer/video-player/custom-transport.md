@@ -10,12 +10,12 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c72f68f327b6c0df6959d37ed4bf390e3bd7f31d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5d48c699ed89e91452efe84749a1dedac18a34f5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135007"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562732"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -662,4 +662,4 @@ namespace VideoPlayerDemos
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [비디오 플레이어 데모(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

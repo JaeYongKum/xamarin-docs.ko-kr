@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 2650bda7115cd132e87bf669914320f63214e295
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c152579ef1458db50359551bc7ed6632daf3d92f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933226"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436863"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
 
@@ -37,7 +37,7 @@ Visual Studio에서 iOS를 개발할 때 준수해야 하는 몇 가지 요구 �
 
 두 경우 모두 다음 단계를 수행해야 합니다.
 
-- [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
+- [Mac용 Visual Studio 설치](/visualstudio/mac/installation)
 - [Windows에 Xamarin 도구 설치](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Mac에 연결

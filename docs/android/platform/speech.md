@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018
-ms.openlocfilehash: e8c7d1a4fb3537644ed3b7737158a5e50abcdae5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ce94179fe0ae7f3df1f2fa5ead20ec09fd6f8f5e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019763"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457915"
 ---
 # <a name="android-speech"></a>Android 음성
 
@@ -47,7 +47,7 @@ Google은 Android.Speech 네임스페이스에서 개발자가 "음성 인식" �
 
 어조를 활용하는 상당히 강력한 오디오 처리 그리고 맥락을 이해하기 위한 일정 수준의 AI(인공 지능) 없이는 소프트웨어는 말하는 내용을 전혀 이해할 수 없습니다. 간단한 휴대폰에서 가능한 최선은 음성을 텍스트로 변환하는 것입니다.
 
-## <a name="setting-up"></a>설정
+## <a name="setting-up"></a>설치
 
 음성 시스템을 사용하기 전에 항상 디바이스에 마이크가 있는지 확인해야 합니다. 마이크가 설치되지 않은 Kindle 또는 Google 노트 패드에서 앱을 실행하는 것은 의미가 없을 테니까요.
 
@@ -231,8 +231,8 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
-- [텍스트 음성 변환(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
-- [음성 텍스트 변환(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
+- [Xamarin.Forms DependencyService](/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [텍스트 음성 변환(샘플)](/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [음성 텍스트 변환(샘플)](/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Android.Speech 네임스페이스](xref:Android.Speech)
 - [Android.Speech.Tts 네임스페이스](xref:Android.Speech.Tts)

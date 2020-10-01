@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: b7d69e99327aa3d3e3e1f5e5dbc61697d1fb9b71
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1b24648f70041abb092c93f41e999b68e8f26a26
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75489169"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453261"
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
@@ -52,9 +52,9 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 2. 아래로 스크롤하여 **디버깅 옵션**을 선택합니다.
 3. **디버거** 드롭다운 메뉴에서 기본 **.NET(Xamarin)** 대신 **C++** 를 선택합니다.
 
-Visual Studio C++ 개발자는 [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) 샘플을 확인하여 Xamarin을 통해 Visual Studio 2019 또는 Visual Studio 2017에서 C++ 디버깅을 시도할 수 있습니다. 자세한 내용은 [블로그 게시물](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/)을 참조하세요.
+Visual Studio C++ 개발자는 [SanAngeles_NativeDebug](/samples/xamarin/monodroid-samples/sanangeles-ndk) 샘플을 확인하여 Xamarin을 통해 Visual Studio 2019 또는 Visual Studio 2017에서 C++ 디버깅을 시도할 수 있습니다. 자세한 내용은 [블로그 게시물](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/)을 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SanAngeles_NativeDebug(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk)
+- [SanAngeles_NativeDebug(샘플)](/samples/xamarin/monodroid-samples/sanangeles-ndk)
 - [Xamarin Android 네이티브 애플리케이션 개발](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

@@ -10,12 +10,12 @@ ms.date: 10/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da867dd017ed50ccbc09f969891bb91011379d3f
-ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
+ms.openlocfilehash: 8c62d03e785e02160d9c0f83c3375383d890d62b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052749"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558273"
 ---
 # <a name="local-notifications-in-no-locxamarinforms"></a>Xamarin.Forms의 로컬 알림
 
@@ -410,7 +410,7 @@ iOS에서는 들어오는 알림이 사용자 입력 필요없이 애플리케�
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 프로젝트](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+- [샘플 프로젝트](/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Xamarin.Android의 알림](~/android/app-fundamentals/notifications/index.md)
 - [Xamarin.iOS의 알림](~/ios/platform/user-notifications/index.md)
 - [Xamarin.Forms Dependency.Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)

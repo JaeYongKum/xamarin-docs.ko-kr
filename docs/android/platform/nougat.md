@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 135303743cce1f23bb1d70731f6e760188df11e2
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027085"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457213"
 ---
 # <a name="nougat-features"></a>Nougat 기능
 
@@ -144,7 +144,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-[MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) 샘플 앱에는 앱에서 다중 창 사용자 인터페이스를 활용하는 방법을 보여주는 코드가 포함되어 있습니다.
+[MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) 샘플 앱에는 앱에서 다중 창 사용자 인터페이스를 활용하는 방법을 보여주는 코드가 포함되어 있습니다.
 
 다중 창 모드에 대한 자세한 내용은 [다중 창 지원](https://developer.android.com/guide/topics/ui/multi-window.html)을 참조하세요.
 
@@ -191,7 +191,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-[Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) 샘플 앱에는 `RemoteInput` 개체를 사용하여 알림을 확장하는 방법을 보여주는 C# 코드가 포함되어 있습니다. Android 7.0 이상용 앱에 인라인 회신 동작을 추가하는 방법에 대한 자세한 내용은 Android [알림에 회신](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) 토픽을 참조하세요.
+[Messaging Service](/samples/xamarin/monodroid-samples/android-n-messagingservice) 샘플 앱에는 `RemoteInput` 개체를 사용하여 알림을 확장하는 방법을 보여주는 C# 코드가 포함되어 있습니다. Android 7.0 이상용 앱에 인라인 회신 동작을 추가하는 방법에 대한 자세한 내용은 Android [알림에 회신](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) 토픽을 참조하세요.
 
 #### <a name="bundled-notifications"></a>번들 알림
 
@@ -227,15 +227,15 @@ Android 7.1의 새로운 앱 바로 가기 기능에 대한 자세한 내용은 
 
 Android Nougat 기능을 활용하는 방법을 보여주는 여러 Xamarin.Android 샘플이 있습니다.
 
-- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)는 Android Nougat에서 제공하는 다중 창 API 사용 방법을 보여줍니다. 샘플 앱을 다중 창 모드로 전환하여 앱의 수명 주기와 동작에 미치는 영향을 확인할 수 있습니다.
+- [MultiWindowPlayground](/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)는 Android Nougat에서 제공하는 다중 창 API 사용 방법을 보여줍니다. 샘플 앱을 다중 창 모드로 전환하여 앱의 수명 주기와 동작에 미치는 영향을 확인할 수 있습니다.
 
-- [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)는 `NotificationCompatManager`를 사용하여 알림을 보내는 간단한 서비스입니다. 또한 이 서비스는 Android Nougat 디바이스에서 앱을 열지 않고도 알림 내에서 바로 텍스트를 통해 회신할 수 있도록 `RemoteInput` 개체를 통해 알림을 확장합니다.
+- [Messaging Service](/samples/xamarin/monodroid-samples/android-n-messagingservice)는 `NotificationCompatManager`를 사용하여 알림을 보내는 간단한 서비스입니다. 또한 이 서비스는 Android Nougat 디바이스에서 앱을 열지 않고도 알림 내에서 바로 텍스트를 통해 회신할 수 있도록 `RemoteInput` 개체를 통해 알림을 확장합니다.
 
-- [활성 알림](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications)은 `NotificationManager` API를 사용하여 애플리케이션에 현재 표시되는 알림 수를 알려줍니다.
+- [활성 알림](/samples/xamarin/monodroid-samples/android-n-activenotifications)은 `NotificationManager` API를 사용하여 애플리케이션에 현재 표시되는 알림 수를 알려줍니다.
 
-- [범위가 지정된 디렉터리 액세스](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)는 범위가 지정된 디렉터리 액세스 API를 사용하여 특정 디렉터리에 쉽게 액세스하는 방법을 보여줍니다. 매니페스트에서 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한을 정의하는 대신 이 방법이 사용됩니다.
+- [범위가 지정된 디렉터리 액세스](/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)는 범위가 지정된 디렉터리 액세스 API를 사용하여 특정 디렉터리에 쉽게 액세스하는 방법을 보여줍니다. 매니페스트에서 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한을 정의하는 대신 이 방법이 사용됩니다.
 
-- [직접 부팅](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot)은 디바이스 암호화 스토리지에 데이터를 저장하는 방법을 보여줍니다. 이 스토리지는 디바이스가 부팅되는 동안 사용자 자격 증명(PIN/패턴/암호)이 입력되기 전과 후에 항상 사용할 수 있습니다.
+- [직접 부팅](/samples/xamarin/monodroid-samples/android-n-directboot)은 디바이스 암호화 스토리지에 데이터를 저장하는 방법을 보여줍니다. 이 스토리지는 디바이스가 부팅되는 동안 사용자 자격 증명(PIN/패턴/암호)이 입력되기 전과 후에 항상 사용할 수 있습니다.
 
 ## <a name="summary"></a>요약
 

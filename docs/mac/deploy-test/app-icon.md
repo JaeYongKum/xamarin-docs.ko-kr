@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fdc132143905db6cc32ebd9aeb07268e69bf2070
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021712"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434683"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 애플리케이션 아이콘
 
@@ -108,7 +108,7 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacImages(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages(샘플)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [이미지 작업](~/mac/app-fundamentals/image.md)
 - [macOS Human Interface 지침 - 아이콘 및 이미지](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 21fd8eff64d374e52e64194524a8c096cdf4d90e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c07f9099f3b76ed86a235883ce335ce19a426b99
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027034"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457889"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Windows에서 Android를 디버그해야 하는 USB 드라이버는 무엇인가요?
 
@@ -26,7 +26,7 @@ Windows에서 개발할 때 Android 디바이스에서 디버그하려면 호환
 
 제조업체에 따라, 필요한 정확한 USB 드라이버를 찾기가 어려울 수 있습니다. Windows에서 개발한 Android 앱을 테스트하기 위한 대안에는 Android 에뮬레이터를 사용하거나 외부 테스트 서비스를 사용하는 방법이 있습니다. 여기에는 다음과 같은 항목이 포함됩니다.
 
-- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) - 수백 가지의 실제 Android 디바이스에서 실행되는 클라우드 테스트 서비스입니다.
+- [App Center Test](/appcenter/test-cloud/) - 수백 가지의 실제 Android 디바이스에서 실행되는 클라우드 테스트 서비스입니다.
 
 - [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 

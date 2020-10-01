@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 6fa1357adc9cf2f545fbcdf3a30fef70280593bb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2458abc3363d847623a27a73626266dabe6a7a5c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938023"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437247"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 
 _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드된 iOS 애플리케이션의 메모리 문제를 진단하는 방법을 설명합니다. 계측을 시작하고, 힙 스냅샷을 만들고, 메모리 증가를 분석하는 방법을 보여 줍니다. 또한 계측을 사용하여 메모리 문제가 발생하는 정확한 코드 줄을 표시하여 찾아내는 방법을 보여 줍니다._
 
 이 페이지에서는 **Xcode의 계측 도구**를 사용하여 iOS 애플리케이션의 메모리 문제를 진단하는 방법을 보여 줍니다.
-먼저 Mac용 Visual Studio에서 [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)을 다운로드하고 **이** 솔루션을 엽니다.
+먼저 Mac용 Visual Studio에서 [MemoryDemo 샘플](/samples/xamarin/ios-samples/profiling-memorydemo)을 다운로드하고 **이** 솔루션을 엽니다.
 
 ## <a name="diagnosing-the-memory-issues"></a>메모리 문제 진단
 
@@ -85,7 +85,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 ![앱 메모리 사용량 표시](walkthrough-apples-instrument-images/06-reduced-memory.png)
 
-향상된 코드는 Mac용 Visual Studio에서 **다음** 솔루션의 [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)에서 사용할 수 있습니다.
+향상된 코드는 Mac용 Visual Studio에서 **다음** 솔루션의 [MemoryDemo 샘플](/samples/xamarin/ios-samples/profiling-memorydemo)에서 사용할 수 있습니다.
 
 [Xamarin.iOS 가비지 수집](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)에 대한 이 커뮤니티 블로그는 Xamarin.iOS와 관련된 메모리 문제를 처리하는 데 유용한 참고 자료입니다.
 
@@ -97,5 +97,5 @@ Mac용 Visual Studio 내에서 계측을 시작하고, 메모리 할당 템플�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
+- [MemoryDemo 샘플](/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Xamarin.iOS 가비지 수집(블로그 게시물)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

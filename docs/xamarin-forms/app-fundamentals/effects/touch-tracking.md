@@ -10,12 +10,12 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc150ecffbf9b6b31ec2f533bcc33876100614dc
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3bbad7f96403cb1f386b80b2923b0cdd222f9596
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936853"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555881"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
 
@@ -55,7 +55,7 @@ UWP 방식은 음악 키보드와 같은 유형의 일부 애플리케이션에 
 
 ## <a name="the-touch-tracking-effect-api"></a>터치 추적 효과 API
 
-[**터치 추적 효과 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 샘플에는 하위 수준 터치 추적을 구현하는 클래스(및 열거형)가 포함됩니다. 이러한 형식은 `TouchTracking` 네임스페이스에 속하며 `Touch`라는 단어로 시작됩니다. **TouchTrackingEffectDemos** .NET Standard 라이브러리 프로젝트에는 터치 이벤트 유형에 대한 `TouchActionType` 열거형이 포함됩니다.
+[**터치 추적 효과 데모**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 샘플에는 하위 수준 터치 추적을 구현하는 클래스(및 열거형)가 포함됩니다. 이러한 형식은 `TouchTracking` 네임스페이스에 속하며 `Touch`라는 단어로 시작됩니다. **TouchTrackingEffectDemos** .NET Standard 라이브러리 프로젝트에는 터치 이벤트 유형에 대한 `TouchActionType` 열거형이 포함됩니다.
 
 ```csharp
 public enum TouchActionType
@@ -362,7 +362,7 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 ## <a name="putting-the-touch-effect-to-work"></a>터치 효과 작업
 
-[**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
+[**TouchTrackingEffectDemos**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
 
 **BoxView Dragging**(BoxView 드래그) 페이지에서는 `AbsoluteLayout`에 `BoxView` 요소를 추가한 다음, 화면에서 드래그할 수 있습니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml)은 `BoxView` 요소를 `AbsoluteLayout`에 추가하고 `AbsoluteLayout`을 지우는 두 개의 `Button` 보기를 인스턴스화합니다.
 
@@ -811,4 +811,4 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 - [iOS에서 멀티 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Android에서 멀티 터치 손가락 추적](~/android/app-fundamentals/touch/touch-tracking.md)
-- [터치 추적 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+- [터치 추적 효과(샘플)](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

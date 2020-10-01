@@ -11,12 +11,12 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 727bac49c5bff522125a2f21a9742e428b81c924
-ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
+ms.openlocfilehash: fac41e57d13815dcd202521d16ae4730e1d99cfa
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88950744"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555868"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화
 
@@ -26,7 +26,7 @@ ms.locfileid: "88950744"
 
 ![iOS 및 Android의 지역화 애플리케이션 스크린샷](text-images/localizationdemo-screenshots.png)
 
-.NET Framework에는 [Resx 리소스 파일](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)을 사용하여 애플리케이션을 지역화하는 기본 제공 메커니즘이 포함되어 있습니다. 리소스 파일은 애플리케이션에서 제공된 키에 대한 콘텐츠를 검색할 수 있게 해주는 이름/값 쌍으로 텍스트 및 기타 콘텐츠를 저장합니다. 리소스 파일을 사용하면 지역화된 콘텐츠를 애플리케이션 코드에서 분리할 수 있습니다.
+.NET Framework에는 [Resx 리소스 파일](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)을 사용하여 애플리케이션을 지역화하는 기본 제공 메커니즘이 포함되어 있습니다. 리소스 파일은 애플리케이션에서 제공된 키에 대한 콘텐츠를 검색할 수 있게 해주는 이름/값 쌍으로 텍스트 및 기타 콘텐츠를 저장합니다. 리소스 파일을 사용하면 지역화된 콘텐츠를 애플리케이션 코드에서 분리할 수 있습니다.
 
 리소스 파일을 사용하여 Xamarin.Forms 애플리케이션을 지역화하려면 다음 단계를 수행해야 합니다.
 
@@ -153,7 +153,7 @@ using System.Resources;
 
 기본 리소스 파일이 만들어지고 **AssemblyInfo.cs** 파일에 기본 문화권이 지정된 후에는 애플리케이션이 런타임에 지역화된 문자열을 검색할 수 있습니다.
 
-리소스 파일에 대한 자세한 내용은 [.NET 앱의 리소스 파일 만들기](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하세요.
+리소스 파일에 대한 자세한 내용은 [.NET 앱의 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하세요.
 
 ## <a name="specify-supported-languages-on-ios"></a>iOS에서 지원되는 언어 지정
 
@@ -306,7 +306,7 @@ Image flag = new Image
 
 ## <a name="localize-the-application-name"></a>애플리케이션 이름 지역화
 
-애플리케이션 이름은 플랫폼별로 지정되며 Resx 리소스 파일을 사용하지 않습니다. Android에서 애플리케이션 이름을 지역화하려면 [Android에서 앱 이름 지역화](~/android/app-fundamentals/localization.md#stringsxml-file-format)를 참조하세요. iOS에서 애플리케이션 이름을 지역화하려면 [iOS에서 앱 이름 지역화](~/ios/app-fundamentals/localization/index.md#app-name)를 참조하세요. UWP에서 애플리케이션 이름을 지역화하려면 [UWP 패키지 매니페스트의 문자열 지역화](https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest)를 참조하세요.
+애플리케이션 이름은 플랫폼별로 지정되며 Resx 리소스 파일을 사용하지 않습니다. Android에서 애플리케이션 이름을 지역화하려면 [Android에서 앱 이름 지역화](~/android/app-fundamentals/localization.md#stringsxml-file-format)를 참조하세요. iOS에서 애플리케이션 이름을 지역화하려면 [iOS에서 앱 이름 지역화](~/ios/app-fundamentals/localization/index.md#app-name)를 참조하세요. UWP에서 애플리케이션 이름을 지역화하려면 [UWP 패키지 매니페스트의 문자열 지역화](/windows/uwp/app-resources/localize-strings-ui-manifest)를 참조하세요.
 
 ## <a name="test-localization"></a>지역화 테스트
 
@@ -318,11 +318,11 @@ Android의 경우 애플리케이션이 시작될 때 언어 설정이 감지되
 
 ## <a name="related-links"></a>관련 링크
 
-- [지역화 샘플 프로젝트](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
-- [.NET 앱의 리소스 파일 만들기](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
+- [지역화 샘플 프로젝트](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [.NET 앱의 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
 - [플랫폼 간 지역화](~/cross-platform/app-fundamentals/localization.md)
-- [CultureInfo 클래스 사용(MSDN)](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo)
+- [CultureInfo 클래스 사용(MSDN)](/dotnet/api/system.globalization.cultureinfo)
 - [Android 지역화](~/android/app-fundamentals/localization.md)
 - [iOS 지역화](~/ios/app-fundamentals/localization/index.md)
 - [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)
-- [특정 문화권에 대한 리소스 찾기 및 사용(MSDN)](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [특정 문화권에 대한 리소스 찾기 및 사용(MSDN)](/previous-versions/visualstudio/visual-studio-2008/s9ckwb4b(v=vs.90))

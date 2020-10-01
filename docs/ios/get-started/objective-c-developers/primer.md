@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 451e69be771a1a3214a772f0f9afc48893a6fa8d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: acde83ee88ab17884cadd375f83efee8afb0385e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433387"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Objective-C 개발자용 C# 입문서
 
@@ -143,7 +143,7 @@ Objective-C는 *블록*을 사용하여 클로저를 만들며, 여기서 사용
 };
 ```
 
-람다 식에 대한 자세한 내용은 Microsoft의 [C# 프로그래밍 가이드](https://msdn.microsoft.com/library/vstudio/bb397687.aspx)를 참조하세요.
+람다 식에 대한 자세한 내용은 Microsoft의 [C# 프로그래밍 가이드](/dotnet/csharp/language-reference/operators/lambda-expressions)를 참조하세요.
 
 ## <a name="summary"></a>요약
 

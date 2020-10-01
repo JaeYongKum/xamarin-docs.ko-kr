@@ -8,14 +8,14 @@ ms.date: 03/13/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 56cb9619a4132f6568cee8fbf590965934024639
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4a13ed8e12e11595c6c1b7617e32a492205a9175
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801925"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436567"
 ---
-# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: 플랫폼 확장
+# <a name="no-locxamarinessentials-platform-extensions"></a>Xamarin.Essentials: 플랫폼 확장
 
 Xamarin.Essentials는 Rect, Size, Point와 같은 플랫폼 형식으로 작업해야 하는 경우 몇 가지 플랫폼 확장 메서드를 제공합니다. 즉, iOS, Android 및 UWP의 특정 유형에 대해 이 유형의 `System` 버전 사이를 변환할 수 있습니다.
 
@@ -89,7 +89,7 @@ void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivitySta
 * 시작됨
 * 중지됨
 
-자세한 내용은 [작업 수명 주기](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) 설명서를 참조하세요.
+자세한 내용은 [작업 수명 주기](../android/app-fundamentals/activity-lifecycle/index.md) 설명서를 참조하세요.
 
 ## <a name="ios-extensions"></a>iOS 확장
 

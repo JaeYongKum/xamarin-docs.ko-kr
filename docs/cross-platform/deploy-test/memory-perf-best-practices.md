@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 89b5dc2ae296b9e9033c45bf93c87de83054f721
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: f7f5d7daed42eeb3a36dd9b0d09b31a06b0de142
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996489"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457954"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -207,7 +207,7 @@ double Compute(double x)
 
 처음으로 `Lazy<T>.Value` 속성에 액세스할 때 초기화 지연이 발생합니다. 처음 액세스할 때 래핑된 형식이 생성되고 반환되며 나중에 액세스하는 데 사용하기 위해 저장됩니다.
 
-초기화 지연에 대한 자세한 내용은 [초기화 지연](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx)을 참조하세요.
+초기화 지연에 대한 자세한 내용은 [초기화 지연](/dotnet/framework/performance/lazy-initialization)을 참조하세요.
 
 <a name="async"></a>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 5d243429fe4f61768568a634b205055c1ad94297
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 960f64c05bcc474a7e197c06990840d5e9b88caf
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020260"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453846"
 ---
 # <a name="fragments"></a>조각
 
@@ -60,6 +60,6 @@ Android 지원 패키지 및 Xamarin.Android 4.2 이상을 사용하여 이전 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [Honeycomb Gallery(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
+- [Honeycomb Gallery(샘플)](/samples/xamarin/monodroid-samples/honeycombgallery)
 - [조각](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [지원 패키지](https://developer.android.com/sdk/compatibility-library.html)

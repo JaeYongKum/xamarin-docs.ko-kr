@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4b9043d70bb7460abf62c964da8041f345cd1be6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929045"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435610"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -26,7 +26,7 @@ ms.locfileid: "86929045"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Mac용 Visual Studio 소개
 
-Mac용 Visual Studio는 Visual Studio와 XCode의 기능을 결합하는 무료 오픈 소스 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. 이 가이드는 몇 가지 기본 Mac용 Visual Studio 기능을 소개하지만, Mac용 Visual Studio를 처음 접하는 경우 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/) 설명서를 확인하세요.
+Mac용 Visual Studio는 Visual Studio와 XCode의 기능을 결합하는 무료 오픈 소스 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. 이 가이드는 몇 가지 기본 Mac용 Visual Studio 기능을 소개하지만, Mac용 Visual Studio를 처음 접하는 경우 [Mac용 Visual Studio](/visualstudio/mac/) 설명서를 확인하세요.
 
 Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 애플리케이션** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
 
@@ -64,7 +64,7 @@ Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루
 
 [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) 연습에서는 **Phoneword**라는 솔루션을 만들고 내부에 iOS 프로젝트인 **Phoneword_iOS**를 배치했습니다. 프로젝트 내에 있는 항목은 다음과 같습니다.
 
-- **References** - 애플리케이션을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 디렉터리를 확장하면 Xamarin.iOS 어셈블리에 대한 참조와 함께 [System](https://docs.microsoft.com/dotnet/api/system), System.Core 및 [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
+- **References** - 애플리케이션을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 디렉터리를 확장하면 Xamarin.iOS 어셈블리에 대한 참조와 함께 [System](/dotnet/api/system), System.Core 및 [System.Xml](/dotnet/api/system.xml)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
 - **Packages** - Packages 디렉터리에는 미리 만들어진 NuGet 패키지가 포함됩니다.
 - **Resources** - Resources 폴더는 기타 미디어를 저장합니다.
 - **Main.cs** – 여기에는 애플리케이션의 주요 진입점이 포함됩니다. 애플리케이션을 시작하려면 주 애플리케이션 클래스의 이름인 `AppDelegate`가 전달됩니다.
@@ -459,6 +459,6 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS(샘플)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [iOS 프로비전 포털](https://developer.apple.com/account/#/overview)

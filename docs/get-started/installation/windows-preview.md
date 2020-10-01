@@ -9,12 +9,12 @@ ms.date: 03/20/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ccd5a610ad41c0160a6778a63a367376bd200b3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c74c132a623388f1d0b3b467b73d948cf2a2022
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134019"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437256"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Windows에서 Xamarin 미리 보기 설치
 
@@ -24,7 +24,7 @@ Visual Studio 2019와 Visual Studio 2017은 이전 버전과 같은 방식으로
 - **미리 보기** – Mac용 Visual Studio의 _알파_ 및 _베타_ 채널과 같음
 
 > [!TIP]
-> 시험판 기능을 사용해 보려면 안정(릴리스) 버전과 함께 Visual Studio의 **미리 보기** 버전을 병렬 설치하는 옵션을 제공하는 [Visual Studio 미리 보기 설치 관리자를 다운로드](https://visualstudio.microsoft.com/vs/preview/)해야 합니다. Visual Studio 2019의 새로운 기능에 대한 자세한 내용은 [릴리스 정보](https://docs.microsoft.com/visualstudio/releases/2019/release-notes)를 참조하세요.
+> 시험판 기능을 사용해 보려면 안정(릴리스) 버전과 함께 Visual Studio의 **미리 보기** 버전을 병렬 설치하는 옵션을 제공하는 [Visual Studio 미리 보기 설치 관리자를 다운로드](https://visualstudio.microsoft.com/vs/preview/)해야 합니다. Visual Studio 2019의 새로운 기능에 대한 자세한 내용은 [릴리스 정보](/visualstudio/releases/2019/release-notes)를 참조하세요.
 
 Visual Studio의 미리 보기 버전에는 다음을 비롯한 Xamarin 기능의 해당 미리 보기 버전이 포함될 수 있습니다.
 

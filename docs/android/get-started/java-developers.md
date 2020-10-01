@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: eed18890c185ccd35d728176348c9fac481407e1
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d32d30419550c9b5f9a612589d12eba7c74eef26
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454327"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자용 Xamarin
 
@@ -96,7 +96,7 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 
 Java는 일반적으로 **.jar** 파일에 관련 클래스를 패키지합니다. 그러나 C# 및 .NET에서는 미리 컴파일된 코드의 재사용 가능한 비트가 일반적으로 *.dll* 파일이라는 *어셈블리*에 패키지됩니다. 어셈블리는 C#/.NET 코드의 배포 단위이며, 각 어셈블리는 일반적으로 C# 프로젝트와 연결됩니다. 어셈블리에는 런타임에 컴파일된 JIT(Just-In-Time)인 IL(중간 코드)이 포함되어 있습니다.
 
-어셈블리에 대한 자세한 내용은 [어셈블리와 글로벌 어셈블리 캐시](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/) 항목을 참조하세요.
+어셈블리에 대한 자세한 내용은 [어셈블리와 글로벌 어셈블리 캐시](/dotnet/csharp/programming-guide/concepts/assemblies-gac/) 항목을 참조하세요.
 
 ### <a name="packages-vs-namespaces"></a>패키지 대 네임스페이스
 
@@ -142,7 +142,7 @@ using System.Threading.Tasks;
 
 ### <a name="generics"></a>제네릭
 
-Java와 C#은 모두 *제네릭*을 지원하며, 이는 컴파일 시간에 다른 형식을 플러그 인할 수 있는 자리 표시자입니다. 그러나 C#에서는 제네릭이 약간 다르게 작동합니다. Java에서 [형식 지우기](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)는 컴파일 시간에만 형식 정보를 사용할 수 있게 하지만, 런타임에는 그렇지 않습니다. 반대로 .NET CLR(공용 언어 런타임)은 제네릭 형식을 명시적으로 지원하며, 이에 따라 C#에서 런타임에 형식 정보에 액세스할 수 있습니다. 일상적인 Xamarin.Android 개발에서 이 구분의 중요성은 명확하지 않지만, [리플렉션](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection)을 사용하는 경우 이 기능을 사용하여 런타임에 형식 정보에 액세스할 수 있게 됩니다.
+Java와 C#은 모두 *제네릭*을 지원하며, 이는 컴파일 시간에 다른 형식을 플러그 인할 수 있는 자리 표시자입니다. 그러나 C#에서는 제네릭이 약간 다르게 작동합니다. Java에서 [형식 지우기](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)는 컴파일 시간에만 형식 정보를 사용할 수 있게 하지만, 런타임에는 그렇지 않습니다. 반대로 .NET CLR(공용 언어 런타임)은 제네릭 형식을 명시적으로 지원하며, 이에 따라 C#에서 런타임에 형식 정보에 액세스할 수 있습니다. 일상적인 Xamarin.Android 개발에서 이 구분의 중요성은 명확하지 않지만, [리플렉션](/dotnet/csharp/programming-guide/concepts/reflection)을 사용하는 경우 이 기능을 사용하여 런타임에 형식 정보에 액세스할 수 있게 됩니다.
 
 Xamarin.Android에서는 레이아웃 컨트롤에 대한 참조를 가져오는 데 사용되는 `FindViewById` 제네릭 메서드를 자주 볼 수 있습니다. 이 메서드는 조회하는 컨트롤의 형식을 지정하는 제네릭 형식 매개 변수를 허용합니다. 예를 들어:
 
@@ -152,7 +152,7 @@ TextView label = FindViewById<TextView> (Resource.Id.Label);
 
 이 코드 예제에서 `FindViewById`는 레이아웃에서 **label**로 정의된 `TextView` 컨트롤에 대한 참조를 가져온 다음, `TextView` 형식으로 반환합니다.
 
-제네릭에 대한 자세한 내용은 [제네릭](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index) 항목을 참조하세요.
+제네릭에 대한 자세한 내용은 [제네릭](/dotnet/csharp/programming-guide/generics/index) 항목을 참조하세요.
 제네릭 C# 클래스에 대한 Xamarin.Android 지원에는 몇 가지 제한 사항이 있습니다. 자세한 내용은 [제한 사항](~/android/internals/limitations.md)을 참조하세요.
 
 <a name="oopfeatures"></a>
@@ -211,7 +211,7 @@ public class SensorsActivity : Activity, ISensorEventListener
 
 C#에서 클래스가 더 이상 서브클래싱되지 않도록 하려면, C#에서는 클래스 이름 앞에 `sealed` &ndash;을(를) 붙이고 Java에서는 클래스 이름 앞에 `final`을(를) 붙입니다.
 
-C# 클래스 정의에 대한 자세한 내용은 [클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) 및 [상속](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) 항목을 참조하세요.
+C# 클래스 정의에 대한 자세한 내용은 [클래스](/dotnet/csharp/programming-guide/classes-and-structs/classes) 및 [상속](/dotnet/csharp/programming-guide/classes-and-structs/inheritance) 항목을 참조하세요.
 
 ### <a name="properties"></a>속성
 
@@ -233,7 +233,7 @@ rulerView.DrawingCacheEnabled = true;
 
 속성에 대한 액세스는 읽기/쓰기, 읽기 전용 또는 쓰기 전용일 수 있습니다. 또한 읽기 및 쓰기에 대해 다른 액세스 한정자를 사용할 수 있습니다. 예를 들어 공용 읽기 액세스 권한이 있지만 개인 쓰기 액세스 권한이 있는 속성을 정의할 수 있습니다.
 
-C# 속성에 대한 자세한 내용은 [속성](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties) 항목을 참조하세요.
+C# 속성에 대한 자세한 내용은 [속성](/dotnet/csharp/programming-guide/classes-and-structs/properties) 항목을 참조하세요.
 
 ### <a name="calling-base-class-methods"></a>기본 클래스 메서드 호출
 
@@ -276,7 +276,7 @@ Java 및 C#은 모두 `public`, `private` 및 `protected` 액세스 한정자를
 
 - **`protected internal`** &ndash; 클래스 멤버는 정의 어셈블리, 정의 클래스 및 파생 클래스(어셈블리 내부와 외부 모두에서 파생된 클래스에 액세스할 수 있음) 내에서 액세스할 수 있습니다.
 
-C# 액세스 한정자에 대한 자세한 내용은 [액세스 한정자](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers) 항목을 참조하세요.
+C# 액세스 한정자에 대한 자세한 내용은 [액세스 한정자](/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers) 항목을 참조하세요.
 
 ### <a name="virtual-and-override-methods"></a>가상 및 재정의 메서드
 
@@ -291,7 +291,7 @@ Java와 마찬가지로 C#은 `abstract` 클래스와 메서드를 지원합니�
 
 - C# 파생 클래스는 `override` 키워드를 사용하여 가상 기본 클래스 메서드가 재정의되고 있음을 명시적으로 나타내야 합니다.
 
-C#의 다형성 지원에 대한 자세한 내용은 [다형성](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism) 항목을 참조하세요.
+C#의 다형성 지원에 대한 자세한 내용은 [다형성](/dotnet/csharp/programming-guide/classes-and-structs/polymorphism) 항목을 참조하세요.
 
 <a name="lambdas"></a>
 
@@ -321,7 +321,7 @@ button.Click += (sender, args) => {
 
 이 예제에서 람다 식 코드(중괄호 안의 코드)는 클릭 수를 늘리고 `button` 텍스트를 업데이트하여 클릭 수를 표시합니다. 이 람다 식은 단추를 탭할 때마다 호출되는 클릭 이벤트 처리기로 `button` 개체에 등록됩니다. (이벤트 처리기에 대한 자세한 내용은 아래에서 설명합니다.) 이 간단한 예제에서 `sender` 및 `args` 매개 변수는 람다 식 코드에서 사용하지 않지만, 이러한 매개 변수는 이벤트 등록에 대한 메서드 시그니처 요구 사항을 충족하기 위해 람다 식에 필요합니다. 내부적으로 C# 컴파일러는 람다 식을 단추 클릭 이벤트가 발생할 때마다 호출되는 무명 메서드로 변환합니다.
 
-C# 및 람다 식에 대한 자세한 내용은 [람다 식](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) 항목을 참조하세요.
+C# 및 람다 식에 대한 자세한 내용은 [람다 식](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) 항목을 참조하세요.
 
 <a name="events"></a>
 
@@ -330,7 +330,7 @@ C# 및 람다 식에 대한 자세한 내용은 [람다 식](https://docs.micros
 *이벤트*는 개체에서 해당 개체에 흥미로운 일이 발생했을 때 등록된 구독자에게 알리는 방법입니다. 일반적으로 구독자가 콜백 메서드가 포함된 `Listener` 인터페이스를 구현하는 Java와 달리, C#은 *대리자*를 통한 이벤트 처리에 대한 언어 수준 지원을 제공합니다. *대리자*는 개체 지향 형식 안전 함수 포인터와 같으며, 개체 참조 및 메서드 토큰을 캡슐화합니다. 클라이언트 개체가 이벤트에 가입되도록 하려면 대리자를 만들고 알림 개체에 대리자를 전달합니다.
 이벤트가 발생할 때 알림 개체는 대리자 개체에서 나타내는 메서드를 호출하여 가입 클라이언트 개체에 이벤트를 알립니다. C#에서 이벤트 처리기는 기본적으로 대리자를 통해 호출되는 메서드일 뿐입니다.
 
-대리자에 대한 자세한 내용은 [대리자](https://docs.microsoft.com/dotnet/csharp/programming-guide/delegates/index) 항목을 참조하세요.
+대리자에 대한 자세한 내용은 [대리자](/dotnet/csharp/programming-guide/delegates/index) 항목을 참조하세요.
 
 C#에서 이벤트는 *멀티캐스트*입니다. 즉 이벤트가 발생할 때 둘 이상의 수신기에서 알림을 받을 수 있습니다. 이 차이점은 Java와 C# 이벤트 등록 간의 구문상 차이를 고려할 때 알 수 있습니다. Java에서는 `SetXXXListener`를 호출하여 이벤트 알림을 등록하지만, C#에서는 `+=` 연산자를 사용하여 대리자를 이벤트 수신기 목록에 "추가"하여 이벤트 알림을 등록합니다.
 Java에서는 `SetXXXListener`를 호출하여 등록을 취소하지만, C#에서는 `-=`를 사용하여 대리자를 수신기 목록에서 "제거"합니다.
@@ -403,7 +403,7 @@ async void downloadAsync(object sender, System.EventArgs e)
 `downloadAsync`의 메서드 선언은 `async` 키워드 앞에 붙어 비동기적으로 실행되고 작업을 반환한다는 것을 나타냅니다. 또한 `DownloadDataTaskAsync`에 대한 호출 앞에는 `await` 키워드가 붙습니다. 앱은 `DownloadDataTaskAsync`가 완료되어 반환될 때까지 `await`가 표시된 지점에서 시작하는 이벤트 처리기의 실행을 백그라운드 스레드로 이동합니다.
 한편 앱의 UI 스레드는 다른 컨트롤에 대한 사용자 입력 및 이벤트 처리기에 계속 응답할 수 있습니다. `DownloadDataTaskAsync`가 완료되면(몇 초가 걸릴 수 있음) `bytes` 변수가 `DownloadDataTaskAsync`에 대한 호출의 결과로 설정된 위치에서 실행이 다시 시작되고, 이벤트 처리기 코드의 나머지 부분에서 다운로드한 이미지를 호출자의 스레드(UI)에 표시합니다.
 
-C#의 `async`/`await`에 대한 소개는 [Async 및 Await를 사용한 비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async) 항목을 참조하세요.
+C#의 `async`/`await`에 대한 소개는 [Async 및 Await를 사용한 비동기 프로그래밍](/dotnet/csharp/async) 항목을 참조하세요.
 Xamarin의 비동기 프로그래밍 기능 지원에 대한 자세한 내용은 [비동기 지원 개요](~/cross-platform/platform/async.md)를 참조하세요.
 
 <a name="keywords"></a>
@@ -414,45 +414,45 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 
 |Java|C#|설명|
 |---|---|---|
-|`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|true 및 false 부울 값을 선언하는 데 사용됩니다.|
+|`boolean`|[bool](/dotnet/csharp/language-reference/keywords/bool)|true 및 false 부울 값을 선언하는 데 사용됩니다.|
 |`extends`|`:`|상속받을 클래스 및 인터페이스 앞에 나옵니다.|
 |`implements`|`:`|상속받을 클래스 및 인터페이스 앞에 나옵니다.|
-|`import`|[using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using)|네임스페이스에서 형식을 가져오며, 네임스페이스 별칭을 만드는 데도 사용됩니다.|
-|`final`|[sealed](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/sealed)|클래스 파생을 방지합니다. 메서드 및 속성이 파생 클래스에서 재정의되지 않도록 합니다.|
-|`instanceof`|[is](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/is)|개체가 지정된 형식과 호환되는지 여부를 평가합니다.|
-|`native`|[extern](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/extern)|외부적으로 구현된 메서드를 선언합니다.|
-|`package`|[namespace](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/namespace)|관련 개체 집합의 범위를 선언합니다.|
-|`T...`|[params T](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/params)|가변 개수의 인수를 사용하는 메서드 매개 변수를 지정합니다.|
-|`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.|
-|`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
+|`import`|[using](/dotnet/csharp/language-reference/keywords/using)|네임스페이스에서 형식을 가져오며, 네임스페이스 별칭을 만드는 데도 사용됩니다.|
+|`final`|[sealed](/dotnet/csharp/language-reference/keywords/sealed)|클래스 파생을 방지합니다. 메서드 및 속성이 파생 클래스에서 재정의되지 않도록 합니다.|
+|`instanceof`|[is](/dotnet/csharp/language-reference/keywords/is)|개체가 지정된 형식과 호환되는지 여부를 평가합니다.|
+|`native`|[extern](/dotnet/csharp/language-reference/keywords/extern)|외부적으로 구현된 메서드를 선언합니다.|
+|`package`|[namespace](/dotnet/csharp/language-reference/keywords/namespace)|관련 개체 집합의 범위를 선언합니다.|
+|`T...`|[params T](/dotnet/csharp/language-reference/keywords/params)|가변 개수의 인수를 사용하는 메서드 매개 변수를 지정합니다.|
+|`super`|[base](/dotnet/csharp/language-reference/keywords/base)|파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.|
+|`synchronized`|[lock](/dotnet/csharp/language-reference/keywords/lock-statement)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
 
-또한 C#에 고유하고 Android에서 사용되는 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
+또한 C#에 고유하고 Android에서 사용되는 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
 
 |C#|설명|
 |---|---|
-|[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|호환되는 참조 형식 또는 null 사용 가능 형식 간의 변환을 수행합니다.|
-|[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|메서드 또는 람다 식이 비동기임을 지정합니다.|
-|[await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await)|작업이 완료될 때까지 메서드 실행을 일시 중단합니다.|
-|[byte](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/byte)|부호 없는 8비트 정수 형식입니다.|
-|[delegate](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/delegate)|메서드 또는 무명 메서드를 캡슐화하는 데 사용됩니다.|
-|[enum](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)|명명된 상수 집합인 열거형을 선언합니다.|
-|[event](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/event)|게시자 클래스에서 이벤트를 선언합니다.|
-|[fixed](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/fixed-statement)|변수가 다시 할당되지 않도록 방지합니다.|
+|[as](/dotnet/csharp/language-reference/keywords/as)|호환되는 참조 형식 또는 null 사용 가능 형식 간의 변환을 수행합니다.|
+|[async](/dotnet/csharp/language-reference/keywords/async)|메서드 또는 람다 식이 비동기임을 지정합니다.|
+|[await](/dotnet/csharp/language-reference/keywords/await)|작업이 완료될 때까지 메서드 실행을 일시 중단합니다.|
+|[byte](/dotnet/csharp/language-reference/keywords/byte)|부호 없는 8비트 정수 형식입니다.|
+|[delegate](/dotnet/csharp/language-reference/keywords/delegate)|메서드 또는 무명 메서드를 캡슐화하는 데 사용됩니다.|
+|[enum](/dotnet/csharp/language-reference/keywords/enum)|명명된 상수 집합인 열거형을 선언합니다.|
+|[event](/dotnet/csharp/language-reference/keywords/event)|게시자 클래스에서 이벤트를 선언합니다.|
+|[fixed](/dotnet/csharp/language-reference/keywords/fixed-statement)|변수가 다시 할당되지 않도록 방지합니다.|
 |`get`|속성 값을 검색하는 접근자 메서드를 정의합니다.|
-|[in](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/in-generic-modifier)|제네릭 인터페이스에서 더 적게 파생된 형식을 수락하는 매개 변수를 사용하도록 설정합니다.|
-|[object](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/object)|.NET Framework의 개체 형식에 대한 별칭입니다.|
-|[out](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/out)|매개 변수 한정자 또는 제네릭 형식 매개 변수 선언입니다.|
-|[override](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/override)|상속된 멤버의 구현을 확장하거나 수정합니다.|
-|[partial](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/partial-method)|정의를 선언하여 여러 파일로 분할하거나 메서드 정의를 해당 구현에서 분할합니다.|
-|[readonly](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/readonly)|클래스 멤버가 선언 시에만 또는 클래스 생성자에서 할당될 수 있음을 선언합니다.|
-|[ref](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/ref)|인수를 값이 아닌 참조로 전달하도록 합니다.|
-|[set](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/set)|속성 값을 설정하는 접근자 메서드를 정의합니다.|
-|[string](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/string)|.NET Framework의 문자열 형식에 대한 별칭입니다.|
-|[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|관련 변수 그룹을 캡슐화하는 값 형식입니다.|
-|[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|개체의 형식을 가져옵니다.|
-|[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|암시적으로 형식화된 지역 변수를 선언합니다.|
-|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
-|[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
+|[in](/dotnet/csharp/language-reference/keywords/in-generic-modifier)|제네릭 인터페이스에서 더 적게 파생된 형식을 수락하는 매개 변수를 사용하도록 설정합니다.|
+|[object](/dotnet/csharp/language-reference/keywords/object)|.NET Framework의 개체 형식에 대한 별칭입니다.|
+|[out](/dotnet/csharp/language-reference/keywords/out)|매개 변수 한정자 또는 제네릭 형식 매개 변수 선언입니다.|
+|[override](/dotnet/csharp/language-reference/keywords/override)|상속된 멤버의 구현을 확장하거나 수정합니다.|
+|[partial](/dotnet/csharp/language-reference/keywords/partial-method)|정의를 선언하여 여러 파일로 분할하거나 메서드 정의를 해당 구현에서 분할합니다.|
+|[readonly](/dotnet/csharp/language-reference/keywords/readonly)|클래스 멤버가 선언 시에만 또는 클래스 생성자에서 할당될 수 있음을 선언합니다.|
+|[ref](/dotnet/csharp/language-reference/keywords/ref)|인수를 값이 아닌 참조로 전달하도록 합니다.|
+|[set](/dotnet/csharp/language-reference/keywords/set)|속성 값을 설정하는 접근자 메서드를 정의합니다.|
+|[string](/dotnet/csharp/language-reference/keywords/string)|.NET Framework의 문자열 형식에 대한 별칭입니다.|
+|[struct](/dotnet/csharp/language-reference/keywords/struct)|관련 변수 그룹을 캡슐화하는 값 형식입니다.|
+|[typeof](/dotnet/csharp/language-reference/keywords/typeof)|개체의 형식을 가져옵니다.|
+|[var](/dotnet/csharp/language-reference/keywords/var)|암시적으로 형식화된 지역 변수를 선언합니다.|
+|[value](/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
+|[virtual](/dotnet/csharp/language-reference/keywords/virtual)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
 
 <a name="interop"></a>
 
@@ -468,7 +468,7 @@ C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.A
 
 ## <a name="further-reading"></a>추가 정보
 
-MSDN [C# 프로그래밍 가이드](https://docs.microsoft.com/dotnet/csharp/programming-guide/)는 C# 프로그래밍 언어 학습을 시작할 수 있는 좋은 방법이며, [C# 참조](https://docs.microsoft.com/dotnet/csharp/language-reference/)를 사용하여 특정 C# 언어 기능을 조회할 수 있습니다.
+MSDN [C# 프로그래밍 가이드](/dotnet/csharp/programming-guide/)는 C# 프로그래밍 언어 학습을 시작할 수 있는 좋은 방법이며, [C# 참조](/dotnet/csharp/language-reference/)를 사용하여 특정 C# 언어 기능을 조회할 수 있습니다.
 
 Java 지식에서 최소한 Java 언어를 알고 있는 만큼 Java 클래스 라이브러리에 대해 익숙해야 한다는 점과 마찬가지로, C#에 대한 실질적인 지식에서는 .NET 프레임워크에 익숙해야 합니다. Microsoft의 [Java 개발자를 위한 C# 및 .NET Framework로의 이동](https://www.microsoft.com/download/details.aspx?id=6073) 학습 패킷은 Java 관점에서 .NET 프레임워크에 대해 자세히 알아볼 수 있는 좋은 방법입니다(C#에 대한 깊은 이해를 얻을 수 있음).
 
@@ -481,6 +481,6 @@ C#에서 첫 번째 Xamarin.Android 프로젝트를 시작할 준비가 되면, 
 ## <a name="related-links"></a>관련 링크
 
 - [Java 통합 개요](~/android/platform/java-integration/index.md)
-- [C# 프로그래밍 가이드](https://docs.microsoft.com/dotnet/csharp/programming-guide/)
-- [C# 참조](https://docs.microsoft.com/dotnet/csharp/language-reference/index)
+- [C# 프로그래밍 가이드](/dotnet/csharp/programming-guide/)
+- [C# 참조](/dotnet/csharp/language-reference/index)
 - [Java 개발자를 위한 C# 및 .NET Framework로의 이동](https://www.microsoft.com/download/details.aspx?id=6073)

@@ -1,6 +1,6 @@
 ---
-title: 'title: “Xamarin.Forms 상대 바인딩” description: “이 문서에서는 RelativeSource 태그 확장을 사용하여 바인딩 대상의 위치에 상대적으로 바인딩 소스를 설정함으로써 상대 바인딩을 만드는 방법을 설명합니다.”'
-description: 'ms.prod: xamarin ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/04/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+title: Xamarin.Forms 상대 바인딩
+description: 이 문서에서는 RelativeSource 태그 확장을 사용하여 바인딩 대상의 위치에 상대적으로 바인딩 소스를 설정함으로써 상대 바인딩을 만드는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8d4e2696e6027f07b7b8e638cd1e0f1d65a5503d
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 24fa816519b05b46c38015fa602a4e70fbc07d16
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84139713"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560392"
 ---
-# <a name="xamarinforms-relative-bindings"></a>Xamarin.Forms 상대 바인딩
+# <a name="no-locxamarinforms-relative-bindings"></a>Xamarin.Forms 상대 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -186,6 +186,6 @@ Xamarin.Forms 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)

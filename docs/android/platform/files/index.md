@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 746433293c52d7071a3289962ea021f716fd0cfe
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: 69c99d6aa132bb5326085f752b9220054e9f3e69
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186176"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453924"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Xamarin.Android를 사용한 파일 스토리지 및 액세스
 
@@ -81,7 +81,7 @@ Xamarin.Android의 파일 읽기 및 쓰기는 다른 모든 .NET 애플리케�
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>내부 스토리지에 있는 파일 읽기 또는 쓰기
 
-[파일 쓰기 C# API](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)라면 모두 사용할 수 있습니다. 이때 필요한 것은 애플리케이션에 할당된 디렉터리에 있는 파일의 경로를 가져오는 것입니다. 파일 액세스가 주 스레드를 차단하여 발생할 수 있는 문제를 최소화하기 위해 .NET API의 비동기 버전을 사용하는 것이 좋습니다.
+[파일 쓰기 C# API](/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)라면 모두 사용할 수 있습니다. 이때 필요한 것은 애플리케이션에 할당된 디렉터리에 있는 파일의 경로를 가져오는 것입니다. 파일 액세스가 주 스레드를 차단하여 발생할 수 있는 문제를 최소화하기 위해 .NET API의 비동기 버전을 사용하는 것이 좋습니다.
 
 다음 코드 조각은 애플리케이션의 내부 스토리지 디렉터리에 있는 UTF-8 텍스트 파일에 정수를 쓰는 예입니다.
 

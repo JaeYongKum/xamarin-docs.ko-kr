@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2018
-ms.openlocfilehash: 1246eeac63a0ae232396d4c2fd69d8bf516f5e3e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c8c9e721bc46d9071bb2af479a5e1d37b93fce27
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026999"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458201"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Android NUnit 테스트 프로젝트를 자동화하려면 어떻게 할까요?
 
 > [!NOTE]
-> 이 가이드에서는 Xamarin.UITest 프로젝트가 아닌 Android NUnit 테스트 프로젝트를 자동화하는 방법을 설명합니다. [여기에서](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) Xamarin.UITest 가이드를 찾을 수 있습니다.
+> 이 가이드에서는 Xamarin.UITest 프로젝트가 아닌 Android NUnit 테스트 프로젝트를 자동화하는 방법을 설명합니다. [여기에서](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) Xamarin.UITest 가이드를 찾을 수 있습니다.
 
 Visual Studio에서 **단위 테스트 앱(Android)** 프로젝트(또는 Mac용 Visual Studio에서 **Android 단위 테스트** 프로젝트)를 만들 때 이 프로젝트는 기본적으로 테스트를 자동으로 실행하지 않습니다.
 대상 디바이스에서 NUnit 테스트를 실행하려면 다음 명령을 사용하여 시작되는 [Android.App.Instrumentation](xref:Android.App.Instrumentation) 서브클래스를 만들 수 있습니다. 

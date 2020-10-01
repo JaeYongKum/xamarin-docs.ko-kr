@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 9c9b9f5a205a2eef7db9f27e8d09b10ce65a4318
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5a692a931bfcdc1e8eee534de3adfff0de688891
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027050"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457902"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android Designer용 Java 메모리 매개 변수 조정
 
@@ -34,7 +34,7 @@ Xamarin Studio 5.7.2.7(이상, Mac용 Visual Studio) 및 Xamarin용 Visual Studi
 
 1. Visual Studio에서 솔루션을 엽니다.
 
-2. 솔루션 탐색기에서 각 Android 프로젝트를 하나씩 선택하고 각 프로젝트에서 [모든 파일 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90))를 두 번 클릭합니다. `.axml` 레이아웃 파일이 포함되지 않은 프로젝트는 건너뛸 수 있습니다. 이 단계에서는 각 프로젝트 디렉터리에 `.csproj.user` 파일이 포함되어 있는지 확인합니다.
+2. 솔루션 탐색기에서 각 Android 프로젝트를 하나씩 선택하고 각 프로젝트에서 [모든 파일 표시](/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90))를 두 번 클릭합니다. `.axml` 레이아웃 파일이 포함되지 않은 프로젝트는 건너뛸 수 있습니다. 이 단계에서는 각 프로젝트 디렉터리에 `.csproj.user` 파일이 포함되어 있는지 확인합니다.
 
 3. Visual Studio를 종료합니다.
 

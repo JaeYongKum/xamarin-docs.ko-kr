@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 91583ff57c7336f6dabf7e83301ebfde7274ddbd
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607908"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454782"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
 _두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 애플리케이션 구성 요소를 도입합니다._
 
-이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) 애플리케이션에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 애플리케이션](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
+이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](/samples/xamarin/monodroid-samples/phoneword) 애플리케이션에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 애플리케이션](/samples/xamarin/monodroid-samples/phonewordmultiscreen)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
 
 [![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -29,7 +29,7 @@ _두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확
 ## <a name="requirements"></a>요구 사항
 
 이 가이드가 [Hello, Android](~/android/get-started/hello-android/index.md)를 사용하지 않는 위치를 선택하기 때문에 [Hello, Android 빠른 시작](~/android/get-started/hello-android/hello-android-quickstart.md)을 완료해야 합니다.
-아래의 연습으로 직접 이동하려는 경우 전체 버전의 [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)(Hello, Android 빠른 시작)를 다운로드하고 시작하여 연습을 시작할 수 있습니다.
+아래의 연습으로 직접 이동하려는 경우 전체 버전의 [Phoneword](/samples/xamarin/monodroid-samples/phoneword)(Hello, Android 빠른 시작)를 다운로드하고 시작하여 연습을 시작할 수 있습니다.
 
 ## <a name="walkthrough"></a>연습
 
@@ -322,5 +322,5 @@ translateButton.Click += (sender, e) =>
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin 앱 아이콘 및 시작 화면(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
-- [PhonewordMultiscreen(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)
+- [Phoneword(샘플)](/samples/xamarin/monodroid-samples/phoneword)
+- [PhonewordMultiscreen(샘플)](/samples/xamarin/monodroid-samples/phonewordmultiscreen)

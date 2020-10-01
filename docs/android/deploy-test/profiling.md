@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 96c9e750238bce35d5c8c12dd2ceba6be7ab8fcc
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454821"
 ---
 # <a name="profiling-android-apps"></a>Android 앱 프로파일링
 
@@ -37,7 +37,7 @@ Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Android Profiler에서 Xamarin Android 앱 시작
 
-다음 단계에서는 Android Studio의 Android Profiler 도구에서 Xamarin Android 애플리케이션을 시작하는 방법을 설명합니다. 아래 예제 스크린샷에서 Xamarin Forms [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) 앱이 빌드되고 Android Profiler를 사용하여 프로파일링됩니다.
+다음 단계에서는 Android Studio의 Android Profiler 도구에서 Xamarin Android 애플리케이션을 시작하는 방법을 설명합니다. 아래 예제 스크린샷에서 Xamarin Forms [XamagonXuzzle](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) 앱이 빌드되고 Android Profiler를 사용하여 프로파일링됩니다.
 
 1. Android 프로젝트에서 빌드 옵션에서 **공유 런타임 사용**을 비활성화합니다. 이렇게 하면 공유 개발 시 Mono 런타임에서 종속성 없이 APK(Android 애플리케이션 패키지)가 빌드됩니다.
 

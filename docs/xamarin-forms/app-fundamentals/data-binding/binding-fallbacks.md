@@ -10,14 +10,14 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946210"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560691"
 ---
-# <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
+# <a name="no-locxamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -109,4 +109,4 @@ ms.locfileid: "84946210"
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [데이터 바인딩 데모(샘플)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 496e5c092c79f4f71bddaad30bea6acd1d58d375
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 00da8b668ea26aa9146ff0c30d07a60cefe6695a
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027550"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454015"
 ---
 # <a name="intro-to-contentproviders"></a>ContentProviders 소개
 
@@ -42,8 +42,8 @@ Android 또는 기타 애플리케이션에 의해 노출되는 `ContentProvider
 
 ## <a name="related-links"></a>관련 링크
 
-- [ContactsAdapter 데모(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)
-- [SimpleContentProvider(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
+- [ContactsAdapter 데모(샘플)](/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)
+- [SimpleContentProvider(샘플)](/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
 - [콘텐츠 공급자 개발자 가이드](https://developer.android.com/guide/topics/providers/content-providers.html)
 - [ContentProvider 클래스 참조](xref:Android.Content.ContentProvider)
 - [ContentResolver 클래스 참조](xref:Android.Content.ContentResolver)

@@ -8,12 +8,12 @@ ms.custom: video
 author: davidortinau
 ms.author: daortin
 ms.date: 07/06/2018
-ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4c017f7b27d646155bb5c8e556955f495bde6be7
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73019993"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457564"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -61,17 +61,17 @@ Visual Studio에 Android Oreo 지원을 추가하려면 다음을 수행합니�
 
 - Visual Studio 2017을 사용하는 경우
 
-    1. Visual Studio 2017 버전 15.7 이상으로 업데이트합니다([Visual Studio 2017업데이트](https://docs.microsoft.com/visualstudio/install/update-visual-studio) 참조).
+    1. Visual Studio 2017 버전 15.7 이상으로 업데이트합니다([Visual Studio 2017업데이트](/visualstudio/install/update-visual-studio) 참조).
 
     2. [SDK 관리자](~/android/get-started/installation/android-sdk.md)를 사용하여 API 수준 26.0 이상을 설치합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-- [Mac용 Visual Studio 업데이트](https://docs.microsoft.com/visualstudio/mac/update)에 설명된 대로 Mac용 Visual Studio의 최신 안정화 버전으로 업데이트합니다.
+- [Mac용 Visual Studio 업데이트](/visualstudio/mac/update)에 설명된 대로 Mac용 Visual Studio의 최신 안정화 버전으로 업데이트합니다.
 
 -----
 
-Android Oreo에 대한 Xamarin 지원에 대한 자세한 내용은 [Xamarin.Android 8.0 릴리스 정보](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/)를 참조하세요.
+Android Oreo에 대한 Xamarin 지원에 대한 자세한 내용은 [Xamarin.Android 8.0 릴리스 정보](/xamarin/android/release-notes/8/8.0/)를 참조하세요.
 
 ### <a name="install-the-android-sdk"></a>Android SDK 설치
 
@@ -194,7 +194,7 @@ Android Oreo에는 알림 채널, 알림 배지, XML 사용자 지정 글꼴, �
 *알림 채널*은 알림에 대한 앱 정의 범주입니다.
 전송해야 하는 각 알림 유형에 대한 알림 채널을 만들 수 있으며, 앱 사용자가 선택한 항목을 반영하는 알림 채널을 만들 수 있습니다. 새 알림 채널 기능을 사용하면 사용자에게 다양한 종류의 알림을 세분화하여 제어하는 기능을 제공할 수 있습니다. 예를 들어 메시징 앱을 구현하는 경우 사용자가 만든 각 대화 그룹에 대해 별도의 알림 채널을 만들 수 있습니다.
 
-[알림 채널](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan)은 알림 채널을 만들고 이를 사용하여 로컬 알림을 게시하는 방법을 설명합니다. 실제 코드 예제는 [NotificationChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) 샘플을 참조하세요. 이 샘플 앱은 두 채널을 관리하고 추가 알림 옵션을 설정합니다.
+[알림 채널](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan)은 알림 채널을 만들고 이를 사용하여 로컬 알림을 게시하는 방법을 설명합니다. 실제 코드 예제는 [NotificationChannels](/samples/xamarin/monodroid-samples/android-o-notificationchannels) 샘플을 참조하세요. 이 샘플 앱은 두 채널을 관리하고 추가 알림 옵션을 설정합니다.
 
 ### <a name="notification-badges"></a>알림 배지
 
@@ -246,7 +246,7 @@ Android Oreo부터 앱은 글꼴을 APK에 번들링하지 않고 공급자에�
 
 `RequestFonts` 메서드를 호출하면 먼저 (`RequestFont`에 대한 이전 호출에서) 글꼴이 로컬로 캐시되었는지 확인합니다. 캐시되지 않은 경우 글꼴 공급자를 호출하고, 글꼴을 비동기적으로 검색한 다음 `OnTypeFaceRetrieved` 메서드를 호출하여 결과를 다시 앱에 전달합니다.
 
-[Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) 샘플에서는 Android Oreo에 도입된 다운로드 가능한 글꼴 기능을 사용하는 방법을 보여 줍니다. 
+[Downloadable Fonts](/samples/xamarin/monodroid-samples/android-o-downloadablefonts) 샘플에서는 Android Oreo에 도입된 다운로드 가능한 글꼴 기능을 사용하는 방법을 보여 줍니다. 
 
 글꼴을 다운로드하는 방법에 대한 자세한 내용은 Android 개발자 [다운로드 가능한 글꼴](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) 항목을 참조하세요.
 
@@ -254,7 +254,7 @@ Android Oreo부터 앱은 글꼴을 APK에 번들링하지 않고 공급자에�
 
 Android Oreo의 새로운 _자동 채우기_ 프레임워크를 사용하면 사용자가 로그인, 계정 만들기 및 신용 카드 거래와 같은 반복적인 작업을 보다 쉽게 처리할 수 있습니다. 사용자는 정보를 다시 입력하는 데 걸리는 시간을 단축할 수 있습니다(입력 오류가 발생할 수 있음). 자동 채우기 프레임워크를 사용하여 앱을 사용할 수 있으려면 시스템 설정에서 자동 채우기 서비스를 사용하도록 설정해야 합니다(사용자가 자동 채우기를 사용하거나 사용하지 않도록 설정할 수 있음).
 
-[AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) 샘플에서는 자동 채우기 프레임워크를 사용하는 방법을 보여 줍니다. 여기에는 자동으로 채워야 하는 보기가 있는 클라이언트 작업의 구현과 클라이언트 작업에 자동 채우기 데이터를 제공할 수 있는 서비스의 구현이 포함됩니다.
+[AutofillFramework](/samples/xamarin/monodroid-samples/android-o-autofillframework) 샘플에서는 자동 채우기 프레임워크를 사용하는 방법을 보여 줍니다. 여기에는 자동으로 채워야 하는 보기가 있는 클라이언트 작업의 구현과 클라이언트 작업에 자동 채우기 데이터를 제공할 수 있는 서비스의 구현이 포함됩니다.
 
 새로운 자동 채우기 기능 및 자동 채우기를 위해 앱을 최적화하는 방법에 대한 자세한 내용은 Android 개발자 [자동 채우기 프레임워크](https://developer.android.com/guide/topics/text/autofill.html) 항목을 참조하세요.
 
@@ -274,7 +274,7 @@ PIP 모드에 있을 때 작업이 동작하는 방식을 지정하려면 새로
 
 - [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; 작업의 PIP 구성 설정을 업데이트합니다(예: 가로 세로 비율 변경).
 
-[PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) 샘플에서는 Oreo에 도입된 휴대 디바이스용 PiP(Picture in Picture) 모드 기본 사용법을 보여 줍니다. 이 샘플은 디스플레이 모드 또는 다른 작업 간을 전환하는 동안 중단 없이 계속 비디오를 재생합니다.
+[PictureInPicture](/samples/xamarin/monodroid-samples/android-o-pictureinpicture) 샘플에서는 Oreo에 도입된 휴대 디바이스용 PiP(Picture in Picture) 모드 기본 사용법을 보여 줍니다. 이 샘플은 디스플레이 모드 또는 다른 작업 간을 전환하는 동안 중단 없이 계속 비디오를 재생합니다.
 
 ### <a name="other-features"></a>기타 기능
 
@@ -306,19 +306,19 @@ Android Oreo 이상을 대상으로 하는 앱은 해당하는 경우 다음 변
 
 Android Oreo 기능을 활용하는 방법을 보여 주는 여러 Xamarin.Android 샘플이 있습니다.
 
-- [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)는 Android Oreo에 도입된 새 알림 채널 시스템을 사용하는 방법을 보여 줍니다. 이 샘플에서는 두 개의 알림 채널을 관리합니다. 하나는 기본 중요도이고 다른 하나는 높은 중요도입니다.
+- [NotificationsChannels](/samples/xamarin/monodroid-samples/android-o-notificationchannels)는 Android Oreo에 도입된 새 알림 채널 시스템을 사용하는 방법을 보여 줍니다. 이 샘플에서는 두 개의 알림 채널을 관리합니다. 하나는 기본 중요도이고 다른 하나는 높은 중요도입니다.
 
-- [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)는 Oreo에 도입된 휴대 디바이스용 PiP(Picture in Picture) 모드의 기본 사용법을 보여 줍니다. 이 샘플은 디스플레이 모드 또는 다른 작업 간을 전환하는 동안 중단 없이 계속 비디오를 재생합니다.
+- [PictureInPicture](/samples/xamarin/monodroid-samples/android-o-pictureinpicture)는 Oreo에 도입된 휴대 디바이스용 PiP(Picture in Picture) 모드의 기본 사용법을 보여 줍니다. 이 샘플은 디스플레이 모드 또는 다른 작업 간을 전환하는 동안 중단 없이 계속 비디오를 재생합니다.
 
-- [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)는 자동 채우기 프레임워크의 사용법을 보여 줍니다. 여기에는 자동으로 채워야 하는 보기가 있는 클라이언트 작업의 구현과 클라이언트 작업에 자동 채우기 데이터를 제공할 수 있는 서비스의 구현이 포함됩니다.
+- [AutofillFramework](/samples/xamarin/monodroid-samples/android-o-autofillframework)는 자동 채우기 프레임워크의 사용법을 보여 줍니다. 여기에는 자동으로 채워야 하는 보기가 있는 클라이언트 작업의 구현과 클라이언트 작업에 자동 채우기 데이터를 제공할 수 있는 서비스의 구현이 포함됩니다.
 
-- [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)는 앞에서 설명한 다운로드 가능한 글꼴 기능을 사용하는 방법에 대한 예제를 제공합니다.
+- [Downloadable Fonts](/samples/xamarin/monodroid-samples/android-o-downloadablefonts)는 앞에서 설명한 다운로드 가능한 글꼴 기능을 사용하는 방법에 대한 예제를 제공합니다.
 
-- [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat)는 EmojiCompat 지원 라이브러리의 사용법을 보여 줍니다. 이 라이브러리를 사용하여 앱이 누락된 이모지 문자를 "tofu" 문자로 표시하는 것을 방지할 수 있습니다.
+- [EmojiCompat](/samples/xamarin/monodroid-samples/android-o-emojicompat)는 EmojiCompat 지원 라이브러리의 사용법을 보여 줍니다. 이 라이브러리를 사용하여 앱이 누락된 이모지 문자를 "tofu" 문자로 표시하는 것을 방지할 수 있습니다.
 
-- [Location Updates Pending Intent](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)는 `PendingIntent`를 사용하여 디바이스 위치에 대한 업데이트를 가져오는 위치 API의 사용법을 보여 줍니다.
+- [Location Updates Pending Intent](/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)는 `PendingIntent`를 사용하여 디바이스 위치에 대한 업데이트를 가져오는 위치 API의 사용법을 보여 줍니다.
 
-- [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice)는 바인딩 및 시작된 포그라운드 서비스를 사용하여 디바이스 위치에 대한 업데이트를 가져오는 위치 API의 사용법을 보여 줍니다.
+- [Location Updates Foreground Service](/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice)는 바인딩 및 시작된 포그라운드 서비스를 사용하여 디바이스 위치에 대한 업데이트를 가져오는 위치 API의 사용법을 보여 줍니다.
 
 ## <a name="video"></a>비디오
 

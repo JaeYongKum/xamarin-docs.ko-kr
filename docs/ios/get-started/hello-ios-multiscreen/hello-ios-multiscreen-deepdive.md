@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8a9a38c24af3e14cd6930cbb27717ba184dd0235
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 3020bb588f79ce4faf471488c116516402642b73
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996411"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437284"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -203,6 +203,6 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS(샘플)](/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)
