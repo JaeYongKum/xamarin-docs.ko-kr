@@ -10,12 +10,12 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e868eccf446ab22879a66e6e507d810b7e0e13d7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 43702453d1defc3b5a63aba845231f514913d7c5
+ms.sourcegitcommit: 1649554b8c08369b713d20246154455c0ba7d1c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559768"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712562"
 ---
 # <a name="no-locxamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
@@ -534,7 +534,7 @@ public class PositionSlider : Slider
 이 예제에서 데이터는 [`Slider`](xref:Xamarin.Forms.Slider) `Value` 의 속성에 속성을 바인딩합니다 [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) [`MediaElement`](xref:Xamarin.Forms.MediaElement) . 이는 속성이 바인딩을 사용 하기 때문에 가능 `Volume` `TwoWay` 합니다. 따라서 속성을 변경 하면 `Value` 속성 변경 내용이 발생 `Volume` 합니다.
 
 > [!NOTE]
-> 속성에는 [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) 해당 값이 0.0 보다 크거나 같고 1.0 보다 작거나 같은지 확인 하는 vlidation 콜백이 있습니다.
+> 속성에는 [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) 해당 값이 0.0 보다 크거나 같고 1.0 보다 작거나 같도록 확인 하는 유효성 검사 콜백이 있습니다.
 
 을 사용 하는 방법에 대 한 자세한 내용은 [`Slider`](xref:Xamarin.Forms.Slider) [ Xamarin.Forms 슬라이더](~/xamarin-forms/user-interface/slider.md) 를 참조 하십시오.
 
