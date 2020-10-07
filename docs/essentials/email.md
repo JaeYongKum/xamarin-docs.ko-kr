@@ -5,20 +5,47 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 059405d4e3219162022b3f8c0208ee5cc4ac2d38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802380"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434544"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
+# <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
 
 **Email** 클래스를 사용하면 애플리케이션이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 애플리케이션을 열 수 있습니다.
+
+**이메일** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
+
+# <a name="android"></a>[Android](#tab/android)
+
+프로젝트의 대상 Android 버전이 **Android 11(R API 30)** 로 설정된 경우 새 [패키지 가시성 요구 사항](https://developer.android.com/preview/privacy/package-visibility)에 사용되는 쿼리로 해당 Android 매니페스트를 업데이트해야 합니다.
+
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.SENDTO" />
+    <data android:scheme="mailto" />
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+추가 설정이 필요하지 않습니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+플랫폼의 차이점이 없습니다.
+
+-----
 
 ## <a name="get-started"></a>시작
 
@@ -102,7 +129,7 @@ await Email.ComposeAsync(message);
 
 `PlainText`를 `Html`을 보내려는 `BodyFormat`으로 지원하면 `FeatureNotSupportedException`을 throw합니다.
 
-일부 메일 클라이언트는 첨부 파일 보내기를 지원하지 않습니다. 자세한 내용은 [설명서](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email)를 참조하세요.
+일부 메일 클라이언트는 첨부 파일 보내기를 지원하지 않습니다. 자세한 내용은 [설명서](/windows/uwp/contacts-and-calendar/sending-email)를 참조하세요.
 
 -----
 
