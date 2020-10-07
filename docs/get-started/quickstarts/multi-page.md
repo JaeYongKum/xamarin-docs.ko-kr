@@ -12,14 +12,14 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8858a66d2caeea815bf06d5d2741bfc3623598f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 06cd68c56192664f6d11ec9f6adbe30f9ae5168c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933733"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433476"
 ---
-# <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
+# <a name="perform-navigation-in-a-multi-page-no-locxamarinforms-application"></a>다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 
@@ -36,7 +36,7 @@ ms.locfileid: "86933733"
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작을 시도하기 전에 [이전 빠른 시작](single-page.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
+이 빠른 시작을 시도하기 전에 [이전 빠른 시작](single-page.md)을 성공적으로 완료해야 합니다. 또는 [이전 빠른 시작 샘플](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)을 다운로드하고 이 빠른 시작의 시작점으로 사용하세요.
 
 ::: zone pivot="windows"
 
@@ -86,7 +86,7 @@ ms.locfileid: "86933733"
 
 7. **솔루션 탐색기**에서 **Notes** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...** 을 선택합니다. **새 항목 추가** 대화 상자에서 **Visual C# 항목 > Xamarin.Forms > 콘텐츠 페이지**를 선택하고 새 파일의 이름을 **NoteEntryPage**로 지정한 뒤 **추가** 단추를 클릭합니다.
 
-    ![Xamarin.Forms ContentPage 추가](multi-page-images/vs/add-note-entry-page.png)
+    ![Add Xamarin.Forms ContentPage](multi-page-images/vs/add-note-entry-page.png)
 
     그러면 **NoteEntryPage**라는 새 페이지가 프로젝트의 루트 폴더에 추가됩니다. 이 페이지는 애플리케이션의 두 번째 페이지입니다.
 
@@ -369,7 +369,7 @@ ms.locfileid: "86933733"
 
 7. **Solution Pad**에서 **Notes** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **추가 > 새 파일...** 을 선택합니다. **새 파일** 대화 상자에서 **Forms > Forms ContentPage XAML**을 선택하고, 새 파일에 **NoteEntryPage**라는 이름을 지정하고 **새로 만들기** 단추를 클릭합니다.
 
-    ![Xamarin.Forms ContentPage 추가](multi-page-images/vsmac/add-note-entry-page.png)
+    ![Add Xamarin.Forms ContentPage](multi-page-images/vsmac/add-note-entry-page.png)
 
     그러면 **NoteEntryPage**라는 새 페이지가 프로젝트의 루트 폴더에 추가됩니다. 이 페이지는 애플리케이션의 두 번째 페이지입니다.
 
@@ -620,5 +620,5 @@ ms.locfileid: "86933733"
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
+- [노트(샘플)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 - [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)

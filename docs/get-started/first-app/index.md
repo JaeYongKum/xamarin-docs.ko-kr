@@ -12,14 +12,14 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e6670faf921248c007c20307fddb6a34057c5202
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436677"
 ---
-# <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
+# <a name="build-your-first-no-locxamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
 _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 만듭니다._
 
@@ -122,7 +122,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
     [![.NET Standard가 포함된 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
 
@@ -210,7 +210,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ::: zone-end
 
-완료된 코드는 [샘플 갤러리](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)에서 다운로드하거나 [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp)에서 볼 수 있습니다.
+완료된 코드는 [샘플 갤러리](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)에서 다운로드하거나 [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp)에서 볼 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

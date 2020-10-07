@@ -1,0 +1,96 @@
+---
+title: 'Xamarin.Essentials: 연락처'
+description: 사용자는 Xamarin.Essentials의 연락처 클래스를 사용하여 연락처를 선택하고 관련 정보를 검색할 수 있습니다.
+ms.assetid: 02280c42-720a-44c3-979e-4818a20c9821
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 09/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bd239a8dcf192c0bdbc6265769208f4fc989bbbe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434486"
+---
+# <a name="no-locxamarinessentials-contacts"></a>Xamarin.Essentials: 연락처
+
+사용자는 **연락처** 클래스를 사용하여 연락처를 선택하고 관련 정보를 검색할 수 있습니다.
+
+![시험판 API](~/media/shared/preview.png)
+
+## <a name="get-started"></a>시작하기
+
+[!include[](~/essentials/includes/get-started.md)]
+
+**연락처** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
+
+# <a name="android"></a>[Android](#tab/android)
+
+`ReadContacts` 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
+
+**속성** 폴더 아래의 **AssemblyInfo.cs** 파일을 열고 다음을 추가합니다.
+
+```csharp
+[assembly: UsesPermission(Android.Manifest.Permission.ReadContacts)]
+```
+
+또는 Android 매니페스트를 업데이트합니다.
+
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
+
+```xml
+<uses-permission android:name="android.permission.READ_CONTACTS" /> />
+```
+
+또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 이 권한을 선택합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+`Info.plist`에 다음 키를 추가합니다.
+
+```xml
+<key>NSContactsUsageDescription</key>
+<string>This app needs access to contacts to pick a contact and get info.</string>
+```
+
+사용자에게 표시되는 앱에 대한 설명에서 특정하게 `<string>`을 업데이트해야 합니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+`Package.appxmanifest`의 **기능**에서 `Contact` 기능을 선택합니다.
+
+-----
+
+## <a name="picking-a-contact"></a>연락처 선택
+
+`Contacts.PickContactAsync()`를 호출하여 연락처 대화 상자를 표시하고 사용자가 사용자에 대한 정보를 받을 수 있습니다.
+
+
+```csharp
+try
+{
+    var contact = await Contacts.PickContactAsync();
+
+    if(contact == null)
+        return;
+
+    var name = contact.Name;
+    var contactType = contact.ContactType; // Unknown, Personal, Work
+    var numbers = contact.Numbers; // List of phone numbers
+    var emails = contact.Emails; // List of email addresses 
+    
+}
+catch (Exception ex)
+{
+    // Handle exception here.
+}
+```
+
+
+## <a name="api"></a>API
+
+- [연락처 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Contacts)
+- [연락처 API 설명서](xref:Xamarin.Essentials.Contacts)

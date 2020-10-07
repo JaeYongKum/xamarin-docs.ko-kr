@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60a5fbaa8386d0ecdc5d205b3262e05406cec4a6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801818"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556245"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
+# <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
 **Preferences** 클래스를 사용하여 키/값 저장소에 애플리케이션 기본 설정을 저장할 수 있습니다.
 
@@ -62,7 +62,7 @@ Preferences.Remove("my_key");
 Preferences.Clear();
 ```
 
-이러한 메서드 외에도 각각은 기본 설정의 추가 컨테이너를 만드는 데 사용할 수 있는 선택적 `sharedName`을 사용합니다. 아래 플랫폼 구현 관련 정보를 참조하세요.
+위의 메서드는 기본 설정의 추가 컨테이너를 만드는 데 사용할 수 있는 선택적 `sharedName`을 사용합니다. 아래 플랫폼 구현 관련 정보를 참조하세요.
 
 ## <a name="supported-data-types"></a>지원되는 데이터 형식
 
@@ -81,7 +81,7 @@ Preferences.Clear();
 기본 설정은 기본적으로 저장되므로 설정을 네이티브 시스템 설정에 통합할 수 있습니다. 플랫폼 설명서 및 샘플을 따라 플랫폼과 통합합니다.
 
 * Apple: [iOS 설정 번들 구현](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [iOS 애플리케이션 기본 설정 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [iOS 애플리케이션 기본 설정 샘플](/samples/xamarin/ios-samples/appprefs/)
 * [watchOS 설정](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
 * Android: [설정 화면 시작](https://developer.android.com/guide/topics/ui/settings.html)
 
@@ -93,15 +93,15 @@ Preferences.Clear();
 
 # <a name="android"></a>[Android](#tab/android)
 
-모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 이외의 경우에는 지정된 이름을 사용하여 **개인** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
+모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 지정한 경우에는 해당 이름을 사용하여 **프라이빗** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults)는 iOS 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `StandardUserDefaults`가 사용되고, 이외의 경우에는 `NSUserDefaultsType.SuiteName`에 사용된 지정된 이름을 사용하여 새 `NSUserDefaults`을 만드는 데 이름이 사용됩니다.
+[NSUserDefaults](../ios/app-fundamentals/user-defaults.md)는 iOS 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `StandardUserDefaults`가 사용되고, 이외의 경우에는 `NSUserDefaultsType.SuiteName`에 사용된 지정된 이름을 사용하여 새 `NSUserDefaults`을 만드는 데 이름이 사용됩니다.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 지정한 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 해당 이름을 사용합니다.
 
 또한 `LocalSettings`에는 각 설정의 이름 길이가 최대 255자 이하로 제한하는 사항이 포함되어 있습니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
 
@@ -109,11 +109,11 @@ Preferences.Clear();
 
 ## <a name="persistence"></a>지속성
 
-애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다. 한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
+애플리케이션을 제거하면 모든 _기본 설정_이 제거되나, [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용하는 Android 6.0(API 수준 23) 이상을 대상으로 하여 실행되는 앱은 예외입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 
-문자열을 저장할 때 이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 저하될 수 있습니다.
+문자열을 저장할 때 이 API는 소량 텍스트를 저장하기 위한 것입니다. 대량 텍스트를 저장하는 데 사용하려고 하면 성능이 저하될 수 있습니다.
 
 ## <a name="api"></a>API
 

@@ -1,21 +1,9 @@
 ---
-title: 보기 구현
-description: 이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤의 사용자 지정 렌더러를 만드는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/10/2018
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8215454f80614c0c7cca79af5cf51e2dd96453ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929483"
+title: 보기 구현 설명: 이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤의 사용자 지정 렌더러를 만드는 방법을 설명합니다.
+ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/10/2018 no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
@@ -331,4 +319,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+- [CustomRendererView(샘플)](/samples/xamarin/xamarin-forms-samples/customrenderers-view)

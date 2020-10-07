@@ -5,18 +5,18 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 01/06/2020
+ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d594e627fed21c3c2a73770313fcae29695370c5
-ms.sourcegitcommit: a658de488a6da916145ed4aa016825565110e767
+ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972560"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436370"
 ---
-# <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
+# <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
 **Permissions** 클래스는 런타임 권한을 확인하고 요청하는 기능을 제공합니다.
 
@@ -67,6 +67,13 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 * 사용 안 함 - 디바이스에서 이 기능을 사용할 수 없습니다.
 * 부여됨 - 사용자가 권한을 부여했거나 권한이 자동으로 부여됩니다.
 * 제한됨 - 제한된 상태입니다.
+
+
+## <a name="explain-why-permission-is-needed"></a>권한이 필요한 이유 설명
+
+![시험판 API](~/media/shared/preview.png)
+
+애플리케이션에 특정 권한이 필요한 이유를 설명하는 것이 모범 사례입니다. iOS에서는 사용자에게 표시하는 문자열을 지정해야 합니다. Android에는 이 기능이 없으며 기본 권한 상태도 사용 안 함으로 설정되어 있습니다. 이 때문에 사용자가 권한을 거부했는지 또는 사용자에게 메시지를 처음으로 표시하는지 여부를 파악하지 못합니다. `ShouldShowRationale` 메서드를 사용하여 교육용 UI를 표시할지 여부를 결정할 수 있습니다. 메서드가 `true`를 반환한다면 사용자가 이전에 권한을 거부하거나 사용하지 않도록 설정한 것입니다. 다른 플랫폼은 이 메서드를 호출할 때 항상 `false`를 반환합니다.
 
 ## <a name="available-permissions"></a>사용 가능한 권한
 
@@ -192,7 +199,7 @@ public class ReadWriteStoragePermission : Xamarin.Essentials.Permissions.BasePla
 await Permissions.RequestAsync<ReadWriteStoragePermission>();
 ```
 
-공유 코드에서 이 API를 호출하려는 경우 인터페이스를 만들고 [종속성 서비스](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/)를 사용하여 구현을 등록하고 가져올 수 있습니다.
+공유 코드에서 이 API를 호출하려는 경우 인터페이스를 만들고 [종속성 서비스](../xamarin-forms/app-fundamentals/dependency-service/index.md)를 사용하여 구현을 등록하고 가져올 수 있습니다.
 
 ```csharp
 public interface IReadWritePermission
@@ -235,21 +242,21 @@ if (status != PermissionStatus.Granted)
 
 # <a name="android"></a>[Android](#tab/android)
 
-권한은 Android 매니페스트 파일에 일치하는 특성이 설정되어 있어야 합니다.
+권한은 Android 매니페스트 파일에 일치하는 특성이 설정되어 있어야 합니다. 권한 상태의 기본값이 거부됨입니다.
 
-자세한 내용은 [Xamarin Android 권한](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions) 설명서를 참조하세요.
+자세한 내용은 [Xamarin Android 권한](../android/app-fundamentals/permissions.md) 설명서를 참조하세요.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-권한은 `Info.plist` 파일에 일치하는 문자열이 있어야 합니다. 권한 요청 후 요청이 거부되면 해당 권한을 두 번째 요청해도 팝업이 더 이상 표시되지 않습니다. iOS의 애플리케이션 설정 화면에서 수동으로 설정을 조정하도록 사용자에게 메시지를 표시해야 합니다.
+권한은 `Info.plist` 파일에 일치하는 문자열이 있어야 합니다. 권한 요청 후 요청이 거부되면 해당 권한을 두 번째 요청해도 팝업이 더 이상 표시되지 않습니다. iOS의 애플리케이션 설정 화면에서 수동으로 설정을 조정하도록 사용자에게 메시지를 표시해야 합니다. 권한 상태의 기본값이 알 수 없음입니다.
 
-[iOS 보안 및 개인 정보 보호 기능](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) 설명서를 참조하세요.
+[iOS 보안 및 개인 정보 보호 기능](../ios/app-fundamentals/security-privacy.md) 설명서를 참조하세요.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-권한은 패키지 매니페스트에 일치하는 기능이 선언되어 있어야 합니다.
+권한은 패키지 매니페스트에 일치하는 기능이 선언되어 있어야 합니다. 대부분의 경우 권한 상태의 기본값은 알 수 없음입니다.
 
-자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) 설명서를 참조하세요.
+자세한 내용은 [앱 기능 선언](/windows/uwp/packaging/app-capability-declarations) 설명서를 참조하세요.
 
 --------------
 

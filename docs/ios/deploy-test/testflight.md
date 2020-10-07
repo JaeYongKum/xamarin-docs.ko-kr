@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 35adaf4a5cf9ce103cb36320692ad8307b9d1354
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997490"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564123"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -52,9 +52,9 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 3. 베타 테스트를 관리합니다.
     - 메타데이터 추가
     - 내부 사용자 추가
-      - 최대 25명의 사용자
+      - 최대 100명의 사용자. 각 사용자는 최대 30대의 디바이스를 테스트할 수 있습니다.
     - 외부 사용자 추가
-      - 최대 1,000명의 사용자
+      - 최대 10,000명의 사용자.
       - Apple 지침을 준수해야 하는 베타 테스트 검토가 필요합니다.
 4. 사용자로부터 피드백을 받고, 이에 따라 작업을 수행하고, 2단계로 돌아갑니다.
 
@@ -187,7 +187,7 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 - **법적** – 팀 에이전트는 법적 역할을 할당받는 유일한 관리 사용자입니다. 법적 계약에 서명할 수 있습니다.
 - **기술** – 기술 사용자는 앱과 관련된 대부분의 속성을 변경할 수 있습니다. 예를 들어 앱 정보를 수정하고, 이진 파일을 업로드한 다음, 검토를 위해 앱을 보냅니다.
 
-각 빌드는 최대 25명의 구성원과 공유할 수 있습니다.
+각 빌드는 최대 100명의 멤버와 공유할 수 있고 멤버는 최대 30대의 디바이스를 테스트할 수 있습니다.
 
 테스터를 추가하려면 iTunes Connect 주 화면에서 **사용자 및 역할**로 이동합니다.
 
@@ -221,7 +221,7 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 앱에서 검토를 통과하려면 TestFlight 베타 정보 페이지에 필요한 모든 메타데이터를 입력해야 합니다.
 
-이제 초대 준비를 시작하고, [외부 테스터] 탭을 통해 아래 스크린샷과 같이 이메일, 이름 및 성을 입력하여 최대 2,000명의 외부 테스터를 추가할 수 있습니다. 입력하는 이메일은 Apple ID일 필요는 없습니다. 이는 초대를 받을 이메일일 뿐입니다.
+이제 초대 준비를 시작하고, 외부 테스터 탭을 통해 아래 스크린샷과 같이 이메일, 이름 및 성을 입력하여 최대 10,000명의 외부 테스터를 추가할 수 있습니다. 입력하는 이메일은 Apple ID일 필요는 없습니다. 이는 초대를 받을 이메일일 뿐입니다.
 
 [![테스터 초대](testflight-images/add-external.png)](testflight-images/add-external.png#lightbox)
 

@@ -4,25 +4,56 @@ description: Xamarin.Essentials에서 Browser 클래스를 사용하면 애플�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 09/24/2020
 ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 997c6b66b5dba43eb440130f3f58d31a5a274815
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c38949e9c8c0a957a7afa37206683588ffbb4cf
+ms.sourcegitcommit: 3a15d9b29d65139b18dcf0871fe00cffb2a56357
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802242"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353410"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
+# <a name="no-locxamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
 **Browser** 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
 [!include[](~/essentials/includes/get-started.md)]
+
+**브라우저** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
+
+# <a name="android"></a>[Android](#tab/android)
+
+프로젝트의 대상 Android 버전이 **Android 11(R API 30)** 로 설정된 경우 새 [패키지 가시성 요구 사항](https://developer.android.com/preview/privacy/package-visibility)에 사용되는 쿼리로 해당 Android 매니페스트를 업데이트해야 합니다.
+
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="http"/>
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="https"/>
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+추가 설정이 필요하지 않습니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+플랫폼의 차이점이 없습니다.
+
+-----
 
 ## <a name="using-browser"></a>Browser 사용
 
