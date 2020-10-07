@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e5aeedb7dd51717a9bb987e90dffdcd9b514da0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cce3fbf6f80b8a0fddff2ed2b2af027721faf59d
+ms.sourcegitcommit: bfe713c038a0d6c4362da4c3221d7aee9ab03d2b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937945"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805611"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
@@ -35,7 +35,7 @@ Android에서 보기에 대해 다음과 같은 플랫폼 관련 기능이 제�
 - Android 단추의 기본 패딩 및 그림자 값을 사용 합니다. 자세한 내용은 [Android의 단추 패딩 및 그림자](button-padding-shadow.md)를 참조 하세요.
 - 에 대 한 소프트 키보드의 입력 방법 편집기 옵션을 설정 합니다 [`Entry`](xref:Xamarin.Forms.Entry) . 자세한 내용은 [Android의 입력 입력 방법 편집기 옵션](entry-ime-options.md)을 참조 하세요.
 - 에서 그림자를 사용 하도록 설정 `ImageButton` 합니다. 자세한 내용은 [Android의 ImageButton 드롭 그림자](imagebutton-drop-shadow.md)를 참조 하세요.
-- 에서 빠른 스크롤 사용에 [`ListView`](xref:Xamarin.Forms.ListView) 대 한 자세한 내용은 [ListView의 빠른 스크롤 (Android](listview-fast-scrolling.md))을 참조 하세요.
+- 에서 빠른 스크롤을 사용 [`ListView`](xref:Xamarin.Forms.ListView) 합니다. 자세한 내용은 [Android에서의 빠른 스크롤](listview-fast-scrolling.md)(영문)을 참조 하세요.
 - 를 열 때 사용 되는 전환을 제어 `SwipeView` 합니다. 자세한 내용은 [SwipeView 살짝 밀기 전환 모드](swipeview-swipetransitionmode.md)를 참조 하세요.
 - 에서 혼합 된 콘텐츠를 표시할 수 있는지 여부를 제어 [`WebView`](xref:Xamarin.Forms.WebView) 합니다. 자세한 내용은 [Android의 웹 보기 혼합 콘텐츠](webview-mixed-content.md)를 참조 하세요.
 - 에서 확대/축소를 사용 하도록 설정 [`WebView`](xref:Xamarin.Forms.WebView) 합니다. 자세한 내용은 [Android에서 웹 보기 확대/축소](webview-zoom-controls.md)를 참조 하세요.
@@ -62,7 +62,7 @@ Xamarin.FormsAndroid의 클래스에 대해 다음과 같은 플랫폼별 기능
 
 ## <a name="material-design-via-appcompat"></a>AppCompat을 통한 재질 디자인
 
-Xamarin.Forms이제 Android 프로젝트를 `FormsAppCompatActivity` 주 활동의 기본 클래스로 사용 합니다. 이 클래스는 Android에서 제공 하는 **AppCompat** 기능을 사용 하 여 재질 디자인 테마를 구현 합니다.
+Xamarin.Forms 이제 Android 프로젝트를 `FormsAppCompatActivity` 주 활동의 기본 클래스로 사용 합니다. 이 클래스는 Android에서 제공 하는 **AppCompat** 기능을 사용 하 여 재질 디자인 테마를 구현 합니다.
 
 Android 프로젝트에 재질 디자인 테마를 추가 하려면 Xamarin.Forms [AppCompat 지원에 대 한 설치 지침](appcompat-material-design.md) 을 따르세요.
 
