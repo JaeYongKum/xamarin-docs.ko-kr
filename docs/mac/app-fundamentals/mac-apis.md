@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: 67638a261cd9a6e8c356924d47ea4adb4eae6a80
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: efac76338af710e716decf47635652bf8de74910
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430996"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851511"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>Xamarin.ios 개발자를 위한 macOS Api
 
@@ -33,8 +33,8 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 - `-`접두사는 인스턴스 (비정적) 메서드 임을 의미 합니다. +는 클래스 (정적) 메서드 임을 의미 합니다.
 - `(BOOL)` 반환 형식 (c #의 경우 bool)입니다.
 - `canDragRowsWithIndexes` 이름의 첫 번째 부분입니다.
-- `(NSIndexSet *)rowIndexes` 는 첫 번째 매개 변수이 고이 매개 변수의 형식은입니다. 첫 번째 매개 변수는 다음과 같은 형식입니다. `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` 는 두 번째 매개 변수 및 해당 형식입니다. 첫 번째 뒤의 모든 매개 변수는 형식입니다. `selectorPart:(Type) pararmName`
+- `(NSIndexSet *)rowIndexes` 는 첫 번째 매개 변수이 고이 매개 변수의 형식은입니다. 첫 번째 매개 변수는 다음과 같은 형식입니다. `(Type) paramName`
+- `atPoint:(NSPoint)mouseDownPoint` 는 두 번째 매개 변수 및 해당 형식입니다. 첫 번째 뒤의 모든 매개 변수는 형식입니다. `selectorPart:(Type) paramName`
 - 이 메시지 선택기의 전체 이름은 `canDragRowsWithIndexes:atPoint:` 입니다. 끝에는 `:` 이 중요 합니다.
 - 실제 Xamarin.ios c # 바인딩은 다음과 같습니다. `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
@@ -45,7 +45,7 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 ```
 
 - 인스턴스는 `v` `canDragRowsWithIndexes:atPoint` 두 매개 변수 및가 전달 된 라는 선택기를 사용 `set` `point` 합니다.
-- C #에서 메서드 호출은 다음과 같습니다. `x.CanDragRows (set, point);`
+- C #에서 메서드 호출은 다음과 같습니다. `v.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 

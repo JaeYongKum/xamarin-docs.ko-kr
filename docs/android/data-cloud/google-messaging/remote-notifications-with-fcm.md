@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: 702ca70e220d8e4d28a1a2ddc6be40daae052d58
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 75edc03706908df365bfda05229a8081ef50a4ac
+ms.sourcegitcommit: db5173f26edbb94b0ec60ab9a708fa04478480f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456044"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91853292"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase Cloud Messaging을 사용하여 원격 알림
 
@@ -476,7 +476,7 @@ if (Intent.Extras != null)
 Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
-`google_app_id`출력 창에 기록 되는 값은google-services.js에 기록 된 값과 일치 해야 합니다 `mobilesdk_app_id` . **google-services.json**
+`google_app_id`출력 창에 기록 되는 값은google-services.js에 기록 된 값과 일치 해야 합니다 `mobilesdk_app_id` . **google-services.json** 는 `Resource.String.google_app_id` ** 에서google-services.js**처리 될 때 msbuild에 의해 생성 됩니다. 
 
 ### <a name="send-a-message"></a>메시지 보내기
 
@@ -764,7 +764,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 다음은 그 예입니다.
+FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();

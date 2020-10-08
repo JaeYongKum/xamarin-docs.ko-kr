@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b70a4693f356fdf83ca2f7fee9615855a5569712
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 65cc67516442ea2602812a3b1f6ff4f0c71abb05
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437028"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851550"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -78,7 +78,7 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 
  ios 8에는 iOS storyboard 파일이 사용 가능한 모든 화면 크기에서 작동할 수 있도록 하는 [크기 클래스가](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 도입 되어 개발자가 모든 ios 장치에 대해 하나의 UI를 만들 수 있습니다. 기본적으로 모든 새 Xamarin.ios 응용 프로그램은 size 클래스를 사용 합니다. 이전 프로젝트의 크기 클래스를 사용 하려면 [통합 된 스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드를 참조 하세요.
 
-Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하는 날씨를 직접 지정 하지 않는다는 점에 주의 하세요. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다.
+Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하 고 있는지 여부를 직접 지정 하지 않는다는 점에 주의 하세요. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다.
 
 [![적응 Segue 드롭다운](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
@@ -326,7 +326,7 @@ public partial class MainViewController : UIViewController
 
     [![가운데 선](images/passwordvc.png)](images/passwordvc.png#lightbox)
 
-2. *PinkButton* 에서 *PinkViewController*로 이동 하 고 마우스 위로 **누름** 을 선택 하 여 분홍색으로 이동 단추와 뷰 컨트롤러 사이에 Segue를 만듭니다.
+2. Segue에서 *PinkButton* 로 이동 하 고,에서 *PinkViewController*로 이동 하 고, 마우스를 **누를 때 푸시** 를 선택 하 Ctrl-Dragging 여 분홍색으로 이동 단추와 보기 컨트롤러 사이에를 만듭니다.
 
 3. Segue을 클릭 하 고 *id* 를 지정 합니다 `SegueToPink` .
 
