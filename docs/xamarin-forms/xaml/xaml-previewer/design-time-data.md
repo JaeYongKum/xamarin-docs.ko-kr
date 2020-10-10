@@ -10,16 +10,19 @@ ms.date: 03/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4221cd313ca8fbc3f3f9f886e3bd3f774c7472f7
+ms.sourcegitcommit: 27f33b0a83b9dc871ad9fb207a1c9960ef197d9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91897949"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기에서 디자인 타임 데이터 사용
 
 _일부 레이아웃은 데이터 없이 시각화 하기가 어렵습니다. 이러한 팁을 사용 하 여 XAML 미리 보기에서 데이터를 많이 사용 하는 페이지의 미리 보기를 최대한 활용할 수 있습니다._
+
+> [!NOTE]
+> Windows Presentation Foundation (WPF) 또는 UWP를 사용 하는 경우 [데스크톱 응용 프로그램용 XAML 디자이너에서 디자인 타임 데이터 사용](/visualstudio/xaml-tools/xaml-designtime-data) 을 참조 하세요.
 
 ## <a name="design-time-data-basics"></a>디자인 타임 데이터 기본 사항
 
@@ -41,7 +44,7 @@ mc:Ignorable="d"
 
 [![레이블에 텍스트를 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-label-sm.png "텍스트를 사용 하 여 시간 데이터 디자인")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-이 예제에서를 사용 하지 않으면 `d:Text` XAML 미리 보기에서 레이블에 아무것도 표시 되지 않습니다. 대신 "이름!"이 표시 됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
+이 예제에서를 사용 하지 않으면 `d:Text` XAML 미리 보기에서 레이블에 아무것도 표시 되지 않습니다. 대신 “Name!”이 표시됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
 
 `d:` Xamarin.Forms 색, 글꼴 크기 및 간격과 같은 컨트롤의 특성과 함께를 사용할 수 있습니다. 컨트롤 자체에 추가할 수도 있습니다.
 
@@ -51,9 +54,9 @@ mc:Ignorable="d"
 
 [![단추 컨트롤을 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-controls-sm.png "단추 컨트롤을 사용 하 여 시간 데이터 디자인")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
-이 예제에서 단추는 디자인 타임에만 표시 됩니다. 이 메서드를 사용 하 여 [XAML 미리 보기에서 지원 되지 않는 사용자 지정 컨트롤](render-custom-controls.md)에 대 한 자리 표시자를에 삽입할 수 있습니다.
+이 예제에서 단추는 디자인 타임에만 표시됩니다. 이 메서드를 사용 하 여 [XAML 미리 보기에서 지원 되지 않는 사용자 지정 컨트롤](render-custom-controls.md)에 대 한 자리 표시자를에 삽입할 수 있습니다.
 
-## <a name="preview-images-at-design-time"></a>디자인 타임에 이미지 미리 보기
+## <a name="preview-images-at-design-time"></a>디자인 타임의 미리 보기 이미지
 
 페이지에 바인딩되거나 동적으로 로드 되는 이미지에 대 한 디자인 타임 소스를 설정할 수 있습니다. Android 프로젝트에서 XAML 미리 보기에 표시 하려는 이미지를 **> 그릴** 수 있는 폴더에 리소스를 추가 합니다. IOS 프로젝트에서 **리소스** 폴더에 이미지를 추가 합니다. 그런 다음 디자인 타임에 XAML 미리 보기에 해당 이미지를 표시할 수 있습니다.
 
@@ -148,4 +151,4 @@ xmlns:models="clr-namespace:Monkeys.Models"
 
 ### <a name="the-xaml-previewer-stopped-working"></a>XAML 미리 보기의 작동이 중지 되었습니다.
 
-XAML 파일을 닫았다가 다시 열어 프로젝트를 정리 하 고 다시 빌드 해 보세요.
+XAML 파일을 닫았다가 다시 열어 프로젝트를 정리하고 다시 빌드해 보세요.
