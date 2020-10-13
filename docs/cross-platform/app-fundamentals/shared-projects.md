@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: 1a71b84d1068fef1730196bafb0f0d7e2a948c5c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bd8314e0f84dd74477782a1cfdcb6b91953ecdcd
+ms.sourcegitcommit: 827daa78c090bf79a1b55da45bb8012a1723b720
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936918"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997518"
 ---
 # <a name="shared-projects-code-sharing"></a>공유 프로젝트 코드 공유
 
@@ -59,7 +59,7 @@ Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 �
 
 ![공유 프로젝트에 대 한 프로젝트 참조](shared-projects-images/xs-reference.png)
 
-다른 라이브러리나 응용 프로그램에서 공유 프로젝트를 참조 하면 솔루션을 빌드하고 코드에서 오류를 볼 수 있습니다. 공유 프로젝트를 _둘_ 이상의 다른 프로젝트에서 참조 하는 경우 소스 코드 편집기의 왼쪽 위에이 파일을 참조 하는 프로젝트를 선택 하는 메뉴가 표시 됩니다.
+다른 라이브러리나 응용 프로그램에서 공유 프로젝트를 참조 하면 솔루션을 빌드하고 코드에서 오류를 볼 수 있습니다. _두 개 이상의_ 다른 프로젝트에서 공유 프로젝트를 참조 하는 경우 소스 코드 편집기의 왼쪽 위에이 파일을 참조 하는 프로젝트를 보여 주는 메뉴가 나타납니다.
 
 ## <a name="shared-project-options"></a>공유 프로젝트 옵션
 
