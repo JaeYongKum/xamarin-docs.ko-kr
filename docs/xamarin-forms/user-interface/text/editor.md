@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42f89f09bd84127fd19bc3ab64794bdac7f145d7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 257962516b8a183e63c49b22bc2be108364d9425
+ms.sourcegitcommit: e7d6f8bb074c08d87f7507ad5f1377cfacefa32a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561627"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92041888"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -133,7 +133,7 @@ Editor editor = new editor { CharacterSpacing = 10 };
 
 ## <a name="auto-size-an-editor"></a>편집기 자동 크기 조정
 
-[`Editor`](xref:Xamarin.Forms.Editor) [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) 속성을 열거형 값으로 설정 하 여 해당 콘텐츠에 대 한 크기를 자동으로 조정 하도록 만들 수 있습니다 [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) . 이 열거형에는 두 개의 값이 있습니다.
+[`Editor`](xref:Xamarin.Forms.Editor) [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) 속성을 열거형 값으로 설정 하 여 해당 콘텐츠에 대 한 크기를 자동으로 조정 하도록 만들 수 있습니다 [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) [`EditorAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) . 이 열거형에는 두 개의 값이 있습니다.
 
 - [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) 자동 크기 조정을 사용 하지 않도록 설정 하 고 기본값을 나타냅니다.
 - [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) 자동 크기 조정을 사용 하도록 설정 됨을 나타냅니다.
