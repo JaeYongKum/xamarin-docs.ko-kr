@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 66d2f66f0118e84778b25fc0e872099439510ce2
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 44003e55ee88db727c26def56b3363dbf6c982e9
+ms.sourcegitcommit: 124d845f8d2768353e8b7fe1ab1d959a589367f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226848"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91872279"
 ---
 # <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
 
@@ -154,3 +154,8 @@ APK가 Finder에서 복사하여 최종 대상으로 보낼 수 있습니다. An
 ## <a name="next-steps"></a>다음 단계
 
 릴리스를 위해 서명한 애플리케이션 패키지를 게시해야 합니다. 다음 섹션에서는 애플리케이션을 게시하는 여러 가지 방법을 설명합니다.
+
+
+## <a name="related-links"></a>관련 링크
+
+- [Android 키 저장소 생성](https://developer.android.com/studio/publish/app-signing#generate-key)
