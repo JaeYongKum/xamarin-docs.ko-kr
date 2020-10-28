@@ -6,16 +6,16 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 089fb69dfc12b23bb594d5f88a50b37f9694c778
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 77f47af2ed2cce787cf0f66e524c2314ef4c9452
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563382"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897507"
 ---
 # <a name="no-locxamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView 데이터
 
@@ -35,56 +35,10 @@ ms.locfileid: "91563382"
 
 ## <a name="populate-a-collectionview-with-data"></a>데이터를 사용 하 여 CollectionView 채우기
 
-는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 문자열 배열에서 속성을 초기화 하 여 XAML에 항목을 추가할 수 있습니다 `ItemsSource` .
-
-```xaml
-<CollectionView>
-  <CollectionView.ItemsSource>
-    <x:Array Type="{x:Type x:String}">
-      <x:String>Baboon</x:String>
-      <x:String>Capuchin Monkey</x:String>
-      <x:String>Blue Monkey</x:String>
-      <x:String>Squirrel Monkey</x:String>
-      <x:String>Golden Lion Tamarin</x:String>
-      <x:String>Howler Monkey</x:String>
-      <x:String>Japanese Macaque</x:String>
-    </x:Array>
-  </CollectionView.ItemsSource>
-</CollectionView>
-```
-
-> [!NOTE]
-> `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
-
-해당하는 C# 코드는 다음과 같습니다.
-
-```csharp
-CollectionView collectionView = new CollectionView();
-collectionView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
-
-> [!WARNING]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)[`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)가 UI 스레드에서 업데이트 되 면에서 예외를 throw 합니다.
-
-기본적으로는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다음 스크린샷에 표시 된 것 처럼 세로 목록에 항목을 표시 합니다.
-
-[![IOS 및 Android에서 텍스트 항목을 포함 하는 CollectionView의 스크린샷](populate-data-images/text.png "CollectionView의 텍스트 항목")](populate-data-images/text-large.png#lightbox "CollectionView의 텍스트 항목")
+는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 기본적으로는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 세로 목록에 항목을 표시 합니다.
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView)기본 컬렉션에서 항목이 추가, 제거 또는 변경 될 때를 새로 고쳐야 하는 경우 기본 컬렉션은 `IEnumerable` 와 같은 속성 변경 알림을 보내는 컬렉션 이어야 합니다 `ObservableCollection` .
-
-레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [ Xamarin.Forms CollectionView layout](layout.md)을 참조 하세요. 에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 `CollectionView` [항목 모양 정의](#define-item-appearance)를 참조 하세요.
-
-### <a name="data-binding"></a>데이터 바인딩
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 데이터 바인딩을 사용 하 여 속성을 컬렉션에 바인딩하면 데이터를 데이터로 채울 수 있습니다 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `IEnumerable` . XAML에서이 작업은 태그 확장을 사용 하 여 구현 됩니다 `Binding` .
 
@@ -104,7 +58,10 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 > [!NOTE]
 > 컴파일된 바인딩을 사용 하면 응용 프로그램에서 데이터 바인딩 성능을 향상 시킬 수 있습니다 Xamarin.Forms . 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
-데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [ Xamarin.Forms CollectionView layout](layout.md)을 참조 하세요. 에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 `CollectionView` [항목 모양 정의](#define-item-appearance)를 참조 하세요. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)[`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)가 UI 스레드에서 업데이트 되 면에서 예외를 throw 합니다.
 
 ## <a name="define-item-appearance"></a>항목 모양 정의
 
