@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 01902942c750a3cd278d648fa82499af4c5d3ab6
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436370"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169971"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
@@ -44,7 +44,7 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 필요한 권한이 선언되지 않은 경우에는 `PermissionException`이 throw됩니다.
 
-권한을 요청하기 전에 권한 상태를 확인하는 것이 좋습니다. 사용자에게 메시지가 표시되지 않는 경우 각 운영 체제는 다른 기본 상태를 반환합니다. iOS는 `Unknown`을 반환하고, 다른 운영 체제는 `Denied`를 반환합니다.
+권한을 요청하기 전에 권한 상태를 확인하는 것이 좋습니다. 사용자에게 메시지가 표시되지 않는 경우 각 운영 체제는 다른 기본 상태를 반환합니다. iOS는 `Unknown`을 반환하고, 다른 운영 체제는 `Denied`를 반환합니다. 상태가 `Granted`인 경우 다른 호출을 하지 않아도 됩니다. iOS에서 상태가 `Denied`인 경우 사용자에게 설정에서 권한을 변경하라는 메시지를 표시해야 하며, Android에서는 `ShouldShowRationale`을 호출하여 과거에 사용자가 권한 요청을 거부한 적이 있는지 감지할 수 있습니다.
 
 ## <a name="requesting-permissions"></a>권한 요청
 
@@ -56,7 +56,7 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
 필요한 권한이 선언되지 않은 경우에는 `PermissionException`이 throw됩니다.
 
-일부 플랫폼에서 권한 요청은 한 번만 활성화될 수 있습니다. 권한이 `Denied` 상태인지 확인하고 사용자에게 수동으로 설정하도록 요청하려면 개발자가 추가 프롬프트를 처리해야 합니다.
+일부 플랫폼에서 권한 요청은 한 번만 활성화될 수 있습니다. 권한이 `Denied` 상태인지 확인하고 사용자에게 수동으로 설정하도록 요청하려면 개발자가 추가 프롬프트를 처리해야 합니다. 
 
 ## <a name="permission-status"></a>권한 상태
 
@@ -114,12 +114,24 @@ Xamarin.Essentials는 최대한 많은 권한을 추상화하려고 시도합니
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-    if (status != PermissionStatus.Granted)
+    
+    if (status == PermissionStatus.Granted)
+        return status;
+        
+    
+    if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
-        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        // Prompt the user to turn on in settings
+        // On iOS once a permission has been denied it may not be requested again from the application
+        return status;
     }
+    
+    if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+    {
+        // Prompt the user with additional information as to why the permission is needed
+    }   
 
-    // Additionally could prompt the user to turn on in settings
+    status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
     return status;
 }

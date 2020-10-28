@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c4437f05eddd6885f88fc57ddc108f4fc9f4376d
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: f373b8c249d4dba11db3b8445648afe2c61d273f
+ms.sourcegitcommit: eda6acc7471acc2f95df498e747376006e3d3f2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433531"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92214825"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
@@ -25,7 +25,7 @@ ms.locfileid: "91433531"
 
 [MSAL(Microsoft 인증 라이브러리)](/azure/active-directory/develop/msal-overview)은 앱에 인증을 추가하는 뛰어난 턴 키 솔루션을 제공합니다. 클라이언트 NuGet 패키지에서 Xamarin 앱을 지원하기도 합니다.
 
-자체 웹 서비스를 인증에 사용하는 데 관심이 있는 경우 **WebAuthenticator**를 사용하여 클라이언트 쪽 기능을 구현할 수 있습니다.
+자체 웹 서비스를 인증에 사용하는 데 관심이 있는 경우 **WebAuthenticator** 를 사용하여 클라이언트 쪽 기능을 구현할 수 있습니다.
 
 ## <a name="why-use-a-server-back-end"></a>서버 백 엔드를 사용하는 이유
 
@@ -74,12 +74,28 @@ protected override void OnResume()
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-iOS에서는 Info.plist에 앱의 콜백 URI 패턴을 추가해야 합니다.
+iOS에서는 Info.plist에 다음과 같은 앱의 콜백 URI 패턴을 추가해야 합니다.
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>xamarinessentials</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>xamarinessentials</string>
+        </array>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+    </dict>
+</array>
+```
 
 > [!NOTE]
 > [범용 앱 링크](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content)를 사용하여 앱의 콜백 URI를 모범 사례로 등록하는 것이 좋습니다.
 
-또한 `AppDelegate`의 `OpenUrl` 메서드를 재정의하여 Essentials로 콜백해야 합니다.
+또한 `AppDelegate`의 `OpenUrl` 및 `ContinueUserActivity` 메서드를 재정의하여 Essentials로 콜백해야 합니다.
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
@@ -88,6 +104,13 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         return true;
 
     return base.OpenUrl(app, url, options);
+}
+
+public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+{
+    if (Xamarin.Essentials.Platform.ContinueUserActivity(application, userActivity, completionHandler))
+        return true;
+    return base.ContinueUserActivity(application, userActivity, completionHandler);
 }
 ```
 
@@ -190,19 +213,23 @@ var accessToken = r?.AccessToken;
 
 모든 웹 백 엔드 서비스에서 `WebAuthenticator` API를 사용할 수 있습니다.  ASP.NET Core 앱에서 사용하려면 먼저 다음 단계를 사용하여 웹앱을 구성해야 합니다.
 
-1. ASP.NET Core 웹앱에 원하는 [외부 소셜 인증 공급자](/aspnet/core/security/authentication/social/?tabs=visual-studio&view=aspnetcore-3.1)를 설치합니다.
+1. ASP.NET Core 웹앱에 원하는 [외부 소셜 인증 공급자](/aspnet/core/security/authentication/social/?tabs=visual-studio)를 설치합니다.
 2. `.AddAuthentication()` 호출에서 기본 인증 체계를 `CookieAuthenticationDefaults.AuthenticationScheme`으로 설정합니다.
 3. Startup.cs `.AddAuthentication()` 호출에서 `.AddCookie()`를 사용합니다.
 4. `.SaveTokens = true;`를 사용하여 모든 공급자를 구성해야 합니다.
 
+
+``csharp services.AddAuthentication(o => { o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme; }) .AddCookie() .AddFacebook(fb => { fb.AppId = Configuration["FacebookAppId"]; fb.AppSecret = Configuration["FacebookAppSecret"]; fb.SaveTokens = true; });
+```
+
 > [!TIP]
-> Apple 로그인을 포함하려는 경우 `AspNet.Security.OAuth.Apple` NuGet 패키지를 사용할 수 있습니다.  Essentials GitHub 리포지토리에서 전체 [Startup.cs 샘플](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60)을 볼 수 있습니다.
+> If you'd like to include Apple Sign In, you can use the `AspNet.Security.OAuth.Apple` NuGet package.  You can view the full [Startup.cs sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60) in the Essentials GitHub repository.
 
-### <a name="add-a-custom-mobile-auth-controller"></a>사용자 지정 모바일 인증 컨트롤러 추가
+### Add a custom mobile auth controller
 
-모바일 인증 흐름에서는 사용자가 선택한 공급자(예: 앱의 로그인 화면에서 "Microsoft" 단추 클릭)로 직접 흐름을 시작하는 것이 좋습니다.  또한 특정 콜백 URI에서 애플리케이션으로 관련 정보를 반환하여 인증 흐름을 종료할 수 있어야 하는 것도 중요합니다.
+With a mobile authentication flow it is usually desirable to initiate the flow directly to a provider that the user has chosen (e.g. by clicking a "Microsoft" button on the sign in screen of the app).  It is also important to be able to return relevant information to your app at a specific callback URI to end the authentication flow.
 
-이를 위해 사용자 지정 API 컨트롤러를 사용합니다.
+To achieve this, use a custom API Controller:
 
 ```csharp
 [Route("mobileauth")]
@@ -228,6 +255,9 @@ public class AuthController : ControllerBase
 경우에 따라 공급자의 `access_token`과 같은 데이터를 앱으로 다시 반환해야 할 수 있는데, 이 작업은 콜백 URI의 쿼리 매개 변수를 통해 수행할 수 있습니다. 또는 서버에서 고유한 ID를 만들고 앱에 자체 토큰을 다시 전달할 수도 있습니다. 어떤 작업을 수행할지, 어떤 방법을 사용할지는 개발자가 결정합니다.
 
 Essentials 리포지토리에서 [전체 컨트롤러 샘플](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Controllers/MobileAuthController.cs)을 확인하세요.
+
+> [!NOTE]
+> 위의 샘플은 타사 인증(예: OAuth) 공급자의 액세스 토큰을 반환하는 방법을 보여줍니다. 웹 백엔드 자체에 대한 웹 요청을 인증하는 데 사용할 수 있는 토큰을 얻으려면 웹앱에서 자체 토큰을 만들어서 이를 대신 반환해야 합니다.  [ASP.NET Core 인증 개요](/aspnet/core/security/authentication)에는 ASP.NET Core의 고급 인증 시나리오에 대해 자세히 설명되어 있습니다.
 
 -----
 ## <a name="api"></a>API

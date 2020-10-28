@@ -6,16 +6,16 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0654aef28ac356fdffc5a846f9ca654db240367
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 82098c47a313eac48b457575620287af74aacd15
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562862"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897548"
 ---
 # <a name="no-locxamarinforms-carouselview-data"></a>Xamarin.Forms CarouselView 데이터
 
@@ -37,53 +37,10 @@ ms.locfileid: "91562862"
 
 ## <a name="populate-a-carouselview-with-data"></a>데이터를 사용 하 여 CarouselView 채우기
 
-는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 문자열 배열에서 속성을 초기화 하 여 XAML에 항목을 추가할 수 있습니다 `ItemsSource` .
-
-```xaml
-<CarouselView>
-    <CarouselView.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>Baboon</x:String>
-            <x:String>Capuchin Monkey</x:String>
-            <x:String>Blue Monkey</x:String>
-            <x:String>Squirrel Monkey</x:String>
-            <x:String>Golden Lion Tamarin</x:String>
-            <x:String>Howler Monkey</x:String>
-            <x:String>Japanese Macaque</x:String>
-        </x:Array>
-    </CarouselView.ItemsSource>
-</CarouselView>
-```
-
-> [!NOTE]
-> `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
-
-해당하는 C# 코드는 다음과 같습니다.
-
-```csharp
-CarouselView carouselView = new CarouselView();
-carouselView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
+는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 기본적으로는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 항목을 가로로 표시 합니다.
 
 > [!IMPORTANT]
 > [`CarouselView`](xref:Xamarin.Forms.CarouselView)기본 컬렉션에서 항목이 추가, 제거 또는 변경 될 때를 새로 고쳐야 하는 경우 기본 컬렉션은 `IEnumerable` 와 같은 속성 변경 알림을 보내는 컬렉션 이어야 합니다 `ObservableCollection` .
-
-기본적으로는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 항목을 가로로 표시 합니다. 다음 스크린샷에는 `CarouselView` iOS 및 Android에서 다른 문자열 항목을 표시 하는 방법을 보여 줍니다.
-
-[![IOS 및 Android에서 텍스트 항목을 포함 하는 CarouselView의 스크린샷](populate-data-images/text.png "CarouselView의 텍스트 항목")](populate-data-images/text-large.png#lightbox "CarouselView의 텍스트 항목")
-
-방향을 변경 하는 방법에 대 한 자세한 내용은 [`CarouselView`](xref:Xamarin.Forms.CarouselView) [ Xamarin.Forms CarouselView Layout](layout.md)을 참조 하세요. 에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 `CarouselView` [항목 모양 정의](#define-item-appearance)를 참조 하세요.
-
-### <a name="data-binding"></a>데이터 바인딩
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 데이터 바인딩을 사용 하 여 속성을 컬렉션에 바인딩하면 데이터를 데이터로 채울 수 있습니다 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) `IEnumerable` . XAML에서이 작업은 태그 확장을 사용 하 여 구현 됩니다 `Binding` .
 
@@ -103,7 +60,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 > [!NOTE]
 > 컴파일된 바인딩을 사용 하면 응용 프로그램에서 데이터 바인딩 성능을 향상 시킬 수 있습니다 Xamarin.Forms . 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
-데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+방향을 변경 하는 방법에 대 한 자세한 내용은 [`CarouselView`](xref:Xamarin.Forms.CarouselView) [ Xamarin.Forms CarouselView Layout](layout.md)을 참조 하세요. 에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 `CarouselView` [항목 모양 정의](#define-item-appearance)를 참조 하세요. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
 ## <a name="define-item-appearance"></a>항목 모양 정의
 

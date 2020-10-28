@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ef4c9961e7e1fac20084247f4c85e87b79bcc427
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 93ad745790a746924f7037e490985c53c332c089
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801935"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169919"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: 공유
+# <a name="no-locxamarinessentials-share"></a>Xamarin.Essentials: 공유
 
 **Share** 클래스를 사용하면 Share이 디바이스에 있는 다른 Share의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.
 
@@ -82,7 +82,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="presentation-location"></a>프레젠테이션 위치
 
-iPadOS에서 공유를 요청하는 경우 팝 오버 컨트롤에 표시할 수 있습니다. `PresentationSourceBounds` 속성을 사용하여 위치를 지정할 수 있습니다.
+iPadOS에서 공유를 요청하는 경우 팝 오버 컨트롤에 표시할 수 있습니다. 이는 팝업이 표시되고 화살표가 직접 가리키는 위치를 지정합니다. 이 위치는 보통 작업을 시작한 컨트롤입니다. `PresentationSourceBounds` 속성을 사용하여 위치를 지정할 수 있습니다.
 
 ```csharp
 await Share.RequestAsync(new ShareFileRequest
@@ -93,6 +93,72 @@ await Share.RequestAsync(new ShareFileRequest
                             ? new System.Drawing.Rectangle(0, 20, 0, 0)
                             : System.Drawing.Rectangle.Empty
 });
+```
+
+Xamarin.Forms를 사용할 경우 `View`를 전달하고 경계를 계산할 수 있습니다.
+
+
+```
+public static class ViewHelpers
+{
+    public static Rectangle GetAbsoluteBounds(this Xamarin.Forms.View element)
+    {
+        Element looper = element;
+
+        var absoluteX = element.X + element.Margin.Top;
+        var absoluteY = element.Y + element.Margin.Left;
+
+        // Add logic to handle titles, headers, or other non-view bars
+
+        while (looper.Parent != null)
+        {
+            looper = looper.Parent;
+            if (looper is Xamarin.Forms.View v)
+            {
+                absoluteX += v.X + v.Margin.Top;
+                absoluteY += v.Y + v.Margin.Left;
+            }
+        }
+
+        return new Rectangle(absoluteX, absoluteY, element.Width, element.Height);
+    }
+
+    public static System.Drawing.Rectangle ToSystemRectangle(this Rectangle rect) =>
+        new System.Drawing.Rectangle((int)rect.X, (int)rect.Y, (int)rect.Width, (int)rect.Height);
+}
+```
+
+`RequstAsync` 호출 시 이를 활용할 수 있습니다.
+
+```csharp
+public Command<Xamarin.Forms.View> ShareCommand { get; } = new Command<Xamarin.Forms.View>(Share);
+async void Share(Xamarin.Forms.View element)
+{
+    try
+    {
+        Analytics.TrackEvent("ShareWithFriends");
+        var bounds = element.GetAbsoluteBounds();
+
+        await Share.RequestAsync(new ShareTextRequest
+        {
+            PresentationSourceBounds = bounds.ToSystemRectangle(),
+            Title = "Title",
+            Text = "Text"
+        });
+    }
+    catch (Exception)
+    {
+        // Handle exception that share failed
+    }
+}
+```
+
+`Command` 트리거 시 호출하는 요소를 전달할 수 있습니다.
+
+```xml
+<Button Text="Share"
+        Command="{Binding ShareWithFriendsCommand}"
+        CommandParameter="{Binding Source={RelativeSource Self}}"/>
 ```
 
 ## <a name="platform-differences"></a>플랫폼의 차이점

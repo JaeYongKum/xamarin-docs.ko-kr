@@ -10,12 +10,12 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6c5390057baf48634056101d44540020648ea709
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: afa5ccf8f4d4485ae7a9a45bcbc745bddee20f5c
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563109"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897483"
 ---
 # <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
@@ -42,7 +42,6 @@ NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 �
 - **ID:** sqlite-net-pcl
 - **작성자:** SQLite-net
 - **소유자:** praeclarum
-- **프로젝트 URL:** https://github.com/praeclarum/sqlite-net
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -238,7 +237,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 다음은 그 예입니다.
+이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -260,9 +259,9 @@ SQLite는이 문서 및 샘플 앱에 설명 된 것 보다 더 많은 기능을
 
 기본적으로 SQLite는 기존 롤백 저널을 사용 합니다. 변경 되지 않은 데이터베이스 콘텐츠의 복사본이 별도의 롤백 파일에 기록 된 후 변경 내용이 데이터베이스 파일에 직접 기록 됩니다. 롤백은 롤백 저널을 삭제할 때 발생 합니다.
 
-WAL (미리 쓰기 로깅)은 먼저 별도의 WAL 파일에 변경 내용을 기록 합니다. WAL 모드에서 커밋은 WAL 파일에 추가 된 특수 레코드로, 단일 WAL 파일에서 여러 트랜잭션을 수행할 수 있습니다. WAL 파일은 _검사점_이라는 특수 한 작업으로 데이터베이스 파일에 다시 병합 됩니다.
+WAL (Write-Ahead 로깅)은 먼저 별도의 WAL 파일에 변경 내용을 기록 합니다. WAL 모드에서 커밋은 WAL 파일에 추가 된 특수 레코드로, 단일 WAL 파일에서 여러 트랜잭션을 수행할 수 있습니다. WAL 파일은 _검사점_ 이라는 특수 한 작업으로 데이터베이스 파일에 다시 병합 됩니다.
 
-읽기 및 쓰기 작업이 동시에 수행 될 수 있도록 판독기와 작성기가 서로를 차단 하지 않기 때문에 로컬 데이터베이스에 대 한 WAL 속도가 빨라질 수 있습니다. 그러나 WAL 모드는 _페이지 크기_를 변경할 수 없으며, 데이터베이스에 추가 파일 연결을 추가 하 고, 추가 _검사점_ 작업을 추가 합니다.
+읽기 및 쓰기 작업이 동시에 수행 될 수 있도록 판독기와 작성기가 서로를 차단 하지 않기 때문에 로컬 데이터베이스에 대 한 WAL 속도가 빨라질 수 있습니다. 그러나 WAL 모드는 _페이지 크기_ 를 변경할 수 없으며, 데이터베이스에 추가 파일 연결을 추가 하 고, 추가 _검사점_ 작업을 추가 합니다.
 
 SQLite.NET에서 WAL을 사용 하도록 설정 하려면 `EnableWriteAheadLoggingAsync` 인스턴스에서 메서드를 호출 합니다 `SQLiteAsyncConnection` .
 
@@ -270,7 +269,7 @@ SQLite.NET에서 WAL을 사용 하도록 설정 하려면 `EnableWriteAheadLoggi
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-자세한 내용은 sqlite.org의 [SQLite 미리 쓰기 로깅](https://www.sqlite.org/wal.html) 을 참조 하세요.
+자세한 내용은 [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) on sqlite.org을 참조 하세요.
 
 ### <a name="copying-a-database"></a>데이터베이스 복사
 
