@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 35f2db71f582c7e6e30448cf32ba4d95033652bf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5bee8df72290cab3ed6d5c23fef6c2ae2f1a2559
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570988"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928518"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>목표 Sharpie 시작 하기
 
@@ -22,13 +22,13 @@ ms.locfileid: "84570988"
 
 ## <a name="installing-objective-sharpie"></a>목표 Sharpie 설치
 
-목표 Sharpie 현재 Mac OS X 10.10 이상에 대 한 독립 실행형 명령줄 도구 이며 _완전히 지원 되는 Xamarin 제품이 아닙니다_. 고급 개발자만이를 사용 하 여 타사 목표-C 라이브러리에 대 한 바인딩 프로젝트를 만드는 데 도움을 줍니다.
+목표 Sharpie 현재 Mac OS X 10.10 이상에 대 한 독립 실행형 명령줄 도구 이며 _완전히 지원 되는 Xamarin 제품이 아닙니다_ . 고급 개발자만이를 사용 하 여 타사 목표-C 라이브러리에 대 한 바인딩 프로젝트를 만드는 데 도움을 줍니다.
 
 목표 Sharpie 표준 OS X 패키지 설치 관리자로 다운로드할 수 있습니다.
 설치 관리자를 실행 하 고 설치 마법사의 모든 화면 프롬프트를 따릅니다.
 
 - **현재 버전: 3.4**
-  - [최신 릴리스 다운로드](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+  - [최신 릴리스 다운로드](https://aka.ms/objective-sharpie)
   - [포럼 공지](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]

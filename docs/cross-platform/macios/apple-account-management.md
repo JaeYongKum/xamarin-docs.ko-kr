@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2020
-ms.openlocfilehash: 17607e09a141fd29cd81cde93d812b20e62a9af8
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.openlocfilehash: f7a94f4aa7ec9be02f2365afbb995e9a7d5f3700
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78946240"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928596"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -27,7 +27,7 @@ Visual Studio의 Apple 계정 관리 인터페이스는 Apple ID와 연결 된 �
 
 ## <a name="requirements"></a>요구 사항
 
-Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studio 2017 (버전 15.7 이상)에서 사용할 수 있습니다. 또한이 기능을 사용 하려면 유료 Apple 개발자 계정이 있어야 합니다. Apple 개발자 계정에 대 한 자세한 내용은 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에서 확인할 수 있습니다.
+Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studio 2017 (버전 15.7 이상)에서 사용할 수 있습니다. 이 기능을 사용하려면 유료 Apple 개발자 계정도 필요합니다. Apple 개발자 계정에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 > [!NOTE]
 > 시작 하기 전에 먼저 [Apple 개발자 포털](https://developer.apple.com/account/)에서 사용자 사용권 계약을 수락 해야 합니다.
@@ -36,11 +36,11 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **Apple 개발자 계정 > Visual Studio > 기본 설정** 으로 이동 하 고 **+** 단추를 클릭 하 여 로그인 대화 상자를 엽니다.
+1. **Apple Developer 계정 > Visual Studio > 기본 설정** 으로 이동 하 고 **+** 단추를 클릭 하 여 로그인 대화 상자를 엽니다.
 
     ![Mac용 Visual Studio 기본 설정의 Apple 개발자 계정 페이지입니다.](apple-account-management-images/add-account-vsm.png)
 
-2. Apple ID와 암호를 입력 한 다음 **로그인**을 클릭 합니다. 그러면이 컴퓨터의 보안 키 집합에 자격 증명이 저장 됩니다.
+2. Apple ID와 암호를 입력 한 다음 **로그인** 을 클릭 합니다. 그러면이 컴퓨터의 보안 키 집합에 자격 증명이 저장 됩니다.
 
 3. 경고 대화 상자에서 **항상 허용** 을 선택 하 여 Visual Studio에서 자격 증명을 사용할 수 있도록 합니다.
 
@@ -53,13 +53,13 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
-> Visual Studio 2017 또는 Visual Studio 2019 (버전 16.4 및 이전 버전)를 사용 하는 경우 계속 하기 전에 [Mac 빌드 호스트와 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 해야 합니다.
+> Visual Studio 2017 또는 Visual Studio 2019(버전 16.4 이상)를 사용하는 경우 계속하기 전에 [Mac 빌드 호스트에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되어 있어야 합니다.
 
-1. **도구 > 옵션 > Xamarin > Apple 계정** 으로 이동한 후 **추가**를 클릭 합니다.
+1. **도구 > 옵션 > Xamarin > Apple 계정** 으로 이동한 후 **추가** 를 클릭 합니다.
 
     ![Visual Studio 옵션에서 Apple 계정 페이지의 스크린샷](apple-account-management-images/add-account-vsw.png)
 
-2. Apple ID와 암호를 입력 하 고 **로그인**을 클릭 합니다.
+2. Apple ID와 암호를 입력 하 고 **로그인** 을 클릭 합니다.
 
 3. 계정이 성공적으로 추가 되 면 apple id 및 Apple ID가 포함 된 모든 팀이 표시 됩니다.
 
@@ -71,7 +71,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 팀을 선택 하 고 **자세히 보기** ...를 클릭 합니다. 컴퓨터에 설치 된 서명 id 및 프로 비전 프로필의 목록을 표시 하는 대화 상자를 엽니다.
 
-팀 세부 정보 대화 상자에는 유형별로 구성 된 서명 Id의 목록이 표시 됩니다. **상태** 열은 다음과 같은 인증서 인지를 알려줍니다. 
+팀 세부 정보 대화 상자에는 유형별로 구성 된 서명 Id의 목록이 표시 됩니다. **상태** 열은 다음과 같은 인증서 인지를 알려줍니다.
 
 - **유효함** – 서명 id (인증서와 개인 키 모두)가 컴퓨터에 설치 되어 있고 만료 되지 않았습니다.
 
@@ -91,18 +91,20 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 ## <a name="download-provisioning-profiles"></a>프로 비전 프로필 다운로드
 
-팀 세부 정보 대화 상자에는 개발자 계정에 연결 된 모든 프로 비전 프로필의 목록도 표시 됩니다. **모든 프로필 다운로드**를 클릭 하 여 모든 프로 비전 프로필을 로컬 컴퓨터에 다운로드할 수 있습니다.
+팀 세부 정보 대화 상자에는 개발자 계정에 연결 된 모든 프로 비전 프로필의 목록도 표시 됩니다. **모든 프로필 다운로드** 를 클릭 하 여 모든 프로 비전 프로필을 로컬 컴퓨터에 다운로드할 수 있습니다.
 
 
 ## <a name="troubleshoot"></a>문제 해결
 
-- 새 Apple 개발자 계정을 승인 하는 데 몇 시간 정도 걸릴 수 있습니다. 계정이 승인 될 때까지 자동 프로 비전을 사용 하도록 설정할 수 없습니다.
+- 새 Apple 개발자 계정이 승인되기까지 몇 시간 정도 걸릴 수 있습니다. 계정이 승인되기 전까지는 자동 프로비저닝을 사용할 수 없습니다.
 
-- `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`메시지가 표시 되 고 Apple developer 계정 추가에 실패 하는 경우 사용 중인 Apple ID에 Apple 개발자 프로그램에 대 한 활성 유료 구성원이 있는지 확인 합니다. 유료 Apple 개발자 계정을 사용 하려면 [xamarin.ios 앱에 대 한 무료 프로 비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 참조 하세요.
+- Apple 개발자 계정 추가가 메시지와 함께 실패 하는 경우 `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.` 사용 중인 APPLE ID에 Apple 개발자 프로그램에 대 한 활성 유료 등록이 있는지 확인 합니다. 유료 Apple 개발자 계정을 사용하려면 [Xamarin.iOS 앱에 대한 체험 프로비저닝](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 참조하세요.
 
-- `You have reached the limit for certificates of this type`오류가 발생 하 여 새 서명 인증서를 만들지 못한 경우 허용 되는 최대 인증서 수가 생성 됩니다. 이 문제를 해결 하려면 [Apple 개발자 센터](https://developer.apple.com/account/ios/certificate/distribution) 로 이동 하 여 프로덕션 인증서 중 하나를 해지 합니다.
+- 새 서명 인증서를 만드는 동안 오류가 발생 하 여 실패 하는 경우 허용 되는 `You have reached the limit for certificates of this type` 최대 인증서 수가 생성 됩니다. 이 문제를 해결 하려면 [Apple 개발자 센터](https://developer.apple.com/account/ios/certificate/distribution) 로 이동 하 여 프로덕션 인증서 중 하나를 해지 합니다.
 
-- Mac용 Visual Studio에서 계정에 로그인 하는 데 문제가 있는 경우 키 집합 응용 프로그램을 열고 **Category** 에서 **암호**를 선택 합니다. `deliver.`를 검색 하 고 찾은 항목을 모두 삭제 합니다.
+- Mac용 Visual Studio에서 계정에 로그인 하는 데 문제가 있는 경우 키 집합 응용 프로그램을 열고 **Category** 에서 **암호** 를 선택 합니다. `deliver.`찾은 모든 항목을 검색 하 고 삭제 합니다.
+
+- 서명 인증서가 해지 된 경우 Windows의 다음 경로에서 해당 인증서를 제거할 수 `C:\Users\<user>\AppData\Local\Xamarin\iOS\Provisioning\Certificates` 있습니다.
 
 ## <a name="known-issues"></a>알려진 문제
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: 3f69f10274c413a107a40b2f404b3227cfee67cf
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 89f3de944004404cdc1f4d192426a50f6746fe73
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936745"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928609"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
@@ -22,7 +22,7 @@ ms.locfileid: "86936745"
 - Watch 앱에 대 한 프로그램 코드를 포함 하는 조사식 확장입니다. 하거나
 - Watch에서 렌더링 되는 스토리 보드 및 이미지 리소스를 보유 하는 Watch 앱입니다.
 
-부모 앱에 확장에 대 한 참조가 있고 확장에 조사식 앱 [에 대 한](~/ios/watchos/get-started/project-references.md)참조가 있는지 확인 합니다.
+[참조가 올바른지](~/ios/watchos/get-started/project-references.md)확인 합니다. 즉, 부모 앱에 watch 앱에 대 한 참조가 있고, watch 앱에 확장에 대 한 참조가 있는지 확인 합니다.
 
 번들 식별자 \* 가. watchkitextension \* . watchkitapp 규칙을 따르고 확장 프로그램의 info.plist 파일에 감시 앱의 번들 식별자로 설정 된 **WKApp 번들 ID** 값이 있는지 확인 합니다.
 
@@ -40,11 +40,11 @@ ms.locfileid: "86936745"
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 합니다. (Mac을 사용 하는 경우 마우스 오른쪽 단추를 클릭 하 고 **Interface Builder >를 사용 하 여 열**수도 있습니다.)
+Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 합니다. (Mac을 사용 하는 경우 마우스 오른쪽 단추를 클릭 하 고 **Interface Builder >를 사용 하 여 열** 수도 있습니다.)
 
 1. **도구 상자** 및 **속성** 패드가 표시 되는지 확인 합니다.
 1. 인터페이스 컨트롤러를 클릭 하 여 선택 합니다.
-1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
+1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi** 로 설정 합니다.
 1. **클래스가** **InterfaceController** 로 설정 되었는지 확인 합니다.
 
     ![인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.](hello-watch-images/interfacecontrollerattributes.png)
@@ -54,9 +54,9 @@ Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 �
 Visual Studio에서 Xamarin iOS Designer를 사용 하 여 편집 하려면 Watch 앱에서 storyboard를 두 번 클릭 합니다.
 
 1. 속성 창을 엽니다.
-1. 클래스를 **InterfaceController**로 변경 합니다.
+1. 클래스를 **InterfaceController** 로 변경 합니다.
 1. 인터페이스 컨트롤러를 클릭 합니다. 하거나
-1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
+1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi** 로 설정 합니다.
 
     ![인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.](hello-watch-images/vs-interfacecontrollerattributes.png)
 
@@ -82,7 +82,7 @@ UI를 만듭니다.
 
 1. 스토리 보드에서 단추를 선택 하 고 **속성** 패드의 **이벤트** 목록으로 이동한 다음
 
-1. 를 입력 하 **Action** `OnButtonPress` 고 **enter**키를 눌러 새 작업을 만듭니다.
+1. 를 입력 하 **Action** `OnButtonPress` 고 **enter** 키를 눌러 새 작업을 만듭니다.
   작업은 목록에 표시 되 고, 부분 메서드 (partial method)는 c #에서 자동으로 만들어집니다.
 
 ![단추에 추가 된 OnButtonPress 작업](hello-watch-images/buttonaction.png)
@@ -125,7 +125,7 @@ partial class InterfaceController
 }
 ```
 
-이제 **InterfaceController.cs** (InterfaceController.designer.cs*아님* )를 열고 다음 코드를 추가 합니다.
+이제 **InterfaceController.cs** (InterfaceController.designer.cs *아님* )를 열고 다음 코드를 추가 합니다.
 
 ```csharp
 int clickCount = 0;
@@ -140,7 +140,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 아직 시작 프로젝트가 아닌 경우
 
-1. 조사식 확장 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정**을 선택 합니다.
+1. 조사식 확장 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정** 을 선택 합니다.
 
 1. 배포 대상을 감시 키트 호환 시뮬레이터 이미지 (예: iPhone 6 iOS 8.2)로 설정 합니다.
 
