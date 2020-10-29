@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
-ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
+ms.openlocfilehash: b441e5fd5ef045bf90244b4b69f868fe858e002d
+ms.sourcegitcommit: ba052b0990499d8191bcb25291c6ccd8d1ff26fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88029723"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92493314"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart(미리 보기)
 
@@ -36,23 +36,23 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 ## <a name="initial-setup"></a>초기 설정
 
 > [!NOTE]
-> Xamarin Hot Restart는 미리 보기로 제공되는 동안 기본적으로 비활성화되어 있습니다. **도구 > 옵션 > 환경 > 미리 보기 기능 > Xamarin Hot Restart 사용**에서 이를 사용하도록 설정할 수 있습니다.
+> Xamarin Hot Restart는 미리 보기로 제공되는 동안 기본적으로 비활성화되어 있습니다. **도구 > 옵션 > 환경 > 미리 보기 기능 > Xamarin Hot Restart 사용** 에서 이를 사용하도록 설정할 수 있습니다.
 
-1. iOS 프로젝트가 시작 프로젝트로 설정되어 있고 빌드 구성이 **Debug|iPhone**으로 설정되어 있는지 확인합니다.
+1. iOS 프로젝트가 시작 프로젝트로 설정되어 있고 빌드 구성이 **Debug|iPhone** 으로 설정되어 있는지 확인합니다.
 
-   1. 이것이 기존 프로젝트일 경우엔 **빌드 > 구성 관리자…** 로 이동합니다. 그리고 **배포**가 iOS 프로젝트에 대해 활성화되어 있는지 확인합니다.
+   1. 이것이 기존 프로젝트일 경우엔 **빌드 > 구성 관리자…** 로 이동합니다. 그리고 **배포** 가 iOS 프로젝트에 대해 활성화되어 있는지 확인합니다.
 
-2. 도구 모음에서 **로컬 디바이스**를 선택한 후 클릭하여 설치 마법사를 시작합니다.
+2. 도구 모음에서 **로컬 디바이스** 를 선택한 후 클릭하여 설치 마법사를 시작합니다.
 
     [![디버그 대상으로 설정된 로컬 디바이스를 비롯한 Visual Studio 도구 모음의 스크린샷](hot-restart-images/toolbar.png)](hot-restart-images/toolbar.png)
 
-3. iTunes가 설치되지 않았다면 **iTunes 다운로드**를 클릭하여 설치 관리자를 다운로드합니다. iTunes 설치가 완료되면 **다음**을 클릭합니다.
+3. iTunes가 설치되지 않았다면 **iTunes 다운로드** 를 클릭하여 설치 관리자를 다운로드합니다. iTunes 설치가 완료되면 **다음** 을 클릭합니다.
 
-4. iOS 디바이스를 컴퓨터에 연결합니다. 디바이스가 이미 연결되어 있으면 분리한 후 다시 연결합니다. 디바이스가 감지되면 마법사에 그 이름이 표시됩니다. **다음**을 클릭합니다.
+4. iOS 디바이스를 컴퓨터에 연결합니다. 디바이스가 이미 연결되어 있으면 분리한 후 다시 연결합니다. 디바이스가 감지되면 마법사에 그 이름이 표시됩니다. **다음** 을 클릭합니다.
 
-5. Apple 개발자 계정 자격 증명을 입력하고 **다음**을 클릭합니다.
+5. Apple 개발자 계정 자격 증명을 입력하고 **다음** 을 클릭합니다.
 
-6. 프로젝트에서 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)을 사용하도록 설정하려면 드롭다운 메뉴를 사용하여 개발 팀을 선택합니다. **마침**을 클릭합니다.
+6. 프로젝트에서 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)을 사용하도록 설정하려면 드롭다운 메뉴를 사용하여 개발 팀을 선택합니다. **마침** 을 클릭합니다.
 
 > [!NOTE]
 > 자동 프로비저닝은 iOS 기기의 배포 구성이 간편해질 수 있다는 장점으로 사용이 권장됩니다. 물론 적합한 프로비저닝 프로필이 있다면 이를 사용하지 않고 수동 프로비저닝을 계속 사용할 수도 있습니다.
@@ -60,7 +60,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 ## <a name="use-xamarin-hot-restart"></a>Xamarin Hot Restart 사용
 초기 설치 후에는 연결된 디바이스가 디버그 대상 드롭다운 메뉴에 표시됩니다. 앱을 디버그하려면 드롭다운에서 디바이스를 선택하고 **실행** 단추를 클릭합니다. 디버그 세션을 시작하기 위해 디바이스에서 앱을 수동으로 시작하라는 메시지가 Visual Studio에 표시될 수 있습니다.
 
-디버깅하는 동안 코드 파일을 편집한 다음 디버그 도구 모음에서 **다시 시작** 단추를 누르거나 **Ctrl+Shift+F5**를 눌러 새 변경 사항이 적용된 상태로 디버그 세션을 다시 시작할 수 있습니다.
+디버깅하는 동안 코드 파일을 편집한 다음 디버그 도구 모음에서 **다시 시작** 단추를 누르거나 **Ctrl+Shift+F5** 를 눌러 새 변경 사항이 적용된 상태로 디버그 세션을 다시 시작할 수 있습니다.
 
 [![다시 시작 단추가 강조 표시된 디버그 도구 모음의 스크린샷](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
@@ -77,8 +77,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 
 ## <a name="troubleshoot"></a>문제 해결
 
-- iTunes는 Microsoft Store를 통해 설치된 경우 설치 마법사에 감지되지 않습니다. 이 버전을 먼저 제거한 다음 [Apple의 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2101014)를 다운로드해야 합니다.
-- 디바이스별 빌드를 사용하도록 설정하면 앱이 디버그 모드로 전환하지 못하는 알려진 문제가 있습니다. 해결하려면 **속성 > iOS 빌드**에서 이 빌드를 사용하지 않도록 설정하고 디버깅을 다시 시도해야 합니다. 이 문제는 향후 릴리스에서 수정됩니다.
+- 디바이스별 빌드를 사용하도록 설정하면 앱이 디버그 모드로 전환하지 못하는 알려진 문제가 있습니다. 해결하려면 **속성 > iOS 빌드** 에서 이 빌드를 사용하지 않도록 설정하고 디버깅을 다시 시도해야 합니다. 이 문제는 향후 릴리스에서 수정됩니다.
 - 앱이 디바이스에 이미 있다면 `AMDeviceStartHouseArrestService` 오류로 Hot Restart 배포 시도가 실패할 수 있습니다. 해결 방법은 디바이스에서 앱을 제거한 후 다시 배포하는 것입니다.
 - Apple 개발자 프로그램에 속하지 않는 Apple ID를 입력하면 `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID` 오류가 발생합니다. iOS 디바이스에서 Xamarin Hot Restart를 사용하려면 유효한 Apple 개발자 계정이 있어야 합니다. 
 

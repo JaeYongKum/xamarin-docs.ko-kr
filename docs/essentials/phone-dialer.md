@@ -9,20 +9,45 @@ ms.date: 07/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d642005e9aed663570c251e955c6a3af4704ed5c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9bd281a61fd53ef3f6d0d3d2307f78a218f33cf4
+ms.sourcegitcommit: db423d51356cf5a2dfa1b3925204797b1baf3cd9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802206"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734776"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
+# <a name="no-locxamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
 **PhoneDialer** 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
 [!include[](~/essentials/includes/get-started.md)]
+
+# <a name="android"></a>[Android](#tab/android)
+
+프로젝트의 대상 Android 버전이 **Android 11(R API 30)** 로 설정된 경우 새 [패키지 가시성 요구 사항](https://developer.android.com/preview/privacy/package-visibility)에 사용되는 쿼리로 해당 Android 매니페스트를 업데이트해야 합니다.
+
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.DIAL" />
+    <data android:scheme="tel"/>
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+추가 설정이 필요하지 않습니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+플랫폼의 차이점이 없습니다.
+
+-----
 
 ## <a name="using-phone-dialer"></a>전화 걸기 사용
 

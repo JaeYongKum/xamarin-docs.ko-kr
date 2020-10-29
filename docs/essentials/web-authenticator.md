@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f373b8c249d4dba11db3b8445648afe2c61d273f
-ms.sourcegitcommit: eda6acc7471acc2f95df498e747376006e3d3f2a
+ms.openlocfilehash: 3df31f500290189bb9ce36148729a7b1d22df3ae
+ms.sourcegitcommit: 9bf375b43907384551188ec6f0ebd3290b3e9295
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92214825"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436954"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
@@ -219,17 +219,28 @@ var accessToken = r?.AccessToken;
 4. `.SaveTokens = true;`를 사용하여 모든 공급자를 구성해야 합니다.
 
 
-``csharp services.AddAuthentication(o => { o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme; }) .AddCookie() .AddFacebook(fb => { fb.AppId = Configuration["FacebookAppId"]; fb.AppSecret = Configuration["FacebookAppSecret"]; fb.SaveTokens = true; });
+```csharp
+services.AddAuthentication(o =>
+    {
+        o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddFacebook(fb =>
+    {
+        fb.AppId = Configuration["FacebookAppId"];
+        fb.AppSecret = Configuration["FacebookAppSecret"];
+        fb.SaveTokens = true;
+    });
 ```
 
 > [!TIP]
-> If you'd like to include Apple Sign In, you can use the `AspNet.Security.OAuth.Apple` NuGet package.  You can view the full [Startup.cs sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60) in the Essentials GitHub repository.
+> Apple 로그인을 포함하려는 경우 `AspNet.Security.OAuth.Apple` NuGet 패키지를 사용할 수 있습니다.  Essentials GitHub 리포지토리에서 전체 [Startup.cs 샘플](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60)을 볼 수 있습니다.
 
-### Add a custom mobile auth controller
+### <a name="add-a-custom-mobile-auth-controller"></a>사용자 지정 모바일 인증 컨트롤러 추가
 
-With a mobile authentication flow it is usually desirable to initiate the flow directly to a provider that the user has chosen (e.g. by clicking a "Microsoft" button on the sign in screen of the app).  It is also important to be able to return relevant information to your app at a specific callback URI to end the authentication flow.
+모바일 인증 흐름에서는 사용자가 선택한 공급자(예: 앱의 로그인 화면에서 "Microsoft" 단추 클릭)로 직접 흐름을 시작하는 것이 좋습니다.  또한 특정 콜백 URI에서 애플리케이션으로 관련 정보를 반환하여 인증 흐름을 종료할 수 있어야 하는 것도 중요합니다.
 
-To achieve this, use a custom API Controller:
+이를 위해 사용자 지정 API 컨트롤러를 사용합니다.
 
 ```csharp
 [Route("mobileauth")]

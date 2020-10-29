@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 09/23/2020
-ms.openlocfilehash: 90efe2533f971180124d044ec39ddcf1591b9d36
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8a23e973687ac9f775042685122d558788fc7be7
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91455042"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897444"
 ---
 # <a name="build-items"></a>항목 빌드
 
@@ -34,7 +34,7 @@ Java Android 프로젝트의 `assets` 폴더에 포함되는 파일인 [Android 
 
 ## <a name="androidboundlayout"></a>AndroidBoundLayout
 
-`AndroidGenerateLayoutBindings` 속성이 `false`로 설정된 경우 레이아웃 파일에 대해 코드 숨김을 생성해야 함을 나타냅니다. 다른 모든 측면에서는 위에서 설명한 `AndroidResource`와 동일합니다. 이 작업은 레이아웃 파일에서**만** 사용할 수 있습니다.
+`AndroidGenerateLayoutBindings` 속성이 `false`로 설정된 경우 레이아웃 파일에 대해 코드 숨김을 생성해야 함을 나타냅니다. 다른 모든 측면에서는 위에서 설명한 `AndroidResource`와 동일합니다. 이 작업은 레이아웃 파일에서 **만** 사용할 수 있습니다.
 
 ```xml
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
@@ -89,7 +89,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 
 ## <a name="androidresource"></a>AndroidResource
 
-빌드 동작이 *AndroidResource*인 모든 파일은 빌드 프로세스 중에 Android 리소스에 컴파일되며, `$(AndroidResgenFile)`을 통해 액세스할 수 있게 됩니다.
+빌드 동작이 *AndroidResource* 인 모든 파일은 빌드 프로세스 중에 Android 리소스에 컴파일되며, `$(AndroidResgenFile)`을 통해 액세스할 수 있게 됩니다.
 
 ```xml
 <ItemGroup>
@@ -107,7 +107,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
   <AndroidResource Include="Resources-Debug\values\strings.xml"/>
 </ItemGroup>
 <PropertyGroup>
-  <MonoAndroidResourcePrefix>Resources;Resources-Debug<MonoAndroidResourcePrefix>
+  <MonoAndroidResourcePrefix>Resources;Resources-Debug</MonoAndroidResourcePrefix>
 </PropertyGroup>
 ```
 
@@ -140,11 +140,11 @@ Xamarin.Android 5.1부터 `@(Content)` 빌드 작업을 사용하려고 하면 `
 
 ## <a name="linkdescription"></a>LinkDescription
 
-빌드 동작이 *LinkDescription*인 파일은 [링커 동작을 제어](~/cross-platform/deploy-test/linker.md)하는 데 사용됩니다.
+빌드 동작이 *LinkDescription* 인 파일은 [링커 동작을 제어](~/cross-platform/deploy-test/linker.md)하는 데 사용됩니다.
 
 ## <a name="proguardconfiguration"></a>ProguardConfiguration
 
-빌드 동작이 *ProguardConfiguration*인 파일에는 `proguard` 동작을 제어하는 데 사용되는 옵션이 포함됩니다. 이 빌드 동작에 대한 자세한 내용은 [ProGuard](~/android/deploy-test/release-prep/proguard.md)를 참조하세요.
+빌드 동작이 *ProguardConfiguration* 인 파일에는 `proguard` 동작을 제어하는 데 사용되는 옵션이 포함됩니다. 이 빌드 동작에 대한 자세한 내용은 [ProGuard](~/android/deploy-test/release-prep/proguard.md)를 참조하세요.
 
 이 파일은 [`$(EnableProguard)`](~/android/deploy-test/building-apps/build-properties.md#enableproguard)
 MSBuild 속성이 `True`가 아닌 한 무시됩니다.

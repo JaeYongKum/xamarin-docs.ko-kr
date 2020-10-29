@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/11/2020
-ms.openlocfilehash: d89f686be99dc8ae8d1aada12dcbe94d857424d7
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 4a89cfbb2406b6a5cda125044d43736dfa02d791
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454964"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630233"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -30,7 +30,7 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 애플리케이
 
 ## <a name="shared-runtime"></a>공유 런타임
 
-*공유 런타임*은 기본 클래스 라이브러리(`mscorlib.dll` 등) 및 Android 바인딩 라이브러리(`Mono.Android.dll` 등)를 제공하는 추가적인 Android 패키지의 쌍입니다. 디버그 빌드는 Android 애플리케이션 패키지 내 기본 클래스 라이브러리 및 바인딩 어셈블리를 포함하는 대신 공유 런타임에 의존하므로 디버그 패키지 크기가 줄어듭니다.
+*공유 런타임* 은 기본 클래스 라이브러리(`mscorlib.dll` 등) 및 Android 바인딩 라이브러리(`Mono.Android.dll` 등)를 제공하는 추가적인 Android 패키지의 쌍입니다. 디버그 빌드는 Android 애플리케이션 패키지 내 기본 클래스 라이브러리 및 바인딩 어셈블리를 포함하는 대신 공유 런타임에 의존하므로 디버그 패키지 크기가 줄어듭니다.
 
 공유 런타임은 [`$(AndroidUseSharedRuntime)`](~/android/deploy-test/building-apps/build-properties.md#androidusesharedruntime) 속성을
 `False`로 설정하여 디버그 빌드에서 사용하지 않게 설정할 수 있습니다.
@@ -39,7 +39,7 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 애플리케이
 
 ## <a name="fast-deployment"></a>빠른 배포
 
-*빠른 배포*는 공유 런타임과 함께 작동하여 Android 애플리케이션의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 디바이스에 다시 동기화합니다.
+*빠른 배포* 는 공유 런타임과 함께 작동하여 Android 애플리케이션의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 디바이스에 다시 동기화합니다.
 
 빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 디바이스에서 실패하는 것으로 알려져 있습니다.
 
@@ -145,7 +145,7 @@ Xamarin.Android 빌드 시스템은 빌드 프로세스에 연결하려는 사�
 
 ## <a name="target-definitions"></a>대상 정의
 
-빌드 프로세스의 Xamarin.Android 관련 부분은 `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`에 정의되지만 어셈블리를 빌드하기 위해 *Microsoft.CSharp.targets*와 같은 일반적인 언어 관련 대상도 필요합니다.
+빌드 프로세스의 Xamarin.Android 관련 부분은 `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`에 정의되지만 어셈블리를 빌드하기 위해 *Microsoft.CSharp.targets* 와 같은 일반적인 언어 관련 대상도 필요합니다.
 
 모든 언어 대상을 가져오기 전에 다음과 같은 빌드 속성을 설정해야 합니다.
 
@@ -157,7 +157,7 @@ Xamarin.Android 빌드 시스템은 빌드 프로세스에 연결하려는 사�
 </PropertyGroup>
 ```
 
-C#에서는 *Xamarin.Android.CSharp.targets*를 가져와서 이러한 대상과 속성을 모두 포함할 수 있습니다.
+C#에서는 *Xamarin.Android.CSharp.targets* 를 가져와서 이러한 대상과 속성을 모두 포함할 수 있습니다.
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

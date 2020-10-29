@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 721785fe2eeb35f0ef04d1a7854afe4039a66849
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6135d8caec196ded385bc0f962f007c41d20e2cb
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561835"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897502"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
@@ -44,7 +44,7 @@ Azure Notification Hubs를 Xamarin.Forms 모바일 앱과 통합하는 것은 Az
 1. 예제에서 사용되는 `com.xamarin.notifysample`과 같은 Android 패키지 이름을 정의합니다.
 1. Firebase 콘솔에서 `google-services.json`을 다운로드합니다. 이후 단계에서 Android 애플리케이션에 이 파일을 추가할 것입니다.
 1. Azure Notification Hub 인스턴스를 만들고 이름을 지정합니다. 이 문서 및 샘플에서는 `xdocsnotificationhub`를 허브 이름으로 사용합니다.
-1. FCM **서버 키**를 복사하여 Azure Notification Hub의 **Google(GCM/FCM)** 아래에서 **API 키**로 저장합니다.
+1. FCM **서버 키** 를 복사하여 Azure Notification Hub의 **Google(GCM/FCM)** 아래에서 **API 키** 로 저장합니다.
 
 다음 스크린샷은 Azure Notification Hub의 Google 플랫폼 구성을 보여 줍니다.
 
@@ -132,7 +132,7 @@ public static class AppConstants
 
 알림을 받고 처리하도록 Android 애플리케이션을 구성하려면 다음 단계를 완료합니다.
 
-1. Firebase 콘솔에서 패키지 이름과 일치하도록 Android **패키지 이름**을 구성합니다.
+1. Firebase 콘솔에서 패키지 이름과 일치하도록 Android **패키지 이름** 을 구성합니다.
 1. Google Play, Firebase 및 Azure Notification Hubs와 상호 작용하려면 다음 NuGet 패키지를 설치합니다.
     1. `Xamarin.GooglePlayServices.Base`
     1. `Xamarin.Firebase.Messaging`
@@ -278,9 +278,6 @@ void SendMessageToMainPage(string body)
 
 로컬 알림 및 `Intent` 예제에서는 사용자가 알림 탭하기 동작을 수행해야 합니다. 이는 애플리케이션 상태가 변경되기 전에 사용자가 조치를 취해야 하는 경우에 적합합니다. 그러나 때에 따라 사용자 동작을 요구하지 않고 메시지 데이터에 액세스할 수 있습니다. 이전 예제에서도 `SendMessageToMainPage` 메서드를 사용하여 메시지를 현재 `MainPage` 인스턴스로 직접 보냅니다. 프로덕션에서 단일 메시지 유형에 대해 두 메서드를 모두 구현하는 경우 사용자가 알림을 탭하면 `MainPage` 개체가 중복 메시지를 받게 됩니다.
 
-> [!NOTE]
-> Android 애플리케이션은 백그라운드 또는 포그라운드로 실행되는 경우에만 푸시 알림을 받게 됩니다. 기본 `Activity`가 실행되고 있지 않을 때 푸시 알림을 받으려면 이 샘플의 범위를 벗어난 서비스를 구현해야 합니다. 자세한 내용은 [Android 서비스 만들기](../../../android/app-fundamentals/services/index.md)를 참조하세요.
-
 ### <a name="add-incoming-notifications-to-the-no-locxamarinforms-ui"></a>Xamarin.Forms UI에 들어오는 알림 추가
 
 `MainActivity` 클래스는 알림을 처리하고 들어오는 메시지 데이터를 관리할 수 있는 권한을 얻어야 합니다. 다음 코드는 `MainActivity` 구현을 보여 줍니다.
@@ -362,7 +359,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 
 알림을 받도록 iOS 애플리케이션을 구성하는 프로세스는 다음과 같습니다.
 
-1. 프로비저닝 프로필에 사용되는 값과 일치하도록 `Info.plist` 파일의 **번들 식별자**를 구성합니다.
+1. 프로비저닝 프로필에 사용되는 값과 일치하도록 `Info.plist` 파일의 **번들 식별자** 를 구성합니다.
 1. **푸시 알림 사용** 옵션을 `Entitlements.plist` 파일에 추가합니다.
 1. `Xamarin.Azure.NotificationHubs.iOS` NuGet 패키지를 프로젝트에 추가합니다.
 1. APNS를 사용하여 알림을 [등록](#register-for-notifications-with-apns)합니다.
@@ -396,7 +393,7 @@ void RegisterForRemoteNotifications()
     if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
     {
         UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert |
-            UNAuthorizationOptions.Sound |
+            UNAuthorizationOptions.Badge |
             UNAuthorizationOptions.Sound,
             (granted, error) =>
             {
@@ -513,7 +510,7 @@ void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
 
 ## <a name="test-notifications-in-the-azure-portal"></a>Azure Portal의 테스트 알림
 
-Azure Notification Hubs를 사용하여 애플리케이션에서 테스트 메시지를 받을 수 있는지 확인할 수 있습니다. 알림 허브의 **테스트 보내기** 섹션을 사용하여 대상 플랫폼을 선택하고 메시지를 보낼 수 있습니다. **태그 식으로 보내기**를 `default`로 설정하면 `default` 태그에 대해 템플릿을 등록한 애플리케이션으로 메시지가 전송됩니다. **보내기** 단추를 클릭하면 메시지와 함께 연결된 디바이스의 수를 포함하는 보고서가 생성됩니다. 다음 스크린샷은 Azure Portal의 Android 알림 테스트를 보여 줍니다.
+Azure Notification Hubs를 사용하여 애플리케이션에서 테스트 메시지를 받을 수 있는지 확인할 수 있습니다. 알림 허브의 **테스트 보내기** 섹션을 사용하여 대상 플랫폼을 선택하고 메시지를 보낼 수 있습니다. **태그 식으로 보내기** 를 `default`로 설정하면 `default` 태그에 대해 템플릿을 등록한 애플리케이션으로 메시지가 전송됩니다. **보내기** 단추를 클릭하면 메시지와 함께 연결된 디바이스의 수를 포함하는 보고서가 생성됩니다. 다음 스크린샷은 Azure Portal의 Android 알림 테스트를 보여 줍니다.
 
 ![Azure Notification Hub 테스트 메시지의 스크린샷](azure-notification-hub-images/azure-notification-hub-test-send.png "Azure Notification Hub 테스트 메시지")
 
@@ -537,7 +534,7 @@ public static class DispatcherConstants
 }
 ```
 
-Azure Notification Hub 구성과 일치하도록 `DispatcherConstants.cs` 파일을 구성해야 합니다. `SubscriptionTags` 속성의 값은 클라이언트 앱에서 사용되는 값과 일치해야 합니다. `NotificationHubName` 속성은 Azure Notification Hub 인스턴스의 이름입니다. `FullAccessConnectionString` 속성은 알림 허브 **액세스 정책**에 있는 선택키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
+Azure Notification Hub 구성과 일치하도록 `DispatcherConstants.cs` 파일을 구성해야 합니다. `SubscriptionTags` 속성의 값은 클라이언트 앱에서 사용되는 값과 일치해야 합니다. `NotificationHubName` 속성은 Azure Notification Hub 인스턴스의 이름입니다. `FullAccessConnectionString` 속성은 알림 허브 **액세스 정책** 에 있는 선택키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
 
 ![Azure Notification Hub 이름 및 FullAccessConnectionString의 스크린샷](azure-notification-hub-images/notification-hub-full-access-policy.png "Azure Notification Hub 이름 및 FullAccessConnectionString")
 
