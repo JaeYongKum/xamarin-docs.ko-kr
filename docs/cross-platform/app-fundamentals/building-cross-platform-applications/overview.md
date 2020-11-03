@@ -6,18 +6,18 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 72b41854160d0810bbc4a58972f638ef920a4068
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: bdf641ca15919958627850e000c117eeedd12de9
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457486"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281250"
 ---
 # <a name="building-cross-platform-applications-overview"></a>플랫폼 간 응용 프로그램 빌드 개요
 
 이 가이드에서는 Xamarin 플랫폼 및 플랫폼 간 응용 프로그램을 설계 하 여 코드 재사용을 최대화 하 고 모든 주요 모바일 플랫폼 (iOS, Android 및 Windows Phone)에서 고품질의 기본 환경을 제공 하는 방법을 소개 합니다.
 
-이 문서에서 사용 되는 방법은 생산성 앱과 게임 앱 모두에 일반적으로 적용 되지만, 생산성 및 유틸리티 (비 게임 응용 프로그램)에 중점을 둡니다. 플랫폼 간 게임 개발 지침은 [MonoGame 문서 소개](~/graphics-games/monogame/introduction/index.md) 또는 체크 아웃 [Visual Studio Tools for Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) 를 참조 하세요.
+이 문서에서 사용 되는 방법은 생산성 앱과 게임 앱 모두에 일반적으로 적용 되지만, 생산성 및 유틸리티 (비 게임 응용 프로그램)에 중점을 둡니다. 플랫폼 간 게임 개발 지침은 [Visual Studio Tools for Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) 를 참조 하세요.
 
 "한 번 쓰기, 모든 위치에서 실행"은 여러 플랫폼에서 수정 되지 않은 상태로 실행 되는 단일 코드 베이스의 virtues을 extol 하는 데 종종 사용 됩니다. 코드를 다시 사용 하는 이점을 얻을 수 있지만, 이러한 접근 방식은 일반적으로 가장 낮은-분모 기능 집합을 포함 하 고 있고 대상 플랫폼에 적합 하지 않은 일반 사용자 인터페이스가 있는 응용 프로그램을 만드는 경우가 많습니다.
 
@@ -34,7 +34,7 @@ Xamarin 플랫폼 간 앱을 만들기 위한 핵심 사항은 다음과 같습�
 1. Windows에서는 Visual Studio 또는 Blend의 UI 디자이너에서 만든 프레젠테이션 계층에 대 한 XAML을 사용 합니다.
 1. Mac에서는 Xcode에서 만든 프레젠테이션 계층에 대해 Storyboard를 사용 합니다.
 
-Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios XAML을 사용 하 여 플랫폼 간에 공유할 수 있는 사용자 인터페이스를 만들 수 있습니다. 
+Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios XAML을 사용 하 여 플랫폼 간에 공유할 수 있는 사용자 인터페이스를 만들 수 있습니다.
 
 코드를 다시 사용 하는 양은 공유 코어에 유지 되는 코드의 양과 사용자 인터페이스에 따라 달라 지는 코드의 양에 따라 크게 달라 집니다. 핵심 코드는 사용자와 직접 상호 작용 하지 않고, 대신이 정보를 수집 하 고 표시 하는 응용 프로그램의 일부에 대 한 서비스를 제공 하는 것입니다.
 
@@ -59,4 +59,4 @@ Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios X
 
 ## <a name="case-studies"></a>사례 연구
 
-이 문서는 *Tasky Pro*와 함께 제공 되는 한 가지 사례 연구입니다. 각 사례 연구에서는 실제 예제에서이 문서에 설명 된 개념의 구현에 대해 설명 합니다. 코드는 오픈 소스 이며 [github](https://github.com/xamarin/mobile-samples/)에서 사용할 수 있습니다.
+이 문서는 *Tasky Pro* 와 함께 제공 되는 한 가지 사례 연구입니다. 각 사례 연구에서는 실제 예제에서이 문서에 설명 된 개념의 구현에 대해 설명 합니다. 코드는 오픈 소스 이며 [github](https://github.com/xamarin/mobile-samples/)에서 사용할 수 있습니다.

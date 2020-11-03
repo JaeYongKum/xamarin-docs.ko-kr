@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ca08815e422b9ec96dcb11d6b069a227bf62866
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 733f640a18196e6bf31eadfa1c632a7202fc1ccc
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555270"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281276"
 ---
 # <a name="skiasharp-graphics-in-no-locxamarinforms"></a>SkiaSharp 그래픽 Xamarin.Forms
 
@@ -22,7 +22,7 @@ ms.locfileid: "91555270"
 
 _응용 프로그램에서 2D 그래픽에 SkiaSharp 사용 Xamarin.Forms_
 
-SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 Kia 그래픽 엔진으로 구동 되는 .NET 및 c # 용 2D 그래픽 시스템입니다. 응용 프로그램에서 SkiaSharp를 사용 Xamarin.Forms 하 여 2d 벡터 그래픽, 비트맵 및 텍스트를 그릴 수 있습니다. SkiaSharp 라이브러리 및 기타 자습서에 대 한 일반적인 정보는 [2D 그리기](~/graphics-games/skiasharp/index.md) 가이드를 참조 하세요.
+SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 Kia 그래픽 엔진으로 구동 되는 .NET 및 c # 용 2D 그래픽 시스템입니다. 응용 프로그램에서 SkiaSharp를 사용 Xamarin.Forms 하 여 2d 벡터 그래픽, 비트맵 및 텍스트를 그릴 수 있습니다.
 
 이 가이드에서는 사용자가 프로그래밍에 대해 잘 알고 있다고 가정 Xamarin.Forms 합니다.
 

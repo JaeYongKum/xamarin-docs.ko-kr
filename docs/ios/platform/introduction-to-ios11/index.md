@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2017
-ms.openlocfilehash: 35de7c5cf8fdb46f5bba0552e767ac00ee0fe34f
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 09b3ef1446f489b8f9077d59f74fee7cf157ca50
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437349"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281289"
 ---
 # <a name="introduction-to-ios-11"></a>iOS 11 소개
 
-![ARKit 예제](images/arkit.png) ![개체 배치](images/arkit2.png) ![CoreML 예제](images/coreml.png) ![MapKit 예제](images/mapkit.png) ![시각 사각형 예](images/vision1.png) ![시력 얼굴 예](images/vision2.png) ![끌어서 놓기 예제](images/drag-drop.png) ![끌어서 놓기 예제](images/drag-drop2.png) ![SiriKit 예제](images/sirikit.png)
+![ARKit 예제](images/arkit.png) ![개체 배치](images/arkit2.png) ![CoreML 예제](images/coreml.png) ![MapKit 예제](images/mapkit.png) ![시각 사각형 예](images/vision1.png) ![시력 얼굴 예](images/vision2.png) ![끌어서 놓기 예 1](images/drag-drop.png) ![끌어서 놓기 예 2](images/drag-drop2.png) ![SiriKit 예제](images/sirikit.png)
 
 iOS 11에는 다양 한 프레임 워크의 다양 한 새로운 기능 및 향상 된 기능이 포함 되어 있습니다.
 
@@ -27,7 +27,6 @@ Apple은 iOS 11에 대 한 아키텍처 업데이트, 새로운 시각적 변경
 ## <a name="arkit"></a>[ARKit](arkit/index.md)
 
 ARKit는 확장 된 현실를 iOS로 제공 하 여 사용자가 장치 카메라를 통해 전 세계와 상호 작용할 수 있도록 합니다.
-Xamarin을 사용 하 여 [UrhoSharp에서 Arkit](arkit/urhosharp.md)를 사용할 수도 있습니다.
 
 ## <a name="coreml"></a>[CoreML](coreml.md)
 
@@ -53,7 +52,7 @@ PDFKit는 이제 iOS 11에서 사용할 수 있으며 앱에 PDF 만들기 및 �
 
 이제 siri는 목록과 메모를 비롯 하 여 더 많은 상호 작용을 지원 하 고 다른 응용 프로그램 이름과 같은 기타 향상 된 기능을 지원 합니다.
 
-## <a name="vision"></a>[비전](vision.md)
+## <a name="vision"></a>[Vision](vision.md)
 
 얼굴 감지 및 인식, CoreML 모델, 새 바코드 검색 Api, 텍스트 및 수평 검색, 보다 일반적인 개체 검색 및 추적을 포함 하 여 다양 한 이미지 처리 및 분석 기능을 iOS로 제공 합니다.
 
@@ -63,7 +62,6 @@ PDFKit는 이제 iOS 11에서 사용할 수 있으며 앱에 PDF 만들기 및 �
 
 - [ARKit 샘플](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [개체를 배치 하는 ARKit](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-- [ARKit 및 UrhoSharp](arkit/urhosharp.md)
 - [CoreML 이미지 인식 샘플](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
 - [Azure 사용자 지정 모델을 사용 하는 CoreML](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [CoreNFC 태그 판독기 샘플](/samples/xamarin/ios-samples/ios11-nfctagreader)

@@ -7,21 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 6803ecf2303ff2c91265f3ac8352a7aa15e74d40
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 6e96a57d2425d99839b723520ac24bafa57cc1a3
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436211"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281263"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Xamarin.ios의 ARKit 소개
 
 _IOS 11에 대 한 보강 현실_
 
-ARKit를 사용 하면 다양 한 확대 현실 응용 프로그램 및 게임을 사용할 수 있습니다. 이 섹션에서는 다음 항목을 다룹니다.
-
-- [ARKit 시작](#gettingstarted)
-- [UrhoSharp에서 ARKit 사용](urhosharp.md)
+ARKit를 사용 하면 다양 한 확대 현실 응용 프로그램 및 게임을 사용할 수 있습니다.
 
 <a name="gettingstarted"></a>
 
@@ -107,12 +104,11 @@ SceneView.Session.Pause();
 
 위의 코드는 간단한 ARKit 응용 프로그램을 생성 합니다. 더 복잡 한 예제에서는 확대 된 현실 세션을 호스팅하는 뷰 컨트롤러에서를 구현 하 고 추가 메서드를 구현할 것으로 간주 `IARSCNViewDelegate` 합니다.
 
-ARKit는 surface 추적 및 사용자 상호 작용과 같은 다양 한 고급 기능을 제공 합니다. UrhoSharp와 ARKit 추적을 결합 하는 예제는 [urhosharp 데모](urhosharp.md) 를 참조 하세요.
+ARKit는 surface 추적 및 사용자 상호 작용과 같은 다양 한 고급 기능을 제공 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [확대 현실 (Apple)](https://developer.apple.com/arkit/)
-- [UrhoSharp에서 ARKit 사용](urhosharp.md)
 - [Jet (Simple ARKit) 샘플](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [개체를 배치 하는 ARKit (샘플)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [IOS에 대 한 ARKit-확대 현실 소개 (WWDC) (비디오)](https://developer.apple.com/videos/play/wwdc2017/602/)
