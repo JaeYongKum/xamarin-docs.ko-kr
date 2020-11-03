@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: ebb9baf7bb1a6da96615eac65d5384cb7a05a9d6
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: d7f66d9bda014337ae6108ab42158faa856632bb
+ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457603"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278340"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -37,7 +37,7 @@ C 라이브러리를 정적으로 연결 하는 방법에 대 한 자세한 내�
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 바인딩을 만드는 가장 쉬운 방법은 Xamarin.ios 바인딩 프로젝트를 만드는 것입니다.
-프로젝트 형식, **iOS > 라이브러리 > 바인딩 라이브러리**를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행할 수 있습니다.
+프로젝트 형식, **iOS > 라이브러리 > 바인딩 라이브러리** 를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행할 수 있습니다.
 
 [![프로젝트 형식, iOS 라이브러리 바인딩 라이브러리를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행 합니다.](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
@@ -132,7 +132,7 @@ public partial class Camera {
 
 라이브러리를 빌드하면 기본 바인딩이 생성 됩니다.
 
-이 바인딩을 완료 하려면 네이티브 라이브러리를 프로젝트에 추가 해야 합니다.  네이티브 라이브러리를 프로젝트에 추가 하 여 프로젝트에 프로젝트를 추가 하거나 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트 추가를 선택 하 여 네이티브 라이브러리를 선택 하는 방식으로 프로젝트에 네이티브 라이브러리 **Add**를 추가 하 여이 작업을 수행할 수 있습니다  >  **Add Files** .
+이 바인딩을 완료 하려면 네이티브 라이브러리를 프로젝트에 추가 해야 합니다.  네이티브 라이브러리를 프로젝트에 추가 하 여 프로젝트에 프로젝트를 추가 하거나 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트 추가를 선택 하 여 네이티브 라이브러리를 선택 하는 방식으로 프로젝트에 네이티브 라이브러리 **Add** 를 추가 하 여이 작업을 수행할 수 있습니다  >  **Add Files** .
 규칙에 따라 네이티브 라이브러리는 "lib" 라는 단어로 시작 하 고 ".a" 확장명으로 끝납니다. 이 작업을 수행 하는 경우에는 기본 라이브러리에 포함 된 내용에 대 한 정보를 포함 하는 파일 및 자동으로 채워진 c # 파일의 두 파일을 추가 Mac용 Visual Studio 합니다.
 
  [![규칙에 따라 네이티브 라이브러리는 lib 라는 단어로 시작 하 고 확장명으로 끝납니다.](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png)](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
@@ -445,7 +445,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-인터페이스 메서드에 대 한 구현은 적절 한 이름을 사용 하 여 자동으로 내보내지고 다음과 동일 합니다.
+필요한 인터페이스 메서드에 대 한 구현은 적절 한 이름을 사용 하 여 내보내집니다. 따라서 다음과 같습니다.
 
 ```csharp
 class MyDelegate : NSObject, IUITableViewDelegate {
@@ -456,7 +456,29 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-인터페이스를 암시적 또는 명시적으로 구현 하는 경우에는 중요 하지 않습니다.
+이는 모든 필수 프로토콜 멤버에 대해 작동 하지만 선택적 선택기를 사용 하 여 주의 해야 하는 특수 한 경우도 있습니다.
+기본 클래스를 사용 하는 경우 선택적 프로토콜 멤버는 동일 하 게 처리 됩니다.
+
+```
+public class UrlSessionDelegate : NSUrlSessionDownloadDelegate {
+    public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+그러나 프로토콜 인터페이스를 사용 하는 경우 [내보내기]를 추가 해야 합니다. IDE는 재정의부터 추가 하 여 자동 완성을 통해 추가 합니다. 
+
+```
+public class UrlSessionDelegate : NSObject, INSUrlSessionDownloadDelegate {
+    [Export ("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:")]
+    public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+런타임에 두 가지 사이에 약간의 동작 차이가 있습니다.
+
+- 기본 클래스 (예: NSUrlSessionDownloadDelegate)의 사용자는 모든 필수 선택기와 선택 선택기를 제공 하 여 적절 한 기본값을 반환 합니다.
+- 인터페이스 (예: INSUrlSessionDownloadDelegate)의 사용자는 제공 된 정확한 선택기에만 응답 합니다.
+
+일부 드문 클래스는 여기에서 다르게 동작할 수 있습니다. 하지만 거의 모든 경우에는를 사용 하는 것이 안전 합니다.
+
 
 <a name="Binding_Class_Extensions"></a>
 
@@ -479,7 +501,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>바인딩 목표-C 인수 목록
 
-Variadic 인수를 지원 합니다. 다음은 그 예입니다.
+Variadic 인수를 지원 합니다. 예를 들면 다음과 같습니다.
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +544,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열이 나 정수 값을 포함 합니다. 일반적으로 특정 알림과 사전에서 키를 나타내는 문자열로 사용 됩니다.
 
-필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 특성을 사용 하 여 속성을 데코 레이트 합니다 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 다음은 그 예입니다.
+필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 특성을 사용 하 여 속성을 데코 레이트 합니다 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -632,7 +654,7 @@ interface MyType {
 반환 값에 대 한 메서드, 매개 변수 및 속성을에 데코레이팅 할 수 있습니다 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) . 유일한 제한 사항은 멤버가 내에 **있지 않아야** 한다는 것입니다. [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
 또는 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 인터페이스입니다.
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -651,7 +673,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) 는 `NSNumber` `NSValue` 및 (열거형)의 배열도 지원 `NSString` 합니다.
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +704,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나 `System.Type` , 일반적으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는를 지정할 수 있습니다. 생성기는 인터페이스를 서브 클래스로 변환 하 `EventArgs` 고 여기에 나열 된 모든 속성을 포함 합니다. [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)EventArgs 클래스에서 특성을 사용 하 여 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 해야 합니다.
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```csharp
 interface MyClass {
@@ -779,7 +801,7 @@ interface MyUIViewExtension {
 }
 ```
 
-위의에서는 `MyUIViewExtension` 확장 메서드를 포함 하는 클래스를 만듭니다 `MakeBackgroundRed` .  즉, 이제는 모든 하위 클래스에서 "MakeBackgroundRed"를 호출 하 여 `UIView` 목표에 대해 얻을 수 있는 것과 동일한 기능을 제공할 수 있습니다. 다른 경우에는 범주를 사용 하 여 시스템 클래스를 확장 하는 대신 기능을 구성 하는 용도로만 사용 됩니다.  다음과 같습니다.
+위의에서는 `MyUIViewExtension` 확장 메서드를 포함 하는 클래스를 만듭니다 `MakeBackgroundRed` .  즉, 이제는 모든 하위 클래스에서 "MakeBackgroundRed"를 호출 하 여 `UIView` 목표에 대해 얻을 수 있는 것과 동일한 기능을 제공할 수 있습니다. 다른 경우에는 범주를 사용 하 여 시스템 클래스를 확장 하는 대신 기능을 구성 하는 용도로만 사용 됩니다.  다음과 같이:
 
 ```csharp
 @interface SocialNetworking (Twitter)
@@ -1197,7 +1219,7 @@ void SomeString (ref NSObject byref);
 
 위의 예에서는 "Retain" 의미 체계가 있는 값에 플래그를 지정 합니다. 사용 가능한 의미 체계는 다음과 같습니다.
 
-- 할당
+- 대입
 - 복사
 - 보유
 
@@ -1337,7 +1359,7 @@ Xamarin.ios에서 라이브러리를 연결 하는 방법에 대해 설명 해�
 위의 예제는 `libMyLibrary.a` `libSystemLibrary.dylib` 및 `CFNetwork` 프레임 워크 라이브러리를 최종 실행 파일에 연결 합니다.
 
 또는 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 계약 파일에 포함할 수 있는 어셈블리 수준 (예:)을 활용할 수 있습니다 `AssemblyInfo.cs` .
-을 사용 하는 경우 네이티브 라이브러리를 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 다음은 그 예입니다.
+을 사용 하는 경우 네이티브 라이브러리를 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

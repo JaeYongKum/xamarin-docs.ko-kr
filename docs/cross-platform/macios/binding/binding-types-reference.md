@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 8549e993bf46ffd3b24ad8ec495791eb25b25023
-ms.sourcegitcommit: bd49f28105218f04e978e58143bba8cdec9fd4a9
+ms.openlocfilehash: 764c6303956199982da779d87b0a29977575e767
+ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925986"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278353"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식 참조 가이드
 
@@ -356,7 +356,7 @@ public partial class CBAdvertisement  {
 런타임에서는 실제로 덮어쓴 메서드를 목표로 등록 하기만 한다는 점에서 차이가 있습니다.
 그렇지 않으면 메서드가 등록 되지 않습니다.
 
-일반적으로로 플래그가 지정 된 클래스의 서브 클래스를 사용 하는 경우 `ModelAttribute` 기본 메서드를 호출 하면 안 됩니다.   해당 메서드를 호출 하면 다음과 같은 예외가 throw 됩니다. You_Should_Not_Call_base_In_This_Method. 재정의 하는 메서드에 대해 하위 클래스에 대 한 전체 동작을 구현 해야 합니다.
+일반적으로로 플래그가 지정 된 클래스의 서브 클래스를 사용 하는 경우 `ModelAttribute` 기본 메서드를 호출 하면 안 됩니다.   해당 메서드를 호출 하면 다음과 같은 예외가 throw 됩니다. Foundation.You_Should_Not_Call_base_In_This_Method. 재정의 하는 메서드에 대해 하위 클래스에 대 한 전체 동작을 구현 해야 합니다.
 
 <a name="AbstractAttribute"></a>
 
@@ -441,7 +441,7 @@ public interface NSAnimationDelegate {
 
 위의 경우 클래스의 사용자가 `NSAnimation` c # 이벤트/속성 중 하나를 사용 하도록 선택 하 고 `NSAnimation.ComputeAnimationCurve` 메서드 또는 람다로 설정 하지 않은 경우 반환 값은 progress 매개 변수에 전달 된 값입니다.
 
-참고 항목: [`[NoDefaultValue]`](#NoDefaultValueAttribute) ,[`[DefaultValue]`](#DefaultValueAttribute)
+참고 항목: [`[NoDefaultValue]`](#NoDefaultValueAttribute) , [`[DefaultValue]`](#DefaultValueAttribute)
 
 ### <a name="ignoredindelegateattribute"></a>IgnoredInDelegateAttribute
 
@@ -577,7 +577,7 @@ interface CameraDelegate {
 }
 ```
 
-참고 항목: [`[DefaultValue]`](#DefaultValueAttribute) ,[`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
+참고 항목: [`[DefaultValue]`](#DefaultValueAttribute) , [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
 
 <a name="ProtocolAttribute"></a>
 
@@ -671,7 +671,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-인터페이스 메서드에 대 한 구현은 적절 한 이름을 사용 하 여 자동으로 내보내지고 다음과 동일 합니다.
+필요한 인터페이스 메서드에 대 한 구현은 적절 한 이름을 사용 하 여 내보내집니다. 따라서 다음과 같습니다.
 
 ```csharp
 class MyDelegate : NSObject, IUITableViewDelegate {
@@ -682,7 +682,29 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-인터페이스를 암시적 또는 명시적으로 구현 하는 경우에는 중요 하지 않습니다.
+이는 모든 필수 프로토콜 멤버에 대해 작동 하지만 선택적 선택기를 사용 하 여 주의 해야 하는 특수 한 경우도 있습니다.
+
+기본 클래스를 사용 하는 경우 선택적 프로토콜 멤버는 동일 하 게 처리 됩니다.
+
+```
+public class UrlSessionDelegate : NSUrlSessionDownloadDelegate {
+    public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+그러나 프로토콜 인터페이스를 사용 하는 경우 [내보내기]를 추가 해야 합니다. IDE는 재정의부터 추가 하 여 자동 완성을 통해 추가 합니다. 
+
+```
+public class UrlSessionDelegate : NSObject, INSUrlSessionDownloadDelegate {
+    [Export ("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:")]
+    public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+런타임에 두 가지 사이에 약간의 차이가 있습니다.
+
+- 기본 클래스 (예: NSUrlSessionDownloadDelegate)의 사용자는 모든 필수 선택기와 선택 선택기를 제공 하 여 적절 한 기본값을 반환 합니다.
+- 인터페이스 (예: INSUrlSessionDownloadDelegate)의 사용자는 제공 된 정확한 선택기에만 응답 합니다.
+
+일부 드문 클래스는 여기에서 다르게 동작할 수 있습니다. 하지만 거의 모든 경우에는를 사용 하는 것이 안전 합니다.
 
 ### <a name="protocol-inlining"></a>프로토콜 인라인
 
@@ -883,7 +905,7 @@ CAScroll SupportedScrollMode { get; set; }
 
 #### <a name="arrays"></a>배열
 
-[`[BindAs]`](#BindAsAttribute)에서는 지원 되는 형식의 배열만 지원 합니다. 예를 들어 다음과 같은 API 정의를 사용할 수 있습니다.
+[`[BindAs]`](#BindAsAttribute) 에서는 지원 되는 형식의 배열만 지원 합니다. 예를 들어 다음과 같은 API 정의를 사용할 수 있습니다.
 
 ```csharp
 [return: BindAs (typeof (CAScroll []))]
@@ -1155,7 +1177,7 @@ public NSObject this [NSObject idx] {
 이 특성은 메서드가 네이티브 (목표값-C) 예외를 지원할 수 있도록 합니다.
 호출은 직접 호출 하는 대신 `objc_msgSend` ObjectiveC 예외를 catch 하 고 관리 되는 예외로 마샬링하는 사용자 지정 tramstststststststa를 통해 수행 됩니다.
 
-현재 몇 개의 `objc_msgSend` 서명만 지원 됩니다 (바인딩을 사용 하는 앱의 네이티브 링크가 누락 된 monotouch_*_objc_msgSend* 기호와 함께 실패 하는 경우 서명이 지원 되지 않는 경우). 그러나 요청 시 추가 될 수 있습니다.
+현재 몇 개의 `objc_msgSend` 서명만 지원 됩니다 (바인딩을 사용 하는 앱의 네이티브 링크가 누락 된 monotouch_ *_objc_msgSend* 기호와 함께 실패 하는 경우 서명이 지원 되지 않는 경우). 그러나 요청 시 추가 될 수 있습니다.
 
 ### <a name="newattribute"></a>NewAttribute
 
@@ -1499,7 +1521,7 @@ interface FooExplorer {
 }
 ```
 
-`[Wrap]`속성 getter 및 setter에서 직접 사용할 수도 있습니다.
+`[Wrap]` 속성 getter 및 setter에서 직접 사용할 수도 있습니다.
 이를 통해에 대 한 모든 권한을 보유 하 고 필요에 따라 코드를 조정할 수 있습니다.
 예를 들어, 스마트 열거형을 사용 하는 다음 API 정의를 살펴보세요.
 
@@ -1899,7 +1921,7 @@ public class LinkWithAttribute : Attribute {
 
 `WeakFrameworks`속성은 `Frameworks` 링크 타임에 표시 되는 `-weak_framework` 각 프레임 워크에 대해 지정자를 gcc에 전달 한다는 점만 제외 하 고 속성과 동일한 방식으로 작동 합니다.
 
-`WeakFrameworks`를 사용 하면 라이브러리와 응용 프로그램이 플랫폼 프레임 워크를 약하게 연결 하 여 사용할 수 있는 경우 필요에 따라 사용할 수 있지만, 라이브러리에서 최신 버전의 iOS에 대 한 추가 기능을 추가 하는 경우 유용 하 게 사용할 수 있습니다. 약한 연결에 대 한 자세한 내용은 [Weak 연결](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html)에 대 한 Apple 설명서를 참조 하세요.
+`WeakFrameworks` 를 사용 하면 라이브러리와 응용 프로그램이 플랫폼 프레임 워크를 약하게 연결 하 여 사용할 수 있는 경우 필요에 따라 사용할 수 있지만, 라이브러리에서 최신 버전의 iOS에 대 한 추가 기능을 추가 하는 경우 유용 하 게 사용할 수 있습니다. 약한 연결에 대 한 자세한 내용은 [Weak 연결](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html)에 대 한 Apple 설명서를 참조 하세요.
 
 약한 연결에 적합 한 것은 `Frameworks` `CoreBluetooth` `CoreImage` `GLKit` `NewsstandKit` `Twitter` iOS 5 에서만 사용할 수 있는 계정,,, 및와 비슷합니다.
 
@@ -1957,7 +1979,7 @@ public interface UITableViewController {
 
 이 클래스는 `[Advice]` 메서드를 재정의 하는 개발자에 게 기본 (재정의 된) 메서드를 호출 **해야** 하는 경우에 사용할 수 있는 특성의 특수 서브 클래스입니다.
 
-다음에 해당 합니다 `clang` .[`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
+다음에 해당 합니다 `clang` . [`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
 
 ### <a name="zerocopystringsattribute"></a>ZeroCopyStringsAttribute
 
@@ -2060,20 +2082,20 @@ interface MyColoringKeys {
 
 정의에서 지원 되는 데이터 형식은 다음과 `StrongDictionary` 같습니다.
 
-|C # 인터페이스 형식|`NSDictionary`저장소 유형|
+|C # 인터페이스 형식|`NSDictionary` 저장소 유형|
 |---|---|
-|`bool`|`Boolean`에 저장 됩니다.`NSNumber`|
-|열거형 값|에 저장 된 정수`NSNumber`|
-|`int`|32 비트 정수로 저장`NSNumber`|
-|`uint`|에 저장 된 32 비트 부호 없는 정수`NSNumber`|
-|`nint`|`NSInteger`에 저장 됩니다.`NSNumber`|
-|`nuint`|`NSUInteger`에 저장 됩니다.`NSNumber`|
-|`long`|64 비트 정수로 저장`NSNumber`|
-|`float`|로 저장 된 32 비트 정수`NSNumber`|
-|`double`|로 저장 된 64 비트 정수`NSNumber`|
-|`NSObject`및 서브 클래스|`NSObject`|
+|`bool`|`Boolean` 에 저장 됩니다. `NSNumber`|
+|열거형 값|에 저장 된 정수 `NSNumber`|
+|`int`|32 비트 정수로 저장 `NSNumber`|
+|`uint`|에 저장 된 32 비트 부호 없는 정수 `NSNumber`|
+|`nint`|`NSInteger` 에 저장 됩니다. `NSNumber`|
+|`nuint`|`NSUInteger` 에 저장 됩니다. `NSNumber`|
+|`long`|64 비트 정수로 저장 `NSNumber`|
+|`float`|로 저장 된 32 비트 정수 `NSNumber`|
+|`double`|로 저장 된 64 비트 정수 `NSNumber`|
+|`NSObject` 및 서브 클래스|`NSObject`|
 |`NSDictionary`|`NSDictionary`|
 |`string`|`NSString`|
 |`NSString`|`NSString`|
-|C `Array` #`NSObject`|`NSArray`|
+|C `Array` # `NSObject`|`NSArray`|
 |C # `Array` 열거형|`NSArray``NSNumber`값 포함|
