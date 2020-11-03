@@ -10,12 +10,12 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da3c6c2f55f1cdbed1b3c4e1bb16c4f78e32cf23
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9e8c0eeb70393cd3a5c6db7b99146b69b79ec14d
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556050"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630246"
 ---
 # <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms DependencyService 등록 및 확인
 
@@ -36,7 +36,7 @@ Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사
 
 [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute)를 사용하여 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 등록할 수 있습니다. 지정된 형식이 인터페이스의 구체적인 구현을 제공하는 것을 나타내는 특성입니다.
 
-다음 예제에서는 [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute)를 사용하여 `IDeviceOrientationService` 인터페이스의 iOS 구현을 등록하는 방법을 보여 줍니다.
+다음 예제에서는 [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute)를 사용하여 `IDeviceOrientationService` 인터페이스의 iOS 구현을 등록합니다.
 
 ```csharp
 using Xamarin.Forms;
@@ -65,7 +65,7 @@ namespace DependencyServiceDemos.iOS
 
 [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드 및 `RegisterSingleton` 메서드를 사용하여 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 등록할 수 있습니다.
 
-다음 예제에서는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 `IDeviceOrientationService` 인터페이스의 iOS 구현을 등록하는 방법을 보여 줍니다.
+다음 예제에서는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 `IDeviceOrientationService` 인터페이스의 iOS 구현을 등록합니다.
 
 ```csharp
 [Register("AppDelegate")]

@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3ee20de5534329f9e4686c908fe923ba94f3fff
-ms.sourcegitcommit: 744f977b0595f489c592e29c8a3ba548fde02b6f
+ms.openlocfilehash: e997ae3137110e18df9eed90ef07bfa2703e8088
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414691"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629602"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: 파일 선택기
 
@@ -56,6 +56,9 @@ ms.locfileid: "91414691"
 추가 설정이 필요하지 않습니다.
 
 -----
+
+> [!TIP]
+> 사용 권한 검사 및 요청은 Xamarin.Essentials에서 자동으로 처리되기 때문에 UI 스레드에서 모든 메서드를 호출해야 합니다.
 
 ## <a name="pick-file"></a>파일 선택
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 371876d087c7027d4cfe2d2d9ada8b0dbedb5dd5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c19a2c7c8b0a02f946bf4984945a3b24cca26d1c
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488974"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897535"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Google Maps API 키 가져오기
 
@@ -103,7 +103,7 @@ Certificate fingerprints:
     Version: 3
 ```
 
-이 가이드의 뒷부분에 나오는 SHA-1 지문(**SHA1** 뒤에 나열됨)을 사용합니다.
+이 가이드의 뒷부분에 나오는 SHA-1 지문( **SHA1** 뒤에 나열됨)을 사용합니다.
 
 ## <a name="creating-an-api-project"></a>API 프로젝트 만들기
 
@@ -125,7 +125,7 @@ Certificate fingerprints:
 
    [![Dashboard(대시보드) 섹션에서 ENABLE(사용) 단추 클릭](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-이제 API 프로젝트가 생성되고 Google Maps Android API v2가 여기에 추가되었습니다. 하지만 이에 대한 자격 증명을 만들기 전까지는 프로젝트에서 이 API를 사용할 수 없습니다. 다음 섹션에서는 API 키를 만들고 이 키를 사용하도록 Xamarin.Android 애플리케이션을 허용 목록에 등록하는 방법을 설명합니다.
+이제 API 프로젝트가 생성되고 Google Maps Android API v2가 여기에 추가되었습니다. 하지만 이에 대한 자격 증명을 만들기 전까지는 프로젝트에서 이 API를 사용할 수 없습니다. 다음 섹션에서는 API 키를 만들고 이 키를 사용하도록 Xamarin.Android 애플리케이션에 권한을 부여하는 방법을 설명합니다.
 
 ## <a name="obtaining-the-api-key"></a>API 키 가져오기
 
@@ -151,7 +151,7 @@ Certificate fingerprints:
 
    [![앱 패키지 이름 및 지문 클릭](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
-6. 앱의 패키지 이름을 입력하고 SHA-1 인증서 지문(이 가이드의 앞부분에 설명된 대로 `keytool`을 통해 획득)을 입력합니다. 다음 예에서는 `XamarinMapsDemo`에 대한 패키지 이름을 입력하고, **debug.keystore**에서 가져온 SHA-1 인증서 지문을 표시합니다.
+6. 앱의 패키지 이름을 입력하고 SHA-1 인증서 지문(이 가이드의 앞부분에 설명된 대로 `keytool`을 통해 획득)을 입력합니다. 다음 예에서는 `XamarinMapsDemo`에 대한 패키지 이름을 입력하고, **debug.keystore** 에서 가져온 SHA-1 인증서 지문을 표시합니다.
 
    [![입력한 패키지 이름 com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 

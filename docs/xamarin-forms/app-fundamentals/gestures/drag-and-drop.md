@@ -6,16 +6,16 @@ ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d3eb7edbb24c7e28ee375e1de85f6a7597ec63ac
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561017"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897470"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>끌어서 놓기 제스처 인식기 추가
 
@@ -50,7 +50,7 @@ Xamarin.Forms에서 끌기 제스처 인식은 `DragGestureRecognizer` 클래스
 - `bool` 형식의 `CanDrag` - 제스처 인식기가 연결된 요소가 끌기 원본이 될 수 있는지 여부를 나타냅니다. 이 속성의 기본값은 `false`입니다.
 - `ICommand` 형식의 `DragStartingCommand` - 끌기 제스처가 처음 인식되면 실행됩니다.
 - `object` 형식의 `DragStartingCommandParameter` - `DragStartingCommand`에 전달되는 매개 변수입니다.
-- `ICommand` 형식의 `DropCompletedCommmand` - 끌기 원본을 놓으면 실행됩니다.
+- `ICommand` 형식의 `DropCompletedCommand` - 끌기 원본을 놓으면 실행됩니다.
 - `object` 형식의 `DropCompletedCommandParameter` - `DropCompletedCommand`에 전달되는 매개 변수입니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원하며, 따라서 데이터 바인딩의 대상이 될 수 있고 스타일이 지정될 수 있습니다.
@@ -79,6 +79,8 @@ Xamarin.Forms에서 끌기 제스처 인식은 `DragGestureRecognizer` 클래스
 
 > [!TIP]
 > iOS, Android 및 UWP에서 끌기 제스처는 길게 누른 다음 끌기로 시작합니다.
+
+`DragGestureRecognizer` 명령 사용 예제는 [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
 
 ## <a name="build-a-data-package"></a>데이터 패키지 빌드
 
@@ -212,6 +214,8 @@ Xamarin.Forms에서 놓기 제스처 인식은 `DropGestureRecognizer` 클래스
 
 이 예제에서는 끌기 원본이 [`ImageSource`](xref:Xamarin.Forms.ImageSource)인 경우 끌기 원본을 [`Image`](xref:Xamarin.Forms.Image) 놓기 대상 위에 놓으면 끌기 원본이 놓기 대상에 복사됩니다. 이는 Xamarin.Forms가 끌어온 이미지 및 텍스트를 호환되는 놓기 대상에 자동으로 복사하기 때문입니다.
 
+`DropGestureRecognizer` 명령 사용 예제는 [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
+
 ## <a name="handle-the-dragover-event"></a>DragOver 이벤트 처리
 
 필요에 따라 `DropGestureRecognizer.DragOver` 이벤트를 처리하여 놓기 대상에서 허용하는 작업 유형을 표시할 수 있습니다. 이 작업을 수행하려면 `DragOver` 이벤트와 함께 제공되는 `DragEventArgs` 개체의 `AcceptedOperation` 속성(`DataPackageOperation` 형식)을 설정합니다.
@@ -260,12 +264,12 @@ void OnDragOver(object sender, DragEventArgs e)
 | 제어 | 속성 | 변환 |
 | --- | --- | --- |
 | `CheckBox` | `IsChecked` | `string`이 `bool`로 변환됩니다. |
-| `DatePicker` | `Date` | `string`이 `DateTime`으로 변환됩니다. |
+| `DatePicker` | `Date` | `string`이 `DateTime`로 변환됩니다. |
 | `Editor` | `Text` ||
 | `Entry` | `Text` ||
 | `Label` | `Text` ||
-| `RadioButton` | `IsChecked` | `string`이 `bool`로 변환됩니다. |
-| `Switch` | `IsToggled` | `string`이 `bool`로 변환됩니다. |
+| `RadioButton` | `IsChecked` | `string`이 `bool`으로 변환됩니다. |
+| `Switch` | `IsToggled` | `string`이 `bool`으로 변환됩니다. |
 | `TimePicker` | `Time` | `string`이 `TimeSpan`으로 변환됩니다. |
 
 텍스트 및 이미지 이외의 콘텐츠에 대해서는 데이터 패키지를 직접 처리해야 합니다.

@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 4a5190ef3e9f61fdb6d08f9cd68202e55a4faead
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433500"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629588"
 ---
 # <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
@@ -46,7 +46,7 @@ ms.locfileid: "91433500"
 ### <a name="selective-backup"></a>선택적 백업
 특정 콘텐츠가 백업되지 않도록 자동 백업을 구성할 수 있습니다. 사용자 지정 규칙 집합을 만들어 `SecureStore` 항목이 백업되지 않도록 제외할 수 있습니다.
 
-1. **AndroidManifest.xml**에서 `android:fullBackupContent` 특성을 설정합니다.
+1. **AndroidManifest.xml** 에서 `android:fullBackupContent` 특성을 설정합니다.
 
     ```xml
     <application ...
@@ -54,7 +54,7 @@ ms.locfileid: "91433500"
     </application>
     ```
 
-2. **AndroidResource**의 빌드 작업으로 **Resources/xml** 디렉터리에 **auto_backup_rules.xml**이라는 새 XML 파일을 만듭니다. `SecureStorage`를 제외한 모든 공유 기본 설정을 포함하는 다음 콘텐츠를 설정합니다.
+2. **AndroidResource** 의 빌드 작업으로 **Resources/xml** 디렉터리에 **auto_backup_rules.xml** 이라는 새 XML 파일을 만듭니다. `SecureStorage`를 제외한 모든 공유 기본 설정을 포함하는 다음 콘텐츠를 설정합니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -66,11 +66,11 @@ ms.locfileid: "91433500"
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-**iOS 시뮬레이터**에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 애플리케이션의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다.
+**iOS 시뮬레이터** 에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 애플리케이션의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다.
 
-iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을 찾아 사용하도록 설정합니다. 그러면 애플리케이션 식별자가 그룹으로 자동 추가됩니다.
+iOS 프로젝트에서 **Entitlements.plist** 를 열고 **키 체인** 자격을 찾아 사용하도록 설정합니다. 그러면 애플리케이션 식별자가 그룹으로 자동 추가됩니다.
 
-프로젝트 속성의 **iOS 번들 서명** 아래에서 **사용자 지정 자격**을 **Entitlements.plist**로 설정합니다.
+프로젝트 속성의 **iOS 번들 서명** 아래에서 **사용자 지정 자격** 을 **Entitlements.plist** 로 설정합니다.
 
 > [!TIP]
 > iOS 디바이스에 배포할 때는 이 자격이 필요하지 않으므로 제거해야 합니다.
@@ -89,7 +89,7 @@ iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을
 using Xamarin.Essentials;
 ```
 
-지정된 _키_의 값을 보안 스토리지에 저장하려면:
+지정된 _키_ 의 값을 보안 스토리지에 저장하려면:
 
 ```csharp
 try
@@ -130,11 +130,14 @@ SecureStorage.Remove("oauth_token");
 SecureStorage.RemoveAll();
 ```
 
+> [!TIP]
+> `GetAsync` 또는 `SetAsync`를 호출할 때 예외가 throw될 수 있습니다. 이 예외는 보안 스토리지, 암호화 키 변경 또는 데이터 손상을 지원하지 않는 디바이스에 의해 발생할 수 있습니다. 가능하면 설정을 제거했다가 다시 추가하여 이 예외를 처리하는 것이 가장 좋습니다.
+
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
 # <a name="android"></a>[Android](#tab/android)
 
-[Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키(_값_에 대한 _키_인 암호화 키 아님)는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
+[Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials** 라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키( _값_ 에 대한 _키_ 인 암호화 키 아님)는 `SecureStorage` API로 전달되는 키의 _MD5 해시_ 입니다.
 
 **API 레벨 23 이상**
 
@@ -144,11 +147,11 @@ SecureStorage.RemoveAll();
 
 이전 API 레벨에서 Android 키 저장소는 **RSA** 키 저장만 지원합니다. 이 키는 **RSA/ECB/PKCS1Padding** 암호화와 함께 사용되어 **AES** 키(런타임에 임의로 생성됨)를 암호화하며, 아직 생성되지 않은 경우 공유 기본 설정 파일의 _SecureStorageKey_ 키 아래에 저장됩니다.
 
-**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 디바이스가 API 레벨 22 이하에서 API 레벨 23 이상으로 업그레이드되는 경우, 앱을 제거하거나 **RemoveAll**을 호출하지 않는 한 이 유형의 암호화가 계속 사용됩니다.
+**SecureStorage** 는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 디바이스가 API 레벨 22 이하에서 API 레벨 23 이상으로 업그레이드되는 경우, 앱을 제거하거나 **RemoveAll** 을 호출하지 않는 한 이 유형의 암호화가 계속 사용됩니다.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[KeyChain](xref:Security.SecKeyChain)을 사용하여 iOS 디바이스에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials**로 설정됩니다.
+[KeyChain](xref:Security.SecKeyChain)을 사용하여 iOS 디바이스에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials** 로 설정됩니다.
 
 KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해도 iCloud 및 사용자의 다른 디바이스에서 안전한 값이 제거되지 않는 경우도 있습니다.
 
@@ -156,9 +159,9 @@ KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해�
 
 [DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)를 사용하여 UWP 디바이스에서 값을 안전하게 암호화합니다.
 
-암호화된 값은 `ApplicationData.Current.LocalSettings`의 컨테이너 안에 **[YOUR-APP-ID].xamarinessentials**라는 이름으로 저장됩니다.
+암호화된 값은 `ApplicationData.Current.LocalSettings`의 컨테이너 안에 **[YOUR-APP-ID].xamarinessentials** 라는 이름으로 저장됩니다.
 
-**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 또한 각 설정의 이름 길이가 최대 255자 이하로 제한된 `LocalSettings`을(를) 사용합니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
+**SecureStorage** 는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 또한 각 설정의 이름 길이가 최대 255자 이하로 제한된 `LocalSettings`을(를) 사용합니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
 
 -----
 

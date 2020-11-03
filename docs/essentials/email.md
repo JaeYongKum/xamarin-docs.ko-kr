@@ -9,12 +9,12 @@ ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 059405d4e3219162022b3f8c0208ee5cc4ac2d38
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 577628237d1e7433c2ad06466a2e804808874108
+ms.sourcegitcommit: d8627a500a9b8a07615aef9822c9b1dba2bf6650
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434544"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629638"
 ---
 # <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
 
@@ -39,7 +39,14 @@ ms.locfileid: "91434544"
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-추가 설정이 필요하지 않습니다.
+iOS 9 이상에서 Apple은 애플리케이션이 쿼리할 수 있는 구성표를 적용합니다. 전자 메일이 유효한 대상인지 쿼리하려면 Info.plist 파일의 LSApplicationQueriesSchemes에서 `mailto` 구성표를 지정해야 합니다.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>mailto</string>
+</array>
+```
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 

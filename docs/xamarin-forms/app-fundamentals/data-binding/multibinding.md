@@ -6,13 +6,13 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2020
-ms.openlocfilehash: 0c10e73d8d6c2dcafacbb069eaf905a227030b87
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.date: 10/26/2020
+ms.openlocfilehash: 6a3154d159c491c6460e118395286aa33cfa7e7e
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557532"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897457"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Xamarin.Forms 다중 바인딩
 
@@ -155,6 +155,33 @@ public class AllTrueMultiConverter : IMultiValueConverter
 
 기본적으로 [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) 속성은 [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 바인딩을 사용합니다. 따라서 `AllTrueMultiConverter` 인스턴스의 `ConvertBack` 메서드는 사용자가 [`CheckBox`](xref:Xamarin.Forms.CheckBox)를 선택하지 않은 경우에 실행되며, 이때 소스 바인딩 값은 `CheckBox.IsChecked` 속성 값으로 설정됩니다.
 
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+public class MultiBindingConverterCodePage : ContentPage
+{
+    public MultiBindingConverterCodePage()
+    {
+        BindingContext = new GroupViewModel();
+
+        CheckBox checkBox = new CheckBox();
+        checkBox.SetBinding(CheckBox.IsCheckedProperty, new MultiBinding
+        {
+            Bindings = new Collection<BindingBase>
+            {
+                new Binding("Employee1.IsOver16"),
+                new Binding("Employee1.HasPassedTest"),
+                new Binding("Employee1.IsSuspended", converter: new InverterConverter())
+            },
+            Converter = new AllTrueMultiConverter()
+        });
+
+        Title = "MultiBinding converter demo";
+        Content = checkBox;
+    }
+}
+```
+
 ## <a name="format-strings"></a>형식 문자열
 
 `MultiBinding`은 `StringFormat` 속성을 통해 문자열로 표시되는 다중 바인딩 결과의 서식을 지정할 수 있습니다. 이 속성은 자리 표시자를 포함한 표준 .NET 서식 지정 문자열로 설정될 수 있으며, 이는 다중 바인딩 결과의 서식 지정 방식을 지정합니다.
@@ -172,6 +199,22 @@ public class AllTrueMultiConverter : IMultiValueConverter
 ```
 
 이 예제에서 `StringFormat` 속성은 세 개의 바인딩된 값을 [`Label`](xref:Xamarin.Forms.Label)로 표시되는 하나의 문자열로 결합합니다.
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Label label = new Label();
+label.SetBinding(Label.TextProperty, new MultiBinding
+{
+    Bindings = new Collection<BindingBase>
+    {
+        new Binding("Employee1.Forename"),
+        new Binding("Employee1.MiddleName"),
+        new Binding("Employee1.Surname")
+    },
+    StringFormat = "{0} {1} {2}"
+});
+```
 
 > [!IMPORTANT]
 > 복합 문자열 서식의 매개 변수 수는 `MultiBinding`에 있는 하위 `Binding` 개체의 수를 초과할 수 없습니다.

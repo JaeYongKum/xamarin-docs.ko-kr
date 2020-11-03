@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c4299abf9c461a16f67ccf3d8caf03d5e568f13
-ms.sourcegitcommit: 827daa78c090bf79a1b55da45bb8012a1723b720
+ms.openlocfilehash: 9a988803b5e18ab91ff65a2b4976158458f68274
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997504"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629563"
 ---
 # <a name="no-locxamarinessentials-media-picker"></a>Xamarin.Essentials: 미디어 선택기
 
@@ -77,7 +77,7 @@ ms.locfileid: "91997504"
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-`Package.appxmanifest`의 **기능**에서 `Microphone` 및 `Webcam` 기능을 선택합니다.
+`Package.appxmanifest`의 **기능** 에서 `Microphone` 및 `Webcam` 기능을 선택합니다.
 
 -----
 
@@ -91,6 +91,9 @@ ms.locfileid: "91997504"
 * `CaptureVideoAsync`: 카메라를 열어 비디오를 촬영합니다.
 
 각 메서드는 사용자에게 표시되는 일부 운영 체제에서 `Title`이 설정될 수 있게 하는 `MediaPickerOptions` 매개 변수를 선택적으로 사용합니다.
+
+> [!TIP]
+> 사용 권한 검사 및 요청은 Xamarin.Essentials에서 자동으로 처리되기 때문에 UI 스레드에서 모든 메서드를 호출해야 합니다.
 
 ## <a name="general-usage"></a>일반적인 사용법
 

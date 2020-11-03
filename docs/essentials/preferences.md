@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60a5fbaa8386d0ecdc5d205b3262e05406cec4a6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 07bfcabc7ffef20bee43531bfab3e78155beb9a9
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556245"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629576"
 ---
 # <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
@@ -62,11 +62,12 @@ Preferences.Remove("my_key");
 Preferences.Clear();
 ```
 
-위의 메서드는 기본 설정의 추가 컨테이너를 만드는 데 사용할 수 있는 선택적 `sharedName`을 사용합니다. 아래 플랫폼 구현 관련 정보를 참조하세요.
+> [!TIP]
+> 위의 메서드는 `sharedName`이라는 선택적 `string` 매개 변수를 사용합니다. 이 매개 변수는 일부 사용 사례에서 유용한 기본 설정에 대한 추가 컨테이너를 만드는 데 사용됩니다. 한 가지 사용 사례는 애플리케이션이 확장 또는 조사식 애플리케이션에서 기본 설정을 공유해야 하는 경우입니다. 아래의 플랫폼 구현 관련 정보를 참조하세요.
 
 ## <a name="supported-data-types"></a>지원되는 데이터 형식
 
-다음 데이터 형식은 **기본 설정**에서 지원됩니다.
+다음 데이터 형식은 **기본 설정** 에서 지원됩니다.
 
 - **bool**
 - **double**
@@ -109,7 +110,7 @@ Preferences.Clear();
 
 ## <a name="persistence"></a>지속성
 
-애플리케이션을 제거하면 모든 _기본 설정_이 제거되나, [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용하는 Android 6.0(API 수준 23) 이상을 대상으로 하여 실행되는 앱은 예외입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
+애플리케이션을 제거하면 모든 _기본 설정_ 이 제거되나, [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용하는 Android 6.0(API 수준 23) 이상을 대상으로 하여 실행되는 앱은 예외입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__ 을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 
