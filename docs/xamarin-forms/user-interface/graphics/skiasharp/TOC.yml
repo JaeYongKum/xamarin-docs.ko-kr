@@ -35,7 +35,7 @@
           href: paths/dots.md
         - name: 손가락으로 그리기
           href: paths/finger-paint.md
-    - name: 변환
+    - name: 변형
       href: transforms/index.md
       items:
         - name: 좌표 이동 변환
@@ -118,10 +118,5 @@
           href: effects/image-filters.md
         - name: 색 필터
           href: effects/color-filters.md
-    - name: 플랫폼 독립적인 예제
-      href: ~/graphics-games/skiasharp/introduction.md
-      items:
-        - name: 플랫폼 특정 정보
-          href: ~/graphics-games/skiasharp/platform.md
     - name: API 참조
       href: /dotnet/api/skiasharp/
