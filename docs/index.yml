@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: c478d4f7f93d7ddeeb307aa87f324127f98ec6f4
-  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+  ms.openlocfilehash: 4ca300805c51c6394ed39fb96a7e178a62e72856
+  ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91453235"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "93281197"
 highlightedContent:
   items:
   - title: 설정 및 설치
@@ -128,8 +128,8 @@ additionalContent:
       summary: 앱이 시작되고 백그라운드로 이동되는 방법을 이해합니다.
       url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
     - title: 데이터 목록 표시
-      summary: ListView를 사용하여 데이터를 스크롤하고 선택합니다.
-      url: ~/xamarin-forms/user-interface/listview/index.md
+      summary: CollectionView를 사용하여 데이터를 스크롤하고 선택합니다.
+      url: ~/xamarin-forms/user-interface/collectionview/index.md
     - title: XAML 및 데이터 바인딩 사용
       summary: MVVM 패턴을 사용하여 UI에 데이터를 표시합니다.
       url: ~/xamarin-forms/xaml/xaml-basics/index.md
@@ -148,20 +148,6 @@ additionalContent:
     - title: SkiaSharp 그래픽 렌더링
       summary: 플랫폼 간 2D 벡터 그래픽을 렌더링합니다.
       url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-  - title: 모바일 개발자 도구
-    items:
-    - title: Windows용 iOS 시뮬레이터
-      summary: Windows에서 Visual Studio를 사용하여 iOS 시뮬레이터와 상호 작용합니다.
-      url: ~/tools/ios-simulator/index.md
-    - title: 프로파일러
-      summary: 성능 문제를 식별하고 해결합니다.
-      url: ~/tools/profiler/index.md
-    - title: .NET 포함
-      summary: 다른 프로그래밍 언어에서 기존 .NET 코드를 사용하도록 허용합니다.
-      url: ~/tools/dotnet-embedding/index.md
-    - title: MonoGame
-      summary: C#을 사용하여 데스크톱, 모바일 및 콘솔 게임을 빌드합니다.
-      url: ~/graphics-games/monogame/introduction/index.md
   - title: Xamarin 플랫폼 개요
     items:
     - title: Xamarin.Forms 플랫폼 간

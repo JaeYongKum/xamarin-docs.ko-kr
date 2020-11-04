@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
+title: Xamarin.Forms 공용 컨트롤 속성, 메서드 및 이벤트
 description: 이 문서에서는 파생 클래스에서 일반적으로 사용 되는 VisualElement 클래스에 정의 된 공용 속성, 메서드 및 이벤트에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
@@ -10,14 +10,14 @@ ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c709331b743d6d6ac1f72fe87dae342b4478a920
+ms.sourcegitcommit: 9a83e49eb4d2afb8b3a99ac2347f4b9f8a19e76b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918351"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93330964"
 ---
-# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms 공용 컨트롤 속성, 메서드 및 이벤트
 
 Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되는 대부분의 컨트롤에 대 한 기본 클래스입니다 Xamarin.Forms . `VisualElement`클래스는 클래스 파생에 사용 되는 여러 [속성](#properties), [메서드](#methods)및 [이벤트](#events) 를 정의 합니다.
 
@@ -31,7 +31,7 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-`AnchorY`속성은 `double` 눈금 및 회전과 같은 변환에 대 한 X 축의 중심점을 정의 하는 값입니다. 기본값은 0.5입니다.
+`AnchorY`속성은 `double` 눈금 및 회전과 같은 변환에 대 한 Y 축의 중심점을 정의 하는 값입니다. 기본값은 0.5입니다.
 
 ### `Background`
 
@@ -51,11 +51,11 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 
 ### `Clip`
 
-`Clip`속성은 `Geometry` 요소의 내용에 대 한 개요를 정의 하는 개체입니다. 클립을 정의 하려면 `Geometry` 와 같은 개체를 사용 `EllipseGeometry` 하 여 요소의 속성을 설정 `Clip` 합니다. 기 하 도형 영역에 있는 영역만 표시 됩니다. 자세한 내용은 [Geometry를 사용 하 여 클리핑](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry)을 참조 하세요.
+`Clip`속성은 `Geometry` 요소의 내용에 대 한 개요를 정의 하는 개체입니다. 클립을 정의 하려면 `Geometry` 와 같은 개체를 사용 `EllipseGeometry` 하 여 요소의 속성을 설정 `Clip` 합니다. 기 하 도형 영역에 있는 영역만 표시 됩니다. 자세한 내용은 [기하 도형으로 잘라 내기](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry)를 참조하세요.
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-`Effects`속성은 `List` `Effect` `Element` (f:)에서 상속 되는 개체의입니다 Xamarin.Forms . Element) 클래스 효과를 사용 하면 네이티브 컨트롤을 사용자 지정할 수 있으며, 일반적으로 작은 스타일 변경에 사용 됩니다. 클래스에 대 한 자세한 내용은 `Effect` [ Xamarin.Forms 효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조 하세요.
+`Effects`속성은 `List` `Effect` 클래스에서 상속 되는 개체의입니다 [`Element`](xref:Xamarin.Forms.Element) . 효과를 사용 하면 네이티브 컨트롤을 사용자 지정할 수 있으며, 일반적으로 작은 스타일 변경에 사용 됩니다. 클래스에 대 한 자세한 내용은 `Effect` [ Xamarin.Forms 효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조 하세요.
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
@@ -239,7 +239,7 @@ public void Unfocus ()
 
 ## <a name="units-of-measurement"></a>측정 단위
 
-Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 단위가 있습니다. Xamarin.Forms장치 및 플랫폼에서 단위를 정규화 하는 플랫폼 독립적인 측정 단위를 사용 합니다. 에는 인치당 160 단위 또는 센티미터 당 64 단위가 있습니다 Xamarin.Forms .
+Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 단위가 있습니다. Xamarin.Forms 장치 및 플랫폼에서 단위를 정규화 하는 플랫폼 독립적인 측정 단위를 사용 합니다. 에는 인치당 160 단위 또는 센티미터 당 64 단위가 있습니다 Xamarin.Forms .
 
 ## <a name="request-properties"></a>요청 속성
 
@@ -272,7 +272,7 @@ Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 �
 
 ### <a name="minimum-properties-within-a-grid"></a>그리드 내의 최소 속성
 
-`Grid`레이아웃에는 행과 열의 상대적인 크기 조정을 위한 고유한 시스템이 있습니다. `MinimumWidthRequest` `MinimumHeightRequest` 레이아웃 내에서 또는를 사용 `Grid` 하면 효과가 없습니다. 자세한 내용은 [ Xamarin.Forms 표](~/xamarin-forms/user-interface/layouts/grid.md)를 참조 하세요.
+`Grid` 레이아웃에는 행과 열의 상대적인 크기 조정을 위한 고유한 시스템이 있습니다. `MinimumWidthRequest` `MinimumHeightRequest` 레이아웃 내에서 또는를 사용 `Grid` 하면 효과가 없습니다. 자세한 내용은 [ Xamarin.Forms 표](~/xamarin-forms/user-interface/layouts/grid.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
