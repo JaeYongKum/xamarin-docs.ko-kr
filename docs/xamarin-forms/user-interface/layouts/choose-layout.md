@@ -10,16 +10,16 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6f5702695698881a30cfbf3e63110856a97a2c24
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b67dcbfbd67ad2ef6fa94948e211dfb8e2a9e9cb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555349"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368572"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin.Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다. 레이아웃 클래스를 선택 하려면 레이아웃이 자식 요소를 배치 하는 방법과 레이아웃의 자식 요소 크기를 조정 하는 방법을 알고 있어야 합니다. 또한 원하는 레이아웃을 만드는 레이아웃을 중첩 해야 할 수도 있습니다.
 

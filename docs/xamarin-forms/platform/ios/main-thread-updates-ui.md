@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 844e04b91910152954973f7e6f10c0d56acadf22
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 404e84e9da1df8a44fa176a17f2407e314ae7968
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563689"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368316"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>IOS에서 주 스레드 제어 업데이트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼에 따라 백그라운드 스레드에서 수행 되는 것이 아니라 컨트롤 레이아웃 및 렌더링 업데이트를 주 스레드에서 수행할 수 있습니다. 거의 필요 하지 않지만 경우에 따라 충돌을 방지할 수 있습니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 되는 `Application.HandleControlUpdatesOnMainThread` 입니다 `true` .
 

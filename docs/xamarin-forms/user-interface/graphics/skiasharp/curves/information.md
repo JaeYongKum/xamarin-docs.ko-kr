@@ -10,16 +10,16 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf9ebb819d5b424963170d563575c4900bbed28b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 64a81b04961ebb0d03f661e99839b7ed78d710f2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556362"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368676"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _경로에 대 한 정보를 가져오고 콘텐츠를 열거 합니다._
 
@@ -141,7 +141,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 **Unicycle 반쪽 파이프** 페이지는 입방 형 3 차원 곡선을 따라 앞뒤로 이동 하는 Unicycle에 대 한 스틱 그림에 애니메이션을 적용 합니다.
 
-[![Unicycle 반 파이프 페이지의 세 번째 스크린샷](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Unicycle 반 파이프 페이지의 세 번째 스크린샷")
+[![Unicycle Half-Pipe 페이지의 삼중 스크린샷](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Unicycle Half-Pipe 페이지의 삼중 스크린샷")
 
 `SKPaint`절반 파이프와 unicycle을 스트로크 하는 데 사용 되는 개체는 클래스의 필드로 정의 됩니다 `UnicycleHalfPipePage` . 또한 `SKPath` unicycle에 대 한 개체를 정의 합니다.
 

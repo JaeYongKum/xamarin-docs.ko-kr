@@ -10,16 +10,16 @@ ms.date: 10/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 390bca8cb74fd2da725724769956b164e0264173
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1a84dad3048597cada0ec3fcbc5ef4035830abb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558760"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369794"
 ---
 # <a name="no-locxamarinforms-stepper"></a>Xamarin.Forms 퍼
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _값 범위에서 숫자 값을 선택 하는 경우 스텝 퍼를 사용 합니다._
 

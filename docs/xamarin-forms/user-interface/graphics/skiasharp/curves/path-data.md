@@ -10,16 +10,16 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f2e6735be2593133f755f87b365b8352bf09ebb4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12af5d9be025fb2113d70a93a364619aff75598d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563083"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370067"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp의 SVG 경로 데이터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 여 경로 정의_
 
@@ -109,7 +109,7 @@ A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 
 *스윕 플래그* 를 시계 방향으로 1로 설정 하 고, 시계 반대 방향으로 0으로 설정 합니다.
 
-호가 새 현재 위치가 되는 점 (*x*, *y*)에 그려집니다.
+호가 새 현재 위치가 되는 점 ( *x* , *y* )에 그려집니다.
 
 ## <a name="cubicto"></a>**CubicTo**
 
@@ -117,7 +117,7 @@ A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
-이 명령은 현재 위치에서 (*x3*, *y3*)로 입방 형 3 차원 곡선을 추가 합니다 .이는 새로운 현재 위치가 됩니다. 요소 (*x1*, *y1*) 및 (*x2*, *y2*)는 제어점입니다.
+이 명령은 현재 위치에서 ( *x3* , *y3* )로 입방 형 3 차원 곡선을 추가 합니다 .이는 새로운 현재 위치가 됩니다. 요소 ( *x1* , *y1* ) 및 ( *x2* , *y2* )는 제어점입니다.
 
 단일 명령으로 여러 개의 베 지 어 곡선을 지정할 수 있습니다 `C` . 점의 수는 3의 배수 여야 합니다.
 
@@ -135,7 +135,7 @@ S x2 y2 x3 y3 ...
 Q x1 y1 x2 y2 ...
 ```
 
-정방형 3 차원 곡선의 경우 점 수는 2의 배수 여야 합니다. 제어점은 (*x1*, *y1*)이 고 끝점 (및 새 현재 위치)은 (*x2*, *y2*)입니다.
+정방형 3 차원 곡선의 경우 점 수는 2의 배수 여야 합니다. 제어점은 ( *x1* , *y1* )이 고 끝점 (및 새 현재 위치)은 ( *x2* , *y2* )입니다.
 
 또한 부드러운 정방형 곡선 명령도 있습니다.
 

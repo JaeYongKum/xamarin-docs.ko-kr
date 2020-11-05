@@ -10,16 +10,16 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cba4c670e9e092eef92f7b37eefc750782c94367
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bd726a5e5d6064ecb9aa1c862697e08a9c4733f4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563837"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370119"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Azure Storage의 데이터 저장 및 액세스 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage는 구조화 되지 않은 구조화 된 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 보여 줍니다._
 
@@ -61,11 +61,11 @@ Blob은 모든 형식 및 크기의 파일입니다. Azure Storage는 다음과 
 
 Blob은 Azure Storage로 업로드 되 고 Azure Storage에서 바이트 스트림으로 다운로드 됩니다. 따라서 파일을 업로드 하기 전에 바이트 스트림으로 변환 하 고 다운로드 후 원래 표현으로 다시 변환 해야 합니다.
 
-Azure Storage에 저장 된 모든 개체에는 고유한 URL 주소가 있습니다. 저장소 계정 이름은 해당 주소의 하위 도메인을 구성 하 고 하위 도메인 및 도메인 이름 조합은 저장소 계정에 대 한 *끝점* 을 형성 합니다. 예를 들어 저장소 계정의 이름이 *mystorageaccount*인 경우 저장소 계정의 기본 blob 끝점은 `https://mystorageaccount.blob.core.windows.net` 입니다.
+Azure Storage에 저장 된 모든 개체에는 고유한 URL 주소가 있습니다. 저장소 계정 이름은 해당 주소의 하위 도메인을 구성 하 고 하위 도메인 및 도메인 이름 조합은 저장소 계정에 대 한 *끝점* 을 형성 합니다. 예를 들어 저장소 계정의 이름이 *mystorageaccount* 인 경우 저장소 계정의 기본 blob 끝점은 `https://mystorageaccount.blob.core.windows.net` 입니다.
 
 스토리지 계정의 개체에 액세스하기 위한 URL은 스토리지 계정의 개체 위치를 엔드포인트에 추가하여 작성됩니다. 예를 들어, blob 주소는 형식을 갖습니다 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 Azure Storage 계정을 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 

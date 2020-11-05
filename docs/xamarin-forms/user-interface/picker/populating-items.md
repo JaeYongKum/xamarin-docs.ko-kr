@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d65352022057ce32bd969950c2165ad530c05bbb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8904f3392e935b3d8aa08d87d208bdb46ac37b30
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559625"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368057"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 항목 컬렉션에 데이터를 추가 하 여 데이터를 선택 하 고 사용자가 항목을 선택할 때 응답 하는 방법을 설명 합니다._
 
@@ -42,7 +42,7 @@ _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트�
 </Picker>
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

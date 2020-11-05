@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f90fc5bdc29009584536cd6d4321ed8abfc8b878
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 96e05e29c6488113f31c05020870ca9e9a73f3f5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563408"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368624"
 ---
 # <a name="tabbedpage-page-swiping-on-android"></a>Android에서 TabbedPage 페이지 살짝 밀기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼별는의 페이지 간에 가로 손가락 제스처를 사용 하 여 살짝 밀기를 사용 하도록 설정 하는 데 사용 됩니다 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 [`TabbedPage.IsSwipePagingEnabled`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) `boolean` .
 

@@ -10,16 +10,16 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: caa4f78d70f583c22fb4a00fd85b91ec7357013a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563291"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369742"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하며,이는 여러 서버 및 파티션에 걸쳐 있을 수 있으며 저장소와 처리량을 무제한으로 지원 합니다. 이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션과 액세스 제어를 결합 하는 방법을 설명 합니다 Xamarin.Forms ._
 
@@ -51,7 +51,7 @@ _Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하
 
 Cosmos DB 분할에 대 한 자세한 내용은 [Azure Cosmos DB을 분할 하 고 크기를 조정 하는 방법](/azure/cosmos-db/partition-data/)을 참조 하세요. Cosmos DB access control에 대 한 자세한 내용은 [SQL API에서](/rest/api/documentdb/access-control-on-documentdb-resources/)Cosmos DB 데이터 및 access control에 대 한 [액세스 보안](/azure/cosmos-db/secure-access-to-data/) 을 참조 하세요.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 리소스 토큰 브로커를 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
@@ -113,7 +113,7 @@ App Service 간편한 인증을 구성 하는 프로세스는 다음과 같습�
 1. Azure Portal에서 App Service 웹 앱으로 이동 합니다.
 1. Azure Portal에서 인증/권한 부여 블레이드를 열고 다음 구성을 수행 합니다.
     - App Service 인증을 설정 해야 합니다.
-    - 요청이 인증 되지 않은 경우 수행할 작업은 **Facebook을 사용 하 여 로그인**하도록 설정 되어야 합니다.
+    - 요청이 인증 되지 않은 경우 수행할 작업은 **Facebook을 사용 하 여 로그인** 하도록 설정 되어야 합니다.
 
     다음 스크린샷은이 구성을 보여 줍니다.
 

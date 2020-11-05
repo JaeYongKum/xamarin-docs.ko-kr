@@ -10,16 +10,16 @@ ms.date: 08/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 749e569e36896441c5b7cebbc4425d9c0e860e0b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a7adb890ed103b595aa777d33254ab2fcb776901
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559638"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368143"
 ---
 # <a name="no-locxamarinforms-menuitem"></a>Xamarin.Forms MenuItem
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
 Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` 항목 컨텍스트 메뉴 및 셸 응용 프로그램 플라이 아웃 메뉴와 같은 메뉴에 대 한 메뉴 항목을 정의 합니다.
 

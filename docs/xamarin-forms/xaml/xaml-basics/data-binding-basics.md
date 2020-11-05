@@ -10,22 +10,22 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dd2abed23704f6a67ac34bc828c48e7200cf99a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 23191be26f8b47393e5cd86f27704fc35c5d5a5c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558721"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368910"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _데이터 바인딩을 사용 하면 두 개체의 속성을 연결 하 여 한 개체의 변경으로 인해 다른 개체의 변경 내용을 적용할 수 있습니다. 이는 매우 중요 한 도구 이며, 데이터 바인딩을 코드로 완전히 정의할 수 있는 반면 XAML은 바로 가기 키와 편리 함을 제공 합니다. 따라서에서 가장 중요 한 태그 확장 중 하나는 Xamarin.Forms 바인딩입니다._
 
 ## <a name="data-bindings"></a>데이터 바인딩
 
-데이터 바인딩은 *원본* 및 *대상*이라는 두 개체의 속성을 연결 합니다. 코드에서는 두 단계가 필요 합니다. `BindingContext` 대상 개체의 속성은 원본 개체로 설정 해야 하며, `SetBinding` 클래스와 함께 사용 되는 메서드는 `Binding` 대상 개체에서 호출 되어야 해당 개체의 속성을 소스 개체의 속성에 바인딩할 수 있습니다.
+데이터 바인딩은 *원본* 및 *대상* 이라는 두 개체의 속성을 연결 합니다. 코드에서는 두 단계가 필요 합니다. `BindingContext` 대상 개체의 속성은 원본 개체로 설정 해야 하며, `SetBinding` 클래스와 함께 사용 되는 메서드는 `Binding` 대상 개체에서 호출 되어야 해당 개체의 속성을 소스 개체의 속성에 바인딩할 수 있습니다.
 
 대상 속성은 바인딩 가능한 속성 이어야 합니다. 즉, 대상 개체는에서 파생 되어야 합니다 `BindableObject` . 온라인 Xamarin.Forms 설명서에서는 바인딩 가능한 속성인 속성을 표시 합니다. `Label`과 같은의 속성 `Text` 은 바인딩 가능한 속성과 연결 됩니다 `TextProperty` .
 
@@ -215,7 +215,7 @@ XAML 및 데이터 바인딩의 강력한 기능을 템플릿 보다 더 잘 보
 
 `ListView``ItemsSource`형식의 속성을 정의 하 `IEnumerable` 고 해당 컬렉션의 항목을 표시 합니다. 이러한 항목은 모든 형식의 개체 일 수 있습니다. 기본적으로에서는 `ListView` `ToString` 각 항목의 메서드를 사용 하 여 해당 항목을 표시 합니다. 경우에 따라 원하는 것만이 아니라 대부분의 경우 `ToString` 개체의 정규화 된 클래스 이름만 반환 합니다.
 
-그러나 컬렉션의 항목은 `ListView` 에서 파생 되는 클래스를 포함 하는 *템플릿을*사용 하 여 원하는 방식으로 표시 될 수 있습니다 `Cell` . 템플릿은의 모든 항목에 대해 복제 되 `ListView` 고, 템플릿에 설정 된 데이터 바인딩은 개별 복제본으로 전송 됩니다.
+그러나 컬렉션의 항목은 `ListView` 에서 파생 되는 클래스를 포함 하는 *템플릿을* 사용 하 여 원하는 방식으로 표시 될 수 있습니다 `Cell` . 템플릿은의 모든 항목에 대해 복제 되 `ListView` 고, 템플릿에 설정 된 데이터 바인딩은 개별 복제본으로 전송 됩니다.
 
 일반적으로 클래스를 사용 하 여 이러한 항목에 대 한 사용자 지정 셀을 만들 수 있습니다 `ViewCell` . 이 프로세스는 코드에서 다소 복잡 하지만 XAML에서 매우 간단 합니다.
 
@@ -342,7 +342,7 @@ XamlSamples 프로젝트에는 라는 클래스가 포함 되어 `NamedColor` �
 
 이전 **ListView Demo** XAML 파일은 `R` 구조체의 개별, `G` 및 `B` 속성 Xamarin.Forms `Color` 을 표시 합니다. 이러한 속성의 형식은이 `double` 고 범위는 0에서 1 사이입니다. 16 진수 값을 표시 하려면 `StringFormat` "X2" 서식 지정 사양과 함께를 사용 하면 됩니다. 정수 및 이외의 경우에만 사용할 수 있는 `double` 값에는 255을 곱합니다.
 
-이러한 사소한 문제는 *값 변환기*( *바인딩 변환기*라고도 함)로 해결 되었습니다. 인터페이스를 구현 하는 클래스로,이 클래스에는 `IValueConverter` 및 라는 두 개의 메서드가 `Convert` 있습니다 `ConvertBack` . `Convert`메서드는 값이 소스에서 대상으로 전송 될 때 호출 됩니다 .이 메서드는 `ConvertBack` 또는 바인딩에서 대상에서 소스로 전송 하기 위해 호출 됩니다 `OneWayToSource` `TwoWay` .
+이러한 사소한 문제는 *값 변환기* ( *바인딩 변환기* 라고도 함)로 해결 되었습니다. 인터페이스를 구현 하는 클래스로,이 클래스에는 `IValueConverter` 및 라는 두 개의 메서드가 `Convert` 있습니다 `ConvertBack` . `Convert`메서드는 값이 소스에서 대상으로 전송 될 때 호출 됩니다 .이 메서드는 `ConvertBack` 또는 바인딩에서 대상에서 소스로 전송 하기 위해 호출 됩니다 `OneWayToSource` `TwoWay` .
 
 ```csharp
 using System;

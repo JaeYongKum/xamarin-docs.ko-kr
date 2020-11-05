@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43c8cd0dd7b50e3a5bfbd15d9858bd4502fedacc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 87153223c79365053bfc05b2a8a97c9aa1d4c4a4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558780"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369053"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 프로그래밍 수준에서 XAML 태그 확장은 또는 인터페이스를 구현 하는 클래스입니다 [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) . GitHub 리포지토리의 [ **MarkupExtensions** 디렉터리](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) 에서 아래에 설명 된 표준 태그 확장의 소스 코드를 탐색할 수 있습니다 Xamarin.Forms .
 
@@ -28,7 +28,7 @@ ms.locfileid: "91558780"
 - `TypeExtension`은 `IMarkupExtension<Type>`에서 파생됩니다.
 - `ArrayExtension`은 `IMarkupExtension<Array>`에서 파생됩니다.
 - `DynamicResourceExtension`은 `IMarkupExtension<DynamicResource>`에서 파생됩니다.
-- `BindingExtension`는 `IMarkupExtension<BindingBase>`에서 파생됩니다.
+- `BindingExtension`은 `IMarkupExtension<BindingBase>`에서 파생됩니다.
 - `ConstraintExpression`은 `IMarkupExtension<Constraint>`에서 파생됩니다.
 
 두 `IMarkupExtension` 인터페이스는 각각 하나의 메서드만 정의 합니다 `ProvideValue` .

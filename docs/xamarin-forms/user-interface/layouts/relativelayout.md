@@ -11,16 +11,16 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d350ceee778c9f9ba9f25555a89a925558c6d38b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 26c7294b816dbfeb42a7a313ec9b8ad1dcbf6583
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556843"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369248"
 ---
 # <a name="no-locxamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 
 [![::: no loc (Xamarin.ios)::: RelativeLayout](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
 
@@ -110,7 +110,7 @@ C #에서는 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) 세 개의 �
 
 ![절대값을 사용 하 여 RelativeLayout에 배치 된 자식](relativelayout-images/absolute-values.png)
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 public class StylishHeaderDemoPageCS : ContentPage

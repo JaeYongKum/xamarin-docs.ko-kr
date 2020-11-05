@@ -10,16 +10,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8afb0aa2a36a73af6c63e48a6c1048d8b69cf90
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 23d24ab7477bb7d9e95e4d78f25f334ae13a8ea2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563980"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368520"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML은 일반적으로 개체를 인스턴스화하고 초기화 하기 위해 디자인 되었습니다. 그러나 속성은 XML 문자열로 표현할 수 없는 복합 개체로 설정 해야 하며, 경우에 따라 한 클래스에서 정의 되는 속성을 자식 클래스에서 설정 해야 합니다. 이러한 두 가지 요구 사항에는 속성 요소 및 연결 된 속성의 필수 XAML 구문 기능이 필요 합니다._
 
@@ -85,9 +85,9 @@ XAML에서 클래스의 속성은 일반적으로 XML 특성으로 설정 됩니
 
 이 새로운 구문을 사용 하 여 몇 가지 유용한 용어를 도입할 수 있습니다.
 
-- `Label` 는  *개체 요소*입니다. Xamarin.FormsXML 요소로 표현 되는 개체입니다.
-- `Text`,  `VerticalOptions` `FontAttributes` 및  `FontSize` 은  *속성 특성*입니다. 이러한 Xamarin.Forms 속성은 XML 특성으로 표현 되는 속성입니다.
-- 이 마지막 코드 조각에서는 `TextColor` 가  *속성 요소가*되었습니다. Xamarin.Forms속성 이지만 이제는 XML 요소입니다.
+- `Label` 는  *개체 요소* 입니다. Xamarin.FormsXML 요소로 표현 되는 개체입니다.
+- `Text`,  `VerticalOptions` `FontAttributes` 및  `FontSize` 은  *속성 특성* 입니다. 이러한 Xamarin.Forms 속성은 XML 특성으로 표현 되는 속성입니다.
+- 이 마지막 코드 조각에서는 `TextColor` 가  *속성 요소가* 되었습니다. Xamarin.Forms속성 이지만 이제는 XML 요소입니다.
 
 속성 요소의 정의는 처음에 XML 구문을 위반 하는 것 처럼 보일 수 있지만이는 그렇지 않습니다. XML에서는이 기간에 특별 한 의미가 없습니다. XML 디코더에 `Label.TextColor` 는 단순히 일반 자식 요소입니다.
 
@@ -257,11 +257,11 @@ XAML에서 클래스의 속성은 일반적으로 XML 특성으로 설정 됩니
 
 모양은 다음과 같습니다.
 
-[![그리드 레이아웃](essential-xaml-syntax-images/griddemo.png)](essential-xaml-syntax-images/griddemo-large.png#lightbox)
+[![모눈 레이아웃](essential-xaml-syntax-images/griddemo.png)](essential-xaml-syntax-images/griddemo-large.png#lightbox)
 
 구문 에서만 심사,,, `Grid.Row` `Grid.Column` `Grid.RowSpan` 및 `Grid.ColumnSpan` 특성은의 정적 필드 또는 속성으로 보이지만,,, `Grid` `Grid` 또는 이라는 이름을 정의 하지 않습니다 `Row` `Column` `RowSpan` `ColumnSpan` .
 
-대신는,, `Grid` 및 라는 네 개의 바인딩 가능한 속성을 정의 `RowProperty` `ColumnProperty` `RowSpanProperty` `ColumnSpanProperty` 합니다. 이러한 속성은 *연결 된 속성*이라고 하는 바인딩 가능한 속성의 특수 한 형식입니다. 클래스에 의해 정의 `Grid` 되지만의 자식에 대해 설정 됩니다 `Grid` .
+대신는,, `Grid` 및 라는 네 개의 바인딩 가능한 속성을 정의 `RowProperty` `ColumnProperty` `RowSpanProperty` `ColumnSpanProperty` 합니다. 이러한 속성은 *연결 된 속성* 이라고 하는 바인딩 가능한 속성의 특수 한 형식입니다. 클래스에 의해 정의 `Grid` 되지만의 자식에 대해 설정 됩니다 `Grid` .
 
 이러한 연결 된 속성을 코드에서 사용 하려는 경우 클래스는 `Grid` , 등 이라는 정적 메서드를 제공 `SetRow` `GetColumn` 합니다. 그러나 XAML에서 이러한 연결 된 속성은 `Grid` 간단한 속성 이름을 사용 하 여의 자식에서 특성으로 설정 됩니다.
 

@@ -10,16 +10,16 @@ ms.date: 07/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 074af11d7873ed44c0a48f923f7560dd50cea6a5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 21e06560bd67683496b10c8e8c9c3fff520fc36a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563239"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368169"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp의 경로 효과
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _스트로크 그리기 및 채우기에 경로를 사용할 수 있도록 하는 다양 한 경로 효과를 검색 합니다._
 
@@ -421,7 +421,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 `y = a · cosh(x / a)`
 
-*Cosh* 는 쌍곡선 코사인 함수입니다. *X* 가 0 인 경우 *cosh* 는 0이 고 *y* 는 *a*와 같습니다. 이는 다양 한 기능을 중심으로 합니다. *코사인* 함수와 마찬가지로 *cosh* 는 *짝수*여야 합니다. 즉, cosh *(– x)* 는 *cosh (x)* 가 되 고 양수 또는 음수 인수를 늘리면 값이 증가 하는 것을 의미 합니다. 이러한 값은 다양 한 측면을 형성 하는 곡선을 설명 합니다.
+*Cosh* 는 쌍곡선 코사인 함수입니다. *X* 가 0 인 경우 *cosh* 는 0이 고 *y* 는 *a* 와 같습니다. 이는 다양 한 기능을 중심으로 합니다. *코사인* 함수와 마찬가지로 *cosh* 는 *짝수* 여야 합니다. 즉, cosh *(– x)* 는 *cosh (x)* 가 되 고 양수 또는 음수 인수를 늘리면 값이 증가 하는 것을 의미 합니다. 이러한 값은 다양 한 측면을 형성 하는 곡선을 설명 합니다.
 
 전화 페이지의 차원에 대 한 적절 *한* 값을 찾는 것은 직접 계산이 아닙니다. *W* 및 *h* 가 사각형의 너비와 높이 이면의 최적 *값은 다음 수식을 만족 합니다* .
 
@@ -691,7 +691,7 @@ public class ConveyorBeltPage : ContentPage
 
 ## <a name="from-path-to-path-again"></a>경로에서 경로로 다시
 
-`DrawSurface` **컨베이어 벨트**의 처리기 아래에서 호출을 주석으로 처리 `canvas.DrawPath` 하 고 다음 코드로 바꿉니다.
+`DrawSurface` **컨베이어 벨트** 의 처리기 아래에서 호출을 주석으로 처리 `canvas.DrawPath` 하 고 다음 코드로 바꿉니다.
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -707,7 +707,7 @@ canvas.DrawPath(newPath, newPaint);
 
 ## <a name="hatching-an-area"></a>해칭 영역
 
-[`SKPathEffect.Create2DLines`](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix))메서드는 평행선 ( *해치 선*이라고 함)을 사용 하 여 영역을 채웁니다. 메서드의 구문은 다음과 같습니다.
+[`SKPathEffect.Create2DLines`](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix))메서드는 평행선 ( *해치 선* 이라고 함)을 사용 하 여 영역을 채웁니다. 메서드의 구문은 다음과 같습니다.
 
 ```csharp
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)

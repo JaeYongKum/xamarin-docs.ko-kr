@@ -10,16 +10,16 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee834bf7bae945536facb576ae26b9d13f5b7bcd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6409bd5052f7943eee00e4405bf3e7da6623278e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558949"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369287"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있도록 하 여 XAML의 기능과 유연성을 향상 시키는 데 도움이 됩니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 파일은 일반적인 네임 스페이스 접두사를 사용 하 여 XAML 파일에 표시 `x` 되며 일반적으로이 접두사를 사용 하 여 참조 됩니다. 이 문서에서는 다음과 같은 태그 확장에 대해 설명 합니다.
 
@@ -39,7 +39,7 @@ XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있
 - `StaticResource` -  [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 개체를 참조 합니다.
 - `DynamicResource` - [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 합니다.
 - `Binding` - [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)문서에 설명 된 대로 두 개체의 속성 간에 링크를 설정 합니다.
-- `TemplateBinding`-컨트롤 [** Xamarin.Forms 템플릿**](~/xamarin-forms/app-fundamentals/templates/control-template.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
+- `TemplateBinding`-컨트롤 [**Xamarin.Forms 템플릿**](~/xamarin-forms/app-fundamentals/templates/control-template.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
 - `RelativeSource` - [상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)문서에 설명 된 대로 바인딩 대상의 위치를 기준으로 바인딩 소스를 설정 합니다.
 
 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)레이아웃은 사용자 지정 태그 확장을 사용 합니다 [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . 이 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md)문서에 설명 되어 있습니다.
@@ -239,7 +239,7 @@ xmlns:sys="clr-namespace:System;assembly=netstandard"
 </ContentPage>
 ```
 
-**태그 확장**에서 열리는 기본 페이지는 다음과 같습니다.
+**태그 확장** 에서 열리는 기본 페이지는 다음과 같습니다.
 
 [![기본 페이지](consuming-images/mainpage-small.png "기본 페이지")](consuming-images/mainpage-large.png#lightbox "기본 페이지")
 

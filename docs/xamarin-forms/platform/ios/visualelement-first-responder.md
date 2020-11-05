@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ebe153ab8dfe4645b6c71fc6b973a6f001f97c0d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f5089a60d331433b8a007c1ec027746227e7a62f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564071"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368663"
 ---
 # <a name="visualelement-first-responder-on-ios"></a>IOS에서 VisualElement first 응답자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별를 사용 하면 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 개체가 요소를 포함 하는 페이지가 아니라 터치 이벤트의 첫 번째 응답자가 될 수 있습니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `VisualElement.CanBecomeFirstResponder` `true` .
 

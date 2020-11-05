@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca8fdf101d521bf5cc58edecc523a035577be09b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6d4d270b2aeb1bd5e27f8a7a175e4707fd4a9b16
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563369"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368481"
 ---
 # <a name="visualelement-legacy-color-mode-on-android"></a>Android의 VisualElement 레거시 색 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 일부 뷰는 Xamarin.Forms 레거시 색 모드를 특징으로 합니다. 이 모드에서 [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) 뷰의 속성이로 설정 되 면 `false` 뷰에서 사용 하지 않도록 설정 된 기본 색으로 사용자가 설정한 색이 재정의 됩니다. 이전 버전과의 호환성을 위해이 레거시 색 모드는 지원 되는 보기의 기본 동작으로 유지 됩니다.
 

@@ -10,16 +10,16 @@ ms.date: 09/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d3deb5631bd37e4081ebaa591a52adb09d9db274
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 18ab6b42753cefbcb8b69deeba9a76c37dc5b9b0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560301"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369235"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 클래스는 요소를 사용 하 여 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 사용자 지정할 수 있는 스크롤 가능한 목록을 표시 하는 데 사용 됩니다 `ViewCell` . `ViewCell`요소는 텍스트와 이미지를 표시 하 고, true/false 상태를 표시 하 고, 사용자 입력을 받을 수 있습니다.
 

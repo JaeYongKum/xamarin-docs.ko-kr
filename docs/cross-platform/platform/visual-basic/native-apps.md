@@ -6,16 +6,16 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 77df7d986f63861667c67b9c74b88ea6176f42ad
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 96f8a8c2fa49e1ff59621908ef89d08d302aaffa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458188"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367974"
 ---
 # <a name="visual-basic-in-xamarin-android-and-ios"></a>Xamarin Android 및 iOS의 Visual Basic
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 
 [Taskyvb](/samples/xamarin/mobile-samples/visualbasic-taskyvb/) 샘플 응용 프로그램은 .NET Standard 라이브러리로 컴파일되는 Visual Basic 코드를 Xamarin과 함께 사용할 수 있는 방법을 보여 줍니다. 다음은 Android 및 iOS에서 실행 되는 응용 프로그램의 몇 가지 스크린샷입니다.
 

@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: cdf34d78751345857e89c6bfa6862b58207ad01e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 90068096eced1fd1ddd2eb59b845eb4d5e41286f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562134"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368884"
 ---
 # <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms 리소스 사전
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 응용 프로그램에서 사용 되는 리소스에 대 한 리포지토리입니다 Xamarin.Forms . 에 저장 되는 일반적인 리소스에 `ResourceDictionary` 는 [스타일](~/xamarin-forms/user-interface/styles/index.md), [컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md), [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), 색 및 변환기가 포함 됩니다.
 
@@ -137,7 +137,7 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 
 이러한 파일을 만들려면 프로젝트에 새 **콘텐츠 뷰** 또는 **콘텐츠 페이지** 항목을 추가 합니다 (c # 파일만 있는 **콘텐츠 뷰** 또는 **콘텐츠 페이지** 는 아님). 코드 숨겨진 파일을 삭제 하 고 XAML 파일에서 기본 클래스의 이름을 또는에서로 변경 합니다 [`ContentView`](xref:Xamarin.Forms.ContentView) [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . 또한 `x:Class` 파일의 루트 태그에서 특성을 제거 합니다.
 
-다음 XAML 예제에서는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 이름이 **myresourcedictionary .xaml**인를 보여 줍니다.
+다음 XAML 예제에서는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 이름이 **myresourcedictionary .xaml** 인를 보여 줍니다.
 
 ```xaml
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
@@ -194,7 +194,7 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 
 ### <a name="merge-resource-dictionaries-from-other-assemblies"></a>다른 어셈블리의 리소스 사전 병합
 
-는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) `ResourceDictionary` 의 속성에 추가 하 여 다른로 병합할 수도 있습니다 [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) `ResourceDictionary` . 이 기법을 사용 하면 리소스가 상주 하는 어셈블리에 관계 없이 리소스 사전을 병합할 수 있습니다. 외부 어셈블리에서 리소스 사전을 병합 하려면에 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 빌드 작업을 **EmbeddedResource**로 설정 하 고, 코드를 사용 하 여 파일을 포함 하 고, `x:Class` 파일의 루트 태그에 특성을 정의 해야 합니다.
+는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) `ResourceDictionary` 의 속성에 추가 하 여 다른로 병합할 수도 있습니다 [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) `ResourceDictionary` . 이 기법을 사용 하면 리소스가 상주 하는 어셈블리에 관계 없이 리소스 사전을 병합할 수 있습니다. 외부 어셈블리에서 리소스 사전을 병합 하려면에 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 빌드 작업을 **EmbeddedResource** 로 설정 하 고, 코드를 사용 하 여 파일을 포함 하 고, `x:Class` 파일의 루트 태그에 특성을 정의 해야 합니다.
 
 > [!WARNING]
 > [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)또한 클래스는 속성을 정의 [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) 합니다. 그러나이 속성은 더 이상 사용 되지 않으므로 사용 하면 안 됩니다.

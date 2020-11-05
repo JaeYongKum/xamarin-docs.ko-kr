@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3baadfcb06a595c5809dbabd484a8f886ab84aec
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e041c766d0a4beefb8b4c74b9024c7554c818511
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562368"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368637"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Android의 소프트 키보드 입력 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼별는 소프트 키보드 입력 영역에 대 한 운영 모드를 설정 하는 데 사용 되며 [`Application.WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) 연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) .
 
@@ -45,7 +45,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 그 결과 입력 컨트롤에 포커스가 있을 때 소프트 키보드 입력 영역 운영 모드를 설정할 수 있습니다.
 
-[![소프트 키보드 운영 모드 플랫폼 특정](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "소프트 키보드 운영 모드 플랫폼 특정")
+[![소프트 키보드 운영 모드 플랫폼 특정](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "소프트 키보드 운영 모드 Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

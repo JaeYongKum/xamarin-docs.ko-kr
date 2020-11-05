@@ -11,16 +11,16 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ef6ccbaac73946ac19f4f5fe194f395234226b5e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3755f85b01821238e790bd2fb09f567c4e98d4d8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562849"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368364"
 ---
 # <a name="consume-an-azure-cosmos-db-document-database-in-no-locxamarinforms"></a>에서 Azure Cosmos DB 문서 데이터베이스 사용 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
 _Azure Cosmos DB 문서 데이터베이스는 JSON 문서에 대 한 짧은 대기 시간 액세스를 제공 하는 NoSQL 데이터베이스로, 원활한 확장 및 전역 복제가 필요한 응용 프로그램에 대해 빠르고 가용성이 뛰어난 확장 가능한 데이터베이스 서비스를 제공 합니다. 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 합니다 Xamarin.Forms ._
 
@@ -43,7 +43,7 @@ Azure Cosmos DB에 대 한 자세한 내용은 [Azure Cosmos DB 설명서](/azur
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 

@@ -10,16 +10,16 @@ ms.date: 09/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6cbdea3656daa4df894a79edc70453c78e3844bc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e829c7f3763d25574b9ca70c1118ee9521633b48
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556752"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368468"
 ---
 # <a name="viewcell-context-actions-on-android"></a>Android의 ViewCell 컨텍스트 작업
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 4.3 기본적으로 Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) Android 응용 프로그램의가의 각 항목에 대 한 컨텍스트 작업을 정의 하는 경우에서 [`ListView`](xref:Xamarin.Forms.ListView) 선택한 항목이 변경 되 면 컨텍스트 작업 메뉴가 업데이트 됩니다 `ListView` . 그러나 이전 버전의 Xamarin.Forms 컨텍스트 작업 메뉴에서는 업데이트 되지 않았으므로이 동작을 `ViewCell` 레거시 모드 라고 합니다. 이 레거시 모드를 사용 하면에서를 사용 하 여 `ListView` [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) `ItemTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 다른 컨텍스트 작업을 정의 하는 개체에서를 설정 하는 경우 잘못 된 동작이 발생할 수 있습니다.
 

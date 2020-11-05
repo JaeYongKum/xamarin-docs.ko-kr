@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e2f9d27fb111feb31272df03c3676c7f4d36769
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d8cc1cf0bb121fadb150523f71d09a2558265be3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556635"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369222"
 ---
 # <a name="skiasharp-shaders"></a>SkiaSharp 셰이더
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [`Shader`](xref:SkiaSharp.SKPaint.Shader)의 속성을 `SKPaint` 형식의 개체로 설정 [`SKShader`](xref:SkiaSharp.SKShader) 하 여 여러 가지 유형의 그라데이션, 바둑판식 비트맵 패턴 또는 Perlin 노이즈를 만들 수 있습니다.
 

@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 31a76e160186caec74665b7615323eb8e60b698a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fdb59cf8b40c62bc4375a12368ed871898497adf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562329"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368594"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _변환 변환을 사용 하 여 SkiaSharp 그래픽을 이동 하는 방법을 알아봅니다._
 
@@ -145,7 +145,7 @@ using (SKPaint textPaint = new SKPaint())
 
 그러나 처리기의 한 호출에서 다음으로 전달 되는 변환에 대해 걱정할 필요가 없습니다 `PaintSurface` . 를 새로 호출할 때마다 `PaintSurface` `SKCanvas` 기본 변환이 포함 된 새 개체가 제공 됩니다.
 
-변환의 또 다른 일반적인 용도는 `Translate` 그리기에 편리한 좌표를 사용 하 여 원래 만든 시각적 개체를 렌더링 하는 것입니다. 예를 들어 지점 (0, 0)의 중심을 사용 하 여 아날로그 시계의 좌표를 지정 하려고 할 수 있습니다. 그런 다음 변환을 사용 하 여 원하는 위치에 시계를 표시할 수 있습니다. 이 기술은 [**Hendecagram 배열**] 페이지에 설명 되어 있습니다. [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs)클래스는 `SKPath` 11 포인터가 가리키는 별모양에 대 한 개체를 만들기 시작 합니다. `HendecagramPath`개체는 다른 데모 프로그램에서 액세스할 수 있도록 공용, 정적 및 읽기 전용으로 정의 됩니다. 정적 생성자에 생성 됩니다.
+변환의 또 다른 일반적인 용도는 `Translate` 그리기에 편리한 좌표를 사용 하 여 원래 만든 시각적 개체를 렌더링 하는 것입니다. 예를 들어 지점 (0, 0)의 중심을 사용 하 여 아날로그 시계의 좌표를 지정 하려고 할 수 있습니다. 그런 다음 변환을 사용 하 여 원하는 위치에 시계를 표시할 수 있습니다. 이 기술은 [ **Hendecagram 배열** ] 페이지에 설명 되어 있습니다. [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs)클래스는 `SKPath` 11 포인터가 가리키는 별모양에 대 한 개체를 만들기 시작 합니다. `HendecagramPath`개체는 다른 데모 프로그램에서 액세스할 수 있도록 공용, 정적 및 읽기 전용으로 정의 됩니다. 정적 생성자에 생성 됩니다.
 
 ```csharp
 public class HendecagramArrayPage : ContentPage

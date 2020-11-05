@@ -10,16 +10,16 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ede34258650c378a45ee694f90de1e8b249acf71
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cbd61d956b17df556cb4bb452f60b0e41b31b707
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559885"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368247"
 ---
 # <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>에서 네이티브 맵 앱을 시작 합니다. Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 각 플랫폼의 네이티브 맵 앱은 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Forms Xamarin.Essentials `Launcher` . 이 클래스를 사용 하면 응용 프로그램에서 사용자 지정 URI 체계를 통해 다른 앱을 열 수 있습니다. 시작 관리자 기능은 메서드를 사용 하 여 호출 하 `OpenAsync` 고, `string` `Uri` 열려는 사용자 지정 URL 체계를 나타내는 또는 인수를 전달할 수 있습니다. 에 대 한 자세한 내용은 Xamarin.Essentials 을 참조 하십시오 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 

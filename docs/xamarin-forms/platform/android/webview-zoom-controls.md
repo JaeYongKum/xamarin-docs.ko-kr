@@ -10,16 +10,16 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e41efd4bf100205f20b8f4e02a74fad193134a4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12c8eafd9768ee0da232ead4aac6cd6bdc3c9a2d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556427"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369612"
 ---
 # <a name="webview-zoom-on-android"></a>Android에서 웹 보기 확대/축소
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼에 대 한 확대/축소 및 확대/축소 컨트롤을 사용할 수 있습니다 [`WebView`](xref:Xamarin.Forms.WebView) . `WebView.EnableZoomControls`및 `WebView.DisplayZoomControls` 바인딩 가능한 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `boolean` .
 

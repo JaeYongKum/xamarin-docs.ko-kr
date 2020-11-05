@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/16/2019
-ms.openlocfilehash: 526de99f32a8682cbe6862e46f90c674cf7d3dc6
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: a092b5f84ebf0481652f5093a4898e44a55e19f8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430374"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369560"
 ---
 # <a name="use-touch-id-and-face-id-with-xamarinios"></a>Xamarin.ios에서 Touch ID 및 Face ID 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/ios-samples/ios11-faceidsample/)
 
 iOS는 다음과 같은 두 가지 생체 인식 인증 시스템을 지원 합니다.
 
@@ -25,7 +25,7 @@ iOS는 다음과 같은 두 가지 생체 인식 인증 시스템을 지원 합�
 
 Touch ID는 ios 11의 iOS 7 및 얼굴 ID에서 도입 되었습니다.
 
-이러한 인증 시스템은 _Secure Enclave_라는 하드웨어 기반 보안 프로세서를 사용 합니다. Secure Enclave는 얼굴 및 지문 데이터의 수학적 표현을 암호화 하 고이 정보를 사용 하 여 사용자를 인증 합니다. Apple에 따라 얼굴 및 지문 데이터는 장치를 떠나지 않으며 iCloud로 백업 되지 않습니다. 앱은 _로컬 인증_ API를 통해 보안 Enclave 상호 작용 하 고, 얼굴 또는 지문 데이터를 검색 하거나 보안 Enclave에 직접 액세스할 수 없습니다.
+이러한 인증 시스템은 _Secure Enclave_ 라는 하드웨어 기반 보안 프로세서를 사용 합니다. Secure Enclave는 얼굴 및 지문 데이터의 수학적 표현을 암호화 하 고이 정보를 사용 하 여 사용자를 인증 합니다. Apple에 따라 얼굴 및 지문 데이터는 장치를 떠나지 않으며 iCloud로 백업 되지 않습니다. 앱은 _로컬 인증_ API를 통해 보안 Enclave 상호 작용 하 고, 얼굴 또는 지문 데이터를 검색 하거나 보안 Enclave에 직접 액세스할 수 없습니다.
 
 Touch ID 및 Face ID는 앱에서 보호 된 콘텐츠에 대 한 액세스를 제공 하기 전에 사용자를 인증 하는 데 사용할 수 있습니다.
 

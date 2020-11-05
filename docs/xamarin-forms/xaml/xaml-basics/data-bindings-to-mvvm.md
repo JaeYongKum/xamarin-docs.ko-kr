@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8cb59738519af933e509ebf63a923e573667941e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a62fee4ca3cdb4de7f23856f123389df23692f62
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562914"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368923"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5부. 데이터 바인딩에서 MVVM까지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _MVVM (모델 뷰-ViewModel) 아키텍처 패턴은 XAML을 염두에 두어야 합니다. 패턴은 세 가지 소프트웨어 계층 (XAML 사용자 인터페이스 (뷰 라고 함)을 구분 합니다. 모델 이라고 하는 기본 데이터 ViewModel 이라고 하는 뷰와 모델 간의 중개자입니다. 뷰와 ViewModel은 일반적으로 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰의 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
 
@@ -298,7 +298,7 @@ namespace XamlSamples
 
 각각에 대 한 바인딩이 `Label` 기본값입니다 `OneWay` . 값을 표시 하기만 하면 됩니다. 그러나 각에 대 한 `Slider` 바인딩은 `TwoWay` 입니다. 이를 통해를 `Slider` ViewModel에서 초기화할 수 있습니다. `Color`ViewModel이 인스턴스화될 때 속성이로 설정 되어 있는지 확인 `Aqua` 합니다. 그러나의 변경 내용으로는 `Slider` ViewModel의 속성에 새 값을 설정 해야 합니다. 그런 다음 새 색을 계산 합니다.
 
-[![양방향 데이터 바인딩을 사용 하는 MVVM](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용 하는 MVVM")
+[![Two-Way 데이터 바인딩을 사용 하는 MVVM](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "Two-Way 데이터 바인딩을 사용 하는 MVVM")
 
 ## <a name="commanding-with-viewmodels"></a>ViewModels 사용 하 여 명령
 
@@ -566,7 +566,7 @@ namespace XamlSamples
 명령에서 비동기 메서드를 호출할 수도 있습니다. 이는 `async` `await` 메서드를 지정할 때 및 키워드를 사용 하 여 `Execute` 수행 됩니다.
 
 ```csharp
-DownloadCommand = new Command (async () => await DownloadAsync ());
+DownloadCommand = new Command (async () => await DownloadAsync ());
 ```
 
 이는 메서드가이 `DownloadAsync` `Task` 고 대기 해야 함을 나타냅니다.

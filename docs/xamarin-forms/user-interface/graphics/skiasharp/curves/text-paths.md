@@ -10,16 +10,16 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c78d6777db4e8dcc3a8302d418f1c87440dc90a5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3da24f803c6d41564c2c4d556a108a324aa78dc4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562056"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369976"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>SkiaSharp의 경로 및 텍스트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _패스와 텍스트의 교집합 살펴보기_
 

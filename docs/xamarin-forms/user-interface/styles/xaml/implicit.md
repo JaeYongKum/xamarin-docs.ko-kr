@@ -10,16 +10,16 @@ ms.date: 01/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad297b735449796925b92fbc9d1887db9e8a1c99
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d986d66b9b83bb1034c9e635c3a35f2a0ac3dfda
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563330"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369066"
 ---
 # <a name="implicit-styles-in-no-locxamarinforms"></a>암시적 스타일 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _암시적 스타일은 각 컨트롤이 스타일을 참조할 필요 없이 동일한 TargetType의 모든 컨트롤에서 사용 하는 스타일입니다._
 

@@ -10,16 +10,16 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 77f47af2ed2cce787cf0f66e524c2314ef4c9452
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 1848adba6ae29a5963228469b429195558266820
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897507"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369443"
 ---
 # <a name="no-locxamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView 데이터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 표시할 데이터 및 모양을 정의 하는 다음 속성이 포함 되어 있습니다.
 

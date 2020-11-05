@@ -10,22 +10,22 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e874543b356ffe5dd821c6c2f20e487d79919449
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557155"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367922"
 ---
 # <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms C # 태그
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 C # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다. C # 태그에서 제공 되는 흐름 API는 네임 스페이스에서 사용할 수 있습니다 `Xamarin.Forms.Markup` .
 
-XAML과 마찬가지로 c # 태그를 사용 하면 UI 태그와 UI 논리를 명확 하 게 구분할 수 있습니다. 이는 UI 태그와 UI 논리를 고유한 partial 클래스 파일로 분리 하 여 수행할 수 있습니다. 예를 들어 로그인 페이지의 경우 ui 태그는 이름이 *LoginPage.cs*인 파일에 있으며 ui 논리는 *LoginPage.logic.cs*라는 파일에 있습니다.
+XAML과 마찬가지로 c # 태그를 사용 하면 UI 태그와 UI 논리를 명확 하 게 구분할 수 있습니다. 이는 UI 태그와 UI 논리를 고유한 partial 클래스 파일로 분리 하 여 수행할 수 있습니다. 예를 들어 로그인 페이지의 경우 ui 태그는 이름이 *LoginPage.cs* 인 파일에 있으며 ui 논리는 *LoginPage.logic.cs* 라는 파일에 있습니다.
 
 C # 태그는 4.6에서 사용할 수 있습니다 Xamarin.Forms . 그러나 현재 실험적 이며 *App.cs* 파일에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
 
@@ -231,11 +231,11 @@ new Label { Text = "Tap Me" }
 
 제스처 인식기는 이기 때문에 `BindableObject` `Bind` 초기화할 때 및 확장 메서드를 사용할 수 있습니다 `BindCommand` . 또한 확장 메서드를 사용 하 여 사용자 지정 제스처 인식기 형식을 초기화할 수 있습니다 `Gesture<TGestureElement, TGestureRecognizer>` .
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원하는 일련의 레이아웃 확장 메서드가 포함 되어 있습니다.
 
-| 유형 | 확장 메서드 |
+| Type | 확장 메서드 |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원�
 
 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 흐름 방향을 모두 지원 하도록 설계 된 c # 태그의 경우 위의 네임 스페이스 중 하나가 아니라 다음 표에 있는 확장 메서드를 사용 하는 것이 좋습니다.
 
-| 유형 | 확장 메서드 |
+| Type | 확장 메서드 |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -357,7 +357,7 @@ new Grid
 }
 ```
 
-## <a name="fonts"></a>글꼴
+## <a name="fonts"></a>Fonts
 
 다음 목록의 컨트롤은 `FontSize` ,, `Bold` `Italic` 및 확장 메서드를 호출 하 여 `Font` 컨트롤에 의해 표시 되는 텍스트의 모양을 설정할 수 있습니다.
 
@@ -529,10 +529,10 @@ new ListView { } .iOSGroupHeaderStyle(PciOS.GroupHeaderStyle.Grouped)
 
 권장 순서 및 속성 및 도우미 메서드 그룹은 다음과 같습니다.
 
-- **목적**: 컨트롤의 용도 (예:, `Text` `Placeholder` , `Assign` )를 식별 하는 값을 갖는 모든 속성 또는 도우미 메서드입니다.
-- **기타**: 레이아웃이 나 바인딩이 아닌 모든 속성 또는 도우미 메서드가 같은 줄 또는 여러 줄에 있습니다.
-- **레이아웃**: 레이아웃은 안쪽 정렬 됩니다. 행 및 열, 레이아웃 옵션, 여백, 크기, 안쪽 여백 및 내용 맞춤입니다.
-- **바인딩**: 데이터 바인딩은 줄 마다 바인딩된 속성 하나를 사용 하 여 메서드 체인의 끝에서 수행 됩니다. 바인딩 가능한 *기본* 속성이 바인딩되면 메서드 체인의 끝에 있어야 합니다.
+- **목적** : 컨트롤의 용도 (예:, `Text` `Placeholder` , `Assign` )를 식별 하는 값을 갖는 모든 속성 또는 도우미 메서드입니다.
+- **기타** : 레이아웃이 나 바인딩이 아닌 모든 속성 또는 도우미 메서드가 같은 줄 또는 여러 줄에 있습니다.
+- **레이아웃** : 레이아웃은 안쪽 정렬 됩니다. 행 및 열, 레이아웃 옵션, 여백, 크기, 안쪽 여백 및 내용 맞춤입니다.
+- **바인딩** : 데이터 바인딩은 줄 마다 바인딩된 속성 하나를 사용 하 여 메서드 체인의 끝에서 수행 됩니다. 바인딩 가능한 *기본* 속성이 바인딩되면 메서드 체인의 끝에 있어야 합니다.
 
 다음 코드에서는이 규칙을 준수 하는 예를 보여 줍니다.
 

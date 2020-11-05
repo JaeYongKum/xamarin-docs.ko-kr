@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99a008e1b2a159c26f434644ab829851d76be59b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b97ce2015ba632d100b946a5b287f0eae737123c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563096"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368689"
 ---
 # <a name="searchbar-spell-check-on-windows"></a>Windows의 SearchBar Spell Check
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 유니버설 Windows 플랫폼 플랫폼별는를 사용 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 하 여 맞춤법 검사 엔진과 상호 작용할 수 있습니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 [`SearchBar.IsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.IsSpellCheckEnabledProperty) `boolean` .
 

@@ -10,18 +10,18 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43702453d1defc3b5a63aba845231f514913d7c5
-ms.sourcegitcommit: 1649554b8c08369b713d20246154455c0ba7d1c0
+ms.openlocfilehash: 0daae3edcfbf95d75c566b3ce10f20c83d099e13
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712562"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368333"
 ---
 # <a name="no-locxamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) 는 비디오와 오디오를 재생 하는 보기입니다. 기본 플랫폼에서 지원 되는 미디어는 다음 원본에서 재생할 수 있습니다.
 
@@ -103,7 +103,7 @@ Android에서 지원 되는 미디어 형식에 대 한 자세한 내용은 deve
 플랫폼 프로젝트에 미디어 파일을 저장 하는 것은 각 플랫폼 마다 다릅니다.
 
 - IOS에서 미디어 파일은 **resources** 폴더 또는 **resources** 폴더의 하위 폴더에 저장 해야 합니다. 미디어 파일에는의가 있어야 합니다 `Build Action` `BundleResource` .
-- Android에서는 미디어 파일이 **raw**라는 **리소스** 의 하위 폴더에 저장 되어야 합니다. **raw** 폴더에는 하위 폴더가 포함될 수 없습니다. 미디어 파일에는의가 있어야 합니다 `Build Action` `AndroidResource` .
+- Android에서는 미디어 파일이 **raw** 라는 **리소스** 의 하위 폴더에 저장 되어야 합니다. **raw** 폴더에는 하위 폴더가 포함될 수 없습니다. 미디어 파일에는의가 있어야 합니다 `Build Action` `AndroidResource` .
 - UWP에서는 미디어 파일을 프로젝트의 모든 폴더에 저장할 수 있습니다. 미디어 파일에는의가 있어야 합니다 `BuildAction` `Content` .
 
 이러한 기준을 충족 하는 미디어 파일은 URI 스키마를 사용 하 여 재생할 수 있습니다 `ms-appx:///` .
@@ -324,7 +324,7 @@ protected override void OnDisappearing()
 
 ## <a name="implement-custom-transport-controls"></a>사용자 지정 전송 컨트롤 구현
 
-미디어 플레이어의 전송 컨트롤에는 **재생**, **일시 중지**및 **중지**기능을 수행 하는 단추가 포함 됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생**과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
+미디어 플레이어의 전송 컨트롤에는 **재생** , **일시 중지** 및 **중지** 기능을 수행 하는 단추가 포함 됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생** 과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
 
 기본적으로 [`MediaElement`](xref:Xamarin.Forms.MediaElement) 재생 컨트롤은 사용 하지 않도록 설정 됩니다. 이렇게 하면를 `MediaElement` 프로그래밍 방식으로 제어 하거나 고유한 전송 컨트롤을 제공할 수 있습니다. 이를 지원 하기 위해에는, `MediaElement` [`Play`](xref:Xamarin.Forms.MediaElement.Play) [`Pause`](xref:Xamarin.Forms.MediaElement.Pause) 및 [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) 메서드가 포함 됩니다.
 
@@ -377,7 +377,7 @@ protected override void OnDisappearing()
 </ContentPage>
 ```
 
-이 예제에서 사용자 지정 전송 컨트롤은 개체로 정의 됩니다 [`Button`](xref:Xamarin.Forms.Button) . 하지만 `Button` 첫 번째 개체는 `Button` **재생** 및 **일시 중지**를 나타내고 두 번째 개체는 `Button` **중지**를 표시 하는 두 개의 개체만 있습니다. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) 개체는 단추를 활성화 및 비활성화 하 고 첫 번째 단추를 **Play** 와 **Pause**사이에서 전환 하는 데 사용 됩니다. 데이터 트리거에 대 한 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
+이 예제에서 사용자 지정 전송 컨트롤은 개체로 정의 됩니다 [`Button`](xref:Xamarin.Forms.Button) . 하지만 `Button` 첫 번째 개체는 `Button` **재생** 및 **일시 중지** 를 나타내고 두 번째 개체는 `Button` **중지** 를 표시 하는 두 개의 개체만 있습니다. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) 개체는 단추를 활성화 및 비활성화 하 고 첫 번째 단추를 **Play** 와 **Pause** 사이에서 전환 하는 데 사용 됩니다. 데이터 트리거에 대 한 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 
 코드 숨겨진 파일에는 이벤트에 대 한 처리기가 있습니다 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) .
 

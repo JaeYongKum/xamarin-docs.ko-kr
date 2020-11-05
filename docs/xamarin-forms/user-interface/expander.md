@@ -10,18 +10,18 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4be3744e0cce465aab8fc4af39495d2f7d8e9004
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0d6cf880be995949553602f9925535e55a8dbb49
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556609"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369508"
 ---
 # <a name="no-locxamarinforms-expander"></a>Xamarin.Forms 기호
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
-Xamarin.Forms `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 컨트롤에는 헤더와 콘텐츠가 있으며 헤더를 눌러 콘텐츠가 표시 되거나 숨겨집니다 `Expander` . 머리글만 표시 되는 경우 `Expander` `Expander` 이 *축소*됩니다. `Expander`콘텐츠가 표시 되 면 `Expander` 이 *확장*됩니다.
+Xamarin.Forms `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 컨트롤에는 헤더와 콘텐츠가 있으며 헤더를 눌러 콘텐츠가 표시 되거나 숨겨집니다 `Expander` . 머리글만 표시 되는 경우 `Expander` `Expander` 이 *축소* 됩니다. `Expander`콘텐츠가 표시 되 면 `Expander` 이 *확장* 됩니다.
 
 다음 스크린샷은 `Expander` 축소 및 확장 된 상태의을 보여 주고 헤더와 콘텐츠를 나타내는 빨간색 상자를 표시 합니다.
 

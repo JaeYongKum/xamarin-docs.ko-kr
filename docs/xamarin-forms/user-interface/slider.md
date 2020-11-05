@@ -10,16 +10,16 @@ ms.date: 02/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d53f999e27aa5aea852f09e8650ea66aac1d9b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 364cda6372986113e8a782a061783e0ca5455f3b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558832"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368546"
 ---
 # <a name="no-locxamarinforms-slider"></a>Xamarin.Forms 슬라이드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _연속 값 범위에서 선택 하려면 슬라이더를 사용 합니다._
 
@@ -298,7 +298,7 @@ Slider slider = new Slider
 
 ### <a name="the-stepslider-solution"></a>Stslider 솔루션
 
-더 다양 한 `StepSlider` 기능은 [27 장에서 설명 합니다. ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) *을 사용 하 여 Mobile Apps를 Xamarin.Forms 만든 *책의 사용자 지정 렌더러 는 `StepSlider` `Slider` 와 비슷하지만 속성을 추가 하 여 `Steps` 와 사이의 값 수를 지정 합니다 `Minimum` `Maximum` .
+더 다양 한 `StepSlider` 기능은 [27 장에서 설명 합니다.](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) *을 사용 하 여 Mobile Apps를 Xamarin.Forms 만든* 책의 사용자 지정 렌더러 는 `StepSlider` `Slider` 와 비슷하지만 속성을 추가 하 여 `Steps` 와 사이의 값 수를 지정 합니다 `Minimum` `Maximum` .
 
 ## <a name="sliders-for-color-selection"></a>색 선택 슬라이더
 
