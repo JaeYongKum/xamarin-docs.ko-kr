@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3926e063fcabf9c70103e3ee72a4723358f26b2a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2c80a82c50c34d45184e8f6359e8940b697e9823
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558871"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375059"
 ---
 # <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms 도형: 폴리라인
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Polyline`클래스는 클래스에서 파생 `Shape` 되며 일련의 연결 된 직선을 그리는 데 사용할 수 있습니다. 다중선은 다각형의 마지막 점이 첫 번째 점에 연결 되지 않는다는 점을 제외 하 고 다각형과 비슷합니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Polyline` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 

@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1427b6f8461c74ded933fe562a7d17221790383a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c266cdee5a0949edc6ade7fff81816d0405af27f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562316"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374890"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵 표시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp 비트맵의 제목은 **[SkiaSharp의 비트맵 기본 사항](../basics/bitmaps.md)** 문서에서 도입 되었습니다. 이 문서에서는 비트맵을 로드 하는 세 가지 방법 및 비트맵을 표시 하는 세 가지 방법을 보여 주었습니다. 이 문서에서는 비트맵을 로드 하는 방법을 검토 하 고의 메서드 사용에 `DrawBitmap` 대해 자세히 설명 `SKCanvas` 합니다.
 
@@ -27,7 +27,7 @@ SkiaSharp 비트맵의 제목은 **[SkiaSharp의 비트맵 기본 사항](../bas
 
 `DrawBitmapLattice`및 메서드에 대 한 자세한 내용은 `DrawBitmapNinePatch` **[SkiaSharp 비트맵의 분할](segmented.md)** 된 항목 표시를 참조 하세요.
 
-이 페이지에 대 한 샘플은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서 가져온 것입니다. 해당 응용 프로그램의 홈 페이지에서 **SkiaSharp 비트맵**을 선택 하 고 **비트맵 표시** 섹션으로 이동 합니다.
+이 페이지에 대 한 샘플은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서 가져온 것입니다. 해당 응용 프로그램의 홈 페이지에서 **SkiaSharp 비트맵** 을 선택 하 고 **비트맵 표시** 섹션으로 이동 합니다.
 
 ## <a name="loading-a-bitmap"></a>비트맵 로드
 
@@ -131,7 +131,7 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 이러한 두 메서드는 기능적으로 동일 합니다. 지정 된 위치는 캔버스를 기준으로 비트맵의 왼쪽 위 모퉁이 위치를 나타냅니다. 모바일 장치의 픽셀 해상도는 매우 높아서 이러한 장치에서는 일반적으로 작은 비트맵이 매우 작게 표시 됩니다.
 
-선택적 `SKPaint` 매개 변수를 사용 하면 투명도를 사용 하 여 비트맵을 표시할 수 있습니다. 이렇게 하려면 개체를 만들고 `SKPaint` `Color` `SKColor` 알파 채널이 1 보다 작은 값으로 속성을 설정 합니다. 다음은 그 예입니다.
+선택적 `SKPaint` 매개 변수를 사용 하면 투명도를 사용 하 여 비트맵을 표시할 수 있습니다. 이렇게 하려면 개체를 만들고 `SKPaint` `Color` `SKColor` 알파 채널이 1 보다 작은 값으로 속성을 설정 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 paint.Color = new SKColor(0, 0, 0, 0x80);
@@ -269,7 +269,7 @@ public class FillRectanglePage : ContentPage
 
 ## <a name="stretching-while-preserving-the-aspect-ratio"></a>가로 세로 비율을 유지 하면서 늘이기
 
-가로 세로 비율을 유지 하면서 비트맵을 확장 하는 것은 _균일 한 크기 조정_이 라고도 하는 프로세스입니다. 해당 용어는 알고리즘 방법을 제안 합니다. 한 가지 가능한 솔루션은 균일 한 **크기 조정** 페이지에 표시 됩니다.
+가로 세로 비율을 유지 하면서 비트맵을 확장 하는 것은 _균일 한 크기 조정_ 이 라고도 하는 프로세스입니다. 해당 용어는 알고리즘 방법을 제안 합니다. 한 가지 가능한 솔루션은 균일 한 **크기 조정** 페이지에 표시 됩니다.
 
 ```csharp
 public class UniformScalingPage : ContentPage
@@ -622,7 +622,7 @@ public partial class ScalingModesPage : ContentPage
 
 [![크기 조정 모드](displaying-images/ScalingModes.png "크기 조정 모드")](displaying-images/ScalingModes-Large.png#lightbox)
 
-**사각형 하위 집합** 페이지에는 **크기 조정 모드**와 거의 동일한 XAML 파일이 있지만 코드 숨김이 파일은 필드에서 제공 하는 비트맵의 사각형 하위 집합을 정의 합니다 `SOURCE` . 
+**사각형 하위 집합** 페이지에는 **크기 조정 모드** 와 거의 동일한 XAML 파일이 있지만 코드 숨김이 파일은 필드에서 제공 하는 비트맵의 사각형 하위 집합을 정의 합니다 `SOURCE` . 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage

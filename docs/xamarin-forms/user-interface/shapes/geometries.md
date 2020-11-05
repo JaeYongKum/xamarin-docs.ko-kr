@@ -10,18 +10,18 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6fe7ce75af14e25fa3dc213f0fb5ed99a2e70a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559326"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374825"
 ---
 # <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms 도형: 기 하 도형
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Geometry`클래스 및이 클래스에서 파생 되는 클래스를 사용 하 여 2d 셰이프의 기 하 도형에 대해 설명할 수 있습니다. `Geometry` 개체는 사각형 및 원과 같은 단순 또는 두 개 이상의 geometry 개체에서 만든 복합 일 수 있습니다. 또한 원호 및 곡선을 포함 하는 더 복잡 한 기 하 도형을 만들 수 있습니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "91559326"
 다음 클래스에는 개체에 대해 설정할 수 있는 속성이 있습니다 `Geometry` .
 
 - `Path`클래스는를 사용 하 여 `Geometry` 해당 내용을 설명 합니다. `Geometry`속성을 개체로 설정 하 `Path.Data` `Geometry` 고 `Path` 개체의 `Fill` 및 속성을 설정 `Stroke` 하 여를 렌더링할 수 있습니다.
-- 클래스에는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) `Clip` `Geometry` 요소의 콘텐츠의 윤곽선을 정의 하는 형식의 속성이 있습니다. `Clip`속성이 개체로 설정 된 경우 `Geometry` 의 영역 내에 있는 영역만 `Geometry` 표시 됩니다. 자세한 내용은 [Geometry를 사용 하 여 클리핑](#clip-with-a-geometry)을 참조 하세요.
+- 클래스에는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) `Clip` `Geometry` 요소의 콘텐츠의 윤곽선을 정의 하는 형식의 속성이 있습니다. `Clip`속성이 개체로 설정 된 경우 `Geometry` 의 영역 내에 있는 영역만 `Geometry` 표시 됩니다. 자세한 내용은 [기하 도형으로 잘라 내기](#clip-with-a-geometry)를 참조하세요.
 
 클래스에서 파생 되는 클래스는 `Geometry` 간단한 기 하 도형, 경로 기 하 도형 및 복합 기 하 도형 등의 세 가지 범주로 그룹화 할 수 있습니다.
 

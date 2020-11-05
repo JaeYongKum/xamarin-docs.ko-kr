@@ -10,16 +10,16 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6a63e952d7466dc4b7f2d3e8cfc39d6c63e4daf
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12ba6e8f9bb1c547ad5a15e2e79f74c29b74ad12
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559976"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375449"
 ---
 # <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.Forms 지도 지 오 코딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)네임 스페이스는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 개체에 저장 되는 문자열 주소와 위도 및 경도 좌표 간을 변환 하는 클래스를 제공 합니다 [`Position`](xref:Xamarin.Forms.Maps.Position) . 구조체에 대 한 자세한 내용은 [`Position`](xref:Xamarin.Forms.Maps.Position) [지도 위치 및 거리](position-distance.md)를 참조 하세요.
 

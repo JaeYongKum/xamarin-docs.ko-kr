@@ -10,16 +10,16 @@ ms.date: 04/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6856e0ef513905a6300dcaf661ea33f4a89852c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 05d0917ac748ca27350f43ae225f1cb1d1aad84f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563915"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375384"
 ---
 # <a name="generics-in-no-locxamarinforms-xaml"></a>XAML의 제네릭 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
 Xamarin.Forms XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다. 이 지원은 `x:TypeArguments` 제네릭의 제약 형식 인수를 제네릭 형식의 생성자에 전달 하는 지시문을 통해 제공 됩니다.
 

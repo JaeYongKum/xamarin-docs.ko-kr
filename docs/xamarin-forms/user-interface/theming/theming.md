@@ -10,16 +10,16 @@ ms.date: 08/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7eef9cdf353c527be4e1de4721a5658a7763dabe
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 123a0868ce098f8c54e6805a1b2b9a6efb04c238
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557545"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375397"
 ---
 # <a name="theme-a-no-locxamarinforms-application"></a>Xamarin.Forms응용 프로그램 테마
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Xamarin.Forms 응용 프로그램은 태그 확장을 사용 하 여 런타임에 동적으로 스타일 변경에 응답할 수 있습니다 `DynamicResource` . 이 태그 확장은 `StaticResource` 둘 다 사전 키를 사용 하 여에서 값을 인출 한다는 점에서 태그 확장과 비슷합니다 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . 그러나 `StaticResource` 태그 확장은 단일 사전 조회를 수행 하지만 `DynamicResource` 태그 확장은 사전 키에 대 한 링크를 유지 관리 합니다. 따라서 키와 연결 된 값이 대체 되 면 변경 내용이에 적용 됩니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) . 그러면 응용 프로그램에서 런타임 테마를 구현할 수 있습니다 Xamarin.Forms .
 
@@ -86,7 +86,7 @@ Xamarin.Forms 응용 프로그램은 태그 확장을 사용 하 여 런타임�
 
 ## <a name="set-a-default-theme"></a>기본 테마 설정
 
-응용 프로그램에는 기본 테마가 필요 하므로 컨트롤에 사용 되는 리소스에 대 한 값이 있습니다. 테마를 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) `ResourceDictionary` **app.xaml**에 정의 된 응용 프로그램 수준에 병합 하 여 기본 테마를 설정할 수 있습니다.
+응용 프로그램에는 기본 테마가 필요 하므로 컨트롤에 사용 되는 리소스에 대 한 값이 있습니다. 테마를 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) `ResourceDictionary` **app.xaml** 에 정의 된 응용 프로그램 수준에 병합 하 여 기본 테마를 설정할 수 있습니다.
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"

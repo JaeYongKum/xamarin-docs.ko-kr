@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 78425617d95758d3663cb9f2c5ac9bebb463bd68
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559157"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374760"
 ---
 # <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms 도형: 선
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Line`클래스는 클래스에서 파생 `Shape` 되며 선을 그리는 데 사용할 수 있습니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Line` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 
@@ -56,7 +56,7 @@ ms.locfileid: "91559157"
 
 이 예제에서는 (40, 0)에서 (0120)까지 빨간색 대각선을 그립니다.
 
-![Line](line-images/line.png "줄")
+![Line](line-images/line.png "선")
 
 ,, `X1` `Y1` `X2` 및 `Y2` 속성의 기본값은 0 이므로 최소한의 구문을 사용 하 여 줄을 그릴 수 있습니다.
 

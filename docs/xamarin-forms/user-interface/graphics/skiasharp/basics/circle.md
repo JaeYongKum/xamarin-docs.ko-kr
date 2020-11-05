@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 538a3ea3bd5b2293f93047d9796a185abfa5f2b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 39e9effa1c43a4456a1e75e391e14804e2aa0011
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556596"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375098"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Canvas 및 paint 개체를 포함 하 여 SkiaSharp drawing의 기본 사항을 알아봅니다._
 
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-좌표는 표시 표면의 왼쪽 위 모퉁이를 기준으로 지정 됩니다. X 좌표가 오른쪽으로 증가 하 고 Y 좌표가 증가 합니다. 그래픽에 대해 설명 하는 것 처럼 종종 수학적 표기법 (x, y)을 사용 하 여 점을 나타냅니다. 점 (0, 0)은 표시 표면의 왼쪽 위 모퉁이가 며 일반적으로 *원점*이라고 합니다.
+좌표는 표시 표면의 왼쪽 위 모퉁이를 기준으로 지정 됩니다. X 좌표가 오른쪽으로 증가 하 고 Y 좌표가 증가 합니다. 그래픽에 대해 설명 하는 것 처럼 종종 수학적 표기법 (x, y)을 사용 하 여 점을 나타냅니다. 점 (0, 0)은 표시 표면의 왼쪽 위 모퉁이가 며 일반적으로 *원점* 이라고 합니다.
 
 의 처음 두 인수는 `DrawCircle` 원 중심의 X 및 Y 좌표를 표시 합니다. 이는 표시 표면의 너비와 높이에 할당 되어 표시 표면의 중심에 원 중심을 배치 합니다. 세 번째 인수는 원의 반경을 지정 하 고 마지막 인수는 `SKPaint` 개체입니다.
 

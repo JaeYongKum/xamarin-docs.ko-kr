@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3b27ef8ecbd5f357eabd728423b5787ea222c593
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e1cefd856cf6cfb5c4a25e6bd26173d527ca7e42
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562303"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375074"
 ---
 # <a name="no-locxamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _ImageButton은 이미지를 표시 하 고 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 또는 클릭에 응답 합니다._
 

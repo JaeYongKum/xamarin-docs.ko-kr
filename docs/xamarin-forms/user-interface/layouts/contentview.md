@@ -10,16 +10,16 @@ ms.date: 08/14/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eb94b2943cfe4659bb77764f810d45dc8b189005
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a11178b9034561e9f1fdf1bbf17cf28cfe9d967b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555374"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375085"
 ---
 # <a name="no-locxamarinforms-contentview"></a>Xamarin.Forms ContentView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스는 `Layout` 단일 자식 요소를 포함 하 고 재사용 가능한 사용자 지정 컨트롤을 만드는 데 일반적으로 사용 되는의 형식입니다. `ContentView`클래스는에서 상속 [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) 됩니다. 이 문서 및 관련 샘플에서는 클래스를 기반으로 사용자 지정 컨트롤을 만드는 방법을 설명 `CardView` `ContentView` 합니다.
 
@@ -119,7 +119,7 @@ public string CardTitle
 </ContentView>
 ```
 
-`ContentView`요소는 속성을로 설정 합니다 `x:Name` . **이**속성은 인스턴스에 바인딩된 개체에 액세스 하는 데 사용할 수 있습니다 `CardView` . 레이아웃의 요소는 해당 속성에 대 한 바인딩을 바인딩된 개체에 정의 된 값으로 설정 합니다.
+`ContentView`요소는 속성을로 설정 합니다 `x:Name` . **이** 속성은 인스턴스에 바인딩된 개체에 액세스 하는 데 사용할 수 있습니다 `CardView` . 레이아웃의 요소는 해당 속성에 대 한 바인딩을 바인딩된 개체에 정의 된 값으로 설정 합니다.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 

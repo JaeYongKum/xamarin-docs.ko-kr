@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de412e064fa84e516dcb8e9b604068c84a2689e6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9588feeaae1391bcd2ac7fd05e7340a3a40f6236
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563616"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374799"
 ---
 # <a name="listview-selectionmode-on-windows"></a>Windows의 ListView SelectionMode
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 유니버설 Windows 플랫폼에서 기본적으로는 네이티브 이벤트를 사용 하 여 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) `ItemClick` 네이티브 이벤트 대신 상호 작용에 응답 합니다 `Tapped` . 그러면 Windows 내레이터와 키보드에서과 상호 작용할 수 있도록 접근성 기능이 제공 `ListView` 됩니다. 그러나이 도구는 작동 하지 않는 내부에서 탭 제스처를 렌더링 하기도 `ListView` 합니다.
 

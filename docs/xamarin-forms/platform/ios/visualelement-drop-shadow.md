@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e54182ca5c1f2afbc107011aea6b84af864e78d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2e4c669ee24c72cc5962feff0ec8e55b54f7d372
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562350"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375124"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>IOS의 VisualElement 드롭 그림자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 전용은에서 그림자를 설정 하는 데 사용 됩니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) . 이 메서드는 연결 된 속성을로 설정 하 여 XAML에서 사용 되며 [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) `true` , 드롭 그림자를 제어 하는 여러 추가 선택적 연결 속성과 함께 사용 됩니다.
 

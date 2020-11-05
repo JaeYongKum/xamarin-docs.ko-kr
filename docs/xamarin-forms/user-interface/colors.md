@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b4e44cb667335ecca7a0c7e5ec77d6e14ed975c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6018946f280afa3f02d8f81bfc64338e561950fe
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557233"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375293"
 ---
 # <a name="colors-in-no-locxamarinforms"></a>색의 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
 _Xamarin.Forms 유연한 플랫폼 간 색 클래스를 제공 합니다._
 
@@ -34,7 +34,7 @@ _Xamarin.Forms 유연한 플랫폼 간 색 클래스를 제공 합니다._
 - `FromHsva` -색상, 채도 및 값 `int` 또는 값 `double` 입니다.
 - `FromRgb` -빨강, 녹색 및 파랑 `int` 값 (0-255)입니다.
 - `FromRgba` -빨강, 녹색, 파랑 및 알파  `int` 값 (0-255)입니다.
-- `FromUint` - `double` **argb**를 나타내는 단일 값을 설정 합니다.
+- `FromUint` - `double` **argb** 를 나타내는 단일 값을 설정 합니다.
 
 다음은 `BackgroundColor` 허용 되는 구문의 다른 변형을 사용 하 여 일부 레이블의에 할당 된 몇 가지 예제 색입니다.
 

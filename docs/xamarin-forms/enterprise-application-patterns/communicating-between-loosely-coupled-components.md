@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bf0315d2d077e06ff3ded4d66814afe050fdfad4
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: be8b0866a6d16fdec62f7c6cd3f4fc3e6de3168d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186202"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374903"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
+
+> [!NOTE]
+> 이 전자책는 2017의 스프링에서 게시 되었으며 그 이후에는 업데이트 되지 않았습니다. 책에는 상당한 가치가 있지만 자료 중 일부는 오래 된 것입니다.
 
 게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.
 
@@ -58,16 +61,16 @@ EShopOnContainers 모바일 앱에서 [`MessagingCenter`](xref:Xamarin.Forms.Mes
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 메시지는 메시지를 식별 하는 데 사용 되는 문자열입니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱 내에서 정의 된 메시지를 보여 줍니다.
 
 ```csharp
-public class MessageKeys  
+public class MessageKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -78,7 +81,7 @@ public class MessageKeys
 게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 오버로드 중 하나로 구독자에게 메시지를 알립니다. 다음 코드 예제에서는 메시지를 게시 하는 방법을 보여 줍니다 `AddProduct` .
 
 ```csharp
-MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 이 예제에서 메서드는 [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 세 개의 인수를 지정 합니다.
@@ -97,12 +100,12 @@ MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 오버로드 중 하나를 사용하여 메시지를 받도록 등록할 수 있습니다. 다음 코드 예제에서는 eShopOnContainers mobile 앱이 메시지를 구독 하 고 처리 하는 방법을 보여 줍니다 `AddProduct` .
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -118,7 +121,7 @@ MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(
 구독자는 더 이상 수신하지 않을 메시지를 구독 취소할 수 있습니다. 이는 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 다음 코드 예제에서 보여 주는 것 처럼 오버 로드 중 하나를 사용 하 여 수행 됩니다.
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 이 예제에서 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메서드 구문은 메시지 수신을 구독할 때 지정 된 형식 인수를 반영 합니다 `AddProduct` .

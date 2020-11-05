@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d665a80d6f1e0319fc9dc8696db379cf781ee833
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4a922a841452e5e934cc7dcb88a9f84373ae3ded
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560119"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375500"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 표시 되는 데이터와의 사용자 상호 작용을 지원 합니다.
 
@@ -181,7 +181,7 @@ listView.RefreshControlColor = Color.Red;
 
 다음 스크린샷은 사용자가 끌어오기를 수행 하는 동안 끌어오기를 새로 고치는 방법을 보여 줍니다.
 
-![작업 중인 새로 고침을 위한 ListView 풀](interactivity-images/refresh-start.png)
+![ListView 풀 In-Progress 새로 고침](interactivity-images/refresh-start.png)
 
 다음 스크린샷은 사용자가 끌어오기를 릴리스한 후를 업데이트 하는 동안 회전자가 표시 되도록 끌어오기를 새로 고치는 방법을 보여 줍니다 [`ListView`](xref:Xamarin.Forms.ListView) .
 

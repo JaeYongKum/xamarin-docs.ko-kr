@@ -10,16 +10,16 @@ ms.date: 07/11/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7f0b7c61d44170ab97b060a16693287c28903660
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6e3edf7d0e7630429f8f1c76009987ee8a4b737a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562966"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375332"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [**SkiaSharp 비트맵을 파일에 저장**](saving.md)문서에서 보았듯이 비트맵은 일반적으로 JPEG 또는 PNG와 같은 압축 된 형식으로 파일에 저장 됩니다. 와 달리에서는 메모리에 저장 된 SkiaSharp 비트맵이 압축 되지 않습니다. 순차적인 일련의 픽셀로 저장 됩니다. 압축 되지 않은이 형식은 비트맵을 표시 화면으로 전송 하는 것을 용이 하 게 합니다.
 
@@ -148,7 +148,7 @@ IntPtr pixelsAddr = bitmap.GetPixels();
 byte* ptr = (byte*)pixelsAddr.ToPointer();
 ```
 
-`ptr`변수는 _바이트 포인터_유형입니다. 이 `ptr` 변수를 사용 하면 비트맵의 픽셀을 저장 하는 데 사용 되는 개별 메모리 바이트에 액세스할 수 있습니다. 다음과 같은 코드를 사용 하 여이 메모리에서 바이트를 읽거나 메모리에 바이트를 씁니다.
+`ptr`변수는 _바이트 포인터_ 유형입니다. 이 `ptr` 변수를 사용 하면 비트맵의 픽셀을 저장 하는 데 사용 되는 개별 메모리 바이트에 액세스할 수 있습니다. 다음과 같은 코드를 사용 하 여이 메모리에서 바이트를 읽거나 메모리에 바이트를 씁니다.
 
 ```csharp
 byte pixelComponent = *ptr;
@@ -748,7 +748,7 @@ public partial class ColorAdjustmentPage : ContentPage
 
 ## <a name="posterization"></a>Posterization
 
-픽셀 비트에 대 한 액세스를 포함 하는 또 다른 일반적인 작업은 _posterization_입니다. 비트맵이 제한 된 색상표를 사용 하 여 손으로 그린 포스터와 비슷한 결과를 얻을 수 있도록 비트맵의 픽셀에서 인코딩된 색이 감소 하는 경우입니다.
+픽셀 비트에 대 한 액세스를 포함 하는 또 다른 일반적인 작업은 _posterization_ 입니다. 비트맵이 제한 된 색상표를 사용 하 여 손으로 그린 포스터와 비슷한 결과를 얻을 수 있도록 비트맵의 픽셀에서 인코딩된 색이 감소 하는 경우입니다.
 
 **포스터화** 페이지는 원숭이 이미지 중 하나에서이 프로세스를 수행 합니다.
 

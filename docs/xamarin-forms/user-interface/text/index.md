@@ -10,16 +10,16 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e1ad1d4fa9d5ce006373382e85398edac59a82a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 37973db6288f092d756a29de61731a296eac3924
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557597"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375410"
 ---
 # <a name="text-in-no-locxamarinforms"></a>텍스트 텍스트 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _을 사용 하 여 Xamarin.Forms 텍스트를 입력 하거나 표시 합니다._
 
@@ -59,7 +59,7 @@ Xamarin.Forms 에는 텍스트 작업을 위한 세 가지 기본 뷰가 있습�
 
 자세한 내용은 [편집기](editor.md) 문서를 참조 하세요.
 
-## <a name="fonts"></a>[글꼴](fonts.md)
+## <a name="fonts"></a>[Fonts](fonts.md)
 
 많은 컨트롤은 각 플랫폼의 기본 제공 글꼴이 나 앱에 포함 된 사용자 지정 글꼴을 사용 하 여 다른 글꼴 설정을 지원 합니다. 자세한 내용은 [글꼴](fonts.md) 문서를 참조 하세요.
 

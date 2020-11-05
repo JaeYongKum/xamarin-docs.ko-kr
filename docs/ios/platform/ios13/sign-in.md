@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
-ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+ms.openlocfilehash: 5cbe3f36d1aeb12be671b14a4f76c79764e814e6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71319534"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375007"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Xamarin.ios에서 Apple에 로그인 합니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Apple로 로그인은 타사 인증 서비스 사용자에 게 id 보호를 제공 하는 새로운 서비스입니다. IOS 13부터 Apple에서는 타사 인증 서비스를 사용 하는 새 앱 에서도 Apple에 로그인을 제공 해야 합니다. 업데이트 되는 기존 앱은 4 월 2020 일까 지 Apple에 로그인을 추가할 필요가 없습니다.
 
@@ -65,11 +65,11 @@ appleIdProvider.GetCredentialState (KeychainItem.CurrentUserIdentifier, (credent
 });
 ```
 
-`FinishedLaunching` `LoginViewController` 에서 실행 되는이 코드에서, 상태가 일 `NotFound` 때 앱이 처리 하 고 사용자에 게를 표시 합니다. `AppDelegate.cs` 상태에서 또는 `Revoked`를 반환 `Authorized` 하는 경우 다른 작업이 사용자에 게 표시 될 수 있습니다.
+에서 실행 되는이 코드에서, `FinishedLaunching` `AppDelegate.cs` 상태가 일 때 앱이 처리 하 `NotFound` 고 `LoginViewController` 사용자에 게를 표시 합니다. 상태에서 또는를 반환 하는 경우 `Authorized` `Revoked` 다른 작업이 사용자에 게 표시 될 수 있습니다.
 
 ## <a name="a-loginviewcontroller-for-sign-in-with-apple"></a>Apple에서 로그인에 대 한 LoginViewController
 
-로그인 `UIViewController` 논리를 구현 하 고 Apple에서 로그인을 제공 하는는 `IASAuthorizationControllerDelegate` 아래 `IASAuthorizationControllerPresentationContextProviding` `LoginViewController` 예제와 같이 및를 구현 해야 합니다.
+`UIViewController`로그인 논리를 구현 하 고 Apple에서 로그인을 제공 하는는 `IASAuthorizationControllerDelegate` `IASAuthorizationControllerPresentationContextProviding` 아래 예제와 같이 및를 구현 해야 합니다 `LoginViewController` .
 
 ```csharp
 public partial class LoginViewController : UIViewController, IASAuthorizationControllerDelegate, IASAuthorizationControllerPresentationContextProviding {
@@ -131,13 +131,13 @@ public partial class LoginViewController : UIViewController, IASAuthorizationCon
 
 ![Apple에서 로그인을 사용 하는 샘플 앱 애니메이션](sign-in-images/sign-in-flow.png)
 
-이 예제 코드는에서 `PerformExistingAccountSetupFlows` 현재 로그인 상태를 확인 하 고 현재 뷰에 대리자로 연결 합니다. 기존 iCloud 키 집합 자격 증명 또는 Apple ID 자격 증명이 있는 경우 사용자에 게 해당 자격 증명을 사용 하 라는 메시지가 표시 됩니다.
+이 예제 코드는에서 현재 로그인 상태를 확인 `PerformExistingAccountSetupFlows` 하 고 현재 뷰에 대리자로 연결 합니다. 기존 iCloud 키 집합 자격 증명 또는 Apple ID 자격 증명이 있는 경우 사용자에 게 해당 자격 증명을 사용 하 라는 메시지가 표시 됩니다.
 
-Apple은 `ASAuthorizationAppleIdButton`이러한 용도로만 사용할 단추를 제공 합니다. 작업을 수행 하는 경우 단추는 메서드에서 `HandleAuthorizationAppleIDButtonPress`처리 된 워크플로를 트리거합니다.
+Apple은 `ASAuthorizationAppleIdButton` 이러한 용도로만 사용할 단추를 제공 합니다. 작업을 수행 하는 경우 단추는 메서드에서 처리 된 워크플로를 트리거합니다 `HandleAuthorizationAppleIDButtonPress` .
 
 ## <a name="handling-authorization"></a>권한 부여 처리
 
-에서 사용자 계정을 저장 하는 사용자 지정 논리를 구현합니다.`IASAuthorizationController` 아래 예제에서는 사용자의 계정을 키 집합 Apple의 자체 저장소 서비스에 저장 합니다.
+에서 `IASAuthorizationController` 사용자 계정을 저장 하는 사용자 지정 논리를 구현 합니다. 아래 예제에서는 사용자의 계정을 키 집합 Apple의 자체 저장소 서비스에 저장 합니다.
 
 ```csharp
 #region IASAuthorizationController Delegate
@@ -197,7 +197,7 @@ public void DidComplete (ASAuthorizationController controller, NSError error)
 
 ## <a name="authorization-controller"></a>권한 부여 컨트롤러
 
-이 구현 `ASAuthorizationController` 에서 최종 조각은 공급자에 대 한 권한 부여 요청을 관리 하는입니다.
+이 구현에서 최종 조각은 `ASAuthorizationController` 공급자에 대 한 권한 부여 요청을 관리 하는입니다.
 
 ```csharp
 #region IASAuthorizationControllerPresentation Context Providing

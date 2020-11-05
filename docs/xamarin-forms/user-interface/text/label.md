@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 742cc1171901d5aa9b81cab31fd45258686c2085
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 045d2fa3575323a6a829921fb1b346c6d310cc6e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557584"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374773"
 ---
 # <a name="no-locxamarinforms-label"></a>Xamarin.Forms 레이블
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _텍스트 표시 Xamarin.Forms_
 
@@ -169,7 +169,7 @@ public partial class LabelPage : ContentPage
 
 색에 대 한 자세한 내용은 [색](~/xamarin-forms/user-interface/colors.md)을 참조 하세요.
 
-## <a name="fonts"></a>글꼴
+## <a name="fonts"></a>Fonts
 
 에 글꼴을 지정 하는 방법에 대 한 자세한 내용은 `Label` [글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
 

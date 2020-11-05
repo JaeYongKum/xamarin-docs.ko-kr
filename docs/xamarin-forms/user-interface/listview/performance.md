@@ -10,16 +10,16 @@ ms.date: 12/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c010ac513cec8ac59927325dbe80ad1c8ac556d8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 98f91ec614df08997e7cbf23530086f541500b5d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560002"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375475"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 모바일 응용 프로그램을 작성 하는 경우 성능이 중요 합니다. 사용자에 게는 부드러운 스크롤 및 빠른 로드 시간이 필요 합니다. 사용자의 기대를 충족 시 키 지 못하면 응용 프로그램 스토어에서 등급이 청구 되거나 기간 업무 응용 프로그램의 경우 조직의 시간과 비용을 절감할 수 있습니다.
 

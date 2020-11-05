@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6fac17f28703ec7254958e19bff7132bee6b78a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e39c16b900b89f0f3ba4c55fffc4e360070a0540
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555725"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374812"
 ---
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Windows의 MasterDetailPage 탐색 모음
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 유니버설 Windows 플랫폼 플랫폼별는의 탐색 모음을 축소 하는 데 사용 되며 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 및 연결 된 속성을 설정 하 여 XAML에서 사용 됩니다 [`MasterDetailPage.CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty) [`MasterDetailPage.CollapsedPaneWidth`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty) .
 
@@ -47,7 +47,7 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 그러면 지정 된 [`CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) 가 인스턴스에 적용 되 고 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 너비도 지정 됩니다.
 
-[![축소 된 탐색 모음 플랫폼별](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "축소 된 탐색 모음 플랫폼별")
+[![축소 된 탐색 모음 플랫폼별](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "축소 된 탐색 모음 Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

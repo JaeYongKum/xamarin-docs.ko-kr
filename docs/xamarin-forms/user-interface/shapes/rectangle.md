@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48d8d61633d09212e445d37f6bd282677ef6b1b1
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7b5f477d4ec708071095ec666e34ef6d88ac0f0b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558845"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375046"
 ---
 # <a name="no-locxamarinforms-shapes-rectangle"></a>Xamarin.Forms 도형: 사각형
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Rectangle`클래스는 클래스에서 파생 `Shape` 되며 사각형 및 사각형을 그리는 데 사용할 수 있습니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Rectangle` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 

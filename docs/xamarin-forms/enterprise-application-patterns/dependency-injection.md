@@ -10,39 +10,42 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3facf6e1e5796d8e17488f3c018cba23e5f99b7f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933603"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375358"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 
-일반적으로 클래스 생성자는 개체를 인스턴스화할 때 호출 되며, 개체가 필요로 하는 모든 값은 생성자에 인수로 전달 됩니다. 이는 종속성 주입의 한 예제 이며 특히 *생성자 주입*이라고 합니다. 개체에 필요한 종속성이 생성자에 삽입 됩니다.
+> [!NOTE]
+> 이 전자책는 2017의 스프링에서 게시 되었으며 그 이후에는 업데이트 되지 않았습니다. 책에는 상당한 가치가 있지만 자료 중 일부는 오래 된 것입니다.
+
+일반적으로 클래스 생성자는 개체를 인스턴스화할 때 호출 되며, 개체가 필요로 하는 모든 값은 생성자에 인수로 전달 됩니다. 이는 종속성 주입의 한 예제 이며 특히 *생성자 주입* 이라고 합니다. 개체에 필요한 종속성이 생성자에 삽입 됩니다.
 
 종속성을 인터페이스 형식으로 지정 하 여 종속성 주입을 통해 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리할 수 있습니다. 일반적으로 인터페이스와 추상 형식 간의 등록 및 매핑 목록과 이러한 형식을 구현 하거나 확장 하는 구체적인 형식을 포함 하는 컨테이너를 사용 합니다.
 
-*속성 setter 삽입*및 *메서드 호출 삽입*과 같은 다른 유형의 종속성 주입도 있지만 일반적으로는 표시 되지 않습니다. 따라서이 챕터는 종속성 주입 컨테이너를 사용 하 여 생성자 삽입을 수행 하는 경우에만 중점을 둡니다.
+*속성 setter 삽입* 및 *메서드 호출 삽입* 과 같은 다른 유형의 종속성 주입도 있지만 일반적으로는 표시 되지 않습니다. 따라서이 챕터는 종속성 주입 컨테이너를 사용 하 여 생성자 삽입을 수행 하는 경우에만 중점을 둡니다.
 
 ## <a name="introduction-to-dependency-injection"></a>종속성 주입 소개
 
 종속성 주입은 IoC (반전 제어) 패턴의 특수화 된 버전입니다. 반전 하는 우려는 필요한 종속성을 가져오는 프로세스입니다. 종속성 주입을 사용 하는 경우 다른 클래스는 런타임에 개체에 종속성을 삽입 하는 일을 담당 합니다. 다음 코드 예제에서는 `ProfileViewModel` 종속성 주입을 사용할 때 클래스를 구성 하는 방법을 보여 줍니다.
 
 ```csharp
-public class ProfileViewModel : ViewModelBase  
+public class ProfileViewModel : ViewModelBase  
 {  
-    private IOrderService _orderService;  
+    private IOrderService _orderService;  
 
-    public ProfileViewModel(IOrderService orderService)  
-    {  
-        _orderService = orderService;  
-    }  
-    ...  
+    public ProfileViewModel(IOrderService orderService)  
+    {  
+        _orderService = orderService;  
+    }  
+    ...  
 }
 ```
 
-`ProfileViewModel`생성자는 `IOrderService` 다른 클래스에 의해 삽입 된 인수로 인스턴스를 수신 합니다. `ProfileViewModel`인터페이스 형식에는 클래스의 유일한 종속성이 있습니다. 따라서 클래스는 `ProfileViewModel` 개체의 인스턴스화를 담당 하는 클래스를 알지 못합니다 `IOrderService` . 개체를 인스턴스화하고 클래스에 삽입 하는 것을 담당 하는 클래스를 `IOrderService` `ProfileViewModel` *종속성 주입 컨테이너*라고 합니다.
+`ProfileViewModel`생성자는 `IOrderService` 다른 클래스에 의해 삽입 된 인수로 인스턴스를 수신 합니다. `ProfileViewModel`인터페이스 형식에는 클래스의 유일한 종속성이 있습니다. 따라서 클래스는 `ProfileViewModel` 개체의 인스턴스화를 담당 하는 클래스를 알지 못합니다 `IOrderService` . 개체를 인스턴스화하고 클래스에 삽입 하는 것을 담당 하는 클래스를 `IOrderService` `ProfileViewModel` *종속성 주입 컨테이너* 라고 합니다.
 
 종속성 주입 컨테이너를 사용 하면 클래스 인스턴스를 인스턴스화하고 컨테이너의 구성에 따라 수명을 관리 하는 기능을 제공 하 여 개체 간의 결합을 줄일 수 있습니다. 개체를 만드는 동안 컨테이너는 개체에 필요한 모든 종속성을 삽입 합니다. 이러한 종속성을 아직 만들지 않은 경우 컨테이너는 먼저 종속성을 만들고 확인 합니다.
 
@@ -66,10 +69,10 @@ TinyIoC에서 `TinyIoCContainer` 형식은 종속성 주입 컨테이너를 제�
 
 **그림 3-1:** 종속성 주입을 사용 하는 경우의 종속성
 
-런타임에 개체를 인스턴스화하려면 컨테이너에서 인스턴스화해야 하는 인터페이스의 구현을 알아야 합니다 `IOrderService` `ProfileViewModel` . 여기에는 다음이 포함 됩니다.
+런타임에 개체를 인스턴스화하려면 컨테이너에서 인스턴스화해야 하는 인터페이스의 구현을 알아야 합니다 `IOrderService` `ProfileViewModel` . 여기에는 다음이 포함됩니다.
 
-- 컨테이너는 인터페이스를 구현 하는 개체를 인스턴스화하는 방법을 결정 `IOrderService` 합니다. 이를 *등록*이라고 합니다.
-- 인터페이스를 구현 하는 개체 및 개체를 인스턴스화하는 컨테이너 `IOrderService` `ProfileViewModel` 입니다. 이를 *해결*이라고 합니다.
+- 컨테이너는 인터페이스를 구현 하는 개체를 인스턴스화하는 방법을 결정 `IOrderService` 합니다. 이를 *등록* 이라고 합니다.
+- 인터페이스를 구현 하는 개체 및 개체를 인스턴스화하는 컨테이너 `IOrderService` `ProfileViewModel` 입니다. 이를 *해결* 이라고 합니다.
 
 결국 응용 프로그램은 개체를 사용 하 여 완료 되 `ProfileViewModel` 고 가비지 수집에 사용할 수 있게 됩니다. 이 시점에서 `IOrderService` 다른 클래스가 동일한 인스턴스를 공유 하지 않는 경우 가비지 수집기는 인스턴스를 삭제 해야 합니다.
 

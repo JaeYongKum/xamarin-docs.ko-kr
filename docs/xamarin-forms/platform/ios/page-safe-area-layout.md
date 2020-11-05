@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c4bdc3a5d952fda525b3e62cfbaabd9b5272bd6a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f5907e5493ff43c6a69dc4a8a8e5d2b4fc78210e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556388"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374877"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>IOS의 안전 영역 레이아웃 가이드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 전용은 iOS 11 이상을 사용 하는 모든 장치에 안전 하 게 사용 되는 화면 영역에 페이지 콘텐츠를 배치 하는 데 사용 됩니다. 특히 iPhone X에서 콘텐츠가 원형 장치 코너, 홈 표시기 또는 센서 하우징에 의해 잘리지 않도록 하는 데 도움이 됩니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `Page.UseSafeArea` `boolean` .
 

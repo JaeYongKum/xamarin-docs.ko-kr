@@ -10,16 +10,16 @@ ms.date: 10/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 476ef1b8fd6c8e16c5fb3e5fdd1ac60eafd90b7c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 033b4edd6eea8a4904364c906a6f9b30da6267ef
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559846"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375436"
 ---
 # <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms 지도 핀
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 컨트롤을 사용 하면 Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) 위치가 개체로 표시 될 수 있습니다 [`Pin`](xref:Xamarin.Forms.Maps.Pin) . 는 `Pin` 탭 할 때 정보 창을 여는 지도 표식입니다.
 

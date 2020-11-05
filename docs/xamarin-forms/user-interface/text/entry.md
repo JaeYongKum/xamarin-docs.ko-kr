@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ab2f0880f694bd9e270385dd6e0256374ed76c43
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 625dd57d1f84b95cef1c6513ae832af805bf565a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562225"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375033"
 ---
 # <a name="no-locxamarinforms-entry"></a>Xamarin.Forms 엔트리의
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 는 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 한 줄 텍스트 입력에 사용 됩니다. `Entry`뷰와 마찬가지로는 [`Editor`](xref:Xamarin.Forms.Editor) 여러 키보드 유형을 지원 합니다. 또한를 `Entry` 암호 필드로 사용할 수 있습니다.
 
