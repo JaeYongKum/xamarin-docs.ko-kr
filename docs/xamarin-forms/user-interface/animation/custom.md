@@ -10,16 +10,16 @@ ms.date: 02/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3731f35ab03edf9b65c3adca7a2091c2a609b552
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4831ed148e186783667046afd49bf490c666b87b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563395"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367077"
 ---
 # <a name="custom-animations-in-no-locxamarinforms"></a>사용자 지정 애니메이션 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _애니메이션 클래스는 Xamarin.Forms ViewExtensions 클래스의 확장 메서드를 사용 하 여 하나 이상의 애니메이션 개체를 만드는 모든 애니메이션의 빌딩 블록입니다. 이 문서에서는 Animation 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다._
 
@@ -49,13 +49,13 @@ animation.Commit (this, "SimpleAnimation", 16, 2000, Easing.Linear, (v, c) => im
 
 메서드에 지정 된 인수는 다음과 `Commit` 같습니다.
 
-- 첫 번째 인수 (*owner*)는 애니메이션의 소유자를 식별 합니다. 애니메이션이 적용 되는 시각적 요소 또는 페이지와 같은 다른 시각적 요소가 될 수 있습니다.
-- 두 번째 인수 (*이름*)는 이름을 사용 하 여 애니메이션을 식별 합니다. 이름은 소유자와 결합 되어 애니메이션을 고유 하 게 식별 합니다. 그러면이 고유 id를 사용 하 여 애니메이션이 실행 중인지 여부를 확인할 수 있습니다 ([ `AnimationIsRunning` ] (f: Xamarin.Forms ). 애니메이션 확장. 애니메이션 실행 ( Xamarin.Forms . System.windows.media.animation.ianimatable>))을 (를) 만들거나 취소 하려면 ([ `AbortAnimation` ] (f: Xamarin.Forms . AbortAnimation ( Xamarin.Forms . System.windows.media.animation.ianimatable>)).
-- 세 번째 인수 (*rate*)는 생성자에 정의 된 콜백 메서드를 호출할 때마다 시간 (밀리초)을 나타냅니다 [`Animation`](xref:Xamarin.Forms.Animation) .
-- 네 번째 인수 (*길이*)는 애니메이션의 기간 (밀리초)을 나타냅니다.
-- 다섯 번째 인수 (*감속/가속*)는 애니메이션에 사용할 감속/가속 함수를 정의 합니다. 또는 감속/가속 함수를 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 감속/가속 함수에 대 한 자세한 내용은 [감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)를 참조 하세요.
-- 여섯 번째 인수 (*마침*)는 애니메이션이 완료 될 때 실행 되는 콜백입니다. 이 콜백은 마지막 값을 나타내는 첫 번째 인수를 사용 하 여 두 개의 인수를 사용 하 고 두 번째 인수는 `bool` 애니메이션이 취소 된 경우로 설정 된입니다 `true` . 또는 *완성* 된 콜백을 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 그러나 단일 애니메이션을 사용 하면 생성자와 메서드에서 *완료* 된 콜백이 지정 된 경우 `Animation` `Commit` 메서드에 지정 된 콜백만 실행 됩니다 `Commit` .
-- 일곱 번째 인수 (*반복*)는 애니메이션을 반복할 수 있도록 하는 콜백입니다. 애니메이션의 끝에서 호출 되 고를 반환 `true` 하면 애니메이션을 반복 해야 함을 나타냅니다.
+- 첫 번째 인수 ( *owner* )는 애니메이션의 소유자를 식별 합니다. 애니메이션이 적용 되는 시각적 요소 또는 페이지와 같은 다른 시각적 요소가 될 수 있습니다.
+- 두 번째 인수 ( *이름* )는 이름을 사용 하 여 애니메이션을 식별 합니다. 이름은 소유자와 결합 되어 애니메이션을 고유 하 게 식별 합니다. 그러면이 고유 id를 사용 하 여 애니메이션이 실행 중인지 여부를 확인할 수 있습니다 ([ `AnimationIsRunning` ] (f: Xamarin.Forms ). 애니메이션 확장. 애니메이션 실행 ( Xamarin.Forms . System.windows.media.animation.ianimatable>))을 (를) 만들거나 취소 하려면 ([ `AbortAnimation` ] (f: Xamarin.Forms . AbortAnimation ( Xamarin.Forms . System.windows.media.animation.ianimatable>)).
+- 세 번째 인수 ( *rate* )는 생성자에 정의 된 콜백 메서드를 호출할 때마다 시간 (밀리초)을 나타냅니다 [`Animation`](xref:Xamarin.Forms.Animation) .
+- 네 번째 인수 ( *길이* )는 애니메이션의 기간 (밀리초)을 나타냅니다.
+- 다섯 번째 인수 ( *감속/가속* )는 애니메이션에 사용할 감속/가속 함수를 정의 합니다. 또는 감속/가속 함수를 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 감속/가속 함수에 대 한 자세한 내용은 [감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)를 참조 하세요.
+- 여섯 번째 인수 ( *마침* )는 애니메이션이 완료 될 때 실행 되는 콜백입니다. 이 콜백은 마지막 값을 나타내는 첫 번째 인수를 사용 하 여 두 개의 인수를 사용 하 고 두 번째 인수는 `bool` 애니메이션이 취소 된 경우로 설정 된입니다 `true` . 또는 *완성* 된 콜백을 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 그러나 단일 애니메이션을 사용 하면 생성자와 메서드에서 *완료* 된 콜백이 지정 된 경우 `Animation` `Commit` 메서드에 지정 된 콜백만 실행 됩니다 `Commit` .
+- 일곱 번째 인수 ( *반복* )는 애니메이션을 반복할 수 있도록 하는 콜백입니다. 애니메이션의 끝에서 호출 되 고를 반환 `true` 하면 애니메이션을 반복 해야 함을 나타냅니다.
 
 전반적인 효과는 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) [`Image`](xref:Xamarin.Forms.Image) [`Linear`](xref:Xamarin.Forms.Easing.Linear) 감속/가속 함수를 사용 하 여 2 초 (2000 밀리초) 이상으로의 속성을 1에서 2로 늘리는 애니메이션을 만드는 것입니다. 애니메이션이 완료 될 때마다 `Scale` 속성이 1로 다시 설정 되 고 애니메이션이 반복 됩니다.
 

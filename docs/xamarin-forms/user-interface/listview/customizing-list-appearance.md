@@ -10,16 +10,16 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dcf4e7ca0f081ff000aaa69d8be3a3cb3aa43e8e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 415c10706252b11cc2ec009137feab1d6d7d90ba
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560288"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365946"
 ---
 # <a name="listview-appearance"></a>ListView 모양
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
 를 사용 하면 목록의 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) [`ViewCell`](xref:Xamarin.Forms.ViewCell) 각 행에 대 한 인스턴스와 함께 목록의 표시를 사용자 지정할 수 있습니다.
 

@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9945ba857d1b8ce91332281a1e2fc9362911c222
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4704625955cc1b487efe00f41d3d9b9e2a41413b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562472"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367090"
 ---
 # <a name="navigationpage-bar-height-on-android"></a>Android의 NavigationPage Bar Height
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼별는의 탐색 모음 높이를 설정 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 합니다. [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty)바인딩 가능한 속성을 정수 값으로 설정 하 여 XAML에서 사용 됩니다.
 

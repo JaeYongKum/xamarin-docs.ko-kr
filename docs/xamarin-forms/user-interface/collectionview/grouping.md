@@ -10,16 +10,16 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 51bdcc6f9a95911c548269dbf7b3050cc5921183
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8858be2839de58369a6b5f0cb8a6c09c44bb3861
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556622"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366154"
 ---
 # <a name="no-locxamarinforms-collectionview-grouping"></a>Xamarin.Forms CollectionView 그룹화
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 자주 발생 하는 데이터 집합은 계속 해 서 스크롤 목록에 표시 될 때 어려울 수 있습니다. 이 시나리오에서 데이터를 그룹으로 구성 하면 데이터를 쉽게 탐색할 수 있으므로 사용자 환경을 개선할 수 있습니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "91556622"
 - `IEnumerable<T>`컬렉션을 만듭니다. 여기서 `T` 은 단일 항목 그룹을 모델링 하는 형식입니다. 따라서이 컬렉션은 그룹화 된 데이터를 저장 하는 그룹의 컬렉션입니다.
 - 컬렉션에 데이터를 추가 `IEnumerable<T>` 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 데이터를 그룹화 할 때 첫 번째 단계는 단일 항목을 모델링 하는 형식을 만드는 것입니다. 다음 예제에서는 `Animal` 예제 응용 프로그램의 클래스를 보여 줍니다.
 

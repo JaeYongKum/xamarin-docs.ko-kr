@@ -10,16 +10,16 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01e439812c3935e890acf0b9b83579b5813d8e21
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5c49ee7022166983f55bca4a39dd726412b070c8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563954"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366206"
 ---
 # <a name="device-orientation"></a>디바이스 방향
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 사용자 환경을 개선 하기 위해 응용 프로그램을 사용 하는 방법과 가로 방향을 통합 하는 방법을 고려 하는 것이 중요 합니다. 여러 방향을 수용 하 고 사용 가능한 공간을 최대한 활용 하도록 개별 레이아웃을 디자인할 수 있습니다. 응용 프로그램 수준에서 회전을 사용 하지 않거나 사용 하도록 설정할 수 있습니다.
 
@@ -33,17 +33,17 @@ IOS에서 **info.plist** 파일을 사용 하 여 응용 프로그램에 대 한
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Visual Studio에서 iOS 프로젝트를 열고 **info.plist**을 엽니다. 이 파일은 iPhone 배포 정보 탭에서 시작 하 여 구성 패널로 열립니다.
+Visual Studio에서 iOS 프로젝트를 열고 **info.plist** 을 엽니다. 이 파일은 iPhone 배포 정보 탭에서 시작 하 여 구성 패널로 열립니다.
 
 ![Visual Studio의 iPhone 배포 정보](device-orientation-images/orientation-vs.png)
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-Mac용 Visual Studio에서 iOS 프로젝트를 열고 **info.plist**을 엽니다. **응용 프로그램** 탭에서 방향을 설정 하는 데 섹션을 사용할 수 있습니다.
+Mac용 Visual Studio에서 iOS 프로젝트를 열고 **info.plist** 을 엽니다. **응용 프로그램** 탭에서 방향을 설정 하는 데 섹션을 사용할 수 있습니다.
 
 ![Mac용 Visual Studio의 iPhone 배포 정보](device-orientation-images/orientation-vsmac.png)
 
-키-값 편집기 인터페이스를 사용 하 여 값을 편집 하려면 화면 아래쪽에 있는 **원본**> 탭을 선택 합니다.
+키-값 편집기 인터페이스를 사용 하 여 값을 편집 하려면 화면 아래쪽에 있는 **원본** > 탭을 선택 합니다.
 
 ![Mac용 Visual Studio에서 지원 되는 장치 방향](device-orientation-images/orientation-source-vsmac.png)
 
@@ -76,9 +76,9 @@ Xamarin Android는 방향 지정을 위한 몇 가지 옵션을 지원 합니다
 - **ReversePortrait** &ndash; 응용 프로그램이 평소와 반대 방향으로 세로 방향을 사용 하 여 "상하 대칭 이동" 하는 것 처럼 보이게 합니다.
 - **Fullsensor** &ndash; 응용 프로그램에서 센서 데이터를 사용 하 여 올바른 방향을 선택 하도록 합니다 (가능한 4 개 중에서 선택).
 - **Fulluser** &ndash; 응용 프로그램에서 사용자의 방향 기본 설정을 사용 하도록 합니다. 자동 회전을 사용 하는 경우 4 방향 모두를 사용할 수 있습니다.
-- **Userlandscape** &ndash; _ \[ 지원 \] 되지 않음_ 을 지정 하면 사용자가 자동 회전을 사용 하는 경우를 제외 하 고 응용 프로그램에서 가로 방향을 사용 합니다 .이 경우 센서를 사용 하 여 방향을 결정 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
-- **Userportrait** &ndash; _ \[ 지원 \] 되지 않음_ 을 지정 하면 사용자가 자동 회전을 사용 하는 경우를 제외 하 고 응용 프로그램에서 세로 방향을 사용 합니다 .이 경우 센서를 사용 하 여 방향을 결정 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
-- **잠김** &ndash; _ \[ 지원 \] 되지 않음_ 을 사용 하면 응용 프로그램에서 장치의 실제 방향 변경에 응답 하지 않고 화면 방향을 사용 하 여 시작 시와 동일 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
+- **Userlandscape** &ndash; _\[ 지원 \] 되지 않음_ 을 지정 하면 사용자가 자동 회전을 사용 하는 경우를 제외 하 고 응용 프로그램에서 가로 방향을 사용 합니다 .이 경우 센서를 사용 하 여 방향을 결정 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
+- **Userportrait** &ndash; _\[ 지원 \] 되지 않음_ 을 지정 하면 사용자가 자동 회전을 사용 하는 경우를 제외 하 고 응용 프로그램에서 세로 방향을 사용 합니다 .이 경우 센서를 사용 하 여 방향을 결정 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
+- **잠김** &ndash; _\[ 지원 \] 되지 않음_ 을 사용 하면 응용 프로그램에서 장치의 실제 방향 변경에 응답 하지 않고 화면 방향을 사용 하 여 시작 시와 동일 하 게 됩니다. 이 옵션을 선택 하면 컴파일이 중단 됩니다.
 
 기본 Android Api는 사용자의 표현 된 기본 설정과 명확 하 게 일치 하지 않는 옵션을 포함 하 여 방향이 관리 되는 방식을 제어 합니다.
 
@@ -213,7 +213,7 @@ protected override void OnSizeAllocated (double width, double height){
 }
 ```
 
-다음 사항에 유의하세요.
+다음 사항에 유의하십시오.
 
 - `outerStack` 사용 가능한 공간을 최대한 활용 하기 위해 방향에 따라 이미지 및 컨트롤을 가로 또는 세로 스택으로 표시 하도록 조정 됩니다.
 
@@ -264,7 +264,7 @@ Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
 </ContentPage>
 ```
 
-다음 사항에 유의하세요.
+다음 사항에 유의하십시오.
 
 - 페이지의 레이아웃 방식 때문에 응답성을 도입 하는 절차 코드는 필요 하지 않습니다.
 - `ScrollView`화면의 높이가 단추 및 이미지의 고정 높이의 합계 보다 작은 경우에도를 사용 하 여 레이블을 표시할 수 있습니다.
@@ -355,7 +355,7 @@ BackgroundImageSource="deer.jpg">
 
 ```
 
-다음 사항에 유의하세요.
+다음 사항에 유의하십시오.
 
 - 페이지의 레이아웃 방식 때문에 응답성을 도입 하는 절차 코드는 필요 하지 않습니다.
 - `ScrollView`화면의 높이가 단추 및 이미지의 고정 높이의 합계 보다 작은 경우에도를 사용 하 여 레이블을 표시할 수 있습니다.
@@ -458,7 +458,7 @@ protected override void OnSizeAllocated (double width, double height){
 }
 ```
 
-다음 사항에 유의하세요.
+다음 사항에 유의하십시오.
 
 - 페이지가 배치 된 방식 때문에 컨트롤의 모눈 배치를 변경 하는 메서드가 있습니다.
 

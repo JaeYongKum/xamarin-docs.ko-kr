@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aa427035dc33b617bed14e0c6aa0b0db27efca7f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 63833e80b15bb27ab656825b4b1f6b1e3eb31670
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556570"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367818"
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 경로 채우기 유형에 서 가능한 다른 효과를 검색 합니다._
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 일반적으로 경로 채우기 형식은 채우기에만 영향을 미치며 스트로크에는 영향을 주지 않지만 두 `Inverse` 모드는 채우기와 스트로크 모두에 영향을 줍니다. 채우기의 경우 두 가지 `Inverse` 형식이 oppositely 영역을 채워서 별모양 외부 영역이 채워집니다. 스트로크의 경우 두 `Inverse` 형식 모두 스트로크를 제외한 모든 색을 색으로 합니다. 이러한 역 채우기 유형을 사용 하면 iOS 스크린샷에서 보여 주는 것 처럼 일부 이상한 효과가 발생할 수 있습니다.
 
-[![5 방향 별 페이지의 삼중 스크린샷](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "5 방향 별 페이지의 삼중 스크린샷")
+[![Five-Pointed 별모양 페이지의 삼중 스크린샷](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Five-Pointed 별모양 페이지의 삼중 스크린샷")
 
 Android 스크린 샷에서는 일반적인 짝수-홀수 및 권선 효과를 보여 주지만 스트로크 및 채우기의 순서는 결과에도 영향을 줍니다.
 

@@ -10,16 +10,16 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 220b8a49f4f261568a653af16e333885edec23f8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5b3a20c621ac76ac3b18ba5c503b8dc2b962ef1b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562875"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366817"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 이 Face API는 휴먼 coders의 인식 된 주석을 기반으로 하는 얼굴 식에서 분노, 경 멸, 혐오, emotion, 행복, 중립, sadness을 검색 하는 데 검색을 수행할 수 있습니다. 그러나 얼굴 식 만으로는 사용자의 내부 상태를 반드시 나타내는 것은 아닙니다.
 

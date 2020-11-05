@@ -10,20 +10,20 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75d19e41243076da127d58defdabeca908d900cd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7e27db7cd05c1997d3ac889b36aca5e3716d2d08
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556089"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367597"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp를 사용 하 여 다른 스트로크 캡이 있는 선을 그리는 방법에 대해 알아봅니다._
 
-SkiaSharp에서 한 줄을 렌더링 하는 것은 일련의 연결 된 직선을 렌더링 하는 것과 매우 다릅니다. 그러나 단일 줄을 그리는 경우에도 줄에 특정 스트로크 너비를 지정 해야 하는 경우가 종종 있습니다. 이러한 줄이 더 넓게 표시 되 면 줄의 끝 모양이 중요할 수도 있습니다. 선의 끝 모양을 *스트로크 단면*이라고 합니다.
+SkiaSharp에서 한 줄을 렌더링 하는 것은 일련의 연결 된 직선을 렌더링 하는 것과 매우 다릅니다. 그러나 단일 줄을 그리는 경우에도 줄에 특정 스트로크 너비를 지정 해야 하는 경우가 종종 있습니다. 이러한 줄이 더 넓게 표시 되 면 줄의 끝 모양이 중요할 수도 있습니다. 선의 끝 모양을 *스트로크 단면* 이라고 합니다.
 
 ![세 개의 스트로크 대문자 옵션](lines-images/strokecapsexample.png)
 
@@ -35,7 +35,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 기본적으로 [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) 새로 인스턴스화된 개체의 속성은 `SKPaint` 0 이며, 1 픽셀의 선 렌더링 시 1의 값과 동일한 효과가 있습니다. 휴대폰 등의 고해상도 장치에서 매우 씬로 나타나므로를 큰 값으로 설정 하는 것이 좋습니다 `StrokeWidth` . 그러나 조정 가능한 두께의 선 그리기를 시작 하면 다른 문제가 발생 합니다. 이러한 굵은 선의 시작과 끝을 렌더링 하는 방법은 무엇입니까?
 
-줄의 시작 및 끝 모양을 *줄 캡* 이라고 하며, 선 끝 *에 선 끝*을 표시 합니다. 이 컨텍스트에서 "캡" 이라는 단어는 &mdash; 줄의 끝에 있는 종류의 hat 항목을 나타냅니다. [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap)개체의 속성을 `SKPaint` 열거형의 다음 멤버 중 하나로 설정 합니다 [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) .
+줄의 시작 및 끝 모양을 *줄 캡* 이라고 하며, 선 끝 *에 선 끝* 을 표시 합니다. 이 컨텍스트에서 "캡" 이라는 단어는 &mdash; 줄의 끝에 있는 종류의 hat 항목을 나타냅니다. [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap)개체의 속성을 `SKPaint` 열거형의 다음 멤버 중 하나로 설정 합니다 [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) .
 
 - `Butt` (기본값)
 - `Square`

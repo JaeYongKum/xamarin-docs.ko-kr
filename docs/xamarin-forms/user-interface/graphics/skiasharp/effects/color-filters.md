@@ -10,16 +10,16 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 809477fe466ee7a8f0985308896c14341f2dd460
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f7a31f54cb90fa3633217e8eb59d92c1e4d063c7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561939"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365920"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 색 필터는 비트맵 또는 다른 이미지의 색을 posterization 등의 효과에 대 한 다른 색으로 변환할 수 있습니다.
 
@@ -170,7 +170,7 @@ public class GrayScaleMatrixPage : ContentPage
 
 IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과는 다음과 같습니다.
 
-[![회색 크기 행렬](color-filters-images/GrayScaleMatrix.png "회색 크기 행렬")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
+[![회색 크기 행렬](color-filters-images/GrayScaleMatrix.png "Gray-Scale 행렬")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
 
 네 번째 행과 네 번째 열에 있는 값을 확인 합니다. 변환 된 색의 A ' 값에 대 한 원래 색의 값을 곱하여 하는 중요 한 요소입니다. 해당 셀이 0 이면 아무것도 표시 되지 않으며 문제를 찾기 어려울 수 있습니다.
 
@@ -247,7 +247,7 @@ public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] ta
 
 두 번째 메서드에 대 한 인수 중 하나를 `CreateTable` 시퀀스의 0 ~ 255 값을 포함 하는 색 테이블로 설정 하려면 대신를 사용 하면 `null` 됩니다. 일반적 `CreateTable` 으로 호출에는 `null` 알파 채널에 대 한 첫 번째 인수가 있습니다.
 
-[SkiaSharp 비트맵 픽셀 비트에 액세스](../bitmaps/pixel-bits.md#posterization)하는 문서의 **Posterization** 에 대 한 섹션에서 색 해상도를 줄이기 위해 비트맵의 개별 픽셀 비트를 수정 하는 방법을 살펴보았습니다. 이는 _posterization_이라는 기술입니다. 
+[SkiaSharp 비트맵 픽셀 비트에 액세스](../bitmaps/pixel-bits.md#posterization)하는 문서의 **Posterization** 에 대 한 섹션에서 색 해상도를 줄이기 위해 비트맵의 개별 픽셀 비트를 수정 하는 방법을 살펴보았습니다. 이는 _posterization_ 이라는 기술입니다. 
 
 색 표를 사용 하 여 비트맵을 포스터화 할 수도 있습니다. **테이블 포스터화** 페이지의 생성자는 아래쪽 6 비트가 0으로 설정 된 바이트에 인덱스를 매핑하는 색 테이블을 만듭니다.
 

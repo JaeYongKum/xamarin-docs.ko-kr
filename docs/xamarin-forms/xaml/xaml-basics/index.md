@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3d2620014c9554712c746b98de3b9a0eeaa20864
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1c660c04e89c56f10435964425b2b20dbf5c8eb3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562758"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365869"
 ---
 # <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 XAML (eXtensible Application Markup Language)은 개체를 인스턴스화하고 초기화 하 고 부모-자식 계층으로 개체를 구성 하기 위한 프로그래밍 코드 대신 Microsoft에서 만든 XML 기반 언어입니다. XAML은 .NET framework 내의 여러 기술에 맞게 조정 되었지만 Windows Presentation Foundation (WPF), Silverlight, Windows 런타임 및 UWP (유니버설 Windows 플랫폼) 내에서 사용자 인터페이스의 레이아웃을 정의 하는 가장 큰 유틸리티를 찾았습니다.
 
@@ -54,7 +54,7 @@ XAML은 기본적으로 XML 이지만 XAML에는 몇 가지 고유한 구문 기
 
 ## <a name="requirements"></a>요구 사항
 
-이 문서에서는에 대해 잘 알고 있다고 가정 Xamarin.Forms 합니다. 또한 xml 네임 스페이스 선언 사용에 대 한 이해를 비롯 하 여 XML에 대해 잘 알고 있는 것 *element*으로 가정 *tag* *합니다.*
+이 문서에서는에 대해 잘 알고 있다고 가정 Xamarin.Forms 합니다. 또한 xml 네임 스페이스 선언 사용에 대 한 이해를 비롯 하 여 XML에 대해 잘 알고 있는 것 *element* 으로 가정 *tag* *합니다.*
 
 및 XML에 대해 잘 알고 있는 경우 Xamarin.Forms 1 부를 읽도록 시작 [합니다. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 

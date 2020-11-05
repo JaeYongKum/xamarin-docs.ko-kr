@@ -10,16 +10,16 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b029ffdb0a16d9f54951ae3754ca0f1eb7f69aaa
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ca78ee1c31e4f6e2089d5860543aabafe1a80c3a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556882"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366908"
 ---
 # <a name="platform-specifics"></a>플랫폼 사양
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다._
 
@@ -46,7 +46,7 @@ XAML을 통해 또는 흐름 코드 API를 통해 플랫폼별를 사용 하는 
 플랫폼별를 만드는 프로세스는 다음과 같습니다.
 
 1. 효과로 특정 기능을 구현 합니다. 자세한 내용은 [효과 만들기](~/xamarin-forms/app-fundamentals/effects/creating.md)를 참조 하세요.
-1. 효과를 노출 하는 플랫폼별 클래스를 만듭니다. 자세한 내용은 [플랫폼별 클래스 만들기](#creating-a-platform-specific-class)를 참조 하세요.
+1. 효과를 노출 하는 플랫폼별 클래스를 만듭니다. 자세한 내용은 [Platform-Specific 클래스 만들기](#creating-a-platform-specific-class)를 참조 하세요.
 1. 플랫폼별 클래스에서 XAML을 통해 플랫폼별를 사용 하도록 연결 된 속성을 구현 합니다. 자세한 내용은 [연결 된 속성 추가](#adding-an-attached-property)를 참조 하세요.
 1. 플랫폼별 클래스에서 흐름 코드 API를 통해 플랫폼별를 사용 하는 확장 메서드를 구현 합니다. 자세한 내용은 [확장 메서드 추가](#adding-extension-methods)를 참조 하세요.
 1. 효과가 적용 되는 것과 동일한 플랫폼에서 플랫폼별가 호출 된 경우에만 효과가 적용 되도록 효과 구현을 수정 합니다. 자세한 내용은 [효과 만들기](#creating-the-effect)를 참조 하세요.
@@ -58,7 +58,7 @@ XAML을 통해 또는 흐름 코드 API를 통해 플랫폼별를 사용 하는 
 
 [샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 컨트롤에 의해 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별를 보여 줍니다 [`Label`](xref:Xamarin.Forms.Label) .
 
-![섀도 플랫폼 관련](images/screenshots.png)
+![그림자 Platform-Specific](images/screenshots.png)
 
 이 [샘플 응용 프로그램](/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 이해를 용이 하 게 하기 위해 플랫폼 별로 각 플랫폼을 구현 합니다. 그러나 각 플랫폼별 효과 구현 외에는 각 플랫폼에 대해 섀도 클래스 구현이 거의 동일 합니다. 따라서이 가이드는 섀도 클래스의 구현에 대 한 집중적으로 살펴봅니다 단일 플랫폼에 미치는 영향을 설명 합니다.
 

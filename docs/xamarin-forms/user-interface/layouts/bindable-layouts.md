@@ -10,16 +10,16 @@ ms.date: 03/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5b1e43586810521e87360d8b6537d9bafdabad7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f8bd745f2fee5e2e1b8bb03d474578127a360ac2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555439"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367675"
 ---
 # <a name="bindable-layouts-in-no-locxamarinforms"></a>바인딩 가능한 레이아웃 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 바인딩 가능한 레이아웃을 사용 하면 클래스에서 파생 되는 모든 레이아웃 클래스가 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 항목 컬렉션에 바인딩하여 항목의 모양을로 설정 하는 옵션을 사용 하 여 콘텐츠를 생성할 수 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 있습니다. 바인딩 가능한 레이아웃은 `BindableLayout` 다음 연결 된 속성을 노출 하는 클래스에서 제공 됩니다.
 

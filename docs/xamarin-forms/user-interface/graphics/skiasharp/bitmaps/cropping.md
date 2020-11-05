@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45634695050dc6f74a9b1617a2180481e3788d11
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 639b9db51d4a9f0bb0ddd55a3d35bcbda7e31962
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557324"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366466"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [**SkiaSharp 비트맵 만들기 및 그리기**](drawing.md) 문서에서는 `SKBitmap` 개체를 생성자에 전달 하는 방법을 설명 `SKCanvas` 했습니다. 해당 캔버스에 대해 호출 된 모든 그리기 메서드로 인해 그래픽이 비트맵에서 렌더링 됩니다. 이러한 그리기 메서드는 `DrawBitmap` 를 포함 합니다. 즉,이 기술을 사용 하면 변환 적용 시 한 비트맵의 일부 또는 전체를 다른 비트맵으로 전송할 수 있습니다.
 
@@ -535,9 +535,9 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 ## <a name="dividing-a-bitmap-into-tiles"></a>비트맵을 타일로 분할
 
-Xamarin.FormsXamagonXuzzle로 [_ Xamarin.Forms Mobile Apps을 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 설명한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
+Xamarin.FormsXamagonXuzzle로 [_Xamarin.Forms Mobile Apps을 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 설명한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
 
-이 버전의 14-15 퍼즐은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 일부 이며 **사진 퍼즐**이라는 일련의 페이지로 구성 됩니다.
+이 버전의 14-15 퍼즐은 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 일부 이며 **사진 퍼즐** 이라는 일련의 페이지로 구성 됩니다.
 
 **PhotoPuzzlePage1** 파일은 다음으로 구성 됩니다 `Button` .
 
@@ -583,7 +583,7 @@ public partial class PhotoPuzzlePage1 : ContentPage
 
 그런 다음이 메서드는를 탐색 하 여 `PhotoPuzzlePage2` 선택한 비트맵을 생성자에 전달 합니다.
 
-라이브러리에서 선택 된 사진이 사진 라이브러리에 표시 되는 것과 다른 방향으로 진행 되는 것이 아니라 회전 또는 대칭 이동 될 수 있습니다. 특히 iOS 장치에 문제가 있는 것입니다. 따라서에서는 이미지를 `PhotoPuzzlePage2` 원하는 방향으로 회전할 수 있습니다. XAML 파일에는 **90&#x00B0; 오른쪽** (시계 방향), **90&#x00B0; 왼쪽** (시계 반대) 및 **완료**레이블이 지정 된 세 개의 단추가 있습니다.
+라이브러리에서 선택 된 사진이 사진 라이브러리에 표시 되는 것과 다른 방향으로 진행 되는 것이 아니라 회전 또는 대칭 이동 될 수 있습니다. 특히 iOS 장치에 문제가 있는 것입니다. 따라서에서는 이미지를 `PhotoPuzzlePage2` 원하는 방향으로 회전할 수 있습니다. XAML 파일에는 **90&#x00B0; 오른쪽** (시계 방향), **90&#x00B0; 왼쪽** (시계 반대) 및 **완료** 레이블이 지정 된 세 개의 단추가 있습니다.
 
 코드 숨김이 **[SkiaSharp 비트맵에서 만들기 및 그리기](drawing.md#rotating-bitmaps)** 문서에 표시 된 비트맵 회전 논리를 구현 합니다. 사용자는 이미지를 90도 시계 방향으로, 시계 반대 방향으로 회전할 수 있습니다.
 

@@ -10,10 +10,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 255c870407f1657196abd826b46c7e9b114285c9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "91433323"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 설치
@@ -30,7 +30,7 @@ Visual Studio 2019에서 **도움말** 메뉴를 클릭하여 Xamarin이 설치�
 
 ![도움말 메뉴의 Xamarin 메뉴 항목](windows-images/12-xamarin-menu-item.png "도움말 메뉴의 Xamarin 메뉴 항목")
 
-**도움말 > Microsoft Visual Studio 정보**를 클릭하고 설치된 제품 목록을 스크롤하여 Xamarin이 설치되었는지 확인할 수도 있습니다.
+**도움말 > Microsoft Visual Studio 정보** 를 클릭하고 설치된 제품 목록을 스크롤하여 Xamarin이 설치되었는지 확인할 수도 있습니다.
 
 ![Visual Studio 2019의 설치 제품 화면](windows-images/13-xamarin-is-installed.png "Visual Studio 2019의 설치 제품 화면")
 

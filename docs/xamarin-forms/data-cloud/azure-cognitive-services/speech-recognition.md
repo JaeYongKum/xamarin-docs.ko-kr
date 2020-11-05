@@ -10,16 +10,16 @@ ms.date: 01/14/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e5888e77948bef0fbb60a4e0068cbedf2d2a50e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 45cf62354eb54007b9380ee06b1d93ee49000909
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555387"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365855"
 ---
 # <a name="speech-recognition-using-azure-speech-service"></a>Azure 음성 서비스를 사용한 음성 인식
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
 
 Azure Speech Service는 다음과 같은 기능을 제공 하는 클라우드 기반 API입니다.
 

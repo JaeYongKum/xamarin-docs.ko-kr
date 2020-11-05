@@ -10,16 +10,16 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bf85bb3bf6f694aa5eefa8512b8391084228598e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: dc85f93110d2faec69ae42823a121b6d16fdfe7f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563525"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367779"
 ---
 # <a name="layout-options-in-no-locxamarinforms"></a>의 레이아웃 옵션 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및 VerticalOptions 속성이 있습니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다._
 
@@ -53,7 +53,7 @@ _모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및
 > [!NOTE]
 > 보기 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성의 기본값은 [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)입니다.
 
-## <a name="alignment"></a>맞춤
+## <a name="alignment"></a>부합되는 내용
 
 맞춤은 부모 레이아웃에 사용 되지 않는 공간이 있는 경우 (즉, 부모 레이아웃이 모든 자식의 전체 크기 보다 큰 경우) 뷰가 부모 레이아웃 내에 배치 되는 방식을 제어 합니다.
 
@@ -76,7 +76,7 @@ _모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및
 </StackLayout>
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 Content = new StackLayout
@@ -124,7 +124,7 @@ Content = new StackLayout
 </StackLayout>
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 Content = new StackLayout

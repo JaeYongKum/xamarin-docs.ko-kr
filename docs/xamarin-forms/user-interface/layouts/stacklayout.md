@@ -10,16 +10,16 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c8e7c0e3edb581e13944ce48e2241f035791574
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fcd5f3deb2c7645988cd70b3556b718151df99fd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556856"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366661"
 ---
 # <a name="no-locxamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
 [![::: no loc (Xamarin.ios)::: StackLayout](stacklayout-images/layouts.png "::: no loc (Xamarin.ios)::: StackLayout")](stacklayout-images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: StackLayout")
 
@@ -213,7 +213,7 @@ public class StackLayoutSpacingPageCS : ContentPage
 > [!TIP]
 > [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 필요 하지 않은 경우의 및 속성을 설정 하지 마세요 [`StackLayout`](xref:Xamarin.Forms.StackLayout) . `LayoutOptions.Fill` 및 `LayoutOptions.FillAndExpand`의 기본값은 최고의 레이아웃 최적화를 지원합니다. 이러한 속성을 변경 하면 해당 속성을 기본값으로 다시 설정 하는 경우에도 비용이 발생 하며 메모리가 소비 됩니다.
 
-### <a name="alignment"></a>맞춤
+### <a name="alignment"></a>부합되는 내용
 
 다음 XAML 예제에서는의 각 자식 뷰에서 맞춤 기본 설정을 지정 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 65bdeef161ce4bfed18ca07966a0ab3189c65ba2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f653f2a617022ddd80e910fcea7c43450cb911d0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556713"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366726"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>IOS의 페이지 상태 표시줄 표시 유형
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별는 상태 표시줄의 표시 여부를 설정 하는 데 사용 되며, 상태 표시줄의 표시 여부를 제어 하는 [`Page`](xref:Xamarin.Forms.Page) 기능을 포함 합니다 `Page` . `Page.PrefersStatusBarHidden`연결 된 속성을 열거형의 값으로 설정 하 `StatusBarHiddenMode` 고 선택적으로 `Page.PreferredStatusBarUpdateAnimation` 연결 된 속성을 열거형 값으로 설정 하 여 XAML에서 사용 됩니다 `UIStatusBarAnimation` .
 
@@ -47,7 +47,7 @@ On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
 
 따라서에 대 한 상태 표시줄의 표시 여부를 [`Page`](xref:Xamarin.Forms.Page) 설정할 수 있습니다.
 
-![상태 표시줄 표시 유형 플랫폼 특정](page-status-bar-visibility-images/hide-status-bar.png)
+![상태 표시줄 표시 유형 Platform-Specific](page-status-bar-visibility-images/hide-status-bar.png)
 
 > [!NOTE]
 > 에서 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 지정 된 `StatusBarHiddenMode` 열거형 값은 모든 자식 페이지의 상태 표시줄도 업데이트 합니다. 다른 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식에서 지정 된 `StatusBarHiddenMode` 열거형 값은 현재 페이지의 상태 표시줄만 업데이트 합니다.

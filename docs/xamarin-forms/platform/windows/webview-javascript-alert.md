@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7ff394fbe050fbd97c574c7edc32376e7d1b069
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c0a52bc7d0f8b5c8dc07975653c819aa7f3ec2be
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557220"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367402"
 ---
 # <a name="webview-javascript-alerts-on-windows"></a>Windows의 웹 보기 JavaScript 경고
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 플랫폼별는를 사용 [`WebView`](xref:Xamarin.Forms.WebView) 하 여 UWP 메시지 대화 상자에 JavaScript 경고를 표시할 수 있습니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 [`WebView.IsJavaScriptAlertEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView.IsJavaScriptAlertEnabledProperty) `boolean` .
 

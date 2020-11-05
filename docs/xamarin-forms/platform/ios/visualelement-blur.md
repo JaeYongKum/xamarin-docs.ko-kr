@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a81e5a589e99a62aeaea58707228afd03016a8c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f02de8bc2bf0ed1091c73c3a91f748400f8615b7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563941"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367584"
 ---
 # <a name="visualelement-blur-on-ios"></a>IOS에서 VisualElement 흐림 효과
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별는 그 아래에 계층화 된 콘텐츠를 흐리게 하는 데 사용 되며 any에 적용할 수 있습니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) . [`VisualElement.BlurEffect`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty)연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) .
 
@@ -49,7 +49,7 @@ boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 
 그 결과 지정 된 [`BlurEffectStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 가 인스턴스에 적용 되어 그 [`BoxView`](xref:Xamarin.Forms.BoxView) 아래 계층화 된를 흐리게 됩니다 [`Image`](xref:Xamarin.Forms.Image) .
 
-![흐림 효과 플랫폼별](applying-blur-images/blur-effect.png)
+![흐림 효과 Platform-Specific](applying-blur-images/blur-effect.png)
 
 > [!NOTE]
 > 에 흐리게 효과를 추가할 때 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 터치 이벤트는에서 계속 수신 됩니다 `VisualElement` .

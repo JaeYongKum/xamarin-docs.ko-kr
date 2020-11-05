@@ -1,6 +1,6 @@
 ---
 title: Porter-Duff blend 모드
-description: Porter-Duff blend 모드를 사용 하 여 원본 및 대상 이미지를 기반으로 장면을 작성 합니다.
+description: 원본 및 대상 이미지를 기준으로 장면을 작성 하려면 Porter-Duff blend 모드를 사용 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 104039bdb211eb823c4306071804e9680793840a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560782"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365842"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter-Duff blend 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Porter-Duff blend 모드의 이름은 Lucasfilm에 대 한 작업을 수행 하는 동안 Thomas Porter 및 Tom Duff로 지정 됩니다. [_디지털 이미지를 합성_](https://graphics.pixar.com/library/Compositing/paper.pdf) 하는 백서는 _컴퓨터 그래픽_의 7 월 1984, 253 페이지에서 259로 게시 되었습니다. 이러한 blend 모드는 합성 장면으로 다양 한 이미지를 어셈블하는 합성에 필수적입니다.
+Porter-Duff blend 모드는 Lucasfilm에서 작업 하는 동안 대 수를 개발한 Porter 및 Tom (Thomas) 뒤에 이름이 지정 됩니다. [_디지털 이미지를 합성_](https://graphics.pixar.com/library/Compositing/paper.pdf) 하는 백서는 _컴퓨터 그래픽_ 의 7 월 1984, 253 페이지에서 259로 게시 되었습니다. 이러한 blend 모드는 합성 장면으로 다양 한 이미지를 어셈블하는 합성에 필수적입니다.
 
 ![Porter-Duff 샘플](porter-duff-images/PorterDuffSample.png "Porter-Duff 샘플")
 
@@ -35,9 +35,9 @@ Brownish 사각형이 표시 표면의 왼쪽 및 위쪽 2/3를 차지 한다고
 
 대상의 크기와 같은 사각형을 그립니다. 사각형은 오른쪽 및 아래쪽 bluish을 차지 하는 영역을 제외 하 고는 투명 합니다.
 
-![Porter-Duff 원본](porter-duff-images/PorterDuffSrc.png "Porter-Duff 원본")
+![Porter-Duff 원본](porter-duff-images/PorterDuffSrc.png "Porter-Duff 소스")
 
-이를 _원본_ 또는 경우에 따라 _전경_이라고 합니다.
+이를 _원본_ 또는 경우에 따라 _전경_ 이라고 합니다.
 
 대상에 소스를 표시 하는 경우 다음과 같은 것이 좋습니다.
 
@@ -47,15 +47,15 @@ Brownish 사각형이 표시 표면의 왼쪽 및 위쪽 2/3를 차지 한다고
 
 그러나 다른 효과를 위해 다른 blend 모드를 지정할 수 있습니다. 을 지정 하는 경우 `SKBlendMode.DstOver` 원본 및 대상이 교차 하는 영역에서 대상이 다음과 같이 표시 됩니다.
 
-![Porter-Duff Destination Over](porter-duff-images/PorterDuffDstOver.png "Porter-Duff Destination Over")
+![Porter-Duff Destination Over](porter-duff-images/PorterDuffDstOver.png "대상 Porter-Duff")
 
 Blend 모드에는 대상 `SKBlendMode.DstIn` 색을 사용 하 여 대상 및 원본이 교차 하는 영역만 표시 됩니다.
 
-![Porter-Duff Destination In](porter-duff-images/PorterDuffDstIn.png "Porter-Duff Destination In")
+![Porter-Duff Destination In](porter-duff-images/PorterDuffDstIn.png "Porter-Duff 대상")
 
 `SKBlendMode.Xor`(배타적 OR)의 blend 모드에서는 두 영역이 겹치는 위치에 아무 것도 표시 되지 않습니다.
 
-![Porter-Duff 배타 또는](porter-duff-images/PorterDuffXor.png "Porter-Duff 배타 또는")
+![Porter-Duff 배타 또는](porter-duff-images/PorterDuffXor.png "Porter-Duff 배타적 Or")
 
 색이 지정 된 대상 및 소스 사각형은 표시 화면을 대상 및 소스 사각형의 존재에 해당 하는 다양 한 방법으로 색을 지정할 수 있는 4 개의 고유한 영역으로 효과적으로 나눕니다.
 
@@ -63,7 +63,7 @@ Blend 모드에는 대상 `SKBlendMode.DstIn` 색을 사용 하 여 대상 및 �
 
 대상과 소스가 모두 해당 영역에서 투명 하기 때문에 오른쪽 위 및 왼쪽 아래 사각형은 항상 비어 있습니다. 대상 색은 왼쪽 위 영역을 차지 하므로 대상 색으로 영역을 색으로 지정할 수 있습니다. 마찬가지로 소스 색은 오른쪽 아래 영역을 차지 하므로 소스 색으로 영역을 색으로 지정할 수 있습니다. 대상 색 이나 소스 색을 사용 하 여 중간에 있는 대상과 원본의 교차점을 색으로 지정할 수 있습니다.
 
-총 조합 수는 2 (왼쪽 위)가 2 (오른쪽 아래) 시간 3 (가운데) 또는 12입니다. 12 가지 기본 Porter-Duff 합성 모드입니다.
+총 조합 수는 2 (왼쪽 위)가 2 (오른쪽 아래) 시간 3 (가운데) 또는 12입니다. 다음은 12 가지 기본 Porter-Duff 합성 모드입니다.
 
 _디지털 이미지 합성_ (256 페이지), Porter 및 duff를 사용 하 여 13 번째 모드를 추가 _합니다 (SKIASHARP_ `SKBlendMode.Plus` 멤버와 w3c _연하게_ 모드와 혼동 _Lighter_ 하지 않음). 이 `Plus` 모드는 더 자세히 설명 하는 프로세스 인 대상 및 원본 색을 추가 합니다.
 
@@ -71,7 +71,7 @@ _디지털 이미지 합성_ (256 페이지), Porter 및 duff를 사용 하 여 
 
 SkiaSharp에 정의 된 14 Porter-Duff 모드는 다음과 같습니다. 다음 표에서는 위의 다이어그램에서 비어 있지 않은 세 영역 각각의 색을 표시 하는 방법을 보여 줍니다.
 
-| 모드       | 대상 | 교집합 | 원본 |
+| Mode       | 대상 | 교집합 | 원본 |
 | ---------- |:-----------:|:------------:|:------:|
 | `Clear`    |             |              |        |
 | `Src`      |             | 원본       | X      |
@@ -85,7 +85,7 @@ SkiaSharp에 정의 된 14 Porter-Duff 모드는 다음과 같습니다. 다음 
 | `SrcATop`  | X           | 원본       |        |
 | `DstATop`  |             | 대상  | X      |
 | `Xor`      | X           |              | X      |
-| `Plus`     | X           | 합계          | X      |
+| `Plus`     | X           | 합          | X      |
 | `Modulate` |             | 제품      |        | 
 
 이러한 혼합 모드는 대칭입니다. 원본 및 대상을 교환할 수 있으며 모든 모드를 계속 사용할 수 있습니다.
@@ -96,7 +96,7 @@ SkiaSharp에 정의 된 14 Porter-Duff 모드는 다음과 같습니다. 다음 
 - **Over** 접미사는 교차에 표시 되는 항목을 나타냅니다. 원본 또는 대상이 다른에 "위로" 그려집니다.
 - 접미사 **In** 접미사는 교차 부분만 색으로 지정 됨을 의미 합니다. 출력은 소스 또는 대상의 일부 ("")로만 제한 됩니다.
 - **출력** 접미사는 교집합이 색으로 지정 되지 않음을 의미 합니다. 출력은 교차로 "out" 인 원본 또는 대상의 일부일 뿐입니다.
-- 가장 **위에** 있는 접미사는 **In** 및 **Out**의 합집합입니다. 여기에는 원본 또는 대상이 다른 영역을 포함 하는 영역이 포함 됩니다.
+- 가장 **위에** 있는 접미사는 **In** 및 **Out** 의 합집합입니다. 여기에는 원본 또는 대상이 다른 영역을 포함 하는 영역이 포함 됩니다.
 
 및 모드의 차이를 확인 합니다 `Plus` `Modulate` . 이러한 모드는 원본 및 대상 픽셀에 대해 다른 유형의 계산을 수행 합니다. 이러한 항목에 대해서는 곧 자세히 설명 합니다.
 
@@ -262,9 +262,9 @@ public class PorterDuffGridPage : ContentPage
 
 결과:
 
-[![Porter-Duff 그리드](porter-duff-images/PorterDuffGrid.png "Porter-Duff 그리드")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
+[![Porter-Duff 그리드](porter-duff-images/PorterDuffGrid.png "Porter-Duff 표")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
-Porter-Duff blend 모드가 적절 하 게 작동 하는 데 투명도가 중요 하다는 것을 이해 해야 합니다. 클래스에는 `PorterDuffCanvasView` 메서드에 대 한 총 세 개의 호출이 포함 되어 있습니다 `Canvas.Clear` . 모든 요소는 모든 픽셀을 투명 하 게 설정 하는 매개 변수가 없는 메서드를 사용 합니다.
+투명도가 Porter-Duff 혼합 모드의 적절 한 기능에 중요 하다는 것을 스스로 이해할 수 있습니다. 클래스에는 `PorterDuffCanvasView` 메서드에 대 한 총 세 개의 호출이 포함 되어 있습니다 `Canvas.Clear` . 모든 요소는 모든 픽셀을 투명 하 게 설정 하는 매개 변수가 없는 메서드를 사용 합니다.
 
 ```csharp
 canvas.Clear();
@@ -280,7 +280,7 @@ canvas.Clear(SKColors.White);
 
 **Porter-Duff 그리드** 페이지의 비트맵을 간단한 호출로 바꾸는 하려는 유혹 있을 수 있습니다 `DrawRect` . 대상 사각형에는 적용 되지만 소스 사각형에는 적용 되지 않습니다. 소스 사각형은 bluish 색 영역 이상 이어야 합니다. 소스 사각형은 대상의 색이 지정 된 영역에 해당 하는 투명 영역을 포함 해야 합니다. 그런 다음에만 이러한 blend 모드가 작동 합니다.
 
-## <a name="using-mattes-with-porter-duff"></a>Porter와 함께 매트 사용-Duff
+## <a name="using-mattes-with-porter-duff"></a>Porter-Duff에서 매트 사용
 
 **Brick 합성** 페이지는 클래식 합성 작업의 예를 보여 줍니다. 제거 해야 하는 배경의 비트맵을 포함 하 여 여러 부분에서 그림을 조합 해야 합니다. 다음은 문제가 있는 배경의 **SeatedMonkey.jpg** 비트맵입니다.
 
@@ -366,9 +366,9 @@ public partial class BrickWallCompositingPage : ContentPage
 
 프로그램이 처음 실행 될 때 다음을 제외 하 고 아무 것도 표시 되지 않습니다 `Button` .
 
-[![Brick-벽 합성 0 단계](porter-duff-images/BrickWallCompositing0.png "Brick-벽 합성 0 단계")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
+[![Brick-벽 합성 0 단계](porter-duff-images/BrickWallCompositing0.png "Brick-Wall 작성 0 단계")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
-를 `Button` 한 번 누르면 `step` 1 씩 증가 하 고 처리기는 `PaintSurface` 이제 **SeatedMonkey.jpg**를 표시 합니다.
+를 `Button` 한 번 누르면 `step` 1 씩 증가 하 고 처리기는 `PaintSurface` 이제 **SeatedMonkey.jpg** 를 표시 합니다.
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -392,7 +392,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 `SKPaint`개체가 없으므로 blend 모드가 없습니다. 비트맵이 화면 아래쪽에 표시 됩니다.
 
-[![Brick-벽 합성 1 단계](porter-duff-images/BrickWallCompositing1.png "Brick-벽 합성 1 단계")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
+[![Brick-벽 합성 1 단계](porter-duff-images/BrickWallCompositing1.png "Brick-Wall 작성 1 단계")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
 를 `Button` 다시 누르고 `step` 2로 증가 합니다. 이는 **SeatedMonkeyMatte.png** 파일을 표시 하는 중요 한 단계입니다.
 
@@ -419,7 +419,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Blend 모드는입니다 `SKBlendMode.DstIn` . 즉, 대상이 원본의 투명 하지 않은 영역에 해당 하는 영역에 유지 됩니다. 원본 비트맵에 해당 하는 대상 사각형의 나머지 부분은 투명 하 게 됩니다.
 
-[![Brick 합성 2 단계](porter-duff-images/BrickWallCompositing2.png "Brick 합성 2 단계")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
+[![Brick 합성 2 단계](porter-duff-images/BrickWallCompositing2.png "Brick-Wall 합성 2 단계")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
 
 배경이 제거 되었습니다. 
 
@@ -456,7 +456,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 이 sidewalk는 원숭이 뒤에 있어야 하므로 blend 모드는 `DstOver` 입니다. 대상은 배경이 투명 하 게 표시 되는 위치에만 표시 됩니다.
 
-[![Brick 합성 3 단계](porter-duff-images/BrickWallCompositing3.png "Brick 합성 3 단계")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
+[![Brick 합성 3 단계](porter-duff-images/BrickWallCompositing3.png "Brick-Wall 작성 3 단계")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
 
 마지막 단계는 brick 벽을 추가 하는 것입니다. 프로그램은 클래스에서 정적 속성으로 사용할 수 있는 벽돌 벽 비트맵 타일을 사용 합니다 `BrickWallTile` `AlgorithmicBrickWallPage` . 번역 변환은 `SKShader.CreateBitmap` 하위 행이 전체 타일이 되도록 타일을 이동 하는 호출에 추가 됩니다.
 
@@ -489,15 +489,15 @@ public partial class BrickWallCompositingPage : ContentPage
 
 편의를 위해 `DrawRect` 이 셰이더는 전체 캔버스에 대해이 셰이더를 표시 하지만 `DstOver` 모드는 출력을 여전히 투명 한 캔버스 영역으로 제한 합니다.
 
-[![Brick 합성 4 단계](porter-duff-images/BrickWallCompositing4.png "Brick 합성 4 단계")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
+[![Brick 합성 4 단계](porter-duff-images/BrickWallCompositing4.png "Brick-Wall 합성 4 단계")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
 
 이 장면을 구성할 수 있는 다른 방법이 있습니다. 백그라운드에서 시작 하 여 포그라운드로 진행 될 수 있습니다. 하지만 blend 모드를 사용 하면 더 많은 유연성이 제공 됩니다. 특히 매트를 사용 하면 구성 된 장면에서 비트맵의 배경을 제외할 수 있습니다.
 
-[경로 및 영역을 사용한 클리핑](../../curves/clipping.md)문서에서 배운 것 처럼 클래스는 `SKCanvas` , 및 메서드에 해당 하는 세 가지 유형의 클리핑을 [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) 정의 [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) 합니다. Porter-Duff blend 모드는 비트맵을 포함 하 여 그릴 수 있는 모든 항목에 대 한 이미지를 제한할 수 있도록 하는 다른 유형의 클리핑을 추가 합니다. **벽돌 벽 합성** 에 사용 되는 매트는 기본적으로 클리핑 영역을 정의 합니다.
+[경로 및 영역을 사용한 클리핑](../../curves/clipping.md)문서에서 배운 것 처럼 클래스는 `SKCanvas` , 및 메서드에 해당 하는 세 가지 유형의 클리핑을 [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) 정의 [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) 합니다. Porter-Duff blend 모드는 비트맵을 포함 하 여 그릴 수 있는 모든 항목에 대 한 이미지를 제한할 수 있는 다른 유형의 클리핑을 추가 합니다. **벽돌 벽 합성** 에 사용 되는 매트는 기본적으로 클리핑 영역을 정의 합니다.
 
 ## <a name="gradient-transparency-and-transitions"></a>그라데이션 투명도 및 전환
 
-이 문서 앞부분에 표시 된 Porter-Duff blend 모드의 예제에는 불투명 픽셀과 투명 픽셀으로 구성 되었지만 부분적으로 투명 한 픽셀으로 구성 된 모든 이미지가 포함 되어 있습니다. 이러한 픽셀에 대해서도 blend 모드 함수를 정의 합니다. 다음 표는 Porter- [**Duarggendmode 참조**](https://skia.org/user/api/SkBlendMode_Reference)에 있는 표기법을 사용 하는-duff blend 모드의 보다 공식적인 정의입니다. (C # **참조** )는 c + + 구문을 사용 합니다.
+이 문서 앞부분에 표시 된 Porter-Duff blend 모드의 예제에는 불투명 픽셀과 투명 픽셀으로 구성 되었지만 부분적으로 투명 한 픽셀이 아닌 모든 관련 이미지가 있습니다. 이러한 픽셀에 대해서도 blend 모드 함수를 정의 합니다. 다음 표에서는 c # [**참조**](https://skia.org/user/api/SkBlendMode_Reference)에서 찾을 수 있는 표기법을 사용 하는 Porter-Duff blend 모드의 보다 공식적인 정의를 제공 합니다. (C # **참조** )는 c + + 구문을 사용 합니다.
 
 개념적으로 각 픽셀의 빨강, 녹색, 파랑 및 알파 구성 요소는 바이트에서 0에서 1 사이의 부동 소수점 숫자로 변환 됩니다. 알파 채널의 경우 0은 완전히 투명 하 고 1은 완전히 불투명 합니다.
 
@@ -512,7 +512,7 @@ RGB 색에는 알파 값이 미리 곱해집니다. 예를 들어 **Sc** 가 순
 
 결과는 대괄호 안에 알파 채널과 함께 표시 되 고 RGB 색은 쉼표 ( **[alpha, color])** 로 구분 됩니다. 색의 경우 빨간색, 녹색 및 파랑 구성 요소에 대해 별도로 계산이 수행 됩니다.
 
-| 모드       | 작업(Operation) |
+| Mode       | 작업(Operation) |
 | ---------- | --------- |
 | `Clear`    | [0, 0]    |
 | `Src`      | [Sa, Sc]  |
@@ -529,13 +529,13 @@ RGB 색에는 알파 값이 미리 곱해집니다. 예를 들어 **Sc** 가 순
 | `Plus`     | [Sa + Da, Sc + Dc] |
 | `Modulate` | Sa Da, Sc · Dc | 
 
-이러한 작업은 **Da** 와 **Sa** 가 0 또는 1 일 때 분석 하기가 더 쉽습니다. 예를 들어 기본 모드의 `SrcOver` 경우 **Sa** 가 0 이면 **Sc** 도 0이 고 결과는 **[Da, Dc]**, 대상 알파 및 색입니다. **Sa** 가 1 이면 결과는 **[Sa, sc]**, 원본 알파 및 색 또는 **[1, sc]** 입니다.
+이러한 작업은 **Da** 와 **Sa** 가 0 또는 1 일 때 분석 하기가 더 쉽습니다. 예를 들어 기본 모드의 `SrcOver` 경우 **Sa** 가 0 이면 **Sc** 도 0이 고 결과는 **[Da, Dc]** , 대상 알파 및 색입니다. **Sa** 가 1 이면 결과는 **[Sa, sc]** , 원본 알파 및 색 또는 **[1, sc]** 입니다.
 
 `Plus`및 `Modulate` 모드는 소스와 대상의 조합으로 인해 새 색이 생성 될 수 있다는 것과는 약간 다릅니다. `Plus`모드는 바이트 구성 요소나 부동 소수점 구성 요소를 사용 하 여 해석할 수 있습니다. 앞에 표시 된 **Porter-Duff 그리드** 페이지에서 대상 색은 **(0xc0, 0x80, 0x00)** 이 고 원본 색은 **(0X00, 0x80, 0xc0)** 입니다. 각 구성 요소 쌍이 추가 되지만 합계는 0xFF로 고정 됩니다. 결과는 색 **(0xc0, 0xff, 0xc0)** 입니다. 교차에 표시 되는 색입니다.
 
 모드의 경우 `Modulate` RGB 값을 부동 소수점으로 변환 해야 합니다. 대상 색은 **(0.75, 0.5, 0)** 이 고 소스는 **(0, 0.5, 0.75)** 입니다. RGB 구성 요소는 각각 서로 곱하고 그 결과는 **(0, 0.25, 0)** 입니다. 이는이 모드에 대 한 **Porter-Duff 그리드** 페이지의 교차점에 표시 되는 색입니다.
 
-**Porter-Duff 투명성** 페이지에서 Porter-duff blend 모드가 부분적으로 투명 한 그래픽 개체에서 작동 하는 방식을 검사할 수 있습니다. XAML 파일에는 `Picker` Porter-Duff 모드를 포함 하는가 포함 되어 있습니다.
+**Porter-Duff 투명성** 페이지를 사용 하 여 Porter-Duff blend 모드가 부분적으로 투명 한 그래픽 개체에서 작동 하는 방식을 검사할 수 있습니다. XAML 파일에는 Porter-Duff 모드를 포함 하는가 포함 되어 있습니다 `Picker` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -652,15 +652,15 @@ public partial class PorterDuffTransparencyPage : ContentPage
 }
 ```
 
-이 프로그램은 비트맵 이외의 그래픽 개체에 Porter-Duff blend 모드를 사용할 수 있음을 보여 줍니다. 그러나 소스는 투명 영역을 포함 해야 합니다. 이 경우에는 그라데이션이 사각형을 채우기만 하 고 그라데이션의 일부가 투명 하기 때문입니다.
+이 프로그램에서는 Porter-Duff blend 모드를 비트맵 이외의 그래픽 개체와 함께 사용할 수 있음을 보여 줍니다. 그러나 소스는 투명 영역을 포함 해야 합니다. 이 경우에는 그라데이션이 사각형을 채우기만 하 고 그라데이션의 일부가 투명 하기 때문입니다.
 
 다음은 세 가지 예입니다.
 
-[![Porter-Duff 투명성](porter-duff-images/PorterDuffTransparency.png "Porter-Duff 투명성")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
+[![Porter-Duff 투명성](porter-duff-images/PorterDuffTransparency.png "Porter-Duff 투명도")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
 
-대상 및 원본의 구성은 원래의 Porter-Duff [_합성 디지털 이미지_](https://graphics.pixar.com/library/Compositing/paper.pdf) 용지의 255 페이지에 표시 된 다이어그램과 매우 유사 하지만,이 페이지에서는 부분 투명도 영역에 대해 blend 모드가 제대로 작동 하 고 있음을 보여 줍니다.
+대상 및 원본의 구성은 원래 Porter-Duff [_디지털 이미지_](https://graphics.pixar.com/library/Compositing/paper.pdf) 작성 문서의 255 페이지에 표시 된 다이어그램과 매우 유사 하지만,이 페이지에서는 부분 투명도 영역에 대해 blend 모드가 제대로 동작 하 고 있음을 보여 줍니다.
 
-다른 효과에는 투명 그라데이션을 사용할 수 있습니다. 한 가지 가능성은 마스킹은 **SkiaSharp 원형 그라데이션 페이지**의 [**마스킹에 대 한 방사형 그라데이션**](../shaders/circular-gradients.md#radial-gradients-for-masking) 섹션에 표시 된 기술과 비슷합니다. **합성 마스크** 페이지의 대부분은 이전 프로그램과 유사 합니다. 비트맵 리소스를 로드 하 고이를 표시 하는 사각형을 결정 합니다. 방사형 그라데이션은 미리 결정 된 중심 및 반지름을 기반으로 생성 됩니다.
+다른 효과에는 투명 그라데이션을 사용할 수 있습니다. 한 가지 가능성은 마스킹은 **SkiaSharp 원형 그라데이션 페이지** 의 [**마스킹에 대 한 방사형 그라데이션**](../shaders/circular-gradients.md#radial-gradients-for-masking) 섹션에 표시 된 기술과 비슷합니다. **합성 마스크** 페이지의 대부분은 이전 프로그램과 유사 합니다. 비트맵 리소스를 로드 하 고이를 표시 하는 사각형을 결정 합니다. 방사형 그라데이션은 미리 결정 된 중심 및 반지름을 기반으로 생성 됩니다.
 
 ```csharp
 public class CompositingMaskPage : ContentPage

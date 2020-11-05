@@ -10,16 +10,16 @@ ms.date: 07/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9a96de5520a03b2ef51426be2c589c736ca2396
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: eeaf62c684100ff9fd5bb9ffd15162bdb4c6afd6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562394"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366518"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp 그래픽에 애니메이션을 적용 하는 응용 프로그램은 일반적으로 일반적으로 `InvalidateSurface` `SKCanvasView` 16 밀리초 마다 고정 속도로를 호출 합니다. 화면을 무효화 하면 처리기에 대 한 호출을 트리거하여 표시를 다시 `PaintSurface` 그립니다. 시각적 개체는 1 초에 60 번 다시 그려질 때 부드럽게 애니메이션으로 표시 됩니다.
 
@@ -37,13 +37,13 @@ SkiaSharp에서 유사한 작업을 수행할 수 있습니다. 이 문서에서
 
 ## <a name="bitmap-animation"></a>비트맵 애니메이션
 
-만델브로트 집합은 시각적으로 환상적인 긴 하지만 computionally. 여기에 사용 된 만델브로트 집합 및 수학에 대 한 자세한 내용은 666 페이지에서 시작 [ _ Xamarin.Forms 하는 Mobile Apps 만들기_ 의 20 장](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) 을 참조 하세요. 다음 설명에서는 배경 지식이 있다고 가정 합니다.
+만델브로트 집합은 시각적으로 환상적인 긴 하지만 computionally. 여기에 사용 된 만델브로트 집합 및 수학에 대 한 자세한 내용은 666 페이지에서 시작 [ _Xamarin.Forms 하는 Mobile Apps 만들기_ 의 20 장](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) 을 참조 하세요. 다음 설명에서는 배경 지식이 있다고 가정 합니다.
 
 [**만델브로트 애니메이션**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) 샘플에서는 비트맵 애니메이션을 사용 하 여 만델브로트 집합에서 고정 소수점의 연속 확대를 시뮬레이션 합니다. 확대 한 후에는 축소 하 고 나 서 프로그램을 종료할 때까지 주기가 계속 반복 됩니다.
 
-프로그램은 응용 프로그램 로컬 저장소에 저장 되는 최대 50 개의 비트맵을 만들어이 애니메이션을 준비 합니다. 각 비트맵은 이전 비트맵으로 복잡 한 평면의 너비와 높이의 절반을 포함 합니다. 프로그램에서는 이러한 비트맵이 정수 _확대/축소 수준을_나타내는 것으로 간주 됩니다. 그런 다음 비트맵이 차례로 표시 됩니다. 각 비트맵의 크기 조정에 애니메이션을 적용 하 여 한 비트맵에서 다른 비트맵으로 부드러운 진행을 제공 합니다.
+프로그램은 응용 프로그램 로컬 저장소에 저장 되는 최대 50 개의 비트맵을 만들어이 애니메이션을 준비 합니다. 각 비트맵은 이전 비트맵으로 복잡 한 평면의 너비와 높이의 절반을 포함 합니다. 프로그램에서는 이러한 비트맵이 정수 _확대/축소 수준을_ 나타내는 것으로 간주 됩니다. 그런 다음 비트맵이 차례로 표시 됩니다. 각 비트맵의 크기 조정에 애니메이션을 적용 하 여 한 비트맵에서 다른 비트맵으로 부드러운 진행을 제공 합니다.
 
-_을 사용 하 여 Xamarin.Forms Mobile Apps 만들기 _의 20 장에서 설명 하는 최종 프로그램과 마찬가지로 **만델브로트 애니메이션** 에서 만델브로트 집합 계산은 8 개의 매개 변수가 있는 비동기 메서드입니다. 매개 변수에는 복합 중심점을 포함 하 고 해당 중심점을 둘러싼 복합 평면의 너비와 높이를 포함 합니다. 다음 세 매개 변수는 만들 비트맵의 픽셀 너비 및 높이와 재귀 계산에 대 한 최대 반복 횟수입니다. `progress`매개 변수는이 계산의 진행률을 표시 하는 데 사용 됩니다. `cancelToken`매개 변수는이 프로그램에서 사용 되지 않습니다.
+_을 사용 하 여 Xamarin.Forms Mobile Apps 만들기_ 의 20 장에서 설명 하는 최종 프로그램과 마찬가지로 **만델브로트 애니메이션** 에서 만델브로트 집합 계산은 8 개의 매개 변수가 있는 비동기 메서드입니다. 매개 변수에는 복합 중심점을 포함 하 고 해당 중심점을 둘러싼 복합 평면의 너비와 높이를 포함 합니다. 다음 세 매개 변수는 만들 비트맵의 픽셀 너비 및 높이와 재귀 계산에 대 한 최대 반복 횟수입니다. `progress`매개 변수는이 계산의 진행률을 표시 하는 데 사용 됩니다. `cancelToken`매개 변수는이 프로그램에서 사용 되지 않습니다.
 
 ```csharp
 static class Mandelbrot
@@ -182,7 +182,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-특정 시점에서 `COUNT` 애니메이션의 전체 범위를 보려면 값을 50로 변경 하는 것이 좋습니다. 50 이상의 값은 유용 하지 않습니다. 48의 확대/축소 수준을 기준으로 하는 경우에는 배정밀도 부동 소수점 숫자의 해상도가 만델브로트 집합 계산에 충분 하지 않게 됩니다. 이 문제는 _를 사용 하 Xamarin.Forms 여 Mobile Apps을 만드는 _684 페이지에서 설명 합니다.
+특정 시점에서 `COUNT` 애니메이션의 전체 범위를 보려면 값을 50로 변경 하는 것이 좋습니다. 50 이상의 값은 유용 하지 않습니다. 48의 확대/축소 수준을 기준으로 하는 경우에는 배정밀도 부동 소수점 숫자의 해상도가 만델브로트 집합 계산에 충분 하지 않게 됩니다. 이 문제는 _를 사용 하 Xamarin.Forms 여 Mobile Apps을 만드는_ 684 페이지에서 설명 합니다.
 
 `center`값은 매우 중요 합니다. 이는 애니메이션 확대/축소의 중심입니다. 파일의 세 가지 값은 684 페이지에서 _를 사용 하 여 Xamarin.Forms Mobile Apps를 만드는 방법_ 20 장에서 사용 된 세 가지 값 이지만, 해당 챕터의 프로그램을 시험 하 여 고유한 값 중 하나를 사용할 수 있습니다.
 
@@ -470,7 +470,7 @@ public partial class MainPage : ContentPage
 
 ## <a name="gif-animation"></a>GIF 애니메이션
 
-GIF (Graphics 교환 형식) 사양에는 단일 GIF 파일에 연속 해 서 반복적으로 표시 될 수 있는 장면의 여러 순차 프레임을 포함할 수 있도록 하는 기능이 포함 되어 있습니다. 이러한 파일을 _애니메이션 gif_라고 합니다. 웹 브라우저는 애니메이션 gif를 재생할 수 있으며, SkiaSharp를 사용 하면 응용 프로그램에서 애니메이션 GIF 파일의 프레임을 추출 하 여 순차적으로 표시할 수 있습니다.
+GIF (Graphics 교환 형식) 사양에는 단일 GIF 파일에 연속 해 서 반복적으로 표시 될 수 있는 장면의 여러 순차 프레임을 포함할 수 있도록 하는 기능이 포함 되어 있습니다. 이러한 파일을 _애니메이션 gif_ 라고 합니다. 웹 브라우저는 애니메이션 gif를 재생할 수 있으며, SkiaSharp를 사용 하면 응용 프로그램에서 애니메이션 GIF 파일의 프레임을 추출 하 여 순차적으로 표시할 수 있습니다.
 
 [SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 DemonDeLuxe에 의해 생성 되 고 위키백과의 [뉴턴의 크레들에 놓기](https://en.wikipedia.org/wiki/Newton%27s_cradle) 페이지에서 다운로드 한 **Newtons_cradle_animation_book_2.gif** 이라는 애니메이션 GIF 리소스가 포함 되어 있습니다. **애니메이션 GIF** 페이지에는 해당 정보를 제공 하 고를 인스턴스화하는 XAML 파일이 포함 되어 있습니다 `SKCanvasView` .
 

@@ -10,16 +10,16 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1c05fb6ea81827be97d1d49a8066a755ac0a1b7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a848b9b58961a643ed674f5a61ac38b7b2dc8334
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560665"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366921"
 ---
 # <a name="swipeview-swipe-transition-mode-on-android"></a>Android에서 SwipeView 살짝 밀기 전환 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼 특정은를 열 때 사용 되는 전환을 제어 `SwipeView` 합니다. `SwipeView.SwipeTransitionMode`바인딩 가능한 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 `SwipeTransitionMode` .
 

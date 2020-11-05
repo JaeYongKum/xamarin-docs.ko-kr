@@ -10,16 +10,16 @@ ms.date: 04/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 90f93c2fd17771ccd8bc5dc67404b76cd4ab9c30
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 316f79d72ade21fd068112e2d01660502d0ed0d2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563005"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366765"
 ---
 # <a name="consume-an-aspnet-web-service-asmx"></a>ASMX(ASP.NET 웹 서비스) 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _ASMX는 SOAP (Simple Object Access Protocol)를 사용 하 여 메시지를 보내는 웹 서비스를 빌드하는 기능을 제공 합니다. SOAP는 웹 서비스를 빌드하고 액세스 하기 위한 플랫폼 독립적이 고 언어에 독립적인 프로토콜입니다. ASMX 서비스 소비자는 서비스를 구현 하는 데 사용 되는 플랫폼, 개체 모델 또는 프로그래밍 언어에 대해 알 필요가 없습니다. SOAP 메시지를 송수신 하는 방법을 이해 해야 합니다. 이 문서에서는 응용 프로그램에서 ASMX SOAP 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
 

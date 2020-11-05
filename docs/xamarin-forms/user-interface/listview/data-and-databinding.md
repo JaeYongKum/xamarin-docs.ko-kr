@@ -10,16 +10,16 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c77a219ab1b729aa279708d04610911fbbfe4e81
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e133c684009c116b9cf70a3ccef78484b5515ddb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560132"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365803"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
 는 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 데이터 목록을 표시 하는 데 사용 됩니다. 이 문서에서는 데이터를 데이터로 채우는 방법 `ListView` 및 선택한 항목에 데이터를 바인딩하는 방법을 설명 합니다.
 

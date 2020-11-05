@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 896b7f878e1ec9c3ed3c8324330c288220963e62
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ccdcfc28e1d439b390459be242b959f53d0bd915
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559716"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367714"
 ---
 # <a name="no-locxamarinforms-map-position-and-distance"></a>Xamarin.Forms 지도 위치 및 거리
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)네임 스페이스에는 [`Position`](xref:Xamarin.Forms.Maps.Position) 일반적으로 맵과 해당 핀을 배치할 때 사용 되는 구조체와 지도를 [`Distance`](xref:Xamarin.Forms.Maps.Distance) 배치할 때 선택적으로 사용할 수 있는 구조체가 포함 되어 있습니다.
 

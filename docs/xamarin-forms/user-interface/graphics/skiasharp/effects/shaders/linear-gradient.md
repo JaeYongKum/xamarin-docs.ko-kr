@@ -10,22 +10,22 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9d2ac2eec5422068243ac43e78092e25c10652f5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555530"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366791"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>SkiaSharp 선형 그라데이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[`SKPaint`](xref:SkiaSharp.SKPaint)클래스는 [`Color`](xref:SkiaSharp.SKPaint.Color) 단색으로 선 또는 채우기 영역을 스트로크 하는 데 사용 되는 속성을 정의 합니다. 또는 색의 점진적 혼합 인 _그라데이션으로_선 또는 채우기 영역을 채울 수 있습니다.
+[`SKPaint`](xref:SkiaSharp.SKPaint)클래스는 [`Color`](xref:SkiaSharp.SKPaint.Color) 단색으로 선 또는 채우기 영역을 스트로크 하는 데 사용 되는 속성을 정의 합니다. 또는 색의 점진적 혼합 인 _그라데이션으로_ 선 또는 채우기 영역을 채울 수 있습니다.
 
 ![선형 그라데이션 샘플](linear-gradient-images/LinearGradientSample.png "선형 그라데이션 샘플")
 
-가장 기본적인 그라데이션 유형은 _선형_ 그라데이션입니다. 색 혼합은 한 점에서 다른 점으로 선 ( _그라데이션 선_이라고 함)에서 발생 합니다. 그라데이션 선에 수직인 선은 동일한 색을 갖습니다. 두 정적 메서드 중 하나를 사용 하 여 선형 그라데이션을 만듭니다 [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . 두 오버 로드 간의 차이점은 행렬 변환이 포함 되 고 다른 오버 로드는 그렇지 않은 경우입니다. 
+가장 기본적인 그라데이션 유형은 _선형_ 그라데이션입니다. 색 혼합은 한 점에서 다른 점으로 선 ( _그라데이션 선_ 이라고 함)에서 발생 합니다. 그라데이션 선에 수직인 선은 동일한 색을 갖습니다. 두 정적 메서드 중 하나를 사용 하 여 선형 그라데이션을 만듭니다 [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . 두 오버 로드 간의 차이점은 행렬 변환이 포함 되 고 다른 오버 로드는 그렇지 않은 경우입니다. 
 
 이러한 메서드는 [`SKShader`](xref:SkiaSharp.SKShader) 의 속성으로 설정 된 형식의 개체를 반환 [`Shader`](xref:SkiaSharp.SKPaint.Shader) `SKPaint` 합니다. `Shader`속성이 null이 아닌 경우 속성을 재정의 `Color` 합니다. 스트로크 하는 선 또는이 개체를 사용 하 여 채워진 모든 영역 `SKPaint` 에는 단색이 아닌 그라데이션을 기반으로 합니다.
 

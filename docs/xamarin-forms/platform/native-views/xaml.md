@@ -10,16 +10,16 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd7c29f835b34b4c5ffb9a5af589815a09546a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558378"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365908"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
 
@@ -109,7 +109,7 @@ Android widget 생성자에는 일반적으로 Android `Context` 개체가 인�
 ![네이티브 스위치 사용 안 함 ](xaml-images/native-switch-disabled.png)
  ![ 네이티브 스위치 사용](xaml-images/native-switch-enabled.png)
 
-Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 하거나 지원 하거나 UWP의 인 경우 양방향 바인딩이 자동으로 지원 됩니다 `DependencyProperty` . 그러나 많은 네이티브 뷰에서는 속성 변경 알림을 지원 하지 않습니다. 이러한 보기의 경우 [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) 바인딩 식의 일부로 속성 값을 지정할 수 있습니다. 이 속성은 대상 속성이 변경 될 때 신호를 전달 하는 네이티브 뷰의 이벤트 이름으로 설정 해야 합니다. 그런 다음 네이티브 스위치의 값이 변경 되 면 사용자가 `Binding` 스위치 값을 변경 하 고 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 되었다는 알림이 클래스에 표시 됩니다.
+Native 속성이 `INotifyPropertyChanged` iOS에서 Key-Value 관찰 (KVO)을 구현 하거나 지원 하거나 UWP의 인 경우 양방향 바인딩이 자동으로 지원 됩니다 `DependencyProperty` . 그러나 많은 네이티브 뷰에서는 속성 변경 알림을 지원 하지 않습니다. 이러한 보기의 경우 [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) 바인딩 식의 일부로 속성 값을 지정할 수 있습니다. 이 속성은 대상 속성이 변경 될 때 신호를 전달 하는 네이티브 뷰의 이벤트 이름으로 설정 해야 합니다. 그런 다음 네이티브 스위치의 값이 변경 되 면 사용자가 `Binding` 스위치 값을 변경 하 고 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 되었다는 알림이 클래스에 표시 됩니다.
 
 ## <a name="pass-arguments-to-native-views"></a>네이티브 뷰에 인수 전달
 

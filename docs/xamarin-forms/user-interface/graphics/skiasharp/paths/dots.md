@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5064a53b140c26acdc5149f5495cc002e657a9b0
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 56a652f6f8ff2c4e9780d72117241d79f71210b5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564006"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367393"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>SkiaSharp의 점 및 대시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp에서 점선 및 파선 그리기의 복잡성을 줄입니다._
 
@@ -27,7 +27,7 @@ SkiaSharp를 사용 하 여 실선이 아닌 선을 그릴 수 있지만 대신 
 
 ![점선](dots-images/dottedlinesample.png)
 
-의 속성으로 설정 하는 클래스의 인스턴스인 *경로 효과*를 사용 하 여이 작업을 수행 [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) `SKPaint` 합니다. 로 정의 된 정적 생성 방법 중 하나를 사용 하 여 경로 효과를 만들거나 경로 효과를 조합할 수 있습니다 `SKPathEffect` . ( `SKPathEffect` 는 SkiaSharp에서 지 원하는 6 가지 효과 중 하나 이며 나머지는 [**SkiaSharp 효과**](../effects/index.md)섹션에 설명 되어 있습니다.)
+의 속성으로 설정 하는 클래스의 인스턴스인 *경로 효과* 를 사용 하 여이 작업을 수행 [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) `SKPaint` 합니다. 로 정의 된 정적 생성 방법 중 하나를 사용 하 여 경로 효과를 만들거나 경로 효과를 조합할 수 있습니다 `SKPathEffect` . ( `SKPathEffect` 는 SkiaSharp에서 지 원하는 6 가지 효과 중 하나 이며 나머지는 [**SkiaSharp 효과**](../effects/index.md)섹션에 설명 되어 있습니다.)
 
 점선이 나 파선을 그리려면 [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) 정적 메서드를 사용 합니다. 인수에는 두 가지가 있습니다. 첫 번째 인수는 `float` 점 및 대시의 길이와 그 사이의 공백 길이를 나타내는 값의 배열입니다. 이 배열의 요소 수는 짝수 여야 하며 두 개 이상의 요소가 있어야 합니다. 배열에는 요소가 없을 수도 있지만이 경우에는 실선이 발생 합니다. 두 개의 요소가 있는 경우 첫 번째 요소는 점 또는 대시의 길이이 고 두 번째는 다음 점 또는 대시 앞에 있는 간격의 길이입니다. 세 개 이상의 요소가 있는 경우 대시 길이, 간격 길이, 대시 길이, 간격 길이 등의 순서로 정렬 됩니다.
 

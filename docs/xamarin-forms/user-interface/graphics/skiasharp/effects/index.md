@@ -10,18 +10,18 @@ ms.date: 08/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e63d92cde5925561dae4217c3c46af2c2c59f795
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c6179f94b43f12a7bf4b91a05702c0539f3c8658
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563993"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367792"
 ---
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) 클래스는 일반적인 _효과_용어로 분류할 수 있는 6 개의 속성을 정의 합니다. 이러한 속성은 그래픽의 정상적인 표시를 변경 하는 속성입니다. SkiaSharp 효과는 다음과 같은 여섯 가지 범주로 나뉩니다.
+SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) 클래스는 일반적인 _효과_ 용어로 분류할 수 있는 6 개의 속성을 정의 합니다. 이러한 속성은 그래픽의 정상적인 표시를 변경 하는 속성입니다. SkiaSharp 효과는 다음과 같은 여섯 가지 범주로 나뉩니다.
 
 ## <a name="path-effects"></a>[경로 효과](../curves/effects.md)
 
@@ -47,7 +47,7 @@ SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) 클래스는 일반적인 _효과_
 
 [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) `SKPaint` [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) 테이블 또는 행렬 변환을 사용 하 여 색을 변경 하려면의 속성을 형식의 개체로 설정 합니다.
 
-이러한 아티클의 모든 샘플 코드는 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)에 있습니다. 홈 페이지에서 **SkiaSharp 효과**를 선택 합니다.
+이러한 아티클의 모든 샘플 코드는 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)에 있습니다. 홈 페이지에서 **SkiaSharp 효과** 를 선택 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

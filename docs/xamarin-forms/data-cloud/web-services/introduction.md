@@ -10,16 +10,16 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ebff259519776718f41ab0fcc0a7abb0c692dac6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7d1cb1d9fa418cd16cb25519680e526864c9917c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563421"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367727"
 ---
 # <a name="no-locxamarinforms-web-services-introduction"></a>Xamarin.Forms 웹 서비스 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _이 항목에서는 Xamarin.Forms 다양 한 웹 서비스와 통신 하는 방법을 보여 주는 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스는 별도의 샘플 응용 프로그램을 사용 하지만, 기능적으로 비슷하며 공통 클래스를 공유 합니다._
 

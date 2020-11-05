@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/24/2020
-  ms.openlocfilehash: c54bbc3d1157ad46abbfe798dbf3227efaed4f78
-  ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+  ms.openlocfilehash: 0e85efff7b1f5af066d21e876de0b31ff7ae5f85
+  ms.sourcegitcommit: d2aa3a8bf9a60b6708db55b10b0c6893c06d3256
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91432224"
+  ms.lasthandoff: 11/04/2020
+  ms.locfileid: "93331318"
 landingContent:
 - title: 시작
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 액세스 가능성
+    - text: 접근성
       url: ~/ios/app-fundamentals/accessibility.md
     - text: Backgrounding
       url: ~/ios/app-fundamentals/backgrounding/index.md
@@ -71,6 +71,8 @@ landingContent:
       url: ~/ios/user-interface/programmatic-layout-constraints.md
     - text: MonoTouch.Dialog
       url: ~/ios/user-interface/monotouch.dialog/index.md
+    - text: Xcode를 사용하여 디자인
+      url: ~/ios/user-interface/ios-use-xcode.md
 - title: 플랫폼 기능
   linkLists:
   - linkListType: concept
@@ -145,7 +147,7 @@ landingContent:
       url: ~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
     - text: 성능
       url: ~/ios/deploy-test/performance.md
-    - text: 단위 테스트
+    - text: 유닛 테스트
       url: ~/ios/deploy-test/touch.unit.md
     - text: 무선 배포
       url: ~/ios/deploy-test/wireless-deployment.md

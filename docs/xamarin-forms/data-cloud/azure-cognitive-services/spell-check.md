@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 719bc923a53d6a2ce9250def48a99893cadac32d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4446e92ee1d9b6938464375ba36c6e8e4cdfed6b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555309"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365792"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API 사용 하 여 맞춤법 검사
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Bing Spell Check는 텍스트에 대 한 상황별 맞춤법 검사를 수행 하 고 철자가 틀린 단어에 대 한 인라인 제안을 제공 합니다. 이 문서에서는 Bing Spell Check REST API를 사용 하 여 응용 프로그램에서 맞춤법 오류를 수정 하는 방법을 설명 합니다 Xamarin.Forms ._
 

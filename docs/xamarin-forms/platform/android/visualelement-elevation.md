@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7eb21f9a6a679c294a848d7fa79721c6db03bb0d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 19f09025e44bb7deddbb8a9e6ae326d2137a5ce0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563226"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367532"
 ---
 # <a name="visualelement-elevation-on-android"></a>Android에서 VisualElement 권한 상승
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼별는 API 21 이상을 대상으로 하는 응용 프로그램에서 시각적 요소의 권한 상승 또는 Z 순서를 제어 하는 데 사용 됩니다. 시각적 요소를 상승 하면 Z 값이 더 높은 시각적 요소가 occluding 시각적 요소를 사용 하 여 그리기 순서를 결정 합니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `VisualElement.Elevation` `boolean` .
 

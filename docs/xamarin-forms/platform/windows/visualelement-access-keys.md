@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7df914ae5b6de38b5179f5b1139b9c41e9559198
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560249"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367454"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Windows의 VisualElement 액세스 키
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 액세스 키는 사용자가 터치 또는 마우스를 통하지 않고 키보드를 통해 앱의 시각적 UI를 신속 하 게 탐색 하 고 상호 작용할 수 있는 직관적인 방법을 제공 하 여 유니버설 Windows 플랫폼 (UWP)에서 앱의 유용성 및 접근성을 향상 시키는 바로 가기 키입니다. 이는 Alt 키와 하나 이상의 영숫자 키의 조합으로, 일반적으로 순차적으로 눌러져 있습니다. 키보드 바로 가기 키는 단일 영숫자 문자를 사용 하는 선택키가 자동으로 지원 됩니다.
 

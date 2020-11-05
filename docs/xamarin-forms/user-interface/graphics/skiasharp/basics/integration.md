@@ -10,16 +10,16 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cca93508e022420e0d5d11de079420b367188052
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8288ad3238babe1ce6abb6d9517cdae71373d27c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562251"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366622"
 ---
 # <a name="integrating-with-no-locxamarinforms"></a>통합 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _터치 및 요소에 응답 하는 SkiaSharp 그래픽 만들기 Xamarin.Forms_
 
@@ -28,7 +28,7 @@ SkiaSharp 그래픽은 여러 가지 방법으로의 나머지와 통합할 수 
 ![슬라이더를 사용 하 여 색 선택](integration-images/integrationexample.png)
 
 에서 대화형 SkiaSharp 그래픽을 만드는 또 다른 방법은 Xamarin.Forms 터치를 통하는 것입니다.
-[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 두 번째 페이지에는 **채우기 토글 탭**이 있습니다. 채우기가 없고 &mdash; 탭으로 채우기가 전환 된 간단한 원을 그립니다 &mdash; . [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)클래스는 사용자 입력에 응답 하 여 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 두 번째 페이지에는 **채우기 토글 탭** 이 있습니다. 채우기가 없고 &mdash; 탭으로 채우기가 전환 된 간단한 원을 그립니다 &mdash; . [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)클래스는 사용자 입력에 응답 하 여 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
 
 이 페이지에 대 한 `SKCanvasView` 클래스는 [TapToggleFill](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 파일에서 인스턴스화되어 뷰에서도 설정 합니다 Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) .
 

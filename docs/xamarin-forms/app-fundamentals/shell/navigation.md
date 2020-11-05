@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6cf4932c3265d1d66200ae12ba448a758586f11c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ee027399aec51bb7ae4fac15e9c706c65d3af235
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563148"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928635"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -213,8 +213,8 @@ await Shell.Current.GoToAsync("../../route");
 
 | 서식 | 설명 |
 | --- | --- |
-| *route* 또는 /*route* | 시각적 계층 구조의 경로는 탐색 스택으로 푸시할 수 없습니다. |
-| //*page* 또는 ///*page* | 현재는 전역 경로가 탐색 스택의 유일한 페이지가 될 수 없습니다. 따라서 전역 경로에 대한 절대 라우팅은 지원되지 않습니다. |
+| *route* 또는 / *route* | 시각적 계층 구조의 경로는 탐색 스택으로 푸시할 수 없습니다. |
+| //*page* 또는 /// *page* | 현재는 전역 경로가 탐색 스택의 유일한 페이지가 될 수 없습니다. 따라서 전역 경로에 대한 절대 라우팅은 지원되지 않습니다. |
 
 이 경로 형식을 사용하면 `Exception`이 throw됩니다.
 
@@ -254,19 +254,13 @@ await Shell.Current.GoToAsync("../../route");
 
 또한 `ShellNavigatingEventArgs` 클래스는 탐색을 취소하는 데 사용될 수 있는 `Cancel` 메서드를 제공합니다.
 
-> [!NOTE]
-> `Navigated` 이벤트는 `Shell` 클래스에서 재정의 가능한 `OnNavigating` 메서드를 통해 실행됩니다.
-
 `Shell` 클래스는 탐색이 완료될 때 실행되는 `Navigated` 이벤트도 정의합니다. `Navigating` 이벤트와 함께 제공되는 `ShellNavigatedEventArgs` 개체는 다음 속성을 제공합니다.
 
-| 속성 | 형식 | 설명 |
+| 속성 | Type | 설명 |
 |---|---|---|
 | `Current` | `ShellNavigationState` | 현재 페이지의 URI입니다. |
 | `Previous`| `ShellNavigationState` | 이전 페이지의 URI입니다. |
 | `Source`  | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
-
-> [!NOTE]
-> `Navigating` 이벤트는 `Shell` 클래스에서 재정의 가능한 `OnNavigated` 메서드를 통해 실행됩니다.
 
 `ShellNavigatedEventArgs` 및 `ShellNavigatingEventArgs` 클래스에는 둘 다 `ShellNavigationSource` 형식의 `Source` 속성이 포함됩니다. 이 열거형은 다음 값을 제공합니다.
 
