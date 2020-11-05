@@ -10,16 +10,16 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3df3a606c54d7367079638d48330dfe1b214043b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5f12dbd4ef0cfea9d276fd8c939afab585541ece
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563187"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373900"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 좌표와 좌표 간의 차이점 탐색 Xamarin.Forms_
 
@@ -29,7 +29,7 @@ _SkiaSharp 좌표와 좌표 간의 차이점 탐색 Xamarin.Forms_
 
 잠시 동안 프로그래밍 했다면 Xamarin.Forms 좌표와 크기에 대 한 느낌이 있을 수 있습니다 Xamarin.Forms . 위의 두 문서에 그려진 원은 약간 작은 것 처럼 보일 수 있습니다.
 
-이러한 원은 크기와 *비교할 때* 작습니다 Xamarin.Forms . 기본적으로 SkiaSharp는 기본 Xamarin.Forms 플랫폼에 의해 설정 된 장치 독립적 단위에서 좌표와 크기를 기준으로 픽셀 단위로 그립니다. 좌표계에 대 한 자세한 내용은 Xamarin.Forms 5 장에서 찾을 수 있습니다 [. ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) *을 사용 하 여 Xamarin.Forms Mobile Apps를 만드는 *책의 크기를 처리 합니다.)
+이러한 원은 크기와 *비교할 때* 작습니다 Xamarin.Forms . 기본적으로 SkiaSharp는 기본 Xamarin.Forms 플랫폼에 의해 설정 된 장치 독립적 단위에서 좌표와 크기를 기준으로 픽셀 단위로 그립니다. 좌표계에 대 한 자세한 내용은 Xamarin.Forms 5 장에서 찾을 수 있습니다 [.](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) *을 사용 하 여 Xamarin.Forms Mobile Apps를 만드는* 책의 크기를 처리 합니다.)
 
 [**SkewSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **Surface 크기** 에 해당 하는 페이지에서는 SkiaSharp 텍스트 출력을 사용 하 여 세 가지 원본에서 표시 표면의 크기를 표시 합니다.
 
@@ -114,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 동일한 이미지 해상도를 유지 하기 위해 두 좌표계 간에 변환 하는 간단한 함수를 작성 하는 것이 더 나은 방법입니다.
 
-는 메서드 외에 `DrawCircle` `SKCanvas` 도 타원을 그리는 두 개의 메서드를 정의 합니다 `DrawOval` . 타원은 단일 반지름이 아닌 두 반지름을 기준으로 정의 됩니다. 이를 *주 반지름* 및 *부 반경*이라고 합니다. `DrawOval`메서드는 X 축과 Y 축에 평행한 두 반지름을 사용 하 여 타원을 그립니다. X 축과 Y 축에 평행 하지 않은 축으로 타원을 그려야 하는 경우 [**호를 그리는 세 가지 방법**](../curves/arcs.md)문서에 설명 된 [**대로 회전 변환 또는 그래픽**](../transforms/rotate.md) 경로 문서에 설명 된 대로 회전 변환을 사용할 수 있습니다. 메서드의이 오버 로드는 [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 두 반지름 매개 변수를 `rx` `ry` 지정 하 고 X 축과 Y 축에 평행이 되도록 지정 합니다.
+는 메서드 외에 `DrawCircle` `SKCanvas` 도 타원을 그리는 두 개의 메서드를 정의 합니다 `DrawOval` . 타원은 단일 반지름이 아닌 두 반지름을 기준으로 정의 됩니다. 이를 *주 반지름* 및 *부 반경* 이라고 합니다. `DrawOval`메서드는 X 축과 Y 축에 평행한 두 반지름을 사용 하 여 타원을 그립니다. X 축과 Y 축에 평행 하지 않은 축으로 타원을 그려야 하는 경우 [**호를 그리는 세 가지 방법**](../curves/arcs.md)문서에 설명 된 [**대로 회전 변환 또는 그래픽**](../transforms/rotate.md) 경로 문서에 설명 된 대로 회전 변환을 사용할 수 있습니다. 메서드의이 오버 로드는 [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 두 반지름 매개 변수를 `rx` `ry` 지정 하 고 X 축과 Y 축에 평행이 되도록 지정 합니다.
 
 ```csharp
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)

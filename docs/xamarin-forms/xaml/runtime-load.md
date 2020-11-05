@@ -10,16 +10,16 @@ ms.date: 12/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 071a7de630d7d7b7582e3c9fa8906919e92d1fb5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c027ef35462e6d2d43acf4ea5241a38abe15d41f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562004"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374279"
 ---
 # <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>런타임에 XAML 로드 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml)네임 스페이스에는 [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) 런타임에 XAML을 로드 하 고 구문 분석 하는 데 사용할 수 있는 두 가지 확장 메서드가 포함 되어 있습니다.
 
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Visual Studio에서 XAML 파일이 포함 된 프로젝트를 빌드하는 경우 XAML 파일을 구문 분석 하 여 메서드의 정의가 포함 된 c # 코드 파일 (예: **MainPage.xaml.g.cs**)을 생성 합니다 `InitializeComponent` .
+Visual Studio에서 XAML 파일이 포함 된 프로젝트를 빌드하는 경우 XAML 파일을 구문 분석 하 여 메서드의 정의가 포함 된 c # 코드 파일 (예: **MainPage.xaml.g.cs** )을 생성 합니다 `InitializeComponent` .
 
 ```csharp
 private void InitializeComponent()

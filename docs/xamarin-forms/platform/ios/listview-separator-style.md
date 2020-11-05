@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fe9a93e8e5a35df98587efc0dc3ad6192653d173
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 527ae4eee614e1b3c6225c6cd2b220030faa7f3e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563707"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372485"
 ---
 # <a name="listview-separator-style-on-ios"></a>IOS의 ListView 구분 기호 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 특정은의 셀 사이에 있는 구분 기호가의 전체 너비를 사용 하는지 여부를 제어 합니다 [`ListView`](xref:Xamarin.Forms.ListView) `ListView` . [`ListView.SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty)연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) .
 
@@ -51,7 +51,7 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 그러면 지정 된 [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 값이에 적용 되어 [`ListView`](xref:Xamarin.Forms.ListView) 셀 간의 구분 기호 너비를 제어 합니다.
 
-![ListView SeparatorStyle 플랫폼 관련](listview-separator-style-images/listview-separatorstyle.png)
+![ListView SeparatorStyle Platform-Specific](listview-separator-style-images/listview-separatorstyle.png)
 
 > [!NOTE]
 > 구분 기호 스타일이로 설정 된 후에는 `FullWidth` 런타임에로 다시 변경할 수 없습니다 `Default` .

@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: db2baea124f013d3b35451e62bd67c32dcebc470
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556674"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373603"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 원형 그라데이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 [`SKShader`](xref:SkiaSharp.SKShader)클래스는 네 가지 유형의 그라데이션을 만드는 정적 메서드를 정의 합니다. [**SkiaSharp 선형 그라데이션**](linear-gradient.md) 문서에서는 메서드에 대해 설명 합니다 [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . 이 문서에서는 원을 기반으로 하는 다른 세 가지 유형의 그라데이션을 다룹니다.
 
@@ -215,7 +215,7 @@ public class RainbowArcGradientPage : ContentPage
 
 ## <a name="radial-gradients-for-masking"></a>마스킹에 대 한 방사형 그라데이션
 
-선형 그라데이션과 마찬가지로 방사형 그라데이션은 투명 하거나 부분적으로 투명 한 색을 포함할 수 있습니다. 이 기능은 이미지의 일부를 숨겨 이미지의 다른 부분을 강조할 하는 _마스킹_이라는 프로세스에 유용 합니다.
+선형 그라데이션과 마찬가지로 방사형 그라데이션은 투명 하거나 부분적으로 투명 한 색을 포함할 수 있습니다. 이 기능은 이미지의 일부를 숨겨 이미지의 다른 부분을 강조할 하는 _마스킹_ 이라는 프로세스에 유용 합니다.
 
 **방사형 그라데이션 마스크** 페이지에 예제가 나와 있습니다. 프로그램은 리소스 비트맵 중 하나를 로드 합니다. `CENTER`및 `RADIUS` 필드는 비트맵 검사에서 결정 되었으며 강조 표시 되어야 하는 영역을 참조 합니다. `PaintSurface`처리기는 사각형을 계산 하 여 비트맵을 표시 한 다음 해당 사각형에 표시 하기 시작 합니다.
 
@@ -289,7 +289,7 @@ public class RadialGradientMaskPage : ContentPage
 
 ## <a name="radial-gradients-for-specular-highlights"></a>반사 하이라이트에 대 한 방사형 그라데이션
 
-조명이 둥근 표면에 노출 되 면 많은 방향의 빛을 반영 하지만 일부 빛은 뷰어의 눈에 직접 바운스 합니다. 이를 통해 _반사 하이라이트_라는 화면에서 유사 항목의 모양을 만들 수도 있습니다.
+조명이 둥근 표면에 노출 되 면 많은 방향의 빛을 반영 하지만 일부 빛은 뷰어의 눈에 직접 바운스 합니다. 이를 통해 _반사 하이라이트_ 라는 화면에서 유사 항목의 모양을 만들 수도 있습니다.
 
 3 차원 그래픽에서 반사 하이라이트는 광원 경로 및 음영을 결정 하는 데 사용 되는 알고리즘에서 발생 하는 경우가 많습니다. 2 차원 그래픽에서 3D 표면의 모양을 제안 하기 위해 반사 하이라이트가 추가 되기도 합니다. 반사 하이라이트는 플랫 빨강 원을 원 빨강 공로 변환할 수 있습니다.
 

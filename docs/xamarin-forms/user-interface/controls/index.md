@@ -10,24 +10,24 @@ ms.date: 08/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60c58ee17f68a12e3e51170f143adc9dc204e275
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 90d97e690c4d1fcdb22f17bbc856f9f9b2d0900c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562771"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374656"
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 응용 프로그램의 사용자 인터페이스는 Xamarin.Forms 각 대상 플랫폼의 네이티브 컨트롤에 매핑되는 개체를 구성 합니다. 이렇게 하면 iOS, Android 및 유니버설 Windows 플랫폼에 대 한 플랫폼별 응용 프로그램이 Xamarin.Forms [.NET Standard 라이브러리](~/cross-platform/app-fundamentals/net-standard.md)에 포함 된 코드를 사용할 수 있습니다.
 
 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 네 가지 기본 컨트롤 그룹 Xamarin.Forms 은 다음과 같습니다.
 
-- [**Pages**](pages.md)
+- [**페이지**](pages.md)
 - [**레이아웃**](layouts.md)
-- [**보기**](views.md)
+- [**레이아웃**](views.md)
 - [**셀**](cells.md)
 
 Xamarin.Forms페이지는 일반적으로 전체 화면을 차지 합니다. 이 페이지에는 일반적으로 뷰 및 다른 레이아웃이 포함 된 레이아웃이 포함 되어 있습니다. 셀은 및와의 연결에 사용 되는 특수 구성 요소 [`TableView`](xref:Xamarin.Forms.TableView) [`ListView`](xref:Xamarin.Forms.ListView) 입니다. 에서 사용자 인터페이스를 빌드하는 데 일반적으로 사용 되는 형식 계층 구조를 보여 주는 클래스 다이어그램은 Xamarin.Forms [ Xamarin.Forms Controls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)에서 찾을 수 있습니다.

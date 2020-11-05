@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a9ab12b5aabee03d84c58580ec200de4b63d5106
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 38bc85cb06f89ecbc673d8f159c716136d183570
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562433"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373226"
 ---
 # <a name="cell-background-color-on-ios"></a>IOS의 셀 배경색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별는 인스턴스의 기본 배경색을 설정 합니다 [`Cell`](xref:Xamarin.Forms.Cell) . 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `Cell.DefaultBackgroundColor` [`Color`](xref:Xamarin.Forms.Color) .
 

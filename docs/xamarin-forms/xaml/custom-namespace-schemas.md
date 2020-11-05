@@ -10,16 +10,16 @@ ms.date: 12/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c7e0d90358ec230436276070ea2792539c446e5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f950db0694b21239b742867d519e893d9a62384c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561484"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374071"
 ---
 # <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>의 XAML 사용자 지정 네임 스페이스 스키마 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
 라이브러리에 대 한 XAML 네임 스페이스를 선언 하 고 CLR (공용 언어 런타임) 네임 스페이스 이름과 어셈블리 이름을 지정 하는 네임 스페이스 선언을 사용 하 여 라이브러리의 형식을 XAML에서 참조할 수 있습니다.
 

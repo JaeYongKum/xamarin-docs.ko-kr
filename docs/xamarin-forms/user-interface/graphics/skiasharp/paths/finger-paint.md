@@ -10,16 +10,16 @@ ms.date: 04/05/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 98722d29a674e4d69f31a670a541eaabb550898e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2ff6b838ec7a3b1231e350dcb308e648a297fc0c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555647"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373771"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 그리기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _손가락을 사용 하 여 캔버스에 그립니다._
 

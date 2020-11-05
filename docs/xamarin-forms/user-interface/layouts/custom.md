@@ -10,16 +10,16 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a7aa9ec588879eb4f59e42cf9848d6e3c560625
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563850"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373798"
 ---
 # <a name="create-a-custom-layout-in-no-locxamarinforms"></a>에서 사용자 지정 레이아웃 만들기 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms 는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이아웃의 5 가지 레이아웃 클래스를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 하는 경우도 있습니다 Xamarin.Forms . 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 이후 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
 
@@ -29,7 +29,7 @@ _Xamarin.Forms 는 StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 레이�
 
 Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무효화 주기를 충분히 이해 해야 합니다. 이러한 주기는 이제 설명 되어 있습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 레이아웃은 페이지를 사용 하 여 시각적 트리 위쪽에서 시작 하 고 시각적 트리의 모든 분기를 진행 하 여 페이지의 모든 시각적 요소를 포함 합니다. 다른 요소에 대 한 부모인 요소는 자신을 기준으로 자식 항목의 크기를 조정 하 고 위치를 지정 해야 합니다.
 
@@ -50,7 +50,7 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
 또한 또는에서 파생 되는 모든 클래스 [`Layout`](xref:Xamarin.Forms.Layout) 는 [`Layout<View>`](xref:Xamarin.Forms.Layout`1) 메서드를 재정의 해야 합니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) .이 경우 레이아웃 클래스는 [ `Measure` ] (f:를 호출 하 여 필요한 크기를 결정 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))의 하위 메서드
 
 > [!NOTE]
-> 요소는 요소의 부모 내에서 요소에 사용할 수 있는 공간을 나타내는 *제약 조건을*기반으로 크기를 결정 합니다. []에 전달 된 제약 조건 `Measure` 입니다. (f: Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags)) 및 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 메서드는 0에서 사이를 사용할 수 있습니다 `Double.PositiveInfinity` . 요소는 해당 *constrained*[] (f:)에 대 한 호출을 받을 때 제한 되거나 *완전히 제한*됩니다. `Measure` Xamarin.Forms VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 사용 합니다 .이 메서드는 요소가 특정 크기로 제한 됩니다. 요소는 하나 이상의 인수를 사용 하 여 해당 메서드에 대 한 호출을 받을 때 *제한*되지 않거나 *부분적으로 제한*됩니다 `Measure` `Double.PositiveInfinity` . 무한 제약 조건은 자동 크기 조정를 나타내는 것으로 간주할 수 있습니다.
+> 요소는 요소의 부모 내에서 요소에 사용할 수 있는 공간을 나타내는 *제약 조건을* 기반으로 크기를 결정 합니다. []에 전달 된 제약 조건 `Measure` 입니다. (f: Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags)) 및 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 메서드는 0에서 사이를 사용할 수 있습니다 `Double.PositiveInfinity` . 요소는 해당 *constrained* [] (f:)에 대 한 호출을 받을 때 제한 되거나 *완전히 제한* 됩니다. `Measure` Xamarin.Forms VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 사용 합니다 .이 메서드는 요소가 특정 크기로 제한 됩니다. 요소는 하나 이상의 인수를 사용 하 여 해당 메서드에 대 한 호출을 받을 때 *제한* 되지 않거나 *부분적으로 제한* 됩니다 `Measure` `Double.PositiveInfinity` . 무한 제약 조건은 자동 크기 조정를 나타내는 것으로 간주할 수 있습니다.
 
 ## <a name="invalidation"></a>무효화
 
@@ -73,15 +73,15 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
 사용자 지정 레이아웃을 만드는 프로세스는 다음과 같습니다.
 
 1. `Layout<View>` 클래스에서 파생되는 클래스를 만듭니다. 자세한 내용은 [Create a WrapLayout](#create-a-wraplayout)을 참조 하세요.
-1. [*선택 사항*] Layout 클래스에 설정 해야 하는 매개 변수에 대해 바인딩 가능한 속성에 의해 지원 되는 속성을 추가 합니다. 자세한 내용은 [바인딩 가능한 속성에 의해 지원 되는 속성 추가](#add-properties-backed-by-bindable-properties)를 참조 하세요.
+1. [ *선택 사항* ] Layout 클래스에 설정 해야 하는 매개 변수에 대해 바인딩 가능한 속성에 의해 지원 되는 속성을 추가 합니다. 자세한 내용은 [바인딩 가능한 속성에 의해 지원 되는 속성 추가](#add-properties-backed-by-bindable-properties)를 참조 하세요.
 1. 메서드를 재정의 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 하 여 [ `Measure` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 반환 하 고 레이아웃에 대해 요청 된 크기를 반환 합니다. 자세한 내용은 [OnMeasure 메서드 재정의](#override-the-onmeasure-method)를 참조 하세요.
 1. 메서드를 재정의 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 하 여 [ `Layout` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 모든 자식에 대 한 메서드를 설정 합니다. [ `Layout` ] (F:)를 호출 하지 못했습니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 경우 레이아웃의 각 자식에 대해 자식이 올바른 크기나 위치를 수신 하지 않기 때문에 자식이 페이지에 표시 되지 않습니다. 자세한 내용은 [LayoutChildren 메서드 재정의](#override-the-layoutchildren-method)를 참조 하세요.
 
     > [!NOTE]
     > 및 재정의에서 자식을 열거 하는 경우 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 속성이로 설정 된 모든 자식을 건너뜁니다 `false` . 이렇게 하면 사용자 지정 레이아웃에서 보이지 않는 자식을 위한 공간이 확보 되지 않습니다.
 
-1. [*선택 사항*] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) 자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [Override The InvalidateLayout Method](#override-the-invalidatelayout-method)을 참조 하세요.
-1. [*선택 사항*] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [Override The OnChildMeasureInvalidated Method](#override-the-onchildmeasureinvalidated-method)을 참조 하세요.
+1. [ *선택 사항* ] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) 자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [Override The InvalidateLayout Method](#override-the-invalidatelayout-method)을 참조 하세요.
+1. [ *선택 사항* ] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [Override The OnChildMeasureInvalidated Method](#override-the-onchildmeasureinvalidated-method)을 참조 하세요.
 
 > [!NOTE]
 > [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))레이아웃의 크기가 자식 노드가 아닌 부모에 의해 관리 되는 경우 재정의는 호출 되지 않습니다. 그러나 제약 조건 중 하나 또는 둘 모두가 무한 이거나 layout 클래스에 기본값이 아닌 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 값 또는 속성 값이 있는 경우 재정의가 호출 됩니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 이유로 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의는 메서드를 호출 하는 동안 가져온 자식 크기를 사용할 수 없습니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) . 대신 `LayoutChildren` 는 [ `Measure` ] (f:)를 호출 해야 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 호출 하기 전에 레이아웃의 자식에 대 한 메서드를 호출 합니다 `Layout` Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . 사각형) 메서드. 또는 재정의에서 얻은 자식의 크기를 `OnMeasure` 캐시 하 여 나중에 재정의에 대 한 호출을 방지할 수 있습니다 `Measure` `LayoutChildren` . 하지만 레이아웃 클래스는 크기를 다시 가져와야 하는 경우에도 알고 있어야 합니다. 자세한 내용은 [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
@@ -92,7 +92,7 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
 
 이 샘플 응용 프로그램에서는 `WrapLayout` 페이지 전체에서 자식을 가로로 정렬 한 다음 후속 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 클래스를 보여 줍니다.
 
-`WrapLayout`클래스는 자식의 최대 크기를 기준으로 *셀 크기*라고 하는 각 자식에 대해 동일한 공간을 할당 합니다. 셀 크기 보다 작은 자식은 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 속성 값에 따라 셀 내에 배치 될 수 있습니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) .
+`WrapLayout`클래스는 자식의 최대 크기를 기준으로 *셀 크기* 라고 하는 각 자식에 대해 동일한 공간을 할당 합니다. 셀 크기 보다 작은 자식은 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 속성 값에 따라 셀 내에 배치 될 수 있습니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) .
 
 `WrapLayout`클래스 정의는 다음 코드 예제에 나와 있습니다.
 
@@ -339,7 +339,7 @@ protected override void OnChildMeasureInvalidated()
 </ContentPage>
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 public class ImageWrapLayoutPageCS : ContentPage
@@ -415,6 +415,6 @@ async Task<ImageList> GetImageListAsync()
 - [WrapLayout (샘플)](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [사용자 지정 레이아웃](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [에서 사용자 지정 레이아웃 만들기 Xamarin.Forms (비디오)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [레이아웃\<T>](xref:Xamarin.Forms.Layout`1)
+- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [레이아웃](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

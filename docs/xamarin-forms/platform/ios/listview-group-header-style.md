@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b8be4610a327fb9902d62efb061406bff16de484
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8a856dd74bb319436dbe1c8506d34dfcdb268834
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557480"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374175"
 ---
 # <a name="listview-group-header-style-on-ios"></a>IOS의 ListView 그룹 머리글 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별 [`ListView`](xref:Xamarin.Forms.ListView) 는 스크롤 하는 동안 머리글 셀이 부동 되는지 여부를 제어 합니다. `ListView.GroupHeaderStyle`바인딩 가능한 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 `GroupHeaderStyle` .
 

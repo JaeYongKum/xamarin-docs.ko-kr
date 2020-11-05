@@ -1,6 +1,6 @@
 ---
-title: ':::no-loc(Xamarin.Forms)::: 전자책을 사용한 엔터프라이즈 애플리케이션 패턴'
-description: '이 전자책는 조정 가능 하 고, 유지 관리 가능 하 고, 테스트 가능한 :::no-loc(Xamarin.Forms)::: 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침'
+title: Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
+description: 이 전자책는 조정 가능 하 고, 유지 관리 가능 하 고, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
@@ -8,20 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 no-loc:
-- ':::no-loc(Xamarin.Forms):::'
-- ':::no-loc(Xamarin.Essentials):::'
-ms.openlocfilehash: 549fe496cdb1d68d091d5fb3ed247ccef5a111a8
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1b8d33ba98dfeda8db23e516a989ebbfe1db9a66
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996164"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373005"
 ---
-# <a name="enterprise-application-patterns-using-no-locxamarinforms-ebook"></a>:::no-loc(Xamarin.Forms)::: 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
+# <a name="enterprise-application-patterns-using-no-locxamarinforms-ebook"></a>Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
 
-_조정 가능 하 고, 유지 관리 가능 하며, 테스트 가능한 :::no-loc(Xamarin.Forms)::: 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침_
+_조정 가능 하 고, 유지 관리 가능 하며, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침_
 
 ![::: No loc (Xamarin.ios)::: 전자책를 사용 하는 엔터프라이즈 응용 프로그램 패턴](images/cover-sml.png)
+
+> [!NOTE]
+> 이 전자책는 2017의 스프링에서 게시 되었으며 그 이후에는 업데이트 되지 않았습니다. 책에는 상당한 가치가 있지만 자료 중 일부는 오래 된 것입니다.
 
 이 전자책는 느슨한 결합을 유지 하면서 MVVM (모델 뷰-ViewModel) 패턴, 종속성 주입, 탐색, 유효성 검사 및 구성 관리를 구현 하는 방법에 대 한 지침을 제공 합니다. 또한 IdentityServer를 사용 하 여 인증 및 권한 부여를 수행 하 고, 컨테이너 화 된 마이크로 서비스에서 데이터에 액세스 하 고, 단위 테스트를 수행 하는 방법도 제공 됩니다.
 
@@ -45,11 +48,11 @@ MVVM (모델-뷰-ViewModel) 패턴은 응용 프로그램의 비즈니스 및 �
 
 ## <a name="communicating-between-loosely-coupled-components"></a>[느슨하게 결합된 구성 요소 간 통신](communicating-between-loosely-coupled-components.md)
 
-:::no-loc(Xamarin.Forms)::: [`MessagingCenter`](xref::::no-loc(Xamarin.Forms):::.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
+Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
 
 ## <a name="navigation"></a>[탐색](navigation.md)
 
-:::no-loc(Xamarin.Forms):::에는 내부 논리 기반 상태 변경으로 인해 일반적으로 사용자가 UI와 상호 작용 하거나 앱 자체에서 발생 하는 페이지 탐색에 대 한 지원이 포함 되어 있습니다. 그러나 MVVM 패턴을 사용 하는 앱에서 탐색을 구현 하는 것은 복잡할 수 있습니다.
+Xamarin.Forms 에는 내부 논리 기반 상태 변경으로 인해 일반적으로 사용자가 UI와 상호 작용 하거나 앱 자체에서 발생 하는 페이지 탐색에 대 한 지원이 포함 되어 있습니다. 그러나 MVVM 패턴을 사용 하는 앱에서 탐색을 구현 하는 것은 복잡할 수 있습니다.
 
 이 장에서는 `NavigationService` 모델 보기에서 모델을 처음 탐색할 때 사용 되는 클래스를 제공 합니다. 뷰 모델 클래스에 탐색 논리를 배치 하면 자동화 된 테스트를 통해 논리를 수행할 수 있습니다. 또한 뷰 모델은 특정 비즈니스 규칙이 적용 되도록 탐색을 제어 하는 논리를 구현할 수 있습니다.
 
@@ -69,7 +72,7 @@ MVVM (모델-뷰-ViewModel) 패턴의 컨텍스트에서는 사용자가 수정�
 
 ## <a name="authentication-and-authorization"></a>[인증 및 권한 부여](authentication-and-authorization.md)
 
-:::no-loc(Xamarin.Forms):::ASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. 여기서는 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
+Xamarin.FormsASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. 여기서는 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
 
 ## <a name="accessing-remote-data"></a>[원격 데이터에 액세스](accessing-remote-data.md)
 

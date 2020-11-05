@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d4a8690e7361d58a07f4fbfa7aac8aac839c2ea3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: af3954df9db94a56e1097b2de0451d6486916fa2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564019"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374526"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Android의 페이지 수명 주기 이벤트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼 전용은 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) AppCompat을 사용 하는 응용 프로그램에 대해 각각 응용 프로그램 일시 중지 및 다시 시작에서 및 페이지 이벤트를 사용 하지 않도록 설정 하는 데 사용 됩니다. 또한 소프트 키보드의 운영 모드가로 설정 된 경우 일시 중지 시 소프트 키보드가 표시 되는지 여부를 제어 하는 기능을 포함 합니다 [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) .
 
@@ -58,7 +58,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 결과적으로 응용 프로그램을 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) 일시 중지 하 고 다시 시작 하는 동안 및 페이지 이벤트가 발생 하지 않으며 응용 프로그램이 일시 중지 될 때 소프트 키보드가 표시 되 면 응용 프로그램이 다시 시작 될 때에도 표시 됩니다.
 
-[![수명 주기 이벤트 플랫폼별](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 플랫폼별")
+[![수명 주기 이벤트 플랫폼별](page-lifecycle-events-images/keyboard-on-resume.png)](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

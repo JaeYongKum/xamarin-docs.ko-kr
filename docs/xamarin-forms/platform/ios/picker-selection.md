@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e8c5696235e0258ab4e300a821c1ef804e6bd50
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5b7315fce6a51c570c4486c54fdfc81932a4b8f8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556687"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372689"
 ---
 # <a name="picker-item-selection-on-ios"></a>IOS에서 선택 항목 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 특정 컨트롤은에서 항목 선택을 수행 하는 경우 [`Picker`](xref:Xamarin.Forms.Picker) 사용자가 컨트롤에서 항목을 검색할 때 또는 **완료** 단추를 누른 경우에만 항목 선택이 발생 하도록 지정할 수 있도록 합니다. `Picker.UpdateMode`연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 `UpdateMode` .
 
@@ -66,7 +66,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 그러면 지정 된가에 `UpdateMode` 적용 되어 [`Picker`](xref:Xamarin.Forms.Picker) 항목 선택이 발생 하는 시기를 제어 합니다.
 
-[![UpdateMode 플랫폼 특정 선택](picker-selection-images/picker-updatemode.png)](picker-selection-images/picker-updatemode-large.png#lightbox "UpdateMode 플랫폼 특정 선택")
+[![UpdateMode 플랫폼 특정 선택](picker-selection-images/picker-updatemode.png)](picker-selection-images/picker-updatemode-large.png#lightbox "선택기 UpdateMode Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

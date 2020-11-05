@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 4fe58dbc02da47d5791afbbfe0132fd21e774b63
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b9bcbd941c1f2d0a1e0e89d5fe34f09c7b5a0dc
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939791"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373772"
 ---
 # <a name="photokit-in-xamarinios"></a>Xamarin.ios의 사진 키트
 
-[![다운로드 샘플 ](~/media/shared/download.png) 코드 다운로드 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp/)
+[![다운로드 샘플 ](~/media/shared/download.png) 코드 다운로드 샘플 다운로드](/samples/xamarin/ios-samples/ios11-samplephotoapp/)
 
 사진 키트는 응용 프로그램이 시스템 이미지 라이브러리를 쿼리하고 해당 내용을 보고 수정할 수 있는 사용자 지정 사용자 인터페이스를 만들 수 있도록 하는 프레임 워크입니다. 여기에는 이미지 및 비디오 자산을 나타내는 여러 클래스 뿐만 아니라 앨범 및 폴더와 같은 자산 컬렉션도 포함 됩니다.
 

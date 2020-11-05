@@ -10,16 +10,16 @@ ms.date: 02/21/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53930f6b6b83ea855db9538f19e88482a4d1a82f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7f64dcd0bfcd68f7e5145ce8191dcd4a580fb2a6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557454"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372511"
 ---
 # <a name="listview-row-animations-on-ios"></a>IOS의 ListView 행 애니메이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 특정 항목 컬렉션을 업데이트 하는 동안 행 애니메이션을 사용 하지 않도록 설정할지 여부를 제어 [`ListView`](xref:Xamarin.Forms.ListView) 합니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `ListView.RowAnimationsEnabled` `false` .
 

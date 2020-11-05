@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5bea8b58d8b80ced97856fc7c981afdd5c2102a7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1baf5d71cc25a1f84ff683e9d0072f34715c0da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562407"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373239"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>IOS에서 동시 이동 제스처 인식
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 가 [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰 내의 뷰에 연결 되 면 모든 팬 제스처가에서 캡처되고 `PanGestureRecognizer` 스크롤 뷰로 전달 되지 않습니다. 따라서 스크롤 뷰가 더 이상 스크롤되지 않습니다.
 

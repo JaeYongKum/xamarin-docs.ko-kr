@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c24c8eb2ea4801037621cdc82f49073c89115817
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562888"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374371"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C로 사용자 인증
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다._
 
@@ -70,9 +70,9 @@ Microsoft 인증 라이브러리에서는 응용 프로그램에 대 한 **리�
 
 ![Azure 응용 프로그램 속성 보기의 사용자 지정 리디렉션 URI](azure-ad-b2c-images/azure-redirect-uri.png)
 
-이 URL은 Android **ApplicationManifest.xml** 및 iOS **info.plist**모두에서 나중에 사용 됩니다.
+이 URL은 Android **ApplicationManifest.xml** 및 iOS **info.plist** 모두에서 나중에 사용 됩니다.
 
-샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `clientId` 필드를 **응용 프로그램 ID**로 설정 합니다. 다음 코드는 응용 프로그램 ID가 인 경우이 값을 설정 하는 방법을 보여 줍니다 `1234abcd` .
+샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `clientId` 필드를 **응용 프로그램 ID** 로 설정 합니다. 다음 코드는 응용 프로그램 ID가 인 경우이 값을 설정 하는 방법을 보여 줍니다 `1234abcd` .
 
 ```csharp
 public static class Constants
@@ -110,7 +110,7 @@ public static class Constants
 
 MSAL (Microsoft 인증 라이브러리) NuGet 패키지를 솔루션의 공유, .NET Standard 프로젝트 및 플랫폼 프로젝트에 추가 해야 합니다 Xamarin.Forms . MSAL에는 `PublicClientApplicationBuilder` 인터페이스를 준수 하는 개체를 생성 하는 클래스가 포함 되어 있습니다 `IPublicClientApplication` . MSAL `With` 은 절을 활용 하 여 생성자와 인증 메서드에 추가 매개 변수를 제공 합니다.
 
-샘플 프로젝트에서 **app.xaml** 에 대 한 코드는 및 라는 정적 속성을 정의 `AuthenticationClient` `UIParent` 하 고 `AuthenticationClient` 생성자에서 개체를 인스턴스화합니다. `WithIosKeychainSecurityGroup`절은 iOS 응용 프로그램에 대 한 보안 그룹 이름을 제공 합니다. `WithB2CAuthority`절은 사용자를 인증 하는 데 사용 되는 기본 **인증 기관**또는 정책을 제공 합니다. `WithRedirectUri`절은 여러 uri를 지정 하는 경우 사용할 URI를 리디렉션하는 Azure Notification Hubs 인스턴스에 지시 합니다. 다음 예제에서는를 인스턴스화하는 방법을 보여 줍니다 `PublicClientApplication` .
+샘플 프로젝트에서 **app.xaml** 에 대 한 코드는 및 라는 정적 속성을 정의 `AuthenticationClient` `UIParent` 하 고 `AuthenticationClient` 생성자에서 개체를 인스턴스화합니다. `WithIosKeychainSecurityGroup`절은 iOS 응용 프로그램에 대 한 보안 그룹 이름을 제공 합니다. `WithB2CAuthority`절은 사용자를 인증 하는 데 사용 되는 기본 **인증 기관** 또는 정책을 제공 합니다. `WithRedirectUri`절은 여러 uri를 지정 하는 경우 사용할 URI를 리디렉션하는 Azure Notification Hubs 인스턴스에 지시 합니다. 다음 예제에서는를 인스턴스화하는 방법을 보여 줍니다 `PublicClientApplication` .
 
 ```csharp
 public partial class App : Application
@@ -169,7 +169,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-`OnLoginButtonClicked`로그인 단추를 클릭할 때 발생 하는 이벤트 처리기는를 호출 `AcquireTokenAsync` 합니다. MSAL 라이브러리가 자동으로 모바일 장치 브라우저를 열고 로그인 페이지로 이동 합니다. **권한**이라는 로그인 URL은 **Constants.cs** 파일에 정의 된 테 넌 트 이름과 정책의 조합입니다. 사용자가 암호 찾기 옵션을 선택 하면 예외를 사용 하 여 앱에 반환 되며 암호 찾기 환경을 시작 합니다. 다음 예에서는 인증 프로세스를 보여 줍니다.
+`OnLoginButtonClicked`로그인 단추를 클릭할 때 발생 하는 이벤트 처리기는를 호출 `AcquireTokenAsync` 합니다. MSAL 라이브러리가 자동으로 모바일 장치 브라우저를 열고 로그인 페이지로 이동 합니다. **권한** 이라는 로그인 URL은 **Constants.cs** 파일에 정의 된 테 넌 트 이름과 정책의 조합입니다. 사용자가 암호 찾기 옵션을 선택 하면 예외를 사용 하 여 앱에 반환 되며 암호 찾기 환경을 시작 합니다. 다음 예에서는 인증 프로세스를 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-`OnForgotPassword`메서드는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword` 는 `AcquireTokenAsync` 특정 **권한을**제공할 수 있는의 다른 오버 로드를 사용 합니다. 다음 예제에서는 토큰을 획득할 때 사용자 지정 **권한을** 제공 하는 방법을 보여 줍니다.
+`OnForgotPassword`메서드는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword` 는 `AcquireTokenAsync` 특정 **권한을** 제공할 수 있는의 다른 오버 로드를 사용 합니다. 다음 예제에서는 토큰을 획득할 때 사용자 지정 **권한을** 제공 하는 방법을 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -256,11 +256,11 @@ public partial class LogoutPage : ContentPage
 
 ### <a name="ios"></a>iOS
 
-IOS에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 구성표는 **info.plist**에 등록 되어 있어야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 스크린샷은 **info.plist**의 사용자 지정 URL 스키마를 보여 줍니다.
+IOS에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 구성표는 **info.plist** 에 등록 되어 있어야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 스크린샷은 **info.plist** 의 사용자 지정 URL 스키마를 보여 줍니다.
 
 !["IOS의 사용자 지정 URL 체계 등록"](azure-ad-b2c-images/customurl-ios.png)
 
-MSAL에는 다음 스크린샷에 표시 된 것 처럼 **Entitilements**에 등록 된 iOS의 키 집합 자격도 필요 합니다.
+MSAL에는 다음 스크린샷에 표시 된 것 처럼 **Entitilements** 에 등록 된 iOS의 키 집합 자격도 필요 합니다.
 
 !["IOS에서 응용 프로그램 자격 설정"](azure-ad-b2c-images/entitlements-ios.png)
 
@@ -286,7 +286,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-Android에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **AndroidManifest.xml**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예에서는 **AndroidManifest.xml**의 사용자 지정 URL 스키마를 보여 줍니다.
+Android에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **AndroidManifest.xml** 에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예에서는 **AndroidManifest.xml** 의 사용자 지정 URL 스키마를 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -307,7 +307,7 @@ Android에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체�
 </manifest>
 ```
 
-`MainActivity`클래스를 수정 하 여 `UIParent` 호출 중에 응용 프로그램에 개체를 제공 해야 합니다 `OnCreate` . Azure Active Directory B2C 권한 부여 요청이 완료 되 면 **AndroidManifest.xml**에서 등록 된 URL 체계로 리디렉션됩니다. 등록 된 URI 체계를 사용 하면 Android에서 `OnActivityResult` URL을 사용 하 여 메서드를 시작 매개 변수로 호출 합니다. 여기서 메서드는 메서드를 통해 처리 `SetAuthenticationContinuationEventArgs` 됩니다.
+`MainActivity`클래스를 수정 하 여 `UIParent` 호출 중에 응용 프로그램에 개체를 제공 해야 합니다 `OnCreate` . Azure Active Directory B2C 권한 부여 요청이 완료 되 면 **AndroidManifest.xml** 에서 등록 된 URL 체계로 리디렉션됩니다. 등록 된 URI 체계를 사용 하면 Android에서 `OnActivityResult` URL을 사용 하 여 메서드를 시작 매개 변수로 호출 합니다. 여기서 메서드는 메서드를 통해 처리 `SetAuthenticationContinuationEventArgs` 됩니다.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity

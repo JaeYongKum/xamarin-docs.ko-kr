@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ea4fa88925925ba7c81f47c30875c3419603ab8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 56254d4a5d255f2db05ff82f224df4ddff04ab1f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555465"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373096"
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _다양 한 크기로 개체 크기를 조정 하기 위한 SkiaSharp 배율 변환 검색_
 
@@ -124,7 +124,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public void Scale (Single sx, Single sy, Single px, Single py)
 ```
 
-`px`및 `py` 매개 변수는 때때로 *크기 조정 중심* 이 라고도 하는 점을 정의 하지만 SkiaSharp 설명서에서 *피벗 점*이라고 합니다. 크기 조정의 영향을 받지 않는 캔버스의 왼쪽 위 모퉁이를 기준으로 하는 점입니다. 모든 크기 조정은 해당 중심을 기준으로 수행 됩니다.
+`px`및 `py` 매개 변수는 때때로 *크기 조정 중심* 이 라고도 하는 점을 정의 하지만 SkiaSharp 설명서에서 *피벗 점* 이라고 합니다. 크기 조정의 영향을 받지 않는 캔버스의 왼쪽 위 모퉁이를 기준으로 하는 점입니다. 모든 크기 조정은 해당 중심을 기준으로 수행 됩니다.
 
 [**중앙 크기 조정**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) 페이지에는이 기능이 어떻게 작동 하는지 표시 됩니다. `PaintSurface`처리기는 **기본 크기 조정** 프로그램과 유사 합니다 `margin` . 단, 텍스트를 가로로 가운데 맞춤 하기 위해 값을 계산 하는 것을 의미 합니다. 즉, 프로그램이 세로 모드에서 가장 잘 작동 합니다.
 

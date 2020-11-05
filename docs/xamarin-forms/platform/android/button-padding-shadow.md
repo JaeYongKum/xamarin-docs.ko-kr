@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa0bf466886309978743f4225b72520eb340fd1a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0548b706fc59021b63e0edfcf5c72eb00645f7a1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563811"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373447"
 ---
 # <a name="button-padding-and-shadows-on-android"></a>Android의 단추 패딩 및 그림자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼 특정 Xamarin.Forms 은 단추가 android 단추의 기본 패딩 및 그림자 값을 사용 하는지 여부를 제어 합니다. [`Button.UseDefaultPadding`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty)및 [`Button.UseDefaultShadow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `boolean` .
 

@@ -10,16 +10,16 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 14d26c1360c1c1b7997598ef1263e3dd62e3c013
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 487ff8114a36212c1e7d413cc9bd1f4f2c016faa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561783"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374435"
 ---
 # <a name="search-data-with-azure-search-and-no-locxamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search는 업로드 된 데이터에 대 한 인덱싱 및 쿼리 기능을 제공 하는 클라우드 서비스입니다. 이렇게 하면 일반적으로 응용 프로그램에서 검색 기능을 구현 하는 것과 관련 된 인프라 요구 사항 및 검색 알고리즘이 제거 됩니다. 이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms ._
 
@@ -44,7 +44,7 @@ Azure Search는 검색 입력을 기준으로 제안 검색도 지원 합니다.
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 Azure Search를 응용 프로그램에 통합 하는 프로세스는 Xamarin.Forms 다음과 같습니다.
 

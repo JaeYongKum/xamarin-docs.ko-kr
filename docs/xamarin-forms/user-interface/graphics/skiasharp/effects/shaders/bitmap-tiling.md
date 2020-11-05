@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 92bcdd2c86387f229b9acf066456985c4a7ad514
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563135"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373668"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 비트맵 바둑판식 배열
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/catclock)
 
 위의 두 문서에서 살펴본 것 처럼 [`SKShader`](xref:SkiaSharp.SKShader) 클래스는 선형 또는 원형 그라데이션을 만들 수 있습니다. 이 문서에서는 `SKShader` 비트맵을 사용 하 여 영역을 바둑판식으로 배열 하는 개체에 대해 중점적으로 설명 합니다. 비트맵은 원래 방향이 나 가로 및 세로로 대칭 이동 하 여 가로 및 세로로 반복할 수 있습니다. 대칭 이동은 타일 간 불연속성을 방지 합니다.
 
@@ -369,7 +369,7 @@ SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 
 [**타일 맞춤**](#tile-alignment)섹션에서 셰이더에 적용 되는 변환 변환의 예를 확인할 수 있습니다.
 
-독립 실행형 [**Cat Clock**](/samples/xamarin/xamarin-forms-samples/catclock) 샘플 ( **SkiaSharpFormsDemos**의 일부가 아님)은이 240 픽셀 사각형 비트맵을 기반으로 하는 비트맵 바둑판식 배열을 사용 하 여 목재-그레인 배경을 시뮬레이션 합니다.
+독립 실행형 [**Cat Clock**](/samples/xamarin/xamarin-forms-samples/catclock) 샘플 ( **SkiaSharpFormsDemos** 의 일부가 아님)은이 240 픽셀 사각형 비트맵을 기반으로 하는 비트맵 바둑판식 배열을 사용 하 여 목재-그레인 배경을 시뮬레이션 합니다.
 
 ![목재 그레인](bitmap-tiling-images/WoodGrain.png "목재 그레인")
 
@@ -655,7 +655,7 @@ public class ChainLinkFencePage : ContentPage
 
 셰이더가 45 각도로 회전 되어 실제 체인 링크 fence와 같이 표시 됩니다.
 
-[![체인 링크 Fence](bitmap-tiling-images/ChainLinkFence.png "체인 링크 Fence")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![체인 링크 Fence](bitmap-tiling-images/ChainLinkFence.png "Chain-Link 울타리")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
 ## <a name="animating-bitmap-tiles"></a>비트맵 타일에 애니메이션 적용
 

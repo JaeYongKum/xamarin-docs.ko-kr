@@ -10,16 +10,16 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71df780c648bcaa5a2ca4db388b52ac77a64d158
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 32997a1453ca52abdfa0cac60e7637ae3367eeb2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560548"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374201"
 ---
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 뷰의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다._
 
@@ -29,7 +29,7 @@ _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만�
 
 다음 스크린샷에는에 추가 된 플랫폼별 뷰가 설명 되어 Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) 있습니다.
 
-[![플랫폼별 뷰를 포함 하는 StackLayout](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "플랫폼별 뷰를 포함 하는 StackLayout")
+[![Platform-Specific 뷰를 포함 하는 StackLayout](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "Platform-Specific 뷰를 포함 하는 StackLayout")
 
 플랫폼 특정 뷰를 레이아웃에 추가 하는 기능은 Xamarin.Forms 각 플랫폼에서 두 가지 확장 메서드를 사용 하 여 사용할 수 있습니다.
 
@@ -42,7 +42,7 @@ _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만�
 - **Android** – Xamarin.Forms.Platform.Android
 - **UWP(유니버설 Windows 플랫폼)** – Xamarin.Forms.Platform.UWP
 
-## <a name="adding-platform-specific-views-on-each-platform"></a>플랫폼 특정 뷰를 각 플랫폼에 추가
+## <a name="adding-platform-specific-views-on-each-platform"></a>각 플랫폼에 Platform-Specific 보기 추가
 
 다음 섹션에서는 플랫폼 특정 뷰를 Xamarin.Forms 각 플랫폼의 레이아웃에 추가 하는 방법을 보여 줍니다.
 

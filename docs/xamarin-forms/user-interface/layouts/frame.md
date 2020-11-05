@@ -10,16 +10,16 @@ ms.date: 08/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8a14390afc04c1a0b2ccb5199350b69a9645a794
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ba5fd2e8488f1f28f6bdc02b85c8e41fa212be32
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563551"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373746"
 ---
 # <a name="no-locxamarinforms-frame"></a>Xamarin.Forms 프레임씩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) 클래스는 색, 그림자 및 기타 옵션을 사용 하 여 구성할 수 있는 테두리를 사용 하 여 뷰를 래핑하는 데 사용 되는 레이아웃입니다. 프레임은 일반적으로 컨트롤 주위에 테두리를 만드는 데 사용 되지만 보다 복잡 한 UI를 만드는 데 사용할 수 있습니다. 자세한 내용은 [고급 프레임 사용](#advanced-frame-usage)을 참조 하세요.
 

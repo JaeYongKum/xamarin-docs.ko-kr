@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 395536752fb0d581408d0b8f91ef623d926aeeb4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c08ef265cb3cf08f9d7015503f8038d9180a2c18
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559547"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373148"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
 _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 System.windows.controls.itemscontrol.itemssource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법과 사용자가 항목 선택 항목에 응답 하는 방법을 설명 합니다._
 
@@ -50,7 +50,7 @@ Xamarin.Forms 2.3.4는 [`Picker`](xref:Xamarin.Forms.Picker) [`ItemsSource`](xre
 > [!NOTE]
 > `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var monkeyList = new List<string>();
@@ -79,7 +79,7 @@ picker.ItemsSource = monkeyList;
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var monkeyNameLabel = new Label();
@@ -117,7 +117,7 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         ItemDisplayBinding="{Binding Name}" />
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -155,7 +155,7 @@ public class Monkey
 <Label Text="{Binding SelectedMonkey.Details}" ... />
 ```
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

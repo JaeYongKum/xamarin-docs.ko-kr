@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9ed0c2b9b0916349b11f64e83c57f2737c302e92
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c522b1e9c191a4f030355f0cfcca1240d64e09df
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557467"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373707"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>IOS의 모달 페이지 표시 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별는 모달 페이지의 표시 스타일을 설정 하는 데 사용 되며, 투명 한 배경을 포함 하는 모달 페이지를 표시 하는 데에도 사용할 수 있습니다. `Page.ModalPresentationStyle`바인딩 가능한 속성을 열거형 값으로 설정 하 여 XAML에서 사용 됩니다 `UIModalPresentationStyle` .
 

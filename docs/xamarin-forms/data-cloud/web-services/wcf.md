@@ -10,16 +10,16 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 596fab91a1f64e0fb6c5483e354c2ef15fd24346
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8d6b489ff31333e87c28796c7de49bf0e59bff9d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557922"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373577"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프레임 워크입니다. 이를 통해 개발자는 안전 하 고 신뢰할 수 있으며 트랜잭션 된 분산 응용 프로그램을 빌드할 수 있습니다. 이 문서에서는 응용 프로그램에서 WCF SOAP (Simple Object Access Protocol) 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
 
@@ -63,11 +63,11 @@ WCF 서비스는 다음과 같은 작업을 제공 합니다.
 
 응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다. Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)를 참조 하세요.
 
-생성 된 프록시 클래스는 APM (비동기 프로그래밍 모델) 디자인 패턴을 사용 하는 웹 서비스를 사용 하는 메서드를 제공 합니다. 이 패턴에서 비동기 작업은 비동기 작업을 시작 하 고 종료 하는 *Beginoperationname* 및 *EndOperationName*라는 두 개의 메서드로 구현 됩니다.
+생성 된 프록시 클래스는 APM (비동기 프로그래밍 모델) 디자인 패턴을 사용 하는 웹 서비스를 사용 하는 메서드를 제공 합니다. 이 패턴에서 비동기 작업은 비동기 작업을 시작 하 고 종료 하는 *Beginoperationname* 및 *EndOperationName* 라는 두 개의 메서드로 구현 됩니다.
 
-*Beginoperationname* 메서드는 비동기 작업을 시작 하 고 인터페이스를 구현 하는 개체를 반환 합니다 `IAsyncResult` . *Beginoperationname*을 호출한 후에는 비동기 작업이 스레드 풀 스레드에서 수행 되는 동안 응용 프로그램에서 호출 스레드에 대 한 명령을 계속 실행할 수 있습니다.
+*Beginoperationname* 메서드는 비동기 작업을 시작 하 고 인터페이스를 구현 하는 개체를 반환 합니다 `IAsyncResult` . *Beginoperationname* 을 호출한 후에는 비동기 작업이 스레드 풀 스레드에서 수행 되는 동안 응용 프로그램에서 호출 스레드에 대 한 명령을 계속 실행할 수 있습니다.
 
-*Beginoperationname*을 호출할 때마다 응용 프로그램은 *EndOperationName* 를 호출 하 여 작업의 결과를 가져와야 합니다. *EndOperationName* 의 반환 값은 동기 웹 서비스 메서드에서 반환 되는 형식과 동일 합니다. 예를 들어, `EndGetTodoItems` 메서드는 인스턴스 컬렉션을 반환 합니다 `TodoItem` . *EndOperationName* 메서드는 `IAsyncResult` *beginoperationname* 메서드를 해당 하는 호출에서 반환 된 인스턴스로 설정 해야 하는 매개 변수도 포함 합니다.
+*Beginoperationname* 을 호출할 때마다 응용 프로그램은 *EndOperationName* 를 호출 하 여 작업의 결과를 가져와야 합니다. *EndOperationName* 의 반환 값은 동기 웹 서비스 메서드에서 반환 되는 형식과 동일 합니다. 예를 들어, `EndGetTodoItems` 메서드는 인스턴스 컬렉션을 반환 합니다 `TodoItem` . *EndOperationName* 메서드는 `IAsyncResult` *beginoperationname* 메서드를 해당 하는 호출에서 반환 된 인스턴스로 설정 해야 하는 매개 변수도 포함 합니다.
 
 TPL (작업 병렬 라이브러리)은 동일한 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다 `Task` . 이 캡슐화는 메서드의 여러 오버 로드에서 제공 됩니다 `TaskFactory.FromAsync` .
 
@@ -234,13 +234,13 @@ Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에
 
 기본적으로 IIS Express는에 대 한 요청에만 응답 `localhost` 합니다. 원격 장치 (예: Android 장치, iPhone 또는 시뮬레이터)는 로컬 WCF 서비스에 액세스할 수 없습니다. 로컬 네트워크에서 Windows 10 워크스테이션 IP 주소를 알고 있어야 합니다. 이 예제의 목적에 따라 워크스테이션에 IP 주소가 있다고 가정 합니다 `192.168.1.143` . 다음 단계는 원격 연결을 허용 하 고 물리적 또는 가상 장치에서 서비스에 연결 하도록 Windows 10 및 IIS Express를 구성 하는 방법을 설명 합니다.
 
-1. **Windows 방화벽에 예외를 추가**합니다. 서브넷의 응용 프로그램이 WCF 서비스와 통신 하는 데 사용할 수 있는 Windows 방화벽을 통해 포트를 열어야 합니다. 방화벽에서 포트 49393을 여는 인바운드 규칙을 만듭니다. 관리 명령 프롬프트에서 다음 명령을 실행 합니다.
+1. **Windows 방화벽에 예외를 추가** 합니다. 서브넷의 응용 프로그램이 WCF 서비스와 통신 하는 데 사용할 수 있는 Windows 방화벽을 통해 포트를 열어야 합니다. 방화벽에서 포트 49393을 여는 인바운드 규칙을 만듭니다. 관리 명령 프롬프트에서 다음 명령을 실행 합니다.
 
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
 
-1. **원격 연결을 허용 하도록 IIS Express를 구성**합니다. **[솔루션 디렉터리] \.vs\config\applicationhost.config**IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다. `site`이름을 가진 요소를 찾습니다 `TodoWCFService` . 다음 XML과 유사 하 게 표시 됩니다.
+1. **원격 연결을 허용 하도록 IIS Express를 구성** 합니다. **[솔루션 디렉터리] \.vs\config\applicationhost.config** IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다. `site`이름을 가진 요소를 찾습니다 `TodoWCFService` . 다음 XML과 유사 하 게 표시 됩니다.
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -280,9 +280,9 @@ Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에
 
     이러한 단계가 완료 되 면 TodoWCFService를 실행 하 고 서브넷의 다른 장치에서 연결할 수 있어야 합니다. 응용 프로그램을 실행 하 고를 방문 하 여 테스트할 수 있습니다 `http://localhost:49393/TodoService.svc` . 해당 URL을 방문할 때 **잘못 된 요청** 오류가 발생 하면 `bindings` IIS Express 구성에서 잘못 된 것일 수 있습니다 (요청이 IIS Express에 도달 하지만 거부 됨). 다른 오류가 발생 하는 경우 응용 프로그램이 실행 되 고 있지 않거나 방화벽이 잘못 구성 된 것일 수 있습니다.
 
-    IIS Express에서 서비스를 계속 실행 하 고 서비스를 제공할 수 있도록 하려면 **웹 > 디버거 > 프로젝트 속성**에서 **편집 하며 계속 하기** 옵션을 해제 합니다.
+    IIS Express에서 서비스를 계속 실행 하 고 서비스를 제공할 수 있도록 하려면 **웹 > 디버거 > 프로젝트 속성** 에서 **편집 하며 계속 하기** 옵션을 해제 합니다.
 
-1. **서비스에 액세스 하는 데 사용 하는 끝점 장치를 사용자 지정**합니다. 이 단계에서는 실제 또는 에뮬레이트된 장치에서 실행 되는 클라이언트 응용 프로그램을 구성 하 여 WCF 서비스에 액세스 합니다.
+1. **서비스에 액세스 하는 데 사용 하는 끝점 장치를 사용자 지정** 합니다. 이 단계에서는 실제 또는 에뮬레이트된 장치에서 실행 되는 클라이언트 응용 프로그램을 구성 하 여 WCF 서비스에 액세스 합니다.
 
     Android 에뮬레이터는 에뮬레이터에서 호스트 컴퓨터의 주소에 직접 액세스할 수 없도록 하는 내부 프록시를 활용 합니다 `localhost` . 대신 에뮬레이터의 주소는 `10.0.2.2` `localhost` 내부 프록시를 통해 호스트 컴퓨터에서로 라우팅됩니다. 이러한 프록시 요청은 `127.0.0.1` 요청 헤더에 호스트 이름으로 포함 됩니다. 따라서 위의 단계에서이 호스트 이름에 대 한 IIS Express 바인딩을 만들었습니다.
 

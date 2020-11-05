@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc0528e7696130a772e93be67526ea9d6b10373f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78609a6e91a2783d869bafbd88679cfc9be00795
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936528"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374162"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
+
+> [!NOTE]
+> 이 전자책는 2017의 스프링에서 게시 되었으며 그 이후에는 업데이트 되지 않았습니다. 책에는 상당한 가치가 있지만 자료 중 일부는 오래 된 것입니다.
 
 Xamarin.Forms일반적으로 개발자 환경에는 XAML에서 사용자 인터페이스를 만든 다음 사용자 인터페이스에서 작동 하는 코드 숨김이 추가 됩니다. 앱이 수정 되 고 크기와 범위가 증가 함에 따라 복잡 한 유지 관리 문제가 발생할 수 있습니다. 이러한 문제에는 ui 컨트롤과 비즈니스 논리를 긴밀 하 게 결합 하 여 UI를 수정 하는 비용과 이러한 코드를 단위 테스트 하는 어려움을 포함 합니다.
 
@@ -29,7 +32,7 @@ MVVM 패턴에는 모델, 뷰 및 뷰 모델의 세 가지 핵심 구성 요소�
 
 ![MVVM 패턴](mvvm-images/mvvm.png)
 
-**그림 2-1**: MVVM 패턴
+**그림 2-1** : MVVM 패턴
 
 각 구성 요소의 책임을 이해 하는 것 외에도 서로 상호 작용 하는 방식을 이해 하는 것도 중요 합니다. 높은 수준에서 뷰 모델은 뷰 모델을 "인식" 하 고 뷰 모델은 모델을 "인식" 하지만 모델은 뷰 모델을 인식 하지 않으며 뷰 모델은 뷰를 인식 하지 못합니다. 따라서 뷰 모델은 모델에서 뷰를 격리 하며 모델을 뷰와 독립적으로 발전 시킬 수 있습니다.
 
@@ -42,7 +45,7 @@ MVVM 패턴을 사용 하는 이점은 다음과 같습니다.
 
 MVVM를 효과적으로 사용 하는 핵심은 응용 프로그램 코드를 올바른 클래스로 요소를 구분 하는 방법과 클래스가 상호 작용 하는 방식을 이해 하는 것입니다. 다음 섹션에서는 MVVM 패턴의 각 클래스에 대 한 책임을 설명 합니다.
 
-### <a name="view"></a>View
+### <a name="view"></a>보기
 
 보기는 사용자가 화면에서 볼 수 있는 구조, 레이아웃 및 모양을 정의 하는 작업을 담당 합니다. 각 보기는 비즈니스 논리를 포함 하지 않는 제한 된 코드 숨김으로 XAML로 정의 하는 것이 가장 좋습니다. 그러나 경우에 따라 코드 숨김이 XAML에서 표현 하기 어려운 시각적 동작을 구현 하는 UI 논리 (예: 애니메이션)를 포함할 수 있습니다.
 
@@ -95,11 +98,11 @@ Xamarin.Forms응용 프로그램에서 뷰는 일반적으로 파생 된 [`Page`
 가장 간단한 방법은 뷰가 XAML에서 해당 뷰 모델을 선언적으로 인스턴스화하는 것입니다. 뷰가 생성 될 때 해당 뷰 모델 개체도 생성 됩니다. 이 방법은 다음 코드 예제에서 보여 줍니다.
 
 ```xaml
-<ContentPage ... xmlns:local="clr-namespace:eShop">  
-    <ContentPage.BindingContext>  
-        <local:LoginViewModel />  
-    </ContentPage.BindingContext>  
-    ...  
+<ContentPage ... xmlns:local="clr-namespace:eShop">  
+    <ContentPage.BindingContext>  
+        <local:LoginViewModel />  
+    </ContentPage.BindingContext>  
+    ...  
 </ContentPage>
 ```
 
@@ -112,10 +115,10 @@ Xamarin.Forms응용 프로그램에서 뷰는 일반적으로 파생 된 [`Page`
 뷰 모델은 해당 속성에 할당 되는 코드를 코드 파일에 포함할 수 있습니다 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . 이는 다음 코드 예제와 같이 뷰의 생성자에서 수행 되는 경우가 많습니다.
 
 ```csharp
-public LoginView()  
+public LoginView()  
 {  
-    InitializeComponent();  
-    BindingContext = new LoginViewModel(navigationService);  
+    InitializeComponent();  
+    BindingContext = new LoginViewModel(navigationService);  
 }
 ```
 
@@ -136,27 +139,27 @@ viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 `AutoWireViewModel`속성은 false로 초기화 되는 바인딩 가능한 속성 이며, 해당 값이 변경 되 면 `OnAutoWireViewModelChanged` 이벤트 처리기가 호출 됩니다. 이 메서드는 뷰에 대 한 뷰 모델을 확인 합니다. 다음 코드 예제에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
 ```csharp
-private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
+private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
 {  
-    var view = bindable as Element;  
-    if (view == null)  
-    {  
-        return;  
-    }  
+    var view = bindable as Element;  
+    if (view == null)  
+    {  
+        return;  
+    }  
 
-    var viewType = view.GetType();  
-    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
-    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
-    var viewModelName = string.Format(  
-        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
+    var viewType = view.GetType();  
+    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
+    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
+    var viewModelName = string.Format(  
+        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
 
-    var viewModelType = Type.GetType(viewModelName);  
-    if (viewModelType == null)  
-    {  
-        return;  
-    }  
-    var viewModel = _container.Resolve(viewModelType);  
-    view.BindingContext = viewModel;  
+    var viewModelType = Type.GetType(viewModelName);  
+    if (viewModelType == null)  
+    {  
+        return;  
+    }  
+    var viewModel = _container.Resolve(viewModelType);  
+    view.BindingContext = viewModel;  
 }
 ```
 
@@ -190,18 +193,18 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, obj
 EShopOnContainers 모바일 앱은 `ExtendedBindableObject` 다음 코드 예제와 같이 클래스를 사용 하 여 변경 알림을 제공 합니다.
 
 ```csharp
-public abstract class ExtendedBindableObject : BindableObject  
+public abstract class ExtendedBindableObject : BindableObject  
 {  
-    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
-    {  
-        var name = GetMemberInfo(property).Name;  
-        OnPropertyChanged(name);  
-    }  
+    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
+    {  
+        var name = GetMemberInfo(property).Name;  
+        OnPropertyChanged(name);  
+    }  
 
-    private MemberInfo GetMemberInfo(Expression expression)  
-    {  
-        ...  
-    }  
+    private MemberInfo GetMemberInfo(Expression expression)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -210,17 +213,17 @@ Xamarin.ios의 클래스는 [`BindableObject`](xref:Xamarin.Forms.BindableObject
 EShopOnContainers 모바일 앱의 각 뷰 모델 클래스는 클래스에서 파생 되며이 클래스는 `ViewModelBase` 클래스에서 파생 `ExtendedBindableObject` 됩니다. 따라서 각 뷰 모델 클래스는 클래스의 메서드를 사용 하 여 `RaisePropertyChanged` `ExtendedBindableObject` 속성 변경 알림을 제공 합니다. 다음 코드 예제에서는 eShopOnContainers mobile 앱에서 람다 식을 사용 하 여 속성 변경 알림을 호출 하는 방법을 보여 줍니다.
 
 ```csharp
-public bool IsLogin  
+public bool IsLogin  
 {  
-    get  
-    {  
-        return _isLogin;  
-    }  
-    set  
-    {  
-        _isLogin = value;  
-        RaisePropertyChanged(() => IsLogin);  
-    }  
+    get  
+    {  
+        return _isLogin;  
+    }  
+    set  
+    {  
+        _isLogin = value;  
+        RaisePropertyChanged(() => IsLogin);  
+    }  
 }
 ```
 
@@ -230,7 +233,7 @@ public bool IsLogin
 
 모바일 앱에서 작업은 일반적으로 단추 클릭과 같은 사용자 작업에 대 한 응답으로 호출 됩니다 .이 작업은 코드 숨김으로 이벤트 처리기를 만들어 구현할 수 있습니다. 그러나 MVVM 패턴에서 작업을 구현 하는 책임은 뷰 모델을 사용 하는 것 이며 코드 숨김으로 코드를 배치 하는 것은 피해 야 합니다.
 
-명령은 UI의 컨트롤에 바인딩할 수 있는 작업을 표시 하는 편리한 방법을 제공 합니다. 작업을 구현 하는 코드를 캡슐화 하 고 뷰의 시각적 표현에서 분리 된 상태로 유지 하는 데 도움을 줍니다. Xamarin.Forms에는 명령에 선언적으로 연결 될 수 있는 컨트롤이 포함 되어 있으며, 이러한 컨트롤은 사용자가 컨트롤과 상호 작용할 때 명령을 호출 합니다.
+명령은 UI의 컨트롤에 바인딩할 수 있는 작업을 표시 하는 편리한 방법을 제공 합니다. 작업을 구현 하는 코드를 캡슐화 하 고 뷰의 시각적 표현에서 분리 된 상태로 유지 하는 데 도움을 줍니다. Xamarin.Forms 에는 명령에 선언적으로 연결 될 수 있는 컨트롤이 포함 되어 있으며, 이러한 컨트롤은 사용자가 컨트롤과 상호 작용할 때 명령을 호출 합니다.
 
 동작을 통해 컨트롤을 명령에 선언적으로 연결할 수도 있습니다. 그러나 동작은 컨트롤에서 발생 한 이벤트 범위와 연결 된 작업을 호출 하는 데 사용할 수 있습니다. 따라서 동작은 더 많은 유연성과 제어를 제공 하는 동시에 명령 사용 컨트롤과 동일한 많은 시나리오를 처리 합니다. 또한 동작을 사용 하 여 명령 개체 또는 메서드를 명령과 상호 작용 하도록 특별히 설계 되지 않은 컨트롤과 연결할 수도 있습니다.
 
@@ -243,7 +246,7 @@ public bool IsLogin
 다음 코드에서는 [`Command`](xref:Xamarin.Forms.Command) 레지스터 명령을 나타내는 인스턴스가 `Register` 뷰 모델 메서드에 대리자를 지정 하 여 생성 되는 방법을 보여 줍니다.
 
 ```csharp
-public ICommand RegisterCommand => new Command(Register);
+public ICommand RegisterCommand => new Command(Register);
 ```
 
 명령은에 대 한 참조를 반환 하는 속성을 통해 뷰에 노출 됩니다 `ICommand` . 메서드는 `Execute` 개체에 대해 호출 될 때 [`Command`](xref:Xamarin.Forms.Command) 생성자에 지정 된 대리자를 통해 뷰 모델의 메서드에 대 한 호출을 전달 하기만 `Command` 합니다.
@@ -251,13 +254,13 @@ public ICommand RegisterCommand => new Command(Register);
 명령의 대리자를 지정 하는 `async` 경우 및 키워드를 사용 하 여 명령에 의해 비동기 메서드를 호출할 수 있습니다 `await` `Execute` . 이는 콜백이이 `Task` 고 대기 해야 함을 나타냅니다. 예를 들어 다음 코드는 [`Command`](xref:Xamarin.Forms.Command) 뷰 모델 메서드에 대리자를 지정 하 여 로그인 명령을 나타내는 인스턴스가 생성 되는 방법을 보여 줍니다 `SignInAsync` .
 
 ```csharp
-public ICommand SignInCommand => new Command(async () => await SignInAsync());
+public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
 `Execute` `CanExecute` 클래스를 사용 하 여 명령을 인스턴스화하여 매개 변수를 및 동작에 전달할 수 있습니다 [`Command<T>`](xref:Xamarin.Forms.Command) . 예를 들어 다음 코드에서는 `Command<T>` 메서드가 형식의 인수를 요구 함을 나타내는 데 사용 되는 방법을 보여 줍니다 `NavigateAsync` `string` .
 
 ```csharp
-public ICommand NavigateCommand => new Command<string>(NavigateAsync);
+public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
 [`Command`](xref:Xamarin.Forms.Command)및 [`Command<T>`](xref:Xamarin.Forms.Command) 클래스에서 `CanExecute` 각 생성자의 메서드에 대 한 대리자는 선택 사항입니다. 대리자가 지정 되지 않은 경우 `Command` 에 대해이 반환 됩니다 `true` `CanExecute` . 그러나 뷰 모델은 `CanExecute` `ChangeCanExecute` 개체에 대해 메서드를 호출 하 여 명령의 상태 변경을 나타낼 수 있습니다 `Command` . 이로 인해 `CanExecuteChanged` 이벤트가 발생 합니다. 명령에 바인딩된 UI의 모든 컨트롤은 해당 사용 상태를 업데이트 하 여 데이터 바인딩된 명령의 가용성을 반영 합니다.
@@ -267,11 +270,11 @@ public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 다음 코드 예제에서는 [`Grid`](xref:Xamarin.Forms.Grid) `LoginView` `RegisterCommand` `LoginViewModel` 인스턴스를 사용 하 여의가 클래스의에 바인딩하는 방법을 보여 줍니다 [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) .
 
 ```xaml
-<Grid Grid.Column="1" HorizontalOptions="Center">  
-    <Label Text="REGISTER" TextColor="Gray"/>  
-    <Grid.GestureRecognizers>  
-        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
-    </Grid.GestureRecognizers>  
+<Grid Grid.Column="1" HorizontalOptions="Center">  
+    <Label Text="REGISTER" TextColor="Gray"/>  
+    <Grid.GestureRecognizers>  
+        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
+    </Grid.GestureRecognizers>  
 </Grid>
 ```
 
@@ -281,7 +284,7 @@ public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 
 동작을 사용 하면 기능을 서브 클래스 하지 않고도 UI 컨트롤에 추가할 수 있습니다. 대신 기능은 동작 클래스에서 구현되고 컨트롤 자체의 일부였던 것처럼 컨트롤에 연결됩니다. 동작을 사용 하면 컨트롤의 API와 직접 상호 작용 하 고, 컨트롤에 간단 하 게 연결 하 고, 둘 이상의 뷰나 앱에서 다시 사용 하기 위해 패키지할 수 있으므로 일반적으로 코드 숨김으로 작성 해야 하는 코드를 구현할 수 있습니다. MVVM 컨텍스트에서 동작은 컨트롤을 명령에 연결 하는 데 유용한 방법입니다.
 
-연결 된 속성을 통해 컨트롤에 연결 된 동작을 *연결 된 동작*이라고 합니다. 그러면 동작에서 해당 컨트롤이 연결 된 요소의 노출 된 API를 사용 하 여 뷰의 시각적 트리에서 해당 컨트롤이 나 기타 컨트롤에 기능을 추가할 수 있습니다. EShopOnContainers 모바일 앱은 연결 된 `LineColorBehavior` 동작인 클래스를 포함 합니다. 이 동작에 대 한 자세한 내용은 [유효성 검사 오류 표시](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors)를 참조 하세요.
+연결 된 속성을 통해 컨트롤에 연결 된 동작을 *연결 된 동작* 이라고 합니다. 그러면 동작에서 해당 컨트롤이 연결 된 요소의 노출 된 API를 사용 하 여 뷰의 시각적 트리에서 해당 컨트롤이 나 기타 컨트롤에 기능을 추가할 수 있습니다. EShopOnContainers 모바일 앱은 연결 된 `LineColorBehavior` 동작인 클래스를 포함 합니다. 이 동작에 대 한 자세한 내용은 [유효성 검사 오류 표시](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors)를 참조 하세요.
 
 Xamarin.Forms동작은 또는 클래스에서 파생 되는 클래스입니다 [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) `T` . 여기서은 동작을 적용할 컨트롤의 형식입니다. 이러한 클래스는 `OnAttachedTo` 및 `OnDetachingFrom` 메서드를 제공 합니다 .이 메서드는 동작을 컨트롤에 연결 하 고 분리할 때 실행 되는 논리를 제공 하도록 재정의 해야 합니다.
 
@@ -292,44 +295,44 @@ EShopOnContainers 모바일 앱에서 `BindableBehavior<T>` 클래스는 클래�
 EShopOnContainers 모바일 앱에는 `EventToCommandBehavior` 발생 하는 이벤트에 대 한 응답으로 명령을 실행 하는 클래스가 포함 되어 있습니다. 이 클래스는 동작이 `BindableBehavior<T>` 사용 될 때 동작에서 속성에 지정 된를 바인딩하고 실행할 수 있도록 클래스에서 파생 `ICommand` `Command` 됩니다. 다음 코드 예제는 `EventToCommandBehavior` 클래스를 보여줍니다.
 
 ```csharp
-public class EventToCommandBehavior : BindableBehavior<View>  
+public class EventToCommandBehavior : BindableBehavior<View>  
 {  
-    ...  
-    protected override void OnAttachedTo(View visualElement)  
-    {  
-        base.OnAttachedTo(visualElement);  
+    ...  
+    protected override void OnAttachedTo(View visualElement)  
+    {  
+        base.OnAttachedTo(visualElement);  
 
-        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
-        if (events.Any())  
-        {  
-            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
-            if (_eventInfo == null)  
-                throw new ArgumentException(string.Format(  
-                        "EventToCommand: Can't find any event named '{0}' on attached type",   
-                        EventName));  
+        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
+        if (events.Any())  
+        {  
+            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
+            if (_eventInfo == null)  
+                throw new ArgumentException(string.Format(  
+                        "EventToCommand: Can't find any event named '{0}' on attached type",   
+                        EventName));  
 
-            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
-        }  
-    }  
+            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
+        }  
+    }  
 
-    protected override void OnDetachingFrom(View view)  
-    {  
-        if (_handler != null)  
-            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
+    protected override void OnDetachingFrom(View view)  
+    {  
+        if (_handler != null)  
+            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
 
-        base.OnDetachingFrom(view);  
-    }  
+        base.OnDetachingFrom(view);  
+    }  
 
-    private void AddEventHandler(  
-            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
-    {  
-        ...  
-    }  
+    private void AddEventHandler(  
+            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
+    {  
+        ...  
+    }  
 
-    private void OnFired(object sender, EventArgs eventArgs)  
-    {  
-        ...  
-    }  
+    private void OnFired(object sender, EventArgs eventArgs)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -343,13 +346,13 @@ public class EventToCommandBehavior : BindableBehavior<View>
 
 ```xaml
 <ListView>  
-    <ListView.Behaviors>  
-        <behaviors:EventToCommandBehavior             
-            EventName="ItemTapped"  
-            Command="{Binding OrderDetailCommand}"  
-            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
-    </ListView.Behaviors>  
-    ...  
+    <ListView.Behaviors>  
+        <behaviors:EventToCommandBehavior             
+            EventName="ItemTapped"  
+            Command="{Binding OrderDetailCommand}"  
+            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
+    </ListView.Behaviors>  
+    ...  
 </ListView>
 ```
 

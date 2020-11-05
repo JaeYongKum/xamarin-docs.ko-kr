@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 665971607d8c67f77ad5172778cddcd97bf79841
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e085006f3f7479d35e4991503e52ce19ced7f75b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932628"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374539"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
+
+> [!NOTE]
+> 이 전자책는 2017의 스프링에서 게시 되었으며 그 이후에는 업데이트 되지 않았습니다. 책에는 상당한 가치가 있지만 자료 중 일부는 오래 된 것입니다.
 
 플랫폼에 관계 없이 엔터프라이즈 앱 개발자는 다음과 같은 몇 가지 문제를 직면 하 고 있습니다.
 
@@ -37,7 +40,7 @@ ms.locfileid: "86932628"
 - 응용 프로그램의 가로 기능 (예: 인증 및 데이터 액세스), 앱 특정 비즈니스 기능 등의 세로 기능 간의 문제를 완전히 분리 하 고 재사용을 촉진 합니다. 이렇게 하면 응용 프로그램 구성 요소 간의 종속성 및 상호 작용을 보다 쉽게 관리할 수 있습니다.
 - 다른 개인 이나 팀이 자신의 전문 지식에 따라 특정 작업 또는 기능에 초점을 맞출 수 있도록 하 여 역할의 분리를 유지 하는 데 도움이 됩니다. 특히 사용자 인터페이스와 앱의 비즈니스 논리를 명확 하 게 구분 합니다.
 
-그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 특수 Azure 지역은 다음과 같습니다.
+그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 이러한 개체는 다음과 같습니다.
 
 - 사용자 인터페이스 컨트롤과 해당 논리 간의 문제를 명확 하 게 분리 하는 방법을 결정 합니다. 엔터프라이즈 앱을 만들 때 가장 중요 한 결정 사항 중 하나 Xamarin.Forms 는 코드 숨김으로 비즈니스 논리를 배치할지, 사용자 인터페이스 컨트롤과 논리 간의 문제를 명확 하 게 분리 하 여 앱을 유지 관리 하 고 테스트 가능 하 게 만드는 지 여부입니다. 자세한 내용은 [모델-뷰-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)을 참조 하세요.
 - 종속성 주입 컨테이너를 사용할지 여부를 결정 합니다. 종속성 주입 컨테이너는 종속성이 주입 된 클래스의 인스턴스를 생성 하 고 컨테이너의 구성에 따라 수명 주기를 관리 하는 기능을 제공 하 여 개체 간의 종속성 결합을 줄입니다. 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)을 참조 하세요.
@@ -67,7 +70,7 @@ ms.locfileid: "86932628"
 
 ![eShopOnContainers 개략적인 아키텍처](introduction-images/architecture.png)
 
-**그림 1-1**: eShopOnContainers 상위 수준 아키텍처
+**그림 1-1** : eShopOnContainers 상위 수준 아키텍처
 
 샘플 응용 프로그램은 다음과 같은 세 개의 클라이언트 앱과 함께 제공 됩니다.
 
@@ -94,7 +97,7 @@ ms.locfileid: "86932628"
 
 [![EShopOnContainers 모바일 앱](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "EShopOnContainers 모바일 앱")
 
-**그림 1-2**: eShopOnContainers 모바일 앱
+**그림 1-2** : eShopOnContainers 모바일 앱
 
 모바일 앱은 eShopOnContainers reference 응용 프로그램에서 제공 하는 백 엔드 서비스를 사용 합니다. 그러나 백 엔드 서비스 배포를 방지 하려는 사용자에 대해 모의 서비스의 데이터를 사용 하도록 구성할 수 있습니다.
 
@@ -155,7 +158,7 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |트리거|`BeginAnimation`XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를 포함 합니다.|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
-|뷰|앱에 대 한 페이지를 포함 합니다.|
+|보기|앱에 대 한 페이지를 포함 합니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8b98d103021864aeb589787224f90bdaed17146
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8668ef01e7fac02243934f145eb2e3f4ff4a6a8a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563785"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373213"
 ---
 # <a name="datepicker-item-selection-on-ios"></a>IOS에서 DatePicker 항목 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 특정 컨트롤은에서 항목 선택을 수행 하는 경우 [`DatePicker`](xref:Xamarin.Forms.DatePicker) 사용자가 컨트롤에서 항목을 검색할 때 또는 **완료** 단추를 누른 경우에만 항목 선택이 발생 하도록 지정할 수 있도록 합니다. `DatePicker.UpdateMode`연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 `UpdateMode` .
 
@@ -66,7 +66,7 @@ switch (datePicker.On<iOS>().UpdateMode())
 
 그러면 지정 된가에 `UpdateMode` 적용 되어 [`DatePicker`](xref:Xamarin.Forms.DatePicker) 항목 선택이 발생 하는 시기를 제어 합니다.
 
-[![DatePicker 업데이트 모드의 스크린샷](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode 플랫폼 관련")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode 플랫폼 관련")
+[![DatePicker 업데이트 모드의 스크린샷](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

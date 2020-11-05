@@ -11,24 +11,24 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7e59cddbe9192f29ca1636c567131aad60157066
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1ceadb6d7985f5d448fe729a42e0cf0a3d5d6f6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556583"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374474"
 ---
 # <a name="no-locxamarinforms-visual-state-manager"></a>Xamarin.Forms 시각적 상태 관리자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Visual State Manager를 사용 하 여 코드에서 설정 된 시각적 상태에 따라 XAML 요소를 변경 합니다._
 
 VSM (시각적 상태 관리자)은 코드에서 사용자 인터페이스에 대 한 시각적 변경을 수행 하는 구조화 된 방법을 제공 합니다. 대부분의 경우 응용 프로그램의 사용자 인터페이스는 XAML로 정의 되며이 XAML에는 시각적 상태 관리자가 사용자 인터페이스의 시각적 개체에 미치는 영향을 설명 하는 태그가 포함 됩니다.
 
-VSM은 _시각적 상태의_개념을 소개 합니다. Xamarin.Forms과 같은 뷰는 `Button` &mdash; 사용 하지 않도록 설정 되었는지, 눌러져 있는지 또는 입력 포커스를가지고 있는지에 따라 기본 상태에 따라 여러 가지 시각적 모양을 가질 수 있습니다. 이는 단추의 상태입니다.
+VSM은 _시각적 상태의_ 개념을 소개 합니다. Xamarin.Forms과 같은 뷰는 `Button` &mdash; 사용 하지 않도록 설정 되었는지, 눌러져 있는지 또는 입력 포커스를가지고 있는지에 따라 기본 상태에 따라 여러 가지 시각적 모양을 가질 수 있습니다. 이는 단추의 상태입니다.
 
-시각적 상태는 _시각적 상태 그룹_에서 수집 됩니다. 시각적 상태 그룹 내의 모든 시각적 상태는 함께 사용할 수 없습니다. 시각적 상태 그룹과 시각적 상태 그룹 모두 단순 텍스트 문자열로 식별 됩니다.
+시각적 상태는 _시각적 상태 그룹_ 에서 수집 됩니다. 시각적 상태 그룹 내의 모든 시각적 상태는 함께 사용할 수 없습니다. 시각적 상태 그룹과 시각적 상태 그룹 모두 단순 텍스트 문자열로 식별 됩니다.
 
 Xamarin.Forms시각적 상태 관리자는 다음과 같은 시각적 상태를 사용 하 여 "CommonStates" 이라는 하나의 시각적 상태 그룹을 정의 합니다.
 
@@ -46,7 +46,7 @@ Xamarin.Forms시각적 상태 관리자는 다음과 같은 시각적 상태를 
 
 ## <a name="common-states"></a>공용 상태
 
-시각적 상태 관리자를 사용 하면 뷰가 정상적 이거나 비활성화 되었거나 입력 포커스가 있는 경우 뷰의 시각적 모양을 변경할 수 있는 태그를 XAML 파일에 포함할 수 있습니다. 이러한 _상태를 공용 상태_라고 합니다.
+시각적 상태 관리자를 사용 하면 뷰가 정상적 이거나 비활성화 되었거나 입력 포커스가 있는 경우 뷰의 시각적 모양을 변경할 수 있는 태그를 XAML 파일에 포함할 수 있습니다. 이러한 _상태를 공용 상태_ 라고 합니다.
 
 예를 들어 `Entry` 페이지에 보기가 있고의 시각적 모양이 다음과 같은 방식으로 변경 되는 경우를 가정해 보겠습니다 `Entry` .
 
@@ -613,7 +613,7 @@ public partial class VsmValidationPage : ContentPage
 
 Xamarin.Forms휴대폰에서 실행 되는 응용 프로그램은 일반적으로 세로 또는 가로 가로 세로 비율로 볼 수 있으며, Xamarin.Forms 데스크톱에서 실행 되는 프로그램의 크기를 조정 하 여 다양 한 크기와 가로 세로 비율을 가정 합니다. 잘 디자인 된 응용 프로그램은 이러한 다양 한 페이지 또는 창 폼 팩터를 위해 콘텐츠를 다르게 표시할 수 있습니다.
 
-이 기술을 _적응형 레이아웃_이라고 합니다. 적응 레이아웃은 프로그램의 시각적 개체와만 관련 되므로 시각적 상태 관리자의 이상적인 응용 프로그램입니다.
+이 기술을 _적응형 레이아웃_ 이라고 합니다. 적응 레이아웃은 프로그램의 시각적 개체와만 관련 되므로 시각적 상태 관리자의 이상적인 응용 프로그램입니다.
 
 간단한 예제는 응용 프로그램의 콘텐츠에 영향을 주는 작은 단추 컬렉션을 표시 하는 응용 프로그램입니다. 세로 모드에서 이러한 단추는 페이지 위쪽의 가로 행에 표시 될 수 있습니다.
 

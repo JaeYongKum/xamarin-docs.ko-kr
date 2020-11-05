@@ -10,16 +10,16 @@ ms.date: 07/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fba761d2740f323fb55e80d8cb4e3ba3d8e7cad
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 32571724c945c4bbd845943ac72fc959c42d584a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563603"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374357"
 ---
 # <a name="no-locxamarinforms-boxview"></a>Xamarin.Forms BoxView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
 
 [`BoxView`](xref:Xamarin.Forms.BoxView) 지정 된 너비, 높이 및 색의 단순 사각형을 렌더링 합니다. 를 사용 하 여 `BoxView` 데코레이션, 기초적인 그래픽 및 터치를 통해 사용자와 상호 작용할 수 있습니다.
 
@@ -349,7 +349,7 @@ class LifeCell : BoxView
 
 [**DotMatrixClock**](/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock) 프로그램은 210 `BoxView` 요소를 만들어 이전의 5-7 점 행렬 디스플레이의 점을 시뮬레이션 합니다. 세로 또는 가로 모드에서 시간을 읽을 수 있지만 가로 크기는 다음과 같습니다.
 
-[![점 행렬 클록](boxview-images/dotmatrixclock-small.png "점 행렬 클록")](boxview-images/dotmatrixclock-large.png#lightbox "점 행렬 클록")
+[![점 행렬 클록](boxview-images/dotmatrixclock-small.png "Dot-Matrix 클록")](boxview-images/dotmatrixclock-large.png#lightbox "Dot-Matrix 클록")
 
 XAML 파일은 클록에 사용 된를 인스턴스화하는 것 보다 약간 더 적습니다 `AbsoluteLayout` .
 

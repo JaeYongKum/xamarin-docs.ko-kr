@@ -10,16 +10,16 @@ ms.date: 07/14/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1769a1eb562d4ae0551598493afa9b04491a42d5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 50b64b394314ae2f63ab1f756f1cc73ba29e59e7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562797"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372849"
 ---
 # <a name="easing-functions-in-no-locxamarinforms"></a>의 감속/가속 함수 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
 _Xamarin.Forms 에는 애니메이션이 실행 되는 속도를 제어 하는 속도를 제어 하는 전송 함수를 지정할 수 있는 감속/가속 클래스가 포함 되어 있습니다. 이 문서에서는 미리 정의 된 감속/가속 함수를 사용 하는 방법과 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다._
 

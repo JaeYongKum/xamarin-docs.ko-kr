@@ -10,16 +10,16 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 11f33c07d2a98e326717f284f0b5d6308a65a693
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557259"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374721"
 ---
 # <a name="file-handling-in-no-locxamarinforms"></a>파일 처리 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _를 사용 하 여 파일을 처리 Xamarin.Forms 하는 것은 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다._
 
@@ -63,7 +63,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 ## <a name="loading-files-embedded-as-resources"></a>리소스로 포함된 파일 로드
 
-**.NET Standard** 어셈블리에 파일을 포함시키려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
+**.NET Standard** 어셈블리에 파일을 포함시키려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource** 를 확인합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -75,7 +75,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 -----
 
-`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 **WorkingWithFiles** 이 고 파일 이름은 **LibTextResource.txt**이므로 리소스 id는 `WorkingWithFiles.LibTextResource.txt` 입니다.
+`GetManifestResourceStream`은 **리소스 ID** 를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 **WorkingWithFiles** 이 고 파일 이름은 **LibTextResource.txt** 이므로 리소스 id는 `WorkingWithFiles.LibTextResource.txt` 입니다.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -137,11 +137,11 @@ Stream stream = assembly.GetManifestResourceStream
 
 위의 예제에서는 파일이 .NET Standard 라이브러리 프로젝트의 루트에 포함되어 있다고 가정합니다. 이 경우 리소스 ID는 **Namespace.Filename.Extension** 형식입니다(예: `WorkingWithFiles.LibTextResource.txt` 및 `WorkingWithFiles.iOS.SharedTextResource.txt`).
 
-포함 리소스는 폴더에 구성할 수 있습니다. 포함 리소스가 폴더에 배치되면 폴더 이름이 리소스 ID의 일부가 되며(마침표로 구분됨), 리소스 ID 형식은 **Namespace.Folder.Filename.Extension**이 됩니다. 샘플 앱에 사용된 파일이 **MyFolder** 폴더에 배치되면 해당 리소스 ID(`WorkingWithFiles.MyFolder.LibTextResource.txt` 및 `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`)가 됩니다.
+포함 리소스는 폴더에 구성할 수 있습니다. 포함 리소스가 폴더에 배치되면 폴더 이름이 리소스 ID의 일부가 되며(마침표로 구분됨), 리소스 ID 형식은 **Namespace.Folder.Filename.Extension** 이 됩니다. 샘플 앱에 사용된 파일이 **MyFolder** 폴더에 배치되면 해당 리소스 ID(`WorkingWithFiles.MyFolder.LibTextResource.txt` 및 `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`)가 됩니다.
 
 ### <a name="debugging-embedded-resources"></a>포함 리소스 디버깅
 
-특정 리소스가 로드되지 않는 이유를 이해하기 어려운 경우가 있으므로 다음 디버그 코드를 애플리케이션에 임시로 추가하여 리소스가 올바르게 구성되었는지 확인할 수 있습니다. 지정된 어셈블리에 포함된 모든 알려진 리소스를 **Errors**(오류) 패드로 출력하여 리소스 로드 문제를 디버그하는 데 도움을 줍니다.
+특정 리소스가 로드되지 않는 이유를 이해하기 어려운 경우가 있으므로 다음 디버그 코드를 애플리케이션에 임시로 추가하여 리소스가 올바르게 구성되었는지 확인할 수 있습니다. 지정된 어셈블리에 포함된 모든 알려진 리소스를 **Errors** (오류) 패드로 출력하여 리소스 로드 문제를 디버그하는 데 도움을 줍니다.
 
 ```csharp
 using System.Reflection;

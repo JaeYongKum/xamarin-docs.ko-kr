@@ -10,16 +10,16 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6d568e948f02952fa71ed21af48160a53bfc419
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ee69ca1e95f7dcffa60387579e89c3a2d3e985da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556544"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374292"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Matrix 변환을 사용 하 여 터치 끌기, 집기 및 회전 구현_
 
@@ -150,7 +150,7 @@ public partial class BitmapDraggingPage : ContentPage
 }
 ```
 
-손가락이 화면에 먼저 닿을 때 형식의 이벤트가 `TouchActionType.Pressed` 발생 합니다. 첫 번째 작업은 손가락이 비트맵과 접촉 하 고 있는지 확인 하는 것입니다. 이러한 작업은 종종 _적중 테스트_라고 합니다. 이 경우에는 `SKRect` 비트맵에 해당 하는 값을 만들고이에 행렬 변환을 적용 한 `MapRect` 다음 터치 점이 변환 된 사각형 내에 있는지 확인 하 여 적중 테스트를 수행할 수 있습니다.
+손가락이 화면에 먼저 닿을 때 형식의 이벤트가 `TouchActionType.Pressed` 발생 합니다. 첫 번째 작업은 손가락이 비트맵과 접촉 하 고 있는지 확인 하는 것입니다. 이러한 작업은 종종 _적중 테스트_ 라고 합니다. 이 경우에는 `SKRect` 비트맵에 해당 하는 값을 만들고이에 행렬 변환을 적용 한 `MapRect` 다음 터치 점이 변환 된 사각형 내에 있는지 확인 하 여 적중 테스트를 수행할 수 있습니다.
 
 이 경우에는 해당 `touchId` 필드가 TOUCH ID로 설정 되 고 손가락 위치가 저장 됩니다.
 
@@ -268,7 +268,7 @@ public partial class BitmapScalingPage : ContentPage
 
 그런 다음,이 프로그램은 피벗 점을 기준으로 새 손가락 위치의 두 벡터와 피벗 점을 기준으로 하는 이전 손가락 위치를 계산 합니다. 이러한 벡터의 비율은 배율 인수입니다. 0으로 나누기는 가능성이 있으므로 무한 값 또는 NaN (숫자 아님) 값을 확인 해야 합니다. 모두 적절 한 경우에는 필드에 저장 된 값과 크기 조정 변환이 연결 됩니다 `SKMatrix` .
 
-이 페이지를 시험해 보면 비트맵을 하나 또는 두 손가락으로 끌거나 두 손가락으로 크기를 조정할 수 있습니다. 크기 조정은 _이방성_이므로 가로 및 세로 방향으로 크기를 조정할 수 있습니다. 이는 가로 세로 비율을 왜곡 하지만 비트맵을 대칭 이동 하 여 미러 이미지를 만들 수도 있습니다. 비트맵을 0 차원으로 축소 하 고이를 사라지게 할 수도 있습니다. 프로덕션 코드에서이를 방지 하려고 합니다.
+이 페이지를 시험해 보면 비트맵을 하나 또는 두 손가락으로 끌거나 두 손가락으로 크기를 조정할 수 있습니다. 크기 조정은 _이방성_ 이므로 가로 및 세로 방향으로 크기를 조정할 수 있습니다. 이는 가로 세로 비율을 왜곡 하지만 비트맵을 대칭 이동 하 여 미러 이미지를 만들 수도 있습니다. 비트맵을 0 차원으로 축소 하 고이를 사라지게 할 수도 있습니다. 프로덕션 코드에서이를 방지 하려고 합니다.
 
 ## <a name="two-finger-rotation"></a>두 손가락 회전
 
@@ -1060,7 +1060,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 [![비트맵 산 보기 페이지의 삼중 스크린 샷](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "비트맵 산 보기 페이지의 삼중 스크린 샷")
 
-## <a name="single-finger-scaling"></a>단일 손가락 크기 조정
+## <a name="single-finger-scaling"></a>Single-Finger 크기 조정
 
 크기 조정 작업을 수행 하려면 일반적으로 두 손가락을 사용 하는 손가락을 사용 해야 합니다. 그러나 손가락으로 비트맵의 모퉁이를 이동 하도록 하 여 단일 손가락으로 크기 조정을 구현할 수 있습니다.
 

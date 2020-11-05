@@ -10,20 +10,20 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af1747a19af6c715d1594122393e500d1f73c79b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 837d58508c3f5b14c4c36a867a2aa974a5bf397c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562524"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374318"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 앞서 살펴본 것 처럼 클래스에는 [`SKPaint`](xref:SkiaSharp.SKPaint) [`Color`](xref:SkiaSharp.SKPaint.Color) 형식의 속성이 포함 됩니다 [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor` 알파 채널을 포함 하므로 값을 사용 하 여 색을 지정할 수 있는 모든 항목을 `SKColor` 부분적으로 투명 하 게 지정할 수 있습니다. 
 
-[**SkiaSharp 문서의 기본 애니메이션**](animation.md) 에서 일부 투명도를 보여 주었습니다. 이 문서에서는 혼합을 통해 여러 개체를 단일 장면으로 결합 하 여 _혼합_으로 알려진 기법을 결합 하는 방법에 대해 자세히 설명 합니다. 고급 혼합 기술에 대해서는 [**SkiaSharp 셰이더**](../effects/shaders/index.md) 섹션의 문서에서 설명 합니다.
+[**SkiaSharp 문서의 기본 애니메이션**](animation.md) 에서 일부 투명도를 보여 주었습니다. 이 문서에서는 혼합을 통해 여러 개체를 단일 장면으로 결합 하 여 _혼합_ 으로 알려진 기법을 결합 하는 방법에 대해 자세히 설명 합니다. 고급 혼합 기술에 대해서는 [**SkiaSharp 셰이더**](../effects/shaders/index.md) 섹션의 문서에서 설명 합니다.
 
 네 개의 매개 변수 생성자를 사용 하 여 처음으로 색을 만들 때 투명도 수준을 설정할 수 있습니다 [`SKColor`](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) .
 

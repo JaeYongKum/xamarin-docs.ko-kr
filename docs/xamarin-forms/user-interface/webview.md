@@ -10,22 +10,22 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d535956e03ac02e2cf0c5d7528ee8e363a2a1e55
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9b22b46cb5452e558328c383ed97e66a60cfc166
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561653"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374136"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms 웹
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) 는 앱에서 웹 및 HTML 콘텐츠를 표시 하는 보기입니다.
 
 ![앱 브라우저에서](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Content
+## <a name="content"></a>콘텐츠
 
 `WebView` 는 다음과 같은 콘텐츠 형식을 지원 합니다.
 
@@ -117,7 +117,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 다음은 그 예입니다.
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```html
 <html>
@@ -175,7 +175,7 @@ source.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
 
 #### <a name="ios"></a>iOS
 
-IOS에서 웹 콘텐츠는 아래와 같이 *BundleResource*빌드 작업을 사용 하 여 프로젝트의 루트 디렉터리 또는 **Resources** 디렉터리에 배치 되어야 합니다.
+IOS에서 웹 콘텐츠는 아래와 같이 *BundleResource* 빌드 작업을 사용 하 여 프로젝트의 루트 디렉터리 또는 **Resources** 디렉터리에 배치 되어야 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -245,7 +245,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 
 #### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
-UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용*으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
+UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용* 으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
 
 는 `BaseUrl` 로 설정 해야 합니다 `"ms-appx-web:///"` .
 
@@ -355,7 +355,7 @@ public partial class InAppBrowserXaml : ContentPage
 - `Source` – 탐색을 수행한 요소입니다.
 - `Url` – 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 다음은 그 예입니다.
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예를 들면 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -422,7 +422,7 @@ webView.Reload();
 
 [UWP 웹 보기](/windows/uwp/design/controls-and-patterns/web-view) 에서는 Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치에는 Edge 브라우저 자체를 사용 하는 것과 동일한 성능이 표시 되어야 합니다.
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 가 `WebView` 작동 하려면 각 플랫폼에 대 한 사용 권한이 설정 되어 있는지 확인 해야 합니다. 일부 플랫폼에서는 `WebView` 디버그 모드에서 작동 하지만 릴리스를 위해 빌드할 때는 작동 하지 않습니다. Android에서 인터넷에 액세스 하는 것과 같은 일부 사용 권한은 기본적으로 디버그 모드에서 Mac용 Visual Studio 하 여 설정 되기 때문입니다.
 
@@ -430,7 +430,7 @@ webView.Reload();
 - **Android** &ndash; `INTERNET`  네트워크에서 콘텐츠를 표시 하는 경우에만 필요 합니다. 로컬 콘텐츠에는 특별 한 권한이 필요 하지 않습니다.
 - **iOS** &ndash; 특별 한 권한이 필요 하지 않습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 대부분의 다른 Xamarin.Forms 뷰와 달리에서는 `WebView` `HeightRequest` `WidthRequest` stacklayout 또는 RelativeLayout에 포함 된 경우 및가 지정 되어야 합니다. 이러한 속성을 지정 하지 않으면 `WebView` 가 렌더링 되지 않습니다.
 
@@ -557,9 +557,9 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 이 작업을 수행 하기 위한 필수 구성 요소는 다음과 같습니다.
 
-- ** Xamarin.Forms 4.5 이상**. Xamarin.Forms 앱에서 재질 시각적 개체를 사용 하는 경우 4.6 이상이 필요 합니다.
+- **Xamarin.Forms 4.5 이상**. Xamarin.Forms 앱에서 재질 시각적 개체를 사용 하는 경우 4.6 이상이 필요 합니다.
 - **Xamarin.ios 13.10.0.17 이상** [Visual Studio에서](~/cross-platform/troubleshooting/questions/version-logs.md#version-information)xamarin.ios 버전을 확인 합니다. 이 버전의 Xamarin.ios는 Mac용 Visual Studio 8.4.1 및 Visual Studio 16.4.3에 포함 되어 있습니다.
-- **에 대 한 `UIWebView` 참조를 제거 **합니다. 코드에를 `UIWebView` 사용 하는 또는 클래스에 대 한 참조가 없어야 합니다 `UIWebView` .
+- **에 대 한 `UIWebView` 참조를 제거** 합니다. 코드에를 `UIWebView` 사용 하는 또는 클래스에 대 한 참조가 없어야 합니다 `UIWebView` .
 
 참조를 검색 하 고 제거 하는 방법에 대 한 자세한 내용은 `UIWebView` [uiwebview 보기](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)사용 중단을 참조 하세요.
 
@@ -569,9 +569,9 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 링커가 참조를 제거 하려면 다음 단계를 수행 합니다 `UIWebView` .
 
-1. **IOS 프로젝트 속성 열기** &ndash; IOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+1. **IOS 프로젝트 속성 열기** &ndash; IOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 1. **IOS 빌드 섹션** &ndash; 으로 이동 합니다. **IOS 빌드** 섹션을 선택 합니다.
-1. **추가 mtouch 인수** &ndash; 를 업데이트 합니다. **추가 mtouch 인수** 에서이 플래그를 추가 `--optimize=experimental-xforms-product-type` 합니다 (이미 여기에 있을 수 있는 값 외에). 참고:이 플래그는 **SDK로만** 설정 된 **링커 동작과** 함께 작동 하거나 **모두 연결**합니다. 어떤 이유로 든 링커 동작을 모두로 설정할 때 오류가 표시 되는 경우이는 응용 프로그램 코드 또는 링커 안전 하지 않은 타사 라이브러리에서 문제가 될 가능성이 높습니다. 링커에 대 한 자세한 내용은 [Xamarin.ios 앱 연결](~/ios/deploy-test/linker.md)을 참조 하세요.
+1. **추가 mtouch 인수** &ndash; 를 업데이트 합니다. **추가 mtouch 인수** 에서이 플래그를 추가 `--optimize=experimental-xforms-product-type` 합니다 (이미 여기에 있을 수 있는 값 외에). 참고:이 플래그는 **SDK로만** 설정 된 **링커 동작과** 함께 작동 하거나 **모두 연결** 합니다. 어떤 이유로 든 링커 동작을 모두로 설정할 때 오류가 표시 되는 경우이는 응용 프로그램 코드 또는 링커 안전 하지 않은 타사 라이브러리에서 문제가 될 가능성이 높습니다. 링커에 대 한 자세한 내용은 [Xamarin.ios 앱 연결](~/ios/deploy-test/linker.md)을 참조 하세요.
 1. **모든 빌드 구성 업데이트** &ndash; 창 맨 위에 있는 **구성** 및 **플랫폼** 목록을 사용 하 여 모든 빌드 구성을 업데이트할 수 있습니다. 업데이트 하는 가장 중요 한 구성은 **릴리스/iPhone** 구성으로, 일반적으로 앱 스토어 전송용 빌드를 만드는 데 사용 되기 때문입니다.
 
 이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.
@@ -582,9 +582,9 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 링커가 참조를 제거 하려면 다음 단계를 수행 합니다 `UIWebView` .
 
-1. **IOS 프로젝트 옵션 열기** &ndash; IOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션**을 선택 합니다.
+1. **IOS 프로젝트 옵션 열기** &ndash; IOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션** 을 선택 합니다.
 1. **IOS 빌드 섹션** &ndash; 으로 이동 합니다. **IOS 빌드** 섹션을 선택 합니다.
-1. **_mtouch_ ** &ndash; **추가 _mtouch_ 인수** 에서 추가 mtouch 인수를 업데이트 합니다 .이 플래그는 `--optimize=experimental-xforms-product-type` 이미 여기에 있을 수 있는 값과 함께 추가 합니다. 참고:이 플래그는 **SDK로만** 설정 된 **링커 동작과** 함께 작동 하거나 **모두 연결**합니다. 어떤 이유로 든 링커 동작을 모두로 설정할 때 오류가 표시 되는 경우이는 응용 프로그램 코드 또는 링커 안전 하지 않은 타사 라이브러리에서 문제가 될 가능성이 높습니다. 링커에 대 한 자세한 내용은 [Xamarin.ios 앱 연결](~/ios/deploy-test/linker.md)을 참조 하세요.
+1. **_mtouch_** &ndash; **추가 _mtouch_ 인수** 에서 추가 mtouch 인수를 업데이트 합니다 .이 플래그는 `--optimize=experimental-xforms-product-type` 이미 여기에 있을 수 있는 값과 함께 추가 합니다. 참고:이 플래그는 **SDK로만** 설정 된 **링커 동작과** 함께 작동 하거나 **모두 연결** 합니다. 어떤 이유로 든 링커 동작을 모두로 설정할 때 오류가 표시 되는 경우이는 응용 프로그램 코드 또는 링커 안전 하지 않은 타사 라이브러리에서 문제가 될 가능성이 높습니다. 링커에 대 한 자세한 내용은 [Xamarin.ios 앱 연결](~/ios/deploy-test/linker.md)을 참조 하세요.
 1. **모든 빌드 구성 업데이트** &ndash; 창 맨 위에 있는 **구성** 및 **플랫폼** 목록을 사용 하 여 모든 빌드 구성을 업데이트할 수 있습니다. 업데이트 하는 가장 중요 한 구성은 **릴리스/iPhone** 구성으로, 일반적으로 앱 스토어 전송용 빌드를 만드는 데 사용 되기 때문입니다.
 
 이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.

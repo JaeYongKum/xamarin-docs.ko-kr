@@ -10,16 +10,16 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 59a4d5c0730719d6cc332728c6cab641d02239b4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 226c20acef7fc65cd0a4daf082c86e3c9c17bf54
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563564"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373783"
 ---
 # <a name="no-locxamarinforms-grid"></a>Xamarin.Forms 그리드에
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
 [![::: no loc (Xamarin.ios)::: Grid](grid-images/layouts.png "::: no loc (Xamarin.ios)::: Grid")](grid-images/layouts-large.png#lightbox "::: no loc (Xamarin.ios)::: Grid")
 
@@ -270,7 +270,7 @@ public class BasicGridPageCS : ContentPage
 
 코드에서 개체의 높이 [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) 와 개체의 너비를 지정 하려면 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 일반적으로 [`GridLength`](xref:Xamarin.Forms.GridLength) 열거형과 함께 구조체의 값을 사용 합니다 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) .
 
-위의 예제 코드는에 자식을 추가 하 고 해당 셀이 상주 하는 셀을 지정 하는 여러 가지 방법을 보여 줍니다 [`Grid`](xref:Xamarin.Forms.Grid) . 왼쪽 `Add` , *오른쪽*, *위쪽*및 *left* *아래쪽* 인수를 지정 하는 오버 로드를 사용 하는 경우 *left* 및 *top* 인수는 항상 내의 셀을 참조 하 고 `Grid` , *오른쪽* 및 *아래쪽* 인수가 외부에 있는 셀을 참조 하는 것으로 나타납니다 `Grid` . 이는 *오른쪽* 인수가 항상 *왼쪽* 인수 보다 커야 하 고 *맨 아래* 인수가 항상 *top* 인수 보다 커야 하기 때문입니다. 다음 예에서는 2x2를 가정 하 고 `Grid` 두 오버 로드를 모두 사용 하는 동일한 코드를 보여 줍니다 `Add` .
+위의 예제 코드는에 자식을 추가 하 고 해당 셀이 상주 하는 셀을 지정 하는 여러 가지 방법을 보여 줍니다 [`Grid`](xref:Xamarin.Forms.Grid) . 왼쪽 `Add` , *오른쪽* , *위쪽* 및 *left* *아래쪽* 인수를 지정 하는 오버 로드를 사용 하는 경우 *left* 및 *top* 인수는 항상 내의 셀을 참조 하 고 `Grid` , *오른쪽* 및 *아래쪽* 인수가 외부에 있는 셀을 참조 하는 것으로 나타납니다 `Grid` . 이는 *오른쪽* 인수가 항상 *왼쪽* 인수 보다 커야 하 고 *맨 아래* 인수가 항상 *top* 인수 보다 커야 하기 때문입니다. 다음 예에서는 2x2를 가정 하 고 `Grid` 두 오버 로드를 모두 사용 하는 동일한 코드를 보여 줍니다 `Add` .
 
 ```csharp
 // left, top
@@ -344,7 +344,7 @@ public GridSpacingPageCS()
 }
 ```
 
-## <a name="alignment"></a>맞춤
+## <a name="alignment"></a>부합되는 내용
 
 의 자식 뷰는 [`Grid`](xref:Xamarin.Forms.Grid) 및 속성을 통해 셀 내에 배치 될 수 있습니다 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 속성은 구조체에서 다음 필드로 설정할 수 있습니다 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) .
 

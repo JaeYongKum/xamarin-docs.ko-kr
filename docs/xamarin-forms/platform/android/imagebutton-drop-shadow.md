@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c355816ec1b89801814b217cad8a23be2f453226
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0f33d3e10b549e6e3e45d35a259ece71bf68724c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563798"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373330"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Android의 ImageButton 그림자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼 전용은에서 그림자를 설정 하는 데 사용 됩니다 `ImageButton` . 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 되며 `ImageButton.IsShadowEnabled` `true` , 드롭 그림자를 제어 하는 여러 가지 선택적 바인딩 가능 속성도 함께 사용 됩니다.
 

@@ -9,16 +9,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 733f640a18196e6bf31eadfa1c632a7202fc1ccc
-ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
+ms.openlocfilehash: b91d8f459992d33f417e99f5d92ece63f887f691
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281276"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373434"
 ---
 # <a name="skiasharp-graphics-in-no-locxamarinforms"></a>SkiaSharp 그래픽 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _응용 프로그램에서 2D 그래픽에 SkiaSharp 사용 Xamarin.Forms_
 

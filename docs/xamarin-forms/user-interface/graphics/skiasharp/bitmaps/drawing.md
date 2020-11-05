@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91051b1ffc859d4e3deb62d41709db0c587b2789
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3ca546f69dd8c4995747ad352c54e9ba184b2425
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560834"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373499"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>SkiaSharp 비트맵 만들기 및 그리기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 응용 프로그램에서 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드 하는 방법을 살펴보았습니다. 또한 응용 프로그램 내에서 새 비트맵을 만들 수 있습니다. 가장 간단한 방법은의 생성자 중 하나입니다 [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)) .
 
@@ -271,7 +271,7 @@ public partial class MonkeyMoustachePage : ContentPage
 
 ![산지 Climbers](drawing-images/MountainClimbers.jpg "산지 Climbers")
 
-왼쪽의 원숭이에서이 사진을 게시할 수 있는 권한을 받지 않았다고 가정 합니다. 한 가지 해결책은 _pixelization_이라는 기법을 사용 하 여 원숭이의 얼굴을 숨기는 것입니다. 글꼴의 픽셀은 색의 블록으로 대체 되므로 기능을 만들 수 없습니다. 색의 블록은 일반적으로 이러한 블록에 해당 하는 픽셀 색의 평균을 계산 하 여 원래 이미지에서 파생 됩니다. 그러나이 평균을 직접 수행할 필요는 없습니다. 비트맵을 더 작은 픽셀 차원에 복사 하면 자동으로 발생 합니다.
+왼쪽의 원숭이에서이 사진을 게시할 수 있는 권한을 받지 않았다고 가정 합니다. 한 가지 해결책은 _pixelization_ 이라는 기법을 사용 하 여 원숭이의 얼굴을 숨기는 것입니다. 글꼴의 픽셀은 색의 블록으로 대체 되므로 기능을 만들 수 없습니다. 색의 블록은 일반적으로 이러한 블록에 해당 하는 픽셀 색의 평균을 계산 하 여 원래 이미지에서 파생 됩니다. 그러나이 평균을 직접 수행할 필요는 없습니다. 비트맵을 더 작은 픽셀 차원에 복사 하면 자동으로 발생 합니다.
 
 왼쪽 원숭이 얼굴은 (112, 238) 점에서 왼쪽 위 모퉁이가 있는 72 픽셀 정사각형 영역을 차지 합니다. 72 픽셀 사각형 영역을 색이 지정 된 블록의 9 x 9 배열로 바꿔 보겠습니다. 각 색은 8 x 픽셀 사각형입니다.
 
@@ -495,7 +495,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 ## <a name="flipping-bitmaps"></a>비트맵 대칭 이동
 
-비트맵에서 일반적으로 수행 되는 다른 작업을 _대칭 이동_이라고 합니다. 개념적으로 비트맵은 세로 축 둘레의 3 차원 또는 비트맵의 중심을 통한 가로 축에서 회전 됩니다. 수직 대칭 이동은 미러 이미지를 만듭니다.
+비트맵에서 일반적으로 수행 되는 다른 작업을 _대칭 이동_ 이라고 합니다. 개념적으로 비트맵은 세로 축 둘레의 3 차원 또는 비트맵의 중심을 통한 가로 축에서 회전 됩니다. 수직 대칭 이동은 미러 이미지를 만듭니다.
 
 **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **비트맵 플리퍼** 페이지는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 가로 및 세로로 대칭 이동 하기 위한 및 두 개의 단추가 포함 되어 있습니다.
 

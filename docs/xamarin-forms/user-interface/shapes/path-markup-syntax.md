@@ -10,18 +10,18 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 743f6366cc7e798247ea0151720a81e9cbddfeeb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c774b795fce50b32f01b50c29cb71dd5fd02585c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559106"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373525"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms 셰이프: 경로 태그 구문
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다. 구문은 속성에 문자열 값으로 지정 됩니다 `Path.Data` .
 
@@ -47,7 +47,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ## <a name="move-command"></a>명령 이동
 
-이동 명령은 새 그림의 시작점을 지정 합니다. 이 명령의 구문은 `M` *점* 또는 시작점 `m` *startPoint*입니다.
+이동 명령은 새 그림의 시작점을 지정 합니다. 이 명령의 구문은 `M` *점* 또는 시작점 `m` *startPoint* 입니다.
 
 이 구문에서 시작점 *은* [`Point`](xref:Xamarin.Forms.Point) 새 그림의 시작점을 지정 하는 구조체입니다. Move 명령 뒤에 여러 개의 점이 나열 되 면 해당 점에 선이 그려집니다.
 
@@ -70,7 +70,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="line-command"></a>줄 명령
 
-줄 명령은 현재 지점과 지정 된 끝점 사이에 직선을 만듭니다. 이 명령의 구문은 `L` *끝점* 또는 `l` *끝점*입니다.
+줄 명령은 현재 지점과 지정 된 끝점 사이에 직선을 만듭니다. 이 명령의 구문은 `L` *끝점* 또는 `l` *끝점* 입니다.
 
 이 구문에서 *끝점* 은 선의 끝점을 [`Point`](xref:Xamarin.Forms.Point) 나타내는입니다.
 
@@ -80,7 +80,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="horizontal-line-command"></a>가로선 명령
 
-가로 선 명령은 현재 지점과 지정 된 x 좌표 사이에 가로선을 만듭니다. 이 명령의 구문은 `H` *x* 또는 `h` *x*입니다.
+가로 선 명령은 현재 지점과 지정 된 x 좌표 사이에 가로선을 만듭니다. 이 명령의 구문은 `H` *x* 또는 `h` *x* 입니다.
 
 이 구문에서 *x* 는 `double` 선 끝점의 x 좌표를 나타내는입니다.
 
@@ -88,7 +88,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="vertical-line-command"></a>세로줄 명령
 
-세로 선 명령은 현재 지점과 지정 된 y 좌표 사이에 세로줄을 만듭니다. 이 명령의 구문은 `V` *y* 또는 `v` *y*입니다.
+세로 선 명령은 현재 지점과 지정 된 y 좌표 사이에 세로줄을 만듭니다. 이 명령의 구문은 `V` *y* 또는 `v` *y* 입니다.
 
 이 구문에서 *y* 는 `double` 선 끝점의 y 좌표를 나타내는입니다.
 
@@ -96,7 +96,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="elliptical-arc-command"></a>타원형 원호 명령
 
-타원형 원호 명령은 현재 지점과 지정 된 끝점 사이에 타원형 호를 만듭니다. 이 명령의 구문은 `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint* 또는 `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint*입니다.
+타원형 원호 명령은 현재 지점과 지정 된 끝점 사이에 타원형 호를 만듭니다. 이 명령의 구문은 `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint* 또는 `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint* 입니다.
 
 이 구문에서 다음을 수행 합니다.
 
@@ -126,7 +126,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="quadratic-bezier-curve-command"></a>정방형 3 차원 곡선 명령
 
-정방형 3 차원 곡선 명령은 지정 된 제어점을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. 이 명령의 구문은: `Q` *controlPoint* *endpoint* 또는 `q` *controlPoint* *endpoint*입니다.
+정방형 3 차원 곡선 명령은 지정 된 제어점을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. 이 명령의 구문은: `Q` *controlPoint* *endpoint* 또는 `q` *controlPoint* *endpoint* 입니다.
 
 이 구문에서 다음을 수행 합니다.
 
@@ -139,7 +139,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="smooth-cubic-bezier-curve-command"></a>부드러운 입방 형 3 차원 곡선 명령
 
-부드러운 입방 형 3 차원 곡선 명령은 지정 된 제어점을 사용 하 여 현재 지점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. 이 명령의 구문은: `S` *controlPoint2* *endpoint* 또는 `s` *controlPoint2* *endpoint*입니다.  
+부드러운 입방 형 3 차원 곡선 명령은 지정 된 제어점을 사용 하 여 현재 지점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. 이 명령의 구문은: `S` *controlPoint2* *endpoint* 또는 `s` *controlPoint2* *endpoint* 입니다.  
 
 이 구문에서 다음을 수행 합니다.
 
@@ -152,7 +152,7 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 
 ### <a name="smooth-quadratic-bezier-curve-command"></a>부드러운 정방형 3 차원 곡선 명령
 
-부드러운 정방형 3 차원 곡선 명령은 제어점을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. 이 명령의 구문은 `T` *끝점* 또는 `t` *끝점*입니다.
+부드러운 정방형 3 차원 곡선 명령은 제어점을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. 이 명령의 구문은 `T` *끝점* 또는 `t` *끝점* 입니다.
 
 이 구문에서 *끝점* 은 [`Point`](xref:Xamarin.Forms.Point) 곡선이 그려지는 점을 나타내는입니다.
 

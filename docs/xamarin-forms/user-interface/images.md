@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 824d5ca711495c8a8ad663034e77506468efd397
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2ea65a646add3f42ee88e5cd884e80131b9964bf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556193"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373837"
 ---
 # <a name="images-in-no-locxamarinforms"></a>이미지 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _이미지는를 사용 하 여 플랫폼 간에 공유 될 수 있으며 Xamarin.Forms , 각 플랫폼에 대해 특별히 로드 하거나 표시를 위해 다운로드할 수 있습니다._
 
@@ -38,7 +38,7 @@ Xamarin.Forms 뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이�
 
 - [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) -각 플랫폼에서 확인할 수 있는 파일 이름 또는 파일 경로가 필요 합니다.
 - [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) -Uri 개체가 필요 합니다 (예:).  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) - **빌드 작업 (EmbeddedResource**)을 사용 하 여 응용 프로그램 또는 .NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일에 대 한 리소스 식별자가 필요 합니다.
+- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) - **빌드 작업 (EmbeddedResource** )을 사용 하 여 응용 프로그램 또는 .NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일에 대 한 리소스 식별자가 필요 합니다.
 - [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) -이미지 데이터를 제공 하는 스트림이 필요 합니다.
 
 [`Aspect`](xref:Xamarin.Forms.Image.Aspect)속성은 이미지가 표시 영역에 맞게 조정 되는 방법을 결정 합니다.
@@ -53,14 +53,14 @@ Xamarin.Forms 뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이�
 
 이미지 파일은 각 응용 프로그램 프로젝트에 추가 되 고 공유 코드에서 참조 될 수 있습니다 Xamarin.Forms . 이미지를 배포하는 이 메서드는 다양한 플랫폼 또는 약간 다른 디자인의 다양한 해결 방법을 사용하는 경우와 같이 이미지가 특정 플랫폼을 지정하는 경우에 필요합니다.
 
-모든 앱에서 단일 이미지를 사용 하려면 *동일한 파일 이름이 모든 플랫폼에서 사용*되어야 하며 유효한 Android 리소스 이름 이어야 합니다 (예: 소문자, 숫자, 밑줄 및 마침표만 사용할 수 있음).
+모든 앱에서 단일 이미지를 사용 하려면 *동일한 파일 이름이 모든 플랫폼에서 사용* 되어야 하며 유효한 Android 리소스 이름 이어야 합니다 (예: 소문자, 숫자, 밑줄 및 마침표만 사용할 수 있음).
 
-- **ios** -ios 9 이후 이미지를 관리 하 고 지 원하는 기본 방법은 응용 프로그램의 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 모든 이미지 버전을 포함 해야 하는 **Asset Catalog 이미지 집합**을 사용 하는 것입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)를 참조 하세요.
-- **Android** - **빌드 작업: AndroidResource**를 사용 하 여 **리소스/그릴** 때 디렉터리에 이미지를 추가 합니다. 이미지의 높은 및 낮은 DPI 버전 ( **ldpi**, 그릴 수 있는- **hdpi**및 그릴 수 있는 **-xhdpi**와 같이 적절 하 게 명명 된 **리소스** 하위 디렉터리)을 제공할 수도 있습니다.
-- **유니버설 Windows 플랫폼 (UWP)** -기본적으로 이미지는 **빌드 작업: 콘텐츠**를 사용 하 여 응용 프로그램의 루트 디렉터리에 배치 되어야 합니다. 또는 이미지를 다른 디렉터리에 배치 하 여 플랫폼별로 지정할 수도 있습니다. 자세한 내용은 [Windows의 기본 이미지 디렉터리](~/xamarin-forms/platform/windows/default-image-directory.md)를 참조 하십시오.
+- **ios** -ios 9 이후 이미지를 관리 하 고 지 원하는 기본 방법은 응용 프로그램의 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 모든 이미지 버전을 포함 해야 하는 **Asset Catalog 이미지 집합** 을 사용 하는 것입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)를 참조 하세요.
+- **Android** - **빌드 작업: AndroidResource** 를 사용 하 여 **리소스/그릴** 때 디렉터리에 이미지를 추가 합니다. 이미지의 높은 및 낮은 DPI 버전 ( **ldpi** , 그릴 수 있는- **hdpi** 및 그릴 수 있는 **-xhdpi** 와 같이 적절 하 게 명명 된 **리소스** 하위 디렉터리)을 제공할 수도 있습니다.
+- **유니버설 Windows 플랫폼 (UWP)** -기본적으로 이미지는 **빌드 작업: 콘텐츠** 를 사용 하 여 응용 프로그램의 루트 디렉터리에 배치 되어야 합니다. 또는 이미지를 다른 디렉터리에 배치 하 여 플랫폼별로 지정할 수도 있습니다. 자세한 내용은 [Windows의 기본 이미지 디렉터리](~/xamarin-forms/platform/windows/default-image-directory.md)를 참조 하십시오.
 
 > [!IMPORTANT]
-> IOS 9 이전에 이미지는 일반적으로 **BundleResource 빌드 작업**을 사용 하 여 **Resources** 폴더에 배치 되었습니다. 그러나 iOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)을 참조 하세요.
+> IOS 9 이전에 이미지는 일반적으로 **BundleResource 빌드 작업** 을 사용 하 여 **Resources** 폴더에 배치 되었습니다. 그러나 iOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)을 참조 하세요.
 
 이러한 파일 이름 지정 및 배치 규칙을 준수 하면 다음 XAML이 모든 플랫폼에서 이미지를 로드 하 고 표시할 수 있습니다.
 
@@ -95,13 +95,13 @@ iOS, Android 및 UWP에는 다양 한 이미지 해상도에 대 한 지원이 �
 
 IOS 9부터 이미지를 관리 하는 기본 방법은 적절 한 자산 카탈로그 이미지 집합에 필요한 각 해상도에 대해 이미지를 끄는 것입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)를 참조 하세요.
 
-IOS 9 이전에는 레 티 나 버전의 이미지를 **리소스** 폴더에 배치할 수 있습니다 **@2x** **@3x** . 즉, 파일 확장명 앞에 파일 이름 (예: **myimage@2x.png**). 그러나 iOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)을 참조 하세요.
+IOS 9 이전에는 레 티 나 버전의 이미지를 **리소스** 폴더에 배치할 수 있습니다 **@2x** **@3x** . 즉, 파일 확장명 앞에 파일 이름 (예: **myimage@2x.png** ). 그러나 iOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)을 참조 하세요.
 
 Android 대체 해상도 이미지는 다음 스크린샷에 표시 된 것 처럼 Android 프로젝트의 [특수 하 게 명명 된 디렉터리](https://developer.android.com/guide/practices/screens_support.html) 에 배치 해야 합니다.
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
-UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사를 추가할 수 있습니다](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) `xxx` . 여기서은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage.scale-200.png**). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage.png**). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
+UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사를 추가할 수 있습니다](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) `xxx` . 여기서은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage.scale-200.png** ). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage.png** ). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 
@@ -120,7 +120,7 @@ UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사�
 
 포함 된 이미지는 응용 프로그램과 함께 제공 됩니다 (예: 로컬 이미지). 하지만 이미지 복사본을 각 응용 프로그램의 파일 구조에 포함 하는 대신 이미지 파일이 리소스로 어셈블리에 포함 됩니다. 이미지를 배포 하는이 방법은 각 플랫폼에서 동일한 이미지를 사용 하는 경우에 권장 되며, 이미지를 코드와 함께 제공 하므로 구성 요소를 만드는 데 특히 적합 합니다.
 
-프로젝트에 이미지를 포함 하려면 마우스 오른쪽 단추를 클릭 하 여 새 항목을 추가 하 고 추가할 이미지/s를 선택 합니다. 기본적으로 이미지에는 **빌드 작업 (None**)이 포함 됩니다. **빌드 작업: EmbeddedResource**로 설정 해야 합니다.
+프로젝트에 이미지를 포함 하려면 마우스 오른쪽 단추를 클릭 하 여 새 항목을 추가 하 고 추가할 이미지/s를 선택 합니다. 기본적으로 이미지에는 **빌드 작업 (None** )이 포함 됩니다. **빌드 작업: EmbeddedResource** 로 설정 해야 합니다.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -130,7 +130,7 @@ UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사�
 
 파일에 대 한 **속성** 창에서 **빌드 작업** 을 보고 변경할 수 있습니다.
 
-이 예제에서는 리소스 ID를 **WorkingWithImages.beach.jpg**합니다.
+이 예제에서는 리소스 ID를 **WorkingWithImages.beach.jpg** 합니다.
 IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **기본 네임 스페이스** 를 파일 이름과 연결 하 여이 기본값을 생성 했습니다.
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
@@ -139,7 +139,7 @@ IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **�
 ![빌드 작업 설정: EmbeddedResource](images-images/xs-buildaction.png)
 
 파일에 대 한 **속성** 패드에서 **빌드 작업** 을 보고 변경할 수도 있습니다.
-이 패드는 코드에서 리소스를 참조 하는 데 사용 되는 **리소스 ID** 를 표시 합니다. 아래 스크린샷에서 **리소스 ID** 가 **WorkingWithImages.beach.jpg**됩니다.
+이 패드는 코드에서 리소스를 참조 하는 데 사용 되는 **리소스 ID** 를 표시 합니다. 아래 스크린샷에서 **리소스 ID** 가 **WorkingWithImages.beach.jpg** 됩니다.
 IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **기본 네임 스페이스** 를 파일 이름과 연결 하 여이 기본값을 생성 했습니다.
 이 ID는 **속성** 패드에서 편집할 수 있지만 이러한 예제에서는 **WorkingWithImages.beach.jpg** 값이 사용 됩니다.
 

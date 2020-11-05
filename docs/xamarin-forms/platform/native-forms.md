@@ -10,16 +10,16 @@ ms.date: 08/19/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e34144f253b19796ea6ec83cb3873fe373aeb914
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: aec9f0ec0b3092a5f84f183fb90cfc8bc9da7324
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560613"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374227"
 ---
 # <a name="no-locxamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms Xamarin 네이티브 프로젝트에서
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/native2forms)
 
 일반적으로 Xamarin.Forms 응용 프로그램에는에서 파생 되는 하나 이상의 페이지가 포함 되어 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 있으며, 이러한 페이지는 .NET Standard 라이브러리 프로젝트 또는 공유 프로젝트의 모든 플랫폼에서 공유 됩니다. 그러나 네이티브 폼을 사용 하면 `ContentPage` 파생 된 페이지를 네이티브 xamarin.ios, Xamarin Android 및 UWP 응용 프로그램에 직접 추가할 수 있습니다. 네이티브 프로젝트를 사용 하 여 네이티브 프로젝트 .NET Standard에서 파생 페이지를 사용 하는 것과 비교 하 여 네이티브 프로젝트에 페이지를 직접 추가 하는 경우 `ContentPage` 기본 뷰로 페이지를 확장할 수 있다는 이점이 있습니다. 그런 다음 네이티브 뷰를 XAML로 명명 하 `x:Name` 고 코드 숨김으로 참조할 수 있습니다. 네이티브 뷰에 대 한 자세한 내용은 [네이티브 뷰](~/xamarin-forms/platform/native-views/index.md)를 참조 하세요.
 

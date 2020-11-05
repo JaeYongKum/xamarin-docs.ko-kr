@@ -10,16 +10,16 @@ ms.date: 10/25/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dcf09adc690aee5487107630eb74bb8c4e9599cb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b07ec0ef50670aef5b933d5010d523989bb19eff
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562173"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374305"
 ---
 # <a name="passing-arguments-in-xaml"></a>XAML에서 인수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩터리 메서드를 호출 하 고, 제네릭 인수의 형식을 지정 하는 데 사용할 수 있는 XAML 특성을 사용 하는 방법을 보여 줍니다._
 

@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d6a8674f0cffe534b1ee83f20ab255766fbfcbda
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4dd8655d4cd84f7d4214801e55677706eb67efa7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557402"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374682"
 ---
 # <a name="default-image-directory-on-windows"></a>Windows의 기본 이미지 디렉터리
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 유니버설 Windows 플랫폼 플랫폼에 맞게 이미지 자산이 로드 되는 프로젝트의 디렉터리를 정의 합니다. `Application.ImageDirectory` `string` 이미지 자산을 포함 하는 프로젝트 디렉터리를 나타내는로 설정 하 여 XAML에서 사용 됩니다.
 

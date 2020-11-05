@@ -10,16 +10,16 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dad0c3fd70e2484033268f9ad0686d0b3f42cb70
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1872f86c0e7be6ab07b4e962d17be7d8030c1d96
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564110"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373161"
 ---
 # <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목을 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 뷰로 스크롤 하는 두 가지 메서드를 정의 합니다. 오버 로드 중 하나는 지정 된 인덱스에 있는 항목을 뷰로 스크롤하고 다른 하나는 지정 된 항목을 뷰로 스크롤합니다. 두 오버 로드 모두에 항목이 속한 그룹을 나타내는 추가 인수, 스크롤이 완료 된 후 항목의 정확한 위치 및 스크롤에 애니메이션 효과를 적용할지 여부를 지정 하는 추가 인수가 있습니다.
 

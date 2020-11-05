@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a7fafcd154dc30df5d33f5728cf8fd8ae592de3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4d59807c7bafe8d882777dcebc48292f77639539
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562446"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373876"
 ---
 # <a name="tabbedpage-page-transition-animations-on-android"></a>Android의 TabbedPage 페이지 전환 애니메이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 에서 프로그래밍 방식으로 또는 탭 모음을 사용 하는 경우에서 페이지를 탐색 하는 경우이 Android 플랫폼별를 사용 하 여 전환 애니메이션을 사용 하지 않도록 설정 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 합니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `TabbedPage.IsSmoothScrollEnabled` `false` .
 

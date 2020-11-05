@@ -10,16 +10,16 @@ ms.date: 06/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fed80f0954613a6bff49d0611d56549405c78333
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f7cb79b5b90d586980f2e74cd6d2f04b82a8fdf3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564097"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373694"
 ---
 # <a name="no-locxamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _Xamarin.Forms사용자가 날짜를 선택할 수 있는 뷰입니다._
 

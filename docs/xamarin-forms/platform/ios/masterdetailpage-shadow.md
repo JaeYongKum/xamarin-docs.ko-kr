@@ -10,16 +10,16 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b3f7a28452d8507c4cb4a42d75b5edb5d62d8e4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fc6185a303e8fd7bdf68903d3d7bacc646cde601
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563690"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372420"
 ---
 # <a name="masterdetailpage-shadow-on-ios"></a>IOS의 MasterDetailPage 섀도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 플랫폼 특정은 마스터 페이지를 표시할 때의 세부 정보 페이지에 그림자가 적용 되는지 여부를 제어 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 합니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `MasterDetailPage.ApplyShadow` `true` .
 

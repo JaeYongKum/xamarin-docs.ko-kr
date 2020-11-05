@@ -10,16 +10,16 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: afa5ccf8f4d4485ae7a9a45bcbc745bddee20f5c
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 4331b29c54b5f7c59daf0a9e04cd398693e79201
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897483"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374708"
 ---
 # <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/todo)
 
 SQLite 데이터베이스 엔진을 사용 하면 Xamarin.Forms 응용 프로그램에서 공유 코드에 데이터 개체를 로드 하 고 저장할 수 있습니다. 예제 응용 프로그램은 SQLite 데이터베이스 테이블을 사용 하 여 할 일 항목을 저장 합니다. 이 문서에서는 공유 코드에서 SQLite.Net를 사용 하 여 로컬 데이터베이스에 정보를 저장 하 고 검색 하는 방법을 설명 합니다.
 
@@ -41,7 +41,7 @@ NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 �
 
 - **ID:** sqlite-net-pcl
 - **작성자:** SQLite-net
-- **소유자:** praeclarum
+- **소유쟈:** praeclarum
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]

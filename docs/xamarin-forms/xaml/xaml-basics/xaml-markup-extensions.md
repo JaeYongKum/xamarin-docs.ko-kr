@@ -10,16 +10,16 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b934885369882dea2c3a5de1954b428fcfcbac59
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564084"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374604"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML 태그 확장은 다른 소스에서 간접적으로 참조 되는 개체 또는 값으로 속성을 설정할 수 있도록 하는 XAML의 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하는 데 특히 중요 하지만 데이터 바인딩에서 가장 큰 유틸리티를 찾을 수 있습니다._
 
@@ -74,7 +74,7 @@ _XAML 태그 확장은 다른 소스에서 간접적으로 참조 되는 개체 
 
 이러한 속성 중 하나를 변경 해야 하는 경우 세 번이 아니라 한 번만 변경 하는 것이 좋습니다. 이러한 값이 코드 인 경우 상수 및 정적 읽기 전용 개체를 사용 하 여 이러한 값을 일관성 있게 유지 하 고 쉽게 수정할 수 있습니다.
 
-XAML에서 널리 사용 되는 솔루션 중 하나는 *리소스 사전*에 이러한 값 또는 개체를 저장 하는 것입니다. 클래스는 형식의 `VisualElement` `Resources` `ResourceDictionary` 키 및 형식의 값을 포함 하는 사전 인 형식의 속성을 정의 합니다 `string` `object` . 개체를이 사전에 배치 하 고 XAML의 모든 태그에서 참조할 수 있습니다.
+XAML에서 널리 사용 되는 솔루션 중 하나는 *리소스 사전* 에 이러한 값 또는 개체를 저장 하는 것입니다. 클래스는 형식의 `VisualElement` `Resources` `ResourceDictionary` 키 및 형식의 값을 포함 하는 사전 인 형식의 속성을 정의 합니다 `string` `object` . 개체를이 사전에 배치 하 고 XAML의 모든 태그에서 참조할 수 있습니다.
 
 페이지에서 리소스 사전을 사용 하려면 `Resources` 속성-요소 태그 쌍을 포함 합니다. 페이지 맨 위에 배치 하는 것이 가장 편리 합니다.
 
@@ -108,7 +108,7 @@ XAML에서 널리 사용 되는 솔루션 중 하나는 *리소스 사전*에 �
 </ContentPage>
 ```
 
-이제 다양 한 형식의 개체 및 값을 리소스 사전에 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있어야 합니다. 예를 들어 추상 클래스가 될 수 없습니다. 이러한 형식에는 매개 변수가 없는 public 생성자도 있어야 합니다. 각 항목에는 특성으로 지정 된 사전 키가 필요 `x:Key` 합니다. 다음은 그 예입니다.
+이제 다양 한 형식의 개체 및 값을 리소스 사전에 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있어야 합니다. 예를 들어 추상 클래스가 될 수 없습니다. 이러한 형식에는 매개 변수가 없는 public 생성자도 있어야 합니다. 각 항목에는 특성으로 지정 된 사전 키가 필요 `x:Key` 합니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -398,7 +398,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-.NET Standard 라이브러리에서 참조 하는 모든 어셈블리에서 .NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음 `sys` `System` 은 **netstandard.library** 어셈블리에 있는 표준 .net 네임 스페이스에 대 한 접두사입니다. 이는 다른 어셈블리 이므로 어셈블리 이름 (이 경우 **netstandard.library**)도 지정 해야 합니다.
+.NET Standard 라이브러리에서 참조 하는 모든 어셈블리에서 .NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음 `sys` `System` 은 **netstandard.library** 어셈블리에 있는 표준 .net 네임 스페이스에 대 한 접두사입니다. 이는 다른 어셈블리 이므로 어셈블리 이름 (이 경우 **netstandard.library** )도 지정 해야 합니다.
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=netstandard"

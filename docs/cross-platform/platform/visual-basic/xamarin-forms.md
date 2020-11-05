@@ -6,18 +6,18 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 5b042116f6d1fe2832298d09e3d47cba745973ad
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8cb26c3d8cec03cfaa12f7acb974c9944119bdfc
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456875"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374110"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Visual Basic.NET를 사용 하는 Xamarin 양식
 
 Xamarin은 Visual Basic를 직접 지원 하지 않습니다 .이 페이지의 지침에 따라 c # Xamarin.ios 솔루션을 만든 다음 .NET Standard c # 프로젝트를 Visual Basic 바꿉니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 
 [![Xamarin Forms 솔루션을 만든 다음 .NET Standard 프로젝트를 Visual Basic으로 바꿉니다.](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
 
@@ -28,15 +28,15 @@ Xamarin은 Visual Basic를 직접 지원 하지 않습니다 .이 페이지의 �
 
 Visual Basic를 사용 하는 간단한 Xamarin.ios 프로젝트를 만들려면 다음 단계를 수행 합니다.
 
-1. Visual Studio 2019에서 **새 프로젝트 만들기**를 선택 합니다.
+1. Visual Studio 2019에서 **새 프로젝트 만들기** 를 선택 합니다.
 
-2. **새 프로젝트 만들기** 창에서 **xamarin.ios** 를 입력 하 여 목록을 필터링 하 고 **모바일 앱 (xamarin.ios)** 을 선택 하 고 **다음**을 누릅니다.
+2. **새 프로젝트 만들기** 창에서 **xamarin.ios** 를 입력 하 여 목록을 필터링 하 고 **모바일 앱 (xamarin.ios)** 을 선택 하 고 **다음** 을 누릅니다.
 
     [![Xamarin. Forms 앱에 대 한 필터](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
 
-3. 다음 화면에서 프로젝트의 이름을 입력 하 고 **만들기**를 누릅니다.
+3. 다음 화면에서 프로젝트의 이름을 입력 하 고 **만들기** 를 누릅니다.
 
-4. **빈** 템플릿을 선택 하 고 **확인을**누릅니다.
+4. **빈** 템플릿을 선택 하 고 **확인을** 누릅니다.
 
     [![빈 Xamarin.ios 템플릿](xamarin-forms-images/04-sml.png)](xamarin-forms-images/04.png#lightbox)
 
@@ -48,17 +48,17 @@ Visual Basic를 사용 하는 간단한 Xamarin.ios 프로젝트를 만들려면
 
     [![Visual Basic 라이브러리에 대 한 필터](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
-7. 다음 화면에서 프로젝트의 이름을 입력 하 고 **만들기**를 누릅니다.
+7. 다음 화면에서 프로젝트의 이름을 입력 하 고 **만들기** 를 누릅니다.
 
-8. Visual Basic 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 기존 c # 프로젝트와 일치 하도록 **기본 네임 스페이스** 를 변경 합니다.
+8. Visual Basic 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택한 다음 기존 c # 프로젝트와 일치 하도록 **기본 네임 스페이스** 를 변경 합니다.
 
     [![Visual Basic 루트 네임 스페이스가 Xamarin.ios 앱과 일치 하는지 확인 합니다.](xamarin-forms-images/07a-sml.png)](xamarin-forms-images/07a.png#lightbox)
 
-9. 새 Visual Basic 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리**를 선택한 다음 **xamarin.ios** 를 설치 하 고 패키지 관리자 창을 닫습니다.
+9. 새 Visual Basic 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리** 를 선택한 다음 **xamarin.ios** 를 설치 하 고 패키지 관리자 창을 닫습니다.
 
     [![폼을 열고 패키지 관리자 창을 닫습니다.](xamarin-forms-images/07b-sml.png)](xamarin-forms-images/07b.png#lightbox)
 
-10. 기본 **Class1** 파일의 이름을 **App .vb**로 바꿉니다.
+10. 기본 **Class1** 파일의 이름을 **App .vb** 로 바꿉니다.
 
     [![기본 Class1 파일 및 클래스를 앱으로 이름 바꾸기](xamarin-forms-images/08.png)](xamarin-forms-images/08.png#lightbox)
 
@@ -90,7 +90,7 @@ Visual Basic를 사용 하는 간단한 Xamarin.ios 프로젝트를 만들려면
     ```
 
 12. Android 및 iOS 프로젝트를 업데이트 하 여 템플릿에서 만든 c # 프로젝트가 아닌 새 Visual Basic 프로젝트를 참조 합니다.
-Android 및 iOS 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 여 **참조 관리자**를 엽니다. C # 라이브러리와 Visual Basic 라이브러리의 틱을 해제 합니다 (Android 및 iOS 프로젝트 모두에 대해이 작업을 수행 하는 것은 잊지 않음).
+Android 및 iOS 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 여 **참조 관리자** 를 엽니다. C # 라이브러리와 Visual Basic 라이브러리의 틱을 해제 합니다 (Android 및 iOS 프로젝트 모두에 대해이 작업을 수행 하는 것은 잊지 않음).
 
     [![이전 프로젝트 참조를 제거 하 고 Visual Basic 참조를 추가 합니다.](xamarin-forms-images/10-sml.png)](xamarin-forms-images/10.png#lightbox)
 

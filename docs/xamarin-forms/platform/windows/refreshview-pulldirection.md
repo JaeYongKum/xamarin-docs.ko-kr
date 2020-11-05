@@ -10,16 +10,16 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5c1310e300373fe75cbcd1464220acf989516ba
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2aebd86b4b15dec1a79cb60057e0c04f2e196ac5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555686"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372901"
 ---
 # <a name="refreshview-pull-direction-on-windows"></a>Windows의 RefreshView 풀 방향
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 유니버설 Windows 플랫폼 플랫폼별를 사용 하면 `RefreshView` 데이터를 표시 하는 스크롤 가능한 컨트롤의 방향과 일치 하도록의 끌어오기 방향을 변경할 수 있습니다. `RefreshView.RefreshPullDirection`바인딩 가능한 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 `RefreshPullDirection` .
 

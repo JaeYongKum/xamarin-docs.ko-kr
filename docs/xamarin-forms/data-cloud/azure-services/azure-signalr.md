@@ -1,6 +1,6 @@
 ---
-title: Azure SignalR ServiceXamarin.Forms
-description: Azure SignalR Service를 시작 하 고 다음을 사용 하 여 Azure Functions 하세요.Xamarin.Forms
+title: Azure SignalR Service Xamarin.Forms
+description: Azure SignalR Service를 시작 하 고 다음을 사용 하 여 Azure Functions 하세요. Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
@@ -9,16 +9,16 @@ ms.date: 06/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4ef1f9aadd93c971adb66ede442796c2b72c2c9a
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 12e1576ab2e5f7a90f4e1355d03e8f9c5c487e6c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226835"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374422"
 ---
-# <a name="azure-signalr-service-with-xamarinforms"></a>Azure SignalR ServiceXamarin.Forms
+# <a name="azure-signalr-service-with-no-locxamarinforms"></a>Azure SignalR Service Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core SignalR는 응용 프로그램에 실시간 통신을 추가 하는 프로세스를 간소화 하는 응용 프로그램 모델입니다. Azure SignalR Service는 확장성 있는 SignalR 응용 프로그램을 신속 하 게 개발 하 고 배포할 수 있습니다. Azure Functions는 이벤트 중심의 확장 가능한 응용 프로그램을 구성 하기 위해 결합 될 수 있는 수명이 짧은 활성이 아닌 코드 메서드입니다.
 
@@ -42,13 +42,13 @@ ASP.NET Core SignalR는 응용 프로그램에 실시간 통신을 추가 하는
 
 ### <a name="create-an-azure-signalr-service"></a>Azure SignalR Service 만들기
 
-Azure Portal의 왼쪽 위 모서리에서 **리소스 만들기** 를 선택 하 고 **SignalR**를 검색 하 여 Azure SignalR 서비스를 만들 수 있습니다. Azure SignalR 서비스는 무료 계층에서 만들 수 있습니다. Azure SignalR 서비스는 **서버** 리스 서비스 모드에 있어야 합니다. 실수로 기본 또는 클래식 서비스 모드를 선택 하는 경우 나중에 Azure SignalR 서비스 속성에서 변경할 수 있습니다.
+Azure Portal의 왼쪽 위 모서리에서 **리소스 만들기** 를 선택 하 고 **SignalR** 를 검색 하 여 Azure SignalR 서비스를 만들 수 있습니다. Azure SignalR 서비스는 무료 계층에서 만들 수 있습니다. Azure SignalR 서비스는 **서버** 리스 서비스 모드에 있어야 합니다. 실수로 기본 또는 클래식 서비스 모드를 선택 하는 경우 나중에 Azure SignalR 서비스 속성에서 변경할 수 있습니다.
 
 다음 스크린샷은 새 Azure SignalR 서비스를 만드는 방법을 보여 줍니다.
 
 ![Azure Portal에서 Azure SignalR Service 만들기의 스크린샷](azure-signalr-images/azure-signalr-create.png "Azure SignalR Service 만들기")
 
-Azure SignalR Service의 **키** 섹션에는 **연결 문자열이**포함 되어 있으며,이는 Azure Functions 앱을 SignalR hub에 연결 하는 데 사용 됩니다. 다음 스크린샷은 Azure SignalR 서비스에서 연결 문자열을 찾을 수 있는 위치를 보여 줍니다.
+Azure SignalR Service의 **키** 섹션에는 **연결 문자열이** 포함 되어 있으며,이는 Azure Functions 앱을 SignalR hub에 연결 하는 데 사용 됩니다. 다음 스크린샷은 Azure SignalR 서비스에서 연결 문자열을 찾을 수 있는 위치를 보여 줍니다.
 
 ![Azure Portal Azure SignalR 연결 문자열의 스크린샷](azure-signalr-images/azure-signalr-connection-string.png "Azure SignalR 연결 문자열")
 
@@ -64,7 +64,7 @@ Azure 함수는 Visual Studio 2019에서 Azure Functions App 인스턴스에 배
 
 ### <a name="build-azure-functions-in-visual-studio-2019"></a>Visual Studio 2019의 빌드 Azure Functions
 
-샘플 응용 프로그램은 **Negotiate.cs** 및 **Talk.cs**라는 파일에 서버를 사용 하지 않는 두 개의 Azure Functions를 포함 하는 파일 \ **서버**라는 클래스 라이브러리를 포함 합니다.
+샘플 응용 프로그램은 **Negotiate.cs** 및 **Talk.cs** 라는 파일에 서버를 사용 하지 않는 두 개의 Azure Functions를 포함 하는 파일 \ **서버** 라는 클래스 라이브러리를 포함 합니다.
 
 `Negotiate`함수는 `SignalRConnectionInfo` `AccessToken` 속성 및 속성을 포함 하는 개체를 사용 하 여 웹 요청에 응답 합니다 `Url` . 모바일 응용 프로그램은 이러한 값을 사용 하 여 SignalR hub에 자신을 등록 합니다. 다음 코드에서는 함수를 보여 줍니다 `Negotiate` .
 
@@ -142,7 +142,7 @@ Azure Functions 앱 인스턴스를 선택 하면 대상 Azure Functions 앱에 
 
 ![Azure Functions 앱에 게시 된 함수](azure-signalr-images/azure-functions-deployed.png "Azure Functions 앱에 게시 된 함수")
 
-## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Azure SignalR Service 통합Xamarin.Forms
+## <a name="integrate-azure-signalr-service-with-no-locxamarinforms"></a>Azure SignalR Service 통합 Xamarin.Forms
 
 Azure SignalR 서비스와 응용 프로그램 간의 통합은 Xamarin.Forms `MainPage` 3 개의 이벤트에 할당 된 이벤트 처리기를 사용 하 여 클래스에서 인스턴스화된 SignalR Service 클래스입니다. 이러한 이벤트 처리기에 대 한 자세한 내용은 [에서 Xamarin.Forms SignalR Service 클래스 사용 ](#use-the-signalr-service-class-in-xamarinforms)을 참조 하세요.
 
@@ -252,7 +252,7 @@ public void AddNewMessage(JObject message)
 }
 ```
 
-### <a name="use-the-signalr-service-class-in-xamarinforms"></a>에서 SignalR 서비스 클래스 사용Xamarin.Forms
+### <a name="use-the-signalr-service-class-in-no-locxamarinforms"></a>에서 SignalR 서비스 클래스 사용 Xamarin.Forms
 
 에서 SignalR service 클래스를 활용 Xamarin.Forms 하는 것은 `SignalRService` 코드 숨김이 클래스의 클래스 이벤트를 바인딩하여 수행 됩니다 `MainPage` .
 

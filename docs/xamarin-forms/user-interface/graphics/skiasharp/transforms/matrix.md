@@ -10,16 +10,16 @@ ms.date: 04/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 911365b6293fecd3bf309f3e61d9b232d90b7a13
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e26e4b66cfc9648eee3c1caab2f8cdc0c02d5c7b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556557"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374565"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 매트릭스 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _다양 한 변환 매트릭스를 사용 하 여 SkiaSharp 변환에 대해 자세히 알아보기_
 
@@ -153,7 +153,7 @@ SkiaSharp가 그래픽 개체를 렌더링 하는 경우 각 요소 (x, y)는 �
 
 ## <a name="matrix-multiplication"></a>행렬 곱하기
 
-Transform 행렬을 사용 하는 경우의 한 가지 중요 한 장점은 SkiaSharp 설명서에서 *연결*로 참조 되는 행렬 곱셈에서 복합 변환을 얻을 수 있다는 것입니다. 의 많은 변환 관련 메서드는 `SKCanvas` "사전 연결" 또는 "사전 연결"을 참조 합니다. 이는 행렬 곱셈이 교환 되지 않으므로 중요 한 곱하기의 순서를 나타냅니다.
+Transform 행렬을 사용 하는 경우의 한 가지 중요 한 장점은 SkiaSharp 설명서에서 *연결* 로 참조 되는 행렬 곱셈에서 복합 변환을 얻을 수 있다는 것입니다. 의 많은 변환 관련 메서드는 `SKCanvas` "사전 연결" 또는 "사전 연결"을 참조 합니다. 이는 행렬 곱셈이 교환 되지 않으므로 중요 한 곱하기의 순서를 나타냅니다.
 
 예를 들어, 메서드에 대 한 설명서에서는 [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) "지정 된 번역을 사용 하 여 현재 매트릭스를 미리 concats" 하는 반면 메서드에 대 한 설명서에서는 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) "지정 된 소수 자릿수를 사용 하 여 현재 매트릭스를 미리 concats" 라고 표시 합니다.
 

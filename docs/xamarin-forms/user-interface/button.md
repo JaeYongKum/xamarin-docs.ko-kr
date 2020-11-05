@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fba8dcb344f79c21815a58cff0d8132967381cca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6534d25e46ecdd5fcdcd9c525aa49b8e2ded5f49
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556739"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374214"
 ---
 # <a name="no-locxamarinforms-button"></a>Xamarin.Forms 단추만
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _단추는 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 하거나 클릭에 응답 합니다._
 
@@ -59,7 +59,7 @@ _단추는 응용 프로그램이 특정 작업을 수행 하도록 지시 하�
 
 기본적으로는 `Button` 사각형 이지만 [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 아래 섹션의 [**단추 모양**](#button-appearance)에서 설명한 대로 속성을 사용 하 여 모퉁이가 둥근 모퉁이를 제공할 수 있습니다.
 
-[`Text`](xref:Xamarin.Forms.Button.Text)속성은에 표시 되는 텍스트를 지정 합니다 `Button` . [`Clicked`](xref:Xamarin.Forms.Button.Clicked)이벤트는 이라는 이벤트 처리기로 설정 됩니다 `OnButtonClicked` . 이 처리기는 코드 **BasicButtonClickPage.xaml.cs**파일에 있습니다.
+[`Text`](xref:Xamarin.Forms.Button.Text)속성은에 표시 되는 텍스트를 지정 합니다 `Button` . [`Clicked`](xref:Xamarin.Forms.Button.Clicked)이벤트는 이라는 이벤트 처리기로 설정 됩니다 `OnButtonClicked` . 이 처리기는 코드 **BasicButtonClickPage.xaml.cs** 파일에 있습니다.
 
 ```csharp
 public partial class BasicButtonClickPage : ContentPage
@@ -133,7 +133,7 @@ public class CodeButtonClickPage : ContentPage
 button.Clicked += async (sender, args) => await label.RelRotateTo(360, 1000);
 ```
 
-물론 이벤트 처리기를 별도의 메서드로 정의 ( `OnButtonClick` **기본 단추 클릭**의 메서드와 동일) 하 고 해당 메서드를 이벤트에 연결할 수도 있습니다.
+물론 이벤트 처리기를 별도의 메서드로 정의 ( `OnButtonClick` **기본 단추 클릭** 의 메서드와 동일) 하 고 해당 메서드를 이벤트에 연결할 수도 있습니다.
 
 ```csharp
 button.Clicked += OnButtonClicked;
@@ -631,7 +631,7 @@ class ToggleButton : Button
 
 `ToggleButton`생성자는 `Clicked` 속성 값을 변경할 수 있도록 이벤트에 처리기를 연결 합니다 `IsToggled` . `OnIsToggledChanged`메서드는 이벤트를 발생 시킵니다 `Toggled` .
 
-메서드의 마지막 줄에서는 `OnIsToggledChanged` `VisualStateManager.GoToState` 두 개의 텍스트 문자열 "ToggledOn" 및 "ToggledOff"를 사용 하 여 정적 메서드를 호출 합니다. 이 메서드와 응용 프로그램이 [** Xamarin.Forms 시각적 상태 관리자**](~/xamarin-forms/user-interface/visual-state-manager.md)문서에서 시각적 상태에 응답 하는 방법에 대해 알아볼 수 있습니다.
+메서드의 마지막 줄에서는 `OnIsToggledChanged` `VisualStateManager.GoToState` 두 개의 텍스트 문자열 "ToggledOn" 및 "ToggledOff"를 사용 하 여 정적 메서드를 호출 합니다. 이 메서드와 응용 프로그램이 [**Xamarin.Forms 시각적 상태 관리자**](~/xamarin-forms/user-interface/visual-state-manager.md)문서에서 시각적 상태에 응답 하는 방법에 대해 알아볼 수 있습니다.
 
 `ToggleButton`는에 대 한 호출을 수행 하기 때문에 `VisualStateManager.GoToState` 클래스 자체에는 해당 상태에 따라 단추의 모양을 변경 하는 추가 기능을 포함할 필요가 없습니다 `IsToggled` . 이는를 호스팅하는 XAML의 책임입니다 `ToggleButton` .
 
@@ -766,7 +766,7 @@ IOS 프로젝트의 **Resources** 폴더에는이 이미지의 세 가지 크기
 - 로 저장 된 96 픽셀 사각형 비트맵 **/Resource/MonkeyFace@2x.png**
 - 로 저장 된 144 픽셀 사각형 비트맵 **/Resource/MonkeyFace@3x.png**
 
-세 개의 비트맵 모두 **BundleResource**의 **빌드 작업** 을 제공 했습니다.
+세 개의 비트맵 모두 **BundleResource** 의 **빌드 작업** 을 제공 했습니다.
 
 Android 프로젝트의 경우 비트맵은 모두 동일한 이름을 갖지만 **Resources** 폴더의 다른 하위 폴더에 저장 됩니다.
 
@@ -775,7 +775,7 @@ Android 프로젝트의 경우 비트맵은 모두 동일한 이름을 갖지만
 - /Resources/drawable-xxhdpi/로 저장 된 144 픽셀 사각형 비트맵 **MonkeyFace.png**
 - /Resources/drawable-xxxhdpi/로 저장 된 192 픽셀 사각형 비트맵 **MonkeyFace.png**
 
-여기에는 **Androidresource**의 **빌드 작업이** 제공 되었습니다.
+여기에는 **Androidresource** 의 **빌드 작업이** 제공 되었습니다.
 
 UWP 프로젝트에서 비트맵은 프로젝트의 어디에 나 저장 될 수 있지만 일반적으로 사용자 지정 폴더 또는 **자산** 기존 폴더에 저장 됩니다. UWP 프로젝트는 다음 비트맵을 포함 합니다.
 

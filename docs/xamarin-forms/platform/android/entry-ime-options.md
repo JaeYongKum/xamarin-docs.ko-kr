@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 308b0aa56afdbdbd0ac1e918eefd72b1edb4f338
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 79ceca6f028ec5d0399251e178d82d1b2fff81ef
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563824"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373343"
 ---
 # <a name="entry-input-method-editor-options-on-android"></a>Android에서 입력 방법 편집기 옵션 입력
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 Android 플랫폼별는에 대 한 소프트 키보드의 IME (입력기) 옵션을 설정 합니다 [`Entry`](xref:Xamarin.Forms.Entry) . 여기에는 소프트 키보드의 하단 모서리에 있는 사용자 작업 단추와의 상호 작용을 설정 하는 작업이 포함 됩니다 `Entry` . [`Entry.ImeOptions`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty)연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) .
 

@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a6e19d25cefb4b8fcd870a9b590f129b2d9d85b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: eb0c8bd01c9cab8a4048c0ee3deacad7afd56899
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557883"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373895"
 ---
 # <a name="the-rotate-transform"></a>회전 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 회전 변환으로 가능한 효과 및 애니메이션 탐색_
 
@@ -258,7 +258,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-`revolveDegrees`및 `rotateDegrees` 필드에 애니메이션 효과가 적용 됩니다. 이 프로그램은 클래스를 기반으로 하는 다른 애니메이션 기술을 사용 Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) 합니다. 이 클래스는 [ *를 사용 하 Xamarin.Forms 여 Mobile Apps 만들기 *의 22 장 ](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)에서 설명 합니다 `OnAppearing` . 재정의는 `Animation` 콜백 메서드를 사용 하 여 두 개의 개체를 만든 다음 `Commit` 애니메이션 기간 동안 호출 합니다.
+`revolveDegrees`및 `rotateDegrees` 필드에 애니메이션 효과가 적용 됩니다. 이 프로그램은 클래스를 기반으로 하는 다른 애니메이션 기술을 사용 Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) 합니다. 이 클래스는 [ *를 사용 하 Xamarin.Forms 여 Mobile Apps 만들기* 의 22 장](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)에서 설명 합니다 `OnAppearing` . 재정의는 `Animation` 콜백 메서드를 사용 하 여 두 개의 개체를 만든 다음 `Commit` 애니메이션 기간 동안 호출 합니다.
 
 ```csharp
 protected override void OnAppearing()

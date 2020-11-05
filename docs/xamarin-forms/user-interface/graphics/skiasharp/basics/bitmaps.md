@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a62d8f8e04d97b45fff779739d817defce1414f2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3b73aabd184060e273d7a1e3e20f6e78eb0ba0d1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556869"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373551"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _다양 한 소스에서 비트맵을 로드 하 고 표시 합니다._
 
@@ -104,7 +104,7 @@ Android 운영 체제는 `Stream` `GetStreamAsync` `SKBitmap.Decode` 주 스레�
 
 ## <a name="loading-a-bitmap-resource"></a>비트맵 리소스 로드
 
-코드를 기준으로 비트맵을 로드 하는 가장 쉬운 방법은 응용 프로그램에 직접 비트맵 리소스를 포함 하는 것입니다. **SkiaSharpFormsDemos** 프로그램에는 명명 된 **monkey.png**를 포함 하 여 여러 비트맵 파일을 포함 하는 **Media** 라는 폴더가 포함 됩니다. 프로그램 리소스로 저장 된 비트맵의 경우 **속성** 대화 상자를 사용 하 여 **포함 리소스**의 **빌드 작업** 을 파일에 지정 해야 합니다.
+코드를 기준으로 비트맵을 로드 하는 가장 쉬운 방법은 응용 프로그램에 직접 비트맵 리소스를 포함 하는 것입니다. **SkiaSharpFormsDemos** 프로그램에는 명명 된 **monkey.png** 를 포함 하 여 여러 비트맵 파일을 포함 하는 **Media** 라는 폴더가 포함 됩니다. 프로그램 리소스로 저장 된 비트맵의 경우 **속성** 대화 상자를 사용 하 여 **포함 리소스** 의 **빌드 작업** 을 파일에 지정 해야 합니다.
 
 포함 된 각 리소스에는 프로젝트 이름, 폴더 및 파일 이름으로 구성 되는 *리소스 ID* 가 있습니다. 여기에는 모두 마침표로 연결 됨: **SkiaSharpFormsDemos.Media.monkey.png**. 클래스의 메서드에 대 한 인수로 리소스 ID를 지정 하 여이 리소스에 대 한 액세스 권한을 얻을 수 있습니다 [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) [`Assembly`](xref:System.Reflection.Assembly) .
 

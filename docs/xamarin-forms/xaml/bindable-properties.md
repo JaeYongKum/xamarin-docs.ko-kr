@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f50dde4bb96f43c6487cb40889746514f23d9d44
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561536"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374084"
 ---
 # <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms 바인딩 가능한 속성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 바인딩 가능한 속성은 필드를 사용 하 여 속성을 백업 하는 대신 형식으로 속성을 백업 하 여 CLR 속성 기능을 확장 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 합니다. 바인딩 가능한 속성의 목적은 부모-자식 관계를 통해 설정 된 데이터 바인딩, 스타일, 템플릿 및 값을 지 원하는 속성 시스템을 제공 하는 것입니다. 또한 바인딩 가능한 속성은 기본값, 속성 값의 유효성 검사 및 속성 변경을 모니터링 하는 콜백을 제공할 수 있습니다.
 
@@ -69,7 +69,7 @@ public static readonly BindableProperty EventNameProperty =
 
 필요에 따라 인스턴스를 만들 때 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 다음 매개 변수를 지정할 수 있습니다.
 
-- 바인딩 모드입니다. 이는 속성 값 변경이 전파 되는 방향을 지정 하는 데 사용 됩니다. 기본 바인딩 모드에서 변경 내용은 *원본* 에서 *대상*으로 전파 됩니다.
+- 바인딩 모드입니다. 이는 속성 값 변경이 전파 되는 방향을 지정 하는 데 사용 됩니다. 기본 바인딩 모드에서 변경 내용은 *원본* 에서 *대상* 으로 전파 됩니다.
 - 속성 값이 설정 될 때 호출 되는 유효성 검사 대리자입니다. 자세한 내용은 [유효성 검사 콜백](#validation-callbacks)을 참조 하세요.
 - 속성 값이 변경 될 때 호출 되는 속성 변경 대리자입니다. 자세한 내용은 [속성 변경 내용 검색](#detect-property-changes)을 참조 하세요.
 - 속성 값이 변경 될 때 호출 되는 속성 변경 대리자입니다. 이 대리자에는 속성 변경 대리자와 동일한 시그니처가 있습니다.

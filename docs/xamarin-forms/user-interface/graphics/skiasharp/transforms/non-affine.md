@@ -10,16 +10,16 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6de5e21c509203c5402ed8c7e75908b54808d140
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 16085f8bb3af57fdd0c00c7c111a91df1dd273f7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556895"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374552"
 ---
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Transform 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효과 만들기_
 
@@ -243,7 +243,7 @@ z ' = Persp0 · x + Persp1 · y + 1
 
 일반적으로 및는 격리에서 설정 하지 않습니다 `Persp0` `Persp1` . 행렬의 다른 셀을 설정 하 여 특정 유형의 비 관계 변환을 수행 해야 하는 경우가 종종 있습니다.
 
-이러한 비 상관 변환 중 하나는 *테이퍼 변형*입니다. 이러한 비 상관 변환 형식은 사각형의 전체 크기를 유지 하지만 한쪽은 tapers 합니다.
+이러한 비 상관 변환 중 하나는 *테이퍼 변형* 입니다. 이러한 비 상관 변환 형식은 사각형의 전체 크기를 유지 하지만 한쪽은 tapers 합니다.
 
 ![테이퍼 변형으로 들어오는 상자](non-affine-images/tapertransform.png)
 

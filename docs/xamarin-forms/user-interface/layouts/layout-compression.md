@@ -10,16 +10,16 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5e1cb9709c224ed5059de24bb45eed882ef216b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c710328426590322f60f482708931c160b2100ca
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563538"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372660"
 ---
 # <a name="layout-compression"></a>레이아웃 압축
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _레이아웃 압축은 페이지 렌더링 성능을 향상 시키기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이 문서에서는 레이아웃 압축 및 가져올 수 있는 이점을 사용 하도록 설정 하는 방법을 설명 합니다._
 

@@ -10,18 +10,18 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be4b868a2f38063f3a46d57ecb190b377eb89dce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 01dba502f6a561aac122e9fa44d7b257c76c5b4b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563590"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374331"
 ---
 # <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms 브러시: 선형 그라데이션
 
 ![API 미리 보기](~/media/shared/preview.png "이 API는 현재 시험판임")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 클래스는 `LinearGradientBrush` 클래스에서 파생 `GradientBrush` 되 고 선형 그라데이션으로 영역을 그리며 그라데이션 축 이라고 하는 선을 따라 둘 이상의 색을 혼합 합니다. `GradientStop` 개체는 그라데이션의 색과 위치를 지정 하는 데 사용 됩니다. 개체에 대 한 자세한 내용은 `GradientStop` [ Xamarin.Forms 브러시: 그라데이션](gradient.md)을 참조 하세요.
 

@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2483599687ec735260be162f67c2f3723eaa689
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8dc17ea4dba8257ef82c33aa87d6ffc9974658ac
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562459"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374188"
 ---
 # <a name="tabbedpage-toolbar-placement-and-color-on-android"></a>Android의 TabbedPage 도구 모음 배치 및 색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 > [!IMPORTANT]
 > 의 도구 모음 색을 설정 하는 플랫폼별는 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 이제 사용 되지 않으며 및 속성으로 대체 되었습니다 [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) . 자세한 내용은 [Create a TabbedPage](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md#create-a-tabbedpage)을 참조 하세요.

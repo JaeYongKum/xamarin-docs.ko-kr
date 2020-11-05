@@ -10,16 +10,16 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6af0641fe1f8f9be772b25c26825232b6bdba9b7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3146d1c1de66c0b2bc2e9c2d86a7a50d406ecd7e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562381"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373369"
 ---
 # <a name="consume-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _웹 서비스를 응용 프로그램에 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
 
@@ -59,7 +59,7 @@ REST 서비스는 ASP.NET Core를 사용 하 여 작성 되며 다음 작업을 
 |할 일 항목의 목록 가져오기|GET|/api/todoitems/|
 |새 할 일 항목 만들기|POST|/api/todoitems/|JSON 형식의 TodoItem|
 |할 일 항목 업데이트|PUT|/api/todoitems/|JSON 형식의 TodoItem|
-|할 일 항목 삭제|DELETE|/api/todoitems/{id}|
+|할 일 항목 삭제|Delete|/api/todoitems/{id}|
 
 대부분의 Uri는 `TodoItem` 경로에 ID를 포함 합니다. 예를 들어 ID가 인를 삭제 하기 위해 `TodoItem` `6bb8a868-dba1-4f1a-93b7-24ebce87e243` 클라이언트는에 삭제 요청을 보냅니다 `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . 예제 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 [데이터 모델링](~/xamarin-forms/data-cloud/web-services/introduction.md)을 참조 하세요.
 

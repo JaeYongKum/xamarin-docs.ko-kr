@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a77ebb07a09c1bbd2df482c81040f271cdf8f56e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ea590c0390ab045e5cf8b526aee66c2408d1b784
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556349"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374669"
 ---
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp 분리 가능 blend [**모드**](separable.md)문서에서 볼 수 있듯이 분리 가능 blend 모드는 빨강, 녹색 및 파랑 채널에 대해 별도로 작업을 수행 합니다. 분리 되지 않은 혼합 모드는 그렇지 않습니다. 색, 채도 및 광도 수준에서 작동 하는 경우 분리 되지 않은 혼합 모드는 다음과 같은 다양 한 방식으로 색을 변경할 수 있습니다.
 
@@ -29,7 +29,7 @@ SkiaSharp 분리 가능 blend [**모드**](separable.md)문서에서 볼 수 있
 
 분리 되지 않은 혼합 모드를 이해 하려면 대상 및 원본 픽셀을 색-채도-광도 모델에서 색으로 처리 해야 합니다. (명도를 밝기 라고도 합니다.)
 
-HSL 색 모델에 대해서는이 문서의 [**통합 Xamarin.Forms **](../../basics/integration.md) 및 샘플 프로그램에서 hsl 색을 사용 하 여 실험을 수행할 수 있습니다. 정적 메서드를 사용 `SKColor` 하 여 색상, 채도 및 명도 값을 사용 하 여 값을 만들 수 있습니다 [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
+HSL 색 모델에 대해서는이 문서의 [**통합 Xamarin.Forms**](../../basics/integration.md) 및 샘플 프로그램에서 hsl 색을 사용 하 여 실험을 수행할 수 있습니다. 정적 메서드를 사용 `SKColor` 하 여 색상, 채도 및 명도 값을 사용 하 여 값을 만들 수 있습니다 [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
 
 색상은 색의 기준 wavelength 나타냅니다. 색상 값의 범위는 0에서 360 사이이 고 덧셈 및 subtractive 주를 순환 합니다. 빨강은 값 0, 노랑, 60, 녹색은 120, 사이안은 180, blue is 240, 자홍은 300, 주기가 다시 빨간색으로 바뀝니다.
 
@@ -211,11 +211,11 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 ## <a name="a-matte-for-a-separable-mode"></a>분리 가능 모드의 무광택
 
-[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **Banana.jpg**입니다.
+[**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **Banana.jpg** 입니다.
 
 ![바나나 원숭이](non-separable-images/Banana.jpg "바나나 원숭이")
 
-바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte.png**입니다.
+바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte.png** 입니다.
 
 ![바나나 무광택](non-separable-images/BananaMatte.png "바나나 무광택")
 

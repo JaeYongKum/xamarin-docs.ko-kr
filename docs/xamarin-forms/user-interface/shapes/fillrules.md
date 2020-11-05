@@ -10,18 +10,18 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1277b0acda598128e69b39a99910a468f6baa11
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 39524a294245236bc1af875d8b6268d2129fead7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559261"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373083"
 ---
 # <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms 셰이프: 채우기 규칙
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 여러 Xamarin.Forms 도형 클래스에는 `FillRule` 형식의 속성이 있습니다 `FillRule` . 여기에 포함 됩니다 `Polygon`하십시오 `Polyline`, 및 `GeometryGroup`합니다.
 

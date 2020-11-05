@@ -10,16 +10,16 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 32de64c0fa6b0ec0a0b03c8075710e1cbc92dd49
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5f48300b6c974bbbb0106f1afaa6c863f8159c58
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557415"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374643"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp를 사용 하 여 세 가지 다른 방법으로 원호를 정의 하는 방법을 알아봅니다._
 
@@ -219,7 +219,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="the-tangent-arc"></a>탄젠트 호
 
-에서 지 원하는 두 번째 형식의 호는 `SKPath` *탄젠트 호*이므로, arc가 연결 된 두 줄에 탄젠트 한 원의 원주 때문에 호출 됩니다.
+에서 지 원하는 두 번째 형식의 호는 `SKPath` *탄젠트 호* 이므로, arc가 연결 된 두 줄에 탄젠트 한 원의 원주 때문에 호출 됩니다.
 
 탄젠트 원호는  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) 두 개의 매개 변수를 사용 하 여 메서드를 호출 하거나 해당 `SKPoint` [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) 점에 대해 별도의 매개 변수가 있는 오버 로드를 사용 하 여 경로에 추가 됩니다 `Single` .
 
@@ -235,7 +235,7 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 
 - 컨투어의 현재 점 이거나, `MoveTo` 가 호출 되지 않은 경우에는 점 (0, 0)입니다.
 - 메서드에 대 한 첫 번째 요소 인수입니다 `ArcTo` ( *모퉁이점* 이라고 함).
-- `ArcTo` *대상 지점*이라고 하는에 대 한 두 번째 요소 인수입니다.
+- `ArcTo` *대상 지점* 이라고 하는에 대 한 두 번째 요소 인수입니다.
 
 ![탄젠트 호를 시작 하는 세 가지 요소](arcs-images/tangentarcthreepoints.png)
 

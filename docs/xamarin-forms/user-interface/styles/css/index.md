@@ -11,16 +11,16 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39a6dbcbd5e825c6630bfb60b61bf00a308fdc0e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 656a9dbec5f0520b4167c482b227ea863eb4c412
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562784"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373538"
 ---
 # <a name="styling-no-locxamarinforms-apps-using-cascading-style-sheets-css"></a>Xamarin.FormsCSS 스타일시트를 사용 하 여 앱 스타일 지정 (CSS)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms CSS (CSS 스타일시트)를 사용 하 여 시각적 요소 스타일 지정을 지원 합니다._
 
@@ -90,7 +90,7 @@ stacklayout>image {
 스타일 시트를 솔루션에 추가 하는 프로세스는 다음과 같습니다.
 
 1. .NET Standard library 프로젝트에 빈 CSS 파일을 추가 합니다.
-1. CSS 파일의 빌드 작업을 **EmbeddedResource**로 설정 합니다.
+1. CSS 파일의 빌드 작업을 **EmbeddedResource** 로 설정 합니다.
 
 ### <a name="loading-a-style-sheet"></a>스타일 시트 로드
 
@@ -114,7 +114,7 @@ stacklayout>image {
 [`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source)속성은 바깥쪽 XAML 파일의 위치를 기준으로 하는 uri로 스타일 시트를 지정 하거나 uri가로 시작 하는 경우 프로젝트 루트에 상대적인 uri로 지정 합니다 `/` .
 
 > [!WARNING]
-> 빌드 작업이  **EmbeddedResource**으로 설정 되지 않은 경우 CSS 파일을 로드 하지 못합니다.
+> 빌드 작업이  **EmbeddedResource** 으로 설정 되지 않은 경우 CSS 파일을 로드 하지 못합니다.
 
 또는 스타일 시트를에 추가 하기 전에 클래스를 사용 하 여 로드 하 고 구문 분석할 수 있습니다 ( [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 섹션에서 인라인) `CDATA` .
 
@@ -363,7 +363,7 @@ stacklayout>image {
 
 ## <a name="property-reference"></a>속성 참조
 
-다음 CSS 속성은에서 지원 됩니다 Xamarin.Forms . **값** 열에서 형식은 _기울임꼴_이 고 문자열 리터럴은입니다 `gray` .
+다음 CSS 속성은에서 지원 됩니다 Xamarin.Forms . **값** 열에서 형식은 _기울임꼴_ 이 고 문자열 리터럴은입니다 `gray` .
 
 |속성|적용 대상|값|예제|
 |---|---|---|---|
@@ -373,48 +373,48 @@ stacklayout>image {
 |`background-color`|`VisualElement`|_색_ \|`initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_문자열_ \|`initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`, `ImageButton`|_색_ \|`initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_double_ \|`initial` |`border-radius: 10;`|
-|`border-width`|`Button`, `ImageButton`|_double_ \|`initial` |`border-width: .5;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_double_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_색_ \|`initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`column-gap`|`Grid`|_double_ \|`initial`|`column-gap: 9;`|
+|`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
 |`flex-basis`|`VisualElement`|_float_ \| `auto` \| `initial`. 또한 부호를 사용 하 여 0%에서 100% 범위의 백분율을 지정할 수 있습니다 `%` .|`flex-basis: 25%;`|
-|`flex-grow`|`VisualElement`|_float_ \|`initial`|`flex-grow: 1.5;`|
-|`flex-shrink`|`VisualElement`|_float_ \|`initial`|`flex-shrink: 1;`|
+|`flex-grow`|`VisualElement`|_float_ \| `initial`|`flex-grow: 1.5;`|
+|`flex-shrink`|`VisualElement`|_float_ \| `initial`|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_문자열_ \|`initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_ \| _namedsize_ \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
-|`height`|`VisualElement`|_double_ \|`initial` |`min-height: 250;`|
+|`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
-|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \|`initial`|`letter-spacing: 2.5;`|
-|`line-height`|`Label`, `Span`|_double_ \|`initial` |`line-height: 1.8;`|
+|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \| `initial`|`letter-spacing: 2.5;`|
+|`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_두께_ \|`initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_두께_ \|`initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_두께_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_두께_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_두께_ \|`initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_int_ \|`initial`|`max-lines: 2;`|
-|`min-height`|`VisualElement`|_double_ \|`initial` |`min-height: 50;`|
-|`min-width`|`VisualElement`|_double_ \|`initial` |`min-width: 112;`|
-|`opacity`|`VisualElement`|_double_ \|`initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_int_ \|`initial`|`order: -1;`|
+|`max-lines`|`Label`|_int_ \| `initial`|`max-lines: 2;`|
+|`min-height`|`VisualElement`|_double_ \| `initial` |`min-height: 50;`|
+|`min-width`|`VisualElement`|_double_ \| `initial` |`min-width: 112;`|
+|`opacity`|`VisualElement`|_double_ \| `initial` |`opacity: .3;`|
+|`order`|`VisualElement`|_int_ \| `initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_두께_ \|`initial` |`padding: 6 12 12;`|
-|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_double_ \|`initial`|`padding-left: 3;`|
-|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \|`initial` |`padding-top: 4;`|
-|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \|`initial` |`padding-right: 2;`|
-|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \|`initial` |`padding-bottom: 6;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_double_ \| `initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
-|`row-gap`|`Grid`| _double_ \|`initial`|`row-gap: 12;`|
+|`row-gap`|`Grid`| _double_ \| `initial`|`row-gap: 12;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` 및 `right` 는 오른쪽에서 왼쪽으로 진행 되는 환경에서 피해 야 합니다.| `text-align: right;`|
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`text-transform`|`Button`,`Editor`, `Entry`, `Label`, `SearchBar`, `SearchHandler`|`none` \| `default` \| `uppercase` \| `lowercase` \| `initial` |`text-transform: uppercase;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
-|`transform-origin`|`VisualElement`| _double_, _double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
+|`transform-origin`|`VisualElement`| _double_ , _double_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
-|`width`|`VisualElement`|_double_ \|`initial`|`min-width: 320;`|
+|`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]
 > `initial` 은 모든 속성에 대해 유효한 값입니다. 다른 스타일에서 설정 된 값 (기본값으로 다시 설정)을 지웁니다.
@@ -431,20 +431,20 @@ stacklayout>image {
 
 ### <a name="no-locxamarinforms-specific-properties"></a>Xamarin.Forms 특정 속성
 
-다음의 Xamarin.Forms 특정 CSS 속성도 지원 됩니다 ( **값** 열에서 형식은 _기울임꼴_, 문자열 리터럴은 다음과 같습니다 `gray` ).
+다음의 Xamarin.Forms 특정 CSS 속성도 지원 됩니다 ( **값** 열에서 형식은 _기울임꼴_ , 문자열 리터럴은 다음과 같습니다 `gray` ).
 
 |속성|적용 대상|값|예제|
 |---|---|---|---|
 |`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_색_ \|`initial` |`-xf-bar-background-color: teal;`|
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_색_ \|`initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \|`initial` |`-xf-max-length: 20;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \| `initial` |`-xf-max-length: 20;`|
 |`-xf-max-track-color`|`Slider`|_색_ \|`initial` |`-xf-max-track-color: red;`|
 |`-xf-min-track-color`|`Slider`|_색_ \|`initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` 는 에서만 지원 됩니다 `ScrollView` . |`-xf-orientation: horizontal;`|
 |`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|_따옴표 붙은 텍스트_ \|`initial` |`-xf-placeholder: Enter name;`|
 |`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_색_ \|`initial` |`-xf-placeholder-color: green;`|
-|`-xf-spacing`|`StackLayout`|_double_ \|`initial` |`-xf-spacing: 8;`|
+|`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
 |`-xf-thumb-color`|`Slider`, `Switch`|_색_ \|`initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
@@ -452,7 +452,7 @@ stacklayout>image {
 
 ### <a name="no-locxamarinforms-shell-specific-properties"></a>Xamarin.Forms 셸 관련 속성
 
-다음 Xamarin.Forms Shell 특정 CSS 속성도 지원 됩니다 ( **값** 열에서 형식은 _기울임꼴_, 문자열 리터럴은 다음과 같습니다 `gray` ).
+다음 Xamarin.Forms Shell 특정 CSS 속성도 지원 됩니다 ( **값** 열에서 형식은 _기울임꼴_ , 문자열 리터럴은 다음과 같습니다 `gray` ).
 
 |속성|적용 대상|값|예제|
 |---|---|---|---|

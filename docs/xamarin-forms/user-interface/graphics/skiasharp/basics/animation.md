@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3052220b914b09f18490846bbd2558bbf07e4d3a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 92631f66f729e2d1519bf577accb6f1ce9c1e1b5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562264"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373590"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본 애니메이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법을 알아봅니다._
 
@@ -109,7 +109,7 @@ async Task AnimationLoop()
 
 ```
 
-`while`루프는에서 주기 시간을 가져와 시작 합니다 `Slider` . 이 시간은 5와 같은 시간 (초)입니다. 두 번째 문은 `t` *time*에 대 한 값을 계산 합니다. 의 경우 `cycleTime` `t` 5 초 마다 0에서 1로 늘립니다. `Math.Sin`두 번째 문의 함수에 대 한 인수 범위는 5 초 마다 0에서 2π 사이입니다. `Math.Sin`이 함수는 0에서 1 사이의 값을 반환 하 고 &ndash; 5 초 마다 1과 0으로 값을 반환 하지만 값이 1 또는-1에 가까워지면 더 느리게 변경 되는 값을 반환 합니다. 값 1이 추가 되어 값이 항상 양수 이며 2로 나뉘어 있으므로 값의 범위는 1/2에서 1에서 1/2 1/2 사이이 고 값이 1과 0 이면 속도가 느립니다. 이는 필드에 저장 되 `scale` 고는 `SKCanvasView` 무효화 됩니다.
+`while`루프는에서 주기 시간을 가져와 시작 합니다 `Slider` . 이 시간은 5와 같은 시간 (초)입니다. 두 번째 문은 `t` *time* 에 대 한 값을 계산 합니다. 의 경우 `cycleTime` `t` 5 초 마다 0에서 1로 늘립니다. `Math.Sin`두 번째 문의 함수에 대 한 인수 범위는 5 초 마다 0에서 2π 사이입니다. `Math.Sin`이 함수는 0에서 1 사이의 값을 반환 하 고 &ndash; 5 초 마다 1과 0으로 값을 반환 하지만 값이 1 또는-1에 가까워지면 더 느리게 변경 되는 값을 반환 합니다. 값 1이 추가 되어 값이 항상 양수 이며 2로 나뉘어 있으므로 값의 범위는 1/2에서 1에서 1/2 1/2 사이이 고 값이 1과 0 이면 속도가 느립니다. 이는 필드에 저장 되 `scale` 고는 `SKCanvasView` 무효화 됩니다.
 
 `PaintSurface`메서드는이 값을 사용 하 여 `scale` 타원의 두 축을 계산 합니다.
 

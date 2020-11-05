@@ -10,15 +10,15 @@ ms.date: 07/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 76136067f40d378a6bfa28698f15b6872bb40c93
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 739fc90eda513e4627f5804283bdcab9c0cbacb4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562352"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373122"
 ---
 # <a name="no-locxamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
 Xamarin.Forms [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) 컨트롤은 응용 프로그램이 시간이 오래 걸리는 작업을 표시 하는 애니메이션을 표시 합니다. 와 달리 [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 는 진행률을 표시 `ActivityIndicator` 하지 않습니다. 는 `ActivityIndicator` 에서 상속 [`View`](xref:Xamarin.Forms.View) 됩니다.
 

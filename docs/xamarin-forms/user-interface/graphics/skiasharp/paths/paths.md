@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6387da5ffa240c2509a2942a1e721def8f8d39b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f80660c5875db77c85c39f570e9ae58c6c821eb6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555634"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374630"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 탐색_
 
@@ -27,13 +27,13 @@ _연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 �
 
 ![연결 된 선과 연결 되지 않은 선 간의 차이를 보여 주는 두 개의 삼각형](paths-images/connectedlinesexample.png)
 
-그래픽 경로는 개체에 의해 캡슐화 됩니다 [`SKPath`](xref:SkiaSharp.SKPath) . 경로는 하나 이상의 *컨투어에*대 한 컬렉션입니다. 각 컨투어는 *연결* 된 직선 및 곡선의 컬렉션입니다. 외형선은 서로 연결 되지 않지만 시각적으로 겹칠 수 있습니다. 경우에 따라 단일 컨투어가 겹칠 수 있습니다.
+그래픽 경로는 개체에 의해 캡슐화 됩니다 [`SKPath`](xref:SkiaSharp.SKPath) . 경로는 하나 이상의 *컨투어에* 대 한 컬렉션입니다. 각 컨투어는 *연결* 된 직선 및 곡선의 컬렉션입니다. 외형선은 서로 연결 되지 않지만 시각적으로 겹칠 수 있습니다. 경우에 따라 단일 컨투어가 겹칠 수 있습니다.
 
 외형선은 일반적으로 다음 메서드를 호출 하 여 시작 합니다 `SKPath` .
 
 - [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) 새 컨투어를 시작 하려면
 
-이 메서드에 대 한 인수는 단일 점으로, 값으로 표현 `SKPoint` 하거나 별도 X 및 Y 좌표로 표현할 수 있습니다. 이 `MoveTo` 호출은 컨투어 시작 지점 및 초기 *현재 점을*설정 합니다. 다음 메서드를 호출 하 여 현재 점에서 메서드에 지정 된 지점까지 선 또는 곡선이 있는 컨투어를 계속 진행 하 고 새 현재 점이 됩니다.
+이 메서드에 대 한 인수는 단일 점으로, 값으로 표현 `SKPoint` 하거나 별도 X 및 Y 좌표로 표현할 수 있습니다. 이 `MoveTo` 호출은 컨투어 시작 지점 및 초기 *현재 점을* 설정 합니다. 다음 메서드를 호출 하 여 현재 점에서 메서드에 지정 된 지점까지 선 또는 곡선이 있는 컨투어를 계속 진행 하 고 새 현재 점이 됩니다.
 
 - [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) 경로에 직선을 추가 하려면
 - [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) 원 또는 타원의 원주 선 인 호를 추가 하려면
@@ -52,7 +52,7 @@ _연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 �
 - [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
 - [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
-는 `R` *상대*를 나타냅니다. 이러한 메서드는가 없는 해당 메서드와 동일한 구문을 사용 `R` 하지만 현재 점에 상대적입니다. 이는 여러 번 호출 하는 메서드에서 경로의 비슷한 부분을 그리는 데 유용 합니다.
+는 `R` *상대* 를 나타냅니다. 이러한 메서드는가 없는 해당 메서드와 동일한 구문을 사용 `R` 하지만 현재 점에 상대적입니다. 이는 여러 번 호출 하는 메서드에서 경로의 비슷한 부분을 그리는 데 유용 합니다.
 
 컨투어는 또는에 대 한 다른 호출로 끝나지만 `MoveTo` `RMoveTo` 새 컨투어를 시작 하거나에 대 한 호출을 사용 하 여 `Close` 컨투어를 닫습니다. `Close`메서드는 현재 점에서 컨투어의 첫 번째 점에 직선을 자동으로 추가 하 고 경로를 닫힌 것으로 표시 합니다. 즉, 스트로크 캡 없이 렌더링 됩니다.
 
@@ -122,7 +122,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `SKPath`개체는 &mdash; 일련의 점과 연결의 기 하 도형만 정의 한다는 점에 유의 하세요. `SKPath`가 개체와 결합 된 경우에만 `SKPaint` 특정 색, 스트로크 너비 등을 사용 하 여 렌더링 된 경로입니다. 또한 메서드로 전달 되는 개체는 `SKPaint` `DrawPath` 전체 경로의 특징을 정의 합니다. 여러 색이 필요한 항목을 그리려면 각 색에 별도의 경로를 사용 해야 합니다.
 
-선의 시작과 끝 모양이 스트로크 단면에 의해 정의 되는 것 처럼 두 줄 사이의 연결 모양은 *스트로크 조인*에 의해 정의 됩니다. [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin)의 속성을 `SKPaint` 열거형의 멤버로 설정 하 여이를 지정 합니다 [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) .
+선의 시작과 끝 모양이 스트로크 단면에 의해 정의 되는 것 처럼 두 줄 사이의 연결 모양은 *스트로크 조인* 에 의해 정의 됩니다. [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin)의 속성을 `SKPaint` 열거형의 멤버로 설정 하 여이를 지정 합니다 [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) .
 
 - `Miter` pointy join의 경우
 - `Round` 둥근 조인의 경우

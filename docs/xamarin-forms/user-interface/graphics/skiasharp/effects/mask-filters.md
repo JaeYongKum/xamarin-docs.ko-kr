@@ -10,16 +10,16 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 827b5618dce019e2dedb773f270fe1090da5d616
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a9291a56ffa1a05f8e2041033279363f8ec4d34
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562511"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374149"
 ---
 # <a name="skiasharp-mask-filters"></a>SkiaSharp mask 필터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 마스크 필터는 그래픽 개체의 기 하 도형 및 알파 채널을 조작 하는 효과입니다. 마스크 필터를 사용 하려면 [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) 의 속성을 `SKPaint` [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) 정적 메서드 중 하나를 호출 하 여 만든 형식의 개체로 설정 합니다 `SKMaskFilter` .
 

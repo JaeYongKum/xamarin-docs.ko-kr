@@ -10,16 +10,16 @@ ms.date: 07/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6d4c9be2166881824e798e9cb801a5720ab55178
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 58210aaaa7c017c50ba3e2aee3e8402c1b76be16
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557858"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373928"
 ---
 # <a name="dependency-resolution-in-no-locxamarinforms"></a>Xamarin.Forms의 종속성 확인
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo)
 
 _이 문서에서는 Xamarin.Forms 응용 프로그램의 종속성 주입 컨테이너가 사용자 지정 렌더러, 효과 및 DependencyService 구현의 생성 및 수명을 제어 하도록 종속성 확인 방법을에 삽입 하는 방법을 설명 합니다. 이 문서의 코드 예제는 컨테이너 샘플을 [사용 하 여 종속성 확인](/samples/xamarin/xamarin-forms-samples/advanced-dependencyresolution-dicontainerdemo) 에서 가져옵니다._
 

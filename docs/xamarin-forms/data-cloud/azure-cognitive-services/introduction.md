@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f40220a29611bb365dc77eeb5e85445a0df19fd6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4dba270cbc08b3ce9209568a1e625e71cfa17d8d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563252"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374461"
 ---
 # <a name="no-locxamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Forms Azure Cognitive Services 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 언어 이해와 같은 기능을 추가 하 여 응용 프로그램을 보다 지능적으로 만드는 데 사용할 수 있는 Api, Sdk 및 서비스 집합입니다. 이 문서에서는 일부 Microsoft 인식 서비스 Api를 호출 하는 방법을 보여 주는 예제 응용 프로그램에 대해 소개 합니다._
 
