@@ -10,16 +10,16 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 319afff4572c02e363fef6296aca06ba290923c2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8992f2a649b1d3998a24a11cdf7e51d768a3cd09
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562836"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371341"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1부. XAML 시작
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Xamarin.Forms응용 프로그램에서 XAML은 주로 페이지의 시각적 콘텐츠를 정의 하는 데 사용 되며 c # 코드를 사용 하는 파일과 함께 작동 합니다._
 
@@ -37,31 +37,31 @@ Windows에서 Visual Studio 2019를 시작 하 고, 시작 창에서 **새 프�
 
 ![새 솔루션 창](get-started-with-xaml-images/win/new-solution-2019.png)
 
-**새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일**을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
+**새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일** 을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
 
 ![새 프로젝트 창](get-started-with-xaml-images/win/new-project-2019.png)
 
 **새 프로젝트 구성** 창에서 **프로젝트 이름을** **xamlsamples** (또는 원하는 경우)로 설정 하 고 **만들기** 단추를 클릭 합니다.
 
-**새 플랫폼 간 앱** 대화 상자에서 **비어 있음**을 클릭 하 고 **확인** 단추를 클릭 합니다.
+**새 플랫폼 간 앱** 대화 상자에서 **비어 있음** 을 클릭 하 고 **확인** 단추를 클릭 합니다.
 
 ![새 응용 프로그램 대화 상자](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
-솔루션에서 4 개의 프로젝트가 생성 됩니다. **xamlsamples** .NET Standard library, Xamlsamples. **Android** **, Xamlsamples**및 유니버설 Windows 플랫폼 솔루션인 **xamlsamples**.
+솔루션에서 4 개의 프로젝트가 생성 됩니다. **xamlsamples** .NET Standard library, Xamlsamples. **Android** **, Xamlsamples** 및 유니버설 Windows 플랫폼 솔루션인 **xamlsamples**.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-Mac용 Visual Studio의 메뉴에서 **파일 > 새 솔루션** 을 선택 합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **다중 플랫폼 > 앱** 을 선택 하 고 템플릿 목록에서*not* **폼 앱**이 아닌 **빈 양식 앱** 을 선택 합니다.
+Mac용 Visual Studio의 메뉴에서 **파일 > 새 솔루션** 을 선택 합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **다중 플랫폼 > 앱** 을 선택 하 고 템플릿 목록에서 *not* **폼 앱** 이 아닌 **빈 양식 앱** 을 선택 합니다.
 
 ![새 프로젝트 대화 상자 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
-**다음**을 누릅니다.
+**다음** 을 누릅니다.
 
 다음 대화 상자에서 프로젝트에 **Xamlsamples** (또는 원하는 대로)의 이름을 지정 합니다. **.NET Standard 사용** 라디오 단추가 선택 되어 있는지 확인 합니다.
 
 ![새 프로젝트 대화 상자 2](get-started-with-xaml-images/mac/newprojectdialog2.png)
 
-**다음**을 누릅니다.
+**다음** 을 누릅니다.
 
 다음 대화 상자에서 프로젝트 위치를 선택할 수 있습니다.
 
@@ -69,7 +69,7 @@ Mac용 Visual Studio의 메뉴에서 **파일 > 새 솔루션** 을 선택 합�
 
 **만들기** 누르기
 
-솔루션에는 **xamlsamples** .NET Standard Library, **Xamlsamples. Android**및 **xamlsamples. iOS**의 세 가지 프로젝트가 생성 됩니다.
+솔루션에는 **xamlsamples** .NET Standard Library, **Xamlsamples. Android** 및 **xamlsamples. iOS** 의 세 가지 프로젝트가 생성 됩니다.
 
 -----
 
@@ -81,15 +81,15 @@ Mac용 Visual Studio의 메뉴에서 **파일 > 새 솔루션** 을 선택 합�
 
 **Xamlsamples** .NET Standard 라이브러리에는 다음 이름의 파일 쌍이 있습니다.
 
-- **App.xaml, xaml**파일 하거나
-- **App.xaml.cs**-xaml 파일과 연결 된 c # *코드 숨겨진* 파일입니다.
+- **App.xaml, xaml** 파일 하거나
+- **App.xaml.cs** -xaml 파일과 연결 된 c # *코드 숨겨진* 파일입니다.
 
 코드 숨겨진 파일을 보려면 **app.xaml** 옆의 화살표를 클릭 해야 합니다.
 
 **App.xaml** 과 **App.xaml.cs** `App` 는 모두에서 파생 되는 라는 클래스에 기여 `Application` 합니다. XAML 파일을 사용 하는 대부분의 다른 클래스는에서 파생 되는 클래스에 기여 합니다 `ContentPage` . 이러한 파일은 xaml을 사용 하 여 전체 페이지의 시각적 콘텐츠를 정의 합니다. 다음은 **Xamlsamples** 프로젝트의 다른 두 파일에 적용 되는 것입니다.
 
-- **Mainpage**(xaml 파일) 하거나
-- **MainPage.xaml.cs**, c # 코드 숨겨진 파일입니다.
+- **Mainpage** (xaml 파일) 하거나
+- **MainPage.xaml.cs** , c # 코드 숨겨진 파일입니다.
 
 **Mainpage** 파일은 다음과 같습니다 (형식이 약간 다를 수 있음).
 
@@ -140,7 +140,7 @@ namespace XamlSamples
 
 `MainPage`클래스는에서 파생 `ContentPage` 되지만 클래스 정의를 확인 합니다 `partial` . 이는에 대 한 다른 partial 클래스 정의가 있어야 `MainPage` 하지만 어디에 있나요? 무엇 `InitializeComponent` 인가요?
 
-Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하도록 XAML 파일을 구문 분석 합니다. **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 살펴보면 이름이 **XamlSamples.MainPage.xaml.g.cs**인 파일이 검색 됩니다. ' G '는 생성 된를 나타냅니다. 이는 `MainPage` 생성자에서 호출 된 메서드의 정의를 포함 하는의 다른 partial 클래스 정의입니다 `InitializeComponent` `MainPage` . 이러한 두 partial `MainPage` 클래스 정의를 함께 컴파일할 수 있습니다. Xaml이 컴파일 되었는지 여부에 따라 xaml 파일이 나 xaml 파일의 이진 형식이 실행 파일에 포함 됩니다.
+Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하도록 XAML 파일을 구문 분석 합니다. **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 살펴보면 이름이 **XamlSamples.MainPage.xaml.g.cs** 인 파일이 검색 됩니다. ' G '는 생성 된를 나타냅니다. 이는 `MainPage` 생성자에서 호출 된 메서드의 정의를 포함 하는의 다른 partial 클래스 정의입니다 `InitializeComponent` `MainPage` . 이러한 두 partial `MainPage` 클래스 정의를 함께 컴파일할 수 있습니다. Xaml이 컴파일 되었는지 여부에 따라 xaml 파일이 나 xaml 파일의 이진 형식이 실행 파일에 포함 됩니다.
 
 런타임에 특정 플랫폼 프로젝트의 코드는 메서드를 호출 하 여 `LoadApplication` `App` .NET Standard 라이브러리에 있는 클래스의 새 인스턴스를 전달 합니다. `App`클래스 생성자는를 인스턴스화합니다 `MainPage` . 이 클래스의 생성자는를 호출 하 여 `InitializeComponent` `LoadFromXaml` .NET Standard 라이브러리에서 XAML 파일 (또는 컴파일된 이진)을 추출 하는 메서드를 호출 합니다. `LoadFromXaml` XAML 파일에 정의 된 모든 개체를 초기화 하 고, 모두 부모-자식 관계에서 연결 하 고, 코드에 정의 된 이벤트 처리기를 XAML 파일에 설정 된 이벤트에 연결 하 고, 개체의 결과 트리를 페이지의 콘텐츠로 설정 합니다.
 
@@ -156,19 +156,19 @@ Visual Studio는 프로젝트를 빌드할 때 c # 코드 파일을 생성 하�
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-다른 XAML 기반 `ContentPage` 클래스를 프로젝트에 추가 하려면 **xamlsamples** .NET Standard library 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **> 새 항목 추가**...를 선택 합니다. **새 항목 추가** 대화 상자에서 **Visual c # 항목 > Xamarin.Forms > 콘텐츠 페이지** (콘텐츠 **페이지 (c #)** 가 아닌 코드 전용 페이지 또는 **콘텐츠 뷰**)를 선택 합니다. 페이지에 이름을 지정 합니다 (예: **HelloXamlPage**).
+다른 XAML 기반 `ContentPage` 클래스를 프로젝트에 추가 하려면 **xamlsamples** .NET Standard library 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **> 새 항목 추가**...를 선택 합니다. **새 항목 추가** 대화 상자에서 **Visual c # 항목 > Xamarin.Forms > 콘텐츠 페이지** (콘텐츠 **페이지 (c #)** 가 아닌 코드 전용 페이지 또는 **콘텐츠 뷰** )를 선택 합니다. 페이지에 이름을 지정 합니다 (예: **HelloXamlPage** ).
 
 ![새 항목 추가 대화 상자](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-다른 XAML 기반 `ContentPage` 클래스를 프로젝트에 추가 하려면 **xamlsamples** .NET Standard library 프로젝트를 선택 하 고 **파일 > 새 파일** 메뉴 항목을 호출 합니다. **새 파일** 대화 상자 왼쪽의 왼쪽에서 **폼** 을 선택 하 고, 폼 **contentpage Xaml** (코드 전용 페이지를 만드는 **폼 콘텐츠 페이지**또는 페이지가 아닌 **콘텐츠 뷰**)을 선택 합니다. 페이지에 이름을 지정 합니다 (예: **HelloXamlPage**).
+다른 XAML 기반 `ContentPage` 클래스를 프로젝트에 추가 하려면 **xamlsamples** .NET Standard library 프로젝트를 선택 하 고 **파일 > 새 파일** 메뉴 항목을 호출 합니다. **새 파일** 대화 상자 왼쪽의 왼쪽에서 **폼** 을 선택 하 고, 폼 **contentpage Xaml** (코드 전용 페이지를 만드는 **폼 콘텐츠 페이지** 또는 페이지가 아닌 **콘텐츠 뷰** )을 선택 합니다. 페이지에 이름을 지정 합니다 (예: **HelloXamlPage** ).
 
 ![새 파일 대화 상자](get-started-with-xaml-images/mac/newfiledialog.png)
 
 -----
 
-프로젝트에는 두 개의 파일 ( **HelloXamlPage** 및 코드 숨김이 파일 **HelloXamlPage.xaml.cs**)이 추가 됩니다.
+프로젝트에는 두 개의 파일 ( **HelloXamlPage** 및 코드 숨김이 파일 **HelloXamlPage.xaml.cs** )이 추가 됩니다.
 
 ## <a name="setting-page-content"></a>페이지 콘텐츠 설정
 
@@ -299,7 +299,7 @@ public MainPage()
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
-**HelloXamlPage** 샘플에는 페이지의 단일만 포함 되어 `Label` 있지만 매우 드문 경우입니다. 대부분의 `ContentPage` 파생은 `Content` 속성을와 같은 일종의 레이아웃으로 설정 합니다 `StackLayout` . `Children`의 속성은 `StackLayout` 형식으로 정의 되어 `IList<View>` 있지만 실제로는 형식의 개체 `ElementCollection<View>` 이며,이 컬렉션은 여러 뷰나 다른 레이아웃으로 채워질 수 있습니다. XAML에서 이러한 부모-자식 관계는 일반 XML 계층 구조를 사용 하 여 설정 됩니다. **XamlPlusCodePage**라는 새 페이지에 대 한 XAML 파일은 다음과 같습니다.
+**HelloXamlPage** 샘플에는 페이지의 단일만 포함 되어 `Label` 있지만 매우 드문 경우입니다. 대부분의 `ContentPage` 파생은 `Content` 속성을와 같은 일종의 레이아웃으로 설정 합니다 `StackLayout` . `Children`의 속성은 `StackLayout` 형식으로 정의 되어 `IList<View>` 있지만 실제로는 형식의 개체 `ElementCollection<View>` 이며,이 컬렉션은 여러 뷰나 다른 레이아웃으로 채워질 수 있습니다. XAML에서 이러한 부모-자식 관계는 일반 XML 계층 구조를 사용 하 여 설정 됩니다. **XamlPlusCodePage** 라는 새 페이지에 대 한 XAML 파일은 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -432,7 +432,7 @@ async void OnButtonClicked(object sender, EventArgs args)
 
 XAML로 정의 된 개체는 코드를 사용 하는 파일에서 처리 되는 이벤트를 발생 시킬 수 있으며, 코드 숨김이 특성을 사용 하 여 할당 된 이름을 사용 하 여 XAML에 정의 된 개체에 액세스할 수 있습니다 `x:Name` . 다음은 코드와 XAML이 상호 작용 하는 두 가지 기본적인 방법입니다.
 
-새로 생성 된 **XamlPlusCode.xaml.g.cs 파일**을 검사 하 여 XAML이 작동 하는 방법에 대 한 몇 가지 추가 정보를 통해 모든 특성에 전용 필드로 할당 된 이름이 포함 되어 통해 수집할 수 있습니다 `x:Name` . 이 파일의 단순화 된 버전은 다음과 같습니다.
+새로 생성 된 **XamlPlusCode.xaml.g.cs 파일** 을 검사 하 여 XAML이 작동 하는 방법에 대 한 몇 가지 추가 정보를 통해 모든 특성에 전용 필드로 할당 된 이름이 포함 되어 통해 수집할 수 있습니다 `x:Name` . 이 파일의 단순화 된 버전은 다음과 같습니다.
 
 ```csharp
 public partial class XamlPlusCodePage : ContentPage {

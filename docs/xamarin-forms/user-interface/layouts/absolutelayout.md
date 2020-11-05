@@ -11,16 +11,16 @@ ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0468d132ee6e75ab75c0150f1f5c9e0af6dfde40
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b5dab372f5ebd3850702d122b21317fcb48e0a25
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557779"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371978"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
 [![::: no loc (Xamarin.ios)::: AbsoluteLayout](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
 
@@ -90,7 +90,7 @@ ms.locfileid: "91557779"
 
 ![절대값을 사용 하 여 AbsoluteLayout에 배치 된 자식](absolutelayout-images/absolute-values.png)
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 public class StylishHeaderDemoPageCS : ContentPage
@@ -193,7 +193,7 @@ C #에서는 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) `Children` �
 
 ![비례 위치 값을 사용 하 여 AbsoluteLayout에 배치 된 자식](absolutelayout-images/proportional-position.png)
 
-해당 c # 코드는 다음과 같습니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 public class ProportionalDemoPageCS : ContentPage

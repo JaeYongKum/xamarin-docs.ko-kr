@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0fd934a305e34bb7406a0379a0882873e3400fe8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3480c2fe2ef94a2a1beee9a924a59cd90d3a42b3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558364"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370808"
 ---
 # <a name="the-separable-blend-modes"></a>분리 가능 블렌드 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[**SkiaSharp Porter-Duff**](porter-duff.md)blend 모드 문서에서 살펴본 것 처럼 Porter-duff blend 모드는 일반적으로 클리핑 작업을 수행 합니다. 분리 가능한 혼합 모드는 다릅니다. 분리 가능 모드는 이미지의 개별 빨강, 녹색 및 파랑 색 구성 요소를 변경 합니다. 분리 가능 블렌드 모드는 색을 혼합 하 여 빨간색, 녹색 및 파란색의 조합이 실제로 흰색 임을 보여 줍니다.
+[**SkiaSharp Porter-Duff blend 모드**](porter-duff.md)문서에서 살펴본 것 처럼 Porter-Duff blend 모드는 일반적으로 클리핑 작업을 수행 합니다. 분리 가능한 혼합 모드는 다릅니다. 분리 가능 모드는 이미지의 개별 빨강, 녹색 및 파랑 색 구성 요소를 변경 합니다. 분리 가능 블렌드 모드는 색을 혼합 하 여 빨간색, 녹색 및 파란색의 조합이 실제로 흰색 임을 보여 줍니다.
 
 ![기본 색](separable-images/SeparableSample.png "기본 색")
 
@@ -166,13 +166,13 @@ public partial class LightenAndDarkenPage : ContentPage
 | `Exclusion`  | 검정     | 와 비슷하지만 `Difference` 대비가 낮습니다. |
 | `Multiply`   | 흰색     | 색을 곱하여 어둡게: Sc · Dc |
 
-이러한 두 소스의 표기법이 동일 하지는 않지만 W3C [**합성 및 혼합 수준 1**](https://www.w3.org/TR/compositing-1/) 사양과 지 수 ia [**Skblendmode 참조**](https://skia.org/user/api/SkBlendMode_Reference)에서 더 자세한 알고리즘을 찾을 수 있습니다. `Plus`일반적으로 Porter-Duff blend 모드로 간주 되며 `Modulate` W3C 사양의 일부가 아닙니다.
+이러한 두 소스의 표기법이 동일 하지는 않지만 W3C [**합성 및 혼합 수준 1**](https://www.w3.org/TR/compositing-1/) 사양과 지 수 ia [**Skblendmode 참조**](https://skia.org/user/api/SkBlendMode_Reference)에서 더 자세한 알고리즘을 찾을 수 있습니다. `Plus`는 일반적으로 Porter-Duff blend 모드로 간주 되며 `Modulate` W3C 사양의 일부가 아닙니다.
 
 원본이 투명 한 경우를 제외 하 고 모든 분리 가능 blend 모드의 경우 `Modulate` blend 모드가 효과가 없습니다. 앞서 살펴본 것 처럼 `Modulate` blend 모드는 곱하기에 알파 채널을 통합 합니다. 그렇지 않으면 `Modulate` 와 동일한 결과가 발생 합니다 `Multiply` . 
 
-및 라는 두 가지 모드를 확인 합니다 `ColorDodge` `ColorBurn` . _닷지_ 및 _굽기_ 단어는 사진 darkroom 연습에서 발생 했습니다. Enlarger은 네거티브를 통해 조명을 비추는 사진을 인쇄 합니다. 밝은 인쇄는 흰색입니다. 인쇄는 오랜 시간 동안 인쇄에 더 진하게 수록 됩니다. 인쇄 결정자는 종종 손 또는 작은 개체를 사용 하 여 일부 빛이 인쇄의 특정 부분에서 떨어지는 것을 차단 하 여 해당 영역을 더 밝게 만듭니다. 이를 _dodging_이라고 합니다. 반대로, 구멍이 있는 불투명 재질 (또는 대부분의 빛 차단)을 사용 하 여 특정 지점에서 더 많은 빛을 유도 하 여 _굽기를_이라고 합니다.
+및 라는 두 가지 모드를 확인 합니다 `ColorDodge` `ColorBurn` . _닷지_ 및 _굽기_ 단어는 사진 darkroom 연습에서 발생 했습니다. Enlarger은 네거티브를 통해 조명을 비추는 사진을 인쇄 합니다. 밝은 인쇄는 흰색입니다. 인쇄는 오랜 시간 동안 인쇄에 더 진하게 수록 됩니다. 인쇄 결정자는 종종 손 또는 작은 개체를 사용 하 여 일부 빛이 인쇄의 특정 부분에서 떨어지는 것을 차단 하 여 해당 영역을 더 밝게 만듭니다. 이를 _dodging_ 이라고 합니다. 반대로, 구멍이 있는 불투명 재질 (또는 대부분의 빛 차단)을 사용 하 여 특정 지점에서 더 많은 빛을 유도 하 여 _굽기를_ 이라고 합니다.
 
-**닷지 및 굽기** 프로그램은 **밝게 및 어둡게**와 매우 비슷합니다. XAML 파일은 동일 하지만 요소 이름이 서로 다르지만 코드 숨김이 매우 유사 하지만 이러한 두 blend 모드의 효과는 매우 다릅니다.
+**닷지 및 굽기** 프로그램은 **밝게 및 어둡게** 와 매우 비슷합니다. XAML 파일은 동일 하지만 요소 이름이 서로 다르지만 코드 숨김이 매우 유사 하지만 이러한 두 blend 모드의 효과는 매우 다릅니다.
 
 [![닷지 및 굽기](separable-images/DodgeAndBurn.png "닷지 및 굽기")](separable-images/DodgeAndBurn-Large.png#lightbox)
 

@@ -10,15 +10,15 @@ ms.date: 07/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 111b3ad13902b272256464f6f70f0db3dfd015b6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 824851c1406dfefb5f276be069f92040d03a5c98
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559456"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370522"
 ---
 # <a name="no-locxamarinforms-progressbar"></a>Xamarin.Forms ProgressBar
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
 Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 컨트롤은 값으로 표시 되는 백분율로 채워지는 가로 막대로 진행률을 시각적으로 나타냅니다 `float` . `ProgressBar`클래스는에서 상속 [`View`](xref:Xamarin.Forms.View) 됩니다.
 

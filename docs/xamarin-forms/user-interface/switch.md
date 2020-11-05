@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 94f77fd70fee595efd341ff7372828b12661442d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b44a3fa34044327be6a928588397c3371f196336
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561731"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371133"
 ---
 # <a name="no-locxamarinforms-switch"></a>Xamarin.Forms 바꿀
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
 Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 값으로 표시 되는 설정/해제 상태를 전환 하기 위해 조작할 수 있는 가로 토글 단추입니다 `boolean` . `Switch`클래스는에서 상속 [`View`](xref:Xamarin.Forms.View) 됩니다.
 
@@ -30,7 +30,7 @@ Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 �
 `Switch`컨트롤은 다음 속성을 정의 합니다.
 
 - [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)가 `boolean` 설정 되어 있는지 여부를 나타내는 값입니다 `Switch` . **on**
-- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) 가 `Color` `Switch` 전환 또는 상태에서 렌더링 되는 방식 **에**영향을 주는입니다.
+- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) 가 `Color` `Switch` 전환 또는 상태에서 렌더링 되는 방식 **에** 영향을 주는입니다.
 - `ThumbColor` 는 `Color` 스위치 엄지의입니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,가 `Switch` 스타일을 지정 하 고 데이터 바인딩의 대상이 될 수 있습니다.

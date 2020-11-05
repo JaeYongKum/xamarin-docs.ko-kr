@@ -10,16 +10,16 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2336a4fbd92a7e9158d332de1ea2e2b018d144ce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: db7101d5e50dc6ee7840023f6ec4efeb2c52150b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556661"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370197"
 ---
 # <a name="simple-animations-in-no-locxamarinforms"></a>단순 애니메이션 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _ViewExtensions 클래스는 간단한 애니메이션을 생성 하는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서에서는 ViewExtensions 클래스를 사용 하 여 애니메이션을 만들고 취소 하는 방법을 보여 줍니다._
 
@@ -85,7 +85,7 @@ await image.RelRotateTo (360, 2000);
 
 ![상대 회전 애니메이션](simple-images/relrotateto.png)
 
-### <a name="scaling"></a>크기 조정
+### <a name="scaling"></a>확장
 
 다음 코드 예제에서는 메서드를 사용 하 여 [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) 의 속성에 애니메이션 효과를 주는 방법을 보여 줍니다 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) [`Image`](xref:Xamarin.Forms.Image) .
 

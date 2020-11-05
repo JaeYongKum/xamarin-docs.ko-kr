@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e0c4d247f3ecf9c1b8e077c4a96712e9ed138ca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1d50c03fcea043c4b29db4a82ee3dc1712c288df
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562953"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372082"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵을 파일에 저장
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp 응용 프로그램에서 비트맵을 만들거나 수정한 후에는 응용 프로그램에서 사용자의 사진 라이브러리에 비트맵을 저장 하려고 할 수 있습니다.
 
@@ -32,9 +32,9 @@ SkiaSharp 응용 프로그램에서 비트맵을 만들거나 수정한 후에�
 
 ## <a name="file-formats-and-codecs"></a>파일 형식 및 코덱
 
-최신의 인기 있는 비트맵 파일 형식은 압축을 사용 하 여 저장소 공간을 줄입니다. 압축 기술 중 두 가지 광범위 한 범주를 _손실_ 및 _무손실_이라고 합니다. 이러한 용어는 압축 알고리즘으로 인해 데이터가 손실 될 수 있는지 여부를 나타냅니다.
+최신의 인기 있는 비트맵 파일 형식은 압축을 사용 하 여 저장소 공간을 줄입니다. 압축 기술 중 두 가지 광범위 한 범주를 _손실_ 및 _무손실_ 이라고 합니다. 이러한 용어는 압축 알고리즘으로 인해 데이터가 손실 될 수 있는지 여부를 나타냅니다.
 
-가장 인기 있는 손실 형식은 공동 사진 전문가 그룹에 의해 개발 되었으며이를 JPEG 라고 합니다. JPEG 압축 알고리즘은 _불연속 코사인 변환_이라는 수학 도구를 사용 하 여 이미지를 분석 하 고 이미지의 시각적 충실도를 유지 하기 위해 중요 하지 않은 데이터를 제거 하려고 합니다. 압축 수준은 일반적으로 _품질_이라고 하는 설정을 사용 하 여 제어할 수 있습니다. 품질 설정이 높으면 파일이 커집니다.
+가장 인기 있는 손실 형식은 공동 사진 전문가 그룹에 의해 개발 되었으며이를 JPEG 라고 합니다. JPEG 압축 알고리즘은 _불연속 코사인 변환_ 이라는 수학 도구를 사용 하 여 이미지를 분석 하 고 이미지의 시각적 충실도를 유지 하기 위해 중요 하지 않은 데이터를 제거 하려고 합니다. 압축 수준은 일반적으로 _품질_ 이라고 하는 설정을 사용 하 여 제어할 수 있습니다. 품질 설정이 높으면 파일이 커집니다.
 
 이와 대조적으로 무손실 압축 알고리즘은 데이터를 줄이는 방식으로 인코딩할 수 있지만 정보의 손실을 초래 하지 않는 반복 및 픽셀 패턴에 대 한 이미지를 분석 합니다. 원래 비트맵 데이터는 압축 된 파일에서 완전히 복원할 수 있습니다. 현재 사용 중인 기본 무손실 압축 파일 형식은 PNG (이동식 네트워크 그래픽)입니다.
 
@@ -238,7 +238,7 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-**Appxmanifest.xml** 파일의 **기능** 섹션에는 **그림 라이브러리가**필요 합니다.
+**Appxmanifest.xml** 파일의 **기능** 섹션에는 **그림 라이브러리가** 필요 합니다.
 
 ## <a name="exploring-the-image-formats"></a>이미지 형식 탐색
 
@@ -470,13 +470,13 @@ public partial class SaveFileFormatsPage : ContentPage
 
 ## <a name="saving-finger-paint-art"></a>손가락 저장-그리기 아트
 
-비트맵의 일반적인 용도 중 하나는 프로그램 그리기에서 _그림자 비트맵_이라고 하는 것입니다. 모든 그리기는 비트맵에 유지 되며이는 프로그램에 의해 표시 됩니다. 비트맵은 그리기를 저장 하는 데에도 유용 합니다.
+비트맵의 일반적인 용도 중 하나는 프로그램 그리기에서 _그림자 비트맵_ 이라고 하는 것입니다. 모든 그리기는 비트맵에 유지 되며이는 프로그램에 의해 표시 됩니다. 비트맵은 그리기를 저장 하는 데에도 유용 합니다.
 
 [**SkiaSharp에서 손가락 그리기**](../paths/finger-paint.md) 문서는 터치 추적을 사용 하 여 기본 손가락 그리기 프로그램을 구현 하는 방법을 보여 주었습니다. 프로그램은 한 가지 색과 하나의 스트로크 너비만 지원 하지만 개체의 컬렉션에 전체 그리기를 유지 합니다 `SKPath` .
 
 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **저장을 사용 하 여 손가락으로** 그리기는 개체의 컬렉션에도 전체 그리기를 유지 `SKPath` 하지만 비트맵에서 그리기를 렌더링 하 여 사진 라이브러리에 저장할 수 있습니다.
 
-이 프로그램의 대부분은 원래 **손가락 그리기** 프로그램과 유사 합니다. 한 가지 향상 된 기능은 이제 XAML 파일이 **Clear** 및 **Save**라는 레이블이 지정 된 단추를 인스턴스화하는 것입니다.
+이 프로그램의 대부분은 원래 **손가락 그리기** 프로그램과 유사 합니다. 한 가지 향상 된 기능은 이제 XAML 파일이 **Clear** 및 **Save** 라는 레이블이 지정 된 단추를 인스턴스화하는 것입니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -705,7 +705,7 @@ public partial class FingerPaintSavePage : ContentPage
 
 [![페인트 회전](saving-images/SpinPaint.png "페인트 회전")](saving-images/SpinPaint-Large.png#lightbox)
 
-클래스의 **저장** 단추는 `SpinPaint` 이미지를 고정 폴더 이름 (**SpainPaint**)에 저장 하 고 날짜 및 시간으로 생성 된 파일 이름을 저장 한다는 점에서 **손가락 그리기** 와 비슷합니다.
+클래스의 **저장** 단추는 `SpinPaint` 이미지를 고정 폴더 이름 ( **SpainPaint** )에 저장 하 고 날짜 및 시간으로 생성 된 파일 이름을 저장 한다는 점에서 **손가락 그리기** 와 비슷합니다.
 
 ## <a name="related-links"></a>관련 링크
 

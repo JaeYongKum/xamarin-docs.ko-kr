@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 68cff80395f4bccf6acd718e044f708108ce4d18
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6c59a2c669a6a60049b6bb6383faea35a7de3631
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563863"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371198"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 그래픽을 표시 하기 위한 변환에 대해 알아보기_
 
@@ -52,7 +52,7 @@ SkiaSharp 변환과 변환 사이에는 몇 가지 중요 한 차이점이 있�
 
 SkiaSharp 변환은의 왼쪽 위 모퉁이를 기준으로 하며, `SKCanvas` Xamarin.Forms 변환은 적용 되는의 왼쪽 위 모퉁이를 기준으로 합니다 `VisualElement` . 이러한 차이는 크기 조정 및 회전 변환을 적용 하는 경우에 중요 합니다. 이러한 변환은 항상 특정 점을 기준으로 하기 때문입니다.
 
-중요 한 차이점은 변환은 SKiaSharp 변환에 대 *methods* 한 것 이지만 Xamarin.Forms 변환은 *속성*입니다. 이는 구문상 차이를 제외한 의미 체계 차이입니다. SkiaSharp 변환은 Xamarin.Forms 변환 상태를 설정 하는 동안 작업을 수행 합니다. SkiaSharp 변환은 이후에 그려진 그래픽 개체에 적용 되지만 변환이 적용 되기 전에 그려진 그래픽 개체에는 적용 되지 않습니다. 반면, Xamarin.Forms 변환은 속성이 설정 되는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 메서드가 호출 될 때 누적 됩니다. Xamarin.Forms 속성이 다른 값으로 설정 된 경우 변환이 바뀝니다.
+중요 한 차이점은 변환은 SKiaSharp 변환에 대 *methods* 한 것 이지만 Xamarin.Forms 변환은 *속성* 입니다. 이는 구문상 차이를 제외한 의미 체계 차이입니다. SkiaSharp 변환은 Xamarin.Forms 변환 상태를 설정 하는 동안 작업을 수행 합니다. SkiaSharp 변환은 이후에 그려진 그래픽 개체에 적용 되지만 변환이 적용 되기 전에 그려진 그래픽 개체에는 적용 되지 않습니다. 반면, Xamarin.Forms 변환은 속성이 설정 되는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 메서드가 호출 될 때 누적 됩니다. Xamarin.Forms 속성이 다른 값으로 설정 된 경우 변환이 바뀝니다.
 
 이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 변환** 섹션에 표시 됩니다. 솔루션의 [**변환**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 폴더에서 소스 코드를 찾을 수 있습니다.
 

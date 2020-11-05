@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: ef632b4bff3313de82c71cb5839ecdc24c9242ad
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ffb49329b38705d097520b24d53285d5dbf15167
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431492"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371809"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.ios의 파일 시스템 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/ios-samples/filesystemsamplecode)
 
 Xamarin.ios 및 `System.IO` *.net BCL (기본 클래스 라이브러리)* 의 클래스를 사용 하 여 iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 또한 파일 `Stream` 작업 (예: 파일 내의 압축 또는 위치 검색)에 대해 더 많은 제어를 제공할 수 있는 하위 클래스를 사용할 수 있습니다.
 
@@ -153,9 +153,9 @@ Xamarin.ios와 .NET 파일 작업의 유사성에도 불구 하 고, iOS 및 Xam
 
 ### <a name="case-sensitivity"></a>대/소문자 구분
 
-IOS 파일 시스템은 *대/소문자를 구분*한다는 것을 이해 하는 것이 중요 합니다. 대/소문자 구분은 파일 및 디렉터리 이름이 정확 하 **README.txt** 게 일치 해야 하며 **readme.txt** 다른 파일 이름으로 간주 됩니다.
+IOS 파일 시스템은 *대/소문자를 구분* 한다는 것을 이해 하는 것이 중요 합니다. 대/소문자 구분은 파일 및 디렉터리 이름이 정확 하 **README.txt** 게 일치 해야 하며 **readme.txt** 다른 파일 이름으로 간주 됩니다.
 
-이는 *대/소문자를 구분* 하지 않는 Windows 파일 시스템에 익숙한 .net 개발자에 게 혼란 스 러 울 수 있습니다. **파일**, **파일**및 **파일** 은 모두 동일한 디렉터리를 참조 합니다.
+이는 *대/소문자를 구분* 하지 않는 Windows 파일 시스템에 익숙한 .net 개발자에 게 혼란 스 러 울 수 있습니다. **파일** , **파일** 및 **파일** 은 모두 동일한 디렉터리를 참조 합니다.
 
 > [!WARNING]
 > IOS 시뮬레이터는 대/소문자를 구분 하지 않습니다.
@@ -169,7 +169,7 @@ iOS는 슬래시 '/'를 경로 구분 기호로 사용 합니다 .이는 백슬�
 
 ## <a name="application-sandbox"></a>응용 프로그램 샌드박스
 
-응용 프로그램의 파일 시스템 액세스 (및 네트워크 및 하드웨어 기능과 같은 기타 리소스)는 보안상의 이유로 제한 됩니다. 이러한 제한 사항을 *응용 프로그램 샌드박스*라고 합니다. 파일 시스템을 기준으로 응용 프로그램은 홈 디렉터리에서 파일 및 디렉터리를 만들고 삭제 하는 것으로 제한 됩니다.
+응용 프로그램의 파일 시스템 액세스 (및 네트워크 및 하드웨어 기능과 같은 기타 리소스)는 보안상의 이유로 제한 됩니다. 이러한 제한 사항을 *응용 프로그램 샌드박스* 라고 합니다. 파일 시스템을 기준으로 응용 프로그램은 홈 디렉터리에서 파일 및 디렉터리를 만들고 삭제 하는 것으로 제한 됩니다.
 
 홈 디렉터리는 응용 프로그램 및 모든 데이터가 저장 되는 파일 시스템의 고유한 위치입니다. 응용 프로그램에 대 한 홈 디렉터리의 위치를 선택 (또는 변경) 할 수 없습니다. 그러나 iOS 및 Xamarin.ios는 내에서 파일 및 디렉터리를 관리 하는 속성과 메서드를 제공 합니다.
 
@@ -180,7 +180,7 @@ iOS는 슬래시 '/'를 경로 구분 기호로 사용 합니다 .이는 백슬�
 
 Mac OS에서 응용 프로그램 번들로 이동 하면 다른 디렉터리에 표시 되는 것과 다른 아이콘을 사용 하 여 표시 됩니다. 즉, 앱 접미사는 숨겨집니다 **.** 그러나 운영 체제가 다르게 표시 되는 일반 디렉터리 일 뿐입니다.
 
-샘플 코드에 대 한 응용 프로그램 번들을 보려면 **Mac용 Visual Studio** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Finder에**표시를 선택 합니다. 그런 다음 응용 프로그램 아이콘을 찾을 **bin/** 디렉터리 (아래 스크린샷에 비슷함)로 이동 합니다.
+샘플 코드에 대 한 응용 프로그램 번들을 보려면 **Mac용 Visual Studio** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Finder에** 표시를 선택 합니다. 그런 다음 응용 프로그램 아이콘을 찾을 **bin/** 디렉터리 (아래 스크린샷에 비슷함)로 이동 합니다.
 
 ![Bin 디렉터리를 탐색 하 여이 스크린샷에서 유사한 응용 프로그램 아이콘을 찾습니다.](file-system-images/40-bundle.png)
 
@@ -200,7 +200,7 @@ Mac OS에서 응용 프로그램 번들로 이동 하면 다른 디렉터리에 
 
 |디렉터리|설명|
 |---|---|
-|[ApplicationName]. 앱/|**IOS 7 및 이전 버전**에서는 `ApplicationBundle` 응용 프로그램 실행 파일이 저장 되는 디렉터리입니다. 앱에서 만드는 디렉터리 구조는이 디렉터리에 있습니다 (예: Mac용 Visual Studio 프로젝트에서 리소스로 표시 한 이미지 및 기타 파일 형식).<br /><br />응용 프로그램 번들 내에서 콘텐츠 파일에 액세스 해야 하는 경우에는 속성을 통해이 디렉터리의 경로를 사용할 수 있습니다 `NSBundle.MainBundle.BundlePath` .|
+|[ApplicationName]. 앱/|**IOS 7 및 이전 버전** 에서는 `ApplicationBundle` 응용 프로그램 실행 파일이 저장 되는 디렉터리입니다. 앱에서 만드는 디렉터리 구조는이 디렉터리에 있습니다 (예: Mac용 Visual Studio 프로젝트에서 리소스로 표시 한 이미지 및 기타 파일 형식).<br /><br />응용 프로그램 번들 내에서 콘텐츠 파일에 액세스 해야 하는 경우에는 속성을 통해이 디렉터리의 경로를 사용할 수 있습니다 `NSBundle.MainBundle.BundlePath` .|
 |문서|이 디렉터리를 사용 하 여 사용자 문서 및 응용 프로그램 데이터 파일을 저장 합니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes 파일 공유를 통해 사용자가 사용할 수 있도록 설정할 수 있습니다 (기본적으로 사용 하지 않도록 설정 됨). `UIFileSharingEnabled`Info.plist 파일에 부울 키를 추가 하 여 사용자가 이러한 파일에 액세스할 수 있도록 합니다.<br /><br />응용 프로그램에서 파일 공유를 즉시 사용 하도록 설정 하지 않는 경우에도이 디렉터리의 사용자에 게 서 숨겨지는 파일 (공유 하지 않는 한 데이터베이스 파일)을 배치 하지 않아야 합니다. 중요 한 파일이 숨겨진 상태로 유지 되는 한, 이후 버전에서 파일 공유를 사용 하는 경우 이러한 파일은 노출 되지 않고 iTunes에 의해 이동, 수정 또는 삭제 될 수 있습니다.<br /><br /> 메서드를 사용 `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` 하 여 응용 프로그램에 대 한 문서 디렉터리의 경로를 가져올 수 있습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
 |라이브러리|라이브러리 디렉터리는 사용자가 직접 만들지 않은 파일 (예: 데이터베이스 또는 다른 응용 프로그램 생성 파일)을 저장할 수 있는 좋은 장소입니다. 이 디렉터리의 콘텐츠는 iTunes를 통해 사용자에 게 노출 되지 않습니다.<br /><br />라이브러리에서 고유한 하위 디렉터리를 만들 수 있습니다. 그러나 여기에는 기본 설정 및 캐시를 비롯 하 여 알고 있어야 하는 시스템 생성 디렉터리가 이미 있습니다.<br /><br />이 디렉터리의 콘텐츠 (캐시 하위 디렉터리 제외)는 iTunes에 의해 백업 됩니다. 라이브러리에서 만든 사용자 지정 디렉터리를 백업 합니다.|
 |라이브러리/기본 설정/|응용 프로그램별 기본 설정 파일은이 디렉터리에 저장 됩니다. 이러한 파일을 직접 만들지 마십시오. 대신는 `NSUserDefaults` 클래스입니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
@@ -263,7 +263,7 @@ iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이
 
 문서 폴더의 내용을 수정 하는 사용자가 주의 하지 않으면 문제를 일으킬 수 있습니다. 응용 프로그램은이를 고려 하 고 문서 폴더의 파괴적인 업데이트를 복원 해야 합니다.
 
-이 문서의 샘플 코드는 Documents 폴더 ( **SampleCode.cs**)에 파일과 폴더를 모두 만들며 **info.plist** 파일에서 파일 공유를 사용 하도록 설정 합니다. 이 스크린샷에서는 iTunes에 표시 되는 방법을 보여 줍니다.
+이 문서의 샘플 코드는 Documents 폴더 ( **SampleCode.cs** )에 파일과 폴더를 모두 만들며 **info.plist** 파일에서 파일 공유를 사용 하도록 설정 합니다. 이 스크린샷에서는 iTunes에 표시 되는 방법을 보여 줍니다.
 
 [![이 스크린샷에서는 파일이 iTunes에 표시 되는 방식을 보여 줍니다.](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
@@ -319,11 +319,11 @@ NSFileManager.SetSkipBackupAttribute (filename, false); // file will be backed-u
 
 ### <a name="configure-an-app-group"></a>앱 그룹 구성
 
-공유 위치는 [IOS 개발자 센터](https://developer.apple.com/devcenter/ios/)의 **인증서, 식별자 & 프로필** 섹션에서 구성 된 [앱 그룹](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)을 사용 하 여 구성 됩니다. 이 값은 각 프로젝트의 **info.plist**에서도 참조 되어야 합니다.
+공유 위치는 [IOS 개발자 센터](https://developer.apple.com/devcenter/ios/)의 **인증서, 식별자 & 프로필** 섹션에서 구성 된 [앱 그룹](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)을 사용 하 여 구성 됩니다. 이 값은 각 프로젝트의 **info.plist** 에서도 참조 되어야 합니다.
 
 앱 그룹을 만들고 구성 하는 방법에 대 한 자세한 내용은 [앱 그룹 기능](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) 가이드를 참조 하세요.
 
-### <a name="files"></a>Files
+### <a name="files"></a>파일
 
 IOS 앱 및 확장은 일반적인 파일 경로를 사용 하 여 파일을 공유할 수도 있습니다 (올바른 자격 및 프로 비전을 사용 하 여 제대로 구성 된 경우).
 

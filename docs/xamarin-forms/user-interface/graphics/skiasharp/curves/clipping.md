@@ -10,20 +10,20 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 604d2aa8368c85b852530f999601fffca8e104e6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 79c32595053cc80ffae91b5434e18690ca2dce4a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562927"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370717"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _경로를 사용 하 여 특정 영역에 그래픽 클리핑 및 영역 만들기_
 
-그래픽의 렌더링을 특정 영역으로 제한 해야 하는 경우도 있습니다. 이를 *클리핑*이라고 합니다. 키 구멍을 통해 표시 되는 원숭이의 이미지와 같은 특수 효과에 대해 클리핑을 사용할 수 있습니다.
+그래픽의 렌더링을 특정 영역으로 제한 해야 하는 경우도 있습니다. 이를 *클리핑* 이라고 합니다. 키 구멍을 통해 표시 되는 원숭이의 이미지와 같은 특수 효과에 대해 클리핑을 사용할 수 있습니다.
 
 ![Keyhole를 통한 원숭이](clipping-images/clippingsample.png)
 
@@ -511,7 +511,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 네 리프 클로버 표시 되지 않지만 클리핑 없이 렌더링 하기 어려울 수 있는 이미지입니다.
 
-[![네 리프 클로버 페이지의 삼중 스크린샷](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
+[![Four-Leaf 클로버 페이지의 삼중 스크린샷](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

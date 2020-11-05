@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0d552db24e89c3bc10ca6f38f9e8f936bd4290d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4caf352024d7ae2a89d49ff021f0f90f35fdd8eb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555764"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372212"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Windows의 페이지 도구 모음 배치
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 유니버설 Windows 플랫폼 플랫폼별는의 도구 모음 배치를 변경 하는 데 사용 되며 [`Page`](xref:Xamarin.Forms.Page) [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) 연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) .
 
@@ -45,7 +45,7 @@ page.On<Windows>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
 그러면 지정 된 도구 모음 배치가 인스턴스에 적용 됩니다 [`Page`](xref:Xamarin.Forms.Page) .
 
-[![도구 모음 배치 플랫폼별](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "도구 모음 배치 플랫폼별")
+[![도구 모음 배치 플랫폼별](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "도구 모음 배치 Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

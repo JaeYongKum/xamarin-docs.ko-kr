@@ -10,16 +10,16 @@ ms.date: 07/29/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6aabe5931dce51889432e7d5dce2be40631ffe2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 59954a16cbf1fb01c974968848596138469ab9b2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556505"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371211"
 ---
 # <a name="no-locxamarinforms-toolbaritem"></a>Xamarin.Forms 항목 항목
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 클래스는 `Page` 개체의 컬렉션에 추가할 수 있는 특수 한 형식의 단추입니다 `ToolbarItems` . 각 `ToolbarItem` 개체는 응용 프로그램의 탐색 모음에서 단추로 표시 됩니다. `ToolbarItem`인스턴스는 아이콘을 포함 하 고 기본 또는 보조 메뉴 항목으로 표시 될 수 있습니다. `ToolbarItem`클래스는에서 상속 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 됩니다.
 

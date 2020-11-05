@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bfd581eebba259ecf7e4e9a426f7382c8a3d1d5a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f6431e2cbb187cbf89bdccad0ba5de57eed162e1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562550"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371328"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>IOS의 TabbedPage 반투명 탭 모음
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼에 해당 하는는에서 탭 모음의 반투명도 모드를 설정 하는 데 사용 됩니다 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . `TabbedPage.TranslucencyMode`바인딩 가능한 속성을 열거형 값으로 설정 하 여 XAML에서 사용 됩니다 `TranslucencyMode` .
 

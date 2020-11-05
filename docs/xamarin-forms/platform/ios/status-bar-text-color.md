@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09b5f145b273d234322eb560207c65aab3313558
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9459ce5e8b8f167f94d1f88e79d9acb32e4788bf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560796"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370613"
 ---
 # <a name="navigationpage-bar-text-color-mode-on-ios"></a>IOS의 NavigationPage Bar 텍스트 색 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 플랫폼 특정은의 상태 표시줄 텍스트 색 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 이 탐색 모음의 광도와 일치 하도록 조정 되는지 여부를 제어 합니다. [`NavigationPage.StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty)연결 된 속성을 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다 [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) .
 
@@ -75,7 +75,7 @@ IsPresentedChanged += (sender, e) =>
 
 그러면의 상태 표시줄 텍스트 색을 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 탐색 모음의 광도와 일치 하도록 조정할 수 있습니다. 이 예에서는 사용자가 [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) 의 및 페이지 간에 전환할 때 상태 표시줄 텍스트 색이 변경 됩니다 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) .
 
-![상태 표시줄 텍스트 색 모드 플랫폼별](status-bar-text-color-images/status-bar-text-color-mode.png)
+![상태 표시줄 텍스트 색 모드 Platform-Specific](status-bar-text-color-images/status-bar-text-color-mode.png)
 
 ## <a name="related-links"></a>관련 링크
 

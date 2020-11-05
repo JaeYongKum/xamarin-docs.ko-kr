@@ -10,16 +10,16 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a5249b6929b283cbbcb5ea4a4bc1f136003ea43
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 49fd8c563509d88b80fcb91b5e6298b8a5bb3363
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563655"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372303"
 ---
 # <a name="home-indicator-visibility-on-ios"></a>IOS의 홈 표시기 표시 여부
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼 관련는의 홈 표시기 표시 여부를 설정 합니다 [`Page`](xref:Xamarin.Forms.Page) . 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 [`Page.PrefersHomeIndicatorAutoHidden`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Page.PrefersHomeIndicatorAutoHiddenProperty) `boolean` .
 

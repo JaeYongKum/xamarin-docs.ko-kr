@@ -10,16 +10,16 @@ ms.date: 06/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e693565bf34b2ab17992aed72d022315a33b87e3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bdf910443295a4a54ea76aa39ee67f1c3aeb10d4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563668"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372342"
 ---
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>IOS의 명명 된 글꼴 크기에 대 한 접근성 크기 조정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별 플랫폼 전용은 명명 된 글꼴 크기에 대 한 접근성 크기 조정을 비활성화 합니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `Application.EnableAccessibilityScalingForNamedFontSizes` `false` .
 

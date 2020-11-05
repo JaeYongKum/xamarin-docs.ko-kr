@@ -10,16 +10,16 @@ ms.date: 01/12/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9164275b75c021a79b6ea5ea64194997ad804ece
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a3540773aec977c6d17592ff6a0ea1e16acc2b9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563213"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372173"
 ---
 # <a name="no-locxamarinforms-pages"></a>Xamarin.Forms Pages
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다._
 
@@ -27,11 +27,11 @@ _Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면�
 
 [![::: no loc (Xamarin.ios)::: 페이지 형식](pages-images/pages-sml.png)](pages-images/pages.png#lightbox "::: no loc (Xamarin.ios)::: 페이지 형식")
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>페이지
 
 Xamarin.Forms 에서는 다음 페이지 형식을 지원 합니다.
 
-| 유형 | Description | 모양 |
+| Type | Description | 모양 |
 | --- | --- | --- |
 | `ContentPage` | [`ContentPage`](xref:Xamarin.Forms.ContentPage) 는 가장 간단 하 고 가장 일반적인 페이지 유형입니다. 속성을 [`Content`](xref:Xamarin.Forms.ContentPage.Content) 단일 개체로 설정 합니다 [`View`](views.md) .이 개체는 일반적으로 [`Layout`](layouts.md) , 또는와 같은입니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`Grid`](xref:Xamarin.Forms.Grid) [`ScrollView`](xref:Xamarin.Forms.ScrollView) .<br /><br />[API 문서](xref:Xamarin.Forms.ContentPage) | [![ContentPage 예제](pages-images/ContentPage.png "ContentPage 예제")](pages-images/ContentPage-Large.png#lightbox "ContentPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
 | `MasterDetailPage` | 는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 두 가지 정보 창을 관리 합니다. 속성을 [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) 일반적으로 목록이 나 메뉴를 표시 하는 페이지로 설정 합니다. 속성을 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) 마스터 페이지에서 선택한 항목을 표시 하는 페이지로 설정 합니다. [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented)속성은 마스터 또는 세부 페이지가 표시 되는지 여부를 제어 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.MasterDetailPage)  /  [가이드](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)  /  [샘플](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage) | [![MasterDetailPage 예제](pages-images/MasterDetailPage.png "MasterDetailPage 예제")](pages-images/MasterDetailPage-Large.png#lightbox "MasterDetailPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml) |

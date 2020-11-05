@@ -10,16 +10,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3da0223bf72e4de60cc50be2562a0fdbd279f52e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b84336f836c3fa421537daf7e43de01e7be20b01
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559742"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371289"
 ---
 # <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms 맵 초기화 및 구성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 [`Map`](xref:Xamarin.Forms.Maps.Map)컨트롤은 각 플랫폼에서 네이티브 맵 컨트롤을 사용 합니다. 이를 통해 사용자는 빠르고 친숙 한 지도를 제공할 수 있지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 합니다.
 
@@ -117,11 +117,11 @@ API 키를 가져온 후에는 `<application>` **속성/AndroidManifest.xml** �
 > [!NOTE]
 > `com.google.android.geo.API_KEY` 는 API 키에 대해 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 위해 `com.google.android.maps.v2.API_KEY` 메타 데이터 이름을 사용할 수 있지만 Android MAPS API v 2에 대 한 인증만 허용 합니다.
 
-APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는 모든 키 저장소 (디버그 및 릴리스)에 대해 SHA-1 지문 및 패키지 이름을 포함 해야 합니다. 예를 들어 디버그에 하나의 컴퓨터를 사용 하 고 다른 컴퓨터에서 릴리스 APK를 생성 하는 경우 첫 번째 컴퓨터의 디버그 키 저장소의 SHA-1 인증서 지문을 포함 하 고 두 번째 컴퓨터의 릴리스 키 저장소 SHA-1 인증서 지문을 포함 해야 합니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
+APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는 모든 키 저장소 (디버그 및 릴리스)에 대해 SHA-1 지문 및 패키지 이름을 포함 해야 합니다. 예를 들어 디버그용으로 하나의 컴퓨터를 사용하고 릴리스 APK를 생성하기 위해 다른 컴퓨터를 사용할 경우, 첫 번째 컴퓨터의 디버그 키 저장소에서 가져온 SHA-1 인증서 지문과 두 번째 컴퓨터의 릴리스 키 저장소에서 가져온 SHA-1 인증서 지문을 포함해야 합니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
 
 #### <a name="specify-the-google-play-services-version-number"></a>Google Play services 버전 번호를 지정 합니다.
 
-`<application>` **AndroidManifest.xml**의 요소 내에 다음 선언을 추가 합니다.
+`<application>` **AndroidManifest.xml** 의 요소 내에 다음 선언을 추가 합니다.
 
 ```xml
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -131,7 +131,7 @@ APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Apache HTTP 레거시 라이브러리의 요구 사항 지정
 
-Xamarin.Forms응용 프로그램이 API 28 이상을 대상으로 하는 경우 `<application>` **AndroidManifest.xml**의 요소 내에 다음 선언을 추가 해야 합니다.
+Xamarin.Forms응용 프로그램이 API 28 이상을 대상으로 하는 경우 `<application>` **AndroidManifest.xml** 의 요소 내에 다음 선언을 추가 해야 합니다.
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    
@@ -245,8 +245,8 @@ UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map s
 
 또한 응용 프로그램에서 사용자의 위치에 액세스 해야 하는 경우 패키지 매니페스트에서 위치 기능을 사용 하도록 설정 해야 합니다. 이렇게 하려면 다음을 수행합니다.
 
-1. **솔루션 탐색기**에서 **appxmanifest.xml** 를 두 번 클릭 하 고 **기능** 탭을 선택 합니다.
-1. **기능** 목록에서 **위치**확인란을 선택 합니다. 이렇게 하면 `location` 장치 기능이 패키지 매니페스트 파일에 추가 됩니다.
+1. **솔루션 탐색기** 에서 **appxmanifest.xml** 를 두 번 클릭 하 고 **기능** 탭을 선택 합니다.
+1. **기능** 목록에서 **위치** 확인란을 선택 합니다. 이렇게 하면 `location` 장치 기능이 패키지 매니페스트 파일에 추가 됩니다.
 
     ```xml
     <Capabilities>
@@ -257,7 +257,7 @@ UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map s
 
 #### <a name="release-builds"></a>릴리스 빌드
 
-UWP 릴리스 빌드는 .NET 네이티브 컴파일을 사용 하 여 응용 프로그램을 네이티브 코드로 직접 컴파일합니다. 그러나이로 인해 UWP의 컨트롤에 대 한 렌더러는 [`Map`](xref:Xamarin.Forms.Maps.Map) 실행 파일에서 연결 되지 않을 수 있습니다. `Forms.Init` **App.xaml.cs**에서 메서드의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다.
+UWP 릴리스 빌드는 .NET 네이티브 컴파일을 사용 하 여 응용 프로그램을 네이티브 코드로 직접 컴파일합니다. 그러나이로 인해 UWP의 컨트롤에 대 한 렌더러는 [`Map`](xref:Xamarin.Forms.Maps.Map) 실행 파일에서 연결 되지 않을 수 있습니다. `Forms.Init` **App.xaml.cs** 에서 메서드의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다.
 
 ```csharp
 var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };

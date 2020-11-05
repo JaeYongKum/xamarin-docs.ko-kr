@@ -7,22 +7,22 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 2b0b68be5cd36d908c7e152137b14b41a7a0b947
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: bd24fbf6ce99e87c6a7f4ccd8cceef6cbe826f0f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458175"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370535"
 ---
 # <a name="splash-screen"></a>시작 화면
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/monodroid-samples/splashscreen)
 
 _특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면에 사용자에 대 한 시작 진행률 또는 브랜딩 표시를 표시할 수 있습니다._
 
 ## <a name="overview"></a>개요
 
-Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이 처음으로 장치에서 실행 되는 경우 ( _콜드 시작_이라고 함) 시작 화면에 사용자에 대 한 시작 진행률이 표시 되거나 응용 프로그램을 식별 하 고 승격할 수 있는 브랜딩 정보를 표시할 수 있습니다.
+Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이 처음으로 장치에서 실행 되는 경우 ( _콜드 시작_ 이라고 함) 시작 화면에 사용자에 대 한 시작 진행률이 표시 되거나 응용 프로그램을 식별 하 고 승격할 수 있는 브랜딩 정보를 표시할 수 있습니다.
 
 이 가이드에서는 Android 응용 프로그램에서 시작 화면을 구현 하는 한 가지 방법을 설명 합니다. 다음 단계를 다룹니다.
 
@@ -50,7 +50,7 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 시작 화면에 시작 화면 작업의 배경에 그릴 수 있는 XML이 표시 됩니다. 이미지를 표시 하려면 비트맵 이미지 (예: PNG 또는 JPG)를 사용 해야 합니다.
 
-샘플 응용 프로그램은 **splash_screen.xml**를 그릴 때를 정의 합니다. 이 예에서는 다음 xml에 표시 된 것 처럼 [계층 목록을](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) 사용 하 여 응용 프로그램의 시작 화면 이미지를 가운데에 맞춥니다.
+샘플 응용 프로그램은 **splash_screen.xml** 를 그릴 때를 정의 합니다. 이 예에서는 다음 xml에 표시 된 것 처럼 [계층 목록을](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) 사용 하 여 응용 프로그램의 시작 화면 이미지를 가운데에 맞춥니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +81,7 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 ### <a name="implementing-a-theme"></a>테마 구현
 
-시작 화면 작업에 대 한 사용자 지정 테마를 만들려면 파일 **값/styles.xml** 를 편집 하거나 추가 하 고 `style` 시작 화면에 대 한 새 요소를 만듭니다. 샘플 **값/style.xml** 파일은 이름이 mytheme 인 다음과 같이 표시 됩니다 `style` **. 시작**:
+시작 화면 작업에 대 한 사용자 지정 테마를 만들려면 파일 **값/styles.xml** 를 편집 하거나 추가 하 고 `style` 시작 화면에 대 한 새 요소를 만듭니다. 샘플 **값/style.xml** 파일은 이름이 mytheme 인 다음과 같이 표시 됩니다 `style` **. 시작** :
 
 ```xml
 <resources>
@@ -167,7 +167,7 @@ public class MainActivity : AppCompatActivity
 
 1. **리소스/그릴** 수 있는 폴더에 사용 하려는 시작 화면 이미지의 가로 버전을 추가 합니다. 이 예제에서 **splash_logo_land.png** 은 위의 예제에서 사용 된 로고의 가로 버전입니다 (파란색 대신 흰색 문자를 사용).
 
-2. **리소스/그릴** 폴더에서 `layer-list` 이전에 정의 된 (예: **splash_screen_land.xml**)의 가로 버전을 만듭니다. 이 파일에서 비트맵 경로를 시작 화면 이미지의 가로 버전으로 설정 합니다. 다음 예에서는 **splash_screen_land.xml** **splash_logo_land.png**를 사용 합니다.
+2. **리소스/그릴** 폴더에서 `layer-list` 이전에 정의 된 (예: **splash_screen_land.xml** )의 가로 버전을 만듭니다. 이 파일에서 비트맵 경로를 시작 화면 이미지의 가로 버전으로 설정 합니다. 다음 예에서는 **splash_screen_land.xml** **splash_logo_land.png** 를 사용 합니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -188,7 +188,7 @@ public class MainActivity : AppCompatActivity
 
 4. 파일 **colors.xml** 및 **style.xml** 를 **값** 에 추가 합니다. 이러한 파일은 기존  **값/colors.xml** 및 **값/style.xml** 파일에서 복사 하 여 수정할 수 있습니다.
 
-5. 에서 그릴 수 있는의 가로 버전을 사용 하도록 **style.xml값 ** 을 수정 `windowBackground` 합니다. 이 예제에서는 **splash_screen_land.xml** 사용 됩니다.
+5. 에서 그릴 수 있는의 가로 버전을 사용 하도록 **style.xml값** 을 수정 `windowBackground` 합니다. 이 예제에서는 **splash_screen_land.xml** 사용 됩니다.
 
     ```xml
     <resources>

@@ -10,16 +10,16 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4b32c4b3ac4dea9dcdf52e3b9316f5f82aaad6ef
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8d24300dcee76511466ec97f4944fe0be1278354
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558338"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371588"
 ---
 # <a name="global-styles-in-no-locxamarinforms"></a>전역 스타일 Xamarin.Forms
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역적으로 사용할 수 있습니다. 이렇게 하면 여러 페이지나 컨트롤에서 스타일의 중복을 방지할 수 있습니다._
 
@@ -47,7 +47,7 @@ _스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역�
 </Application>
 ```
 
-이는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) *explicit* `buttonStyle` 인스턴스의 모양을 설정 하는 데 사용 되는 단일 명시적 스타일를 정의 [`Button`](xref:Xamarin.Forms.Button) 합니다. 그러나 전역 스타일은 *명시적* 이거나 *암시적*일 수 있습니다.
+이는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) *explicit* `buttonStyle` 인스턴스의 모양을 설정 하는 데 사용 되는 단일 명시적 스타일를 정의 [`Button`](xref:Xamarin.Forms.Button) 합니다. 그러나 전역 스타일은 *명시적* 이거나 *암시적* 일 수 있습니다.
 
 다음 코드 예제에서는를 페이지의 인스턴스에 적용 하는 XAML 페이지를 보여 줍니다 `buttonStyle` [`Button`](xref:Xamarin.Forms.Button) .
 
@@ -129,7 +129,7 @@ public class App : Application
 }
 ```
 
-생성자는 *explicit* [`Button`](xref:Xamarin.Forms.Button) 응용 프로그램 전체에서 인스턴스에 적용 하기 위한 단일 명시적 스타일을 정의 합니다. *명시적* [`Style`](xref:Xamarin.Forms.Style) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`Add`](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) `key` 인스턴스는 인스턴스를 참조 하는 문자열을 지정 하 여 메서드를 사용 하 `Style` 여에 추가 됩니다. `Style`그런 다음 응용 프로그램에서 올바른 형식의 모든 컨트롤에 인스턴스를 적용할 수 있습니다. 그러나 전역 스타일은 *명시적* 이거나 *암시적*일 수 있습니다.
+생성자는 *explicit* [`Button`](xref:Xamarin.Forms.Button) 응용 프로그램 전체에서 인스턴스에 적용 하기 위한 단일 명시적 스타일을 정의 합니다. *명시적* [`Style`](xref:Xamarin.Forms.Style) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`Add`](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) `key` 인스턴스는 인스턴스를 참조 하는 문자열을 지정 하 여 메서드를 사용 하 `Style` 여에 추가 됩니다. `Style`그런 다음 응용 프로그램에서 올바른 형식의 모든 컨트롤에 인스턴스를 적용할 수 있습니다. 그러나 전역 스타일은 *명시적* 이거나 *암시적* 일 수 있습니다.
 
 다음 코드 예제에서는를 페이지의 인스턴스에 적용 하는 c # 페이지를 보여 줍니다 `buttonStyle` [`Button`](xref:Xamarin.Forms.Button) .
 

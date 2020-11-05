@@ -11,20 +11,20 @@ ms.date: 05/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 88f89e3d17c693c48176a45605b036f56599ee6d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c7705304a6eda662095c1e2a57633bf74c90c6de
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563629"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370145"
 ---
 # <a name="the-no-locxamarinforms-flexlayout"></a>가는 Xamarin.Forms 레이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _자식 보기의 컬렉션을 누적 하거나 래핑하는 데는는 안 됩니다._
 
-는 Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) 버전 3.0에서 새로 만들기 되었습니다 Xamarin.Forms . 이는 레이아웃 내에서 자식을 정렬 하는 여러 유연한 _옵션을 포함_하기 때문에 _일반적으로 사용_ 되는 CSS [유연한 상자 레이아웃 모듈](https://www.w3.org/TR/css-flexbox-1/)을 기반으로 합니다.
+는 Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) 버전 3.0에서 새로 만들기 되었습니다 Xamarin.Forms . 이는 레이아웃 내에서 자식을 정렬 하는 여러 유연한 _옵션을 포함_ 하기 때문에 _일반적으로 사용_ 되는 CSS [유연한 상자 레이아웃 모듈](https://www.w3.org/TR/css-flexbox-1/)을 기반으로 합니다.
 
 `FlexLayout` 는 Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) 스택에서 가로 및 세로 방향으로 자식을 정렬할 수 있다는 점에서와 비슷합니다. 그러나는 `FlexLayout` 단일 행 이나 열에 맞지 않는 경우에도 자식을 래핑할 수 있으며, 다양 한 화면 크기에 대 한 방향, 맞춤 및 조정에 대 한 다양 한 옵션을 포함 하 고 있습니다.
 
@@ -71,7 +71,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 페이지는
 
 - [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction)속성은 열거형의 값으로 설정 됩니다 [`FlexDirection`](xref:Xamarin.Forms.FlexDirection) . 기본값은 `Row`입니다. 속성을로 설정 하면 `Column` 의 자식이 `FlexLayout` 항목의 단일 열에 정렬 됩니다.
 
-    의 항목이 열에 정렬 되는 경우에는 `FlexLayout` `FlexLayout` 세로 _주 축_ 과 가로 _교차 축_이 포함 됩니다.
+    의 항목이 열에 정렬 되는 경우에는 `FlexLayout` `FlexLayout` 세로 _주 축_ 과 가로 _교차 축_ 이 포함 됩니다.
 
 - [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems)속성은 형식이 [`FlexAlignItems`](xref:Xamarin.Forms.FlexAlignItems) 며, 교차 축에 항목이 정렬 되는 방식을 지정 합니다. `Center`옵션은 각 항목의 가로 가운데 맞춤을 설정 합니다.
 

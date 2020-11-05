@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00b6251f530a4927d069ae92ec919645a06baf15
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1a9a8b8dc31369b5774935a2e8fca5cf17faa24b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555400"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371250"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-간단한 벡터 그래픽은 자연스럽 게 보입니다. 직선, 부드러운 곡선 및 단색은 실제 개체의 결함와 유사 하지 않습니다. 1982 영화 _Tron_컴퓨터에서 생성 된 그래픽에서 작업 하는 동안 Computer 과학자 켄은 Perlin는 임의 프로세스를 사용 하 여 이러한 이미지를 보다 현실적인 질감으로 제공 하는 알고리즘 개발을 시작 했습니다. 1997에서 켄은 Perlin는 기술 성과를 달성 하기 위해 보병의 경력을가지고 있습니다. 해당 작업은 Perlin 소음 이라고 하며 SkiaSharp에서 지원 됩니다. 예를 들면 다음과 같습니다.
+간단한 벡터 그래픽은 자연스럽 게 보입니다. 직선, 부드러운 곡선 및 단색은 실제 개체의 결함와 유사 하지 않습니다. 1982 영화 _Tron_ 컴퓨터에서 생성 된 그래픽에서 작업 하는 동안 Computer 과학자 켄은 Perlin는 임의 프로세스를 사용 하 여 이러한 이미지를 보다 현실적인 질감으로 제공 하는 알고리즘 개발을 시작 했습니다. 1997에서 켄은 Perlin는 기술 성과를 달성 하기 위해 보병의 경력을가지고 있습니다. 해당 작업은 Perlin 소음 이라고 하며 SkiaSharp에서 지원 됩니다. 예를 들면 다음과 같습니다.
 
 ![Perlin 노이즈 샘플](noise-images/NoiseSample.png "Perlin 노이즈 샘플")
 
@@ -47,7 +47,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 `seed`매개 변수는 난수 생성기의 시작 지점입니다. 는 부동 소수점 값으로 지정 되기는 하지만 사용 하기 전에 소수 자릿수가 잘리고 0은 1과 같습니다.
 
-[ **SkiaSharpFormsDemos**)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Perlin 노이즈** 페이지에서는 및 인수의 다양 한 값을 시험해 볼 수 `baseFrequency` 있습니다 `numOctaves` . XAML 파일은 다음과 같습니다.
+[ **SkiaSharpFormsDemos** )](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Perlin 노이즈** 페이지에서는 및 인수의 다양 한 값을 시험해 볼 수 `baseFrequency` 있습니다 `numOctaves` . XAML 파일은 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>

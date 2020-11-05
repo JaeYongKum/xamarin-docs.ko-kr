@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99e163364161287a8506bfc741d737edfaf88e4c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c565467d3c42dbaa9f9d9fc40352efbc964503a9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556765"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372316"
 ---
 # <a name="navigationpage-bar-translucency-on-ios"></a>IOS의 NavigationPage Bar 반투명도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 이 iOS 플랫폼별는의 탐색 모음에 대 한 투명도를 변경 하는 데 사용 되며 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 [`NavigationPage.IsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) `boolean` .
 
@@ -53,7 +53,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 그러면 탐색 모음의 투명도를 변경할 수 있습니다.
 
-![반투명 탐색 모음 플랫폼별](navigation-bar-translucent-images/translucent-navigation-bar.png)
+![투명 한 탐색 모음 Platform-Specific](navigation-bar-translucent-images/translucent-navigation-bar.png)
 
 ## <a name="related-links"></a>관련 링크
 

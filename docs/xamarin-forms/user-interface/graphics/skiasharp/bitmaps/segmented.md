@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a39433a0bad518055542adb190f4f441675ddfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fe63f3fdab5d508ab0202fbfe93bdc223f97d28a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556375"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370175"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>분할 된 SkiaSharp 비트맵 표시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp `SKCanvas` 개체는 라는 메서드와 `DrawBitmapNinePatch` 매우 유사한 라는 두 개의 메서드를 정의 합니다 `DrawBitmapLattice` . 이러한 두 메서드는 모두 비트맵을 대상 사각형의 크기로 렌더링 하지만 비트맵을 균일 하 게 스트레치 하는 대신 비트맵의 일부를 픽셀 치수로 표시 하 고 비트맵의 다른 부분을 확장 하 여 사각형에 맞게 합니다.
 
@@ -110,7 +110,7 @@ public class NinePatchDisplayPage : ContentPage
 
 `centerRect`사각형은 중심 16 원의 중앙 배열을 포함 합니다. 모서리에 표시 되는 원은 픽셀 차원에 표시 되 고 그에 따라 다른 모든 항목이 늘어납니다.
 
-[![9-패치 표시](segmented-images/NinePatchDisplay.png "9-패치 표시")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![9-패치 표시](segmented-images/NinePatchDisplay.png "Nine-Patch 표시")](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
 UWP 페이지의 너비는 500 픽셀 이므로 상위 및 하위 행을 동일한 크기의 일련의 원으로 표시 합니다. 그렇지 않으면 모퉁이에 있지 않은 모든 원이 타원을 형성 하도록 늘어납니다.
 
@@ -182,7 +182,7 @@ public class LatticeNinePatchPage : ContentPage
 
 표시는 이전 프로그램과 동일 합니다.
 
-[![격자 9-패치](segmented-images/LatticeNinePatch.png "격자 9-패치")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![격자 9-패치](segmented-images/LatticeNinePatch.png "격자 Nine-Patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
 **격자 표시** 페이지는 비트맵을 16 개의 사각형으로 나눕니다.
 
