@@ -13,10 +13,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 0992f7db22d79e58db0306bc09329f2852ef9489
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/02/2020
 ms.locfileid: "92897522"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
@@ -53,7 +53,7 @@ ms.locfileid: "92897522"
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
-    > - **소유자:** praeclarum
+    > - **소유쟈:** praeclarum
     > - **작성자:** SQLite-net
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -270,7 +270,7 @@ ms.locfileid: "92897522"
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
-    > - **소유자:** praeclarum
+    > - **소유쟈:** praeclarum
     > - **작성자:** SQLite-net
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
