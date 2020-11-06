@@ -1,6 +1,6 @@
 ---
 title: 보기 구현 설명: 이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤의 사용자 지정 렌더러를 만드는 방법을 설명합니다.
-ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/10/2018 no-loc:
+ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 10/30/2020 no-loc:
 - "Xamarin.Forms"
 - "Xamarin.Essentials"
 
@@ -12,6 +12,9 @@ ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology:
 ‘Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 View 클래스에서 파생되어야 합니다. _이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
 모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`View`](xref:Xamarin.Forms.View)를 렌더링하는 경우 `ViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UIView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ViewRenderer` 클래스는 네이티브 `View` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ViewRenderer` 클래스는 네이티브 `FrameworkElement` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+
+> [!NOTE]
+> Android의 일부 컨트롤은 `ViewRenderer` 클래스를 사용하지 않는 빠른 렌더러를 사용합니다. 빠른 렌더러에 관한 자세한 내용은 [Xamarin.Forms 빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)를 참조하세요.
 
 다음 다이어그램은 [`View`](xref:Xamarin.Forms.View) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -38,7 +41,8 @@ public class CameraPreview : View
     declaringType: typeof(CameraPreview),
     defaultValue: CameraOptions.Rear);
 
-  public CameraOptions Camera {
+  public CameraOptions Camera
+  {
     get { return (CameraOptions)GetValue (CameraProperty); }
     set { SetValue (CameraProperty, value); }
   }
@@ -55,13 +59,12 @@ public class CameraPreview : View
 <ContentPage ...
              xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
              ...>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Camera Preview:" />
-            <local:CameraPreview Camera="Rear"
-              HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Label Text="Camera Preview:" />
+        <local:CameraPreview Camera="Rear"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -75,10 +78,13 @@ public class MainPageCS : ContentPage
   public MainPageCS ()
   {
     ...
-    Content = new StackLayout {
-      Children = {
+    Content = new StackLayout
+    {
+      Children =
+      {
         new Label { Text = "Camera Preview:" },
-        new CameraPreview {
+        new CameraPreview
+        {
           Camera = CameraOptions.Rear,
           HorizontalOptions = LayoutOptions.FillAndExpand,
           VerticalOptions = LayoutOptions.FillAndExpand
@@ -95,10 +101,16 @@ public class MainPageCS : ContentPage
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 
-사용자 지정 렌더러 클래스를 만드는 프로세스는 다음과 같습니다.
+iOS 및 UWP에서 사용자 지정 렌더러 클래스를 만드는 프로세스는 다음과 같습니다.
 
 1. 사용자 지정 컨트롤을 렌더링하는 `ViewRenderer<T1,T2>` 클래스의 서브클래스를 만듭니다. 첫 번째 형식 인수는 렌더러가 사용할(이 경우 `CameraPreview`) 사용자 지정 컨트롤이어야 합니다. 두 번째 형식 인수는 사용자 지정 컨트롤을 구현할 네이티브 컨트롤이어야 합니다.
 1. 사용자 지정 컨트롤을 렌더링하는 `OnElementChanged` 메서드를 정의하고 이를 사용자 지정하기 위한 논리를 작성합니다. 이 메서드는 해당 Xamarin.Forms 컨트롤이 생성될 때 호출됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+
+Android에서 사용자 지정 렌더러 클래스를 빠른 렌더러로 만드는 프로세스는 다음과 같습니다.
+
+1. 사용자 지정 컨트롤을 렌더링하는 Android 컨트롤의 서브클래스를 만듭니다. 또한 서브클래스가 `IVisualElementRenderer` 및 `IViewRenderer` 인터페이스를 구현하도록 지정합니다.
+1. 빠른 렌더러 클래스에서 `IVisualElementRenderer` 및 `IViewRenderer` 인터페이스를 구현합니다.
 1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
@@ -108,7 +120,7 @@ public class MainPageCS : ContentPage
 
 ![CameraPreview 사용자 지정 렌더러 프로젝트 책임](view-images/solution-structure.png)
 
-`CameraPreview` 사용자 지정 컨트롤은 각 플랫폼의 `ViewRenderer` 클래스에서 모두 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CameraPreview` 사용자 지정 컨트롤이 플랫폼별 컨트롤로 렌더링됩니다.
+`CameraPreview` 사용자 지정 컨트롤은 iOS 및 UWP의 `ViewRenderer` 클래스와 Android의 `FrameLayout` 클래스에서 파생되는 플랫폼별 렌더러 클래스에서 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CameraPreview` 사용자 지정 컨트롤이 플랫폼별 컨트롤로 렌더링됩니다.
 
 ![각 플랫폼의 CameraPreview](view-images/screenshots.png)
 
@@ -123,12 +135,15 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (e.OldElement != null) {
+  if (e.OldElement != null)
+  {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
-  if (e.NewElement != null) {
-    if (Control == null) {
+  if (e.NewElement != null)
+  {    
+    if (Control == null)
+    {
       // Instantiate the native control and assign it to the Control property with
       // the SetNativeControl method
     }
@@ -195,62 +210,89 @@ namespace CustomRenderer.iOS
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Android에서 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 Android 플랫폼용 사용자 지정 렌더러를 보여줍니다.
+다음 코드 예제에서는 Android 플랫폼용 빠른 렌더러를 보여줍니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomRenderer.CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.Droid
 {
-    public class CameraPreviewRenderer : ViewRenderer<CustomRenderer.CameraPreview, CustomRenderer.Droid.CameraPreview>
+    public class CameraPreviewRenderer : FrameLayout, IVisualElementRenderer, IViewRenderer
     {
-        CameraPreview cameraPreview;
+        // ...
+        CameraPreview element;
+        VisualElementTracker visualElementTracker;
+        VisualElementRenderer visualElementRenderer;
+        FragmentManager fragmentManager;
+        CameraFragment cameraFragment;
+
+        FragmentManager FragmentManager => fragmentManager ??= Context.GetFragmentManager();
+
+        public event EventHandler<VisualElementChangedEventArgs> ElementChanged;
+        public event EventHandler<PropertyChangedEventArgs> ElementPropertyChanged;
+
+        CameraPreview Element
+        {
+            get => element;
+            set
+            {
+                if (element == value)
+                {
+                    return;
+                }
+
+                var oldElement = element;
+                element = value;
+                OnElementChanged(new ElementChangedEventArgs<CameraPreview>(oldElement, element));
+            }
+        }
 
         public CameraPreviewRenderer(Context context) : base(context)
         {
+            visualElementRenderer = new VisualElementRenderer(this);
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<CustomRenderer.CameraPreview> e)
+        void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)
         {
-            base.OnElementChanged(e);
+            CameraFragment newFragment = null;
 
             if (e.OldElement != null)
             {
-                // Unsubscribe
-                cameraPreview.Click -= OnCameraPreviewClicked;
+                e.OldElement.PropertyChanged -= OnElementPropertyChanged;
+                cameraFragment.Dispose();
             }
             if (e.NewElement != null)
             {
-                if (Control == null)
-                {
-                  cameraPreview = new CameraPreview(Context);
-                  SetNativeControl(cameraPreview);
-                }
-                Control.Preview = Camera.Open((int)e.NewElement.Camera);
+                this.EnsureId();
 
-                // Subscribe
-                cameraPreview.Click += OnCameraPreviewClicked;
+                e.NewElement.PropertyChanged += OnElementPropertyChanged;
+
+                ElevationHelper.SetElevation(this, e.NewElement);
+                newFragment = new CameraFragment { Element = element };
             }
+
+            FragmentManager.BeginTransaction()
+                .Replace(Id, cameraFragment = newFragment, "camera")
+                .Commit();
+            ElementChanged?.Invoke(this, new VisualElementChangedEventArgs(e.OldElement, e.NewElement));
         }
 
-        void OnCameraPreviewClicked(object sender, EventArgs e)
+        async void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (cameraPreview.IsPreviewing)
+            ElementPropertyChanged?.Invoke(this, e);
+
+            switch (e.PropertyName)
             {
-                cameraPreview.Preview.StopPreview();
-                cameraPreview.IsPreviewing = false;
+                case "Width":
+                    await cameraFragment.RetrieveCameraDevice();
+                    break;
             }
-            else
-            {
-                cameraPreview.Preview.StartPreview();
-                cameraPreview.IsPreviewing = true;
-            }
-        }
-        ...
+        }       
+        // ...
     }
 }
 ```
 
-`Control` 속성이 `null`인 경우 `SetNativeControl` 메서드가 호출되어 새 `CameraPreview` 컨트롤을 인스턴스화하고 `Control` 속성에 대한 참조를 할당합니다. `CameraPreview` 컨트롤은 카메라의 미리 보기 스트림을 제공하는 데 `Camera` API를 사용하는 플랫폼별 사용자 지정 컨트롤입니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `CameraPreview` 컨트롤이 구성됩니다. 이 구성에는 특정 하드웨어 카메라에 액세스하기 위한 새 네이티브 `Camera`개체 만들기 및 `Click` 이벤트를 처리하기 위한 이벤트 처리기 등록이 포함됩니다. 따라서 이 처리기는 탭하면 비디오 미리 보기를 멈추고 시작합니다. `Click` 이벤트는 렌더러가 연결된 Xamarin.Forms 요소가 변경되는 경우 구독이 취소됩니다.
+이 예제에서 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드가 `CameraFragment` 개체를 만듭니다. `CameraFragment` 형식은 카메라의 미리 보기 스트림을 제공하는 데 `Camera2` API를 사용하는 사용자 지정 클래스입니다. 렌더러가 연결된 Xamarin.Forms 요소가 변경되면 `CameraFragment` 개체가 삭제됩니다.
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에서 사용자 지정 렌더러 만들기
 

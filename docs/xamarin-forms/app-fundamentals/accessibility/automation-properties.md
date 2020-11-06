@@ -10,12 +10,12 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cadefcf4eb3fbc1c8e5c1e2545ef5f4a98eb64e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f05ca6eaaaedea69e8b6eb951d31fb7701a2f0de
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561317"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281185"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Xamarin.Forms의 자동화 속성
 
@@ -130,6 +130,9 @@ var entry = new Entry();
 AutomationProperties.SetIsInAccessibleTree(entry, true);
 AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
+
+> [!IMPORTANT]
+> `AutomationProperties.LabeledByProperty`는 아직 iOS에서 지원되지 않습니다.
 
 > [!NOTE]
 > [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드를 사용하여 `AutomationProperties.IsInAccessibleTree`가 연결된 속성 `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`을 설정할 수도 있습니다.

@@ -10,12 +10,12 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 575169459433725ae3f3a7db675fc65caef1494e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c89c6b50335405b56349e502f95b9d2975a04f73
+ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563447"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93185505"
 ---
 # <a name="no-locxamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 
@@ -122,7 +122,7 @@ public class CardView : ContentView
 </ContentPage>
 ```
 
-[`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)이 리소스로 선언된 경우 리소스 사전에서 식별할 수 있도록 `x:Key` 특성으로 지정된 키가 있어야 합니다. 이 예제에서 `CardViewControlTemplate`의 루트 요소는 [`Frame`](xref:Xamarin.Forms.Frame) 개체입니다. `Frame` 개체는 `RelativeSource` 태그 확장을 사용하여 `BindingContext`를 템플릿이 적용되는 런타임 개체 인스턴스로 설정합니다. 이를 *템플릿 기반 부모*라고 합니다. `Frame` 개체는 `CardView` 개체의 시각적 구조를 정의하기 위해 [`Grid`](xref:Xamarin.Forms.Grid), `Frame`, [`Image`](xref:Xamarin.Forms.Image), [`Label`](xref:Xamarin.Forms.Label) 및 [`BoxView`](xref:Xamarin.Forms.BoxView) 개체의 조합을 사용합니다. 이러한 개체의 바인딩 식은 루트 `Frame` 요소의 `BindingContext`를 상속하기 때문에 `CardView` 속성을 기준으로 확인됩니다. `RelativeSource` 태그 확장에 대한 자세한 내용은 [Xamarin.Forms 상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)을 참조하세요.
+[`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)이 리소스로 선언된 경우 리소스 사전에서 식별할 수 있도록 `x:Key` 특성으로 지정된 키가 있어야 합니다. 이 예제에서 `CardViewControlTemplate`의 루트 요소는 [`Frame`](xref:Xamarin.Forms.Frame) 개체입니다. `Frame` 개체는 `RelativeSource` 태그 확장을 사용하여 `BindingContext`를 템플릿이 적용되는 런타임 개체 인스턴스로 설정합니다. 이를 *템플릿 기반 부모* 라고 합니다. `Frame` 개체는 `CardView` 개체의 시각적 구조를 정의하기 위해 [`Grid`](xref:Xamarin.Forms.Grid), `Frame`, [`Image`](xref:Xamarin.Forms.Image), [`Label`](xref:Xamarin.Forms.Label) 및 [`BoxView`](xref:Xamarin.Forms.BoxView) 개체의 조합을 사용합니다. 이러한 개체의 바인딩 식은 루트 `Frame` 요소의 `BindingContext`를 상속하기 때문에 `CardView` 속성을 기준으로 확인됩니다. `RelativeSource` 태그 확장에 대한 자세한 내용은 [Xamarin.Forms 상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)을 참조하세요.
 
 ## <a name="consume-a-controltemplate"></a>ControlTemplate 사용
 
@@ -172,12 +172,12 @@ public class CardView : ContentView
 `TemplateBinding` 태그 확장은 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)에 있는 요소의 속성을 템플릿 기반 사용자 지정 컨트롤 또는 템플릿 기반 페이지에서 정의한 공용 속성에 바인딩합니다. `TemplateBinding`을 사용하면 컨트롤의 속성이 템플릿의 매개 변수로 작동됩니다. 따라서 템플릿 기반 사용자 지정 컨트롤 또는 템플릿 기반 페이지의 속성이 설정된 경우 해당 값은 `TemplateBinding`이 있는 요소로 전달됩니다.
 
 > [!IMPORTANT]
-> `TemplateBinding` 태그 확장은 `RelativeSource` 태그 확장을 사용하여 템플릿의 루트 요소 `BindingContext`를 템플릿 기반 부모로 설정하는 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) 만들기 대신 사용할 수 있습니다. `TemplateBinding` 태그 확장은 `RelativeSource` 바인딩을 제거하고 `Binding` 식을 `TemplateBinding` 식으로 바꿉니다.
+> `TemplateBinding` 태그 식을 사용하면 이전 컨트롤 템플릿의 `RelativeSource` 바인딩을 제거할 수 있고 `Binding` 식으로 바꿉니다.
 
 `TemplateBinding` 태그 확장은 다음 속성을 정의합니다.
 
 - `Path`(`string` 형식) - 속성에 대한 경로입니다.
-- `Mode`(`BindingMode` 형식) - *원본*과 *대상* 간에 변경 내용이 전파되는 방향입니다.
+- `Mode`(`BindingMode` 형식) - *원본* 과 *대상* 간에 변경 내용이 전파되는 방향입니다.
 - `Converter`(`IValueConverter` 형식) - 바인딩 값 변환기입니다.
 - `ConverterParameter`(`object`, 형식) - 바인딩 값 변환기에 대한 매개 변수입니다.
 - `StringFormat`(`string` 형식) - 바인딩의 문자열 형식입니다.
@@ -253,7 +253,7 @@ public class CardView : ContentView
 
 이 예제에서 `TemplateBinding` 태그 확장은 각 `CardView` 개체의 속성에 대해 바인딩 식을 확인합니다. 다음 스크린샷에서는 세 개의 `CardView` 개체에 적용되는 `CardViewControlTemplate`을 보여 줍니다.
 
-[![iOS 및 Android에서 템플릿 기반 CardView 개체의 스크린샷](control-template-images/templatebinding-controltemplate.png "템플릿 기반 CardView 개체")](control-template-images/templatebinding-controltemplate-large.png#lightbox "템플릿 기반 CardView 개체")
+[![템플릿 기반 CardView 개체의 스크린샷](control-template-images/templatebinding-controltemplate.png "템플릿 기반 CardView 개체")](control-template-images/templatebinding-controltemplate-large.png#lightbox "템플릿 기반 CardView 개체")
 
 > [!IMPORTANT]
 > `TemplateBinding` 태그 확장을 사용하는 것은 `RelativeSource` 태그 확장을 사용하여 템플릿의 루트 요소의 `BindingContext`를 템플릿 기반 부모로 설정하고 `Binding` 태그 확장을 사용하여 자식 개체의 바인딩을 확인하는 것과 같습니다. 실제로 `TemplateBinding` 태그 확장은 `Source`가 `RelativeBindingSource.TemplatedParent`인 `Binding`을 만듭니다.
@@ -549,7 +549,7 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 
 이 예제에서는 `ControlTemplate`가 인스턴스화된 후 `changeThemeLabel`이라는 [`Label`](xref:Xamarin.Forms.Label) 개체를 검색합니다. 그런 다음 `changeThemeLabel`에 액세스하여 `AccessTemplateElementPage` 클래스로 조작할 수 있습니다. 다음 스크린샷에서는 `Label`에 의해 표시되는 텍스트가 변경되었음을 보여 줍니다.
 
-[![iOS 및 Android에서 템플릿 기반 페이지 개체의 스크린샷](control-template-images/get-named-element.png "템플릿 기반 ContentPage")](control-template-images/get-named-element-large.png#lightbox "템플릿 기반 ContentPage")
+[![템플릿 기반 페이지 개체의 스크린샷](control-template-images/get-named-element.png "템플릿 기반 ContentPage")](control-template-images/get-named-element-large.png#lightbox "템플릿 기반 ContentPage")
 
 ## <a name="bind-to-a-viewmodel"></a>viewmodel에 바인딩
 
@@ -625,13 +625,13 @@ public partial class AccessTemplateElementPage : HeaderFooterPage
 
 이 예제에서 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 루트 요소는 [`Frame`](xref:Xamarin.Forms.Frame) 개체입니다. `Frame` 개체는 `RelativeSource` 태그 확장을 사용하여 해당 `BindingContext`를 템플릿 기반 부모로 설정합니다. `Frame` 개체 및 해당 자식의 바인딩 식은 루트 `Frame` 요소의 `BindingContext`를 상속하기 때문에 `CardView` 속성을 기준으로 확인됩니다. 다음 스크린샷에서는 다음 세 항목으로 구성된 `People` 컬렉션을 표시하는 페이지를 보여 줍니다.
 
-[![iOS 및 Android에서 템플릿 기반 CardView 개체의 스크린샷](control-template-images/viewmodel-controltemplate.png "템플릿 기반 CardView 개체")](control-template-images/viewmodel-controltemplate-large.png#lightbox "템플릿 기반 CardView 개체")
+[![세 가지 템플릿 기반 CardView 개체의 스크린샷](control-template-images/viewmodel-controltemplate.png "템플릿 기반 CardView 개체")](control-template-images/viewmodel-controltemplate-large.png#lightbox "템플릿 기반 CardView 개체")
 
 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 개체는 템플릿 기반 부모의 속성에 바인딩할 수 있지만, 컨트롤 템플릿 내의 [`Button`](xref:Xamarin.Forms.Button)은 해당 템플릿 기반 부모와 viewmodel의 `DeletePersonCommand`에 모두 바인딩됩니다. 이는 `Button.Command` 속성이 바인딩 소스를 바인딩 컨텍스트 형식이 `PeopleViewModel`인 상위 항목, 즉 [`StackLayout`](xref:Xamarin.Forms.StackLayout)으로 다시 정의하기 때문입니다. 그러면 바인딩 식의 `Path` 부분이 `DeletePersonCommand` 속성을 확인할 수 있습니다. 그러나 `Button.CommandParameter` 속성은 바인딩 소스를 변경하지 않고 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 부모에서 상속합니다. 따라서 `CommandParameter` 속성은 `CardView`의 `CardTitle` 속성에 바인딩됩니다.
 
 [`Button`](xref:Xamarin.Forms.Button) 바인딩의 전반적인 효과는 `Button`을 누를 때 `PeopleViewModel` 클래스의 `DeletePersonCommand`로 `CardName` 속성의 값이 전달되어 `DeletePersonCommand`가 실행된다는 것입니다. 그러면 지정된 `CardView`가 바인딩 가능한 레이아웃에서 제거됩니다.
 
-[![iOS 및 Android에서 템플릿 기반 CardView 개체의 스크린샷](control-template-images/viewmodel-itemdeleted.png "템플릿 기반 CardView 개체")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "템플릿 기반 CardView 개체")
+[![두 가지 템플릿 기반 CardView 개체의 스크린샷](control-template-images/viewmodel-itemdeleted.png "템플릿 기반 CardView 개체")](control-template-images/viewmodel-itemdeleted-large.png#lightbox "템플릿 기반 CardView 개체")
 
 상대 바인딩에 대한 자세한 내용은 [Xamarin.Forms 상대 바인딩](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)을 참조하세요.
 

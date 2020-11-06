@@ -5,12 +5,12 @@ description: Xamarin 및 C#를 사용하여 플랫폼 간 C/C++ 코드를 빌드
 author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
-ms.openlocfilehash: 80878ec36eb319ff6c798788493469793efdcf56
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8422affab86ea176cad4e57833188dcd5738a99a
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457993"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928505"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Xamarin에서 C/C++ 라이브러리 사용
 
@@ -45,17 +45,17 @@ C/C++ 는 플랫폼 간 언어로 간주되지만, 모든 대상 컴파일러에
 
 ### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>1단계: C/C++ 소스 코드를 플랫폼별 네이티브 라이브러리로 컴파일
 
-이 단계의 목표는 C# 래퍼에 의해 호출될 수 있는 네이티브 라이브러리를 만드는 것입니다. 이는 상황에 따라 관련이 있을 수도, 없을 수도 있습니다. 이 일반적인 시나리오에서 다룰 수 있는 많은 도구와 프로세스는 이 문서의 범위를 벗어나는 것입니다. 핵심 고려 사항은 C/C++ 코드베이스와 모든 네이티브 래퍼 코드 간 동기화 유지, 충분한 단위 테스트, 빌드 자동화입니다. 
+이 단계의 목표는 C# 래퍼에 의해 호출될 수 있는 네이티브 라이브러리를 만드는 것입니다. 이는 상황에 따라 관련이 있을 수도, 없을 수도 있습니다. 이 일반적인 시나리오에서 다룰 수 있는 많은 도구와 프로세스는 이 문서의 범위를 벗어나는 것입니다. 핵심 고려 사항은 C/C++ 코드베이스와 모든 네이티브 래퍼 코드 간 동기화 유지, 충분한 단위 테스트, 빌드 자동화입니다.
 
 이 연습의 라이브러리는 Visual Studio Code 및 동반 셸 스크립트를 사용하여 만들어졌습니다. 이 연습의 확장 버전은 샘플의 이 부분에 대해 보다 자세히 설명하는 [Mobile CAT GitHub 리포지토리](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin)에서 찾을 수 있습니다. 이 경우 네이티브 라이브러리는 타사 종속성으로 처리되지만, 이 단계가 컨텍스트에 대해 설명되어 있습니다.
 
-간단한 설명을 위해 이 연습은 아키텍처의 하위 집합만을 대상으로 합니다. iOS의 경우 lipo 유틸리티를 사용하여 개별 아키텍처 관련 이진 파일에서 단일 fat 이진 파일을 만듭니다. Android는 확장명이 .so인 동적 이진 파일을 사용하고, iOS는 확장명이 .a인 정적 fat 이진 파일을 사용합니다. 
+간단한 설명을 위해 이 연습은 아키텍처의 하위 집합만을 대상으로 합니다. iOS의 경우 lipo 유틸리티를 사용하여 개별 아키텍처 관련 이진 파일에서 단일 fat 이진 파일을 만듭니다. Android는 확장명이 .so인 동적 이진 파일을 사용하고, iOS는 확장명이 .a인 정적 fat 이진 파일을 사용합니다.
 
 ### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>2단계: Visual Studio 솔루션을 사용하여 네이티브 라이브러리 래핑
 
 다음 단계는 .NET에서 쉽게 사용할 수 있도록 네이티브 라이브러리를 래핑하는 것입니다. 이 작업은 네 개의 프로젝트를 포함하는 Visual Studio 솔루션을 사용하여 수행됩니다. 공유 프로젝트에 공용 코드가 포함됩니다. Xamarin.Android, Xamarin.iOS 및 .NET Standard 각각을 대상으로 하는 프로젝트는 플랫폼 제약 없이 라이브러리를 참조할 수 있습니다.
 
-이 래퍼는 Paul Betts가 설명한 '[bait and switch 기법](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)'을 사용합니다. 이것이 유일한 방법은 아니지만 라이브러리를 쉽게 참조할 수 있도록 하므로 사용 애플리케이션 자체에서 플랫폼별 구현을 명시적으로 관리하지 않아도 됩니다. 이 기법은 기본적으로 대상(.NET Standard, Android, iOS)이 동일한 네임스페이스, 어셈블리 이름 및 클래스 구조를 공유하는지 확인하는 것입니다. NuGet은 항상 플랫폼별 라이브러리를 선호하므로 .NET Standard 버전은 런타임에 사용되지 않습니다.
+이 래퍼는 '[bait and switch 기법](https://github.com/JFMG/Bait-and-Switch-PCL-example)'을 사용합니다. 이것이 유일한 방법은 아니지만 라이브러리를 쉽게 참조할 수 있도록 하므로 사용 애플리케이션 자체에서 플랫폼별 구현을 명시적으로 관리하지 않아도 됩니다. 이 기법은 기본적으로 대상(.NET Standard, Android, iOS)이 동일한 네임스페이스, 어셈블리 이름 및 클래스 구조를 공유하는지 확인하는 것입니다. NuGet은 항상 플랫폼별 라이브러리를 선호하므로 .NET Standard 버전은 런타임에 사용되지 않습니다.
 
 이 단계의 대부분의 작업에서는 P/Invoke를 사용하여 네이티브 라이브러리 메서드를 호출하고 기본 개체에 대한 참조를 관리하는 데 치중합니다. 목표는 복잡성을 추상화하는 동시에 라이브러리의 기능을 소비자에게 노출하는 것입니다. Xamarin.Forms 개발자는 관리되지 않는 라이브러리의 내부 작동에 대한 실무 지식이 필요하지 않습니다. 다른 관리되는 C# 라이브러리를 사용하는 것과 같을 것입니다.
 
@@ -75,7 +75,7 @@ C/C++ 는 플랫폼 간 언어로 간주되지만, 모든 대상 컴파일러에
 
 ## <a name="walk-through"></a>연습
 
-제공된 단계는 **Mac용 Visual Studio**에만 적용되지만, 구조는 **Visual Studio 2017**에서도 유효합니다.
+제공된 단계는 **Mac용 Visual Studio** 에만 적용되지만, 구조는 **Visual Studio 2017** 에서도 유효합니다.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
@@ -136,32 +136,32 @@ extern "C" {
 
 ### <a name="creating-the-visual-studio-solution"></a>Visual Studio 솔루션 만들기
 
-1. **Mac용 Visual Studio**에서 **새 프로젝트**(*시작 페이지*에서) 또는 **새 솔루션**(*파일* 메뉴에서)을 클릭합니다.
-2. **새 프로젝트** 창에서 **공유 프로젝트**(*다중 플랫폼 > 라이브러리* 내)를 선택한 후 **다음**을 클릭합니다.
-3. 다음 필드를 업데이트한 다음 **만들기**를 클릭합니다.
+1. **Mac용 Visual Studio** 에서 **새 프로젝트** ( *시작 페이지* 에서) 또는 **새 솔루션** ( *파일* 메뉴에서)을 클릭합니다.
+2. **새 프로젝트** 창에서 **공유 프로젝트** ( *다중 플랫폼 > 라이브러리* 내)를 선택한 후 **다음** 을 클릭합니다.
+3. 다음 필드를 업데이트한 다음 **만들기** 를 클릭합니다.
 
     - **프로젝트 이름:** MathFuncs.Shared  
     - **솔루션 이름:** MathFuncs  
     - **위치:** 기본 저장 위치를 사용합니다(또는 대체 위치를 선택).   
     - **솔루션 디렉터리 내에 프로젝트 디렉터리 만들기:** 이 확인란을 선택합니다.
-4. **솔루션 탐색기**에서 **MathFuncs.Shared** 프로젝트를 두 번 클릭하고 **기본 설정**으로 이동합니다.
-5. **기본 네임스페이스**에서 **MathFuncs**만 설정되도록 **.Shared**를 제거한 다음 **확인**을 클릭합니다.
-6. **MyClass.cs**(템플릿에서 만듦)를 연 다음 클래스 및 파일 이름 모두의 이름을 **MyMathFuncsWrapper**로 변경하고 네임스페이스를 **MathFuncs**로 변경합니다.
-7. 솔루션 **MathFuncs**를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 프로젝트 추가...** 를 선택합니다.
-8. **새 프로젝트** 창에서 **.NET Standard 라이브러리**(*다중 플랫폼 > 라이브러리* 내)를 선택한 후 **다음**을 클릭합니다.
-9. **.NET Standard 2.0**을 선택한 후 **다음**을 클릭합니다.
-10. 다음 필드를 업데이트한 다음 **만들기**를 클릭합니다.
+4. **솔루션 탐색기** 에서 **MathFuncs.Shared** 프로젝트를 두 번 클릭하고 **기본 설정** 으로 이동합니다.
+5. **기본 네임스페이스** 에서 **MathFuncs** 만 설정되도록 **.Shared** 를 제거한 다음 **확인** 을 클릭합니다.
+6. **MyClass.cs** (템플릿에서 만듦)를 연 다음 클래스 및 파일 이름 모두의 이름을 **MyMathFuncsWrapper** 로 변경하고 네임스페이스를 **MathFuncs** 로 변경합니다.
+7. 솔루션 **MathFuncs** 를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **새 프로젝트 추가...** 를 선택합니다.
+8. **새 프로젝트** 창에서 **.NET Standard 라이브러리** ( *다중 플랫폼 > 라이브러리* 내)를 선택한 후 **다음** 을 클릭합니다.
+9. **.NET Standard 2.0** 을 선택한 후 **다음** 을 클릭합니다.
+10. 다음 필드를 업데이트한 다음 **만들기** 를 클릭합니다.
 
     - **프로젝트 이름:** MathFuncs.Standard  
     - **위치:** 공유 프로젝트와 동일한 저장 위치를 사용합니다.   
 
-11. **솔루션 탐색기**에서 **MathFuncs** 프로젝트를 두 번 클릭합니다.
-12. **기본 설정**으로 이동하여 **기본 네임스페이스**를 **MathFuncs**으로 업데이트합니다.
-13. **출력** 설정으로 이동하여 **어셈블리 이름**을 **MathFuncs**으로 업데이트합니다.
-14. **컴파일러** 설정으로 이동하여 **구성**을 **릴리스**로 변경하고, **디버그 정보**를 **기호만**으로 설정한 다음 **확인**을 클릭합니다.
-15. 프로젝트에서 **Class1.cs/Getting Started**를 삭제합니다(이러한 항목 중 하나가 템플릿의 일부로 포함된 경우).
-16. 프로젝트 **Dependencies/References** 폴더를 **CONTROL + 클릭**한 다음 **참조 편집**을 선택합니다.
-17. **프로젝트** 탭에서 **MathFuncs.Shared**를 선택한 다음 **확인**을 클릭합니다.
+11. **솔루션 탐색기** 에서 **MathFuncs** 프로젝트를 두 번 클릭합니다.
+12. **기본 설정** 으로 이동하여 **기본 네임스페이스** 를 **MathFuncs** 으로 업데이트합니다.
+13. **출력** 설정으로 이동하여 **어셈블리 이름** 을 **MathFuncs** 으로 업데이트합니다.
+14. **컴파일러** 설정으로 이동하여 **구성** 을 **릴리스** 로 변경하고, **디버그 정보** 를 **기호만** 으로 설정한 다음 **확인** 을 클릭합니다.
+15. 프로젝트에서 **Class1.cs/Getting Started** 를 삭제합니다(이러한 항목 중 하나가 템플릿의 일부로 포함된 경우).
+16. 프로젝트 **Dependencies/References** 폴더를 **CONTROL + 클릭** 한 다음 **참조 편집** 을 선택합니다.
+17. **프로젝트** 탭에서 **MathFuncs.Shared** 를 선택한 다음 **확인** 을 클릭합니다.
 18. 다음 구성을 사용하여 7~17단계를 반복합니다(9단계 무시).
 
     | **프로젝트 이름**  | **템플릿 이름**   | **프로젝트 메뉴**   |
@@ -169,15 +169,15 @@ extern "C" {
     | MathFuncs.Android | 클래스 라이브러리       | Android > Library      |
     | MathFuncs.iOS     | 바인딩 라이브러리     | iOS > Library          |
 
-19. **솔루션 탐색기**에서 **MathFuncs.Android** 프로젝트를 두 번 클릭한 다음 **컴파일러** 설정으로 이동합니다.
+19. **솔루션 탐색기** 에서 **MathFuncs.Android** 프로젝트를 두 번 클릭한 다음 **컴파일러** 설정으로 이동합니다.
 
-20. **구성**이 **디버그**로 설정된 상태에서 **Android;** 를 포함하도록 **기호 정의**를 편집합니다.
+20. **구성** 이 **디버그** 로 설정된 상태에서 **Android;** 를 포함하도록 **기호 정의** 를 편집합니다.
 
-21. **구성**을 **릴리스**로 변경한 다음 **Android;** 도 포함하도록 **기호 정의**를 편집합니다.
+21. **구성** 을 **릴리스** 로 변경한 다음 **Android;** 도 포함하도록 **기호 정의** 를 편집합니다.
 
-22. **MathFuncs.iOS**에 대해 19~20단계를 반복하여 두 경우 모두 **Android;** 대신 **iOS;** 를 포함하도록 **기호 정의**를 편집합니다.
+22. **MathFuncs.iOS** 에 대해 19~20단계를 반복하여 두 경우 모두 **Android;** 대신 **iOS;** 를 포함하도록 **기호 정의** 를 편집합니다.
 
-23. **릴리스** 구성에서 솔루션을 빌드하고(**CONTROL + COMMAND + B**) 해당 프로젝트 bin 폴더에 있는 세 개의 출력 어셈블리(Android, iOS, .NET Standard)가 모두 같은 이름 **MathFuncs.dll**을 공유하는지 확인합니다.
+23. **릴리스** 구성에서 솔루션을 빌드하고( **CONTROL + COMMAND + B** ) 해당 프로젝트 bin 폴더에 있는 세 개의 출력 어셈블리(Android, iOS, .NET Standard)가 모두 같은 이름 **MathFuncs.dll** 을 공유하는지 확인합니다.
 
 이 단계에서 솔루션에는 Android, iOS 및 .NET Standard에 하나씩 세 개의 대상과 세 대상이 각각 참조하는 하나의 공유 프로젝트가 있어야 합니다. 이들은 동일한 기본 네임스페이스와 동일한 이름을 가진 출력 어셈블리를 사용하도록 구성해야 합니다. 이는 앞서 언급한 'bait and switch' 접근 방식에 필요합니다.
 
@@ -187,9 +187,9 @@ extern "C" {
 
 #### <a name="native-references-for-mathfuncsandroid"></a>MathFuncs.Android용 네이티브 참조
 
-1. **MathFuncs.Android** 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 폴더**를 선택하고 이름을 **libs**로 지정합니다.
+1. **MathFuncs.Android** 프로젝트를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **새 폴더** 를 선택하고 이름을 **libs** 로 지정합니다.
 
-2. 각 **ABI**(애플리케이션 이진 인터페이스)에 대해, **libs** 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 폴더**를 선택하고 각 **ABI**를 따라 이름을 지정합니다. 이 경우 다음과 같습니다.
+2. 각 **ABI** (애플리케이션 이진 인터페이스)에 대해, **libs** 폴더를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **새 폴더** 를 선택하고 각 **ABI** 를 따라 이름을 지정합니다. 이 경우 다음과 같습니다.
 
     - arm64-v8a
     - armeabi-v7a
@@ -220,9 +220,9 @@ extern "C" {
     **x86_64:** libs/Android/x86_64
 
     > [!NOTE]
-    > 파일을 추가하려면 각 **ABI**를 나타내는 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다. **PrecompiledLibs** 디렉터리에서 적절한 라이브러리를 선택하고 **열기**를 클릭한 다음 기본 옵션을 *파일을 디렉터리로 복사* 그대로 두고 **확인**을 클릭합니다.
+    > 파일을 추가하려면 각 **ABI** 를 나타내는 폴더를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다. **PrecompiledLibs** 디렉터리에서 적절한 라이브러리를 선택하고 **열기** 를 클릭한 다음 기본 옵션을 *파일을 디렉터리로 복사* 그대로 두고 **확인** 을 클릭합니다.
 
-5. 각 **.so** 파일에 대해 **CONTROL + 클릭**한 다음 **빌드 작업** 메뉴에서 **EmbeddedNativeLibrary** 옵션을 선택합니다.
+5. 각 **.so** 파일에 대해 **CONTROL + 클릭** 한 다음 **빌드 작업** 메뉴에서 **EmbeddedNativeLibrary** 옵션을 선택합니다.
 
 이제 **libs** 폴더가 다음과 같이 표시됩니다.
 
@@ -240,9 +240,9 @@ extern "C" {
 
 #### <a name="native-references-for-mathfuncsios"></a>MathFuncs.iOS용 네이티브 참조
 
-1. **MathFuncs.iOS** 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **네이티브 참조 추가**를 선택합니다. 
-2. **PrecompiledLibs** 디렉터리 아래의 libs/ios에서 **libMathFuncs.a** 라이브러리를 선택한 다음 **열기**를 클릭합니다. 
-3. **libMathFuncs** 파일(**기본 참조** 폴더 내)을 **CONTROL + 클릭**한 다음, 메뉴에서 **속성** 옵션을 선택합니다.  
+1. **MathFuncs.iOS** 프로젝트를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **네이티브 참조 추가** 를 선택합니다.
+2. **PrecompiledLibs** 디렉터리 아래의 libs/ios에서 **libMathFuncs.a** 라이브러리를 선택한 다음 **열기** 를 클릭합니다.
+3. **libMathFuncs** 파일( **기본 참조** 폴더 내)을 **CONTROL + 클릭** 한 다음, 메뉴에서 **속성** 옵션을 선택합니다.  
 4. **속성** 패드에서 선택(체크 아이콘 표시)되도록 **네이티브 참조** 속성을 구성합니다.
 
     - Force Load
@@ -252,10 +252,10 @@ extern "C" {
     > [!NOTE]
     > [네이티브 참조](../macios/native-references.md)와 함께 바인딩 라이브러리 프로젝트 형식을 사용하여 정적 라이브러리를 포함하고 이를 참조하는 Xamarin.iOS 앱과 자동으로 연결되도록 할 수 있습니다(NuGet 패키지를 통해 포함된 경우에도).
 
-5. **ApiDefinition.cs**를 열고 템플릿 기반 주석 처리된 코드를 삭제한 다음(`MathFuncs` 네임스페이스만 남겨 둠) **Structs.cs**에 대해 동일한 단계를 수행합니다. 
+5. **ApiDefinition.cs** 를 열고 템플릿 기반 주석 처리된 코드를 삭제한 다음(`MathFuncs` 네임스페이스만 남겨 둠) **Structs.cs** 에 대해 동일한 단계를 수행합니다.
 
     > [!NOTE]
-    > 바인딩 라이브러리 프로젝트는 빌드하려면 이러한 파일(*ObjCBindingApiDefinition* 및 *ObjCBindingCoreSource* 빌드 작업 포함)이 필요합니다. 그러나 우리는 표준 P/Invoke를 사용하여 Android 및 iOS 라이브러리 대상 모두에서 공유할 수 있는 방식으로 이러한 파일 외부에서 네이티브 라이브러리를 호출하는 코드를 작성합니다.
+    > 바인딩 라이브러리 프로젝트는 빌드하려면 이러한 파일( *ObjCBindingApiDefinition* 및 *ObjCBindingCoreSource* 빌드 작업 포함)이 필요합니다. 그러나 우리는 표준 P/Invoke를 사용하여 Android 및 iOS 라이브러리 대상 모두에서 공유할 수 있는 방식으로 이러한 파일 외부에서 네이티브 라이브러리를 호출하는 코드를 작성합니다.
 
 ### <a name="writing-the-managed-library-code"></a>관리되는 라이브러리 코드 작성
 
@@ -263,8 +263,8 @@ extern "C" {
 
 #### <a name="creating-a-safehandle"></a>SafeHandle 만들기
 
-1. **MathFuncs.Shared** 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다. 
-2. **새 파일** 창에서 **빈 클래스**를 선택하고 이름을 **MyMathFuncsSafeHandle**로 지정한 다음 **새로 만들기**를 클릭합니다.
+1. **MathFuncs.Shared** 프로젝트를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다.
+2. **새 파일** 창에서 **빈 클래스** 를 선택하고 이름을 **MyMathFuncsSafeHandle** 로 지정한 다음 **새로 만들기** 를 클릭합니다.
 3. **MyMathFuncsSafeHandle** 클래스를 구현합니다.
 
     ```csharp
@@ -289,11 +289,11 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2)은 관리 코드에서 관리되지 않는 리소스로 작업하는 데 선호되는 방법입니다. 이는 중요한 종료 및 개체 수명 주기와 관련된 많은 상용구 코드를 추상화합니다. 이 핸들의 소유자는 나중에 이 핸들을 다른 관리되는 리소스처럼 취급할 수 있으며 전체 [삭제 가능한 패턴](/dotnet/standard/garbage-collection/implementing-dispose)을 구현할 필요가 없습니다. 
+    > [SafeHandle](/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2)은 관리 코드에서 관리되지 않는 리소스로 작업하는 데 선호되는 방법입니다. 이는 중요한 종료 및 개체 수명 주기와 관련된 많은 상용구 코드를 추상화합니다. 이 핸들의 소유자는 나중에 이 핸들을 다른 관리되는 리소스처럼 취급할 수 있으며 전체 [삭제 가능한 패턴](/dotnet/standard/garbage-collection/implementing-dispose)을 구현할 필요가 없습니다.
 
 #### <a name="creating-the-internal-wrapper-class"></a>내부 래퍼 클래스 만들기
 
-1. **MyMathFuncsWrapper.cs**를 열고 내부 정적 클래스로 변경합니다.
+1. **MyMathFuncsWrapper.cs** 를 열고 내부 정적 클래스로 변경합니다.
 
     ```csharp
     namespace MathFuncs
@@ -315,9 +315,9 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > 이렇게 하면 **Android** 또는 **iOS**에 대해 라이브러리를 빌드하는지 여부에 따라 **DllName** 상수 값이 설정됩니다. 이는 각 플랫폼에서 사용되는 다양한 명명 규칙을 해결하기 위한 것이지만, 이 경우에는 사용되는 라이브러리의 형식이기도 합니다. Android는 동적 라이브러리를 사용하므로 확장명을 포함하는 파일 이름이 필요합니다. iOS의 경우, 정적 라이브러리를 사용하고 있으므로 ' *__Internal*'이 필요합니다.
+    > 이렇게 하면 **Android** 또는 **iOS** 에 대해 라이브러리를 빌드하는지 여부에 따라 **DllName** 상수 값이 설정됩니다. 이는 각 플랫폼에서 사용되는 다양한 명명 규칙을 해결하기 위한 것이지만, 이 경우에는 사용되는 라이브러리의 형식이기도 합니다. Android는 동적 라이브러리를 사용하므로 확장명을 포함하는 파일 이름이 필요합니다. iOS의 경우, 정적 라이브러리를 사용하고 있으므로 ' *__Internal* '이 필요합니다.
 
-3. **MyMathFuncsWrapper.cs** 파일의 맨 위에 **System.Runtime.InteropServices**에 대한 참조를 추가합니다.
+3. **MyMathFuncsWrapper.cs** 파일의 맨 위에 **System.Runtime.InteropServices** 에 대한 참조를 추가합니다.
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -334,7 +334,7 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > 우리는 상수 **DllName**을 .NET 런타임에 해당 라이브러리에서 호출할 함수의 이름을 명시적으로 지시하는 **EntryPoint**와 함께 **DllImport** 특성에 전달합니다. 기술적으로, 관리되는 메서드 이름이 관리되지 않는 메서드와 동일한 경우 **EntryPoint** 값을 제공할 필요가 없습니다. 이 값을 제공하지 않으면 관리되는 메서드 이름이 대신 **EntryPoint**로 사용됩니다. 그러나 명시적으로 지정하는 것이 더 좋습니다.  
+    > 우리는 상수 **DllName** 을 .NET 런타임에 해당 라이브러리에서 호출할 함수의 이름을 명시적으로 지시하는 **EntryPoint** 와 함께 **DllImport** 특성에 전달합니다. 기술적으로, 관리되는 메서드 이름이 관리되지 않는 메서드와 동일한 경우 **EntryPoint** 값을 제공할 필요가 없습니다. 이 값을 제공하지 않으면 관리되는 메서드 이름이 대신 **EntryPoint** 로 사용됩니다. 그러나 명시적으로 지정하는 것이 더 좋습니다.  
 
 5. 다음 코드를 사용하여 **MyMathFuncs** 클래스로 작업할 수 있도록 래퍼 메서드를 추가합니다.
 
@@ -353,7 +353,7 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > 이 예제에서는 매개 변수에 대해 단순한 형식을 사용합니다. 이 경우에는 마샬링이 비트 복사이므로 추가 작업이 필요하지 않습니다. 또한 표준 **IntPtr** 대신 **MyMathFuncsSafeHandle** 클래스를 사용하는 데 유의하세요. **IntPtr**는 마샬링 프로세스의 일부로 **SafeHandle**에 자동으로 매핑됩니다.
+    > 이 예제에서는 매개 변수에 대해 단순한 형식을 사용합니다. 이 경우에는 마샬링이 비트 복사이므로 추가 작업이 필요하지 않습니다. 또한 표준 **IntPtr** 대신 **MyMathFuncsSafeHandle** 클래스를 사용하는 데 유의하세요. **IntPtr** 는 마샬링 프로세스의 일부로 **SafeHandle** 에 자동으로 매핑됩니다.
 
 6. 완성된 **MyMathFuncsWrapper** 클래스가 아래와 같이 표시되는지 확인합니다.
 
@@ -409,8 +409,8 @@ extern "C" {
 
 이제 래퍼가 완성되었으므로 관리되지 않는 C++ MyMathFuncs 개체에 대한 참조를 관리하는 MyMathFuncs 클래스를 만듭니다.  
 
-1. **MathFuncs.Shared** 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다. 
-2. **새 파일** 창에서 **빈 클래스**를 선택하고 이름을 **MyMathFuncs**로 지정한 다음 **새로 만들기**를 클릭합니다.
+1. **MathFuncs.Shared** 프로젝트를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **파일 추가...** 를 선택합니다.
+2. **새 파일** 창에서 **빈 클래스** 를 선택하고 이름을 **MyMathFuncs** 로 지정한 다음 **새로 만들기** 를 클릭합니다.
 3. **MyMathFuncs** 클래스에 다음 멤버를 추가합니다.
 
     ```csharp
@@ -477,10 +477,10 @@ extern "C" {
 
 NuGet을 통해 라이브러리를 패키지하고 배포하기 위해 솔루션에 **nuspec** 파일이 필요합니다. 그러면 지원되는 각 플랫폼에 대해 포함되는 결과 어셈블리를 식별할 수 있습니다.
 
-1. 솔루션 **MathFuncs**를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **솔루션 폴더 추가**를 선택하여 이름을 **SolutionItems**로 지정합니다.
-2. **SolutionItems** 폴더를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **새 파일...** 을 선택합니다.
-3. **새 파일** 창에서 **빈 XML 파일**을 선택하고 이름을 **MathFuncs.nuspec**으로 지정한 다음 **새로 만들기**를 클릭합니다.
-4. **NuGet** 소비자에게 표시되는 기본 패키지 메타데이터를 사용하여 **MathFuncs.nuspec**을 업데이트합니다. 예를 들면 다음과 같습니다.
+1. 솔루션 **MathFuncs** 를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **솔루션 폴더 추가** 를 선택하여 이름을 **SolutionItems** 로 지정합니다.
+2. **SolutionItems** 폴더를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **새 파일...** 을 선택합니다.
+3. **새 파일** 창에서 **빈 XML 파일** 을 선택하고 이름을 **MathFuncs.nuspec** 으로 지정한 다음 **새로 만들기** 를 클릭합니다.
+4. **NuGet** 소비자에게 표시되는 기본 패키지 메타데이터를 사용하여 **MathFuncs.nuspec** 을 업데이트합니다. 예를 들면 다음과 같습니다.
 
     ```xml
     <?xml version="1.0"?>
@@ -555,11 +555,11 @@ NuGet을 통해 라이브러리를 패키지하고 배포하기 위해 솔루션
         <!-- Android -->
         <file src="MathFuncs.Android/bin/Release/MathFuncs.dll" target="lib/MonoAndroid81/MathFuncs.dll" />
         <file src="MathFuncs.Android/bin/Release/MathFuncs.pdb" target="lib/MonoAndroid81/MathFuncs.pdb" />
-        
+
         <!-- iOS -->
         <file src="MathFuncs.iOS/bin/Release/MathFuncs.dll" target="lib/Xamarin.iOS10/MathFuncs.dll" />
         <file src="MathFuncs.iOS/bin/Release/MathFuncs.pdb" target="lib/Xamarin.iOS10/MathFuncs.pdb" />
-        
+
         <!-- netstandard2.0 -->
         <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.dll" target="lib/netstandard2.0/MathFuncs.dll" />
         <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.pdb" target="lib/netstandard2.0/MathFuncs.pdb" />
@@ -581,20 +581,20 @@ NuGet을 통해 라이브러리를 패키지하고 배포하기 위해 솔루션
 
 NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
-1. **Finder**에서 편리한 디렉터리로 이동합니다. 예: **/Users**.
-2. **파일** 메뉴에서 **새 폴더**를 선택하여 **local-nuget-feed**와 같은 의미 있는 이름을 제공합니다.
+1. **Finder** 에서 편리한 디렉터리로 이동합니다. 예: **/Users**.
+2. **파일** 메뉴에서 **새 폴더** 를 선택하여 **local-nuget-feed** 와 같은 의미 있는 이름을 제공합니다.
 
 ### <a name="creating-the-package"></a>패키지 만들기
 
-1. **빌드 구성**을 **릴리스**로 설정하고 **COMMAND + B**를 사용하여 빌드를 실행합니다.
-2. **터미널**을 열고 디렉터리를 **nuspec** 파일이 포함된 폴더로 변경합니다.
-3. **터미널**에서 **nuspec** 파일, **버전**(예: 1.0.0), **OutputDirectory**([이전 단계](#preparing-a-local-packages-directory)에서 만든 폴더, 즉 **local-nuget-feed**를 사용)를 지정하여 **nuget pack** 명령을 실행합니다. 예를 들면 다음과 같습니다.
+1. **빌드 구성** 을 **릴리스** 로 설정하고 **COMMAND + B** 를 사용하여 빌드를 실행합니다.
+2. **터미널** 을 열고 디렉터리를 **nuspec** 파일이 포함된 폴더로 변경합니다.
+3. **터미널** 에서 **nuspec** 파일, **버전** (예: 1.0.0), **OutputDirectory** ( [이전 단계](#preparing-a-local-packages-directory)에서 만든 폴더, 즉 **local-nuget-feed** 를 사용)를 지정하여 **nuget pack** 명령을 실행합니다. 예를 들면 다음과 같습니다.
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
     ```
 
-4. **local-nuget-feed** 디렉터리에서 **MathFuncs.1.0.0.nupkg**가 만들어졌는지 **확인**합니다.
+4. **local-nuget-feed** 디렉터리에서 **MathFuncs.1.0.0.nupkg** 가 만들어졌는지 **확인** 합니다.
 
 ### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>[선택 사항] Azure DevOps에서 비공개 NuGet 피드 사용
 
@@ -608,63 +608,63 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 ### <a name="creating-the-xamarinforms-project"></a>**Xamarin.Forms** 프로젝트 만들기
 
-1. **Mac용 Visual Studio**의 새 인스턴스를 엽니다. **터미널**에서 이 작업을 수행할 수 있습니다.
+1. **Mac용 Visual Studio** 의 새 인스턴스를 엽니다. **터미널** 에서 이 작업을 수행할 수 있습니다.
 
     ```bash
     open -n -a "Visual Studio"
     ```
 
-2. **Mac용 Visual Studio**에서 **새 프로젝트**(*시작 페이지*에서) 또는 **새 솔루션**(*파일* 메뉴에서)을 클릭합니다.
-3. **새 프로젝트** 창에서 **빈 Forms 앱**(*다중 플랫폼 > 앱* 내)를 선택한 후 **다음**을 클릭합니다.
-4. 다음 필드를 업데이트한 후 **다음**을 클릭합니다.
+2. **Mac용 Visual Studio** 에서 **새 프로젝트** ( *시작 페이지* 에서) 또는 **새 솔루션** ( *파일* 메뉴에서)을 클릭합니다.
+3. **새 프로젝트** 창에서 **빈 Forms 앱** ( *다중 플랫폼 > 앱* 내)를 선택한 후 **다음** 을 클릭합니다.
+4. 다음 필드를 업데이트한 후 **다음** 을 클릭합니다.
 
     - **앱 이름:** MathFuncsApp.
     - **조직 식별자:** 예를 들어 _com.{your_org}_ 같은 역방향 네임스페이스를 사용합니다.
     - **대상 플랫폼:** 기본값을 사용합니다(Android 및 iOS 대상 모두).
     - **공유 코드:** 이 필드를 .NET Standard로 설정합니다("공유 라이브러리" 솔루션은 가능하지만 이 연습에서는 다루지 않음).
 
-5. 다음 필드를 업데이트한 다음 **만들기**를 클릭합니다.
+5. 다음 필드를 업데이트한 다음 **만들기** 를 클릭합니다.
 
     - **프로젝트 이름:** MathFuncsApp.
     - **솔루션 이름:** MathFuncsApp.  
     - **위치:** 기본 저장 위치를 사용합니다(또는 대체 위치를 선택).
 
-6. **솔루션 탐색기**에서 초기 테스트를 위한 대상(**MathFuncsApp.Android** 또는 **MathFuncs.iOS**)을 **CONTROL + 클릭**한 다음 **시작 프로젝트로 설정**을 선택합니다.
-7. 기본 **디바이스** 또는 **시뮬레이터**/**에뮬레이터**를 선택합니다. 
-8. 솔루션을 실행하여(**COMMAND + RETURN**) 템플릿 기반 **Xamarin.Forms** 프로젝트가 빌드되고 제대로 실행되는지 확인합니다. 
+6. **솔루션 탐색기** 에서 초기 테스트를 위한 대상( **MathFuncsApp.Android** 또는 **MathFuncs.iOS** )을 **CONTROL + 클릭** 한 다음 **시작 프로젝트로 설정** 을 선택합니다.
+7. 기본 **디바이스** 또는 **시뮬레이터**/**에뮬레이터** 를 선택합니다.
+8. 솔루션을 실행하여( **COMMAND + RETURN** ) 템플릿 기반 **Xamarin.Forms** 프로젝트가 빌드되고 제대로 실행되는지 확인합니다.
 
     > [!NOTE]
-    > **iOS**(특히 시뮬레이터)는 빌드/배포 시간이 가장 빠릅니다.
+    > **iOS** (특히 시뮬레이터)는 빌드/배포 시간이 가장 빠릅니다.
 
 ### <a name="adding-the-local-nuget-feed-to-the-nuget-configuration"></a>NuGet 구성에 로컬 NuGet 피드 추가
 
-1. **Visual Studio**에서 **기본 설정**(**Visual Studio** 메뉴에서)을 선택합니다.
-2. **NuGet** 섹션 아래에서 **소스**를 선택한 다음 **추가**를 클릭합니다.
-3. 다음 필드를 업데이트한 다음 **소스 추가**를 클릭합니다.
+1. **Visual Studio** 에서 **기본 설정** ( **Visual Studio** 메뉴에서)을 선택합니다.
+2. **NuGet** 섹션 아래에서 **소스** 를 선택한 다음 **추가** 를 클릭합니다.
+3. 다음 필드를 업데이트한 다음 **소스 추가** 를 클릭합니다.
 
     - **Name:** Local-Packages와 같은 의미 있는 이름을 제공합니다.  
     - **위치:** [이전 단계](#preparing-a-local-packages-directory)에서 만든 **local-nuget-feed** 폴더를 지정합니다.
 
     > [!NOTE]
-    > 이 경우 **사용자 이름** 및 **암호**를 지정할 필요가 없습니다. 
+    > 이 경우 **사용자 이름** 및 **암호** 를 지정할 필요가 없습니다.
 
-4. **확인**을 클릭합니다.
+4. **확인** 을 클릭합니다.
 
 ### <a name="referencing-the-package"></a>패키지 참조
 
-각 프로젝트(**MathFuncsApp**, **MathFuncsApp.Android**, **MathFuncsApp.iOS**)에 대해 다음 단계를 반복합니다.
+각 프로젝트( **MathFuncsApp** , **MathFuncsApp.Android** , **MathFuncsApp.iOS** )에 대해 다음 단계를 반복합니다.
 
-1. 프로젝트를 **CONTROL + 클릭**한 다음 **추가** 메뉴에서 **NuGet 패키지 추가...** 를 선택합니다.
-2. **MathFuncs**를 검색합니다. 
-3. 패키지의 **버전**이 **1.0.0**이고 **제목** 및 **설명** 같은 다른 세부 정보가 예상대로, 즉 *MathFuncs* 및 *샘플 C++ 래퍼 라이브러리*로 표시되는지 확인합니다. 
-4. **MathFuncs** 패키지를 선택한 다음 **패키지 추가**를 클릭합니다.
+1. 프로젝트를 **CONTROL + 클릭** 한 다음 **추가** 메뉴에서 **NuGet 패키지 추가...** 를 선택합니다.
+2. **MathFuncs** 를 검색합니다.
+3. 패키지의 **버전** 이 **1.0.0** 이고 **제목** 및 **설명** 같은 다른 세부 정보가 예상대로, 즉 *MathFuncs* 및 *샘플 C++ 래퍼 라이브러리* 로 표시되는지 확인합니다.
+4. **MathFuncs** 패키지를 선택한 다음 **패키지 추가** 를 클릭합니다.
 
 ### <a name="using-the-library-functions"></a>라이브러리 함수 사용
 
 이제 각 프로젝트의 **MathFuncs** 패키지에 대 한 참조를 사용하여 함수를 C# 코드에 사용할 수 있습니다.
 
-1. **MathFuncsApp** 공통 **Xamarin.Forms** 프로젝트(**MathFuncsApp.Android** 및 **MathFuncsApp.iOS** 모두에 의해 참조됨)에서 **MainPage.xaml.cs**를 엽니다.
-2. 파일 맨 위에 **System.Diagnostics** 및 **MathFuncs**에 대한 **using** 문을 추가합니다.
+1. **MathFuncsApp** 공통 **Xamarin.Forms** 프로젝트( **MathFuncsApp.Android** 및 **MathFuncsApp.iOS** 모두에 의해 참조됨)에서 **MainPage.xaml.cs** 를 엽니다.
+2. 파일 맨 위에 **System.Diagnostics** 및 **MathFuncs** 에 대한 **using** 문을 추가합니다.
 
     ```csharp
     using System.Diagnostics;
@@ -711,7 +711,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     }
     ```
 
-7. 다음과 같이 **TestMathFuncs**라는 프라이빗 메서드를 구현합니다.
+7. 다음과 같이 **TestMathFuncs** 라는 프라이빗 메서드를 구현합니다.
 
     ```csharp
     private void TestMathFuncs()
@@ -755,11 +755,11 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     ```
 
     > [!NOTE]
-    > Android에서 테스트할 때 '*DLLNotFoundException*'이 발생하거나 iOS에서 빌드 오류가 발생하는 경우 사용 중인 디바이스/에뮬레이터/시뮬레이터의 CPU 아키텍처가 지원하도록 선택한 하위 집합과 호환되는지 확인해야 합니다. 
+    > Android에서 테스트할 때 ' *DLLNotFoundException* '이 발생하거나 iOS에서 빌드 오류가 발생하는 경우 사용 중인 디바이스/에뮬레이터/시뮬레이터의 CPU 아키텍처가 지원하도록 선택한 하위 집합과 호환되는지 확인해야 합니다.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 NuGet 패키지를 통해 배포되는 공용 .NET 래퍼를 통해 네이티브 라이브러리를 사용하는 Xamarin.Forms 앱을 만드는 방법을 설명했습니다. 이 연습에서 제공하는 예제는 보다 간단하게 방법을 보여 주기 위해 의도적으로 매우 간단하게 작성되었습니다. 실제 애플리케이션은 예외 처리, 콜백, 더 복잡한 형식의 마샬링, 다른 종속성 라이브러리와의 연결 등의 복잡성을 처리해야 합니다. 핵심 고려 사항은 C++ 코드의 진화를 조정하고 래퍼 및 클라이언트 애플리케이션과 동기화하는 프로세스입니다. 이 프로세스는 이러한 문제를 하나 또는 둘 모두 단일 팀에서 담당하는지 여부에 따라 달라질 수 있습니다. 어느 방법이든 자동화가 진정한 장점입니다. 다음은 관련 다운로드와 함께 몇 가지 주요 개념에 대한 추가 정보를 제공하는 리소스입니다. 
+이 문서에서는 NuGet 패키지를 통해 배포되는 공용 .NET 래퍼를 통해 네이티브 라이브러리를 사용하는 Xamarin.Forms 앱을 만드는 방법을 설명했습니다. 이 연습에서 제공하는 예제는 보다 간단하게 방법을 보여 주기 위해 의도적으로 매우 간단하게 작성되었습니다. 실제 애플리케이션은 예외 처리, 콜백, 더 복잡한 형식의 마샬링, 다른 종속성 라이브러리와의 연결 등의 복잡성을 처리해야 합니다. 핵심 고려 사항은 C++ 코드의 진화를 조정하고 래퍼 및 클라이언트 애플리케이션과 동기화하는 프로세스입니다. 이 프로세스는 이러한 문제를 하나 또는 둘 모두 단일 팀에서 담당하는지 여부에 따라 달라질 수 있습니다. 어느 방법이든 자동화가 진정한 장점입니다. 다음은 관련 다운로드와 함께 몇 가지 주요 개념에 대한 추가 정보를 제공하는 리소스입니다.
 
 ### <a name="downloads"></a>다운로드
 

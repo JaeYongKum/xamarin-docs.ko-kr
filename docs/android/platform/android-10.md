@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 1ce0233a45211ee91b9f1e30247ac18cdd5c5a66
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: d3e04daeb3957e0006f5746a730488ff455da18d
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454301"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928570"
 ---
 # <a name="android-10-with-xamarin"></a>Xamarin이 포함된 Android 10
 
@@ -29,7 +29,7 @@ Xamarin.Android 10.0은 Android 10을 지원합니다. Android 10에 대한 Xama
 Xamarin 기반 앱에서 Android 10 기능을 사용하려면 다음 목록이 필요합니다.
 
 - **Visual Studio** - Visual Studio 2019를 사용하는 것이 좋습니다. Windows에서 Visual Studio 2019 버전 16.3 이상으로 업데이트합니다. macOS에서 Mac용 Visual Studio 2019 버전 8.3 이상으로 업데이트합니다.
-- **Xamarin.Android** - Xamarin.Android 10.0 이상은 Visual Studio와 함께 설치되어야 합니다(Xamarin.Android는 Windows에서 **.NET을 이용한 모바일 개발** 워크로드의 일부로 자동 설치되고 **Mac용 Visual Studio 설치 관리자**의 일부로 설치됨).
+- **Xamarin.Android** - Xamarin.Android 10.0 이상은 Visual Studio와 함께 설치되어야 합니다(Xamarin.Android는 Windows에서 **.NET을 이용한 모바일 개발** 워크로드의 일부로 자동 설치되고 **Mac용 Visual Studio 설치 관리자** 의 일부로 설치됨).
 - **Java Developer Kit** - Xamarin.Android 10.0 개발에는 JDK 8이 필요합니다. Microsoft의 OpenJDK 배포는 Visual Studio의 일부로 자동 설치됩니다.
 - **Android SDK** - Android SDK API 29는 Android SDK Manager를 통해 설치해야 합니다.
 
@@ -59,12 +59,12 @@ Visual Studio 2019를 사용하는 경우 Visual Studio 2019 버전 16.3 이상�
 
 Xamarin.Android 10.0을 통해 프로젝트를 만들려면 먼저 Android SDK 관리자를 사용하여 **Android 10(API 수준 29)** 용 SDK 플랫폼을 설치해야 합니다.
 
-1. SDK 관리자를 시작합니다. Visual Studio에서 **도구 > Android > Android SDK 관리자**를 클릭합니다. Mac용 Visual Studio에서 **도구 > SDK 관리자**를 클릭합니다.
+1. SDK 관리자를 시작합니다. Visual Studio에서 **도구 > Android > Android SDK 관리자** 를 클릭합니다. Mac용 Visual Studio에서 **도구 > SDK 관리자** 를 클릭합니다.
 2. 오른쪽 아래 모서리에서 기어 아이콘을 클릭하고 **리포지토리 > Google(지원되지 않음)** 을 선택합니다.
 
     ![Android SDK 관리자 리포지토리 선택](~/android/platform/android-10-images/sdkrepository.png)
 
-3. **플랫폼** 탭에서 **Android SDK 플랫폼 29**로 나열된 **Android 10 SDK 플랫폼** 패키지를 설치합니다(SDK 관리자 사용에 대한 자세한 내용은 [Android SDK 설치](../get-started/installation/android-sdk.md) 참조).
+3. **플랫폼** 탭에서 **Android SDK 플랫폼 29** 로 나열된 **Android 10 SDK 플랫폼** 패키지를 설치합니다(SDK 관리자 사용에 대한 자세한 내용은 [Android SDK 설치](../get-started/installation/android-sdk.md) 참조).
 
     ![Android SDK 관리자 플랫폼 탭](~/android/platform/android-10-images/sdkplatforms.png)
 
@@ -72,7 +72,7 @@ Xamarin.Android 10.0을 통해 프로젝트를 만들려면 먼저 Android SDK �
 
 새 Xamarin.Android 프로젝트를 만듭니다. Xamarin을 사용한 Android 개발을 처음 접하는 경우 [Hello, Android](../get-started/hello-android/index.md)를 참조하여 Xamarin.Android 프로젝트를 만드는 방법에 대해 알아보세요.
 
-Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전 설정을 구성해야 합니다. 예를 들어 Android 10용 프로젝트를 대상으로 하려면 프로젝트의 대상 Android API 수준을 **Android 10.0(API 29)** 으로 구성해야 합니다. 여기에는 **대상 프레임워크 버전** 및 **대상 Android SDK 버전**이 API 29 이상에 모두 포함됩니다. Android API 수준을 구성하는 방법에 대한 자세한 내용은 [Android API 수준 이해](../app-fundamentals/android-api-levels.md)를 참조하세요.
+Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전 설정을 구성해야 합니다. 예를 들어 Android 10용 프로젝트를 대상으로 하려면 프로젝트의 대상 Android API 수준을 **Android 10.0(API 29)** 으로 구성해야 합니다. 여기에는 **대상 프레임워크 버전** 및 **대상 Android SDK 버전** 이 API 29 이상에 모두 포함됩니다. Android API 수준을 구성하는 방법에 대한 자세한 내용은 [Android API 수준 이해](../app-fundamentals/android-api-levels.md)를 참조하세요.
 
 ![Xamarin.Android 대상 프레임워크](~/android/platform/android-10-images/targetframework.png)
 
@@ -88,31 +88,31 @@ Android 10에는 다양한 새로운 기능이 도입되었습니다. 이러한 
 
 ## <a name="enhance-your-app-with-android-10-features-and-apis"></a>Android 10 기능 및 API를 사용하여 앱 향상
 
-그런 다음, 준비가 되었으면 Android 10에 대해 알아보고 사용할 수 있는  [새 기능과 API](https://developer.android.com/preview/api-overview.html) 에 대해 알아봅니다. 다음은 시작하기 위한 몇 가지 주요 기능입니다.
+그런 다음, 준비가 되었으면 Android 10에 대해 알아보고 사용할 수 있는 [새 기능과 API](https://developer.android.com/preview/api-overview.html)에 대해 알아봅니다. 다음은 시작하기 위한 몇 가지 주요 기능입니다.
 
 이러한 기능은 모든 앱에 권장됩니다.
 
-- **어두운 테마:**   [어두운 테마](https://developer.android.com/preview/features/darktheme) 를 추가하거나  [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark)를 활성화하여 시스템 전체의 어두운 테마를 사용하는 사용자에게 일관된 환경을 사용하도록 설정합니다.
+- **어두운 테마:** [어두운 테마](https://developer.android.com/preview/features/darktheme)를 추가하거나 [Force Dark](https://developer.android.com/preview/features/darktheme#force_dark)를 활성화하여 시스템 전체의 어두운 테마를 사용하는 사용자에게 일관된 환경을 사용하도록 설정합니다.
 
 ![어두운 테마](~/android/platform/android-10-images/darktheme.png)
 
-- 에지 간 이동하고 사용자 지정 제스처가 시스템 탐색 제스처를 보완하도록 하여 앱에서 **제스처 탐색 [을 지원](https://developer.android.com/preview/features/gesturalnav)**  합니다.
+- 에지 간 이동하고 사용자 지정 제스처가 시스템 탐색 제스처를 보완하도록 하여 앱에서 **[제스처 탐색](https://developer.android.com/preview/features/gesturalnav)을 지원** 합니다.
 
 ![제스처 탐색](~/android/platform/android-10-images/gesturenavigation.png)
 
-- **foldables에 최적화:**   [foldables를 최적화](https://developer.android.com/preview/features/foldables)하여 오늘날의 혁신적인 디바이스에서 완벽한 에지 간 환경을 제공합니다.
+- **Foldables에 최적화:** [foldables에 최적화](https://developer.android.com/guide/topics/ui/foldables)하여 오늘날의 혁신적인 디바이스에서 완벽한 에지 간 환경을 제공합니다.
 
 ![폴딩 가능](~/android/platform/android-10-images/foldable.png)
 
 앱과 관련된 경우 다음 기능을 권장합니다.
 
-- **추가 대화형 알림:**  알림이 메시지가 포함된 경우  [알림에서 제안된 회신 및 작업](https://developer.android.com/preview/features#smart-suggestions) 을 활성화하여 사용자를 참여시키고 즉시 조치를 취할 수 있습니다.
-- **향상된 생체 인식:**  생체 인식 인증을 사용하는 경우 최신 디바이스에서 지문 인증을 지원하는 기본 방법인  [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt)로 이동합니다.
-- **보강 기록:**  캡션 또는 게임 재생 기록을 지원하려면  [오디오 재생 캡처](https://developer.android.com/preview/features/playback-capture)를 사용하도록 설정합니다. 더 많은 사용자를 연결하고 앱을 더 쉽게 액세스할 수 있도록 하는 좋은 방법입니다.
-- **향상된 코덱:**  미디어 앱의 경우 비디오 스트리밍용  [AV1](https://en.wikipedia.org/wiki/AV1)  및 높은 동적 범위 비디오용  [HDR10+](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) 를 사용해 보세요. 음성 및 음악 스트리밍의 경우  [Opus](http://opus-codec.org/) 인코딩을 사용할 수 있으며 음악가의 경우  [네이티브 MIDI API](https://developer.android.com/preview/features/midi) 를 사용할 수 있습니다.
-- **향상된 네트워킹 API:**  앱이 Wi-Fi를 통해 IoT 디바이스를 관리하는 경우 구성, 다운로드 또는 인쇄와 같은 기능을 위해 새로운  [네트워크 연결 API](https://developer.android.com/preview/features#peer2peer) 를 사용해 보세요.
+- **추가 대화형 알림:** 알림이 메시지가 포함된 경우 [알림에서 제안된 회신 및 작업](https://developer.android.com/preview/features#smart-suggestions)을 활성화하여 사용자를 참여시키고 즉시 조치를 취할 수 있습니다.
+- **향상된 생체 인식:** 생체 인식 인증을 사용하는 경우 최신 디바이스에서 지문 인증을 지원하는 기본 방법인 [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt)로 이동합니다.
+- **보강 기록:** 캡션 또는 게임 재생 기록을 지원하려면 [오디오 재생 캡처](https://developer.android.com/preview/features/playback-capture)를 사용하도록 설정합니다. 더 많은 사용자를 연결하고 앱을 더 쉽게 액세스할 수 있도록 하는 좋은 방법입니다.
+- **향상된 코덱:** 미디어 앱의 경우 비디오 스트리밍용 [AV1](https://en.wikipedia.org/wiki/AV1) 및 높은 동적 범위 비디오용 [HDR10+](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+)를 사용해 보세요. 음성 및 음악 스트리밍의 경우 [Opus](http://opus-codec.org/) 인코딩을 사용할 수 있으며 음악가의 경우 [네이티브 MIDI API](https://developer.android.com/preview/features/midi)를 사용할 수 있습니다.
+- **향상된 네트워킹 API:** 앱이 Wi-Fi를 통해 IoT 디바이스를 관리하는 경우 구성, 다운로드 또는 인쇄와 같은 기능을 위해 새로운 [네트워크 연결 API](https://developer.android.com/preview/features#peer2peer)를 사용해 보세요.
 
-Android 10에는 몇 가지 새로운 기능과 API가 있습니다. 이러한 항목을 모두 보려면  [개발자용 Android 10 사이트](https://developer.android.com/about/versions/10/highlights)를 방문하세요.
+Android 10에는 몇 가지 새로운 기능과 API가 있습니다. 이러한 항목을 모두 보려면 [개발자용 Android 10 사이트](https://developer.android.com/about/versions/10/highlights)를 방문하세요.
 
 ## <a name="behavior-changes"></a>동작 변경
 
