@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0992f7db22d79e58db0306bc09329f2852ef9489
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.openlocfilehash: 54a6dca3b16ed4ac9fb7ab2065f1d8462a3f3da4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "92897522"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368117"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 이 빠른 시작에서 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 

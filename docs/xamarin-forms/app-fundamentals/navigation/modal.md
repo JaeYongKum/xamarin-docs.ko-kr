@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ba5224c23eaed6b7c37312f8a765556d0263d9c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 932f6d347afcc4957294036e2c76ef81635d958c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563031"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368702"
 ---
 # <a name="no-locxamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 ‘Xamarin.Forms는 모달 페이지를 지원합니다. _모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에서는 모달 페이지를 탐색하는 방법을 설명합니다._
 

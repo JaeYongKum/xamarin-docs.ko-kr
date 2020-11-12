@@ -11,16 +11,16 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fac41e57d13815dcd202521d16ae4730e1d99cfa
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cb811972d622ffdcf6042e030528a88fb18abaf7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555868"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369807"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 지역화는 대상 시장의 특정 언어 또는 문화적 요구 사항을 충족하도록 애플리케이션을 조정하는 프로세스입니다. 지역화를 수행하려면 애플리케이션의 텍스트와 이미지를 여러 언어로 번역해야 할 수 있습니다. 지역화된 애플리케이션은 모바일 디바이스의 문화권 설정에 따라 번역된 텍스트를 자동으로 표시합니다.
 
@@ -39,13 +39,13 @@ ms.locfileid: "91555868"
 
 ## <a name="create-resx-files"></a>Resx 파일 만들기
 
-리소스 파일은 빌드 프로세스 중에 이진 리소스(.resources) 파일로 컴파일되는 **.resx** 확장명을 가진 XML 파일입니다. Visual Studio 2019는 리소스를 검색하는 데 사용되는 API를 제공하는 클래스를 생성합니다. 지역화된 애플리케이션은 일반적으로 애플리케이션에서 사용되는 모든 문자열이 들어 있는 기본 리소스 파일과 지원되는 각 언어의 리소스 파일을 포함합니다. 샘플 애플리케이션은 공유 프로젝트에 리소스 파일과 **AppResources.resx**라는 기본 리소스 파일을 포함하는 **Resx** 폴더가 있습니다.
+리소스 파일은 빌드 프로세스 중에 이진 리소스(.resources) 파일로 컴파일되는 **.resx** 확장명을 가진 XML 파일입니다. Visual Studio 2019는 리소스를 검색하는 데 사용되는 API를 제공하는 클래스를 생성합니다. 지역화된 애플리케이션은 일반적으로 애플리케이션에서 사용되는 모든 문자열이 들어 있는 기본 리소스 파일과 지원되는 각 언어의 리소스 파일을 포함합니다. 샘플 애플리케이션은 공유 프로젝트에 리소스 파일과 **AppResources.resx** 라는 기본 리소스 파일을 포함하는 **Resx** 폴더가 있습니다.
 
 리소스 파일은 각 항목의 다음 정보를 포함합니다.
 
-- **이름**은 코드의 텍스트에 액세스하는 데 사용되는 키를 지정합니다.
-- **값**은 번역된 텍스트를 지정합니다.
-- **주석**은 추가 정보를 포함하는 선택적 필드입니다.
+- **이름** 은 코드의 텍스트에 액세스하는 데 사용되는 키를 지정합니다.
+- **값** 은 번역된 텍스트를 지정합니다.
+- **주석** 은 추가 정보를 포함하는 선택적 필드입니다.
 
 ::: zone pivot="windows"
 
@@ -57,21 +57,21 @@ ms.locfileid: "91555868"
 
 ![.resx 파일에 기본 텍스트 리소스 지정](text-images/pc-default-strings.png)
 
-**액세스 한정자** 드롭다운 설정은 Visual Studio에서 리소스에 액세스하는 데 사용되는 클래스를 생성하는 방법을 결정합니다. 액세스 한정자를 **Public** 또는 **Internal**로 설정하면 지정된 접근성 수준으로 클래스가 생성됩니다. 액세스 한정자를 **코드 생성 안 됨**으로 설정하면 클래스 파일이 생성되지 않습니다. 기본 리소스 파일은 클래스 파일을 생성하도록 구성해야 합니다. 그러면 확장명이 **.designer.cs**인 파일이 프로젝트에 추가됩니다.
+**액세스 한정자** 드롭다운 설정은 Visual Studio에서 리소스에 액세스하는 데 사용되는 클래스를 생성하는 방법을 결정합니다. 액세스 한정자를 **Public** 또는 **Internal** 로 설정하면 지정된 접근성 수준으로 클래스가 생성됩니다. 액세스 한정자를 **코드 생성 안 됨** 으로 설정하면 클래스 파일이 생성되지 않습니다. 기본 리소스 파일은 클래스 파일을 생성하도록 구성해야 합니다. 그러면 확장명이 **.designer.cs** 인 파일이 프로젝트에 추가됩니다.
 
-기본 리소스 파일을 만든 후에는 애플리케이션에서 지원하는 각 문화권에 대해 추가 파일을 만들 수 있습니다. 각 추가 리소스 파일은 파일 이름에 번역 문화권을 포함해야 하고 **액세스 한정자**가 **코드 생성 안 됨**으로 설정되어야 합니다.
+기본 리소스 파일을 만든 후에는 애플리케이션에서 지원하는 각 문화권에 대해 추가 파일을 만들 수 있습니다. 각 추가 리소스 파일은 파일 이름에 번역 문화권을 포함해야 하고 **액세스 한정자** 가 **코드 생성 안 됨** 으로 설정되어야 합니다.
 
-런타임에 애플리케이션은 특정성 순서대로 리소스 요청을 확인하려고 시도합니다. 예를 들어 디바이스 문화권이 **en-US**인 경우 애플리케이션은 다음 순서로 리소스 파일을 찾습니다.
+런타임에 애플리케이션은 특정성 순서대로 리소스 요청을 확인하려고 시도합니다. 예를 들어 디바이스 문화권이 **en-US** 인 경우 애플리케이션은 다음 순서로 리소스 파일을 찾습니다.
 
 1. AppResources.en-US.resx
 1. AppResources.en.resx
 1. AppResources.resx(기본값)
 
-다음 스크린샷은 **AppResources.es.cs**라는 스페인어 번역 파일을 보여 줍니다.
+다음 스크린샷은 **AppResources.es.cs** 라는 스페인어 번역 파일을 보여 줍니다.
 
 ![.resx 파일에 기본 스페인어 텍스트 리소스 지정](text-images/pc-spanish-strings.png)
 
-번역 파일은 기본 파일에 지정된 **이름** 값과 같은 값을 사용하지만, **값** 열에 스페인어 문자열이 포함되어 있습니다. 또한 **액세스 한정자**는 **코드 생성 안 됨**으로 설정됩니다.
+번역 파일은 기본 파일에 지정된 **이름** 값과 같은 값을 사용하지만, **값** 열에 스페인어 문자열이 포함되어 있습니다. 또한 **액세스 한정자** 는 **코드 생성 안 됨** 으로 설정됩니다.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -102,17 +102,17 @@ ms.locfileid: "91555868"
 
 ![리소스 파일의 속성에 지정된 사용자 지정 도구](text-images/mac-resx-properties.png)
 
-**사용자 지정 도구**를 **PublicResXFileCodeGenerator**로 설정하면 액세스 권한이 `public`인 클래스가 생성됩니다. **사용자 지정 도구**를 **InternalResXFileCodeGenerator**로 설정하면 액세스 권한이 `internal`인 클래스가 생성됩니다. 빈 **사용자 지정 도구** 값은 클래스를 생성하지 않습니다. 생성된 클래스 이름은 리소스 파일 이름과 일치합니다. 예를 들어 **AppResources.resx** 파일은 **AppResources.designer.cs**라는 파일에 `AppResources` 클래스를 만듭니다.
+**사용자 지정 도구** 를 **PublicResXFileCodeGenerator** 로 설정하면 액세스 권한이 `public`인 클래스가 생성됩니다. **사용자 지정 도구** 를 **InternalResXFileCodeGenerator** 로 설정하면 액세스 권한이 `internal`인 클래스가 생성됩니다. 빈 **사용자 지정 도구** 값은 클래스를 생성하지 않습니다. 생성된 클래스 이름은 리소스 파일 이름과 일치합니다. 예를 들어 **AppResources.resx** 파일은 **AppResources.designer.cs** 라는 파일에 `AppResources` 클래스를 만듭니다.
 
-지원되는 각 문화권에 대해 추가 리소스 파일을 만들 수 있습니다. 각 언어 파일은 파일 이름에 번역 문화권을 포함해야 하므로 **es-MX**를 대상으로 하는 파일의 이름은 **AppResources.es-MX.resx**로 지정해야 합니다.
+지원되는 각 문화권에 대해 추가 리소스 파일을 만들 수 있습니다. 각 언어 파일은 파일 이름에 번역 문화권을 포함해야 하므로 **es-MX** 를 대상으로 하는 파일의 이름은 **AppResources.es-MX.resx** 로 지정해야 합니다.
 
-런타임에 애플리케이션은 특정성 순서대로 리소스 요청을 확인하려고 시도합니다. 예를 들어 디바이스 문화권이 **en-US**인 경우 애플리케이션은 다음 순서로 리소스 파일을 찾습니다.
+런타임에 애플리케이션은 특정성 순서대로 리소스 요청을 확인하려고 시도합니다. 예를 들어 디바이스 문화권이 **en-US** 인 경우 애플리케이션은 다음 순서로 리소스 파일을 찾습니다.
 
 1. AppResources.en-US.resx
 1. AppResources.en.resx
 1. AppResources.resx(기본값)
 
-언어 번역 파일은 기본 파일로 지정된 **이름** 값과 같은 값을 가져야 합니다. 다음 XML은 **AppResources.es.resx**라는 스페인어 번역 파일을 보여 줍니다.
+언어 번역 파일은 기본 파일로 지정된 **이름** 값과 같은 값을 가져야 합니다. 다음 XML은 **AppResources.es.resx** 라는 스페인어 번역 파일을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -134,7 +134,7 @@ ms.locfileid: "91555868"
 
 ## <a name="specify-the-default-culture"></a>기본 문화권 지정
 
-리소스 파일이 제대로 작동하려면 애플리케이션에 `NeutralResourcesLanguage`가 지정되어 있어야 합니다. 공유 프로젝트에서 **AssemblyInfo.cs** 파일을 사용자 지정하여 기본 문화권을 지정해야 합니다. 다음 코드는 **AssemblyInfo.cs**파일에서 `NeutralResourcesLanguage`를 **en-US**로 설정하는 방법을 보여 줍니다.
+리소스 파일이 제대로 작동하려면 애플리케이션에 `NeutralResourcesLanguage`가 지정되어 있어야 합니다. 공유 프로젝트에서 **AssemblyInfo.cs** 파일을 사용자 지정하여 기본 문화권을 지정해야 합니다. 다음 코드는 **AssemblyInfo.cs** 파일에서 `NeutralResourcesLanguage`를 **en-US** 로 설정하는 방법을 보여 줍니다.
 
 ```csharp
 using System.Resources;
@@ -187,7 +187,7 @@ iOS의 경우 프로젝트에 대한 **info.plist** 파일에서 지원되는 �
 
 ## <a name="localize-text-in-no-locxamarinforms"></a>Xamarin.Forms의 텍스트 지역화
 
-텍스트는 생성된 `AppResources` 클래스를 사용하여 Xamarin.Forms에서 지역화됩니다. 이 클래스는 기본 리소스 파일 이름을 기반으로 이름이 지정됩니다. 샘플 프로젝트 리소스 파일의 이름이 **AppResources.cs**이므로 Visual Studio는 `AppResources`라는 일치하는 클래스를 생성합니다. 정적 속성은 리소스 파일의 각 행에 대해 `AppResources` 클래스에서 생성됩니다. 다음 정적 속성은 샘플 애플리케이션의 `AppResources` 클래스에서 생성됩니다.
+텍스트는 생성된 `AppResources` 클래스를 사용하여 Xamarin.Forms에서 지역화됩니다. 이 클래스는 기본 리소스 파일 이름을 기반으로 이름이 지정됩니다. 샘플 프로젝트 리소스 파일의 이름이 **AppResources.cs** 이므로 Visual Studio는 `AppResources`라는 일치하는 클래스를 생성합니다. 정적 속성은 리소스 파일의 각 행에 대해 `AppResources` 클래스에서 생성됩니다. 다음 정적 속성은 샘플 애플리케이션의 `AppResources` 클래스에서 생성됩니다.
 
 - AddButton
 - NotesLabel
@@ -246,9 +246,9 @@ Resx 파일은 텍스트를 저장할 수 있을 뿐만 아니라 이미지와 �
 
 ### <a name="localize-images-on-android"></a>Android에서 이미지 지역화
 
-Android에서 지역화된 드로어블(이미지)은 **Resources** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 폴더의 이름은 대상 언어의 접미사를 사용한 **drawable**로 지정됩니다. 예를 들어 스페인어 폴더의 이름은 **drawable-es**로 지정됩니다.
+Android에서 지역화된 드로어블(이미지)은 **Resources** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 폴더의 이름은 대상 언어의 접미사를 사용한 **drawable** 로 지정됩니다. 예를 들어 스페인어 폴더의 이름은 **drawable-es** 로 지정됩니다.
 
-4자로 된 로캘 코드가 필요한 경우 Android에서는 대시 다음에 추가 **r**이 필요합니다. 예를 들어 멕시코 로캘(es-mx) 폴더의 이름은 **drawable-es-rMX**로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
+4자로 된 로캘 코드가 필요한 경우 Android에서는 대시 다음에 추가 **r** 이 필요합니다. 예를 들어 멕시코 로캘(es-mx) 폴더의 이름은 **drawable-es-rMX** 로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
 
 ![Android 프로젝트의 지역화된 이미지](text-images/pc-android-images.png)
 
@@ -256,9 +256,9 @@ Android에서 지역화된 드로어블(이미지)은 **Resources** 디렉터리
 
 ### <a name="localize-images-on-ios"></a>iOS에서 이미지 지역화
 
-iOS에서 지역화된 이미지는 **Resources** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 기본 폴더의 이름은 **Base.lproj**로 지정됩니다. 언어별 폴더 이름은 언어 또는 로캘 이름으로 지정되고 그 뒤에 **.lproj**가 붙습니다. 예를 들어 스페인어 폴더의 이름은 **es.lproj**로 지정됩니다.
+iOS에서 지역화된 이미지는 **Resources** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 기본 폴더의 이름은 **Base.lproj** 로 지정됩니다. 언어별 폴더 이름은 언어 또는 로캘 이름으로 지정되고 그 뒤에 **.lproj** 가 붙습니다. 예를 들어 스페인어 폴더의 이름은 **es.lproj** 로 지정됩니다.
 
-4자로 된 로캘 코드는 2자로 된 언어 코드처럼 작동합니다. 예를 들어 멕시코 로캘(es-MX) 폴더의 이름은 **es-MX.lproj**로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
+4자로 된 로캘 코드는 2자로 된 언어 코드처럼 작동합니다. 예를 들어 멕시코 로캘(es-MX) 폴더의 이름은 **es-MX.lproj** 로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
 
 ![iOS 프로젝트의 지역화된 이미지](text-images/pc-ios-images.png)
 
@@ -269,7 +269,7 @@ iOS에서 지역화된 이미지는 **Resources** 디렉터리의 폴더에 대�
 
 ### <a name="localize-images-on-uwp"></a>UWP에서 이미지 지역화
 
-UWP에서 지역화된 이미지는 **Assets/Images** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 폴더의 이름은 언어 또는 로캘을 사용하여 지정됩니다. 예를 들어 스페인어 폴더의 이름은 **es**로 지정되며 멕시코 로캘 폴더의 이름은 **es-MX**로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
+UWP에서 지역화된 이미지는 **Assets/Images** 디렉터리의 폴더에 대한 명명 규칙을 사용하여 저장됩니다. 폴더의 이름은 언어 또는 로캘을 사용하여 지정됩니다. 예를 들어 스페인어 폴더의 이름은 **es** 로 지정되며 멕시코 로캘 폴더의 이름은 **es-MX** 로 지정되어야 합니다. 각 로캘 폴더의 이미지 파일 이름은 같아야 합니다.
 
 ![UWP 프로젝트의 지역화된 이미지](text-images/pc-uwp-images.png)
 

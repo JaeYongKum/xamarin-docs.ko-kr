@@ -10,18 +10,18 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 30e77d4978e9a191c1ba19e80109f9854cc46f8f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897470"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375241"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>끌어서 놓기 제스처 인식기 추가
 
 ![시험판 API](~/media/shared/preview.png)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 끌어서 놓기 제스처를 사용하면 한 번의 연속 제스처를 사용하여 항목 및 연결된 데이터 패키지를 화면의 한 위치에서 다른 위치로 끌어올 수 있습니다. 끌어서 놓기는 단일 애플리케이션에서 수행되거나 한 애플리케이션에서 시작하여 다른 애플리케이션에서 끝날 수 있습니다.
 
@@ -80,7 +80,7 @@ Xamarin.Forms에서 끌기 제스처 인식은 `DragGestureRecognizer` 클래스
 > [!TIP]
 > iOS, Android 및 UWP에서 끌기 제스처는 길게 누른 다음 끌기로 시작합니다.
 
-`DragGestureRecognizer` 명령 사용 예제는 [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
+`DragGestureRecognizer` 명령 사용 예제는 [샘플](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
 
 ## <a name="build-a-data-package"></a>데이터 패키지 빌드
 
@@ -214,7 +214,7 @@ Xamarin.Forms에서 놓기 제스처 인식은 `DropGestureRecognizer` 클래스
 
 이 예제에서는 끌기 원본이 [`ImageSource`](xref:Xamarin.Forms.ImageSource)인 경우 끌기 원본을 [`Image`](xref:Xamarin.Forms.Image) 놓기 대상 위에 놓으면 끌기 원본이 놓기 대상에 복사됩니다. 이는 Xamarin.Forms가 끌어온 이미지 및 텍스트를 호환되는 놓기 대상에 자동으로 복사하기 때문입니다.
 
-`DropGestureRecognizer` 명령 사용 예제는 [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
+`DropGestureRecognizer` 명령 사용 예제는 [샘플](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)을 참조하세요.
 
 ## <a name="handle-the-dragover-event"></a>DragOver 이벤트 처리
 

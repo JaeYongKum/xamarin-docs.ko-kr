@@ -10,16 +10,16 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0ec978c1947cde4bd6f7fd619ad8cd2f0dbdbce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 90f06c0379cc40a946970ad4248dc8527ee34f3a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563044"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372784"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms 셸 플라이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 플라이아웃은 셸 애플리케이션의 루트 메뉴이며, 아이콘을 통해 또는 화면 측면에서 살짝 밀어 액세스할 수 있습니다. 플라이아웃은 선택적 헤더, 플라이아웃 항목 및 선택적 메뉴 항목으로 구성됩니다.
 

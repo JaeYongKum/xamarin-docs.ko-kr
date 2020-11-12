@@ -10,16 +10,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 28dbbe6411983e1fd7986413ceac69a5543c4bb4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 374444307ef0b6cc6354d2f660834762bb566434
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562576"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367961"
 ---
 # <a name="introduction-to-no-locxamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 ‘Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤에 있는 데이터 프레젠테이션을 정의하는 기능을 제공합니다. _이 문서에서는 데이터 템플릿이 필요한 이유를 검토하면서 데이터 템플릿을 소개합니다._
 
@@ -129,7 +129,7 @@ public class Person
 > [!NOTE]
 > [`TableView`](xref:Xamarin.Forms.TableView)는 [`Cell`](xref:Xamarin.Forms.Cell) 개체를 사용하지만 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 사용하지 않습니다. 데이터 바인딩이 항상 `Cell` 개체에서 직접 설정되기 때문입니다.
 
-위에 나열된 속성의 직계 자식으로 배치되는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)울 *인라인 템플릿*이라고 합니다. 또는 `DataTemplate`을 컨트롤 수준, 페이지 수준 또는 애플리케이션 수준 리소스로 정의할 수 있습니다. [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 정의할 위치를 선택하면 사용할 수 있는 위치가 결정됩니다.
+위에 나열된 속성의 직계 자식으로 배치되는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)울 *인라인 템플릿* 이라고 합니다. 또는 `DataTemplate`을 컨트롤 수준, 페이지 수준 또는 애플리케이션 수준 리소스로 정의할 수 있습니다. [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 정의할 위치를 선택하면 사용할 수 있는 위치가 결정됩니다.
 
 - 컨트롤 수준에서 정의된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 컨트롤에만 적용할 수 있습니다.
 - 페이지 수준에서 정의된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 페이지의 여러 유효한 컨트롤에 적용할 수 있습니다.

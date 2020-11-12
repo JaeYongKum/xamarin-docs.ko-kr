@@ -10,16 +10,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 459b918869bd3e2b5c1927d3fbcded6035226a58
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 682ed3b0d0f54617a0238dcc1bbf413e1ee0156a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562589"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373109"
 ---
 # <a name="no-locxamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _DataTemplate은 지원되는 컨트롤의 데이터 모양을 지정하는 데 사용되며 일반적으로 표시할 데이터에 바인딩됩니다._
 

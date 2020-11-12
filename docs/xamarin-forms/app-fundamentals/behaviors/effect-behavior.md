@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a085226da3c63f4f151bc657976bba384c02170
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6cc6b1a33f2334239d2135d6ffe72c24d2243335
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561146"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374747"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 컨트롤에 효과를 추가하는 방법을 보여 줍니다._
 

@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e8c52c03534ca5d8b653eed4d8fc2c8f39edf61
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9f72541bddcadabe4ce4fa71c2a4dfcae3c3c898
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562641"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374981"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으로 뒤로 탐색할 수 있는 계층적 탐색 환경을 제공합니다. 이 클래스는 탐색을 Page 개체의 LIFO(후입선출) 스택으로 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용하여 페이지 스택 탐색을 수행하는 방법을 보여 줍니다._
 

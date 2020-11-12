@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f2ec170a1e622586c4f025452ee334774fbaf5aa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558585"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369781"
 ---
 # <a name="no-locxamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 데이터 바인딩을 사용하여 개체나 값의 문자열 표현을 나타내는 것이 편리한 경우도 있습니다. 예를 들어, `Label`을 사용하여 `Slider`의 현재 값을 표시할 수 있습니다. 이 데이터 바인딩에서 `Slider`는 원본이고 대상은 `Label`의 `Text` 속성입니다.
 
@@ -42,7 +42,7 @@ XAML 파서가 중괄호를 다른 XAML 태그 확장으로 처리하는 것을 
 
 [바인딩 경로](binding-path.md)에 대한 다음 문서에서 살펴보겠지만 데이터 바인딩은 매우 복잡하고 난해할 수 있습니다. 이러한 데이터 바인딩을 디버깅할 때 `StringFormat`과 함께 XAML 파일에 `Label`을 추가하여 중간 결과를 표시할 수 있습니다. 개체 형식을 나타내는 데에만 사용하더라도 도움이 될 수 있습니다.
 
-**String Formatting**(문자열 형식 지정) 페이지에서는 `StringFormat` 속성의 여러 용도를 보여줍니다.
+**String Formatting** (문자열 형식 지정) 페이지에서는 `StringFormat` 속성의 여러 용도를 보여줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -132,7 +132,7 @@ XAML 파일의 다음 섹션은 정적 `DateTime.Now` 속성을 참조하는 `x:
 
 `Label` 및 `StringFormat`을 사용하여 ViewModel의 대상이기도 한 보기의 값을 표시하는 경우에는 뷰에서 `Label`로 바인딩을 정의하거나 ViewModel에서 `Label`로 바인딩을 정의할 수 있습니다. 일반적으로 두 번째 방법이 가장 좋습니다. View와 ViewModel 사이의 바인딩이 작동하는지 확인하기 때문입니다.
 
-이 방법은 **Better Color Selector**(더 나은 색 선택기) 샘플에 나와 있으며 [**바인딩 모드**](binding-mode.md) 문서에 표시된 **Simple Color Selector**(간단한 색 선택기) 프로그램과 동일한 ViewModel이 사용되었습니다.
+이 방법은 **Better Color Selector** (더 나은 색 선택기) 샘플에 나와 있으며 [**바인딩 모드**](binding-mode.md) 문서에 표시된 **Simple Color Selector** (간단한 색 선택기) 프로그램과 동일한 ViewModel이 사용되었습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

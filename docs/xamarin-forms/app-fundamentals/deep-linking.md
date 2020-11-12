@@ -11,16 +11,16 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c5d95c3d326961db9d56631a0d7190d64ede72a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 99da232d13202aadc338ff419042998f646b7c28
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556063"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373070"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _애플리케이션 인덱싱은 검색 결과에 나타나서 관련성을 유지하기 위해 몇 번 사용한 후에 잊혀질 애플리케이션을 허용합니다. 딥 링크 설정은 애플리케이션이 애플리케이션 데이터를 포함하는 검색 결과에 응답할 수 있도록 하며, 일반적으로 딥 링크에서 참조하는 페이지로 이동하면 됩니다. 이 문서에서는 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android 디바이스에서 Xamarin.Forms 애플리케이션 콘텐츠를 검색 가능하게 하는 방법을 설명합니다._
 
@@ -73,7 +73,7 @@ Android 플랫폼에서 애플리케이션 인덱싱 및 딥 링크 기능을 �
 1. 웹 브라우저에서 [Firebase 콘솔](https://console.firebase.google.com/)을 통해 새 프로젝트를 만듭니다.
 1. Firebase 콘솔에서 Firebase를 Android 앱에 추가하고 필요한 데이터를 입력합니다.
 1. 결과 **google-services.json** 파일을 다운로드합니다.
-1. **google-services.json** 파일을 Android 프로젝트의 루트 디렉터리에 추가하고, 해당 **빌드 작업**을 **GoogleServicesJson**으로 설정합니다.
+1. **google-services.json** 파일을 Android 프로젝트의 루트 디렉터리에 추가하고, 해당 **빌드 작업** 을 **GoogleServicesJson** 으로 설정합니다.
 1. `MainActivity.OnCreate` 재정의에서 `Forms.Init(this, bundle)` 아래에 다음 코드 줄을 추가합니다.
 
 ```csharp
@@ -81,7 +81,7 @@ FirebaseApp.InitializeApp(this);
 AndroidAppLinks.Init(this);
 ```
 
-**google-services.json**이 프로젝트에 추가되고 (및 *GoogleServicesJson** 빌드 작업이 설정) 빌드 프로세스에서 클라이언트 ID 및 API 키를 추출한 다음, 생성된 매니페스트 파일에 이러한 자격 증명을 추가합니다.
+**google-services.json** 이 프로젝트에 추가되고 (및 *GoogleServicesJson* * 빌드 작업이 설정) 빌드 프로세스에서 클라이언트 ID 및 API 키를 추출한 다음, 생성된 매니페스트 파일에 이러한 자격 증명을 추가합니다.
 
 > [!NOTE]
 > 이 문서에서는 애플리케이션 링크와 딥 링크라는 용어를 같은 의미로 사용합니다. 그러나 Android에서는 이 두 용어가 다른 의미를 가집니다. Android에서 딥 링크는 사용자가 앱에서 특정 작업을 직접 입력할 수 있도록 하는 의도 필터입니다. 딥 링크를 클릭하면 사용자가 URL을 처리할 수 있는 여러 앱 중 하나를 선택할 수 있게 하는 사용 앱 선택 대화 상자를 열 수 있습니다. Android 앱 링크는 웹 사이트 URL을 기반으로 하는 딥 링크이며, 웹 사이트에 속하는 것으로 확인되었습니다. 애플리케이션이 설치되어 있는 경우 앱 링크를 클릭하면 사용 앱 선택 대화 상자 없이 열립니다.

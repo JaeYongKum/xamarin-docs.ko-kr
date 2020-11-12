@@ -10,16 +10,16 @@ ms.date: 06/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2d63ac91031fc4a2cc127272a075f15a8ea81f4e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1234584dda50746e45d121eb03a3c6abafd8473a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555284"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371510"
 ---
 # <a name="no-locxamarinforms-dependencyservice-introduction"></a>Xamarin.Forms DependencyService 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스는 Xamarin.Forms 애플리케이션이 공유 코드에서 네이티브 플랫폼 기능을 호출할 수 있도록 하는 서비스 로케이터입니다.
 

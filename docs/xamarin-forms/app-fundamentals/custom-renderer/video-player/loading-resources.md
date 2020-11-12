@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1a0febfdb38e577363ba59e8d0a5ceda9464a26
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: be7f7d953b47af96d0325e227e24748624948433
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563499"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367168"
 ---
 # <a name="loading-application-resource-videos"></a>애플리케이션 리소스 비디오 로드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 `VideoPlayer` 보기에 대한 사용자 지정 렌더러는 개별 플랫폼 프로젝트에 애플리케이션 리소스로 포함된 비디오 파일을 재생할 수 있습니다. 그러나 현재 버전의 `VideoPlayer`는 .NET Standard 라이브러리에 포함된 리소스에 액세스할 수 없습니다.
 
@@ -31,21 +31,21 @@ ms.locfileid: "91563499"
 
 ### <a name="ios-video-resources"></a>iOS 비디오 리소스
 
-iOS 프로젝트의 **Resources** 폴더 또는 **Resources** 폴더의 하위 폴더에 비디오를 저장할 수 있습니다. 비디오 파일에는 `BundleResource`의 `Build Action`이 포함되어야 합니다. `ResourceVideoSource`의 `Path` 속성을 파일 이름으로 설정합니다(예: **Resources** 폴더의 파일의 경우 **MyFile.mp4** 또는 **MyFolder**가 **Resources**의 하위 폴더인 경우 **MyFolder/MyFile.mp4**).
+iOS 프로젝트의 **Resources** 폴더 또는 **Resources** 폴더의 하위 폴더에 비디오를 저장할 수 있습니다. 비디오 파일에는 `BundleResource`의 `Build Action`이 포함되어야 합니다. `ResourceVideoSource`의 `Path` 속성을 파일 이름으로 설정합니다(예: **Resources** 폴더의 파일의 경우 **MyFile.mp4** 또는 **MyFolder** 가 **Resources** 의 하위 폴더인 경우 **MyFolder/MyFile.mp4** ).
 
-**VideoPlayerDemos** 솔루션에서 **VideoPlayerDemos.iOS** 프로젝트에는 **iOSApiVideo.mp4**라는 파일이 포함된 **Videos**라는 **Resources**의 하위 폴더가 포함됩니다. Xamarin 웹 사이트를 사용하여 iOS `AVPlayerViewController` 클래스에 대한 설명서를 찾는 방법을 보여주는 짧은 비디오입니다.
+**VideoPlayerDemos** 솔루션에서 **VideoPlayerDemos.iOS** 프로젝트에는 **iOSApiVideo.mp4** 라는 파일이 포함된 **Videos** 라는 **Resources** 의 하위 폴더가 포함됩니다. Xamarin 웹 사이트를 사용하여 iOS `AVPlayerViewController` 클래스에 대한 설명서를 찾는 방법을 보여주는 짧은 비디오입니다.
 
 ### <a name="android-video-resources"></a>Android 비디오 리소스
 
-Android 프로젝트에서 비디오는 **raw**라는 **Resources**의 하위 폴더에 저장되어야 합니다. **raw** 폴더에는 하위 폴더가 포함될 수 없습니다. 비디오 파일에 `AndroidResource`의 `Build Action`을 추가합니다. `ResourceVideoSource`의 `Path` 속성을 파일 이름으로 설정합니다(예: **MyFile.mp4**).
+Android 프로젝트에서 비디오는 **raw** 라는 **Resources** 의 하위 폴더에 저장되어야 합니다. **raw** 폴더에는 하위 폴더가 포함될 수 없습니다. 비디오 파일에 `AndroidResource`의 `Build Action`을 추가합니다. `ResourceVideoSource`의 `Path` 속성을 파일 이름으로 설정합니다(예: **MyFile.mp4** ).
 
-**VideoPlayerDemos.Android** 프로젝트에는 **raw**라는 **Resources**의 하위 폴더가 포함되며 여기에는 **AndroidApiVideo.mp4**라는 파일이 포함됩니다.
+**VideoPlayerDemos.Android** 프로젝트에는 **raw** 라는 **Resources** 의 하위 폴더가 포함되며 여기에는 **AndroidApiVideo.mp4** 라는 파일이 포함됩니다.
 
 ### <a name="uwp-video-resources"></a>UWP 비디오 리소스
 
-유니버설 Windows 플랫폼 프로젝트에서는 프로젝트의 폴더에 비디오를 저장할 수 있습니다. 파일에 `Content`의 `Build Action`을 추가합니다. `ResourceVideoSource`의 `Path` 속성을 폴더 및 파일 이름으로 설정합니다(예: **MyFolder/MyVideo.mp4**).
+유니버설 Windows 플랫폼 프로젝트에서는 프로젝트의 폴더에 비디오를 저장할 수 있습니다. 파일에 `Content`의 `Build Action`을 추가합니다. `ResourceVideoSource`의 `Path` 속성을 폴더 및 파일 이름으로 설정합니다(예: **MyFolder/MyVideo.mp4** ).
 
-**VideoPlayerDemos.UWP** 프로젝트에는 **UWPApiVideo.mp4** 파일이 있는 **Videos**라는 폴더가 포함됩니다.
+**VideoPlayerDemos.UWP** 프로젝트에는 **UWPApiVideo.mp4** 파일이 있는 **Videos** 라는 폴더가 포함됩니다.
 
 ## <a name="loading-the-video-files"></a>비디오 파일 로드
 
@@ -87,7 +87,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="android-resource-loading"></a>Android 리소스 로드
 
-Android `VideoPlayerRenderer`는 파일 이름 및 패키지 이름을 사용하여 `Uri` 개체를 생성합니다. 패키지 이름은 애플리케이션의 이름(이 경우 **VideoPlayerDemos.Android**)이며 정적 `Context.PackageName` 속성에서 가져올 수 있습니다. 그런 다음, 결과 `Uri` 개체를 `VideoView`의 `SetVideoURI` 메서드에 전달합니다.
+Android `VideoPlayerRenderer`는 파일 이름 및 패키지 이름을 사용하여 `Uri` 개체를 생성합니다. 패키지 이름은 애플리케이션의 이름(이 경우 **VideoPlayerDemos.Android** )이며 정적 `Context.PackageName` 속성에서 가져올 수 있습니다. 그런 다음, 결과 `Uri` 개체를 `VideoView`의 `SetVideoURI` 메서드에 전달합니다.
 
 ```csharp
 namespace FormsVideoLibrary.Droid

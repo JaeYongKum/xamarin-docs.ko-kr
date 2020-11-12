@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 59c7435273d7c01f93ef0bbfb0240e3917f8b716
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5df5560966def16741f6eabdacb3312944063a1f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563018"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372615"
 ---
 # <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 애플리케이션에 대한 탐색 패턴이 플라이아웃을 포함하는 경우 애플리케이션에서 탐색의 다음 수준은 아래쪽 탭 표시줄입니다. 뿐만 아니라 플라이아웃이 닫히면 아래쪽 탭 표시줄을 최상위 탐색 수준으로 간주될 수 있습니다.
 

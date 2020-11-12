@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0d8766420f876898a3f10c2f23a35a0b0afeb43
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bfac785e6bfa3dce698d5657d0be1079e675ecc6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563473"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366349"
 ---
 # <a name="no-locxamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell에는 `SearchHandler` 클래스에서 제공되는 통합 검색 기능이 포함됩니다. `Shell.SearchHandler` 연결된 속성을 서브클래스 `SearchHandler` 개체로 설정하여 검색 기능을 페이지에 추가할 수 있습니다. 이를 통해 검색 상자가 페이지 위쪽에 추가됩니다.
 

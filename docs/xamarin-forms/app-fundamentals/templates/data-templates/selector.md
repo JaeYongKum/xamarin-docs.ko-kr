@@ -10,16 +10,16 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0e84bd0bb6b2eb62ea5a25eefe6216ccdc08289
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b072c04aa3d782b3bbbac0952102d0b1531e87dc
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562563"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373018"
 ---
 # <a name="creating-a-no-locxamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _DataTemplateSelector는 데이터 바인딩된 속성의 값에 기반하여 런타임 시 DataTemplate을 선택하는 데 사용할 수 있습니다. 이렇게 하면 여러 DataTemplates 인스턴스를 같은 유형의 개체에 적용하여 특정 개체의 모양을 사용자 지정할 수 있습니다. 이 문서에서는 DataTemplateSelector을 만들고 사용하는 방법을 보여 줍니다._
 

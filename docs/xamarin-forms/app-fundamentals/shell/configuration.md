@@ -10,16 +10,16 @@ ms.date: 01/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3f3eca53f9f7347472a554b4ec30b83f40a96e0e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c5be4e600b370c39387302aea42645c8684501ea
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563304"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374386"
 ---
 # <a name="no-locxamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 `Shell` 클래스는 Xamarin.Forms Shell 애플리케이션에서 페이지의 모양을 구성하는 데 사용할 수 있는 연결된 속성을 정의합니다. 여기에는 페이지 색 설정, 페이지 프레젠테이션 모드 설정, 탐색 모음을 사용하지 않도록 설정, 탭 표시줄을 사용하지 않도록 설정 및 탐색 모음에 뷰 표시가 포함됩니다.
 

@@ -10,16 +10,16 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d9749c110019f2cf711c1df56196d3296223641
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 10e794dba276ed9d67b0e947d203cce0b62b7353
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557974"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374487"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 

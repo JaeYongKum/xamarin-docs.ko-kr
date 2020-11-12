@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24fa816519b05b46c38015fa602a4e70fbc07d16
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 859f5d3c196a572aa22a5f5a29801ad4ee44441a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560392"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374591"
 ---
 # <a name="no-locxamarinforms-relative-bindings"></a>Xamarin.Forms 상대 바인딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 상대 바인딩을 사용하면 바인딩 대상의 위치에 상대적으로 바인딩 소스를 설정할 수 있습니다. 상대 바인딩은 `RelativeSource` 태그 확장을 사용하여 생성되며, 바인딩 식의 `Source` 속성으로 설정됩니다.
 

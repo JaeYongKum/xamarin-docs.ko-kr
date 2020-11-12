@@ -10,16 +10,16 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c014396f9670ece93295c2c8da1738f9dc7dae9e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 103839c7016b7e9776e80f3f3459f8dc92b3bcbb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555985"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371653"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명합니다._
 

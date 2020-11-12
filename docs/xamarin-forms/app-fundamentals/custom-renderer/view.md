@@ -7,7 +7,7 @@ ms.prod: xamarin ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 ms.technology:
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
 ‘Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 View 클래스에서 파생되어야 합니다. _이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 

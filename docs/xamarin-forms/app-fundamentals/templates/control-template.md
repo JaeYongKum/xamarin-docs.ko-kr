@@ -10,16 +10,16 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c89c6b50335405b56349e502f95b9d2975a04f73
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.openlocfilehash: ad65c46f216af9a24eb02ab55411f0a89ac61100
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93185505"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374617"
 ---
 # <a name="no-locxamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
 Xamarin.Forms 컨트롤 템플릿을 사용하면 [`ContentView`](xref:Xamarin.Forms.ContentView) 파생 사용자 지정 컨트롤 및 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 파생 페이지의 시각적 구조를 정의할 수 있습니다. 컨트롤 템플릿은 사용자 지정 컨트롤 또는 페이지에 대한 UI(사용자 인터페이스)를 컨트롤 또는 페이지를 구현하는 논리와 구분합니다. 또한 템플릿 기반 사용자 지정 컨트롤 또는 템플릿 기반 페이지의 미리 정의된 위치에 추가 콘텐츠를 삽입할 수 있습니다.
 

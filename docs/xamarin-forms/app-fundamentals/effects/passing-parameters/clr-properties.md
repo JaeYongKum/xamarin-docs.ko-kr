@@ -10,16 +10,16 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13527bd8da1322df15bde45bcc8162f62a1f556a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 81e72d060e9852b5825e1ba5547bb4d39c32f38c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555920"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371640"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다._
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2020
-ms.openlocfilehash: 6a3154d159c491c6460e118395286aa33cfa7e7e
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 79d27cf9d6ba01235962b43ee7f05c904c265c2f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897457"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370847"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Xamarin.Forms 다중 바인딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 다중 바인딩으로 [`Binding`](xref:Xamarin.Forms.Binding) 개체 컬렉션을 단일 바인딩 대상 속성에 연결할 수 있습니다. `MultiBinding` 클래스로 생성되며, 이 클래스는 모든 `Binding` 개체를 평가하고, 애플리케이션에서 제공된 `IMultiValueConverter` 인스턴스를 통해 단일 값을 반환합니다. 또한, 바인딩된 데이터 중 변경되는 것이 있을 경우 `MultiBinding`는 모든 `Binding` 개체를 다시 평가합니다.
 

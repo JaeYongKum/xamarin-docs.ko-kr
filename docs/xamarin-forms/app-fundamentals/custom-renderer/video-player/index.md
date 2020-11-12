@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 34c3e2bb09c6e285f38b3c17bab2e10debe1d890
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563512"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367259"
 ---
 # <a name="implementing-a-video-player"></a>비디오 플레이어 구현
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 좋은 경우가 있습니다. 이 문서 시리즈에서는 `VideoPlayer`라는 이름의 Xamarin.Forms 클래스에 대해 iOS, Android 및 UWP(유니버설 Windows 플랫폼)용 사용자 지정 렌더러를 작성하는 방법을 설명합니다.
 
@@ -31,7 +31,7 @@ Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 �
 - 플랫폼 애플리케이션에 포함된 리소스
 - 디바이스의 비디오 라이브러리
 
-비디오 플레이어에는 *전송 컨트롤*이 필요합니다. 이것은 비디오를 재생 및 일시 중지하는 단추이고 비디오의 진행률을 표시하는 위치 지정 막대입니다. 사용자는 이것을 사용하여 다른 위치로 신속하게 건너뛸 수 있습니다. `VideoPlayer`에 플랫폼에서 제공되는 전송 컨트롤 및 위치 지정 막대를 사용하거나(아래 참조), 사용자 지정 전송 컨트롤과 위치 지정 막대를 사용자가 제공할 수 있습니다. 다음은 iOS, Android 및 유니버설 Windows 플랫폼에서 실행되는 프로그램입니다.
+비디오 플레이어에는 *전송 컨트롤* 이 필요합니다. 이것은 비디오를 재생 및 일시 중지하는 단추이고 비디오의 진행률을 표시하는 위치 지정 막대입니다. 사용자는 이것을 사용하여 다른 위치로 신속하게 건너뛸 수 있습니다. `VideoPlayer`에 플랫폼에서 제공되는 전송 컨트롤 및 위치 지정 막대를 사용하거나(아래 참조), 사용자 지정 전송 컨트롤과 위치 지정 막대를 사용자가 제공할 수 있습니다. 다음은 iOS, Android 및 유니버설 Windows 플랫폼에서 실행되는 프로그램입니다.
 
 [![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png#lightbox "웹 비디오 재생")
 
@@ -63,7 +63,7 @@ Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 �
 
 ## <a name="custom-video-transport-controls"></a>[사용자 지정 비디오 전송 컨트롤](custom-transport.md)
 
-각 플랫폼의 비디오 플레이어에 **재생** 및 **일시 중지**를 위한 단추의 형태로 자체 전송 제어가 제공되지만 이러한 단추를 표시하지 않고 자체적인 제어를 제공할 수 있습니다. 이 문서에서 그 방법을 보여줍니다.
+각 플랫폼의 비디오 플레이어에 **재생** 및 **일시 중지** 를 위한 단추의 형태로 자체 전송 제어가 제공되지만 이러한 단추를 표시하지 않고 자체적인 제어를 제공할 수 있습니다. 이 문서에서 그 방법을 보여줍니다.
 
 ## <a name="custom-video-positioning"></a>[사용자 지정 비디오 위치 지정](custom-positioning.md)
 

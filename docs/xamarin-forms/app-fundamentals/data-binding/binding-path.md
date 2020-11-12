@@ -10,18 +10,18 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 154219f58c22005de0a0a2171aeedd04ec9f9ff9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4fd8c91ccf18e72c4e5881261637b7f41b2f3c79
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557961"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373616"
 ---
 # <a name="no-locxamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-이전의 모든 데이터 바인딩 예제에서 `Binding` 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성(또는 `Binding` 태그 확장의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성)을 단일 속성으로 설정했습니다. 실제로 `Path`를 *하위 속성*(속성의 속성) 또는 컬렉션의 멤버로 설정할 수 있습니다.
+이전의 모든 데이터 바인딩 예제에서 `Binding` 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성(또는 `Binding` 태그 확장의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성)을 단일 속성으로 설정했습니다. 실제로 `Path`를 *하위 속성* (속성의 속성) 또는 컬렉션의 멤버로 설정할 수 있습니다.
 
 예를 들어 페이지에 `TimePicker`가 포함되었다고 가정합니다.
 

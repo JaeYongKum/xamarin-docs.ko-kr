@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6c8c43a877a102d9e16070da00813b00e7ef1c38
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d6c8154891f6ec295b7082dc6eebe46916d4e4e0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561367"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368064"
 ---
 # <a name="attached-behaviors"></a>연결된 동작
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
 
 _연결된 동작은 연결된 속성이 하나 이상 있는 정적 클래스입니다. 이 문서에서는 연결된 동작을 만들고 사용하는 방법을 설명합니다._
 

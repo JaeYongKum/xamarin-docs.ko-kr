@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00b6617f754eb251eae0a7be9715deb840c33102
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 15529520668f4d6353fe99c13ddb2e6cc2801500
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562745"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367241"
 ---
 # <a name="custom-video-positioning"></a>사용자 지정 비디오 위치 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 각 플랫폼에 의해 구현되는 전송 컨트롤에는 위치 막대가 포함됩니다. 이 막대는 슬라이더 또는 스크롤 막대와 유사하며 전체 기간 내에 비디오의 현재 위치를 보여 줍니다. 또한 사용자는 위치 막대를 조작하여 비디오의 새로운 위치로 앞으로 또는 뒤로 이동할 수 있습니다.
 

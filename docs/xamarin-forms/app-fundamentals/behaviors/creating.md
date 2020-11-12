@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53df681e79c4c233a8908764d31c8ee416c8a621
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d5b0cc2bb4617a0f093971dfca69e8352779c088
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561172"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373655"
 ---
 # <a name="create-no-locxamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 ‘Xamarin.Forms 동작은 Behavior 또는 Behavior&lt;T&gt; 클래스에서 파생되어 만들어집니다. _이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다._
 

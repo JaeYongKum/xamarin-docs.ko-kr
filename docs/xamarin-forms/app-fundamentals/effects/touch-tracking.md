@@ -10,16 +10,16 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3bbad7f96403cb1f386b80b2923b0cdd222f9596
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d9cece5bc0b9799a4c2ac951cde8196a66465bd4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555881"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375280"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _효과는 기본 네이티브 뷰의 변경을 신호로 알리는 이벤트를 정의하고 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 손가락 추적을 구현하는 방법과 터치 동작을 신호로 알려주는 이벤트를 생성하는 방법을 보여줍니다._
 
@@ -364,7 +364,7 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 [**TouchTrackingEffectDemos**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
 
-**BoxView Dragging**(BoxView 드래그) 페이지에서는 `AbsoluteLayout`에 `BoxView` 요소를 추가한 다음, 화면에서 드래그할 수 있습니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml)은 `BoxView` 요소를 `AbsoluteLayout`에 추가하고 `AbsoluteLayout`을 지우는 두 개의 `Button` 보기를 인스턴스화합니다.
+**BoxView Dragging** (BoxView 드래그) 페이지에서는 `AbsoluteLayout`에 `BoxView` 요소를 추가한 다음, 화면에서 드래그할 수 있습니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml)은 `BoxView` 요소를 `AbsoluteLayout`에 추가하고 `AbsoluteLayout`을 지우는 두 개의 `Button` 보기를 인스턴스화합니다.
 
 새 `BoxView`를 `AbsoluteLayout`에 추가하는 [코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BoxViewDraggingPage.xaml.cs)에 있는 메서드도 `BoxView`에 `TouchEffect` 개체를 추가하고 효과에 이벤트 처리기를 연결합니다.
 
@@ -460,7 +460,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 ### <a name="subclassing-the-view"></a>보기 서브클래스 지정
 
-Xamarin.Forms 요소가 자체 터치 이벤트를 처리하는 것이 더 쉬운 경우가 많습니다. **Draggable BoxView Dragging**(드래그 가능 BoxView 드래그) 페이지는 **BoxView Dragging**(BoxView 드래그) 페이지와 동일하게 작동하지만 사용자가 드래그하는 요소는 `BoxView`에서 파생된 [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) 클래스의 인스턴스입니다.
+Xamarin.Forms 요소가 자체 터치 이벤트를 처리하는 것이 더 쉬운 경우가 많습니다. **Draggable BoxView Dragging** (드래그 가능 BoxView 드래그) 페이지는 **BoxView Dragging** (BoxView 드래그) 페이지와 동일하게 작동하지만 사용자가 드래그하는 요소는 `BoxView`에서 파생된 [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) 클래스의 인스턴스입니다.
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -517,7 +517,7 @@ class DraggableBoxView : BoxView
 
 다음 두 가지 데모에는 그래픽이 필요하며 이 용도를 위해 SkiaSharp가 사용됩니다. 이 예제를 학습하기 전에 [Xamarin.Forms에서 SkiaSharp 사용](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)에 대해 알아보는 것이 좋습니다. 여기에서 필요한 모든 내용이 처음 두 문서("SkiaSharp 그리기 기본 사항" 및 "SkiaSharp 선 및 경로")에 포함되어 있습니다.
 
-**Ellipse Drawing**(타원 그리기) 페이지에서는 화면에서 손가락을 밀어서 타원을 그릴 수 있습니다. 손가락을 움직이는 방식에 따라 왼쪽 위에서 오른쪽 아래로 타원을 그리거나 다른 쪽 모서리에서 반대편 모서리로 타원을 그릴 수 있습니다. 타원은 임의 색상과 불투명도로 그려집니다.
+**Ellipse Drawing** (타원 그리기) 페이지에서는 화면에서 손가락을 밀어서 타원을 그릴 수 있습니다. 손가락을 움직이는 방식에 따라 왼쪽 위에서 오른쪽 아래로 타원을 그리거나 다른 쪽 모서리에서 반대편 모서리로 타원을 그릴 수 있습니다. 타원은 임의 색상과 불투명도로 그려집니다.
 
 [![Ellipse Drawing 페이지의 삼중 스크린샷](touch-tracking-images/ellipsedrawing-small.png)](touch-tracking-images/ellipsedrawing-large.png#lightbox "Ellipse Drawing 페이지의 삼중 스크린샷")
 
@@ -689,7 +689,7 @@ case TouchActionType.Pressed:
     break;
 ```
 
-다른 SkiaSharp 예제는 **Finger Paint**(손가락 페인팅) 페이지입니다. 두 가지 `Picker` 보기에서 스트로크 색상과 스트로크 너비를 선택한 다음, 하나 이상의 손가락으로 그릴 수 있습니다.
+다른 SkiaSharp 예제는 **Finger Paint** (손가락 페인팅) 페이지입니다. 두 가지 `Picker` 보기에서 스트로크 색상과 스트로크 너비를 선택한 다음, 하나 이상의 손가락으로 그릴 수 있습니다.
 
 [![Finger Paint 페이지의 삼중 스크린샷](touch-tracking-images/fingerpaint-small.png)](touch-tracking-images/fingerpaint-large.png#lightbox "Finger Paint 페이지의 삼중 스크린샷")
 
@@ -755,7 +755,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이런 유형의 터치 처리는 음악 키보드에 매우 유용합니다. 키는 눌렸을 때는 물론 손가락이 키보드 사이를 미끄러질 때도 이를 감지할 수 있어야 합니다.
 
-**Silent Keyboard**(무음 키보드) 페이지는 `BoxView`에서 파생된 [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/Key.cs)에서 파생된 작은 [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/WhiteKey.cs) 및 [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BlackKey.cs) 클래스를 정의합니다.
+**Silent Keyboard** (무음 키보드) 페이지는 `BoxView`에서 파생된 [`Key`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/Key.cs)에서 파생된 작은 [`WhiteKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/WhiteKey.cs) 및 [`BlackKey`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/BlackKey.cs) 클래스를 정의합니다.
 
 `Key` 클래스는 실제 음악 프로그램에 사용할 준비가 되었습니다. 이것은 `IsPressed` 및 `KeyNumber`라는 공용 속성을 정의하며, 이 속성은 MIDI 표준에 의해 설정된 키 코드로 설정됩니다. `Key` 클래스는 `StatusChanged`라는 이벤트도 정의합니다. 이것은 `IsPressed` 속성이 변경되면 호출됩니다.
 

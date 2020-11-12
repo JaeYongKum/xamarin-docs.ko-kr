@@ -10,16 +10,16 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b109459f583afd491b613b4e32e4e4530eeb5ca4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cb1aa068e702b4d12bf112486e77a1c893b68956
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562693"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370860"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
 _효과는 컨트롤 사용자 지정을 간소화합니다. 이 문서에서는 컨트롤에 포커스가 있을 때 Entry 컨트롤의 배경 색을 변경하는 효과를 만드는 방법을 보여줍니다._
 

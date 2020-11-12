@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d417f5e0b2b0bea5a3e129c87e94b289dc7201ed
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 812adbbb4a9572d38dd57a3edd5c1a561909f1b0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562485"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374968"
 ---
 # <a name="binding-video-sources-to-the-player"></a>플레이어에 비디오 소스 바인딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 `VideoPlayer` 보기의 `Source` 속성이 새 비디오 파일로 설정되면 기본 비디오는 재생이 중지되고 새 비디오가 시작됩니다. 이는 [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 샘플의 **웹 비디오 선택** 페이지에서 확인할 수 있습니다. 페이지에는 **App.xaml** 파일에서 참조된 세 비디오의 제목이 있는 `ListView`가 포함됩니다.
 
@@ -99,7 +99,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-**BindToVideoPlayer.xaml** 파일의 `ListView`에는 각각 **App.xaml**에 있는 리소스 사전의 `UriVideoSource` 개체와 비디오 제목으로 초기화된 `VideoInfo` 개체 배열이 포함되어 있습니다.
+**BindToVideoPlayer.xaml** 파일의 `ListView`에는 각각 **App.xaml** 에 있는 리소스 사전의 `UriVideoSource` 개체와 비디오 제목으로 초기화된 `VideoInfo` 개체 배열이 포함되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

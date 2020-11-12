@@ -10,16 +10,16 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a96e81314ad48ab0618083c215048e0678d09768
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c04626a3139a7fa44b2b13b2c1dd343188322f3c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557376"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368507"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 

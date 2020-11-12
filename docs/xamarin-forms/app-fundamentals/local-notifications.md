@@ -10,16 +10,16 @@ ms.date: 10/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c62d03e785e02160d9c0f83c3375383d890d62b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 306dbe15d269f0c8554f73b92623e4f67e06b959
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558273"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375176"
 ---
 # <a name="local-notifications-in-no-locxamarinforms"></a>Xamarin.Forms의 로컬 알림
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/local-notifications)
 
 로컬 알림은 모바일 디바이스에 설치된 애플리케이션이 보내는 경고입니다. 로컬 알림은 흔히 다음과 같은 기능에 사용됩니다.
 
@@ -52,7 +52,7 @@ public interface INotificationManager
 
 ## <a name="consume-the-interface-in-no-locxamarinforms"></a>Xamarin.Forms에서 인터페이스 사용
 
-인터페이스를 만든 후에는 플랫폼 구현이 아직 만들어지지 않은 경우에도 공유 Xamarin.Forms 프로젝트에서 인터페이스를 사용할 수 있습니다. 샘플 애플리케이션에는 다음 내용이 있는 **MainPage.xaml**이라는 `ContentPage`가 포함되어 있습니다.
+인터페이스를 만든 후에는 플랫폼 구현이 아직 만들어지지 않은 경우에도 공유 Xamarin.Forms 프로젝트에서 인터페이스를 사용할 수 있습니다. 샘플 애플리케이션에는 다음 내용이 있는 **MainPage.xaml** 이라는 `ContentPage`가 포함되어 있습니다.
 
 ```xaml
 <StackLayout Margin="0,35,0,0"

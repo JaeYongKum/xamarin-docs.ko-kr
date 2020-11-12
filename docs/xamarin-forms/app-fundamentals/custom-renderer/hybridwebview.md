@@ -10,16 +10,16 @@ ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3d0cbae406861565d91b0bbc9f39d661c547ca1e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: dcfb713da09a9dab1974110e161d8045132f6b2f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561159"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375020"
 ---
 # <a name="customizing-a-webview"></a>WebView 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 Xamarin.Forms`WebView`는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 `WebView`을(를) 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.
 
@@ -148,7 +148,7 @@ public partial class HybridWebViewPage : ContentPage
 
 1. iOS에서 `WkWebViewRenderer` 클래스의 서브클래스를 만들고 Android 및 UWP에 `WebViewRenderer` 클래스를 만들어 사용자 지정 컨트롤을 렌더링합니다.
 1. [`WebView`](xref:Xamarin.Forms.WebView)을(를) 렌더링하고 이를 사용자 지정하기 위한 논리를 작성하는 `OnElementChanged` 메서드를 재정의합니다. 이 메서드는 `HybridWebView` 개체가 만들어질 때 호출됩니다.
-1. 사용자 지정 렌더러 클래스 또는 *AssemblyInfo.cs*에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스 또는 *AssemblyInfo.cs* 에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [보기](xref:Xamarin.Forms.View) 요소를 렌더링하는 경우에는 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
@@ -209,7 +209,7 @@ public partial class HybridWebViewPage : ContentPage
 
 `invokeCSharpAction` JavaScript 함수는 웹 페이지에 정의되지 않으며, 각 사용자 지정 렌더러를 통해 삽입됩니다.
 
-iOS에서 이 HTML 파일은 **BundleResource**의 빌드 작업이 포함된 플랫폼 프로젝트의 콘텐츠 폴더에 상주합니다. Android에서 이 HTML 파일은 **AndroidAsset**의 빌드 작업이 포함된 플랫폼 프로젝트의 자산/콘텐츠 폴더에 상주합니다.
+iOS에서 이 HTML 파일은 **BundleResource** 의 빌드 작업이 포함된 플랫폼 프로젝트의 콘텐츠 폴더에 상주합니다. Android에서 이 HTML 파일은 **AndroidAsset** 의 빌드 작업이 포함된 플랫폼 프로젝트의 자산/콘텐츠 폴더에 상주합니다.
 
 ### <a name="invoke-c-from-javascript"></a>JavaScript에서 C# 호출
 
@@ -300,7 +300,7 @@ namespace CustomRenderer.iOS
 > [!NOTE]
 > `WKWebView` 클래스는 iOS 8 이상에서만 지원됩니다.
 
-또한 다음 값을 포함하도록 **Info.plist**를 업데이트해야 합니다.
+또한 다음 값을 포함하도록 **Info.plist** 를 업데이트해야 합니다.
 
 ```xml
 <key>NSAppTransportSecurity</key>

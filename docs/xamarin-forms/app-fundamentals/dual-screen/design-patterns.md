@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b553a2fc3dea0d2793cb337142eacf0419ad994
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8cd98f529c324e89a4b935a364a09ff794b6c5be
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556076"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369430"
 ---
 # <a name="no-locxamarinforms-dual-screen-design-patterns"></a>Xamarin.Forms 이중 화면 디자인 패턴
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 이 가이드에서는 이중 화면 디바이스를 위한 권장 디자인 패턴을 소개하고 멋지고 유용한 사용자 환경을 제공하는 인터페이스를 만드는 데 도움이 되는 코드와 샘플을 제공합니다.
 

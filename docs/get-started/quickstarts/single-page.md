@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b550aed2dd2038a48fa4eafcf1ed1d874a08eb03
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436225"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375527"
 ---
 # <a name="create-a-single-page-no-locxamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 이 빠른 시작에서 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -45,32 +45,32 @@ ms.locfileid: "91436225"
 
 ## <a name="get-started-with-visual-studio-2019"></a>Visual Studio 2019 시작
 
-1. Visual Studio 2019를 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
+1. Visual Studio 2019를 시작하고 시작 창에서 **새 프로젝트 만들기** 를 클릭하여 새 프로젝트를 만듭니다.
 
     ![새 프로젝트](single-page-images/vs/new-solution-2019.png)
 
-2. **새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일**을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
+2. **새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일** 을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
 
     ![플랫폼 간 프로젝트 템플릿](single-page-images/vs/new-project-2019.png)
 
-3. **새 프로젝트 구성** 창에서 **프로젝트 이름**을 **Notes**로 지정하고 적절한 프로젝트 위치를 선택한 다음 **만들기** 단추를 클릭합니다.
+3. **새 프로젝트 구성** 창에서 **프로젝트 이름** 을 **Notes** 로 지정하고 적절한 프로젝트 위치를 선택한 다음 **만들기** 단추를 클릭합니다.
 
     ![프로젝트 구성](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
-    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
+    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes** 이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-4. **새 플랫폼 간 앱** 대화 상자에서 **빈 앱**을 클릭한 후 **확인** 단추를 클릭합니다.
+4. **새 플랫폼 간 앱** 대화 상자에서 **빈 앱** 을 클릭한 후 **확인** 단추를 클릭합니다.
 
     ![새 플랫폼 간 앱](single-page-images/vs/new-app-2019.png)
 
     생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
-5. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
+5. **솔루션 탐색기** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml 열기](single-page-images/vs/open-mainpage-xaml-2019.png)
 
-6. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+6. **MainPage.xaml** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -101,13 +101,13 @@ ms.locfileid: "91436225"
 
     이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml** 에 저장하고 파일을 닫습니다.
 
-7. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
+7. **솔루션 탐색기** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 확장하고 **MainPage.xaml.cs** 를 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml.cs 열기](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
-8. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+8. **MainPage.xaml.cs** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -149,7 +149,7 @@ ms.locfileid: "91436225"
 
     이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs** 에 저장하고 파일을 닫습니다.
 
 ### <a name="building-the-quickstart"></a>빠른 시작 빌드
 
@@ -172,7 +172,7 @@ ms.locfileid: "91436225"
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
 
-3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정** 을 선택합니다.
 
       ![iOS를 시작 프로젝트로 설정](single-page-images/vs/set-as-startup-project-ios.png)
 
@@ -199,28 +199,28 @@ ms.locfileid: "91436225"
 
 ## <a name="get-started-with-visual-studio-2017"></a>Visual Studio 2017 시작
 
-1. Visual Studio 2017을 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
+1. Visual Studio 2017을 시작하고 시작 창에서 **새 프로젝트 만들기** 를 클릭하여 새 프로젝트를 만듭니다.
 
     ![새 프로젝트](single-page-images/vs/new-solution.png)
 
-2. **새 프로젝트** 대화 상자에서 **플랫폼 간**을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름을 **Notes**로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
+2. **새 프로젝트** 대화 상자에서 **플랫폼 간** 을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름을 **Notes** 로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
 
     ![플랫폼 간 프로젝트 템플릿](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
-    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
+    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes** 이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-3. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
+3. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱** 을 클릭하고, **.NET Standard** 를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
 
     ![새 플랫폼 간 앱](single-page-images/vs/new-app.png)
 
     생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
-4. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
+4. **솔루션 탐색기** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml 열기](single-page-images/vs/open-mainpage-xaml.png)
 
-5. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+5. **MainPage.xaml** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -251,13 +251,13 @@ ms.locfileid: "91436225"
 
     이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml** 에 저장하고 파일을 닫습니다.
 
-6. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
+6. **솔루션 탐색기** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 확장하고 **MainPage.xaml.cs** 를 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml.cs 열기](single-page-images/vs/open-mainpage-codebehind.png)
 
-7. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+7. **MainPage.xaml.cs** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -299,7 +299,7 @@ ms.locfileid: "91436225"
 
     이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs** 에 저장하고 파일을 닫습니다.
 
 ### <a name="building-the-quickstart"></a>빠른 시작 빌드
 
@@ -322,7 +322,7 @@ ms.locfileid: "91436225"
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
 
-3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+3. Visual Studio 도구 모음에서 **Notes.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정** 을 선택합니다.
 
       ![iOS를 시작 프로젝트로 설정](single-page-images/vs/set-as-startup-project-ios.png)
 
@@ -349,32 +349,32 @@ ms.locfileid: "91436225"
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Mac용 Visual Studio 시작
 
-1. Mac용 Visual Studio를 시작하고 시작 창에서 **새로 만들기**를 클릭하여 새 프로젝트를 만듭니다.
+1. Mac용 Visual Studio를 시작하고 시작 창에서 **새로 만들기** 를 클릭하여 새 프로젝트를 만듭니다.
 
     ![새 솔루션](single-page-images/vsmac/new-project.png)
 
-2. **Choose a template for your new project** 대화 상자에서 **Multiplatform > App**을 클릭하여 **Blank Forms App** 템플릿을 선택하고 **Next** 단추를 클릭합니다.
+2. **Choose a template for your new project** 대화 상자에서 **Multiplatform > App** 을 클릭하여 **Blank Forms App** 템플릿을 선택하고 **Next** 단추를 클릭합니다.
 
     ![템플릿 선택](single-page-images/vsmac/choose-template.png)
 
-3. **빈 양식 앱 구성** 대화 상자에서 새 앱 이름을 **Notes**로 설정하고, **.NET Standard** 라디오 단추가 선택되었는지 확인하고, **다음** 단추를 클릭합니다.    
+3. **빈 양식 앱 구성** 대화 상자에서 새 앱 이름을 **Notes** 로 설정하고, **.NET Standard** 라디오 단추가 선택되었는지 확인하고, **다음** 단추를 클릭합니다.    
 
     ![Forms 애플리케이션 구성](single-page-images/vsmac/configure-app.png)
 
-4. **새 빈 Forms 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 **Notes**로 설정된 채로 두고, 프로젝트에 적절한 위치를 선택하고, **만들기** 단추를 클릭하여 프로젝트를 만듭니다.
+4. **새 빈 Forms 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 **Notes** 로 설정된 채로 두고, 프로젝트에 적절한 위치를 선택하고, **만들기** 단추를 클릭하여 프로젝트를 만듭니다.
 
     ![Forms 프로젝트 구성](single-page-images/vsmac/configure-project.png)
 
     > [!IMPORTANT]
-    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션과 프로젝의 이름이 모두 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 프로젝트로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
+    > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션과 프로젝의 이름이 모두 **Notes** 이어야 합니다. 이 빠른 시작에서 코드를 프로젝트로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
     생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
-5. **Solution Pad**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
+5. **Solution Pad** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
-6. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+6. **MainPage.xaml** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -405,13 +405,13 @@ ms.locfileid: "91436225"
 
     이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
-    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
+    **파일 > 저장** 을 선택(또는 **&#8984; + S** 를 누름)하여 변경 내용을 **MainPage.xaml** 에 저장하고 파일을 닫습니다.
 
-7. **Solution Pad**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
+7. **Solution Pad** 의 **Notes** 프로젝트에서 **MainPage.xaml** 을 확장하고 **MainPage.xaml.cs** 를 두 번 클릭하여 엽니다.
 
     ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
-8. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
+8. **MainPage.xaml.cs** 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -453,7 +453,7 @@ ms.locfileid: "91436225"
 
     이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
-    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
+    **파일 > 저장** 을 선택(또는 **&#8984; + S** 를 누름)하여 변경 내용을 **MainPage.xaml.cs** 에 저장하고 파일을 닫습니다.
 
 ### <a name="building-the-quickstart"></a>빠른 시작 빌드
 
@@ -463,7 +463,7 @@ ms.locfileid: "91436225"
 
     오류가 있는 경우 이전 단계를 반복하고 프로젝트가 성공적으로 빌드할 때까지 실수를 수정합니다.
 
-2. **Solution Pad**에서 **Notes.iOS** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+2. **Solution Pad** 에서 **Notes.iOS** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정** 을 선택합니다.
 
       ![iOS를 시작 프로젝트로 설정](single-page-images/vsmac/set-startup-project-ios.png)
 
@@ -477,7 +477,7 @@ ms.locfileid: "91436225"
 
     각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
-4. **Solution Pad**에서 **Notes.Droid** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+4. **Solution Pad** 에서 **Notes.Droid** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정** 을 선택합니다.
 
       ![Android를 시작 프로젝트로 설정](single-page-images/vsmac/set-startup-project-android.png)
 

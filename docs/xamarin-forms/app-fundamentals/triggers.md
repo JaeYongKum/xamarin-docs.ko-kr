@@ -10,16 +10,16 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29fb1300e62d15130e999f6816e2afefcd3fba3b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1f2484fe7c6dee1f1b4df1318263624f3f50f604
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562602"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367187"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Xamarin.Forms 트리거
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다. 또한 특수한 트리거 그룹인 상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)를 적용해야 하는 시기를 정의합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "91562602"
 
 - **Setter** - 트리거 조건이 충족될 때 `Setter` 요소의 컬렉션을 추가할 수 있습니다. 설정할 `Property` 및 `Value`를 지정합니다.
 
-- **EnterActions 및 ExitActions**(표시되지 않음) - 코드로 작성되며 `Setter` 요소에 추가하여(또는 대신) 사용할 수 있습니다. 이러한 모든 부분은 [아래와 같이 설명됩니다](#enteractions-and-exitactions).
+- **EnterActions 및 ExitActions** (표시되지 않음) - 코드로 작성되며 `Setter` 요소에 추가하여(또는 대신) 사용할 수 있습니다. 이러한 모든 부분은 [아래와 같이 설명됩니다](#enteractions-and-exitactions).
 
 ### <a name="applying-a-trigger-using-a-style"></a>스타일을 사용하여 트리거 적용
 

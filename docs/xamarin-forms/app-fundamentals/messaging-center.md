@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d24ff6831bb8b52d840ff2db7c13c3eb674b7bd8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5ccff2fd24537be0bbf2d809b20a00bc35667c95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555790"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366857"
 ---
 # <a name="no-locxamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.
 
@@ -94,7 +94,7 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 구독자는 더 이상 수신하지 않을 메시지를 구독 취소할 수 있습니다. 이 조치는 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 오버로드 중 하나를 통해 수행합니다.
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
 이 예제에서는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메소드가 `MainPage` 형식을 통해 보낸 `Hi` 메시지에서 `this` 개체를 구독 취소합니다.
@@ -102,7 +102,7 @@ MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 페이로드 데이터를 포함하는 메시지는 두 개의 제네릭 인수를 지정하는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 오버로드를 사용하여 구독을 취소해야 합니다.
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
 이 예제에서는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메소드가 `MainPage` 형식을 통해 보낸 `Hi` 메시지에서 `this` 개체를 구독 취소합니다. 해당 페이로드 데이터는 `string`입니다.

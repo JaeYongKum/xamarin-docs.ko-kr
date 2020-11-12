@@ -10,16 +10,16 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e8c0eeb70393cd3a5c6db7b99146b69b79ec14d
-ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
+ms.openlocfilehash: a3112191b7392ee3fcc0f383682acf40cf8f65cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92630246"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373473"
 ---
 # <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms DependencyService 등록 및 확인
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 네이티브 플랫폼 기능을 호출할 때 플랫폼 구현을 호출하려면 `DependencyService`에 등록한 후 공유 코드에서 확인해야 합니다.
 

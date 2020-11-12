@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0110fa7c348c4facaf60cd261c8a584904aa0b8e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e8dd18caf7ab6730c8529660d83511cf8c65edcf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563070"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375163"
 ---
 # <a name="no-locxamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
 Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다.
 

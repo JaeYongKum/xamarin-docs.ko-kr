@@ -10,16 +10,16 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: afcf182fe093a9bb02ea23f53d0f568fd83c862c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d5c380a5ce6e76b0f9275b09d2943be479ef09e4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563317"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370899"
 ---
 # <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 다음 스크린샷은 iOS 및 Android의 `TabbedPage`를 보여줍니다.
 

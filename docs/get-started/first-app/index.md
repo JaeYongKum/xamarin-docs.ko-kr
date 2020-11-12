@@ -12,12 +12,12 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6670faf921248c007c20307fddb6a34057c5202
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: d2bb00eeadb3862d25032da45860f1cc12e3aad2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436677"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369898"
 ---
 # <a name="build-your-first-no-locxamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -29,7 +29,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
@@ -37,7 +37,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     [![새 프로젝트 만들기](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
-2. “Xamarin”을 검색하거나 **프로젝트 형식** 메뉴에서 **모바일**을 선택하세요. **모바일 앱(Xamarin.Forms)** 프로젝트 형식을 선택하세요.
+2. “Xamarin”을 검색하거나 **프로젝트 형식** 메뉴에서 **모바일** 을 선택하세요. **모바일 앱(Xamarin.Forms)** 프로젝트 형식을 선택하세요.
 
     [![Xamarin 프로젝트에 대한 필터](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
@@ -45,13 +45,13 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     [![프로젝트 이름 선택](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. **빈** 프로젝트 형식을 클릭하고 **Android** 및 **iOS**가 선택되어 있는지 확인합니다.
+4. **빈** 프로젝트 형식을 클릭하고 **Android** 및 **iOS** 가 선택되어 있는지 확인합니다.
 
     [![.NET Standard가 포함된 Android 및 iOS](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
 5. NuGet 패키지가 복원될 때까지 기다립니다(상태 표시줄에 "복원 완료" 메시지가 표시됨).
 
-6. 새 Visual Studio 2019 설치에는 Android Emulator가 구성되어 있지 않습니다. **디버그** 단추에서 드롭다운 화살표를 클릭하고 **Android Emulator 만들기**를 선택하여 에뮬레이터 만들기 화면을 시작합니다.
+6. 새 Visual Studio 2019 설치에는 Android Emulator가 구성되어 있지 않습니다. **디버그** 단추에서 드롭다운 화살표를 클릭하고 **Android Emulator 만들기** 를 선택하여 에뮬레이터 만들기 화면을 시작합니다.
 
     ![Android Emulator 드롭다운 만들기](images/win-2019/debug-dropdown.png)
 
@@ -75,13 +75,13 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 대화형 기능을 추가하도록 애플리케이션을 사용자 정의할 수 있습니다. 애플리케이션에 사용자 상호 작용을 추가하려면 다음 단계를 수행합니다.
 
-1. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
+1. **MainPage.xaml** 을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-2. **MainPage.xaml.cs**를 편집하여 다음 코드를 클래스 끝에 추가합니다.
+2. **MainPage.xaml.cs** 를 편집하여 다음 코드를 클래스 끝에 추가합니다.
 
     ```csharp
     int count = 0;
@@ -114,7 +114,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
@@ -122,7 +122,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS** 가 선택되었는지 확인합니다.
 
     [![.NET Standard가 포함된 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
 
@@ -130,13 +130,13 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 4. 디버그 단추(또는 **디버그 > 디버깅 시작** 메뉴 항목)를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml** 을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-6. **MainPage.xaml.cs**를 편집하여 다음 코드를 클래스 끝에 추가합니다.
+6. **MainPage.xaml.cs** 를 편집하여 다음 코드를 클래스 끝에 추가합니다.
 
     ```csharp
     int count = 0;
@@ -161,15 +161,15 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ## <a name="step-by-step-instructions-for-mac"></a>Mac용 단계별 지침
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
-1. **파일 > 새 솔루션...** 을 선택하거나 **새 프로젝트...** 단추를 누른 다음, **멀티 플랫폼 > 앱 > 빈 Forms 앱**을 선택합니다.
+1. **파일 > 새 솔루션...** 을 선택하거나 **새 프로젝트...** 단추를 누른 다음, **멀티 플랫폼 > 앱 > 빈 Forms 앱** 을 선택합니다.
 
     [![빈 Forms 앱](images/01-sml.png)](images/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS** 가 선택되었는지 확인합니다.
 
     [![.NET Standard가 포함된 Android 및 iOS](images/02-sml.png)](images/02.png#lightbox)
 
@@ -177,15 +177,15 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     ![Android 앱](images/03-sml.png)
 
-4. 디버그 단추(또는 **실행 > 디버깅 시작**)를 눌러 Android 에뮬레이터를 시작합니다.
+4. 디버그 단추(또는 **실행 > 디버깅 시작** )를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml** 을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
     ```
 
-6. **MainPage.xaml.cs**를 편집하여 다음 코드를 클래스 끝에 추가합니다.
+6. **MainPage.xaml.cs** 를 편집하여 다음 코드를 클래스 끝에 추가합니다.
 
     ```csharp
     int count = 0;
@@ -200,7 +200,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     ![Android 앱](images/07-sml.png)
 
-8. 마우스 오른쪽 단추를 클릭하여 iOS를 **시작 프로젝트**로 설정합니다.
+8. 마우스 오른쪽 단추를 클릭하여 iOS를 **시작 프로젝트** 로 설정합니다.
 
     [![시작 프로젝트를 iOS로 설정](images/08-sml.png)](images/08.png#lightbox)
 

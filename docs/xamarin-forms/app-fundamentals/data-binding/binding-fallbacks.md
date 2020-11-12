@@ -10,16 +10,16 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d288d43bcee5719c1ab3667812e5bac4891bb188
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560691"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366323"
 ---
 # <a name="no-locxamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 바인딩 소스를 확인할 수 없거나 바인딩에 성공하지만 `null` 값을 반환하기 때문에 경우에 따라 데이터 바인딩이 실패합니다. 값 변환기 또는 기타 추가 코드를 사용하여 이러한 시나리오를 처리할 수 있고 데이터 바인딩은 바인딩 프로세스에 실패하는 경우 사용할 대체 값을 정의하여 더 강력하게 만들 수 있습니다. 바인딩 식에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 정의하여 이 작업을 수행할 수 있습니다. 이러한 속성이 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 클래스에 위치하기 때문에, 바인딩, 다중 바인딩, 컴파일된 바인딩 및 `Binding` 태그 확장과 함께 사용할 수 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "91560691"
 
 ## <a name="defining-a-fallback-value"></a>대체 값 정의
 
-[`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 속성을 사용하면 바인딩 *소스*를 확인할 수 없을 때 사용되는 대체 값을 정의할 수 있습니다. 이 속성을 설정하는 일반적인 시나리오는 유형이 다른 바인딩된 컬렉션의 모든 개체에 존재하지 않을 수 있는 원본 속성에 바인딩된 경우입니다.
+[`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 속성을 사용하면 바인딩 *소스* 를 확인할 수 없을 때 사용되는 대체 값을 정의할 수 있습니다. 이 속성을 설정하는 일반적인 시나리오는 유형이 다른 바인딩된 컬렉션의 모든 개체에 존재하지 않을 수 있는 원본 속성에 바인딩된 경우입니다.
 
 **MonkeyDetail** 페이지는 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 속성을 설정하는 방법을 보여줍니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "91560691"
 
 ## <a name="defining-a-null-replacement-value"></a>Null 대체 값 정의
 
-[`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 사용하면 바인딩 *소스*를 확인할 수 없지만 값이 `null`일 때 사용되는 대체 값을 정의할 수 있습니다. 이 속성을 설정하는 일반적인 시나리오는 바인딩된 컬렉션에서 `null`일 수 있는 원본 속성에 바인딩된 경우입니다.
+[`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 사용하면 바인딩 *소스* 를 확인할 수 없지만 값이 `null`일 때 사용되는 대체 값을 정의할 수 있습니다. 이 속성을 설정하는 일반적인 시나리오는 바인딩된 컬렉션에서 `null`일 수 있는 원본 속성에 바인딩된 경우입니다.
 
 **Monkeys** 페이지는 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 설정하는 방법을 보여줍니다.
 

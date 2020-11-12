@@ -10,20 +10,20 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a5912d18787543b05b3937f2b8b5c6a36b04873
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7a2d7251f3896994ab75aba07c2fb03af6558c4e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556817"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370925"
 ---
 # <a name="no-locxamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 데이터 바인딩은 일반적으로 원본 속성에서 대상 속성으로, 일부 경우에는 대상 속성에서 원본 속성으로 데이터를 전송합니다. 이 전송은 원본 및 대상 속성이 동일한 형식인 경우 또는 하나의 형식을 암시적 변환을 통해 다른 형식으로 변환할 수 있는 경우에 간단합니다. 그렇지 않은 경우 형식 변환을 수행해야 합니다.
 
-[**문자열 서식 지정**](string-formatting.md) 문서에서 데이터 바인딩의 `StringFormat` 속성을 사용하여 형식을 문자열로 변환하는 방법을 살펴보았습니다. 다른 형식의 변환의 경우 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 인터페이스를 구현하는 클래스에 일부 특수한 코드를 작성해야 합니다. (유니버설 Windows 플랫폼은 `Windows.UI.Xaml.Data` 네임스페이스에 [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/)라는 유사한 클래스를 포함하지만 이 `IValueConverter`는 `Xamarin.Forms` 네임스페이스에 있습니다.) `IValueConverter`를 구현하는 클래스는 *값 변환기*라고 하지만 종종 *바인딩 변환기* 또는 *바인딩 값 변환기*라고도 합니다.
+[**문자열 서식 지정**](string-formatting.md) 문서에서 데이터 바인딩의 `StringFormat` 속성을 사용하여 형식을 문자열로 변환하는 방법을 살펴보았습니다. 다른 형식의 변환의 경우 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 인터페이스를 구현하는 클래스에 일부 특수한 코드를 작성해야 합니다. (유니버설 Windows 플랫폼은 `Windows.UI.Xaml.Data` 네임스페이스에 [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/)라는 유사한 클래스를 포함하지만 이 `IValueConverter`는 `Xamarin.Forms` 네임스페이스에 있습니다.) `IValueConverter`를 구현하는 클래스는 *값 변환기* 라고 하지만 종종 *바인딩 변환기* 또는 *바인딩 값 변환기* 라고도 합니다.
 
 ## <a name="the-ivalueconverter-interface"></a>IValueConverter 인터페이스
 

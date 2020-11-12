@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d29dafd5bcdf991f275580850d77a4923d37286e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 46f88b1672690645a8e71aba2c0dbe44d7b123cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563057"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368767"
 ---
 # <a name="no-locxamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.
 

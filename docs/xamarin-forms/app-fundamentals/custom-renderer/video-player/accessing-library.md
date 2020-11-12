@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ff9f44ad790f3acda1e855f3308942bb702e66ee
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 595eda84026a9b609f7bd0dadb72fdc9ac762a34
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563902"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367242"
 ---
 # <a name="accessing-the-devices-video-library"></a>디바이스의 비디오 라이브러리에 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 대부분의 최신 모바일 디바이스 및 데스크톱 컴퓨터에는 디바이스의 카메라를 사용하여 비디오를 녹화할 수 있는 기능이 있습니다. 사용자가 생성한 비디오는 디바이스에 파일로 저장됩니다. 이러한 파일을 이미지 라이브러리에서 가져와서 다른 비디오처럼 `VideoPlayer` 클래스로 재생할 수 있습니다.
 
@@ -149,7 +149,7 @@ namespace VideoPlayerDemos.Droid
 }
 ```
 
-`MainActivity`의 `OnCreate` 메서드는 정적 `Current` 속성에 자체 인스턴스를 저장합니다. 이를 통해 `IVideoPicker`를 구현하면 **Select Video**(비디오 선택) 선택기를 시작할 수 있는 `MainActivity` 인스턴스를 얻을 수 있습니다.
+`MainActivity`의 `OnCreate` 메서드는 정적 `Current` 속성에 자체 인스턴스를 저장합니다. 이를 통해 `IVideoPicker`를 구현하면 **Select Video** (비디오 선택) 선택기를 시작할 수 있는 `MainActivity` 인스턴스를 얻을 수 있습니다.
 
 ```csharp
 using System;
@@ -232,7 +232,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>종속성 서비스 호출
 
-[**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 프로그램의 **Play Library Video**(라이브러리 비디오 재생) 페이지는 비디오 선택기 종속성 서비스를 사용하는 방법을 보여줍니다. XAML 파일에는 `VideoPlayer` 인스턴스와 **Show Video Library**(비디오 라이브러리 표시) 레이블이 지정된 `Button`이 있습니다.
+[**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 프로그램의 **Play Library Video** (라이브러리 비디오 재생) 페이지는 비디오 선택기 종속성 서비스를 사용하는 방법을 보여줍니다. XAML 파일에는 `VideoPlayer` 인스턴스와 **Show Video Library** (비디오 라이브러리 표시) 레이블이 지정된 `Button`이 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

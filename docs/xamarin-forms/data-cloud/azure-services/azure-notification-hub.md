@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 6135d8caec196ded385bc0f962f007c41d20e2cb
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897502"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374448"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
-[![샘플 다운로드](~/media/shared/download.png)샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![샘플 다운로드](~/media/shared/download.png)샘플 다운로드](/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 푸시 알림은 백엔드 시스템에서 모바일 애플리케이션으로 정보를 전달합니다. Apple, Google 및 기타 플랫폼에는 각각 자체 푸시 알림 서비스(PNS)가 있습니다. Azure Notification Hubs를 사용하면 여러 플랫폼에서 알림을 중앙 집중화하여 백엔드 애플리케이션에서 각 플랫폼별 PNS에 알림을 배포하는 단일 허브와 통신할 수 있습니다.
 

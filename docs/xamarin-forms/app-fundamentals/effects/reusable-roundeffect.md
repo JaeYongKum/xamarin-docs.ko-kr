@@ -10,16 +10,16 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1474167d3bb56f0e5eb7ee0a8d321a5d4367ef2
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 74df5809576745903f978862ddc8a1e98aa1c973
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897561"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374266"
 ---
 # <a name="no-locxamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능한 RoundEffect
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
 > [!IMPORTANT]
 > 더 이상 `RoundEffect`를 사용하여 컨트롤을 원으로 렌더링할 필요가 없습니다. `EllipseGeometry`를 사용하여 컨트롤을 잘라 내는 것이 가장 좋습니다. 자세한 내용은 [기하 도형으로 잘라 내기](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry)를 참조하세요.

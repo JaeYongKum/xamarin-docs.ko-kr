@@ -10,16 +10,16 @@ ms.date: 03/06/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 083c8b97d158f817dbe98212bc244e8d1cac845c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2d66464798860848e42e05bb3aaa36fc80e115b1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556778"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369404"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 이 문서에서는 사용자가 휴대폰의 사진 라이브러리에서 사진을 선택할 수 있는 애플리케이션 만들기를 설명합니다. Xamarin.Forms에는 이 기능이 포함되지 않으므로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 각 플랫폼에서 기본 API에 액세스해야 합니다.
 

@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7edde81a926b142a5e792a203e96ee61b1fdfb7b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd37166c461abe6b92a280dd52098d85c2393fbd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562706"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369833"
 ---
 # <a name="the-no-locxamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 MVVM(Model-View-ViewModel) 아키텍처에서 데이터 바인딩은 일반적으로 `INotifyPropertyChanged`에서 파생되는 클래스인 ViewModel의 속성과 일반적으로 XAML 파일인 View의 속성 간에 정의됩니다. 경우에 따라 애플리케이션에서 사용자에게 ViewModel의 어떤 항목에 영향을 주는 명령을 시작하도록 요구하여 이러한 속성 바인딩을 뛰어넘어야 합니다. 이러한 명령은 일반적으로 단추를 클릭하거나 손가락으로 탭하여 신호를 받으며, 대개 `Button`의 `Clicked` 이벤트 또는 `TapGestureRecognizer`의 `Tapped` 이벤트에 대한 처리기의 코드 숨김 파일에서 처리됩니다.
 
@@ -89,7 +89,7 @@ Windows와 Xamarin.Forms 간에 ViewModel을 공유하는 것이 문제가 되�
 
 ## <a name="basic-commanding"></a>기본 명령
 
-[**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램의 **Person Entry**(사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
+[**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램의 **Person Entry** (사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
 
 `PersonViewModel`은 사용자를 정의하는 `Name`, `Age` 및 `Skills`라는 세 가지 속성을 정의합니다. 이 클래스에는 `ICommand` 속성이 *포함되지 않습니다*.
 
@@ -193,7 +193,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 이 약식 목록에는 클래스의 생성자가 포함되지 않으며, 여기에는 `ICommand` 형식의 세 가지 속성이 정의되며 이러한 속성은 곧 표시됩니다. `ICommand` 형식의 세 가지 속성 및 `Persons` 속성이 변경되면 `PropertyChanged` 이벤트가 발생하지 않습니다. 클래스가 처음 만들어질 때 이러한 속성이 설정되며 그 이후에는 변경되지 않습니다.
 
-`PersonCollectionViewModel` 클래스의 생성자를 검사하기 전에 **Person Entry** 프로그램의 XAML 파일을 살펴보겠습니다. 여기에는 해당 `BindingContext` 속성이 `PersonCollectionViewModel`로 설정된 `Grid`가 포함되어 있습니다. `Grid`에는 해당 `Command` 속성이 ViewModel의 `NewCommand` 속성에 바인딩되는 **New**(새로 만들기) 텍스트가 있는 `Button`, `IsEditing` 속성에 바인딩되는 속성과 `PersonViewModel`의 속성이 있는 입력 양식 및 ViewModel의 `SubmitCommand` 및 `CancelCommand`속성에 바인딩되는 두 개의 단추가 포함되어 있습니다. 마지막의 `ListView`에서 이미 입력된 사용자의 컬렉션을 표시합니다.
+`PersonCollectionViewModel` 클래스의 생성자를 검사하기 전에 **Person Entry** 프로그램의 XAML 파일을 살펴보겠습니다. 여기에는 해당 `BindingContext` 속성이 `PersonCollectionViewModel`로 설정된 `Grid`가 포함되어 있습니다. `Grid`에는 해당 `Command` 속성이 ViewModel의 `NewCommand` 속성에 바인딩되는 **New** (새로 만들기) 텍스트가 있는 `Button`, `IsEditing` 속성에 바인딩되는 속성과 `PersonViewModel`의 속성이 있는 입력 양식 및 ViewModel의 `SubmitCommand` 및 `CancelCommand`속성에 바인딩되는 두 개의 단추가 포함되어 있습니다. 마지막의 `ListView`에서 이미 입력된 사용자의 컬렉션을 표시합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -288,7 +288,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 프로그램에는 기존 항목을 편집할 수 있는 기능이 없으며, 페이지에서 이동할 때 항목을 저장하지 않습니다.
 
-**새로 만들기**, **제출** 및 **취소** 단추에 대한 모든 논리는 `NewCommand`, `SubmitCommand` 및 `CancelCommand` 속성의 정의를 통해 `PersonCollectionViewModel`에서 처리됩니다. `PersonCollectionViewModel`의 생성자는 이러한 세 가지 속성을 `Command` 형식의 개체로 설정합니다.  
+**새로 만들기** , **제출** 및 **취소** 단추에 대한 모든 논리는 `NewCommand`, `SubmitCommand` 및 `CancelCommand` 속성의 정의를 통해 `PersonCollectionViewModel`에서 처리됩니다. `PersonCollectionViewModel`의 생성자는 이러한 세 가지 속성을 `Command` 형식의 개체로 설정합니다.  
 
 `Command` 클래스의 [생성자](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean}))를 사용하면 `Execute` 및 `CanExecute` 메서드에 해당하는 `Action` 및 `Func<bool>` 형식의 인수를 전달할 수 있습니다. 이러한 작업과 함수를 `Command` 생성자에서 직접 람다 함수로 정의하는 것이 가장 쉽습니다. `NewCommand` 속성에 대한 `Command` 개체의 정의는 다음과 같습니다.
 
@@ -380,7 +380,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 `SubmitCommand`에 대한 `canExecute` 함수는 편집하는 `PersonViewModel` 개체에서 변경되는 속성이 있을 때마다 호출됩니다. `Name` 속성이 하나 이상의 문자이고 `Age`가 0보다 큰 경우에만 `true`를 반환합니다. 이때 **제출** 단추가 활성화됩니다.
 
-**제출**에 대한 `execute` 함수는 `PersonViewModel`에서 속성이 변경된 처리기를 제거하고, 개체를 `Persons` 컬렉션에 추가한 다음, 모든 항목을 초기 조건으로 반환합니다.
+**제출** 에 대한 `execute` 함수는 `PersonViewModel`에서 속성이 변경된 처리기를 제거하고, 개체를 `Persons` 컬렉션에 추가한 다음, 모든 항목을 초기 조건으로 반환합니다.
 
 **취소** 단추에 대한 `execute` 함수는 **제출** 단추에서 개체를 컬렉션에 추가하는 것을 제외하고 수행하는 모든 작업을 수행합니다.
 
@@ -691,7 +691,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>비동기 탐색 메뉴 명령
 
-명령은 [**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml**의 일부는 다음과 같습니다.
+명령은 [**데이터 바인딩 데모**](/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml** 의 일부는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -730,7 +730,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 XAML에서 명령을 사용하는 경우 `CommandParameter` 속성은 일반적으로 문자열로 설정됩니다. 그러나 이 경우 XAML 태그 확장을 사용하여 `System.Type` 형식의 `CommandParameter`가 되도록 합니다.
 
-각 `Command` 속성은 `NavigateCommand`이라는 속성에 바인딩됩니다. 이 속성은 코드 숨김 파일인 **MainPage.xaml.cs**에 정의되어 있습니다.
+각 `Command` 속성은 `NavigateCommand`이라는 속성에 바인딩됩니다. 이 속성은 코드 숨김 파일인 **MainPage.xaml.cs** 에 정의되어 있습니다.
 
 ```csharp
 public partial class MainPage : ContentPage

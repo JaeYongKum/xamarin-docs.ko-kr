@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee027399aec51bb7ae4fac15e9c706c65d3af235
-ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
+ms.openlocfilehash: fb9d5243e5be4d99d741349564854c9c54e7a1bb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92928635"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373291"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell에는 설정된 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동하는 데 경로를 사용하는 URI 기반 탐색 환경이 포함됩니다. 또한 탐색 스택의 모든 페이지를 방문하지 않고도 뒤로 이동할 수 있는 기능을 제공합니다.
 

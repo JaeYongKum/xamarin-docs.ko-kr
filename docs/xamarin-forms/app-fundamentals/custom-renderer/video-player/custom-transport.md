@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5d48c699ed89e91452efe84749a1dedac18a34f5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 947e630457a652b18abb6979b1f99fa9b1e8c389
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562732"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374994"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-비디오 플레이어의 전송 컨트롤에는 **재생**, **일시 중지**, **중지** 기능을 수행하는 단추가 포함됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생**과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
+비디오 플레이어의 전송 컨트롤에는 **재생** , **일시 중지** , **중지** 기능을 수행하는 단추가 포함됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생** 과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
 
 기본적으로 `VideoPlayer`는 각 플랫폼에서 지원되는 전송 컨트롤을 나타냅니다. `AreTransportControlsEnabled` 속성을 `false`로 설정하면 이러한 컨트롤이 표시되지 않습니다. 그런 다음, 프로그래밍 방식으로 `VideoPlayer`를 제어하거나 자체 전송 컨트롤을 제공할 수 있습니다.
 
@@ -215,7 +215,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="the-video-player-status"></a>비디오 플레이어 상태
 
-**재생**, **일시 중지**, **중지** 기능을 구현하는 것만으로는 전송 컨트롤을 지원하기에 충분하지 않습니다. 흔히 **재생** 및 **일시 중지** 명령은 비디오가 현재 재생 중인지, 일시 중지되었는지 여부를 나타내도록 모양이 변경되는 동일한 단추로 구현됩니다. 또한 비디오가 아직 로드되지 않은 경우에는 단추가 활성화되지 않아야 합니다.
+**재생** , **일시 중지** , **중지** 기능을 구현하는 것만으로는 전송 컨트롤을 지원하기에 충분하지 않습니다. 흔히 **재생** 및 **일시 중지** 명령은 비디오가 현재 재생 중인지, 일시 중지되었는지 여부를 나타내도록 모양이 변경되는 동일한 단추로 구현됩니다. 또한 비디오가 아직 로드되지 않은 경우에는 단추가 활성화되지 않아야 합니다.
 
 이러한 요구 사항은 비디오 플레이어가 재생 중인지, 일시 중지되었는지, 아니면 비디오를 재생할 준비가 되지 않았는지를 나타내는 현재 상태를 제공해야 한다는 것을 의미합니다. (각 플랫폼은 비디오를 일시 정지할 수 있는지 또는 새 위치로 이동할 수 있는지 여부를 나타내는 속성도 지원하지만 이러한 속성은 비디오 파일보다는 스트리밍 비디오에 해당되기 때문에 여기에 설명된 `VideoPlayer`에서는 지원되지 않습니다.)
 
@@ -525,25 +525,25 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>재생, 일시 중지, 중지 단추
 
-**재생**, **일시 중지**, **중지** 기호 이미지에 유니코드 문자를 사용하는 것은 문제가 있습니다. 유니코드 표준의 [기타 기술](https://unicode-table.com/en/blocks/miscellaneous-technical/) 섹션에는 이러한 용도에 적합해 보이는 세 개의 기호 문자가 정의되어 있습니다. 이러한 항목은 다음과 같습니다.
+**재생** , **일시 중지** , **중지** 기호 이미지에 유니코드 문자를 사용하는 것은 문제가 있습니다. 유니코드 표준의 [기타 기술](https://unicode-table.com/en/blocks/miscellaneous-technical/) 섹션에는 이러한 용도에 적합해 보이는 세 개의 기호 문자가 정의되어 있습니다. 이러한 항목은 다음과 같습니다.
 
 - 0x23F5(검은색 중간 오른쪽 삼각형) 또는 &#x23F5; - **Play**
 - 0x23F8(이중 세로 막대) 또는 &#x23F8; - **Pause**
 - 0x23F9(검은색 사각형) 또는 &#x23F9; - **Stop**
 
-브라우저에 이러한 기호가 어떻게 표시되는지 관계없이(다른 브라우저는 여러 가지 방식으로 해당 기호가 처리됨) Xamarin.Forms에서 지원하는 플랫폼에 일관되게 표시되지 않습니다. iOS 및 UWP 디바이스에서 **Pause** 및 **Stop** 문자는 파란색 3D 배경과 흰색 전경의 그래픽입니다. 이와 달리 Android에서는 기호가 단순한 파란색입니다. 하지만 **Play**에 대한 0x23F5 코드 포인트는 UWP와 동일한 모양이 아니며 iOS 및 Android에서는 지원도 되지 않습니다.
+브라우저에 이러한 기호가 어떻게 표시되는지 관계없이(다른 브라우저는 여러 가지 방식으로 해당 기호가 처리됨) Xamarin.Forms에서 지원하는 플랫폼에 일관되게 표시되지 않습니다. iOS 및 UWP 디바이스에서 **Pause** 및 **Stop** 문자는 파란색 3D 배경과 흰색 전경의 그래픽입니다. 이와 달리 Android에서는 기호가 단순한 파란색입니다. 하지만 **Play** 에 대한 0x23F5 코드 포인트는 UWP와 동일한 모양이 아니며 iOS 및 Android에서는 지원도 되지 않습니다.
 
-따라서 0x23F5 코드 포인트를 **Play**에 사용할 수 없습니다. 적절한 대안은 다음과 같습니다.
+따라서 0x23F5 코드 포인트를 **Play** 에 사용할 수 없습니다. 적절한 대안은 다음과 같습니다.
 
 - 0x25B6(오른쪽 방향 검은색 삼각형) 또는 &#x25B6; - **Play**
 
-이것은 각 플랫폼에서 지원됩니다. 다만 **Pause** 및 **Stop**의 3D 모양과 다른 검은색 일반 삼각형입니다. 한 가지 방법은 변형 코드로 0x25B6 코드 포인트를 따르는 것입니다.
+이것은 각 플랫폼에서 지원됩니다. 다만 **Pause** 및 **Stop** 의 3D 모양과 다른 검은색 일반 삼각형입니다. 한 가지 방법은 변형 코드로 0x25B6 코드 포인트를 따르는 것입니다.
 
 - 0xFE0F 뒤에 0x25B6(변형 16) 또는 &#x25B6;&#xFE0F; - **Play**
 
 이것이 아래에 보이는 표시에 사용되었습니다. iOS에서는 **Play** 기호에 **Pause** 및 **Stop** 단추와 동일한 3D 모양이 부여되지만 Android와 UWP에서는 변형이 작동하지 않습니다.
 
-**Custom Transport**(사용자 지정 전송) 페이지는 **AreTransportControlsEnabled** 속성을 **false**로 설정하고 비디오가 로드될 때 표시되는 `ActivityIndicator`와 두 개의 단추를 포함합니다. `DataTrigger` 개체는 `ActivityIndicator`와 단추를 활성화 및 비활성화하고 첫 번째 단추를 **Play**와 **Pause** 사이에서 전환하는 데 사용됩니다.
+**Custom Transport** (사용자 지정 전송) 페이지는 **AreTransportControlsEnabled** 속성을 **false** 로 설정하고 비디오가 로드될 때 표시되는 `ActivityIndicator`와 두 개의 단추를 포함합니다. `DataTrigger` 개체는 `ActivityIndicator`와 단추를 활성화 및 비활성화하고 첫 번째 단추를 **Play** 와 **Pause** 사이에서 전환하는 데 사용됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

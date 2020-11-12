@@ -10,16 +10,16 @@ ms.date: 07/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1b2abf7925eabb79b1918a9b9fedb0ba7ecced38
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 830b86c0e8eeeef528c3c1f55a565ef08dad6896
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563161"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373278"
 ---
 # <a name="no-locxamarinforms-shell-lifecycle"></a>Xamarin.Forms Shell 수명 주기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 셸 애플리케이션은 Xamarin.Forms 수명 주기를 기준으로 하며, `Appearing` 이벤트는 페이지가 화면에 표시되려고 할 때 발생하고, `Disappearing` 이벤트는 페이지가 화면에서 사라지려고 할 때 발생합니다. 이 이벤트는 페이지로 전파되며 페이지에서 [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) 또는 [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) 메서드를 재정의하여 처리할 수 있습니다.
 

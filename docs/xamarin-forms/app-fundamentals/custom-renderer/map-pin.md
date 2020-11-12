@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13d9ddb5ba13960b4ed5af8f4fdb98b486b7e93e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f4e0387b6b64c5a3bf801a31c6e333b6f514df1d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562277"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367372"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 보기가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
@@ -176,7 +176,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 
 ![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-ios.png)
 
-iOS에서 핀을 *주석*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 핀일 수 있습니다. 주석은 사용자가 주석을 선택하는 것에 응답하여 표시되는 *설명선*을 선택적으로 표시할 수 있습니다. 설명선에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되며 선택적으로 왼쪽 및 오른쪽 액세서리 보기가 표시됩니다. 위의 스크린샷에서 왼쪽 액세서리 보기는 monkey의 이미지이며 오른쪽 액세서리 보기는 *정보* 단추입니다.
+iOS에서 핀을 *주석* 이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 핀일 수 있습니다. 주석은 사용자가 주석을 선택하는 것에 응답하여 표시되는 *설명선* 을 선택적으로 표시할 수 있습니다. 설명선에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되며 선택적으로 왼쪽 및 오른쪽 액세서리 보기가 표시됩니다. 위의 스크린샷에서 왼쪽 액세서리 보기는 monkey의 이미지이며 오른쪽 액세서리 보기는 *정보* 단추입니다.
 
 다음 코드 예제에서는 iOS 플랫폼용 사용자 지정 렌더러를 보여줍니다.
 
@@ -349,7 +349,7 @@ void OnDidDeselectAnnotationView(object sender, MKAnnotationViewEventArgs e)
 
 ![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-android.png)
 
-Android에서 핀을 *표식*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 표식일 수 있습니다. 표식은 사용자가 표식을 탭핑하는 것에 응답하여 나타내는 *정보 창*을 표시할 수 있습니다. 정보 창에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되고 다른 콘텐츠를 포함하도록 지정할 수 있습니다. 그러나 한 번에 하나의 정보 창만 표시할 수 있습니다.
+Android에서 핀을 *표식* 이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 표식일 수 있습니다. 표식은 사용자가 표식을 탭핑하는 것에 응답하여 나타내는 *정보 창* 을 표시할 수 있습니다. 정보 창에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되고 다른 콘텐츠를 포함하도록 지정할 수 있습니다. 그러나 한 번에 하나의 정보 창만 표시할 수 있습니다.
 
 다음 코드 예제에서는 Android 플랫폼용 사용자 지정 렌더러를 보여줍니다.
 
@@ -512,7 +512,7 @@ void OnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
 
 ![사용자 지정 전후의 맵 컨트롤](map-pin-images/map-layout-uwp.png)
 
-UWP에서 핀은 *맵 아이콘*이라고 하며, 사용자 지정 이미지 또는 시스템 정의 기본 이미지일 수 있습니다. 맵 아이콘은 사용자가 맵 아이콘을 탭핑하는 것에 응답하여 나타내는 `UserControl`을 표시할 수 있습니다. `UserControl`은 `Pin` 인스턴스의 `Label` 및 `Address` 속성을 포함한 모든 내용을 표시할 수 있습니다.
+UWP에서 핀은 *맵 아이콘* 이라고 하며, 사용자 지정 이미지 또는 시스템 정의 기본 이미지일 수 있습니다. 맵 아이콘은 사용자가 맵 아이콘을 탭핑하는 것에 응답하여 나타내는 `UserControl`을 표시할 수 있습니다. `UserControl`은 `Pin` 인스턴스의 `Label` 및 `Address` 속성을 포함한 모든 내용을 표시할 수 있습니다.
 
 다음 코드 예제는 UWP 사용자 지정 렌더러를 보여줍니다.
 

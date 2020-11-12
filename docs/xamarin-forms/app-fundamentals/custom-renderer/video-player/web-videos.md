@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 29d3dbc29424089b9e5c492395ccbadfa0a69ae7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557948"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373408"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 `VideoPlayer` 클래스는 비디오 파일의 원본을 지정하는 데 사용되는 `AutoPlay` 속성 및 `Source` 속성을 정의합니다. `AutoPlay`에는 `true`인 기본 설정 있습니다. 즉, `Source`를 설정한 후에 비디오는 자동으로 재생하기 시작해야 합니다.
 
@@ -514,7 +514,7 @@ namespace FormsVideoLibrary.UWP
 </Application>
 ```
 
-이러한 다른 동영상 중 하나를 참조하기 위해 **PlayWebVideo.xaml**에서 명시적 URL을 `StaticResource` 태그 확장으로 바꿀 수 있습니다. 이 경우에 `VideoSourceConverter`는 `UriVideoSource` 개체를 만드는 데 필요하지 않습니다.
+이러한 다른 동영상 중 하나를 참조하기 위해 **PlayWebVideo.xaml** 에서 명시적 URL을 `StaticResource` 태그 확장으로 바꿀 수 있습니다. 이 경우에 `VideoSourceConverter`는 `UriVideoSource` 개체를 만드는 데 필요하지 않습니다.
 
 ```xaml
 <video:VideoPlayer Source="{StaticResource ElephantsDream}" />

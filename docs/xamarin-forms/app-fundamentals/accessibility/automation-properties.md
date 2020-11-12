@@ -10,16 +10,16 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f05ca6eaaaedea69e8b6eb951d31fb7701a2f0de
-ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
+ms.openlocfilehash: 98cf9f67188f67c4575823024106e100f6f22608
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281185"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374513"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Xamarin.Forms의 자동화 속성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms를 사용하면 AutomationProperties 클래스에서 연결된 속성을 통해 액세스 가능성 값을 사용자 인터페이스 요소에 설정할 수 있으며 이어서 기본 액세스 가능성 값을 설정합니다. 이 문서에서는 화면 판독기에 페이지의 요소가 표시될 수 있도록 AutomationProperties 클래스를 사용하는 방법을 설명합니다._
 
