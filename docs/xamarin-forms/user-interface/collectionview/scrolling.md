@@ -10,12 +10,12 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1872f86c0e7be6ab07b4e962d17be7d8030c1d96
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 557c82ac9318faaef5628a15989af2982a7f5ba4
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373161"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590417"
 ---
 # <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
@@ -132,7 +132,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 이 예제 코드는 항목을 뷰로 스크롤 하는 데 필요한 최소한의 스크롤이 발생 합니다.
 
-[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-makevisible.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 ScrollToPosition가 표시 된 CollectionView 세로 목록의 스크린샷](scrolling-images/scrolltoposition-makevisible.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 > [!NOTE]
 > [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) `position` 메서드를 호출할 때 인수를 지정 하지 않으면 기본적으로 멤버가 사용 됩니다 `ScrollTo` .
@@ -147,7 +147,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 이 예제 코드를 실행 하면 항목이 뷰의 시작 부분으로 스크롤됩니다.
 
-[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-start.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 ScrollToPosition가 포함 된 CollectionView 세로 목록의 스크린샷](scrolling-images/scrolltoposition-start.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 ### <a name="center"></a>Center
 
@@ -159,7 +159,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 이 예제 코드는 항목을 뷰의 가운데로 스크롤합니다.
 
-[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-center.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-center-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android의 ScrollToPosition이 있는 CollectionView 세로 목록의 스크린샷](scrolling-images/scrolltoposition-center.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-center-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 ### <a name="end"></a>끝
 
@@ -171,17 +171,17 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 이 예제 코드는 항목을 뷰의 끝으로 스크롤합니다.
 
-[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-end.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-end-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android의 ScrollToPosition이 있는 CollectionView 세로 목록의 스크린샷](scrolling-images/scrolltoposition-end.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-end-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>새 항목이 추가 되는 경우 스크롤 위치 제어
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 바인딩 가능한 `ItemsUpdatingScrollMode` 속성에 의해 지원 되는 속성을 정의 합니다. 이 속성은 `ItemsUpdatingScrollMode` `CollectionView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 열거형 값을 가져오거나 설정 합니다. `ItemsUpdatingScrollMode` 열거형은 다음 멤버를 정의합니다.
 
-- `KeepItemsInView` 새 항목이 추가 될 때 표시 되는 첫 번째 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
-- `KeepScrollOffset` 새 항목이 추가 될 때 목록의 시작 부분을 기준으로 스크롤 오프셋을 유지 합니다.
-- `KeepLastItemInView` 새 항목이 추가 될 때 마지막 항목이 표시 되도록 스크롤 오프셋을 조정 합니다.
+- `KeepItemsInView` 새 항목이 추가 될 때 표시 되는 목록의 첫 번째 항목을 유지 합니다.
+- `KeepScrollOffset` 새 항목이 추가 될 때 현재 스크롤 위치가 유지 되는지 확인 합니다.
+- `KeepLastItemInView` 새 항목이 추가 될 때 표시 되는 목록의 마지막 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
 
-기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록에서 처음 표시 되는 항목에 새 항목이 추가 되 면 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 목록에 표시 되는 항목은 계속 표시 됩니다. 새로 추가 된 항목이 목록의 맨 아래에 항상 표시 되도록 하려면 `ItemsUpdatingScrollMode` 속성을로 설정 해야 합니다 `KeepLastItemInView` .
+기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록의 첫 번째 항목에 새 항목이 추가 되 면 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 목록의 첫 번째 항목은 계속 표시 됩니다. 새 항목이 추가 될 때 목록의 마지막 항목이 표시 되도록 하려면 속성을로 설정 합니다 `ItemsUpdatingScrollMode` `KeepLastItemInView` .
 
 ```xaml
 <CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">

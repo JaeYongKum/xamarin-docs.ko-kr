@@ -6,16 +6,16 @@ ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2020
+ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c774b795fce50b32f01b50c29cb71dd5fd02585c
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4f60a48d2d8b43ea08ccc36401103d8987e48b1c
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373525"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591049"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms 셰이프: 경로 태그 구문
 
@@ -43,7 +43,13 @@ Xamarin.Forms 경로 태그 구문을 사용 하면 XAML에서 경로 기 하 �
 경로 태그 구문에서는 명령 앞 이나 뒤에 공백이 필요 하지 않습니다. 또한 두 개의 숫자를 쉼표 또는 공백으로 구분할 필요가 없지만이는 문자열이 명확 하지 않은 경우에만 수행할 수 있습니다.
 
 > [!TIP]
-> 경로 태그 언어는 SVG (스케일러블 벡터 그래픽) 이미지 경로 정의와 호환 되는 구문을 사용 하므로 SVG 형식에서 그래픽을 이식 하는 데 유용할 수 있습니다.
+> 경로 태그 구문은 SVG (스케일러블 벡터 그래픽) 이미지 경로 정의와 호환 되므로 SVG 형식에서 그래픽을 이식 하는 데 유용할 수 있습니다.
+
+경로 태그 구문은 XAML에서 사용 하기 위한 것 이지만 `Geometry` 클래스에서 메서드를 호출 하 여 코드에서 개체로 변환할 수 있습니다 `ConvertFromInvariantString` `PathGeometryConverter` .
+
+```csharp
+Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
+```
 
 ## <a name="move-command"></a>명령 이동
 

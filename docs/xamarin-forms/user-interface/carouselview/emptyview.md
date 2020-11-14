@@ -10,12 +10,12 @@ ms.date: 10/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 948a0194ef6b6d672f04737698991c835f1181fc
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 5aa20e29e22df9de1d6cdd6208e56fa2e0fe0325
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374123"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590352"
 ---
 # <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.Forms CarouselView EmptyView
 
@@ -69,19 +69,22 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
                Placeholder="Filter" />
     <CarouselView ItemsSource="{Binding Monkeys}">
         <CarouselView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CarouselView.EmptyView>
         <CarouselView.ItemTemplate>
             ...
@@ -90,18 +93,23 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 </StackLayout>
 ```
 
+이 예제에서는 중복이 [`ContentView`](xref:Xamarin.Forms) 의 루트 요소로 추가 된 것 처럼 보입니다 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . 이는 내부적으로 `EmptyView` 레이아웃에 대 한 컨텍스트를 제공 하지 않는 네이티브 컨테이너에가 추가 되기 때문입니다 Xamarin.Forms . 따라서를 구성 하는 뷰를 배치 하려면 루트 레이아웃 `EmptyView` 내에서 자신을 배치할 수 있는 레이아웃 인 루트 레이아웃을 추가 해야 합니다.
+
 해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
 CarouselView carouselView = new CarouselView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };

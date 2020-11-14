@@ -6,17 +6,17 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/01/2020
+ms.date: 11/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: 90068096eced1fd1ddd2eb59b845eb4d5e41286f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 60d16183e1a2ea162c97bbf8b30636a5a9999204
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93368884"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590269"
 ---
 # <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms 리소스 사전
 
@@ -133,7 +133,7 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 
 ## <a name="stand-alone-resource-dictionaries"></a>독립 실행형 리소스 사전
 
-에서 파생 된 클래스는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 별도의 독립 실행형 파일에 있을 수도 있습니다. 그러면 결과 파일을 응용 프로그램 간에 공유할 수 있습니다.
+에서 파생 된 클래스는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 독립 실행형 XAML 파일에도 있을 수 있습니다. 그러면 XAML 파일이 응용 프로그램 간에 공유 될 수 있습니다.
 
 이러한 파일을 만들려면 프로젝트에 새 **콘텐츠 뷰** 또는 **콘텐츠 페이지** 항목을 추가 합니다 (c # 파일만 있는 **콘텐츠 뷰** 또는 **콘텐츠 페이지** 는 아님). 코드 숨겨진 파일을 삭제 하 고 XAML 파일에서 기본 클래스의 이름을 또는에서로 변경 합니다 [`ContentView`](xref:Xamarin.Forms.ContentView) [`ContentPage`](xref:Xamarin.Forms.ContentPage) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . 또한 `x:Class` 파일의 루트 태그에서 특성을 제거 합니다.
 
@@ -167,6 +167,17 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 ```
 
 이 예제에서에는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 형식의 개체인 단일 리소스가 포함 되어 있습니다 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . **Myresourcedictionary. xaml** 을 다른 리소스 사전에 병합 하 여 사용할 수 있습니다.
+
+기본적으로 링커 동작은 모든 어셈블리를 연결 하도록 설정 된 경우 릴리스 빌드에서 독립 실행형 XAML 파일을 제거 합니다. 독립 실행형 XAML 파일이 릴리스 빌드에 남아 있는지 확인 하려면 다음을 수행 합니다.
+
+1. `Preserve`독립 실행형 XAML 파일이 포함 된 어셈블리에 사용자 지정 특성을 추가 합니다. 자세한 내용은 [코드 유지](~/ios/deploy-test/linker.md)를 참조 하세요.
+1. `Preserve`어셈블리 수준에서 특성을 설정 합니다.
+
+    ```csharp
+    [assembly:Preserve(AllMembers = true)]
+    ```
+
+연결에 대 한 자세한 내용은 [xamarin.ios 앱 연결](~/ios/deploy-test/linker.md) 및 [Android에서 링크](~/android/deploy-test/linker.md)를 참조 하세요.
 
 ## <a name="merged-resource-dictionaries"></a>병합된 리소스 사전
 
@@ -239,7 +250,9 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 - [리소스 사전 (샘플)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms 스타일](~/xamarin-forms/user-interface/styles/index.md)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Xamarin.iOS 앱 연결](~/ios/deploy-test/linker.md)
+- [Android의 연결](~/android/deploy-test/linker.md)
+- [ResourceDictionary API](xref:Xamarin.Forms.ResourceDictionary)
 
 ## <a name="related-video"></a>관련 동영상
 

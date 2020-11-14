@@ -10,12 +10,12 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62bfb13f3aa4c09da76eca6723a34e6e8a72853d
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 1ba44903f20d0431c27f2d49429b2feb9c9a51e0
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373733"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591062"
 ---
 # <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms 셰이프: 경로
 
@@ -56,9 +56,6 @@ ms.locfileid: "93373733"
 `Data`문자열은 `M` 경로에 대 한 절대 시작점을 설정 하는로 표시 되는 이동 명령으로 시작 합니다. `L` 는 시작점에서 지정 된 끝점으로 직선을 만드는 line 명령입니다. `Z` 는 close 명령이 며 현재 지점을 시작 지점에 연결 하는 줄을 만듭니다. 결과는 삼각형입니다.
 
 ![경로 삼각형](path-images/triangle.png "경로 삼각형")
-
-> [!NOTE]
-> 경로 태그 구문은 XAML 에서만 사용할 수 있습니다.
 
 경로 태그 구문에 대 한 자세한 내용은 [ Xamarin.Forms 경로 태그 구문](path-markup-syntax.md)을 참조 하세요.
 

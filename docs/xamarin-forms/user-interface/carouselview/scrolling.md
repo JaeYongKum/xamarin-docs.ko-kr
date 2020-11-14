@@ -10,12 +10,12 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 945b6656895b4c148ac4b138af0c4922f9e3bc8f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 58d0da21c81586a2cee2268c5d2df668eab0515a
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365699"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590300"
 ---
 # <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms CarouselView 스크롤
 
@@ -169,11 +169,11 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 바인딩 가능한 `ItemsUpdatingScrollMode` 속성에 의해 지원 되는 속성을 정의 합니다. 이 속성은 `ItemsUpdatingScrollMode` `CarouselView` 새 항목이 추가 될 때의 스크롤 동작을 나타내는 열거형 값을 가져오거나 설정 합니다. `ItemsUpdatingScrollMode` 열거형은 다음 멤버를 정의합니다.
 
-- `KeepItemsInView` 새 항목이 추가 될 때 표시 되는 첫 번째 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
-- `KeepScrollOffset` 새 항목이 추가 될 때 목록의 시작 부분을 기준으로 스크롤 오프셋을 유지 합니다.
-- `KeepLastItemInView` 새 항목이 추가 될 때 마지막 항목이 표시 되도록 스크롤 오프셋을 조정 합니다.
+- `KeepItemsInView` 새 항목이 추가 될 때 표시 되는 목록의 첫 번째 항목을 유지 합니다.
+- `KeepScrollOffset` 새 항목이 추가 될 때 현재 스크롤 위치가 유지 되는지 확인 합니다.
+- `KeepLastItemInView` 새 항목이 추가 될 때 표시 되는 목록의 마지막 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
 
-기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록에서 처음 표시 되는 항목에 새 항목이 추가 되 면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 목록에 표시 되는 항목은 계속 표시 됩니다. 새로 추가 된 항목이 목록의 맨 아래에 항상 표시 되도록 하려면 `ItemsUpdatingScrollMode` 속성을로 설정 해야 합니다 `KeepLastItemInView` .
+기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록의 첫 번째 항목에 새 항목이 추가 되 면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 목록의 첫 번째 항목은 계속 표시 됩니다. 새 항목이 추가 될 때 목록의 마지막 항목이 표시 되도록 하려면 속성을로 설정 합니다 `ItemsUpdatingScrollMode` `KeepLastItemInView` .
 
 ```xaml
 <CarouselView ItemsUpdatingScrollMode="KeepLastItemInView">
