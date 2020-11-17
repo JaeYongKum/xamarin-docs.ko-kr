@@ -10,19 +10,19 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 78da3ed91acea0c056074d712d368de70b251392
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 49b7a049444fe87f9237afb18935b74638fa9ebf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136918"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370509"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>2장의 요약 정보입니다. 앱 분석
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms 애플리케이션에서 화면 공간을 차지하는 개체는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스로 캡슐화된 ‘시각적 요소’라고 합니다. 시각적 요소는 다음 클래스에 해당하는 세 가지 범주로 나눌 수 있습니다.
 
@@ -30,7 +30,7 @@ Xamarin.Forms 애플리케이션에서 화면 공간을 차지하는 개체는 [
 - [레이아웃](xref:Xamarin.Forms.Layout)
 - [보기](xref:Xamarin.Forms.View)
 
-`Page` 파생 항목이 전체 화면 또는 거의 전체 화면을 차지합니다. 일반적으로 페이지의 자식은 자식 시각적 요소를 구성하기 위한 `Layout` 파생 항목입니다. `Layout`의 자식은 다른 `Layout` 클래스나 `View` 파생 항목(일반적으로 *요소*라고 함)이 될 수 있으며, 이는 텍스트, 비트맵, 슬라이더, 단추, 목록 상자 등의 친숙한 개체입니다.
+`Page` 파생 항목이 전체 화면 또는 거의 전체 화면을 차지합니다. 일반적으로 페이지의 자식은 자식 시각적 요소를 구성하기 위한 `Layout` 파생 항목입니다. `Layout`의 자식은 다른 `Layout` 클래스나 `View` 파생 항목(일반적으로 *요소* 라고 함)이 될 수 있으며, 이는 텍스트, 비트맵, 슬라이더, 단추, 목록 상자 등의 친숙한 개체입니다.
 
 이 장에서는 [`Label`](xref:Xamarin.Forms.Label)(텍스트를 표시하는 `View` 파생 항목)에 초점을 맞추고 애플리케이션을 만드는 방법을 보여 줍니다.
 

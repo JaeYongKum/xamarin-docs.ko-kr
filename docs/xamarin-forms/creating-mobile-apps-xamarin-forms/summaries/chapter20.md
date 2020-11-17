@@ -10,21 +10,21 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 75c79c7a5300cf5708bb46740bec11f84b59c786
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136684"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374023"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>20장의 요약 정보입니다. 비동기 및 파일 I/O
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
-> [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
- 그래픽 사용자 인터페이스는 사용자 입력 이벤트에 순차적으로 응답해야 합니다. 따라서 사용자 입력 이벤트의 모든 처리가 단일 스레드(종종 *주 스레드* 또는 *UI 스레드*라고도 함)에서 발생해야 합니다.
+그래픽 사용자 인터페이스는 사용자 입력 이벤트에 순차적으로 응답해야 합니다. 따라서 사용자 입력 이벤트의 모든 처리가 단일 스레드(종종 *주 스레드* 또는 *UI 스레드* 라고도 함)에서 발생해야 합니다.
 
 사용자는 그래픽 사용자 인터페이스가 응답할 것으로 기대합니다. 즉, 프로그램에서 사용자 입력 이벤트를 신속하게 처리해야 합니다. 이렇게 할 수 없는 경우 처리를 실행 보조 스레드로 이관해야 합니다.
 
@@ -102,15 +102,15 @@ Windows 런타임에서 실행되는 프로그램은 애플리케이션 로컬 �
 
 재사용 가능한 코드를 라이브러리에 저장하는 것이 유리합니다. 재사용 가능한 코드의 여러 부분이 완전히 다른 운영 체제용인 경우에는 확실히 훨씬 더 어렵습니다.
 
-[**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션에서 한 가지 방법을 보여 줍니다. 이 솔루션에는 다음 7개 프로젝트가 포함되어 있습니다.
+[ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션에서 한 가지 방법을 보여 줍니다. 이 솔루션에는 다음 7개 프로젝트가 포함되어 있습니다.
 
-- [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), 일반적인 Xamarin.Forms PCL
-- [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), iOS 클래스 라이브러리
-- [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), Android 클래스 라이브러리
-- [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), 유니버설 Windows 클래스 라이브러리
-- [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), 모든 Windows 플랫폼에 공통적인 코드에 대한 공유 프로젝트
+- [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform), 일반적인 Xamarin.Forms PCL
+- [ **Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), iOS 클래스 라이브러리
+- [ **Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), Android 클래스 라이브러리
+- [ **Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), 유니버설 Windows 클래스 라이브러리
+- [ **Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), 모든 Windows 플랫폼에 공통적인 코드에 대한 공유 프로젝트
 
-모든 개별 플랫폼 프로젝트( **Xamarin.FormsBook.Platform.WinRT** 제외)에는 **Xamarin.FormsBook.Platform**에 대한 참조가 있습니다. 세 개의 Windows 프로젝트에는 **Xamarin.FormsBook.Platform.WinRT**에 대한 참조가 있습니다.
+모든 개별 플랫폼 프로젝트( **Xamarin.FormsBook.Platform.WinRT** 제외)에는 **Xamarin.FormsBook.Platform** 에 대한 참조가 있습니다. 세 개의 Windows 프로젝트에는 **Xamarin.FormsBook.Platform.WinRT** 에 대한 참조가 있습니다.
 
 모든 프로젝트는 Xamarin.Forms 애플리케이션 솔루션의 프로젝트에서 직접 참조하지 않는 경우 라이브러리를 로드하는 정적 `Toolkit.Init` 메서드를 포함하고 있습니다.
 
@@ -124,7 +124,7 @@ Windows 런타임에서 실행되는 프로그램은 애플리케이션 로컬 �
 
 또한 **Xamarin.FormsBook.Platform** 프로젝트에는 `DependencyService` 개체의 사용을 용이하게 하는 [`FileHelper`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/FileHelper.cs) 클래스도 포함되어 있습니다.
 
-이러한 라이브러리를 사용하려면 애플리케이션 솔루션에 **Xamarin.FormsBook.Platform** 솔루션의 모든 프로젝트가 포함되어야 하고, 각 애플리케이션 프로젝트에는 **Xamarin.FormsBook.Platform**의 해당 라이브러리에 대한 참조가 있어야 합니다.
+이러한 라이브러리를 사용하려면 애플리케이션 솔루션에 **Xamarin.FormsBook.Platform** 솔루션의 모든 프로젝트가 포함되어야 하고, 각 애플리케이션 프로젝트에는 **Xamarin.FormsBook.Platform** 의 해당 라이브러리에 대한 참조가 있어야 합니다.
 
 [**TextFileAsync**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TextFileAsync) 솔루션에서는 **Xamarin.FormsBook.Platform** 라이브러리를 사용하는 방법을 보여 줍니다. 각 프로젝트에는 `Toolkit.Init`에 대한 호출이 포함되어 있습니다. 애플리케이션은 비동기 파일 I/O 함수를 사용합니다.
 

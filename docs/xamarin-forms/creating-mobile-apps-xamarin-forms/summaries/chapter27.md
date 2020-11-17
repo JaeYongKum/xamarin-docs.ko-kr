@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4b0a3e14126dc8c92a1d1b60db7dbb2afd8e8c12
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6b117688e1bf85266c274a44e6a4b1fda1ef5134
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136593"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375150"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>요약 - 27장. 사용자 지정 렌더러
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
-> [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 `Button`와 같은 Xamarin.Forms 요소는 `ButtonRenderer`라는 클래스에 캡슐화된 플랫폼별 단추로 렌더링됩니다.  [`ButtonRenderer`의 iOS 버전](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs), [`ButtonRenderer`의 Android 버전](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs) 및 [`ButtonRenderer`의 UWP 버전](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs)이 있습니다.
 
@@ -39,7 +39,7 @@ Xamarin.Forms 플랫폼별 코드를 포함하는 4개의 어셈블리가 있습
 - [ **Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
 
 > [!NOTE]
-> 이 책에 언급된 `WinRT` 어셈블리는 더 이상 이 솔루션에 포함되지 않습니다. 
+> 이 책에 언급된 `WinRT` 어셈블리는 더 이상 이 솔루션에 포함되지 않습니다.
 
 [**PlatformClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/PlatformClassHierarchy) 샘플은 실행 중인 플랫폼에 유효한 어셈블리에 대한 클래스 계층 구조를 표시합니다.
 
@@ -80,7 +80,7 @@ UWP [`ViewRenderer<TElement, TNativeElement>`](https://github.com/xamarin/Xamari
 
 ## <a name="renderers-and-properties"></a>렌더러 및 속성
 
-다음 렌더러 세트는 타원 그리기를 구현하며, [**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션의 다양한 프로젝트에 있습니다.
+다음 렌더러 세트는 타원 그리기를 구현하며, [ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션의 다양한 프로젝트에 있습니다.
 
 [`EllipseView`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/EllipseView.cs) 클래스는 **Xamarin.FormsBook.Platform** 플랫폼에 있습니다. 이 클래스는 `BoxView`와 비슷하며 `Color` 형식의 `Color`라는 단일 속성만 정의합니다.
 

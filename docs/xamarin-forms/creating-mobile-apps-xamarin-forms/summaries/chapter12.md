@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 22f7272751c30bed350fe7aada8d5dacf0acc809
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2f4fedcae3942f1662ec5102ae6c42191f65f888
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136788"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374864"
 ---
 # <a name="summary-of-chapter-12-styles"></a>요약 - 12장. 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms에서 스타일을 사용하면 여러 뷰가 속성 설정 컬렉션을 공유할 수 있습니다. 이렇게 하면 태그가 줄어들고 일관적인 시각적 테마를 유지할 수 있습니다.
 
@@ -55,7 +58,7 @@ XAML에서 `Property` 설정은 CLR 속성의 이름(예: `Button`의 `Text` 속
 
 ## <a name="implicit-styles"></a>암시적 스타일
 
-리소스 사전의 `Style`에 `x:Key` 특성 설정이 없는 경우 사전 키가 자동으로 할당되고 `Style` 개체가 *암시적 스타일*이 됩니다. [**ImplicitStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/ImplicitStyle) 샘플에 나와 있는 것처럼 `Style` 설정이 없고 해당 형식이 `TargetType`과 정확히 일치하는 뷰가 해당 스타일을 찾습니다.
+리소스 사전의 `Style`에 `x:Key` 특성 설정이 없는 경우 사전 키가 자동으로 할당되고 `Style` 개체가 *암시적 스타일* 이 됩니다. [**ImplicitStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/ImplicitStyle) 샘플에 나와 있는 것처럼 `Style` 설정이 없고 해당 형식이 `TargetType`과 정확히 일치하는 뷰가 해당 스타일을 찾습니다.
 
 암시적 스타일은 `x:Key` 설정을 사용하여 `Style`에서 파생될 수 있지만 그 밖의 다른 방법은 안 됩니다. 암시적 스타일은 명시적으로 참조할 수 없습니다.
 
@@ -69,7 +72,7 @@ XAML에서 `Property` 설정은 CLR 속성의 이름(예: `Button`의 `Text` 속
 
 ## <a name="dynamic-styles"></a>동적 스타일
 
-리소스 사전의 스타일은 `StaticResource`가 아닌 `DynamicResource`에서 참조할 수 있습니다. 이 경우 스타일은 *동적 스타일*이 됩니다. 리소스 사전에서 해당 스타일을 동일한 키를 사용하는 다른 스타일로 바꾸면 `DynamicResource`를 사용하여 해당 스타일을 참조하는 뷰가 자동으로 변경됩니다. 또한 지정된 키를 가진 사전 항목이 없으면 `StaticResource`는 예외를 유발하지만 `DynamicResource`는 그렇지 않습니다.
+리소스 사전의 스타일은 `StaticResource`가 아닌 `DynamicResource`에서 참조할 수 있습니다. 이 경우 스타일은 *동적 스타일* 이 됩니다. 리소스 사전에서 해당 스타일을 동일한 키를 사용하는 다른 스타일로 바꾸면 `DynamicResource`를 사용하여 해당 스타일을 참조하는 뷰가 자동으로 변경됩니다. 또한 지정된 키를 가진 사전 항목이 없으면 `StaticResource`는 예외를 유발하지만 `DynamicResource`는 그렇지 않습니다.
 
 이 기법을 사용하여 [**DynamicStyles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DynamicStyles) 샘플에 나와 있는 것처럼 스타일이나 테마를 동적으로 변경할 수 있습니다.
 

@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b92988e1e838072fca0d8a284455a62db05e757
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d69c5c96138024f6a45d71013b259b2c47a20da3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136863"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370184"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>요약 - 7장. XAML과 코드 비교
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms는 Extensible Application Markup Language, 즉 XAML(“자멜”로 읽음)이라고 하는 XML 기반 생성 언어를 지원합니다. XAML은 Xamarin.Forms 애플리케이션의 사용자 인터페이스 레이아웃을 정의하고, 사용자 인터페이스 요소와 기본 데이터 사이의 바인딩을 정의할 때 C#에 대한 대안을 제공합니다.
 
@@ -36,9 +36,9 @@ XAML 파서를 돕기 위해 더 복잡한 형식(또는 이러한 형식의 속
 
 ## <a name="property-element-syntax"></a>속성-요소 구문
 
-XAML에서 클래스 및 클래스로부터 생성되는 개체는 XML 요소로 표시됩니다. 이러한 요소를 *개체 요소*라고 부릅니다. 이러한 개체의 속성 대부분은 XML 특성으로 표시됩니다. 이를 *속성 특성*이라고 부릅니다.
+XAML에서 클래스 및 클래스로부터 생성되는 개체는 XML 요소로 표시됩니다. 이러한 요소를 *개체 요소* 라고 부릅니다. 이러한 개체의 속성 대부분은 XML 특성으로 표시됩니다. 이를 *속성 특성* 이라고 부릅니다.
 
-일부 경우에는 단순 문자열로 표시될 수 없는 개체로 속성을 설정해야 합니다. 이 경우에 XAML은 클래스 이름과 속성 이름이 마침표로 구분된 *속성 요소*라는 태그를 지원합니다. 그런 다음에는 속성-요소 태그 쌍 내에 개체 요소가 표시될 수 있습니다.
+일부 경우에는 단순 문자열로 표시될 수 없는 개체로 속성을 설정해야 합니다. 이 경우에 XAML은 클래스 이름과 속성 이름이 마침표로 구분된 *속성 요소* 라는 태그를 지원합니다. 그런 다음에는 속성-요소 태그 쌍 내에 개체 요소가 표시될 수 있습니다.
 
 ## <a name="adding-a-xaml-page-to-your-project"></a>프로젝트에 XAML 페이지 추가
 
@@ -47,7 +47,7 @@ Xamarin.Forms 이식 가능한 클래스 라이브러리는 처음 생성될 때
 > [!NOTE]
 > 이 장이 작성된 이후 Visual Studio 옵션이 변경되었습니다.
 
-파일 확장명이 .xaml인 XAML 파일과 확장명이 .xaml.cs인 C# 파일을 포함한 두 파일이 생성됩니다. C# 파일은 종종 XAML 파일의 *코드 숨김*이라고 부릅니다. 코드 숨김 파일은 `ContentPage`에서 파생되는 partial 클래스 정의입니다. 빌드 시간에 XAML이 구문 분석되고 다른 partial 클래스 정의가 동일 클래스에 대해 생성됩니다. 이 생성된 클래스에는 코드 숨김 파일의 생성자로부터 호출되는 `InitializeComponent`라는 메서드가 포함됩니다.
+파일 확장명이 .xaml인 XAML 파일과 확장명이 .xaml.cs인 C# 파일을 포함한 두 파일이 생성됩니다. C# 파일은 종종 XAML 파일의 *코드 숨김* 이라고 부릅니다. 코드 숨김 파일은 `ContentPage`에서 파생되는 partial 클래스 정의입니다. 빌드 시간에 XAML이 구문 분석되고 다른 partial 클래스 정의가 동일 클래스에 대해 생성됩니다. 이 생성된 클래스에는 코드 숨김 파일의 생성자로부터 호출되는 `InitializeComponent`라는 메서드가 포함됩니다.
 
 런타임 중에는 `InitializeComponent` 호출이 완료될 때, XAML 파일의 모든 요소가 C# 코드에서 생성되었을 때와 같이 인스턴스화되고 초기화됩니다.
 

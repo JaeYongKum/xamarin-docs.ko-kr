@@ -10,16 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: abe8161ea8536f5fb8b13c71fe49ebad57460ca1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136905"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370418"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>3장 요약 텍스트 더 자세히 알아보기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 이 장에서는 색, 글꼴 및 서식을 포함하여 [`Label`](xref:Xamarin.Forms.Label) 보기를 자세히 살펴봅니다.
 
@@ -27,11 +30,11 @@ ms.locfileid: "84136905"
 
 `Label`의 [`Text`](xref:Xamarin.Forms.Label.Text) 속성에 긴 텍스트가 포함된 경우 `Label`은 [**Baskervilles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) 샘플에서 설명한 대로 자동으로 여러 줄로 래핑합니다. em-dash의 경우 '\u2014'와 같은 유니코드 코드를 포함하거나 '\r'과 같은 C# 문자를 포함하여 새 줄로 나눌 수 있습니다.
 
-`Label`의 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성이 `LayoutOptions.Fill`로 설정된 경우 `Label`의 전체 크기는 해당 컨테이너가 사용할 수 있도록 설정된 공간에 의해 제어됩니다. `Label`은 *제한*되어 있습니다. `Label`의 크기는 해당 컨테이너의 크기입니다.
+`Label`의 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성이 `LayoutOptions.Fill`로 설정된 경우 `Label`의 전체 크기는 해당 컨테이너가 사용할 수 있도록 설정된 공간에 의해 제어됩니다. `Label`은 *제한* 되어 있습니다. `Label`의 크기는 해당 컨테이너의 크기입니다.
 
 `HorizontalOptions` 및 `VerticalOptions` 속성이 `LayoutOptions.Fill` 이외의 값으로 설정된 경우 `Label`의 크기는 해당 컨테이너가 `Label`에 사용할 수 있는 크기까지 텍스트를 렌더링하는 데 필요한 공간에 의해 결정됩니다. `Label`은 *제한되지 않는* 것으로 간주되며 자체 크기를 결정합니다.
 
-(참고: 제한되지 않은 보기는 일반적으로 제한된 보기보다 작으므로 *제한됨* 및 *비제한*이라는 용어는 직관적이지 않을 수 있습니다. 또한 이러한 용어는 책의 초기 장에서 일관되게 사용되지 않습니다.)
+(참고: 제한되지 않은 보기는 일반적으로 제한된 보기보다 작으므로 *제한됨* 및 *비제한* 이라는 용어는 직관적이지 않을 수 있습니다. 또한 이러한 용어는 책의 초기 장에서 일관되게 사용되지 않습니다.)
 
 `Label`과 같은 보기는 한 차원에서는 제한될 수 있으며 다른 차원에서는 제한되지 않을 수 있습니다. `Label`은 가로로 제한된 경우에만 텍스트를 여러 줄로 줄 바꿈합니다.
 

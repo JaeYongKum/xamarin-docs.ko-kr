@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b86bfe1e343cd50f4a133726d16364b3efb8bee
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 26b9aa33267c56a82edfd38a1d7eefa6a5cd82a2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198268"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370366"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>챕터 4 요약. 스택 스크롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 이 장에서는 Xamarin.Forms가 페이지에 있는 여러 가지 보기의 시각적 표시를 구성하는 데 사용하는 클래스와 기법을 통칭하는 용어인 ‘레이아웃’의 개념을 소개합니다.
 

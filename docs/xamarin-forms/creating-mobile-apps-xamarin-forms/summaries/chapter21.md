@@ -10,18 +10,21 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cb822c7ac2a05dc9f0d51f51e9737add4395b84d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136671"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374032"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 - 21장. 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
-Xamarin.Forms 보기는 일반적으로 `Layout` 또는 `Layout<View>` 파생 개체인 해당 상위 항목에 따라 결정된 위치 및 크기로 화면에 표시됩니다. *변환*은 이러한 위치, 크기 또는 방향을 수정할 수 있는 Xamarin.Forms 기능입니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
+
+Xamarin.Forms 보기는 일반적으로 `Layout` 또는 `Layout<View>` 파생 개체인 해당 상위 항목에 따라 결정된 위치 및 크기로 화면에 표시됩니다. *변환* 은 이러한 위치, 크기 또는 방향을 수정할 수 있는 Xamarin.Forms 기능입니다.
 
 Xamarin.Forms는 다음 세 가지 기본 변환 형식을 지원합니다.
 
@@ -100,9 +103,9 @@ iOS에서 기본값이 아닌 `AnchorX` 및 `AnchorY` 속성을 사용할 경우
 
 ### <a name="an-analog-clock"></a>아날로그 시계
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 시계 바늘의 각도를 계산하는 [`AnalogClockViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs) 클래스가 있습니다. ViewModel에 대한 플랫폼 종속성을 방지하기 위해 이 클래스는 타이머 대신 `Task.Delay`를 사용하여 새 `DateTime` 값을 찾습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 시계 바늘의 각도를 계산하는 [`AnalogClockViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnalogClockViewModel.cs) 클래스가 포함되어 있습니다. ViewModel에 대한 플랫폼 종속성을 방지하기 위해 이 클래스는 타이머 대신 `Task.Delay`를 사용하여 새 `DateTime` 값을 찾습니다.
 
-또한 **Xamarin.FormsBook.Toolkit**에는 `IValueConverter`를 구현하고 초침의 각도를 가장 가까운 초로 반올림하는 [`SecondTickConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondTickConverter.cs) 클래스가 포함되어 있습니다.
+또한 **Xamarin.FormsBook.Toolkit** 에는 `IValueConverter`를 구현하고 초침의 각도를 가장 가까운 초로 반올림하는 [`SecondTickConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondTickConverter.cs) 클래스가 포함되어 있습니다.
 
 [**MinimalBoxViewClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/MinimalBoxViewClock)은 회전하는 3개의 `BoxView` 요소를 사용해서 아날로그 시계를 그립니다.
 
@@ -110,7 +113,7 @@ iOS에서 기본값이 아닌 `AnchorX` 및 `AnchorY` 속성을 사용할 경우
 
 [![BoxView Clock의 삼중 스크린샷](images/ch21fg17-small.png "아날로그 시계 앞면")](images/ch21fg17-large.png#lightbox "아날로그 시계 앞면")
 
-또한 **Xamarin.FormsBook.Toolkit**의 [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) 클래스는 초침이 약간 뒤로 갔다가 앞으로 점프한 후 다시 정확한 위치로 돌아가는 모양이 되도록 만듭니다.
+또한 **Xamarin.FormsBook.Toolkit** 의 [`SecondBackEaseConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) 클래스는 초침이 약간 뒤로 갔다가 앞으로 점프한 후 다시 정확한 위치로 돌아가는 모양이 되도록 만듭니다.
 
 ### <a name="vertical-sliders"></a>세로 슬라이더?
 

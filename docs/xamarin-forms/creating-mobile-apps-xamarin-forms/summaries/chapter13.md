@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 011ef7c73e756c938589124676fa3d9c14a3b556
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136775"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374846"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>13장의 요약 정보입니다. 비트맵
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) 요소는 비트맵을 표시합니다. 모든 Xamarin.Forms 플랫폼은 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
 
@@ -69,7 +69,7 @@ Xamarin.Forms의 비트맵은 다음 네 위치에서 제공됩니다.
 
 ### <a name="embedded-resources"></a>포함 리소스
 
-PCL 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. **EmbeddedResource**의 **빌드 작업**을 제공합니다. [**ResourceBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) 샘플은 `ImageSource.FromResource`를 사용하여 파일을 로드하는 방법을 보여줍니다. 메서드에 전달되는 리소스 이름은 어셈블리 이름, 점, 선택적 폴더 이름과 점, 파일 이름 순서로 구성됩니다.
+PCL 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. **EmbeddedResource** 의 **빌드 작업** 을 제공합니다. [**ResourceBitmapCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) 샘플은 `ImageSource.FromResource`를 사용하여 파일을 로드하는 방법을 보여줍니다. 메서드에 전달되는 리소스 이름은 어셈블리 이름, 점, 선택적 폴더 이름과 점, 파일 이름 순서로 구성됩니다.
 
 프로그램에서는 `Image`의 `VerticalOptions` 및 `HorizontalOptions` 속성을 `LayoutOptions.Center`로 설정하므로 `Image` 요소가 제한되지 않습니다. 다음과 같이 `Image`와 비트맵의 크기는 동일합니다.
 
@@ -81,7 +81,7 @@ PCL 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. **Em
 ### <a name="more-on-sizing"></a>크기 조정에 대한 추가 정보
 
 모든 플랫폼에서 일관적으로 비트맵 크기를 조정하는 것이 바람직한 경우가 자주 있습니다.
-**StackedBitmap**을 실험해 보면 `Image` 요소에 대한 `WidthRequest`를 세로 `StackLayout`으로 설정하여 플랫폼 간에 일관적인 크기를 유지할 수 있지만, 이 기술을 사용하여 크기를 줄이는 것만 가능합니다.
+**StackedBitmap** 을 실험해 보면 `Image` 요소에 대한 `WidthRequest`를 세로 `StackLayout`으로 설정하여 플랫폼 간에 일관적인 크기를 유지할 수 있지만, 이 기술을 사용하여 크기를 줄이는 것만 가능합니다.
 
 또한 모든 플랫폼에서 이미지 크기를 일정하게 유지하기 위해 `HeightRequest`를 설정할 수 있지만, 비트맵의 너비가 제한되면 이 기술의 다양성도 제한됩니다. 세로 `StackLayout`의 이미지에는 `HeightRequest`를 사용하면 안 됩니다.
 
@@ -172,9 +172,9 @@ UWP 프로젝트는 DIU당 픽셀 단위의 배율 인수로 구성되는 비트
 
 - 320픽셀 정사각형의 MyImage.scale-200.jpg
 
-일부 백분율만 유효합니다. 이 책의 샘플 프로그램에는 **scale-200** 접미사가 있는 이미지만 포함되어 있지만, 현재 Xamarin.Forms 솔루션 템플릿에는 **scale-100**, **scale-125**, **scale-150** 및 **scale-400**이 포함되어 있습니다.
+일부 백분율만 유효합니다. 이 책의 샘플 프로그램에는 **scale-200** 접미사가 있는 이미지만 포함되어 있지만, 현재 Xamarin.Forms 솔루션 템플릿에는 **scale-100**, **scale-125**, **scale-150** 및 **scale-400** 이 포함되어 있습니다.
 
-플랫폼 프로젝트에 비트맵을 추가할 때 **빌드 작업**은 다음과 같아야 합니다.
+플랫폼 프로젝트에 비트맵을 추가할 때 **빌드 작업** 은 다음과 같아야 합니다.
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**

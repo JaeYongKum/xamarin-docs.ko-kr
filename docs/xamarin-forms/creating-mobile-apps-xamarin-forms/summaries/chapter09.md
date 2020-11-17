@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6dec0c3e3fc4d25aecfe4e4141c4cc285fd7f8d8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136860"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366193"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 - 9장. 플랫폼별 API 호출
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
-> [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 플랫폼에 따라 달라지는 일부 코드를 실행해야 하는 경우도 있습니다. 이 장에서는 기법에 대해 살펴봅니다.
 
@@ -40,10 +40,10 @@ SAP에서 플랫폼별 코드를 실행하는 보다 구조화된 접근 방식�
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService 및 이식 가능한 클래스 라이브러리
 
-> [!NOTE] 
+> [!NOTE]
 > 이식 가능한 클래스 라이브러리는 .NET Standard 라이브러리로 대체되었습니다. 이 책의 모든 샘플 코드는 .NET Standard 라이브러리를 사용하도록 변환되었습니다.
 
-라이브러리는 일반적으로 애플리케이션 프로젝트의 클래스에 액세스할 수 없습니다. 이 제한은 **PlatInfoSap2**에 표시된 기법이 라이브러리에서 사용되지 않도록 하는 것처럼 보입니다. 그러나 Xamarin.Forms에는 .NET 리플렉션을 사용하여 라이브러리에서 애플리케이션 프로젝트의 공용 클래스에 액세스하는 [`DependencyService`](xref:Xamarin.Forms.DependencyService)라는 클래스가 있습니다.
+라이브러리는 일반적으로 애플리케이션 프로젝트의 클래스에 액세스할 수 없습니다. 이 제한은 **PlatInfoSap2** 에 표시된 기법이 라이브러리에서 사용되지 않도록 하는 것처럼 보입니다. 그러나 Xamarin.Forms에는 .NET 리플렉션을 사용하여 라이브러리에서 애플리케이션 프로젝트의 공용 클래스에 액세스하는 [`DependencyService`](xref:Xamarin.Forms.DependencyService)라는 클래스가 있습니다.
 
 라이브러리는 각 플랫폼에서 사용해야 하는 멤버를 사용하여 `interface`를 정의해야 합니다. 그런 다음 각 플랫폼에 해당 인터페이스의 구현이 포함됩니다. 인터페이스를 구현하는 클래스는 어셈블리 수준에서 [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute)를 사용하여 식별해야 합니다.
 

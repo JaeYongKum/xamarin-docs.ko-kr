@@ -10,22 +10,25 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f23034df684e778677e4f2e480e1c41807536fb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b2083a8dd17749074258c8bd5e6d1a7374c758f9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136814"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368494"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>요약 - 10장. XAML 태그 확장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
+
 일반적으로 XAML 파서는 특성 값으로 설정된 모든 문자열을 기본 .NET 데이터 형식에 대한 표준 변환에 따른 속성의 형식으로 또는 [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute)를 사용하여 속성 또는 해당 형식에 연결된 [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) 파생 항목으로 변환합니다.
 
 그러나 경우에 따라 사전에 있는 항목, 정적 속성 또는 필드의 값과 같은 다른 원본에서 또는 일종의 계산을 통해 특성을 설정하는 것이 편리합니다.
 
-이것은 *XAML 태그 확장*의 작업입니다. 이름에도 불구하고 XAML 태그 확장은 XML에 대한 확장이 *아닙니다*. XAML은 항상 유효한 XML입니다.
+이것은 *XAML 태그 확장* 의 작업입니다. 이름에도 불구하고 XAML 태그 확장은 XML에 대한 확장이 *아닙니다*. XAML은 항상 유효한 XML입니다.
 
 ## <a name="the-code-infrastructure"></a>코드 인프라
 
@@ -92,7 +95,7 @@ XAML 파서는 `StaticResource`가 발견되면 일치하는 키에 대한 시�
 
 [`ProvideValue`](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)) 메서드를 사용하여 [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) 인터페이스를 구현하는 클래스를 작성하여 자체 XAML 태그 확장을 만들 수 있습니다.
 
-[`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) 클래스는 이러한 요구 사항을 충족합니다. `H`, `S`, `L` 및 `A`라는 속성의 값을 기반으로 `Color` 형식의 값을 만듭니다. 이 클래스는 이 책에서 작성하고 사용하는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)라는 Xamarin.Forms 라이브러리의 첫 번째 항목입니다.
+[`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) 클래스는 이러한 요구 사항을 충족합니다. `H`, `S`, `L` 및 `A`라는 속성의 값을 기반으로 `Color` 형식의 값을 만듭니다. 이 클래스는 이 책에서 작성하고 사용하는 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)라는 Xamarin.Forms 라이브러리의 첫 번째 항목입니다.
 
 [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) 샘플에서는 이 라이브러리를 참조하고 사용자 지정 태그 확장을 사용하는 방법을 보여 줍니다.
 

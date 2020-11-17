@@ -10,43 +10,43 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 25b5ad1ef7b1d5d3c545d7977ad735c18affef8e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133408"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375114"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>28장의 요약 정보입니다. 위치 및 맵
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
-Xamarin.Forms는 `View`에서 파생되는 [`Map`](xref:Xamarin.Forms.Maps.Map) 요소를 지원합니다. 맵을 사용하려면 특수 플랫폼이 필요하기 때문에 별도의 어셈블리 **Xamarin.Forms.Maps**에서 구현되며, 다른 네임스페이스 `Xamarin.Forms.Maps`가 사용됩니다.
+Xamarin.Forms는 `View`에서 파생되는 [`Map`](xref:Xamarin.Forms.Maps.Map) 요소를 지원합니다. 맵을 사용하려면 특수 플랫폼이 필요하기 때문에 별도의 어셈블리 **Xamarin.Forms.Maps** 에서 구현되며, 다른 네임스페이스 `Xamarin.Forms.Maps`가 사용됩니다.
 
 ## <a name="the-geographic-coordinate-system"></a>지리 좌표계
 
-지리 좌표계는 지구처럼 구형(또는 거의 구형) 개체의 위치를 식별합니다. 좌표는 *위도* 및 *경도*로 표현됩니다.
+지리 좌표계는 지구처럼 구형(또는 거의 구형) 개체의 위치를 식별합니다. 좌표는 *위도* 및 *경도* 로 표현됩니다.
 
 `equator`라고 하는 대원은 지구의 축이 개념적으로 확장하는 두 극 지방 사이에 있습니다.
 
 ### <a name="parallels-and-latitude"></a>위도선 및 위도
 
-지구의 중심에서 적도의 북쪽 또는 남쪽을 측정한 각도를 동일한 위선으로 표시한 것을 *위도선*이라 합니다. 위도선의 범위는 적도에서는 0도이고 북극 및 남극에서는 90도입니다. 관례에 따라 적도 북쪽의 위도는 양수 값, 적도 남쪽의 위도는 음수 값으로 표시합니다.
+지구의 중심에서 적도의 북쪽 또는 남쪽을 측정한 각도를 동일한 위선으로 표시한 것을 *위도선* 이라 합니다. 위도선의 범위는 적도에서는 0도이고 북극 및 남극에서는 90도입니다. 관례에 따라 적도 북쪽의 위도는 양수 값, 적도 남쪽의 위도는 음수 값으로 표시합니다.
 
 ### <a name="longitude-and-meridians"></a>경도 및 자오선
 
-북극에서 남극까지 이어지는 대원의 절반은 동일한 경도 선이며 이를 *자오선*이라고 합니다. 이러한 자오선은 영국 그리니치의 본초 자오선과 비례합니다. 관례에 따라 본초 자오선의 동쪽 경도는 0~180도 사이의 양수 값으로, 본초 자오선의 서쪽 경도는 0~&ndash;180도 사이의 음수 값으로 표시합니다.
+북극에서 남극까지 이어지는 대원의 절반은 동일한 경도 선이며 이를 *자오선* 이라고 합니다. 이러한 자오선은 영국 그리니치의 본초 자오선과 비례합니다. 관례에 따라 본초 자오선의 동쪽 경도는 0~180도 사이의 양수 값으로, 본초 자오선의 서쪽 경도는 0~&ndash;180도 사이의 음수 값으로 표시합니다.
 
 ### <a name="the-equirectangular-projection"></a>등장방형 도법
 
-지구를 표시하는 모든 평면 맵에는 왜곡이 있습니다. 모든 위도 및 경도 선이 직선이고 위도 및 경도 각도의 차이를 맵에서 동일한 거리로 표시하는 기법이 *등장방형 도법*입니다. 이 맵은 가로로 확장되기 때문에 극 지방과 가까운 영역이 왜곡됩니다.
+지구를 표시하는 모든 평면 맵에는 왜곡이 있습니다. 모든 위도 및 경도 선이 직선이고 위도 및 경도 각도의 차이를 맵에서 동일한 거리로 표시하는 기법이 *등장방형 도법* 입니다. 이 맵은 가로로 확장되기 때문에 극 지방과 가까운 영역이 왜곡됩니다.
 
 ### <a name="the-mercator-projection"></a>메르카토르 도법
 
-널리 사용되는 *메르카토르 도법*은 가로 방향 확장을 보정하기 위해 이러한 영역을 세로 방향으로도 확장합니다. 그 결과로 극 지방 근처의 영역이 실제보다 훨씬 크게 표시되지만, 로컬 영역은 실제 영역과 거의 일치합니다.
+널리 사용되는 *메르카토르 도법* 은 가로 방향 확장을 보정하기 위해 이러한 영역을 세로 방향으로도 확장합니다. 그 결과로 극 지방 근처의 영역이 실제보다 훨씬 크게 표시되지만, 로컬 영역은 실제 영역과 거의 일치합니다.
 
 ### <a name="map-services-and-tiles"></a>맵 서비스 및 타일
 
@@ -61,7 +61,7 @@ Xamarin.Forms `Map` 클래스에는 사용자의 지리적 위치를 가져오�
 
 ### <a name="the-location-tracker-api"></a>위치 추적기 API
 
-[**Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션에는 위치 추적기 API에 대한 코드가 포함되어 있습니다. [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) 구조체는 위도 및 경도를 캡슐화합니다. [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) 인터페이스는 위치 추적기를 시작하고 일시 중지하는 두 가지 메서드, 그리고 새 위치를 사용할 수 있을 때의 이벤트를 정의합니다.
+[ **Xamarin.FormsBook.Platform**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션에는 위치 추적기 API의 코드가 포함되어 있습니다. [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) 구조체는 위도 및 경도를 캡슐화합니다. [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) 인터페이스는 위치 추적기를 시작하고 일시 중지하는 두 가지 메서드, 그리고 새 위치를 사용할 수 있을 때의 이벤트를 정의합니다.
 
 #### <a name="the-ios-location-manager"></a>iOS 위치 관리자
 
@@ -81,7 +81,7 @@ Android에서 구현되는 `ILocationTracker`는 Android [`LocationManager`](xre
 
 ### <a name="the-required-overhead"></a>필요한 오버헤드
 
-**WhereAmI**에서 위치 추적기를 사용하려면 약간의 오버헤드가 필요합니다. 우선, **WhereAmI** 솔루션의 모든 프로젝트에는 **Xamarin.FormsBook.Platform**의 해당 프로젝트에 대한 참조가 있어야 하고, 각 **WhereAmI** 프로젝트는 `Toolkit.Init` 메서드를 호출해야 합니다.
+**WhereAmI** 에서 위치 추적기를 사용하려면 약간의 오버헤드가 필요합니다. 우선, **WhereAmI** 솔루션의 모든 프로젝트에는 **Xamarin.FormsBook.Platform** 의 해당 프로젝트에 대한 참조가 있어야 하고, 각 **WhereAmI** 프로젝트는 `Toolkit.Init` 메서드를 호출해야 합니다.
 
 위치 권한 형식으로 약간의 플랫폼별 추가 오버헤드가 필요합니다.
 
@@ -97,7 +97,7 @@ iOS의 경우 **info.plist** 파일에는 사용자의 위치를 가져올 수 �
 
 유니버설 Windows 플랫폼 애플리케이션은 Package.appxmanifest 파일에 표시된 `location` 디바이스 기능이 필요합니다.
 
-## <a name="working-with-xamarinformsmaps"></a>Xamarin.Forms.Maps 사용
+## <a name="working-with-no-locxamarinformsmaps"></a>Xamarin.Forms.Maps 사용
 
 `Map` 클래스를 사용하려면 몇 가지 요구 사항을 충족해야 합니다.
 
@@ -141,7 +141,7 @@ Google Map 서비스를 사용하려면 권한 부여 키가 필요합니다. �
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
 - [`Hybrid`](xref:Xamarin.Forms.Maps.MapType.Hybrid)
 
-[MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) 파일은 라디오 단추를 사용하여 맵 형식을 선택하는 방법을 보여줍니다. 이 파일은 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) 클래스와 [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) 파일 기반의 클래스를 사용합니다.
+[MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) 파일은 라디오 단추를 사용하여 맵 형식을 선택하는 방법을 보여줍니다. 이 파일은 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) 클래스와 [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) 파일 기반의 클래스를 사용합니다.
 
 ### <a name="map-coordinates"></a>맵 좌표
 
@@ -176,7 +176,7 @@ Google Map 서비스를 사용하려면 권한 부여 키가 필요합니다. �
 
 ### <a name="position-extensions"></a>위치 확장
 
-이 책의 새 라이브러리인 [**Xamarin.FormsBook.Toolkit.Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps)에는 맵과 관련되어 있지만 플랫폼과는 독립적인 형식이 포함되어 있습니다. [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스에는 `Position`에 대한 `ToString` 메서드와 두 `Position` 값 사이의 거리를 계산하는 메서드가 포함되어 있습니다.
+이 책의 새 라이브러리인 [ **Xamarin.FormsBook.Toolkit.Maps**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps)에는 맵과 관련되지만 플랫폼과는 독립적인 형식이 포함되어 있습니다. [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스에는 `Position`에 대한 `ToString` 메서드와 두 `Position` 값 사이의 거리를 계산하는 메서드가 포함되어 있습니다.
 
 ### <a name="setting-an-initial-location"></a>초기 위치 설정
 

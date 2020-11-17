@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9bb930c2d0e4b6281b1aa48589ea5245eedc1a60
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 08c5152c5618b7edcfe22bc288a1a0354e3e5fed
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136749"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374253"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>15장 요약 대화형 인터페이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 이 장에서는 사용자와 상호 작용할 수 있는 8개의 `View` 파생 항목을 살펴봅니다.
 
@@ -119,7 +122,7 @@ Xamarin.Forms에는 `Layout`이 아닌 `View`에서 파생되는 20개의 인스
 
 ### <a name="a-traditional-checkbox"></a>기존 확인란
 
-일부 개발자는 `Switch`보다 기존 `CheckBox`를 선호하는 경우가 있습니다. [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `ContentView`에서 파생된 `CheckBox` 클래스가 포함되어 있습니다. `CheckBox`는 [CheckBox.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CheckBox.xaml) 및 [CheckBox.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CheckBox.xaml.cs) 파일을 통해 구현됩니다. `CheckBox`는 세 가지 속성(`Text`, `FontSize` 및 `IsChecked`) 및 `CheckedChanged` 이벤트를 정의합니다.
+일부 개발자는 `Switch`보다 기존 `CheckBox`를 선호하는 경우가 있습니다. [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `ContentView`에서 파생된 `CheckBox` 클래스가 포함되어 있습니다. `CheckBox`는 [CheckBox.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CheckBox.xaml) 및 [CheckBox.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CheckBox.xaml.cs) 파일을 통해 구현됩니다. `CheckBox`는 세 가지 속성(`Text`, `FontSize` 및 `IsChecked`) 및 `CheckedChanged` 이벤트를 정의합니다.
 
 [**CheckBoxDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/CheckBoxDemo) 샘플은 이 `CheckBox`를 보여줍니다.
 
@@ -240,7 +243,7 @@ Xamarin.Forms는 사용자가 텍스트를 입력하고 편집할 수 있도록 
 
 [**SetTimer**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/SetTimer) 프로그램은 `TimePicker`를 사용하여 타이머의 시간을 지정하는 방법을 보여줍니다. 이 프로그램은 전경에 보관하는 경우에만 작동합니다.
 
-**SetTimer**는 `Page`의 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 메서드를 사용하여 경고 상자를 표시하는 방법도 보여줍니다.
+**SetTimer** 는 `Page`의 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 메서드를 사용하여 경고 상자를 표시하는 방법도 보여줍니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a0206354254f79756e29f834c85837240736eca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bdbc795c0669115f822e6908590a3754af31a2d0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136658"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373993"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 - 23장. 트리거 및 동작
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 트리거와 동작은 서로 유사한데, 둘 모두 데이터 바인딩을 사용하는 것 외에 요소 상호 작용을 단순화하고 XAML 요소의 기능을 확장하기 위해 XAML 파일에서 사용하기 위한 것입니다. 트리거와 동작은 거의 항상 시각적 사용자 인터페이스 개체와 함께 사용됩니다.
 
@@ -73,7 +76,7 @@ ms.locfileid: "84136658"
 
 이를 사용하려면 [`TriggerAction<T>`](xref:Xamarin.Forms.TriggerAction`1)에서 파생되는 클래스를 작성해야 합니다(일반적으로 `TriggerAction<VisualElement>`). 이 클래스의 속성을 정의할 수 있습니다. 이들 속성은 `TriggerAction`이 `BindableObject`에서 파생되지 않으므로 바인딩 가능한 속성이 아닌 일반 CLR 속성입니다. 작업이 호출될 때 호출되는 [`Invoke`](xref:Xamarin.Forms.TriggerAction`1.Invoke*) 메서드를 재정의해야 합니다. 인수는 대상 요소입니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) 클래스는 예제입니다. `ScaleTo` 속성을 호출하여 요소의 `Scale` 속성에 애니메이션 효과를 적용합니다. 속성 중 하나가 `Easing` 형식이므로 [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) 클래스를 사용하면 XAML에서 표준 `Easing` 정적 필드를 사용할 수 있습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleAction.cs) 클래스가 그 예입니다. `ScaleTo` 속성을 호출하여 요소의 `Scale` 속성에 애니메이션 효과를 적용합니다. 속성 중 하나가 `Easing` 형식이므로 [`EasingConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/EasingConverter.cs) 클래스를 사용하면 XAML에서 표준 `Easing` 정적 필드를 사용할 수 있습니다.
 
 [**EntrySwell**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EntrySwell) 샘플에서는 `Focused` 및 `Unfocused` 이벤트를 모니터링하는 `EventTrigger` 개체에서 `ScaleAction`을 호출하는 방법을 보여 줍니다.
 
@@ -88,11 +91,11 @@ ms.locfileid: "84136658"
 
 ### <a name="more-event-triggers"></a>추가 이벤트 트리거
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ScaleUpAndDownAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) 클래스에서 `ScaleTo`를 두 번 호출하여 확장 및 축소합니다. [**ButtonGrowth**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) 샘플에서는 이를 스타일이 적용된 `EventTrigger`에서 사용하여 `Button`을 누를 때 시각적 피드백을 제공합니다. 또한 이 double 애니메이션은 [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs) 형식의 컬렉션에서 두 작업을 사용할 수도 있습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ScaleUpAndDownAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ScaleUpAndDownAction.cs) 클래스는 `ScaleTo`를 두 번 호출하여 확장 및 축소합니다. [**ButtonGrowth**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonGrowth) 샘플에서는 이를 스타일이 적용된 `EventTrigger`에서 사용하여 `Button`을 누를 때 시각적 피드백을 제공합니다. 또한 이 double 애니메이션은 [`DelayedScaleAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DelayedScaleAction.cs) 형식의 컬렉션에서 두 작업을 사용할 수도 있습니다.
 
 **Xamarin.FormsBook.Toolkit** 라이브러리의 [`ShiverAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ShiverAction.cs) 클래스는 사용자 지정 가능한 shiver 작업을 정의합니다. [**ShiverButtonDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ShiverButtonDemo) 샘플에서는 이를 보여 줍니다.
 
-**Xamarin.FormsBook.Toolkit** 라이브러리의 [`NumericValidationAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationAction.cs) 클래스는 `Entry` 요소로 제한되며 `Text` 속성이 `double`이 아니면 `TextColor` 속성을 빨간색으로 설정합니다. [**TriggerEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TriggerEntryValidation) 샘플에서는 이를 보여 줍니다.
+**Xamarin.FormsBook.Toolkit** 라이브러리의 [`NumericValidationAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationAction.cs) 클래스는 `Entry` 요소로 제한되며, `Text` 속성이 `double`이 아니면 `TextColor` 속성을 빨간색으로 설정합니다. [**TriggerEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TriggerEntryValidation) 샘플에서는 이를 보여 줍니다.
 
 ### <a name="data-triggers"></a>데이터 트리거
 
@@ -124,7 +127,7 @@ ms.locfileid: "84136658"
 
 [**AndConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/AndConditions) 샘플에서 `BoxView`는 4개의 `Switch` 요소가 모두 설정된 경우에만 색이 지정됩니다.
 
-[**OrConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/OrConditions) 샘플에서는 4개의 `Switch` 요소 중 *하나*가 설정된 경우 `BoxView`에 색을 지정하는 방법을 보여 줍니다. 이를 위해서는 De Morgan 법칙을 적용하고 모든 논리를 반대로 해야 합니다.
+[**OrConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/OrConditions) 샘플에서는 4개의 `Switch` 요소 중 *하나* 가 설정된 경우 `BoxView`에 색을 지정하는 방법을 보여 줍니다. 이를 위해서는 De Morgan 법칙을 적용하고 모든 논리를 반대로 해야 합니다.
 
 AND와 OR 논리를 결합하는 것은 쉽지 않으며 일반적으로 중간 결과에 대해 보이지 않는 `Switch` 요소가 필요합니다. [**XorConditions**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/XorConditions) 샘플에서는 두 개의 `Entry` 요소 중 하나에 입력된 텍스트가 있으면 `Button`을 사용하지만 두 요소에 모두 입력된 텍스트가 있는 경우에는 사용하지 않도록 설정하는 방법을 보여 줍니다.
 
@@ -137,13 +140,13 @@ AND와 OR 논리를 결합하는 것은 쉽지 않으며 일반적으로 중간 
 
 인수는 동작이 연결된 요소입니다. 일반적으로 `OnAttachedTo` 메서드는 일부 이벤트 처리기를 연결하고 `OnDetachingFrom` 메서드는 분리합니다. 이러한 클래스는 대개 일부 상태를 저장하기 때문에 일반적으로 `Style`에서 공유할 수 없습니다.
 
-[**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) 샘플은 동작([**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) 클래스)을 사용한다는 점을 제외하고 **TriggerEntryValidation**과 비슷합니다.
+[**BehaviorEntryValidation**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) 샘플은 동작([ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NumericValidationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) 클래스)을 사용한다는 점을 제외하고 **TriggerEntryValidation** 과 비슷합니다.
 
 ### <a name="behaviors-with-properties"></a>속성이 있는 동작
 
 `Behavior<T>`는 `BindableObject`에서 파생되는 `Behavior`로부터 파생되므로 바인딩 가능한 속성을 동작에 정의할 수 있습니다. 이러한 속성은 데이터 바인딩에서 활성화될 수 있습니다.
 
-이는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ValidEmailBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) 클래스를 사용하는 [**EmailValidationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) 프로그램에 설명되어 있습니다. `ValidEmailBehavior`는 바인딩 가능한 읽기 전용 속성을 가지며 데이터 바인딩에서 소스로 사용됩니다.
+이는 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ValidEmailBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ValidEmailBehavior.cs) 클래스를 사용하는 [**EmailValidationDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationDemo) 프로그램에 설명되어 있습니다. `ValidEmailBehavior`는 바인딩 가능한 읽기 전용 속성을 가지며 데이터 바인딩에서 소스로 사용됩니다.
 
 [**EmailValidationConv**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/EmailValidationConv) 샘플에서는 이 동일한 동작을 사용하여 이메일 주소가 유효하다는 신호를 표시하는 다른 유형의 표시기를 표시합니다.
 
@@ -151,21 +154,21 @@ AND와 OR 논리를 결합하는 것은 쉽지 않으며 일반적으로 중간 
 
 ### <a name="toggles-and-check-boxes"></a>토글 및 확인란
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ToggleBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs)와 같은 클래스에서 토글 단추의 동작을 캡슐화하고 XAML에서 전체 토글에 대한 모든 시각적 개체를 정의할 수 있습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`ToggleBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBehavior.cs)와 같은 클래스에서 토글 단추의 동작을 캡슐화한 다음 XAML에서 토글의 모든 시각적 개체를 완전히 정의할 수 있습니다.
 
 [**ToggleLabel**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ToggleLabel) 샘플에서는 토글에 대한 두 개의 텍스트 문자열이 있는 `Label`을 사용하기 위해 `ToggleBehavior`를 `DataTrigger`와 함께 사용합니다.
 
 [**FormattedTextToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) 샘플에서는 두 개의 `FormattedString` 개체 사이를 전환하여 이 개념을 확장합니다.
 
-**Xamarin.FormsBook.Toolkit** 라이브러리의 [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) 클래스는 `ContentView`에서 파생되고, `IsToggled` 속성을 정의하며, 토글 논리에 대한 `ToggleBehavior`를 통합합니다. 이렇게 하면 [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) 샘플에 설명된 대로 XAML에서 토글 단추를 보다 쉽게 정의할 수 있습니다.
+**Xamarin.FormsBook.Toolkit** 라이브러리의 [`ToggleBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) 클래스는 `ContentView`에서 파생되고, `IsToggled` 속성을 정의하며, 토글 논리의 `ToggleBehavior`를 통합합니다. 이렇게 하면 [**TraditionalCheckBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) 샘플에 설명된 대로 XAML에서 토글 단추를 보다 쉽게 정의할 수 있습니다.
 
 [**SwitchCloneDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo)에는 `ToggleBase`에서 파생되고 [`TranslateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs) 클래스를 사용하여 Xamarin.Forms `Switch`와 유사한 토글 단추를 생성하는 [`SwitchClone`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) 클래스가 포함됩니다.
 
-**Xamarin.FormsBook.Toolkit**의 [`RotateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs)에서는 [**LeverToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle) 샘플에서 애니메이션 레버를 만드는 데 사용되는 애니메이션을 제공합니다.
+**Xamarin.FormsBook.Toolkit** 의 [`RotateAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RotateAction.cs)에서는 [**LeverToggle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/LeverToggle) 샘플에서 애니메이션 레버를 만드는 데 사용되는 애니메이션을 제공합니다.
 
 ### <a name="responding-to-taps"></a>탭에 응답
 
-`EventTrigger`의 단점 중 하나는 `TapGestureRecognizer`에 연결하여 탭에 응답할 수 없다는 것입니다. 이 문제를 해결하는 것이 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)에서 [`TapBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs)의 목적입니다.
+`EventTrigger`의 단점 중 하나는 `TapGestureRecognizer`에 연결하여 탭에 응답할 수 없다는 것입니다. 이 문제를 해결하는 것이 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)에서 [`TapBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TapBehavior.cs)의 목적입니다.
 
 [**BoxViewTapShiver**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BoxViewTapShiver) 샘플에서는 탭형 `BoxView` 요소에 대해 이전 `ShiverAction`을 사용할 수 있도록 `TapBehavior`를 사용합니다.
 
@@ -173,7 +176,7 @@ AND와 OR 논리를 결합하는 것은 쉽지 않으며 일반적으로 중간 
 
 ### <a name="radio-buttons"></a>라디오 단추
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `string` 그룹 이름으로 그룹화된 라디오 단추를 만들기 위한 [`RadioBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) 클래스도 있습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `string` 그룹 이름으로 그룹화된 라디오 단추를 만들기 위한 [`RadioBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioBehavior.cs) 클래스도 있습니다.
 
 [**RadioLabels**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) 프로그램은 해당 라디오 단추에 대해 텍스트 문자열을 사용합니다. [**RadioStyle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) 샘플에서는 선택된 단추와 선택되지 않은 단추 간의 모양 차이에 `Style`을 사용합니다. [**RadioImages**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) 샘플에서는 라디오 단추에 대해 boxed 이미지를 사용합니다.
 
@@ -183,7 +186,7 @@ AND와 OR 논리를 결합하는 것은 쉽지 않으며 일반적으로 중간 
 
 ### <a name="fades-and-orientation"></a>페이드 및 방향
 
-마지막 [**MultiColorSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) 샘플을 사용하면 라디오 단추를 사용하는 세 가지 색 선택 뷰 사이에 전환할 수 있습니다. 이 세 가지 뷰는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`FadeEnableAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs)을 사용하여 페이드 인 및 페이드 아웃을 수행합니다.
+마지막 [**MultiColorSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) 샘플을 사용하면 라디오 단추를 사용하는 세 가지 색 선택 뷰 사이에 전환할 수 있습니다. 이 세 가지 뷰는 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`FadeEnableAction`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs)을 사용하여 페이드 인 및 페이드 아웃을 수행합니다.
 
 또한 이 프로그램은 **Xamarin.FormsBook.Toolkit** 라이브러리의 [`GridOrientationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs)를 사용하여 세로와 가로 간의 방향 변경에 응답합니다.
 

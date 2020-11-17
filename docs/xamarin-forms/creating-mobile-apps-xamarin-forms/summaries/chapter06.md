@@ -10,16 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a95f4a88ea0adff78475dab8699308fbe49aa46
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136840"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370210"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>요약 - 6장. 단추 클릭
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 [`Button`](xref:Xamarin.Forms.Button)은 사용자가 명령을 시작하는 데 사용할 수 있는 보기입니다. `Button`은 텍스트로(필요에 따라 [13장: 비트맵](chapter13.md)에 설명된 대로 이미지로) 식별됩니다. 따라서 `Button`은 `Label`과 동일한 여러 속성을 정의합니다.
 
@@ -83,7 +86,7 @@ ms.locfileid: "84136840"
 
 프로그램이 시작하는 동안 `OnStart` 호출이 발생합니다. `App` 생성자가 호출될 때 이미 내용이 복원되었으므로 이 메서드 호출이 `Properties` 사전에 액세스할 때까지 기다릴 필요는 없습니다.
 
-[**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) 예제는 프로그램이 `OnSleep` 재정의를 사용하여 현재 키패드 항목을 저장하고 페이지 생성자를 사용하여 해당 데이터를 복원하는 것을 제외하면 **SimplestKeypad**와 매우 비슷합니다.
+[**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad) 예제는 프로그램이 `OnSleep` 재정의를 사용하여 현재 키패드 항목을 저장하고 페이지 생성자를 사용하여 해당 데이터를 복원하는 것을 제외하면 **SimplestKeypad** 와 매우 비슷합니다.
 
 > [!NOTE]
 > 프로그램 설정을 저장하는 또 다른 방법은 Xamarin.Essentials [기본 설정](~/essentials/preferences.md) 클래스에서 제공합니다.

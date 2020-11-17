@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d2904270b601b6602457873e8b0180c13a0d6d95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136723"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373460"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 - 17장. Grid 마스터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 [`Grid`](xref:Xamarin.Forms.Grid)는 자식 요소를 셀의 행과 열로 배열하는 강력한 레이아웃 메커니즘입니다. 유사한 HTML `table` 요소와 달리 `Grid`는 프레젠테이션 대신 레이아웃의 목적으로만 사용됩니다.
 
@@ -37,7 +40,7 @@ XAML에서 [`GridLengthTypeConverter`](xref:Xamarin.Forms.GridLengthTypeConverte
 
 - [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; 너비 또는 높이가 디바이스 독립적 단위(XAML의 숫자)로 지정됩니다.
 - [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; 높이 또는 너비가 셀 내용에 따라 자동으로 크기가 조정됩니다(XAML의 "Auto").
-- [`Star`](xref:Xamarin.Forms.GridUnitType.Star) &mdash; 나머지 높이 또는 너비가 비례적으로 할당됩니다(XAML에서 *star*라고 하는 "\*"이 있는 숫자).
+- [`Star`](xref:Xamarin.Forms.GridUnitType.Star) &mdash; 나머지 높이 또는 너비가 비례적으로 할당됩니다(XAML에서 *star* 라고 하는 "\*"이 있는 숫자).
 
 `Grid`의 각 자식 요소에도 명시적으로 또는 암시적으로 행과 열을 할당해야 합니다. 행 범위 및 열 범위는 선택 사항입니다. 이는 모두 연결된 바인딩 가능한 속성을 사용하여 지정되었습니다. 이는 `Grid`로 정의되었지만 `Grid`의 자식 요소에 설정된 &mdash; 속성입니다. `Grid`는 연결된 바인딩 가능한 정적 속성 4개를 정의합니다.
 
@@ -103,7 +106,7 @@ XAML에서는 다음 특성을 사용하여 이러한 값을 설정합니다.
 
 `Grid`는 방향 변경에 응답하도록 프로그램을 구성하는 데 도움이 될 수 있습니다. [**GridRgbSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) 샘플에서는 세로 방향 전화의 두 번째 행과 가로 방향 전화의 두 번째 열 간에 요소를 이동하는 기법을 보여줍니다.
 
-이 프로그램은 `Slider` 요소를 0~255 범위로 초기화하고 데이터 바인딩을 사용하여 슬라이더의 값을 16진수로 표시합니다. `Slider` 값은 부동 소수점이고 16진수에 대한 .NET 서식 지정 문자열은 정수에만 유효하므로 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) 클래스가 도움이 됩니다.
+이 프로그램은 `Slider` 요소를 0~255 범위로 초기화하고 데이터 바인딩을 사용하여 슬라이더의 값을 16진수로 표시합니다. `Slider` 값은 부동 소수점이고 16진수에 대한 .NET 서식 지정 문자열은 정수에만 유효하므로 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) 클래스가 도움이 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

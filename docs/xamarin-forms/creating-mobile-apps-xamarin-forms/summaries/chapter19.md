@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9bdab5d64f1edc60ca58993b7848f97b7125023b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136697"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374045"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>19장의 요약 정보입니다. 컬렉션 뷰
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 
-> [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms는 컬렉션을 유지 관리하고 해당 요소를 표시하는 다음 세 가지 뷰를 정의합니다.
 
@@ -46,9 +46,9 @@ MVVM 애플리케이션에는 `ListView`를 사용하여 선택 가능한 개체
 
 ### <a name="data-binding-the-picker"></a>선택기 데이터 바인딩
 
-`SelectedIndex` 속성은 바인딩 가능한 속성에서 지원되지만 `Items`는 지원되지 않으므로 `Picker`에서 데이터 바인딩을 사용하기 어렵습니다. 한 가지 해결 방법은 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에 있는 것처럼 `Picker`를 [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs)와 함께 사용하는 것입니다. [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding)은 이 방법이 어떻게 작동하는지 보여줍니다.
+`SelectedIndex` 속성은 바인딩 가능한 속성에서 지원되지만 `Items`는 지원되지 않으므로 `Picker`에서 데이터 바인딩을 사용하기 어렵습니다. 한 가지 해결 방법은 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에 있는 것처럼 `Picker`를 [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs)와 함께 사용하는 것입니다. [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding)은 이 방법이 어떻게 작동하는지 보여줍니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 이제 Xamarin.Forms `Picker`는 데이터 바인딩을 지원하는 `ItemsSource` 및 `SelectedItem` 속성을 포함하고 있습니다. [선택기](~/xamarin-forms/user-interface/picker/index.md)를 참조하세요.
 
 ## <a name="rendering-data-with-listview"></a>ListView를 사용하여 데이터 렌더링
@@ -88,7 +88,7 @@ iOS 및 Android 디스플레이에서는 얇은 선이 행을 구분합니다. [
 
 기본적으로 `ListView`는 각 항목의 `ToString` 메서드를 사용하여 컬렉션의 항목을 표시합니다. 보다 효율적인 방법은 항목을 표시하는 템플릿을 정의하는 것입니다.
 
-이 기능을 실험하려면 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NamedColor`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) 클래스를 사용하면 됩니다. 이 클래스는 `Color` 구조체의 퍼블릭 필드에 해당하는 141개 `NamedColor` 개체를 포함하고 있는 `IList<NamedColor>` 형식의 정적 `All` 속성을 정의합니다.
+이 기능을 실험하려면 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NamedColor`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) 클래스를 사용하면 됩니다. 이 클래스는 `Color` 구조체의 퍼블릭 필드에 해당하는 141개 `NamedColor` 개체를 포함하고 있는 `IList<NamedColor>` 형식의 정적 `All` 속성을 정의합니다.
 
 [**NaiveNamedColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/NaiveNamedColorList) 샘플은 `ListView`의 `ItemsSource`를 이 `NamedColor.All` 속성으로 설정하지만, `NamedColor` 개체의 정규화된 클래스 이름만 표시됩니다.
 
@@ -118,7 +118,7 @@ XAML에서는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 `DataTemplate`으로 
 
 `ListView`는 항목을 그룹화하고 그룹 간에 이동하는 것을 지원합니다. `ItemsSource` 속성은 다음과 같이 컬렉션의 컬렉션으로 설정해야 합니다. `ItemsSource`가 설정된 개체는 `IEnumerable`을 구현해야 하고, 컬렉션의 각 항목도 `IEnumerable`을 구현해야 합니다. 각 그룹에는 두 가지 속성, 즉, 그룹의 텍스트 설명과 3자 약어가 포함되어야 합니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NamedColorGroup`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) 클래스는 `NamedColor` 개체 그룹을 7개 만듭니다. [**ColorGroupList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) 샘플은 이러한 그룹을 `true`로 설정된 `ListView`의 [`IsGroupingEnabled`](xref:Xamarin.Forms.ListView.IsGroupingEnabled) 속성과 각 그룹의 속성에 바인딩된 [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) 및 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) 속성에 사용하는 방법을 보여줍니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`NamedColorGroup`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) 클래스는 `NamedColor` 개체 그룹을 7개 만듭니다. [**ColorGroupList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) 샘플은 이러한 그룹을 `true`로 설정된 `ListView`의 [`IsGroupingEnabled`](xref:Xamarin.Forms.ListView.IsGroupingEnabled) 속성과 각 그룹의 속성에 바인딩된 [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) 및 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) 속성에 사용하는 방법을 보여줍니다.
 
 ### <a name="custom-group-headers"></a>사용자 지정 그룹 헤더
 
@@ -126,7 +126,7 @@ XAML에서는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 `DataTemplate`으로 
 
 ### <a name="listview-and-interactivity"></a>ListView 및 대화형 작업
 
-일반적으로 애플리케이션은 `ItemSelected` 또는 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 처리기를 연결하거나 `SelectedItem` 속성에서 데이터 바인딩을 설정하여 `ListView`와의 사용자 상호 작용을 달성합니다. 그러나 일부 셀 형식(`EntryCell` 및 `SwitchCell`)은 사용자 상호 작용을 허용하며, 사용자와 직접 상호 작용하는 사용자 지정 셀을 만들 수 있습니다. [**InteractiveListView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/InteractiveListView)는 [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) 인스턴스 100개를 만들고, 사용자가 3개 `Slider` 요소를 사용하여 각 색을 변경할 수 있도록 허용합니다. 또한 이 프로그램은 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)에서 [`ColorToContrastColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorToContrastColorConverter.cs)를 사용합니다.
+일반적으로 애플리케이션은 `ItemSelected` 또는 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 처리기를 연결하거나 `SelectedItem` 속성에서 데이터 바인딩을 설정하여 `ListView`와의 사용자 상호 작용을 달성합니다. 그러나 일부 셀 형식(`EntryCell` 및 `SwitchCell`)은 사용자 상호 작용을 허용하며, 사용자와 직접 상호 작용하는 사용자 지정 셀을 만들 수 있습니다. [**InteractiveListView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/InteractiveListView)는 [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) 인스턴스 100개를 만들고, 사용자가 3개 `Slider` 요소를 사용하여 각 색을 변경할 수 있도록 허용합니다. 또한 이 프로그램은 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)에서 [`ColorToContrastColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorToContrastColorConverter.cs)를 사용합니다.
 
 ## <a name="listview-and-mvvm"></a>ListView 및 MVVM
 
@@ -167,7 +167,7 @@ XAML에서는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 `DataTemplate`으로 
 ### <a name="varying-the-visuals"></a>시각적 개체 변경
 
 속성에 따라 `ListView`에 있는 항목의 시각적 개체를 약간 변경하고 싶은 경우가 있습니다. 예를 들어 학생의 평균 성적이 2.0 미만으로 떨어지면 [**ColorCodedStudents**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorCodedStudents) 샘플은 해당 학생 이름을 빨간색으로 표시합니다.
-이 작업은 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 바인딩 값 변환기 [`ThresholdToObjectConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ThresholdToObjectConverter.cs)를 사용하여 수행됩니다.
+이 작업은 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 바인딩 값 변환기 [`ThresholdToObjectConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ThresholdToObjectConverter.cs)를 사용하여 수행됩니다.
 
 ### <a name="refreshing-the-content"></a>콘텐츠 새로 고침
 
@@ -205,7 +205,7 @@ XAML에서는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 `DataTemplate`으로 
 
 - [`TableSectionBase<T>`](xref:Xamarin.Forms.TableSectionBase`1)는 `TableSectionBase`에서 파생되고 `IList<T>` 및 `INotifyCollectionChanged`를 구현하는 추상 클래스입니다.
 
-- [`TableSection`](xref:Xamarin.Forms.TableSection)은 `TableSectionBase<Cell>`에서 파생됩니다.
+- [`TableSection`](xref:Xamarin.Forms.TableSection)는 `TableSectionBase<Cell>`에서 파생됩니다.
 
 - [`TableRoot`](xref:Xamarin.Forms.TableRoot)는 `TableSectionBase<TableSection>`에서 파생됩니다.
 
@@ -217,7 +217,7 @@ XAML에서는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 `DataTemplate`으로 
 
 ### <a name="custom-cells"></a>사용자 지정 셀
 
-[**ConditionalCells**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ConditionalCells) 샘플은 **EntryForm**에서 확장됩니다. [`ProgrammerInformation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter19/EntryForm/EntryForm/EntryForm/PersonalInformation.cs) 클래스에는 두 가지 추가 속성의 적용 가능성을 제어하는 부울 속성이 포함되어 있습니다. 이러한 두 가지 추가 속성과 관련하여, 프로그램에서는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [PickerCell.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml) 및 [PickerCell.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml.cs)를 기반으로 하는 사용자 지정 `PickerCell`을 사용합니다.
+[**ConditionalCells**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ConditionalCells) 샘플은 **EntryForm** 에서 확장됩니다. [`ProgrammerInformation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter19/EntryForm/EntryForm/EntryForm/PersonalInformation.cs) 클래스에는 두 가지 추가 속성의 적용 가능성을 제어하는 부울 속성이 포함되어 있습니다. 이러한 두 가지 추가 속성과 관련하여, 프로그램에서는 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [PickerCell.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml) 및 [PickerCell.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/PickerCell.xaml.cs)를 기반으로 하는 사용자 지정 `PickerCell`을 사용합니다.
 
 두 `PickerCell` 요소의 `IsEnabled` 속성이 `ProgrammerInformation`의 부울 속성에 바인딩되는 것으로 보아 이 기술이 작동하지 않는 것 같습니다. 따라서 다음 샘플을 살펴보겠습니다.
 

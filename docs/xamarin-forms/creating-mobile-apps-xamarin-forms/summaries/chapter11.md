@@ -10,22 +10,25 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e2858d0606cf9c5c97a3457b5b29f620e7da2bad
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136801"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375137"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 - 11장. 바인딩할 수 있는 인프라
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
-모든 C# 프로그래머는 C# *속성*에 익숙합니다. 속성에는 *set* 접근자 및/또는 *get* 접근자가 포함됩니다. 종종 이를 공용 언어 런타임에 대한 *CLR 속성*이라고도 부릅니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
+
+모든 C# 프로그래머는 C# *속성* 에 익숙합니다. 속성에는 *set* 접근자 및/또는 *get* 접근자가 포함됩니다. 종종 이를 공용 언어 런타임에 대한 *CLR 속성* 이라고도 부릅니다.
 
 Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클래스로 캡슐화되고 [`BindableObject`](xref:Xamarin.Forms.BindableObject) 클래스로 지원되는 바인딩할 수 있는 속성이라고 부르는 향상된 속성 정의를 정의합니다. 이러한 클래스는 서로 연관되어 있더라도 서로 다른 점이 많습니다. `BindableProperty`는 속성 자체를 정의하기 위해 사용됩니다. `BindableObject`는 바인딩할 수 있는 속성을 정의하는 클래스의 기본 클래스라는 점에서 `object`와 비슷합니다.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>Xamarin.Forms 클래스 계층 구조
+## <a name="the-no-locxamarinforms-class-hierarchy"></a>Xamarin.Forms 클래스 계층 구조
 
 [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) 샘플은 리플렉션을 사용해서 Xamarin.Forms의 클래스 계층 구조를 표시하고 이 계층 구조에서 `BindableObject`가 수행하는 중요한 역할을 보여 줍니다. `BindableObject`는 `Object`에서 파생되며 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 파생되는 [`Element`](xref:Xamarin.Forms.Element)에 대한 부모 클래스입니다. 이 클래스는 [`Layout`](xref:Xamarin.Forms.Layout)의 부모 클래스인 [`Page`](xref:Xamarin.Forms.Page) 및 [`View`](xref:Xamarin.Forms.View)의 부모 클래스입니다.
 
@@ -63,7 +66,7 @@ Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클�
 
 정적 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) 메서드를 사용하여 자체 바인딩 가능한 속성을 정의해 `BindableProperty` 형식의 정적 읽기 전용 필드를 만들 수 있습니다.
 
-이에 대해서는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) 클래스를 참조하십시오. 클래스가 `Label`에서 파생되며, 이를 이용해서 글꼴 크기(포인트)를 지정할 수 있습니다. 이에 대해서는 [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) 샘플을 참조하십시오.
+이에 대해서는 [ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) 클래스에 나와 있습니다. 클래스가 `Label`에서 파생되며, 이를 이용해서 글꼴 크기(포인트)를 지정할 수 있습니다. 이에 대해서는 [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) 샘플을 참조하십시오.
 
 `BindableProperty.Create` 메서드의 네 가지 인수가 필요합니다.
 

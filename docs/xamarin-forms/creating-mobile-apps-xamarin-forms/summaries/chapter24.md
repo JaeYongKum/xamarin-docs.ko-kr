@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09622adc269027b589a7345a7d4411c3dcecbf0c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4ab09546bb2a1dcbc221f3819bc891ce096ce569
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136645"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373973"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>요약 - 24장. 페이지 탐색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 많은 애플리케이션이 사용자가 탐색하는 여러 페이지로 구성됩니다. 애플리케이션은 항상 *주* 페이지 또는 *홈* 페이지를 포함하고 있으며, 이 페이지에서 다른 페이지로 이동합니다. 이 페이지는 다시 탐색하기 위해 스택에서 유지됩니다. 추가 탐색 옵션은 [**25장. 페이지 종류**](chapter25.md)에서 다룹니다.
 
@@ -39,7 +42,7 @@ ms.locfileid: "84136645"
 
 이러한 메서드는 모든 `VisualElement`에서 사용할 수 있지만 일반적으로 현재 `Page` 인스턴스의 `Navigation` 속성에서 호출됩니다.
 
-애플리케이션은 일반적으로 사용자가 페이지에 대한 일부 정보를 제공해야 이전 페이지로 돌아갈 때 모달 페이지를 사용합니다. 모달이 아닌 페이지는 모덜리스 또는 *계층적*이라고도 합니다. 페이지 자체에서 모달 또는 모덜리스로 구분하는 것은 아닙니다. 이를 탐색하는 데 사용되는 메서드에 의해 제어됩니다. 모든 플랫폼에서 작업하려면 모달 페이지에서 이전 페이지로 돌아가기 위한 고유한 사용자 인터페이스를 제공해야 합니다.
+애플리케이션은 일반적으로 사용자가 페이지에 대한 일부 정보를 제공해야 이전 페이지로 돌아갈 때 모달 페이지를 사용합니다. 모달이 아닌 페이지는 모덜리스 또는 *계층적* 이라고도 합니다. 페이지 자체에서 모달 또는 모덜리스로 구분하는 것은 아닙니다. 이를 탐색하는 데 사용되는 메서드에 의해 제어됩니다. 모든 플랫폼에서 작업하려면 모달 페이지에서 이전 페이지로 돌아가기 위한 고유한 사용자 인터페이스를 제공해야 합니다.
 
 [**ModelessAndModal**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ModelessAndModal) 샘플을 사용하여 모덜리스 페이지와 모달 페이지의 차이를 살펴볼 수 있습니다. 페이지 탐색을 사용하는 모든 애플리케이션은 일반적으로 프로그램의 `App` 클래스에서 홈 페이지를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 생성자로 전달해야 합니다. 한 가지 보너스는 iOS 페이지에서 더 이상 `Padding`을 설정할 필요가 없다는 것입니다.
 
@@ -164,7 +167,7 @@ Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스�
 
 일반적으로 절전 모드로 전환되는 다중 페이지 프로그램은 복원될 때 동일한 페이지로 이동해야 합니다. 즉, 이러한 프로그램은 탐색 스택의 내용을 저장해야 합니다. 이 섹션에서는 이 용도로 설계된 클래스에서 이 프로세스를 자동화하는 방법을 보여 줍니다. 또한 이 클래스는 개별 페이지를 호출하여 해당 페이지 상태를 저장하고 복원할 수 있도록 합니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리는 클래스가 `Properties` 사전에 항목을 저장하고 복원하기 위해 구현할 수 있는 [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs)이라는 인터페이스를 정의합니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리는 클래스가 `Properties` 사전에 항목을 저장하고 복원하기 위해 구현할 수 있는 [`IPersistantPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IPersistentPage.cs)라는 인터페이스를 정의합니다.
 
 **Xamarin.FormsBook.Toolkit** 라이브러리의 [`MultiPageRestorableApp`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/MultiPageRestorableApp.cs) 클래스는 `Application`에서 파생됩니다. 그런 다음 `MultiPageRestorableApp`에서 `App` 클래스를 파생시키고 약간의 정리를 수행할 수 있습니다.
 

@@ -10,19 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 721d68db48843ee614f16d4c4237f2c753319561
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136736"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373486"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>16장 요약 데이터 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 
-> [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 프로그래머는 한 개체의 속성이 변경된 경우를 감지하고 이를 사용하여 다른 개체의 속성 값을 변경하는 이벤트 처리기를 작성하는 경우가 많습니다. 이 프로세스는 *데이터 바인딩* 기술을 사용하여 자동화할 수 있습니다. 데이터 바인딩은 일반적으로 XAML에 정의되며 사용자 인터페이스 정의의 일부가 됩니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "84136736"
 - `System.ComponentModel` 네임스페이스의 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged)는 속성 변경 시 알림을 구현하기 위한 것입니다.
 - [`IValueConverter`](xref:Xamarin.Forms.IValueConverter)는 데이터 바인딩의 한 형식에서 다른 형식으로 값을 변환하는 작은 클래스를 정의하는 데 사용됩니다.
 
-데이터 바인딩은 동일한 개체의 두 속성 또는 (보다 일반적으로) 두 개의 다른 개체를 연결합니다. 이러한 두 속성을 *source* 및 *target*이라고 합니다. 일반적으로 소스 속성을 변경하면 대상 속성에서 변경 내용이 발생하지만 방향이 반대로 바뀝니다. 관련 없음:
+데이터 바인딩은 동일한 개체의 두 속성 또는 (보다 일반적으로) 두 개의 다른 개체를 연결합니다. 이러한 두 속성을 *source* 및 *target* 이라고 합니다. 일반적으로 소스 속성을 변경하면 대상 속성에서 변경 내용이 발생하지만 방향이 반대로 바뀝니다. 관련 없음:
 
 - *target* 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)에 의해 지원되어야 합니다.
 - *source* 속성은 일반적으로 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged)를 구현하는 클래스의 멤버입니다.
@@ -128,7 +128,7 @@ MVVM 시나리오에서 데이터 바인딩의 대상이 될 가능성이 있는
 
 바인딩의 원본 속성과 대상 속성이 다른 형식인 경우 바인딩 변환기를 사용하여 형식 간에 변환할 수 있습니다. 이는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 인터페이스를 구현하는 클래스로서 원본을 대상으로 변환하는 [`Convert`](xref:Xamarin.Forms.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)) 및 대상을 소스로 변환하는 [`ConvertBack`](xref:Xamarin.Forms.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo))의 두 가지 메서드를 포함하는 클래스입니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`IntToBoolConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs) 클래스는 `int`를 `bool`로 변환하는 예제입니다. [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler) 샘플에서 설명합니다. `Entry`에 하나 이상의 문자가 입력된 경우에만 `Button`을 사용할 수 있습니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`IntToBoolConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs) 클래스는 `int`를 `bool`로 변환하는 예입니다. [**ButtonEnabler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler) 샘플에서 설명합니다. `Entry`에 하나 이상의 문자가 입력된 경우에만 `Button`을 사용할 수 있습니다.
 
 [`BoolToStringConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BoolToStringConverter.cs) 클래스는 `bool`을 `string`으로 변환하고 두 개의 속성을 정의하여 `false` 및 `true` 값에 대해 반환되는 텍스트를 지정합니다.
 [`BoolToColorConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BoolToColorConverter.cs)는 유사합니다. [**SwitchText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/SwitchText) 샘플은 이러한 두 변환기를 사용하여 `Switch` 설정에 따라 다른 색으로 다른 텍스트를 표시하는 방법을 보여줍니다.

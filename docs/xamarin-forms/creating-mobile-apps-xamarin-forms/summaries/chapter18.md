@@ -10,18 +10,21 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b2309d6ec6712be32f6e972fab130a542fbec857
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 15342144a080f3056c1aaa3441f6d1ec850f4dc2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557428"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374059"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 - 18장. MVVM
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
-애플리케이션을 설계하는 최상의 방법 중 하나는 종종 *비즈니스 논리*라고 부르는 기본 코드와 사용자 인터페이스를 분리하는 것입니다. 몇 가지 기술들이 있지만 XAML 기반 환경에 맞게 조정된 방식을 Model-View-ViewModel 또는 MVVM이라고 부릅니다.
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
+
+애플리케이션을 설계하는 최상의 방법 중 하나는 종종 *비즈니스 논리* 라고 부르는 기본 코드와 사용자 인터페이스를 분리하는 것입니다. 몇 가지 기술들이 있지만 XAML 기반 환경에 맞게 조정된 방식을 Model-View-ViewModel 또는 MVVM이라고 부릅니다.
 
 ## <a name="mvvm-interrelationships"></a>MVVM 상호 관계
 
@@ -65,7 +68,7 @@ ViewModel의 코드는 호출 속성 이름을 자동으로 가져오는 [`Calle
 
 ## <a name="the-command-interface"></a>명령 인터페이스
 
-MVVM은 데이터 바인딩으로 작동하고, 데이터 바인딩은 속성으로 작동합니다. 따라서 MVVM은 `Button`의 `Clicked` 이벤트 또는 `TapGestureRecognizer`의 `Tapped` 이벤트를 처리할 때 결함이 있는 것으로 보입니다. ViewModel이 이러한 이벤트를 처리할 수 있도록 Xamarin.Forms에서 *명령 인터페이스*가 지원됩니다.
+MVVM은 데이터 바인딩으로 작동하고, 데이터 바인딩은 속성으로 작동합니다. 따라서 MVVM은 `Button`의 `Clicked` 이벤트 또는 `TapGestureRecognizer`의 `Tapped` 이벤트를 처리할 때 결함이 있는 것으로 보입니다. ViewModel이 이러한 이벤트를 처리할 수 있도록 Xamarin.Forms에서 *명령 인터페이스* 가 지원됩니다.
 
 명령 인터페이스는 다음 두 가지 공용 속성을 사용해서 `Button`에서 스스로 매니페스트합니다.
 

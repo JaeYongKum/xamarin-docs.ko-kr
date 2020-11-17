@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 93ad745790a746924f7037e490985c53c332c089
-ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
+ms.openlocfilehash: 0870dd94c15f1bd94d5c6864b3d4caeb96349f32
+ms.sourcegitcommit: 83793378b28e8ef8624406309b4ecd41aa1a3a14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92169919"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503269"
 ---
 # <a name="no-locxamarinessentials-share"></a>Xamarin.Essentials: 공유
 
@@ -62,7 +62,7 @@ public class ShareTest
 
 ![공유](images/share.png)
 
-## <a name="files"></a>파일
+## <a name="file"></a>파일
 
 이 기능을 통해 앱이 디바이스의 다른 애플리케이션과 파일을 공유할 수 있습니다. Xamarin.Essentials는 자동으로 파일 형식(MIME)을 검색하고 공유를 요청합니다. 각 플랫폼은 특정 파일 확장명만 지원할 수 있습니다.
 
@@ -77,6 +77,25 @@ await Share.RequestAsync(new ShareFileRequest
 {
     Title = Title,
     File = new ShareFile(file)
+});
+```
+
+## <a name="multiple-files"></a>다중 파일
+
+![시험판 API](~/media/shared/preview.png)
+
+여러 파일 공유 사용은 한 번에 여러 파일을 전송할 수 있다는 점만 단일 파일과 다릅니다.
+
+```csharp
+var file1 = Path.Combine(FileSystem.CacheDirectory, "Attachment1.txt");
+File.WriteAllText(file, "Content 1");
+var file2 = Path.Combine(FileSystem.CacheDirectory, "Attachment2.txt");
+File.WriteAllText(file, "Content 2");
+
+await Share.RequestAsync(new ShareMultipleFilesRequest
+{
+    Title = ShareFilesTitle,
+    Files = new ShareFile[] { new ShareFile(file1), new ShareFile(file2) }
 });
 ```
 

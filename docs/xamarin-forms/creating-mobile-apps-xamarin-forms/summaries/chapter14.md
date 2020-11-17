@@ -10,22 +10,25 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5aa62927efe0a9803efbddaef97ac6557edccd6c
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 09011647428e2af1bdfcdb2f9def8da64ef84144
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130905"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374847"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 - 14장 절대 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
+
 `StackLayout`의 경우처럼 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)은 `Layout<View>`에서 파생되고 `Children` 속성을 상속합니다. `AbsoluteLayout`은 프로그래머가 자식의 위치를 지정하고 필요에 따라 크기를 지정해야 하는 레이아웃 시스템을 구현합니다. 위치는 디바이스 독립적 단위를 사용하여 `AbsoluteLayout`의 왼쪽 위 구석에 따른 자식의 왼쪽 위 구석으로 지정합니다. 또한 `AbsoluteLayout`은 비례 위치 지정 및 크기 조정 기능을 구현합니다.
 
 `AbsoluteLayout`은 프로그래머가 자식에 크기를 적용할 수 있는 경우(예: `BoxView` 요소) 또는 요소의 크기가 다른 자식의 위치 지정에 영향을 주지 않는 경우에만 사용되는 특수한 용도의 레이아웃 시스템으로 간주해야 합니다. `HorizontalOptions` 및 `VerticalOptions` 속성은 `AbsoluteLayout`의 자식에 영향을 주지 않습니다.
 
-또한 이 장에서는 한 클래스(이 경우 `AbsoluteLayout`)에 정의된 속성을 다른 클래스(`AbsoluteLayout`의 자식)에 연결할 수 있는 *연결된 바인딩 가능 속성*의 중요한 기능을 소개합니다.
+또한 이 장에서는 한 클래스(이 경우 `AbsoluteLayout`)에 정의된 속성을 다른 클래스(`AbsoluteLayout`의 자식)에 연결할 수 있는 *연결된 바인딩 가능 속성* 의 중요한 기능을 소개합니다.
 
 ## <a name="absolutelayout-in-code"></a>코드의 AbsoluteLayout
 
@@ -90,7 +93,7 @@ XAML에서 `AbsoluteLayout`을 사용하고 `AbsoluteLayout.LayoutBounds` 및 `A
 
 ## <a name="overlays"></a>오버레이
 
-`AbsoluteLayout`을 사용하여 다른 컨트롤을 통해 페이지에 적용되는 *오버레이*를 생성하여 사용자가 페이지의 일반 컨트롤과 상호 작용하지 못하게 할 수 있습니다.
+`AbsoluteLayout`을 사용하여 다른 컨트롤을 통해 페이지에 적용되는 *오버레이* 를 생성하여 사용자가 페이지의 일반 컨트롤과 상호 작용하지 못하게 할 수 있습니다.
 
 [**SimpleOverlay**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) 샘플은 이 기술을 보여 주며, 프로그램이 작업을 완료한 정도를 표시하는 [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)를 보여 줍니다.
 

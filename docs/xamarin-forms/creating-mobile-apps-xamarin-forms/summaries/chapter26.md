@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 377de0ff7e48971f9214cf86aec19ce14859139e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136606"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366232"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 - 26장. 사용자 지정 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
+
+> [!NOTE]
+> 이 책은 2016년 봄에 출간되었으며, 그 후로 업데이트되지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, 일부 내용은 오래되었고 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
 Xamarin.Forms는 [`Layout<View>`](xref:Xamarin.Forms.Layout`1)에서 파생된 여러 클래스를 포함합니다.
 
@@ -85,7 +88,7 @@ Xamarin.Forms 레이아웃을 처리하는 중앙 집중식 시스템은 없습�
 - [`IncludeMargins`](xref:Xamarin.Forms.MeasureFlags.IncludeMargins)
 - [`None`](xref:Xamarin.Forms.MeasureFlags.None) - 여백을 포함하지 않음
 
-많은 요소에 대해 `GetSizeRequest` 또는 `Measure`는 렌더러에서 요소의 기본 크기를 가져옵니다. 두 메서드에는 너비 및 높이 *제약 조건*에 대한 매개 변수가 있습니다. 예를 들어 `Label`은 너비 제약 조건을 사용하여 여러 줄의 텍스트를 래핑하는 방법을 결정합니다.
+많은 요소에 대해 `GetSizeRequest` 또는 `Measure`는 렌더러에서 요소의 기본 크기를 가져옵니다. 두 메서드에는 너비 및 높이 *제약 조건* 에 대한 매개 변수가 있습니다. 예를 들어 `Label`은 너비 제약 조건을 사용하여 여러 줄의 텍스트를 래핑하는 방법을 결정합니다.
 
 `GetSizeRequest`와 `Measure`는 모두 두 개의 속성을 포함하는 [`SizeRequest`](xref:Xamarin.Forms.SizeRequest) 형식의 값을 반환합니다.
 
@@ -156,13 +159,13 @@ Xamarin.Forms 레이아웃을 처리하는 중앙 집중식 시스템은 없습�
 
 ### <a name="a-layout-with-properties"></a>속성이 있는 레이아웃
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)에서 [`WrapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) 클래스는 모든 자식을 동일한 크기로 가정하고 자식을 한 행(또는 열)에서 다음 행(또는 열)으로 래핑합니다. 이 클래스는 `StackLayout` 같은 `Orientation` 속성을 정의하고 `Grid` 같은 `ColumnSpacing` 및 `RowSpacing` 속성을 정의하며, 자식 크기를 캐시합니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)의 [`WrapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/WrapLayout.cs) 클래스는 모든 자식을 동일한 크기로 가정하고 자식을 한 행(또는 열)에서 다음 행(또는 열)으로 래핑합니다. 이 클래스는 `StackLayout` 같은 `Orientation` 속성을 정의하고 `Grid` 같은 `ColumnSpacing` 및 `RowSpacing` 속성을 정의하며, 자식 크기를 캐시합니다.
 
 [**PhotoWrap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoWrap) 샘플에서는 재고 사진을 표시하기 위해 `WrapLayout`에 `ScrollView`을 배치합니다.
 
 ### <a name="no-unconstrained-dimensions-allowed"></a>비제한 차원은 허용되지 않습니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs)은 내부의 모든 자식을 표시하기 위한 것입니다. 따라서 비제한 차원을 처리할 수 없으며 비제한 차원이 있을 경우 예외가 발생합니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`UniformGridLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/UniformGridLayout.cs)은 내부의 모든 자식을 표시하기 위한 것입니다. 따라서 비제한 차원을 처리할 수 없으며 비제한 차원이 있을 경우 예외가 발생합니다.
 
 [**PhotoGrid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) 샘플에서는 `UniformGridLayout`을 보여 줍니다.
 
@@ -179,13 +182,13 @@ Xamarin.Forms 레이아웃을 처리하는 중앙 집중식 시스템은 없습�
 
 겹치는 자식의 경우 컬렉션의 끝부분에 있는 자식은 시각적으로 컬렉션의 시작 부분에 표시됩니다.
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) 클래스는 렌더링 순서를 나타내고 따라서 해당 자식 중 하나를 다른 항목 위에 표시하도록 허용하는 연결된 속성을 정의합니다. [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) 샘플에서는 이를 보여 줍니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`OverlapLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) 클래스는 연결된 속성을 정의하여 렌더링 순서를 나타냄으로써 해당 자식 중 하나가 다른 항목 위에 표시되도록 허용합니다. [**StudentCardFile**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) 샘플에서는 이를 보여 줍니다.
 
 [![학생 카드 파일 그리드의 삼중 스크린샷](images/ch26fg10-small.png "겹치는 레이아웃 자식")](images/ch26fg10-large.png#lightbox "겹치는 레이아웃 자식")
 
 ### <a name="more-attached-bindable-properties"></a>더 많은 연결된 바인딩 가능한 속성
 
-[**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`CartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) 클래스는 연결된 바인딩 가능한 속성을 정의하여 두 개의 `Point` 값과 두께 값을 지정하고 `BoxView` 요소를 조작하여 줄을 유사하게 변경합니다.
+[ **Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`CartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CartesianLayout.cs) 클래스는 연결된 바인딩 가능한 속성을 정의하여 `Point` 값과 두께 값을 지정하고 줄과 유사하게 `BoxView` 요소를 조작합니다.
 
 [**UnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/UnitCube) 샘플에서는 이 속성을 사용하여 3D 큐브를 그립니다.
 
