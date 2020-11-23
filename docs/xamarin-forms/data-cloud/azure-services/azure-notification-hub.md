@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: b560eedb1968db791c57620686c4ddb854153b1c
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374448"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590404"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
@@ -142,8 +142,10 @@ public static class AppConstants
 1. 메시지를 처리하도록 `FirebaseMessagingService`를 [재정의](#override-firebasemessagingservice-to-handle-messages)합니다.
 1. 들어오는 알림을 Xamarin.Forms UI에 [추가](#add-incoming-notifications-to-the-xamarinforms-ui)합니다.
 
-> [!NOTE]
-> `GoogleServicesJson` 빌드 작업은 `Xamarin.GooglePlayServices.Base` NuGet 패키지의 일부입니다. Visual Studio 2019는 시작하는 동안 사용 가능한 빌드 작업을 설정합니다. `GoogleServicesJson`이 빌드 작업으로 표시되지 않으면 NuGet 패키지를 설치한 후 Visual Studio 2019를 다시 시작합니다.
+`GoogleServicesJson` 빌드 작업은 `Xamarin.GooglePlayServices.Base` NuGet 패키지의 일부입니다. Visual Studio 2019는 시작하는 동안 사용 가능한 빌드 작업을 설정합니다. `GoogleServicesJson`이 빌드 작업으로 표시되지 않으면 NuGet 패키지를 설치한 후 Visual Studio 2019를 다시 시작합니다.
+
+> [!IMPORTANT]
+> 앱이 절전 모드인 동안 푸시 알림을 제공하려면 이제 AndroidX를 사용해야 합니다. AndroidX로 마이그레이션에 대한 자세한 내용은 [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md)(Xamarin.Forms의 AndroidX 마이그레이션)를 참조하세요.
 
 ### <a name="configure-android-manifest"></a>Android 매니페스트 구성
 

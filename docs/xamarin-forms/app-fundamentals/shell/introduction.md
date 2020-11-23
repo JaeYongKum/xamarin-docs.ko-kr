@@ -10,12 +10,12 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a7347bb1e2ef07161c5d03b76680b8770c5a49ec
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 215bf467c6f00e45d3e00e10438b01d238050504
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373317"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590326"
 ---
 # <a name="no-locxamarinforms-shell-introduction"></a>Xamarin.Forms Shell 소개
 
@@ -41,7 +41,7 @@ Xamarin.Forms Shell은 iOS 및 Android에서는 완전히 지원되나 UWP(유�
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
-UWP 프로젝트를 Xamarin.Forms 솔루션에 추가하는 방법에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
+UWP의 셸 상태에 대한 자세한 내용은 github.com에서 [Xamarin.Forms 셸 프로젝트 보드](https://github.com/xamarin/Xamarin.Forms/projects/54)를 참조하세요.
 
 ## <a name="shell-navigation-experience"></a>셸 탐색 환경
 

@@ -6,16 +6,16 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/07/2019
+ms.date: 11/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5c380a5ce6e76b0f9275b09d2943be479ef09e4
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: ef4c8717b419d1be4c4050f86b183385d6c10072
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370899"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590339"
 ---
 # <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
@@ -27,15 +27,17 @@ Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 탭 목록과 더
 
 iOS에서 탭 목록은 화면 맨 아래에 나타나고 세부 내용 영역이 위에 위치합니다. 각 탭은 제목과 아이콘으로 구성되며 알파 채널이 있는 PNG 파일이어야 합니다. 세로 방향에서는 탭 제목 위에 탭 모음 아이콘이 표시됩니다. 가로 방향에서는 아이콘 및 제목이 나란히 표시됩니다. 또한 디바이스 및 방향에 따라 일반 또는 작은 탭 표시줄이 표시될 수도 있습니다. 6개 이상의 탭이 있는 경우 다른 탭에 액세스하는 데 사용할 수 있는 **자세히** 탭이 표시됩니다. 아이콘 요구 사항에 대한 자세한 내용은 developer.apple.com의 [탭 표시줄 아이콘 크기](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size)를 참조하세요.
 
-> [!TIP]
-> iOS의 경우 `TabbedRenderer`에는 지정된 원본에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIcon` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있습니다. 또한 선택하거나 선택하지 않은 버전의 아이콘을 제공할 수 있습니다.
-
 Android에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 각 탭은 제목과 아이콘으로 구성되며 알파 채널이 있는 PNG 파일이어야 합니다. 그러나 탭은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 6개 이상의 탭이 있고 탭 목록이 화면 아래쪽에 있는 경우 추가 탭에 액세스하는 데 사용할 수 있는 *자세히* 탭이 나타납니다. 아이콘 요구 사항에 대한 자세한 내용은 material.io의 [Tabs](https://material.io/components/tabs/#) 및 developer.android.com의 [다양한 픽셀 밀도 지원](https://developer.android.com/training/multiscreen/screendensities)을 참조하세요. 화면 아래쪽으로 탭을 이동하는 방법에 대한 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md)을 참조하세요.
 
-> [!TIP]
-> Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `SetTabIconImageSource` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다.
-
 UWP(유니버설 Windows 플랫폼)에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 표시됩니다. 각 탭은 제목으로 구성됩니다. 그러나 플랫폼별로 각 탭에 아이콘을 추가할 수 있습니다. 자세한 내용은 [Windows의 TabbedPage 아이콘](~/xamarin-forms/platform/windows/tabbedpage-icons.md)을 참조하세요.
+
+> [!TIP]
+> SVG(스케일링 가능한 벡터 그래픽) 파일을 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에서 탭 아이콘으로 표시할 수 있습니다.
+>
+> - iOS `TabbedRenderer` 클래스에는 지정된 소스에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIcon` 메서드가 포함됩니다. 또한 필요한 경우 선택하거나 선택하지 않은 버전의 아이콘을 제공할 수 있습니다.
+> - Android AppCompat `TabbedPageRenderer` 클래스에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `SetTabIconImageSource` 메서드가 포함됩니다. 또는 SVG 파일을 Xamarin.Forms가 자동으로 표시할 수 있는 벡터 드로어블 리소스로 변환할 수 있습니다. SVG 파일을 벡터 드로어블 리소스로 변환하는 방법에 대한 자세한 내용은 developer.android.com에서 [Add multi-density vector graphics](https://developer.android.com/studio/write/vector-asset-studio)(다중 밀도 벡터 그래픽 추가)를 참조하세요.
+>
+> 자세한 내용은 [Xamarin.Forms TabbedPage with SVG tab icons](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons)(SVG 탭 아이콘이 있는 Xamarin.Forms TabbedPage)를 참조하세요.
 
 ## <a name="create-a-tabbedpage"></a>TabbedPage 만들기
 
@@ -240,6 +242,7 @@ public class TabbedPageDemoPageCS : TabbedPage
 
 - [TabbedPageWithNavigationPage(샘플)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 - [TabbedPage(샘플)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [SVG 탭 아이콘이 있는 TabbedPage](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons)
 - [계층적 탐색](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [페이지 종류](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPage API](xref:Xamarin.Forms.TabbedPage)

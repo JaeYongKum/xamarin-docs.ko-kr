@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/07/2018
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05f5e79f9df59859c4514150ec591e0a96912ed5
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 676e0f062d3ed83cf433188e646f1e96f84a77cc
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93368780"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590270"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화
 
@@ -82,7 +82,7 @@ this.FlowDirection = Device.FlowDirection;
 디바이스/시뮬레이터의 언어와 지역을 **Info.plist** 에 지정된 오른쪽에서 왼쪽으로 쓰는 로캘로 변경하여 오른쪽에서 왼쪽으로 쓰는 언어 지역화를 테스트할 수 있습니다.
 
 > [!WARNING]
-> iOS에서 언어와 지역을 오른쪽에서 왼쪽 방향 로캘로 변경하는 경우 로캘에 필요한 리소스가 포함되지 않으면 [`DatePicker`](xref:Xamarin.Forms.DatePicker) 뷰에서 예외가 발생합니다. 예를 들어, `DatePicker`가 있는 아랍어로 앱을 테스트하는 경우에는 **iOS 빌드** 창의 **Internationalization** (국제화) 섹션에 **mideast** (중동)이 선택되어 있어야 합니다.
+> iOS에서 언어와 지역을 오른쪽에서 왼쪽 방향 로캘로 변경하는 경우 로캘에 필요한 리소스가 포함되지 않으면 [`DatePicker`](xref:Xamarin.Forms.DatePicker) 뷰에서 예외가 발생합니다. 예를 들어, `DatePicker`가 있는 아랍어로 앱을 테스트하는 경우에는 **iOS 빌드** 창의 **Internationalization**(국제화) 섹션에 **mideast**(중동)이 선택되어 있어야 합니다.
 
 ### <a name="android"></a>Android
 
@@ -97,7 +97,7 @@ this.FlowDirection = Device.FlowDirection;
 </manifest>
 ```
 
-그런 다음, 오른쪽에서 왼쪽으로 쓰는 언어를 사용하도록 디바이스/에뮬레이터를 변경하거나 **설정> 개발자 옵션** 에서 **Force RTL layout direction** (RTL 레이아웃 방향 적용)을 활성화하여 오른쪽에서 왼쪽으로 쓰는 지역화를 테스트할 수 있습니다.
+그런 다음, 오른쪽에서 왼쪽으로 쓰는 언어를 사용하도록 디바이스/에뮬레이터를 변경하거나 **설정> 개발자 옵션** 에서 **Force RTL layout direction**(RTL 레이아웃 방향 적용)을 활성화하여 오른쪽에서 왼쪽으로 쓰는 지역화를 테스트할 수 있습니다.
 
 ### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
@@ -187,7 +187,10 @@ Xamarin.Android 애플리케이션은 다음 줄을 포함하도록 **MainActivi
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 ```
 
-이 방법은 항상 오른쪽에서 왼쪽 레이아웃이 필요한 애플리케이션에 유용하며, [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 설정해야 한다는 요구 사항을 제거합니다.
+> [!NOTE]
+> 이 방법을 사용하려면 오른쪽에서 왼쪽 레이아웃을 지원하도록 애플리케이션을 설정해야 합니다. 자세한 내용은 [Android 플랫폼 설정](#android)을 참조하세요.
+
+이 방법은 항상 오른쪽에서 왼쪽 레이아웃이 필요한 애플리케이션에 유용하며 이 방법을 사용하면 대부분의 컨트롤이 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 설정하지 않아도 됩니다. 그러나 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 같은 일부 컨트롤은 `LayoutDirection` 속성을 적용하지 않으며 여전히 `FlowDirection` 속성을 설정해야 합니다.
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Xamarin.University를 통한 오른쪽에서 왼쪽 쓰기 언어 지원
 

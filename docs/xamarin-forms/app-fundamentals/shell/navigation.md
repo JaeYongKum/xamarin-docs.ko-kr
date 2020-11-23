@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb9d5243e5be4d99d741349564854c9c54e7a1bb
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f29bacf3546b2148a3d97c3c1ccaa44e02872be8
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373291"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590313"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -151,18 +151,22 @@ await Shell.Current.GoToAsync("//animals/monkeys");
 
 유효한 상대 URI를 `GoToAsync` 메서드의 인수로 지정하여 탐색을 수행할 수도 있습니다. 라우팅 시스템은 URI를 `ShellContent` 개체에 일치시키려고 합니다. 따라서 애플리케이션의 모든 경로가 고유할 경우 고유한 경로 이름을 상대 URI로 지정하기만 하면 탐색을 수행할 수 있습니다.
 
+다음 상대 경로 형식이 지원됩니다.
+
+| 서식 | Description |
+| --- | --- |
+| *route* | 지정된 경로에 대한 경로 계층 구조가 현재 위치에서 위쪽으로 검색됩니다. 일치하는 페이지가 탐색 스택에 푸시됩니다. |
+| /*route* | 지정된 경로에서 경로 계층 구조가 현재 위치에서 아래쪽으로 검색됩니다. 일치하는 페이지가 탐색 스택에 푸시됩니다. |
+| //*route* | 지정된 경로에 대한 경로 계층 구조가 현재 위치에서 위쪽으로 검색됩니다. 일치하는 페이지가 탐색 스택을 대체합니다. |
+| ///*route* | 지정된 경로에 대한 경로 계층 구조가 현재 위치에서 아래쪽으로 검색됩니다. 일치하는 페이지가 탐색 스택을 대체합니다. |
+
+다음 예제에서는 `monkeydetails` 경로에 대한 페이지로 이동합니다.
+
 ```csharp
 await Shell.Current.GoToAsync("monkeydetails");
 ```
 
-이 예제에서는 `monkeydetails` 경로에 대한 페이지로 이동합니다.
-
-또한 다음 상대 경로 형식이 지원됩니다.
-
-| 서식 | 설명 |
-| --- | --- |
-| //*route* | 지정된 경로에 대한 경로 계층 구조가 현재 표시된 경로에서 위쪽으로 검색됩니다. |
-| ///*route* | 지정된 경로에 대한 경로 계층 구조가 현재 표시된 경로에서 아래쪽으로 검색됩니다. |
+이 예제에서는 일치 페이지가 발견될 때까지 `monkeyDetails` 경로가 계층 구조 위쪽으로 검색됩니다. 찾은 페이지는 탐색 스택에 푸시됩니다.
 
 #### <a name="contextual-navigation"></a>상황별 탐색
 
@@ -185,13 +189,13 @@ bears
 await Shell.Current.GoToAsync("..");
 ```
 
-".."를 사용한 뒤로 탐색은 다음과 같이 경로와 결합할 수도 있습니다.
+“..”를 사용한 뒤로 탐색은 경로와 결합할 수도 있습니다.
 
 ```csharp
 await Shell.Current.GoToAsync("../route");
 ```
 
-이 예제의 전체 효과는 뒤로 이동한 다음, 지정된 경로로 이동하는 것입니다.
+이 예제에서는 뒤로 탐색을 수행한 다음 지정된 경로로 이동합니다.
 
 > [!IMPORTANT]
 > 지정된 경로로 이동하기 위해 뒤로 탐색이 경로 계층 구조의 현재 위치에 있는 경우에만 뒤로 탐색 및 지정된 경로로 탐색을 수행할 수 있습니다.
@@ -202,10 +206,20 @@ await Shell.Current.GoToAsync("../route");
 await Shell.Current.GoToAsync("../../route");
 ```
 
-이 예제의 전체 효과는 뒤로 두 번 이동한 다음, 지정된 경로로 이동하는 것입니다.
+이 예제에서는 뒤로 탐색을 두 번 수행한 다음 지정된 경로로 이동합니다.
+
+또한 뒤로 탐색할 때 쿼리 속성을 통해 데이터를 전달할 수 있습니다.
+
+```csharp
+await Shell.Current.GoToAsync($"..?parameterToPassBack={parameterValueToPassBack}");
+```
+
+이 예에서는 뒤로 탐색을 수행하고 쿼리 매개 변수 값을 이전 페이지의 쿼리 매개 변수에 전달합니다.
 
 > [!NOTE]
-> ".."를 사용하여 탐색하는 경우에도 데이터를 전달할 수 있습니다. 자세한 내용은 [데이터 전달](#pass-data)을 참조하세요.
+> 쿼리 매개 변수는 뒤로 탐색 요청에 추가할 수 있습니다.
+
+탐색할 때 데이터를 전달하는 방법에 대한 자세한 내용은 [데이터 전달](#pass-data)을 참조하세요.
 
 ### <a name="invalid-routes"></a>잘못된 경로
 
@@ -213,8 +227,8 @@ await Shell.Current.GoToAsync("../../route");
 
 | 서식 | 설명 |
 | --- | --- |
-| *route* 또는 / *route* | 시각적 계층 구조의 경로는 탐색 스택으로 푸시할 수 없습니다. |
-| //*page* 또는 /// *page* | 현재는 전역 경로가 탐색 스택의 유일한 페이지가 될 수 없습니다. 따라서 전역 경로에 대한 절대 라우팅은 지원되지 않습니다. |
+| *route* 또는 /*route* | 시각적 계층 구조의 경로는 탐색 스택으로 푸시할 수 없습니다. |
+| //*page* 또는 ///*page* | 현재는 전역 경로가 탐색 스택의 유일한 페이지가 될 수 없습니다. 따라서 전역 경로에 대한 절대 라우팅은 지원되지 않습니다. |
 
 이 경로 형식을 사용하면 `Exception`이 throw됩니다.
 
@@ -240,11 +254,27 @@ await Shell.Current.GoToAsync("../../route");
 - `OnPushAsync` - `Task`를 반환하고 `INavigation.PushAsync`가 호출될 때 호출됩니다.
 - `OnRemovePage` - `INavigation.RemovePage`가 호출될 때 호출됩니다.
 
+예를 들어 다음 코드 예제에서는 `OnRemovePage` 메서드를 재정의하는 방법을 보여 줍니다.
+
+```csharp
+public class MyTab : Tab
+{
+    protected override void OnRemovePage(Page page)
+    {
+        base.OnRemovePage(page);
+
+        // Custom logic
+    }
+}
+```
+
+`MyTab` 개체는 `Tab` 개체 대신 셸 시각적 계층 구조에서 사용될 수 있습니다.
+
 ## <a name="navigation-events"></a>탐색 이벤트
 
 `Shell` 클래스는 프로그래밍 방식 탐색 또는 사용자 조작으로 인해 탐색이 수행되려고 할 때 실행되는 `Navigating` 이벤트를 정의합니다. `Navigating` 이벤트와 함께 제공되는 `ShellNavigatingEventArgs` 개체는 다음 속성을 제공합니다.
 
-| 속성 | 형식 | 설명 |
+| 속성 | 유형 | 설명 |
 |---|---|---|
 | `Current` | `ShellNavigationState` | 현재 페이지의 URI입니다. |
 | `Source` | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
@@ -256,7 +286,7 @@ await Shell.Current.GoToAsync("../../route");
 
 `Shell` 클래스는 탐색이 완료될 때 실행되는 `Navigated` 이벤트도 정의합니다. `Navigating` 이벤트와 함께 제공되는 `ShellNavigatedEventArgs` 개체는 다음 속성을 제공합니다.
 
-| 속성 | Type | 설명 |
+| 속성 | 유형 | 설명 |
 |---|---|---|
 | `Current` | `ShellNavigationState` | 현재 페이지의 URI입니다. |
 | `Previous`| `ShellNavigationState` | 이전 페이지의 URI입니다. |
