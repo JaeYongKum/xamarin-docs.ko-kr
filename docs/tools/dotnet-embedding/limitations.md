@@ -6,12 +6,12 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
-ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
+ms.openlocfilehash: 2fbd42efcdb3de10a7f094db2197a75d88d27b66
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545808"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303026"
 ---
 # <a name="net-embedding-limitations"></a>.NET 포함 제한 사항
 
@@ -29,7 +29,7 @@ ms.locfileid: "75545808"
 
 .NET 포함은 대상 언어 및 플랫폼에 대 한 바로 사용할 수 있는 Api 집합을 노출 하 여 응용 프로그램 내에서 Mono 런타임의 통합을 용이 하 게 합니다.
 
-그러나이는 양방향 통합이 아닙니다. 예를 들어 관리 되는 코드는이 공동 공존을 인식 하지 못하므로 관리 되는 형식을 하위 클래스로 지정할 수 없으며 관리 되는 코드가 네이티브 코드 내부에서 콜백 될 것으로 예측할 수 없습니다.
+그러나이는 양방향 통합이 아닙니다. 예를 들어 관리 되는 코드는 이러한 공동 존재를 인식 하지 못하므로 관리 되는 형식을 하위 클래스로 지정할 수 없으며 관리 되는 코드가 네이티브 코드 내부에서 다시 호출 될 것으로 예측할 수 없습니다.
 
 사용자의 요구에 따라 이러한 제한의 일부를 해결할 수 있습니다 (예:).
 
@@ -41,9 +41,9 @@ ms.locfileid: "75545808"
 
 ### <a name="nullability"></a>Null 허용 여부
 
-.NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 Api는 `null` 인수를 처리할 수 없는 경우 `ArgumentNullException`를 throw 합니다. 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
+.NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 Api는 `ArgumentNullException` 인수를 사용 하 여 처리할 수 없는 경우을 throw 합니다 `null` . 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
 
-헤더 파일에서 정확한 null 허용 여부 주석을 생성할 수 없으며 관리 되는 예외를 최소화 하려는 경우 기본적으로 null이 아닌 인수 (`NS_ASSUME_NONNULL_BEGIN`)로 지정 하 고 전체 자릿수가 가능한 경우 null 허용 여부 주석을 추가 합니다.
+헤더 파일에는 정확한 null 허용 여부 주석을 생성할 수 없으며 관리 되는 예외를 최소화 하기 때문에 기본적으로 null이 아닌 인수 ( `NS_ASSUME_NONNULL_BEGIN` )로 지정 하 고 전체 자릿수가 가능 하면 null 허용 여부 주석을 추가 합니다.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 

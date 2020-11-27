@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/28/2018
-ms.openlocfilehash: b9404e8a54899d3af6e6534fc9157e78139ca7d1
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2472086c700a6b2a93a4a1a834d7a7d3e6e635ce
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568750"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303056"
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 
@@ -56,7 +56,7 @@ Android OS는 해당 상태에 따라 활동을 조정 합니다. 이렇게 하�
 
 1. *다시 시작* &ndash; 됨 Android에서 메모리에서 제거 하기 위해 수명 주기에 일시 중지 됨에서 중지 됨으로 나타나는 활동은 가능 합니다. 사용자가 작업으로 다시 이동 하는 경우 다시 시작 하 고 이전에 저장 된 상태로 복원한 다음 사용자에 게 표시 해야 합니다.
 
-### <a name="activity-re-creation-in-response-to-configuration-changes"></a>구성 변경에 대 한 응답으로 활동 다시 만들기
+### <a name="activity-re-creation-in-response-to-configuration-changes"></a>구성 변경에 대 한 응답으로 작업 Re-Creation
 
 더 복잡 한 문제를 위해 Android는 구성 변경 이라는 혼합에서 하나 이상의 렌치를 throw 합니다. 구성 변경은 활동의 구성이 변경 될 때 발생 하는 신속한 작업 소멸/재평가 주기입니다. 예를 들어 장치를 [회전](~/android/app-fundamentals/handling-rotation.md) 하거나 (활동을 가로 또는 세로 모드로 다시 빌드해야 하는 경우), 키보드를 표시 하거나 (활동에 자체 크기를 조정할 수 있는 기회가 표시 됨), 장치가 도크에 배치 될 때 발생 합니다.
 
@@ -76,13 +76,13 @@ Android SDK 및 확장에서 Xamarin.ios 프레임 워크는 응용 프로그램
 #### <a name="oncreate"></a>OnCreate
 
 [OnCreate](xref:Android.App.Activity.OnCreate*) 은 활동을 만들 때 호출 되는 첫 번째 메서드입니다.
-`OnCreate`는 다음과 같은 작업에 필요할 수 있는 시작 초기화를 수행 하도록 항상 재정의 됩니다.
+`OnCreate` 는 다음과 같은 작업에 필요할 수 있는 시작 초기화를 수행 하도록 항상 재정의 됩니다.
 
 - 뷰 만들기
 - 변수 초기화
 - 정적 데이터를 목록에 바인딩
 
-`OnCreate`는 번들이 null이 아닌 경우 활동 간에 상태 정보와 개체를 저장 하 고 전달 하기 위한 사전 인 [번들](xref:Android.OS.Bundle) 매개 변수를 사용 합니다 .이는 활동이 다시 시작 되 고 이전 인스턴스에서 상태를 복원 하는 것을 나타냅니다. 다음 코드는 번들에서 값을 검색 하는 방법을 보여 줍니다.
+`OnCreate` 는 번들이 null이 아닌 경우 활동 간에 상태 정보와 개체를 저장 하 고 전달 하기 위한 사전 인 [번들](xref:Android.OS.Bundle) 매개 변수를 사용 합니다 .이는 활동이 다시 시작 되 고 이전 인스턴스에서 상태를 복원 하는 것을 나타냅니다. 다음 코드는 번들에서 값을 검색 하는 방법을 보여 줍니다.
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -134,7 +134,7 @@ public void OnResume()
 }
 ```
 
-`OnResume`에서 수행 되는 모든 작업은 활동을 `OnPause` `OnResume` `OnPause` 다시 life로 전환할 때 실행이 보장 되는 유일한 수명 주기 방법 이기 때문에에서 수행 해야 합니다.
+`OnResume` 에서 수행 되는 모든 작업은 활동을 `OnPause` `OnResume` `OnPause` 다시 life로 전환할 때 실행이 보장 되는 유일한 수명 주기 방법 이기 때문에에서 수행 해야 합니다.
 
 #### <a name="onpause"></a>OnPause
 
@@ -168,8 +168,8 @@ public void OnPause()
 
 이후에 호출 될 수 있는 두 가지 수명 주기 메서드는 `OnPause` 다음과 같습니다.
 
-1. `OnResume`작업이 포그라운드로 반환 될 경우가 호출 됩니다.
-1. `OnStop`활동을 백그라운드에 배치 하는 경우가 호출 됩니다.
+1. `OnResume` 작업이 포그라운드로 반환 될 경우가 호출 됩니다.
+1. `OnStop` 활동을 백그라운드에 배치 하는 경우가 호출 됩니다.
 
 #### <a name="onstop"></a>OnStop
 
@@ -179,11 +179,11 @@ public void OnPause()
 - 기존 작업을 포그라운드로 가져오는 중인 경우
 - 활동을 제거 하 고 있습니다.
 
-`OnStop`는 Android가 리소스에 대해 않다거나 하 고 작업을 올바르게 백그라운드에서 사용할 수 없는 경우와 같이 메모리 부족 상황에서 항상 호출 될 수 있습니다. 따라서 `OnStop` 소멸을 위해 활동을 준비할 때 호출을 사용 하지 않는 것이 좋습니다. 이 작업 후에 호출 될 수 있는 다음 수명 주기 메서드는 `OnDestroy` 활동이 사라질 때 또는 `OnRestart` 활동이 사용자와 상호 작용 하는 경우에 반환 됩니다.
+`OnStop` 는 Android가 리소스에 대해 않다거나 하 고 작업을 올바르게 백그라운드에서 사용할 수 없는 경우와 같이 메모리 부족 상황에서 항상 호출 될 수 있습니다. 따라서 `OnStop` 소멸을 위해 활동을 준비할 때 호출을 사용 하지 않는 것이 좋습니다. 이 작업 후에 호출 될 수 있는 다음 수명 주기 메서드는 `OnDestroy` 활동이 사라질 때 또는 `OnRestart` 활동이 사용자와 상호 작용 하는 경우에 반환 됩니다.
 
 #### <a name="ondestroy"></a>OnDestroy
 
-[Ondestroy](xref:Android.App.Activity.OnDestroy) 은 작업 인스턴스에서 제거 되 고 메모리에서 완전히 제거 되기 전에 호출 되는 최종 메서드입니다. 극단적인 상황에서 Android는 활동을 호스트 하는 응용 프로그램 프로세스를 중단할 수 있으며,이로 인해가 `OnDestroy` 호출 되지 않습니다. 대부분의 정리 및 종료가 및 메서드에서 수행 되었으므로 대부분의 작업은이 메서드를 구현 하지 않습니다 `OnPause` `OnStop` . `OnDestroy`메서드는 일반적으로 리소스 누수가 발생할 수 있는 장기 실행 리소스를 정리 하기 위해 재정의 됩니다. 이에 대 한 예는에서 시작 된 백그라운드 스레드 일 수 있습니다 `OnCreate` .
+[Ondestroy](xref:Android.App.Activity.OnDestroy) 은 작업 인스턴스에서 제거 되 고 메모리에서 완전히 제거 되기 전에 호출 되는 최종 메서드입니다. 극단적인 상황에서 Android는 활동을 호스트 하는 응용 프로그램 프로세스를 중단할 수 있으며,이로 인해가 `OnDestroy` 호출 되지 않습니다. 대부분의 정리 및 종료가 및 메서드에서 수행 되었으므로 대부분의 작업은이 메서드를 구현 하지 않습니다 `OnPause` `OnStop` . `OnDestroy`메서드는 일반적으로 리소스 누수가 발생할 수 있는 장기 실행 작업을 정리 하기 위해 재정의 됩니다. 이에 대 한 예는에서 시작 된 백그라운드 스레드 일 수 있습니다 `OnCreate` .
 
 활동이 제거 된 후에는 수명 주기 메서드가 호출 되지 않습니다.
 
