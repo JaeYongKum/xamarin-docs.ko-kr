@@ -11,18 +11,19 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dff01728c986b23e59af702edb3bfd8c74ad744a
-ms.sourcegitcommit: d2aa3a8bf9a60b6708db55b10b0c6893c06d3256
+ms.openlocfilehash: 5af5846c77c5cd63e14494c25e5dc04ebcea4b7d
+ms.sourcegitcommit: f90e908a72cf616ee303c2751729b62f11654379
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93331450"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96299961"
 ---
 # <a name="xaml-previewer-for-no-locxamarinforms"></a>XAML 미리 보기 Xamarin.Forms
 
 _Xamarin.Forms입력할 때 렌더링 된 레이아웃 보기_
 
 > [!WARNING]
+> XAML 미리 보기는 Visual Studio 2019 버전 16.8 및 Mac용 Visual Studio 버전 8.8에서 단계적으로 시작 됩니다.
 > XAML을 미리 보는 권장 방법은 이제 **[Xaml 핫 다시 로드](~/xamarin-forms/xaml/hot-reload.md)** 를 사용 하는 것입니다.
 
 ## <a name="overview"></a>개요
@@ -78,7 +79,7 @@ XAML 파일을 열면 **도구 > 옵션 > Xamarin > Xamarin.Forms XAML 미리 �
 미리 보기 창의 위쪽에 있는 옵션은 다음과 같습니다.
 
 * **Android** – 화면의 android 버전 표시
-* **ios** – 화면의 ios 버전을 표시 합니다 ( *참고: Windows에서 Visual Studio를 사용 하는 경우이 모드를 사용 하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 해야 함).*
+* **ios** – 화면의 ios 버전을 표시 합니다 (*참고: Windows에서 Visual Studio를 사용 하는 경우이 모드를 사용 하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 해야 함).*
 * 해상도 및 화면 크기를 포함 하는 Android 또는 iOS 장치의 **장치** 드롭다운 목록
 * **세로 (아이콘)** – 미리 보기에 세로 방향을 사용 합니다.
 * **가로 (아이콘)** – 미리 보기에 가로 방향을 사용 합니다.
