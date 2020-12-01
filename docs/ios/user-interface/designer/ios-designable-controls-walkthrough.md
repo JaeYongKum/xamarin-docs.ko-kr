@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: ad07d6e7381c646273eae8fe6aaecb2d487027f7
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: f4b161159423bc7e5d6d99e9dfd4407532106979
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436803"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439454"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>iOS 디자이너에서 사용자 지정 컨트롤 사용
+
+> [!WARNING]
+> IOS Designer는 Visual Studio 2019 버전 16.8 및 Mac 용 Visual Studio 2019 버전 8.8에서 단계적으로 시작 됩니다.
+> IOS 사용자 인터페이스를 작성 하는 데 권장 되는 방법은 Xcode를 실행 하는 Mac에서 직접입니다. 자세한 내용은 [Xcode를 사용 하 여 사용자 인터페이스 디자인](../storyboards/index.md)을 참조 하세요. 
 
 ## <a name="requirements"></a>요구 사항
 
@@ -198,7 +202,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
     [![샘플 앱 실행](ios-designable-controls-walkthrough-images/10-app.png)](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
-## <a name="adding-design-time-properties"></a>디자인 타임 속성 추가
+## <a name="adding-design-time-properties"></a>Design-Time 속성 추가
 
 또한 디자이너에는 숫자, 열거형, 문자열, bool, CGSize, UIColor 및 UIImage 형식의 사용자 지정 컨트롤에 대 한 디자인 타임 지원이 포함 됩니다. 이를 설명 하기 위해에 속성을 추가 하 여 `ScratchTicketView` "긁힌 끔" 이미지를 설정 하겠습니다.
 
@@ -262,7 +266,7 @@ public override void Draw(CGRect rect)
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 사용자 지정 컨트롤을 만드는 방법과 iOS 디자이너를 사용 하 여 iOS 응용 프로그램에서 사용자 지정 컨트롤을 사용 하는 방법을 살펴보았습니다. 디자이너의 **도구 상자**에서 응용 프로그램에 사용할 수 있도록 컨트롤을 만들고 빌드하는 방법에 대해 살펴보았습니다. 또한 디자인 타임 및 런타임 모두에서 적절히 렌더링 하 고 디자이너에서 사용자 지정 컨트롤 속성을 노출 하는 방법에 맞게 컨트롤을 구현 하는 방법을 살펴보았습니다.
+이 문서에서는 사용자 지정 컨트롤을 만드는 방법과 iOS 디자이너를 사용 하 여 iOS 응용 프로그램에서 사용자 지정 컨트롤을 사용 하는 방법을 살펴보았습니다. 디자이너의 **도구 상자** 에서 응용 프로그램에 사용할 수 있도록 컨트롤을 만들고 빌드하는 방법에 대해 살펴보았습니다. 또한 디자인 타임 및 런타임 모두에서 적절히 렌더링 하 고 디자이너에서 사용자 지정 컨트롤 속성을 노출 하는 방법에 맞게 컨트롤을 구현 하는 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: 7c6b5a4dd2f6f5d4992d84d5d8690a6dda3d20e3
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 07f3e313a743c9d95f8baf2be7a31f16c6ca4f7e
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432759"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439475"
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 
 _이 가이드에서는 Xamarin Designer for iOS를 소개 합니다. IOS 디자이너를 사용 하 여 컨트롤을 시각적으로 레이아웃 하는 방법, 코드에서 해당 컨트롤에 액세스 하는 방법 및 속성을 편집 하는 방법을 보여 줍니다._
+
+> [!WARNING]
+> IOS Designer는 Visual Studio 2019 버전 16.8 및 Mac 용 Visual Studio 2019 버전 8.8에서 단계적으로 시작 됩니다.
+> IOS 사용자 인터페이스를 작성 하는 데 권장 되는 방법은 Xcode를 실행 하는 Mac에서 직접입니다. 자세한 내용은 [Xcode를 사용 하 여 사용자 인터페이스 디자인](../storyboards/index.md)을 참조 하세요. 
 
 Xamarin Designer for iOS는 Xcode의 Interface Builder 및 Android Designer와 유사한 시각적 인터페이스 디자이너입니다. 이러한 기능 중 일부에는 Windows 및 Mac 용 Visual Studio의 원활한 통합, 끌어서 놓기 편집 기능, 이벤트 처리기를 설정 하기 위한 인터페이스 및 사용자 지정 컨트롤을 렌더링 하는 기능이 포함 되어 있습니다.
 
@@ -68,13 +72,13 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-코드에서 단추를 액세스 하 고 조작 하려면 고유 식별자가 있어야 합니다. 단추를 선택 하 고 **Properties Pad**를 연 다음 **이름** 필드를 "submitbutton"과 같은 값으로 설정 하 여 고유 식별자를 제공 합니다.
+코드에서 단추를 액세스 하 고 조작 하려면 고유 식별자가 있어야 합니다. 단추를 선택 하 고 **Properties Pad** 를 연 다음 **이름** 필드를 "submitbutton"과 같은 값으로 설정 하 여 고유 식별자를 제공 합니다.
 
 [![Properties Pad에서 단추의 이름 설정](introduction-images/4-settingbuttonname-vsmac.png "Properties Pad에서 단추의 이름 설정")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-코드에서 단추를 액세스 하 고 조작 하려면 고유 식별자가 있어야 합니다. 단추를 선택 하 고 **속성 창을**연 다음 **이름** 필드를 "submitbutton"과 같은 값으로 설정 하 여 고유 식별자를 제공 합니다.
+코드에서 단추를 액세스 하 고 조작 하려면 고유 식별자가 있어야 합니다. 단추를 선택 하 고 **속성 창을** 연 다음 **이름** 필드를 "submitbutton"과 같은 값으로 설정 하 여 고유 식별자를 제공 합니다.
 
 [![속성 창에서 단추의 이름 설정](introduction-images/4-settingbuttonname-vs.png "속성 창에서 단추의 이름 설정")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
@@ -84,13 +88,13 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-**Solution Pad**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**Solution Pad** 에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-**솔루션 탐색기**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**솔루션 탐색기** 에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
@@ -98,7 +102,7 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 - **ViewController.cs** 는 클래스와 관련 된 사용자 지정 코드로 채워야 합니다 `ViewController` . 이 파일에서 클래스는 `ViewController` 다양 한 iOS 뷰 컨트롤러 수명 주기 메서드에 응답 하 고, UI를 사용자 지정 하 고, 단추 탭과 같은 사용자 입력에 응답할 수 있습니다.
 
-- **ViewController.designer.cs** 는 iOS 디자이너에서 코드에 시각적으로 생성 된 인터페이스를 매핑하기 위해 만든 생성 된 파일입니다. 이 파일의 변경 내용은 덮어쓰므로 수정 하면 안 됩니다. 이 파일의 속성 선언을 사용 하면 클래스의 코드가 `ViewController` IOS 디자이너에서 설정 된 컨트롤을 **이름**으로 사용 하 여 액세스할 수 있습니다. **ViewController.designer.cs** 를 열면 다음 코드가 표시 됩니다.
+- **ViewController.designer.cs** 는 iOS 디자이너에서 코드에 시각적으로 생성 된 인터페이스를 매핑하기 위해 만든 생성 된 파일입니다. 이 파일의 변경 내용은 덮어쓰므로 수정 하면 안 됩니다. 이 파일의 속성 선언을 사용 하면 클래스의 코드가 `ViewController` IOS 디자이너에서 설정 된 컨트롤을 **이름** 으로 사용 하 여 액세스할 수 있습니다. **ViewController.designer.cs** 를 열면 다음 코드가 표시 됩니다.
 
 ```csharp
 namespace Designer
@@ -123,7 +127,7 @@ namespace Designer
 
 `SubmitButton`속성 선언은 `ViewController` **ViewController.designer.cs** 파일 뿐만 아니라 전체 클래스를 storyboard에 정의 된 단추에 연결 합니다. **ViewController.cs** 는 클래스의 일부를 정의 하기 때문 `ViewController` 에에 액세스할 수 있습니다 `SubmitButton` .
 
-다음 스크린샷에서 IntelliSense는 이제 `SubmitButton` **ViewController.cs**에서 참조를 인식 한다는 것을 보여 줍니다.
+다음 스크린샷에서 IntelliSense는 이제 `SubmitButton` **ViewController.cs** 에서 참조를 인식 한다는 것을 보여 줍니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -147,13 +151,13 @@ namespace Designer
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-Mac용 Visual Studio를 사용 하 여 만든 xamarin.ios 프로젝트에는 storyboard가 포함 됩니다. 스토리 보드의 내용을 보려면 **Solution Pad**에서 storyboard 파일을 두 번 클릭 합니다.
+Mac용 Visual Studio를 사용 하 여 만든 xamarin.ios 프로젝트에는 storyboard가 포함 됩니다. 스토리 보드의 내용을 보려면 **Solution Pad** 에서 storyboard 파일을 두 번 클릭 합니다.
 
 [![IOS 디자이너에서 열려 있는 스토리 보드](introduction-images/7-storyboardopen-vsmac.png "IOS 디자이너에서 열려 있는 스토리 보드")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Visual Studio를 사용 하 여 만든 대부분의 Xamarin.ios 프로젝트에는 storyboard가 포함 됩니다. 스토리 보드의 내용을 보려면 **솔루션 탐색기**에서 storyboard 파일을 두 번 클릭 합니다.
+Visual Studio를 사용 하 여 만든 대부분의 Xamarin.ios 프로젝트에는 storyboard가 포함 됩니다. 스토리 보드의 내용을 보려면 **솔루션 탐색기** 에서 storyboard 파일을 두 번 클릭 합니다.
 
 [![IOS 디자이너에서 열려 있는 스토리 보드](introduction-images/7-storyboardopen-vs.png "IOS 디자이너에서 열려 있는 스토리 보드")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
@@ -173,7 +177,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 2. **제약 조건 도구 모음** – 사용자 인터페이스에서 요소를 배치 하는 두 가지 다른 방법으로 프레임 편집 모드와 제약 조건 편집 모드 간을 전환할 수 있습니다.
 3. **도구 상자** – 디자인 화면으로 끌어 오고 사용자 인터페이스에 추가할 수 있는 컨트롤러, 개체, 컨트롤, 데이터 뷰, 제스처 인식기, 창 및 막대를 표시 합니다.
 4. **Properties Pad** – id, 비주얼 스타일, 접근성, 레이아웃 및 동작을 포함 하 여 선택한 컨트롤의 속성을 표시 합니다.
-5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **Properties Pad**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
+5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **Properties Pad** 에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
 6. **아래쪽 도구 모음** – iOS Designer에서 장치, 방향 및 확대/축소를 포함 하 여 storyboard 또는. xib 파일을 표시 하는 방법을 변경 하는 옵션을 포함 합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -184,7 +188,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 2. **제약 조건 도구 모음** – 사용자 인터페이스에서 요소를 배치 하는 두 가지 다른 방법으로 프레임 편집 모드와 제약 조건 편집 모드 간을 전환할 수 있습니다.
 3. **도구 상자** – 디자인 화면으로 끌어 오고 사용자 인터페이스에 추가할 수 있는 컨트롤러, 개체, 컨트롤, 데이터 뷰, 제스처 인식기, 창 및 막대를 표시 합니다.
 4. **속성 창** -id, 비주얼 스타일, 접근성, 레이아웃 및 동작을 포함 하 여 선택한 컨트롤의 속성을 표시 합니다.
-5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **속성 창**에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
+5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 표시 합니다. 트리의 항목을 클릭 하면 iOS 디자이너에서 항목을 선택 하 고  **속성 창** 에 해당 속성을 표시 합니다. 이 기능은 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택 하는 데 유용 합니다.
 6. **아래쪽 도구 모음** – iOS Designer에서 장치, 방향 및 확대/축소를 포함 하 여 storyboard 또는. xib 파일을 표시 하는 방법을 변경 하는 옵션을 포함 합니다.
 
 -----
@@ -211,7 +215,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 
 #### <a name="context-menu-commands"></a>상황에 맞는 메뉴 명령
 
-상황에 맞는 메뉴는 디자인 화면과 **문서 개요**에서 모두 사용할 수 있습니다. 이 메뉴는 선택한 컨트롤과 부모에 대 한 명령을 제공 합니다 .이 명령은 중첩 된 계층의 뷰를 사용 하는 경우에 유용 합니다.
+상황에 맞는 메뉴는 디자인 화면과 **문서 개요** 에서 모두 사용할 수 있습니다. 이 메뉴는 선택한 컨트롤과 부모에 대 한 명령을 제공 합니다 .이 명령은 중첩 된 계층의 뷰를 사용 하는 경우에 유용 합니다.
 
 [![디자인 화면의 상황에 맞는 메뉴](introduction-images/10-contextmenudesignsurface-vsmac.png "디자인 화면의 상황에 맞는 메뉴")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
@@ -298,9 +302,9 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 
 장치 및 방향 선택은 iOS 디자이너가 디자인을 미리 보는 방법에만 적용 됩니다. **특성 편집** 단추를 사용 하 여 달리 지정 하지 않는 한, 현재 선택 항목에 관계 없이 새로 추가 된 제약 조건이 모든 장치 및 방향에 적용 됩니다.
 
-[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음과 같은 예를 고려할 수 있습니다.
+[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음 예제를 살펴보세요.
 
-- **IPhone SE**  /  **세로**를 선택 하는 경우 팝 오버는 컴팩트 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다. 
+- **IPhone SE**  /  **세로** 를 선택 하는 경우 팝 오버는 컴팩트 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다. 
 - **IPad Pro 9.7 "**  /  **가로**  /  **전체 화면** 을 선택 하면 팝 오버는 일반 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
@@ -369,7 +373,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 
 #### <a name="editing-properties-in-the-properties-pad"></a>Properties Pad에서 속성 편집
 
-IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **Properties Pad**의 속성 편집을 지원 합니다. 사용 가능한 속성은 아래 스크린샷에 표시 된 것 처럼 선택 된 컨트롤에 따라 변경 됩니다.
+IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **Properties Pad** 의 속성 편집을 지원 합니다. 사용 가능한 속성은 아래 스크린샷에 표시 된 것 처럼 선택 된 컨트롤에 따라 변경 됩니다.
 
 [![단추 속성](introduction-images/18a-buttonpropertiespad-vsmac.png "단추 속성")](introduction-images/18a-buttonpropertiespad-vsmac-large.png#lightbox)
 
@@ -379,7 +383,7 @@ IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **Prope
 
 #### <a name="editing-properties-in-the-properties-window"></a>속성 창에서 속성 편집
 
-IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **속성 창**에서 속성 편집을 지원 합니다. 사용 가능한 속성은 아래 스크린샷에 표시 된 것 처럼 선택 된 컨트롤에 따라 변경 됩니다.
+IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **속성 창** 에서 속성 편집을 지원 합니다. 사용 가능한 속성은 아래 스크린샷에 표시 된 것 처럼 선택 된 컨트롤에 따라 변경 됩니다.
 
 [![단추 속성](introduction-images/18a-buttonpropertieswindow-vs.png "단추 속성")](introduction-images/18a-buttonpropertieswindow-vs-large.png#lightbox)
 
@@ -406,7 +410,7 @@ IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **속�
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **Properties Pad**의 **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서 `HandleClick` 메서드는 이벤트 내에서 단추의 **터치** 를 처리 합니다.
+여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **Properties Pad** 의 **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서 `HandleClick` 메서드는 이벤트 내에서 단추의 **터치** 를 처리 합니다.
 
 [![단추에 대 한 이벤트 처리기가 설정 된 Properties Pad](introduction-images/19-buttonpropertiespadevents-vsmac.png "단추에 대 한 이벤트 처리기가 설정 된 Properties Pad")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
@@ -424,7 +428,7 @@ IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **속�
 
 [![인식할 수 없는 선택기 예외입니다.](introduction-images/20-unrecognizedselector-vsmac.png "인식할 수 없는 선택기 예외입니다.")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
-**Properties Pad**에서 이벤트 처리기를 지정한 후에는 iOS Designer가 해당 코드 파일을 즉시 열고 메서드 선언을 삽입 합니다. 
+**Properties Pad** 에서 이벤트 처리기를 지정한 후에는 iOS Designer가 해당 코드 파일을 즉시 열고 메서드 선언을 삽입 합니다. 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -454,7 +458,7 @@ IOS 디자이너는 인터페이스의 컨트롤 계층 구조를 윤곽선으�
 
 ## <a name="revert-to-xcode"></a>Xcode로 되돌리기
 
-IOS 디자이너와 Xcode Interface Builder를 교대로 사용할 수 있습니다. Xcode Interface Builder에서 storyboard 또는 xib 파일을 열려면 파일을 마우스 오른쪽 단추로 클릭 하 고 아래 스크린샷에 표시 된 것 처럼 **> Xcode Interface Builder를 사용 하 여 열기**를 선택 합니다.
+IOS 디자이너와 Xcode Interface Builder를 교대로 사용할 수 있습니다. Xcode Interface Builder에서 storyboard 또는 xib 파일을 열려면 파일을 마우스 오른쪽 단추로 클릭 하 고 아래 스크린샷에 표시 된 것 처럼 **> Xcode Interface Builder를 사용 하 여 열기** 를 선택 합니다.
 
 [![Xcode Interface Builder에서 스토리 보드 열기](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Xcode Interface Builder에서 스토리 보드 열기")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
@@ -464,7 +468,7 @@ Xcode Interface Builder에서 편집한 후 파일을 저장 하 고 Mac용 Visu
 
 ## <a name="revert-to-xcode"></a>Xcode로 되돌리기
 
-IOS 디자이너와 Xcode Interface Builder를 서로 바꿔 사용할 수 있지만 Xcode Interface Builder Mac 에서만 사용할 수 있습니다. Mac의 Xcode Interface Builder에서 storyboard 또는. xib 파일을 열려면 [Mac용 Visual Studio](/visualstudio/mac/)에서 xamarin.ios 프로젝트가 포함 된 솔루션을 열고, 파일을 마우스 오른쪽 단추로 클릭 하 고, 아래 스크린샷에 나와 있는 것 처럼 **> Xcode Interface Builder를 사용 하 여 열기**를 선택 합니다.
+IOS 디자이너와 Xcode Interface Builder를 서로 바꿔 사용할 수 있지만 Xcode Interface Builder Mac 에서만 사용할 수 있습니다. Mac의 Xcode Interface Builder에서 storyboard 또는. xib 파일을 열려면 [Mac용 Visual Studio](/visualstudio/mac/)에서 xamarin.ios 프로젝트가 포함 된 솔루션을 열고, 파일을 마우스 오른쪽 단추로 클릭 하 고, 아래 스크린샷에 나와 있는 것 처럼 **> Xcode Interface Builder를 사용 하 여 열기** 를 선택 합니다.
 
 [![Xcode Interface Builder에서 스토리 보드 열기](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Xcode Interface Builder에서 스토리 보드 열기")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 

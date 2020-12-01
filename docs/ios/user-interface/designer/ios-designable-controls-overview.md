@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c8a852a37e2cd5c679283bc4d078f19e6e5d241
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 593f03588d691071d4a231d9ed788391530d5608
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939687"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439424"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS의 사용자 지정 컨트롤
 
 _Xamarin Designer for iOS는 프로젝트에서 만들었거나 Xamarin 구성 요소 저장소와 같은 외부 소스에서 참조 되는 사용자 지정 컨트롤 렌더링을 지원 합니다._
+
+> [!WARNING]
+> IOS Designer는 Visual Studio 2019 버전 16.8 및 Mac 용 Visual Studio 2019 버전 8.8에서 단계적으로 시작 됩니다.
+> IOS 사용자 인터페이스를 작성 하는 데 권장 되는 방법은 Xcode를 실행 하는 Mac에서 직접입니다. 자세한 내용은 [Xcode를 사용 하 여 사용자 인터페이스 디자인](../storyboards/index.md)을 참조 하세요. 
 
 Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 시각화 하 고 대부분의 iOS 뷰 및 뷰 컨트롤러에 대 한 WYSIWYG 편집 지원을 제공 하기 위한 강력한 도구입니다. 앱에는 iOS로 빌드된 항목을 확장 하는 사용자 지정 컨트롤도 포함 될 수 있습니다. 이러한 사용자 지정 컨트롤에 대 한 지침을 염두에 두면 iOS 디자이너에서 렌더링 하 여 훨씬 더 풍부한 편집 환경을 제공할 수도 있습니다. 이 문서에서는 이러한 지침을 살펴봅니다.
 
@@ -25,11 +29,11 @@ Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 
 다음 요구 사항을 모두 충족 하는 컨트롤이 디자인 화면에 렌더링 됩니다.
 
 1. [Uiview](xref:UIKit.UIView) 또는 [uiviewcontroller](xref:UIKit.UIViewController)의 직접 또는 간접 서브 클래스입니다. 다른 [Nsobject](xref:Foundation.NSObject) 서브 클래스는 디자인 화면에 아이콘으로 표시 됩니다.
-2. 이 클래스에는 목표-C에 노출 하는 [Registerattribute](xref:Foundation.RegisterAttribute) 가 있습니다.
+2. 이 클래스에는 목표-C에 노출 하는  [Registerattribute](xref:Foundation.RegisterAttribute) 가 있습니다.
 3. [필요한 IntPtr 생성자](~/ios/internals/api-design/index.md)가 있습니다.
 4. [IComponent](xref:System.ComponentModel.IComponent) 인터페이스를 구현 하거나 [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) 를 True로 설정 합니다.
 
-위의 요구 사항을 충족 하는 코드에 정의 된 컨트롤은 해당 프로젝트를 시뮬레이터에 대해 컴파일할 때 디자이너에 표시 됩니다. 기본적으로 모든 사용자 지정 컨트롤은 **도구 상자**의 **사용자 지정 구성 요소** 섹션에 표시 됩니다. 그러나 [Categoryattribute](xref:System.ComponentModel.CategoryAttribute) 를 사용자 지정 컨트롤의 클래스에 적용 하 여 다른 섹션을 지정할 수 있습니다.
+위의 요구 사항을 충족 하는 코드에 정의 된 컨트롤은 해당 프로젝트를 시뮬레이터에 대해 컴파일할 때 디자이너에 표시 됩니다. 기본적으로 모든 사용자 지정 컨트롤은 **도구 상자** 의 **사용자 지정 구성 요소** 섹션에 표시 됩니다. 그러나 [Categoryattribute](xref:System.ComponentModel.CategoryAttribute) 를 사용자 지정 컨트롤의 클래스에 적용 하 여 다른 섹션을 지정할 수 있습니다.
 
 디자이너는 타사 목표-C 라이브러리 로드를 지원 하지 않습니다.
 
@@ -38,7 +42,7 @@ Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 
 다음 조건이 충족 되 면 사용자 지정 컨트롤에 의해 선언 된 속성이 속성 패널에 표시 됩니다.
 
 1. 속성에는 public getter 및 setter가 있습니다.
-1. 속성에는 [Exportattribute](xref:Foundation.ExportAttribute) 뿐만 아니라 [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) 가 True로 설정 되어 있습니다.
+1. 속성에는  [Exportattribute](xref:Foundation.ExportAttribute) 뿐만 아니라  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) 가 True로 설정 되어 있습니다.
 1. 속성 형식은 숫자 형식, 열거형 형식, 문자열, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor)또는 [uiimage](xref:UIKit.UIImage)입니다. 지원 되는 형식 목록은 나중에 확장할 수 있습니다.
 
 속성은 속성 패널에서 표시 되는 레이블을 지정 하기 위해 [Displaynameattribute](xref:System.ComponentModel.DisplayNameAttribute) 로 데코레이팅 될 수도 있습니다.
@@ -124,8 +128,8 @@ public class CustomView : UIView {
 
 `CustomView`구성 요소는 `Counter` 개발자가 iOS 디자이너 내에서 설정할 수 있는 속성을 노출 합니다. 그러나 디자이너 내에 설정 된 값에 관계 없이 속성의 값은 `Counter` 항상 0이 됩니다. 이유는 다음과 같습니다.
 
-- 의 인스턴스는 `CustomControl` 스토리 보드 파일에서 팽창 됩니다.
-- IOS 디자이너에서 수정 된 모든 속성 (예:의 값을 2로 설정)이 설정 됩니다 ( `Counter` 예:).
+- 의 인스턴스는  `CustomControl` 스토리 보드 파일에서 팽창 됩니다.
+- IOS 디자이너에서 수정 된 모든 속성 (예:의 값을 2로 설정)이 설정 됩니다 (  `Counter` 예:).
 - `AwakeFromNib`메서드가 실행 되 고 구성 요소의 메서드에 대 한 호출이 수행 됩니다 `Initialize` .
 - `Initialize`속성의 값 `Counter` 이 0으로 다시 설정 됩니다.
 

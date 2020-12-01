@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 44297e32821721d483a265e7d2a69016f4e1a87b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 37d90bc42e843dd3b3c8f07689e0e229225ff57d
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940025"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439459"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
+
+> [!WARNING]
+> IOS Designer는 Visual Studio 2019 버전 16.8 및 Mac 용 Visual Studio 2019 버전 8.8에서 단계적으로 시작 됩니다.
+> IOS 사용자 인터페이스를 작성 하는 데 권장 되는 방법은 Xcode를 실행 하는 Mac에서 직접입니다. 자세한 내용은 [Xcode를 사용 하 여 사용자 인터페이스 디자인](../storyboards/index.md)을 참조 하세요. 
 
 자동 레이아웃 ("적응 레이아웃"이 라고도 함)은 응답성이 뛰어난 디자인 방법입니다. 각 요소의 위치가 화면의 점으로 하드 코딩 되는 전환 레이아웃 시스템과 달리 자동 레이아웃은 디자인 화면에서 다른 요소를 기준으로 하는 요소의 위치와 *관계* 에 대 한 것입니다. 자동 레이아웃의 핵심은 화면에 있는 다른 요소의 컨텍스트에서 요소나 요소의 집합을 정의 하는 제약 조건이 나 규칙의 개념입니다. 요소가 화면에서 특정 위치에 연결 되어 있지 않기 때문에 제약 조건을 통해 다양 한 화면 크기 및 장치 방향에 적합 한 적응 레이아웃을 만들 수 있습니다.
 
@@ -30,7 +34,7 @@ Xamarin Designer for iOS은 Mac용 Visual Studio Visual Studio 2017 이상에서
 
 제약 조건은 화면에 있는 두 요소 간의 관계를 수학적으로 표현한 것입니다. UI 요소의 위치를 수학적 관계로 표현 하면 UI 요소의 위치를 하드 코딩 하는 것과 관련 된 몇 가지 문제를 해결 합니다. 예를 들어 화면 아래쪽의 세로 모드에서 단추 20px를 배치 하는 경우 단추의 위치는 가로 모드에서 화면을 벗어날 것입니다. 이를 방지 하기 위해 20px 단추의 아래쪽 가장자리를 뷰의 아래쪽 가장자리에 배치 하는 제약 조건을 설정할 수 있습니다. 그러면 단추 가장자리의 위치가 button으로 계산 됩니다 *. bottom = 20px*.이 단추를 클릭 하면 뷰 맨 아래에서 세로 및 가로 모드로 단추 20px 배치 됩니다. 수학적 관계를 기준으로 배치를 계산 하는 기능은 UI 디자인에서 제약 조건을 유용 하 게 만드는 것입니다.
 
-제약 조건을 설정할 때 제약 조건이 적용 되는 개체 `NSLayoutConstraint` 와 제약 조건이 적용 되는 속성 또는 *특성*을 인수로 사용 하는 개체를 만듭니다. IOS 디자이너에서 특성에는 요소의 *왼쪽*, *오른쪽*, *위쪽*및 *아래쪽* 과 같은 가장자리가 포함 됩니다. 여기에는 *높이* 및 *너비*와 같은 크기 특성, 중심점 위치 ( *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery*)도 포함 됩니다. 예를 들어 두 단추의 왼쪽 경계 위치에 제약 조건을 추가 하는 경우 디자이너는 내부적으로 다음 코드를 생성 합니다.
+제약 조건을 설정할 때 제약 조건이 적용 되는 개체 `NSLayoutConstraint` 와 제약 조건이 적용 되는 속성 또는 *특성* 을 인수로 사용 하는 개체를 만듭니다. IOS 디자이너에서 특성에는 요소의 *왼쪽*, *오른쪽*, *위쪽* 및 *아래쪽* 과 같은 가장자리가 포함 됩니다. 여기에는 *높이* 및 *너비* 와 같은 크기 특성, 중심점 위치 ( *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery*)도 포함 됩니다. 예를 들어 두 단추의 왼쪽 경계 위치에 제약 조건을 추가 하는 경우 디자이너는 내부적으로 다음 코드를 생성 합니다.
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -47,7 +51,7 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
     ![속성 패널의 자동 레이아웃 사용 확인란](designer-auto-layout-images/image01.png)
 
-기본적으로 화면에는 제약 조건이 만들어지거나 표시 되지 않습니다. 대신 컴파일 시간에 프레임 정보에서 자동으로 유추 됩니다. 제약 조건을 추가 하려면 디자인 화면에서 요소를 선택 하 고 여기에 제약 조건을 추가 해야 합니다. **제약 조건 도구 모음**을 사용 하 여이 작업을 수행할 수 있습니다.
+기본적으로 화면에는 제약 조건이 만들어지거나 표시 되지 않습니다. 대신 컴파일 시간에 프레임 정보에서 자동으로 유추 됩니다. 제약 조건을 추가 하려면 디자인 화면에서 요소를 선택 하 고 여기에 제약 조건을 추가 해야 합니다. **제약 조건 도구 모음** 을 사용 하 여이 작업을 수행할 수 있습니다.
 
 ## <a name="constraints-toolbar"></a>제약 조건 도구 모음
 
@@ -71,31 +75,31 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
 제약 조건을 열 팝 오버 뷰에서 미리 설정 된 제약 조건을 표시 합니다. 모든 간격 제약 조건을 설정 하려면 오른쪽 위 모서리의 combobox에서 모든 **면** 을 선택 하 고 **모두 지우기** 를 선택 하 여 제거 합니다.
 
-**W** 는 Width와 **H** 를 설정 하 여 height 제약 조건을 설정 합니다. **가로 세로 비율**을 확인 하는 경우 뷰 높이 및 너비가 다른 화면 크기로 제어 됩니다. 뷰의 너비는 r의 분자로 사용 되 고 높이는 분모로 사용 됩니다.
+**W** 는 Width와 **H** 를 설정 하 여 height 제약 조건을 설정 합니다. **가로 세로 비율** 을 확인 하는 경우 뷰 높이 및 너비가 다른 화면 크기로 제어 됩니다. 뷰의 너비는 r의 분자로 사용 되 고 높이는 분모로 사용 됩니다.
 
 ![제약 조건 간격](designer-auto-layout-images/constraints-spacing.png)
 
 간격 제약 조건에 대 한 네 개의 콤보 상자에 인접 뷰가 나열 되어 제약 조건을 고정 합니다.
 
-## <a name="surface-based-constraint-editing"></a>화면 기반 제약 조건 편집
+## <a name="surface-based-constraint-editing"></a>제약 조건 편집 Surface-Based
 
 보다 세부적으로 조정 된 제약 조건 편집을 위해 디자인 화면에서 직접 제약 조건과 상호 작용할 수 있습니다. 이 섹션에서는 pin 간격 컨트롤, 끌어 놓기 영역, 다양 한 형식의 제약 조건 작업을 포함 하 여 화면 기반 제약 조건 편집의 기본 사항을 소개 합니다.
 
 ### <a name="creating-constraints"></a>제약 조건 만들기
 
-IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두 가지 형식의 컨트롤을 제공 합니다. 다음 이미지에 나와 있는 것 처럼 컨트롤 및 *고정 간격 컨트롤*을 *끕니다* .
+IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두 가지 형식의 컨트롤을 제공 합니다. 다음 이미지에 나와 있는 것 처럼 컨트롤 및 *고정 간격 컨트롤* 을 *끕니다* .
 
 ![뷰 컨트롤](designer-auto-layout-images/controls.png)
 
 제약 조건 표시줄에서 제약 조건 모드 단추를 선택 하 여 전환 합니다.
 
-요소의 양쪽에 있는 4 개의 T 모양 핸들은 제약 조건에 대 한 요소의 *위쪽*, *오른쪽*, *아래쪽*및 *왼쪽* 가장자리를 정의 합니다. 요소의 오른쪽 아래에 있는 두 개의 셰이프 핸들이 각각 *height* 및 *width* 제약 조건을 정의 합니다. 중간 사각형은 *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery* 제약 조건을 모두 처리 합니다.
+요소의 양쪽에 있는 4 개의 T 모양 핸들은 제약 조건에 대 한 요소의 *위쪽*, *오른쪽*, *아래쪽* 및 *왼쪽* 가장자리를 정의 합니다. 요소의 오른쪽 아래에 있는 두 개의 셰이프 핸들이 각각 *height* 및 *width* 제약 조건을 정의 합니다. 중간 사각형은 *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery* 제약 조건을 모두 처리 합니다.
 
 제약 조건을 만들려면 핸들을 선택 하 고 디자인 화면에서 원하는 위치로 끕니다. 끌기를 시작 하면 제한할 수 있는 항목을 나타내는 녹색 선/상자가 화면에 표시 됩니다. 예를 들어 아래 스크린샷에서 가운데 단추의 위쪽을 제약 합니다.
 
  [![가운데 단추의 위쪽 제한](designer-auto-layout-images/image07.png)](designer-auto-layout-images/image07.png#lightbox)
 
-다른 두 단추에 있는 세 개의 파선 녹색 줄을 확인 합니다. 녹색 선은 *드롭 영역*또는 제한할 수 있는 다른 요소의 특성을 표시 합니다. 위의 스크린샷에서 다른 두 단추는 단추를 제한 하기 위한 3 개의 세로 끌어 놓기 영역 ( *bottom*, *system.windows.media.rotatetransform.centery*, *top*)을 제공 합니다. 뷰의 위쪽에 있는 녹색 파선은 뷰 컨트롤러가 보기 위쪽에 제약 조건을 제공 하 고 녹색 녹색 상자는 뷰 컨트롤러에서 위쪽 레이아웃 안내선 아래에 제약 조건을 제공 한다는 것을 의미 합니다.
+다른 두 단추에 있는 세 개의 파선 녹색 줄을 확인 합니다. 녹색 선은 *드롭 영역* 또는 제한할 수 있는 다른 요소의 특성을 표시 합니다. 위의 스크린샷에서 다른 두 단추는 단추를 제한 하기 위한 3 개의 세로 끌어 놓기 영역 ( *bottom*, *system.windows.media.rotatetransform.centery*, *top*)을 제공 합니다. 뷰의 위쪽에 있는 녹색 파선은 뷰 컨트롤러가 보기 위쪽에 제약 조건을 제공 하 고 녹색 녹색 상자는 뷰 컨트롤러에서 위쪽 레이아웃 안내선 아래에 제약 조건을 제공 한다는 것을 의미 합니다.
 
 > [!IMPORTANT]
 > 레이아웃 안내선은 상태 표시줄 또는 도구 모음과 같은 시스템 바의 존재를 고려 하는 상위 및 하위 제약 조건을 만들 수 있도록 하는 특별 한 유형의 제약 조건 대상입니다. 주된 용도 중 하나는 최신 버전의 컨테이너 보기가 상태 표시줄 아래에서 확장 되기 때문에 iOS 6 및 iOS 7 사이에 앱이 호환 되도록 하는 것입니다. 위쪽 레이아웃 가이드에 대 한 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)를 참조 하세요.
@@ -114,7 +118,7 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
  [![센터 제약 조건](designer-auto-layout-images/centerc.png)](designer-auto-layout-images/centerc.png#lightbox)
 
-세로 끌어 놓기 영역을 선택 하면 *system.windows.media.rotatetransform.centery* 제약 조건이 생성 됩니다. 수평 끌어 놓기 영역을 선택 하는 경우 제약 조건은 *system.windows.media.rotatetransform.centerx*을 기반으로 합니다.
+세로 끌어 놓기 영역을 선택 하면 *system.windows.media.rotatetransform.centery* 제약 조건이 생성 됩니다. 수평 끌어 놓기 영역을 선택 하는 경우 제약 조건은 *system.windows.media.rotatetransform.centerx* 을 기반으로 합니다.
 
 ### <a name="combinational-constraints"></a>Combinational 제약 조건
 
@@ -179,10 +183,10 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 코드의 제약 조건에 액세스 하려면 먼저 다음을 수행 하 여 iOS 디자이너에서이를 노출 해야 합니다.
 
 1. 위에 나열 된 방법 중 하나를 사용 하 여 제약 조건을 정상적으로 만듭니다.
-2. **문서 개요 탐색기**에서 원하는 제약 조건을 찾고 선택 합니다.
+2. **문서 개요 탐색기** 에서 원하는 제약 조건을 찾고 선택 합니다.
 
     [![문서 개요 탐색기](designer-auto-layout-images/modify01.png)](designer-auto-layout-images/modify01.png#lightbox)
-3. 그런 다음 **속성 탐색기**의 **위젯** 탭에서 제약 조건에 **이름을** 할당 합니다.
+3. 그런 다음 **속성 탐색기** 의 **위젯** 탭에서 제약 조건에 **이름을** 할당 합니다.
 
     [![위젯 탭](designer-auto-layout-images/modify02.png)](designer-auto-layout-images/modify02.png#lightbox)
 4. 변경 내용을 저장합니다.
@@ -210,7 +214,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들어:
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 다음은 그 예입니다. 
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -226,7 +230,7 @@ UIView.CommitAnimations();
 
 ## <a name="summary"></a>요약
 
-이 가이드에서는 iOS 자동 (또는 "적응") 레이아웃과 제약 조건의 개념이 디자인 화면에서 요소 간의 관계에 대 한 수학적 표현으로 도입 되었습니다. IOS 디자이너에서 자동 레이아웃을 사용 하도록 설정 하 고, **제약 조건 도구 모음**을 사용 하 고, 디자인 화면에서 개별적으로 제약 조건을 편집 하는 방법에 대해 설명 했습니다. 다음에는 세 가지 일반적인 제약 조건 문제를 해결 하는 방법을 설명 했습니다. 마지막으로 코드에서 제약 조건을 수정 하는 방법을 살펴보았습니다.
+이 가이드에서는 iOS 자동 (또는 "적응") 레이아웃과 제약 조건의 개념이 디자인 화면에서 요소 간의 관계에 대 한 수학적 표현으로 도입 되었습니다. IOS 디자이너에서 자동 레이아웃을 사용 하도록 설정 하 고, **제약 조건 도구 모음** 을 사용 하 고, 디자인 화면에서 개별적으로 제약 조건을 편집 하는 방법에 대해 설명 했습니다. 다음에는 세 가지 일반적인 제약 조건 문제를 해결 하는 방법을 설명 했습니다. 마지막으로 코드에서 제약 조건을 수정 하는 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 
