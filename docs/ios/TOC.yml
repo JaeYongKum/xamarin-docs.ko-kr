@@ -140,9 +140,11 @@
       items:
         - name: 개요
           href: user-interface/index.md
-        - name: 스토리보드
+        - name: Xcode를 사용하여 디자인
           href: user-interface/storyboards/index.md
           items:
+            - name: 스토리보드
+              href: user-interface/storyboards/indepth-storyboard.md
             - name: 통합 Storyboards
               href: user-interface/storyboards/unified-storyboards.md
         - name: iOS 디자이너
