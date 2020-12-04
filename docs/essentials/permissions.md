@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01902942c750a3cd278d648fa82499af4c5d3ab6
-ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
+ms.openlocfilehash: 25677d79b29902ed0cdd0b2ed08da021d7ef9e6f
+ms.sourcegitcommit: d2daaa6ca5fe630f80d5a8151985d9f96a2fc93b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92169971"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96513020"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
@@ -108,7 +108,8 @@ Xamarin.Essentials는 최대한 많은 권한을 추상화하려고 시도합니
 권한이 ![지원되지 않음](~/media/shared/no.png "지원되지 않음")으로 표시되는 경우 확인 또는 요청 시 항상 `Granted`를 반환합니다.
 
 ## <a name="general-usage"></a>일반적인 사용법
-권한을 처리하기 위한 일반적인 사용 패턴은 다음과 같습니다.
+
+다음 코드에서는 사용 권한이 부여되었는지 확인하고 부여되지 않은 경우 요청하기 위한 일반적인 사용 패턴을 보여 줍니다. 이 코드는 Xamarin.Essentials 버전 1.6.0 이상에서 제공되는 기능을 사용합니다.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
@@ -116,8 +117,7 @@ public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     
     if (status == PermissionStatus.Granted)
-        return status;
-        
+        return status;        
     
     if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {

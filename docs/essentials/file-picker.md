@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e997ae3137110e18df9eed90ef07bfa2703e8088
-ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
+ms.openlocfilehash: f98f0cdea812a91bbe6caf1e248e468d9a960ac6
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92629602"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303036"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: 파일 선택기
 
@@ -110,6 +110,21 @@ var options = new PickOptions
 ## <a name="pick-multiple-files"></a>여러 파일 선택
 
 사용자가 여러 파일을 선택하게 하려면 `FilePicker.PickMultipleAsync()` 메서드를 호출할 수 있습니다. 또한 추가 정보를 지정하는 매개 변수로 `PickOptions`를 사용합니다. 결과는 `PickAsync`와 동일하지만 `FileResult` 대신, 반복될 수 있는 `IEnumerable<FileResult>`가 반환됩니다.
+
+
+## <a name="platform-differences"></a>플랫폼의 차이점
+
+# <a name="android"></a>[Android](#tab/android)
+
+- 결과 파일의 URI는 다시 부팅하면 유지되지 않을 수 있습니다.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+플랫폼의 차이점이 없습니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+플랫폼의 차이점이 없습니다.
 
 ## <a name="api"></a>API
 
