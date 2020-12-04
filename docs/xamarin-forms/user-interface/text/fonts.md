@@ -11,12 +11,12 @@ ms.custom: contperfq2
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6fdbaf8d218044de9a4fe30ffe7e3df05619bdb
-ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
+ms.openlocfilehash: 271c6c5e510a892919b5d87c4dbc38ad8e9d657d
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94591075"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604575"
 ---
 # <a name="fonts-in-no-locxamarinforms"></a>글꼴 Xamarin.Forms
 
@@ -24,7 +24,7 @@ ms.locfileid: "94591075"
 
 기본적으로에서는 Xamarin.Forms 각 플랫폼에서 정의 된 시스템 글꼴을 사용 합니다. 그러나 텍스트를 표시 하는 컨트롤은이 글꼴을 변경 하는 데 사용할 수 있는 속성을 정의 합니다.
 
-- `FontAttributes`. 형식의 이며,, `FontAttributes` 및 라는 세 개의 멤버가 포함 된 열거형입니다. `None` `Build` `Italic` 이 속성의 기본값은 `None`입니다.
+- `FontAttributes`. 형식의 이며,, `FontAttributes` 및 라는 세 개의 멤버가 포함 된 열거형입니다. `None` `Bold` `Italic` 이 속성의 기본값은 `None`입니다.
 - `double` 형식의 `FontSize`
 - `string` 형식의 `FontFamily`
 
@@ -107,7 +107,7 @@ myLabel.FontSize = Device.GetNamedSize(NamedSize.Large, myLabel);
 
 추가 작업 없이 사용자 지정 글꼴을 Xamarin.Forms 공유 프로젝트에 추가 하 고 플랫폼 프로젝트에서 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. 공유 프로젝트에 글꼴을 Xamarin.Forms 포함 리소스로 추가 합니다 ( **빌드 작업: EmbeddedResource** ).
+1. 공유 프로젝트에 글꼴을 Xamarin.Forms 포함 리소스로 추가 합니다 (**빌드 작업: EmbeddedResource**).
 1. 특성을 사용 하 여 어셈블리에 **AssemblyInfo.cs** 와 같은 파일에 글꼴 파일을 등록 합니다 `ExportFont` . 선택적 별칭을 지정할 수도 있습니다.
 
 다음 예제에서는 별칭과 함께 어셈블리에 등록 되는 Lobster-Regular 글꼴을 보여 줍니다.
