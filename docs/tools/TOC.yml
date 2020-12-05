@@ -69,7 +69,7 @@
     - name: .NET 포함
       href: dotnet-embedding/index.md
       items:
-        - name: 시작
+        - name: 시작하기
           href: dotnet-embedding/get-started/index.md
           items:
             - name: 설치
