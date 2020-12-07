@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2017
-ms.openlocfilehash: 07b39f87b6eeb0fc24486be83573a721abc07966
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a54a0012f7b5ed3d147242e3ee02b2ed6fe890bf
+ms.sourcegitcommit: 0a41c4aa6db72cd2d0cecbe0dc893024cecac71d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572405"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749880"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Xamarin.ios의 예외 마샬링
 
@@ -36,11 +36,11 @@ Xamarin.ios 또는 Xamarin.ios에 대 한 일반적인 예는 네이티브 API�
 
 ### <a name="broken-code"></a>손상 된 코드
 
-다음 코드 예제를 참조 하세요.
+다음 코드 예제를 생각해보세요.
 
 ``` csharp
-var dict = new NSMutableDictionary ();
-dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
+var dict = new NSMutableDictionary ();
+dict.LowlevelSetObject (IntPtr.Zero, IntPtr.Zero); 
 ```
 
 이렇게 하면 네이티브 코드에서 목표 C NSInvalidArgumentException이 throw 됩니다.
@@ -98,10 +98,10 @@ Mono 런타임에서 목표-C 프레임을 제대로 해제 하는 방법을 알
 Xamarin.ios ' catch 되지 않은 목표-C 예외 콜백이 호출 되 면 스택은 다음과 같습니다.
 
 ```
- 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
+ 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "**_ setObjectForKey: key cannot be nil")
  1 CoreFoundation           __handleUncaughtException + 809
  2 libobjc.A.dylib          _objc_terminate() + 100
- 3 libc++abi.dylib          std::__terminate(void (*)()) + 14
+ 3 libc++abi.dylib          std::__terminate(void (_)()) + 14
  4 libc++abi.dylib          __cxa_throw + 122
  5 libobjc.A.dylib          objc_exception_throw + 337
  6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
@@ -217,7 +217,7 @@ void UIApplicationMain ()
 
 요약 하자면, 목표-C 런타임 또는이를 처리 하기 위해 프로그래밍할 수 없는 Mono 런타임 해제 프레임은 크래시, 메모리 누수 및 다른 유형의 예측할 수 없는 (mis) 동작 등의 정의 되지 않은 동작이 발생할 수 있습니다.
 
-## <a name="solution"></a>해결 방법
+## <a name="solution"></a>해결 방법
 
 Xamarin.ios 10 및 Xamarin.ios 2.10에서는 관리 되는 네이티브 경계에서 관리 되는 및 목표 C 예외를 모두 catch 하 고 해당 예외를 다른 형식으로 변환 하기 위한 지원이 추가 되었습니다.
 
@@ -303,7 +303,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 
 <a name="build_time_flags"></a>
 
-## <a name="build-time-flags"></a>빌드 시간 플래그
+## <a name="build-time-flags"></a>Build-Time 플래그
 
 다음 옵션을 **mtouch** (xamarin.ios 앱의 경우) 및 **mmp** (xamarin.ios 앱의 경우)에 전달 하 여 예외 가로채기를 사용 하도록 설정 했는지 여부를 확인 하 고 수행 해야 하는 기본 작업을 설정할 수 있습니다.
 
