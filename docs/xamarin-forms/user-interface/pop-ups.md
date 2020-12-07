@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f1caf08cf0fc2fdba6c9a9156280f9d3dafe0322
-ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
+ms.openlocfilehash: 4af29f2df797aea4bbd0655fc0564e289f2c2a3b
+ms.sourcegitcommit: 1d19ee87e317a72de05f3f0fa73dfcaeb767cbd1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604562"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755021"
 ---
 # <a name="display-pop-ups"></a>팝업 표시
 
@@ -45,10 +45,10 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "두 단추가 있는 경고 대화 상자")](pop-ups-images/alert2.png#lightbox "두 단추가 있는 경고 대화 상자")
+[![두 단추가 있는 경고 대화 상자](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
 
 > [!WARNING]
-> 기본적으로 UWP 액세스 키는 경고가 표시 될 때 활성화 될 수 있습니다. 자세한 내용은 [Windows의 Visualelement 액세스 키](~/xamarin-forms/platform/windows/visualelement-access-keys.md)를 참조 하세요.
+> 기본적으로 UWP에서 경고가 표시 되 면 경고 뒤에 있는 페이지에 정의 된 액세스 키를 활성화할 수 있습니다. 자세한 내용은 [Windows의 Visualelement 액세스 키](~/xamarin-forms/platform/windows/visualelement-access-keys.md)를 참조 하세요.
 
 ## <a name="guide-users-through-tasks"></a>사용자에 게 작업 안내
 
@@ -111,10 +111,10 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 
 이 코드는 미리 정의 된 응답 10 개를 표시 하 고, 입력 될 수 있는 문자 수를 2로 제한 하 고, 사용자 입력에 대 한 숫자 키보드를 표시 합니다.
 
-[![IOS 및 Android의 모달 프롬프트 스크린샷](pop-ups-images/keyboard-prompt.png "모달 프롬프트")](pop-ups-images/keyboard-prompt-large.png#lightbox "모달 프롬프트")
+[![IOS 및 Android의 선택적 모달 프롬프트 스크린샷](pop-ups-images/keyboard-prompt.png "모달 프롬프트")](pop-ups-images/keyboard-prompt-large.png#lightbox "모달 프롬프트")
 
 > [!WARNING]
-> 기본적으로, 프롬프트가 표시 되 면 UWP 액세스 키를 활성화할 수 있습니다. 자세한 내용은 [Windows의 Visualelement 액세스 키](~/xamarin-forms/platform/windows/visualelement-access-keys.md)를 참조 하세요.
+> 기본적으로 UWP에서 프롬프트가 표시 되 면 프롬프트 뒤에 있는 페이지에 정의 된 액세스 키를 활성화할 수 있습니다. 자세한 내용은 [Windows의 Visualelement 액세스 키](~/xamarin-forms/platform/windows/visualelement-access-keys.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

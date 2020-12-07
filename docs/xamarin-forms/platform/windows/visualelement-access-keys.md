@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3cd4a9078a22c1f002cbc414490455c716ba884a
-ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
+ms.openlocfilehash: 8b7cdc43570958918020f5a219392434a7ed85fb
+ms.sourcegitcommit: 1d19ee87e317a72de05f3f0fa73dfcaeb767cbd1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604588"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755008"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Windows의 VisualElement 액세스 키
 
@@ -104,7 +104,7 @@ button4.On<Windows>()
 사용자가 액세스 키를 활성화 하 고 Alt 키를 누른 다음 선택 키를 누르면의 기본 작업이 `VisualElement` 실행 됩니다. 예를 들어 사용자가에 대 한 액세스 키를 활성화 하면 [`Switch`](xref:Xamarin.Forms.Switch) `Switch` 가 전환 됩니다. 사용자가에서 액세스 키를 활성화 하면가 [`Entry`](xref:Xamarin.Forms.Entry) 포커스를 `Entry` 얻게 됩니다. 사용자가에 대 한 액세스 키를 활성화 하면 [`Button`](xref:Xamarin.Forms.Button) 이벤트에 대 한 이벤트 처리기 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 가 실행 됩니다.
 
 > [!WARNING]
-> 기본적으로 및 메서드와 같이 모달 대화 상자가 표시 되 면 액세스 키를 활성화할 수 있습니다 `DisplayAlert` `DisplayPromptAsync` . 그러나이 시나리오에서는 액세스 키를 사용 하지 않도록 사용자 지정 논리를 작성할 수 있습니다. `Dispatcher.AcceleratorKeyActivated`UWP 프로젝트의 클래스에서 이벤트를 처리 하 `MainPage` 고 이벤트 처리기에서 `Handled` `true` 모달 대화 상자가 표시 될 때 이벤트 인수의 속성을로 설정 하 여이를 수행할 수 있습니다.
+> 기본적으로 모달 대화 상자가 표시 되 면 대화 상자 뒤의 페이지에 정의 된 선택 키가 활성화 될 수 있습니다. 그러나이 시나리오에서는 액세스 키를 사용 하지 않도록 사용자 지정 논리를 작성할 수 있습니다. `Dispatcher.AcceleratorKeyActivated`UWP 프로젝트의 클래스에서 이벤트를 처리 하 `MainPage` 고 이벤트 처리기에서 `Handled` `true` 모달 대화 상자가 표시 될 때 이벤트 인수의 속성을로 설정 하 여이를 수행할 수 있습니다.
 
 액세스 키에 대 한 자세한 내용은 [액세스 키](/windows/uwp/design/input/access-keys)를 참조 하세요.
 
