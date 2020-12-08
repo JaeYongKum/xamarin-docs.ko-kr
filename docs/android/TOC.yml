@@ -483,6 +483,8 @@
           href: /xamarin/essentials/release-notes/
         - name: 문제 해결
           href: ~/essentials/troubleshooting.md?context=xamarin/android
+        - name: Xamarin.Essentials 질문 및 답변
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: 데이터 및 Cloud Services
       href: data-cloud/index.md
       items:
@@ -694,6 +696,8 @@
               href: wear/deploy-test/debug-on-device.md
             - name: 패키징
               href: wear/deploy-test/packaging.md
+    - name: Xamarin.Android 질문 및 답변
+      href: /answers/topics/dotnet-android.html
     - name: 릴리스 정보
       href: /xamarin/android/release-notes/
     - name: 샘플

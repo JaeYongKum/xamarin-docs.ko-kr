@@ -602,6 +602,8 @@
           href: /xamarin/essentials/release-notes/
         - name: 문제 해결
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
+        - name: Xamarin.Essentials 질문 및 답변
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: 데이터 및 Cloud Services
       items:
         - name: 개요
@@ -1005,6 +1007,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/watchos
             - name: 문제 해결
               href: ~/essentials/troubleshooting.md?context=xamarin/watchos
+            - name: Xamarin.Essentials 질문 및 답변
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: 배포 및 테스트
           href: watchos/deploy-test/index.md
           items:
@@ -1014,6 +1018,8 @@
               href: watchos/deploy-test/appstore.md
         - name: 문제 해결
           href: watchos/troubleshooting.md
+        - name: Xamarin watchOS 질문 및 답변
+          href: /answers/topics/dotnet-watchos.html
     - name: tvOS
       items:
         - name: 개요
@@ -1096,6 +1102,8 @@
               href: ~/essentials/version-tracking.md?context=xamarin/tvos
             - name: 문제 해결
               href: ~/essentials/troubleshooting.md?context=xamarin/tvos
+            - name: Xamarin.Essentials 질문 및 답변
+              href: /answers/topics/dotnet-xamarinessentials.html
         - name: 사용자 인터페이스
           href: tvos/user-interface/index.md
           items:
@@ -1142,6 +1150,10 @@
               href: tvos/internals/assemblies.md
             - name: 프레임워크
               href: tvos/internals/frameworks.md
+        - name: Xamarin.tvOS 질문 및 답변
+          href: /answers/topics/dotnet-tvos.html
+    - name: Xamarin.iOS 질문 및 답변
+      href: /answers/topics/dotnet-ios.html
     - name: 릴리스 정보
       href: /xamarin/ios/release-notes/
     - name: 샘플

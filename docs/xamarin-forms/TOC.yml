@@ -145,6 +145,8 @@ items:
             href: xaml/field-modifiers.md
           - name: 런타임 시 XAML 로드
             href: xaml/runtime-load.md
+      - name: Xamarin.Forms XAML 질문 및 답변
+        href: /answers/topics/dotnet-xamarinforms-xaml.html
   - name: 애플리케이션 기본 사항
     items:
       - name: 개요
@@ -922,6 +924,8 @@ items:
         href: /xamarin/essentials/release-notes/
       - name: 문제 해결
         href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+      - name: Xamarin.Essentials 질문 및 답변
+        href: /answers/topics/dotnet-xamarinessentials.html
   - name: 데이터 및 Azure Cloud Services
     items:
       - name: 개요
@@ -1030,6 +1034,8 @@ items:
             href: troubleshooting/questions/android-linkassemblies-error.md
           - name: 'COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR가 발생하여 Xamarin.Forms.Maps Android 프로젝트가 실패하는 이유는 무엇인가요?'
             href: troubleshooting/questions/maps-compiletodalvik-error.md
+  - name: Xamarin.Forms 질문 및 답변
+    href: /answers/topics/dotnet-xamarinforms.html
   - name: 릴리스 정보
     href: /xamarin/xamarin-forms/release-notes/
   - name: 샘플

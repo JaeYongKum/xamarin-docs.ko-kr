@@ -82,3 +82,5 @@
           href: ~/xamarin-forms/data-cloud/index.yml
     - name: 개발 지침
       href: ~/cross-platform/index.yml
+    - name: Xamarin.Forms 질문 및 답변
+      href: /answers/topics/dotnet-xamarinforms.html

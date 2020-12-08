@@ -70,7 +70,7 @@
         - name: macOS Mojave 소개
           href: platform/introduction-to-macos-mojave/index.md
           items:
-            - name: 시작
+            - name: 시작하기
               href: platform/introduction-to-macos-mojave/get-started.md
         - name: macOS High Sierra 소개
           href: platform/introduction-to-macos-high-sierra/index.md
@@ -221,6 +221,8 @@
           href: troubleshooting/troubleshooting.md
         - name: 오류 메시지(mmp)
           href: troubleshooting/mmp-errors.md
+    - name: Xamarin.Mac 질문 및 답변
+      href: /answers/topics/dotnet-macos.html
     - name: 릴리스 정보
       href: /xamarin/mac/release-notes/
     - name: 샘플

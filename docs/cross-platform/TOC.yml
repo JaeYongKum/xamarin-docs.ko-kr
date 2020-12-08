@@ -60,18 +60,18 @@
     - name: 언어 지원
       href: platform/index.md
       items:
-        - name: 'C#'
+        - name: C#
           items:
             - name: 비동기 지원 개요
               href: platform/async.md
-            - name: 'C# 6 언어 기능'
+            - name: C# 6 언어 기능
               href: platform/csharp-six.md
-        - name: 'F#'
+        - name: F#
           href: platform/fsharp/index.md
           items:
             - name: 시작
               href: platform/fsharp/overview.md
-            - name: 'F# 샘플'
+            - name: F# 샘플
               href: platform/fsharp/samples.md
         - name: Visual Basic
           href: platform/visual-basic/index.md
@@ -172,5 +172,7 @@
               href: troubleshooting/questions/vs-config-manager.md
         - name: 구성 요소 참조를 NuGet으로 업데이트
           href: troubleshooting/component-nuget.md
+    - name: 크로스 플랫폼 개발 질문 및 답변
+      href: /answers/topics/dotnet-crossplatform-general.html
     - name: 샘플
       href: samples/index.md
