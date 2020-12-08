@@ -4,12 +4,12 @@ description: Xamarin 개발 환경을 개선하는 데 도움이 되는 도구�
 author: davidortinau
 ms.author: daortin
 ms.date: 12/27/2019
-ms.openlocfilehash: 9b034346500d85ce3e496fae57657bc8c1fab46a
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: b90b7c83d7182866afb1e976cfb065f711a3a1fd
+ms.sourcegitcommit: bc2850d6f55f2e68c6ffeb9d562b21c1a242bab9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366986"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96850961"
 ---
 # <a name="xamarin-tools"></a>Xamarin 도구
 
@@ -37,24 +37,4 @@ Windows에서 Visual Studio를 사용하여 iOS 시뮬레이터와 상호 작용
 
 성능 문제를 식별하고 해결합니다.
     :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-[![Xamarin Workbooks](/media/illustrations/dynamics-resource-library.svg)](~/tools/workbooks/index.md)
-
-### <a name="xamarin-workbooks"></a>[Xamarin Workbooks](~/tools/workbooks/index.md)
-
-C# 및 Xamarin 플랫폼을 대화형으로 학습할 수 있습니다.
-    :::column-end:::
-    :::column:::
-[![.NET 포함](~/media/index/xamarin-cross-platform-dotnet-embedding.svg)](~/tools/dotnet-embedding/index.md)
-
-### <a name="net-embedding"></a>[.NET 포함](~/tools/dotnet-embedding/index.md)
-
-다른 프로그래밍 언어에서 기존 .NET 코드를 사용하도록 허용합니다.
-    :::column-end:::
-
-    :::column:::
-    :::column-end:::
-    
 :::row-end:::
