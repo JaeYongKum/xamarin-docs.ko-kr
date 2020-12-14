@@ -8,12 +8,12 @@ ms.date: 02/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0910c6467cb0efdf9477e245d138528852f81166
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 17ba7e111381da78166a85099939cc2bab68dbd9
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432294"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604458"
 ---
 # Xamarin.Essentials
 
@@ -75,6 +75,10 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 ## <a name="troubleshooting"></a>[문제 해결](troubleshooting.md?context=xamarin/xamarin-forms)
 
 문제가 발생하는 경우 도움말을 찾으세요.
+
+## <a name="no-locxamarinessentials-on-qa"></a>[Xamarin.Essentials 질문 및 답변](/answers/topics/dotnet-xamarinessentials.html)
+
+Xamarin.Essentials를 사용하여 네이티브 기능에 액세스하는 방법에 대해 질문합니다.
 
 ## <a name="release-notes"></a>[릴리스 정보](/xamarin/essentials/release-notes/)
 

@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bd239a8dcf192c0bdbc6265769208f4fc989bbbe
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 19c9929706b7cf285b22562b094d2de2a25ff77d
+ms.sourcegitcommit: 0a41c4aa6db72cd2d0cecbe0dc893024cecac71d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434486"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749893"
 ---
 # <a name="no-locxamarinessentials-contacts"></a>Xamarin.Essentials: 연락처
 
@@ -60,11 +60,11 @@ ms.locfileid: "91434486"
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-`Package.appxmanifest`의 **기능**에서 `Contact` 기능을 선택합니다.
+`Package.appxmanifest`의 **기능** 에서 `Contact` 기능을 선택합니다.
 
 -----
 
-## <a name="picking-a-contact"></a>연락처 선택
+## <a name="pick-a-contact"></a>연락처 선택
 
 `Contacts.PickContactAsync()`를 호출하여 연락처 대화 상자를 표시하고 사용자가 사용자에 대한 정보를 받을 수 있습니다.
 
@@ -77,17 +77,61 @@ try
     if(contact == null)
         return;
 
-    var name = contact.Name;
-    var contactType = contact.ContactType; // Unknown, Personal, Work
-    var numbers = contact.Numbers; // List of phone numbers
-    var emails = contact.Emails; // List of email addresses 
-    
+    var id = contact.Id;
+    var namePrefix = contact.NamePrefix;
+    var givenName = contact.GivenName;
+    var middleName = contact.MiddleName;
+    var familyName = contact.FamilyName;
+    var nameSuffix = contact.NameSuffix;
+    var displayName = contact.DisplayName;
+    var phones = contact.Phones; // List of phone numbers
+    var emails = contact.Emails; // List of email addresses
 }
 catch (Exception ex)
 {
     // Handle exception here.
 }
 ```
+
+## <a name="get-all-contacts"></a>모든 연락처 가져오기
+
+```csharp
+ObservableCollection<Contact> contactsCollect = new ObservableCollection<Contact>();
+
+try
+{
+    // cancellationToken parameter is optional
+    var cancellationToken = default(CancellationToken);
+    var contacts = await Contacts.GetAllAsync(cancellationToken);
+
+    if (contacts == null)
+        return;
+
+    foreach (var contact in contacts)
+        contactsCollect.Add(contact);
+}
+catch (Exception ex)
+{
+    // Handle exception here.
+}
+```
+
+## <a name="platform-differences"></a>플랫폼 간 차이점
+
+# <a name="android"></a>[Android](#tab/android)
+
+- `GetAllAsync` 메서드의 `cancellationToken` 매개 변수는 UWP에서만 사용됩니다.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+- `GetAllAsync` 메서드의 `cancellationToken` 매개 변수는 UWP에서만 사용됩니다.
+- iOS 플랫폼은 기본적으로 `DisplayName` 속성을 지원하지 않으므로 `DisplayName` 값은 "GivenName FamilyName"으로 생성됩니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+플랫폼의 차이점이 없습니다.
+
+-----
 
 
 ## <a name="api"></a>API

@@ -10,12 +10,12 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 011ef1fcb2de53cb1f1aa6f0b2c3953e9240d132
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: bdc26b0745e48295c2040440d5eab90b7850b145
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374500"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604484"
 ---
 # <a name="keyboard-accessibility-in-no-locxamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
 
@@ -75,6 +75,9 @@ ms.locfileid: "93374500"
 - `TabIndex`에서의 충돌은 선언 순서에 따라 해결됩니다.
 
 탭 순서를 정의한 후 Tab 키를 누르면 `TabIndex` 오름차순으로 컨트롤을 통해 포커스가 순환되며 마지막 컨트롤에 도달하면 시작 부분으로 래핑됩니다.
+
+> [!WARNING]
+> 유니버설 Windows 플랫폼에서 탭 순서가 컨트롤 선언 순서와 동일하게 되도록 컨트롤의 `TabIndex` 속성을 `int.MaxValue`로 설정해야 합니다.
 
 다음 XAML 예제에서는 첫 번째 열 탭 탐색을 사용하도록 설정하려면 입력 컨트롤에 설정된 `TabIndex` 속성을 보여줍니다.
 
